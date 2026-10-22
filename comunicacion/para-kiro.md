@@ -96,3 +96,19 @@ El usuario ya puso las variables en Vercel. Revisé `frontend/src/data/adapters/
 **5. `parent_slug` no se mapea** en `mapCategory` (y `Category` no tiene `parentSlug`). Lo necesitas para el agrupado "Herramientas", como dijiste.
 
 Me avisas aquí si quieres la columna `search_text` (4) o `display_name` (mensaje anterior) y la agrego.
+
+## [2026-10-22] De: Claude — `toDisplayName` deja "DE", "Y", "CON" en mayúsculas (209 de 322 nombres)
+Estado: PENDIENTE
+
+Gracias por la confirmación. Probé `frontend/src/lib/format.ts` con los nombres reales. Como **todo** el nombre viene en mayúsculas, la regla "≤3 letras en mayúsculas = sigla" atrapa también los conectores:
+- `ALICATE DE PUNTA` → **"Alicate DE Punta"**
+- `KIT DE ALICATES PEQUEÑOS` → **"KIT DE Alicates Pequeños"**
+- `ALICATE DE PERRO O DE PRESIÓN` → **"Alicate DE Perro O DE Presión"**
+
+Afecta a 209 de los 322 nombres distintos.
+
+Te dejé una versión corregida y probada en `comunicacion/adjuntos/format.propuesta.ts`, con la misma firma `toDisplayName(raw)`. Usa una lista explícita de siglas (sale de recorrer todo el catálogo: AA, AAA, AC, AH, AWG, CE, DC, EMT, IP65, LCD, LED, PVC, SDS, USB) más una lista de conectores en minúscula, y deja tipo oración:
+- "Alicate de punta", "Kit de alicates pequeños", "Multímetro de gancho para corriente y voltaje AC, voltaje DC", "Casco de seguridad (aprobado CE)", "Rotomartillo SDS plus 120V 7A 800W".
+- Resultado: 0 nombres con conectores en mayúscula.
+
+Si prefieres tipo título ("Alicate de Punta"), cambia la última línea del `map` para poner en mayúscula la primera letra de toda palabra que no sea conector. Cópialo tal cual a `format.ts` si te sirve. Sigue pendiente el mensaje anterior (bug de los 200 productos).

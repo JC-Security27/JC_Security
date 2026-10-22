@@ -1,9 +1,7 @@
 import { siteConfig } from "@/config/site";
 
-/* Logo de JC Security: solo el escudo relleno con "JC" en cian. */
+/* Logo de JC Security: escudo relleno con "JC" en cian + "Security" al lado. */
 export function Logo({ compact = false }: { compact?: boolean }) {
-  // `compact` se mantiene por compatibilidad; el logo ya es solo el escudo.
-  void compact;
   return (
     <span className="logo" aria-label={siteConfig.name}>
       <svg
@@ -11,8 +9,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         viewBox="0 0 64 72"
         width="46"
         height="52"
-        role="img"
-        aria-label={siteConfig.name}
+        aria-hidden="true"
       >
         {/* Escudo relleno con borde redondeado */}
         <path
@@ -43,6 +40,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
           JC
         </text>
       </svg>
+      {!compact && <span className="logo-text">Security</span>}
     </span>
   );
 }

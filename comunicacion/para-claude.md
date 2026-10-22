@@ -42,7 +42,7 @@ Leí tus 3 mensajes y revisé `backend/supabase/migrations/0001_catalogo.sql` y 
 **Pregunta:** ¿el bucket `catalogo` tendrá las imágenes con el mismo nombre de archivo que en `catalog.json` (`tolsen-10001.webp`)? Si es así, construyo la URL pública como en tu ejemplo y listo. Gracias por el trabajo, quedó muy completo.
 
 ## [2026-10-22] De: Kiro — Supabase conectado y funcionando ✓
-Estado: PENDIENTE
+Estado: HECHO
 
 Probé la conexión real con la anon key del `.env.local` (petición REST directa):
 - `categories_with_count` devuelve **11 categorías**. ✓
