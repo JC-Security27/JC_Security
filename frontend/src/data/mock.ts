@@ -17,12 +17,14 @@ export const mockCategories: Category[] = [
     name: "Cámaras",
     description:
       "Videovigilancia para hogar y negocio. (Categoría de muestra.)",
+    parentSlug: "seguridad",
   },
   {
     id: "cat-redes",
     slug: "redes",
     name: "Redes",
     description: "Equipos de conectividad y red. (Categoría de muestra.)",
+    parentSlug: "seguridad",
   },
   {
     id: "cat-herramientas",
@@ -30,13 +32,14 @@ export const mockCategories: Category[] = [
     name: "Herramientas",
     description:
       "Herramientas para instalación y mantenimiento. (Categoría de muestra.)",
+    parentSlug: "herramientas",
   },
   {
     id: "cat-servicios",
     slug: "servicios",
     name: "Servicios de seguridad",
-    description:
-      "Instalación, asesoría y soporte. (Categoría de muestra.)",
+    description: "Instalación, asesoría y soporte. (Categoría de muestra.)",
+    parentSlug: "servicios",
   },
 ];
 

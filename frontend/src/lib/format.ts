@@ -1,35 +1,39 @@
 /* ==========================================================================
    Formato de texto para mostrar.
-   Los nombres del catálogo Tolsen vienen en MAYÚSCULAS ("ALICATE UNIVERSAL").
-   CSS text-transform: capitalize no sirve sobre mayúsculas (no baja el resto).
-   Esta función pasa a tipo oración por palabra, pero preserva siglas/unidades
-   como "20V", "LED", "PVC", "SDS", "1/2", etc. (no las convierte a minúsculas).
+   Los nombres del catálogo Tolsen vienen en MAYÚSCULAS ("ALICATE DE PUNTA").
+   CSS text-transform no sirve (capitalize no baja el resto; lowercase rompe
+   siglas). Esta función pasa a tipo oración preservando siglas/unidades y
+   dejando los conectores (de, y, con…) en minúscula.
+   Versión validada por Claude contra los 322 nombres del catálogo
+   (ver comunicacion/adjuntos/format.propuesta.ts).
    ========================================================================== */
 
-/** ¿La palabra parece una sigla o unidad que debe quedar tal cual? */
-function isAcronymOrUnit(word: string): boolean {
-  // Contiene algún dígito (20V, 1/2", M14, 650W) → dejar igual.
-  if (/\d/.test(word)) return true;
-  // Palabra corta toda en mayúsculas (LED, PVC, SDS, CR, V, A) → sigla.
-  const letters = word.replace(/[^A-Za-zÁÉÍÓÚÑ]/g, "");
-  if (letters.length > 0 && letters.length <= 3 && letters === letters.toUpperCase()) {
-    return true;
-  }
-  return false;
-}
+/** Siglas que aparecen en el catálogo y deben quedar en mayúsculas. */
+const ACRONYMS = new Set([
+  "AA", "AAA", "AC", "AH", "AWG", "CE", "DC", "EMT", "IP65", "LCD", "LED",
+  "PVC", "SDS", "USB",
+]);
 
-/** Convierte "ALICATE UNIVERSAL 20V" -> "Alicate Universal 20V". */
+/** Palabras que van en minúscula (salvo al inicio del nombre). */
+const LOWERCASE = new Set([
+  "a", "al", "con", "de", "del", "e", "el", "en", "la", "las", "los", "o",
+  "para", "por", "sin", "y",
+]);
+
+/** Convierte "ALICATE DE PUNTA 20V" -> "Alicate de punta 20V" (tipo oración). */
 export function toDisplayName(raw: string): string {
   if (!raw) return raw;
   return raw
-    .toLocaleLowerCase("es")
     .split(/\s+/)
-    .map((wordLower, i) => {
-      // Recupera la palabra original para comparar siglas.
-      const original = raw.split(/\s+/)[i] ?? wordLower;
-      if (isAcronymOrUnit(original)) return original;
-      // Tipo oración: primera letra mayúscula, resto minúscula.
-      return wordLower.charAt(0).toLocaleUpperCase("es") + wordLower.slice(1);
+    .map((word, i) => {
+      // Quita signos al inicio/fin para comparar: "(", ")", ",", comillas.
+      const core = word.replace(/^[^\p{L}\d]+|[^\p{L}\d]+$/gu, "");
+      if (/\d/.test(core) || ACRONYMS.has(core)) return word; // 20V, 1/2", LED…
+      const lower = word.toLocaleLowerCase("es");
+      if (i > 0 && LOWERCASE.has(core.toLocaleLowerCase("es"))) return lower;
+      return i === 0
+        ? lower.replace(/\p{L}/u, (c) => c.toLocaleUpperCase("es"))
+        : lower;
     })
     .join(" ");
 }

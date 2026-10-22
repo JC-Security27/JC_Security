@@ -40,6 +40,11 @@ export interface Category {
   imageUrl?: string;
   /** Cantidad de productos, si el backend la provee. */
   productCount?: number;
+  /**
+   * slug de la categoría padre, si esta es una subcategoría.
+   * Ej: "herramientas-de-corte" tiene parentSlug "herramientas".
+   */
+  parentSlug?: string;
 }
 
 /** Producto o servicio del catálogo. */

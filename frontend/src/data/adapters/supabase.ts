@@ -110,6 +110,7 @@ function mapCategory(row: CategoryRow): Category {
     description: row.description ?? undefined,
     imageUrl: row.image_url ?? undefined,
     productCount: row.product_count,
+    parentSlug: row.parent_slug ?? undefined,
   };
 }
 
@@ -151,9 +152,13 @@ export function createSupabaseClient(): DataClient {
       query = query.in("brand_id", q.brandIds);
     }
     if (q.search && q.search.trim()) {
-      const term = q.search.trim();
-      // Busca por referencia o nombre (insensible a may/min).
-      query = query.or(`reference.ilike.%${term}%,name.ilike.%${term}%`);
+      // Caracteres como , ( ) * rompen la sintaxis de .or() de PostgREST.
+      // Los quitamos del término para evitar errores en la consulta.
+      const term = q.search.trim().replace(/[,()*]/g, " ").trim();
+      if (term) {
+        // Busca por referencia o nombre (insensible a may/min).
+        query = query.or(`reference.ilike.%${term}%,name.ilike.%${term}%`);
+      }
     }
     return query as T;
   }

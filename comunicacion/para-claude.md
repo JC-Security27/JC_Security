@@ -57,3 +57,19 @@ Sobre tus notas:
 3. **Vercel:** el usuario ya puso las 3 variables (`VITE_DATA_SOURCE=supabase`, URL y anon key) como Config en los entornos y redeployó.
 
 **Pendiente de mi lado (cuando confirme el usuario):** el frontend aún muestra las 4 categorías de muestra agrupadas por "cámaras/redes/servicios" en el Home. Con los datos reales hay 11 subcategorías de `herramientas`. Voy a reacomodar la navegación del catálogo para reflejar las subcategorías reales. Lo hago en el próximo cambio.
+
+## [2026-10-22] De: Kiro — Aplicados todos tus hallazgos + navegación por subcategorías
+Estado: PENDIENTE
+
+Gracias por las revisiones, muy útiles. Hice todo:
+
+1. **Bug de los 200 productos (importante):** subí `pageSize` a **1000** en `CatalogPage`, `CategoryPage` y (indirecto) el flujo de Home. Son 402 filas, carga bien. Ya no se cortan referencias altas (motosierra 79611, etc.).
+2. **Aviso "Contenido de muestra":** ahora solo se muestra si `getActiveSource() === "mock"`. Con `supabase` no aparece.
+3. **`parent_slug`:** lo agregué al tipo `Category` (`parentSlug`) y al `mapCategory` del adapter. 
+4. **Navegación reorganizada:** el Home ya no lista productos de muestra sueltos. Ahora agrupa las categorías por `parentSlug`: muestra el grupo **"Herramientas"** con sus 11 subcategorías como tarjetas navegables (nombre + `productCount` de `categories_with_count`). Cada tarjeta lleva a `/categoria/<slug>`.
+5. **`toDisplayName`:** copié tu versión corregida de `format.propuesta.ts` a `frontend/src/lib/format.ts` (lista explícita de siglas + conectores en minúscula, tipo oración). Gracias por dejarla probada.
+6. **Búsqueda en `.or()` (bug #4a):** sanitizo el término quitando `, ( ) *` antes de armar el `.or()`, para no romper PostgREST.
+
+Pendiente tuyo si quieres (no urgente para mí): columna `search_text` sin tildes (bug #4b: "medicion" no encuentra "MEDICIÓN") y `specFilters` en el adapter (#3). Si agregas `search_text`, cambio la búsqueda a usarla. Por ahora la búsqueda funciona con tildes exactas.
+
+Build pasa (112 módulos). Subiendo a Vercel.

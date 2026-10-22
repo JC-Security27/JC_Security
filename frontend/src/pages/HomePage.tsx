@@ -1,31 +1,50 @@
 import { Link } from "react-router-dom";
 import { siteConfig } from "@/config/site";
-import { getDataClient } from "@/data/dataClient";
+import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
-import { BrandGroupedProducts } from "@/components/catalog/BrandGroupedProducts";
 import {
   CardsSkeleton,
   EmptyState,
   ErrorState,
   SampleNotice,
 } from "@/components/ui/states";
-import type { Category, Product } from "@/types/catalog";
+import type { Category } from "@/types/catalog";
+
+/** Nombres legibles para los grupos (categoría padre). */
+const GROUP_LABELS: Record<string, string> = {
+  herramientas: "Herramientas",
+  seguridad: "Seguridad",
+  servicios: "Servicios",
+};
 
 function useHomeData() {
-  return useAsync<{ categories: Category[]; products: Product[] }>(async () => {
+  return useAsync<{ categories: Category[] }>(async () => {
     const client = await getDataClient();
-    const [categories, productsPage] = await Promise.all([
-      client.getCategories(),
-      client.getProducts({ pageSize: 100 }),
-    ]);
-    return { categories, products: productsPage.items };
+    const categories = await client.getCategories();
+    return { categories };
   }, []);
+}
+
+/** Agrupa las categorías por su parentSlug, conservando el orden recibido. */
+function groupByParent(categories: Category[]): [string, Category[]][] {
+  const groups = new Map<string, Category[]>();
+  const order: string[] = [];
+  for (const cat of categories) {
+    const key = cat.parentSlug ?? cat.slug;
+    if (!groups.has(key)) {
+      groups.set(key, []);
+      order.push(key);
+    }
+    groups.get(key)!.push(cat);
+  }
+  return order.map((k) => [k, groups.get(k)!]);
 }
 
 export function HomePage() {
   const { status, data, error, reload } = useHomeData();
+  const showSampleNotice = getActiveSource() === "mock";
 
   return (
     <>
@@ -46,11 +65,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-visual" aria-hidden="true">
-            <img
-              src="/robot-asistente.png"
-              alt=""
-              className="hero-robot"
-            />
+            <img src="/robot-asistente.png" alt="" className="hero-robot" />
           </div>
         </div>
       </section>
@@ -61,16 +76,17 @@ export function HomePage() {
           <span className="eyebrow">Catálogo</span>
           <h2>Explora por categorías</h2>
           <p>
-            Encuentra productos y servicios organizados por categoría y marca.
-            Consulta precio y disponibilidad por WhatsApp.
+            Encuentra productos organizados por categoría. Consulta precio y
+            disponibilidad por WhatsApp.
           </p>
         </div>
 
-        <SampleNotice>
-          <strong>Contenido de muestra.</strong> El catálogo real se cargará
-          cuando JC Security comparta sus catálogos en PDF. Los productos
-          mostrados aquí son ejemplos para previsualizar el diseño.
-        </SampleNotice>
+        {showSampleNotice && (
+          <SampleNotice>
+            <strong>Contenido de muestra.</strong> Estás viendo datos de ejemplo
+            para previsualizar el diseño.
+          </SampleNotice>
+        )}
 
         {status === "loading" && (
           <div style={{ marginTop: "var(--space-6)" }}>
@@ -79,35 +95,36 @@ export function HomePage() {
         )}
         {status === "error" && <ErrorState error={error} onRetry={reload} />}
         {status === "success" && data && (
-          <div className="home-categories">
+          <div className="home-groups">
             {data.categories.length === 0 ? (
               <EmptyState title="Aún no hay categorías" />
             ) : (
-              data.categories.map((cat) => {
-                const items = data.products.filter(
-                  (p) => p.categorySlug === cat.slug
-                );
-                if (items.length === 0) return null;
-                return (
-                  <section key={cat.id} className="home-category">
-                    <div className="home-category-head">
-                      <div>
-                        <h3>{cat.name}</h3>
-                        {cat.description && (
-                          <p className="muted">{cat.description}</p>
-                        )}
-                      </div>
+              groupByParent(data.categories).map(([groupKey, subcats]) => (
+                <section key={groupKey} className="home-group">
+                  <div className="home-group-head">
+                    <h3>{GROUP_LABELS[groupKey] ?? subcats[0]?.name ?? groupKey}</h3>
+                  </div>
+                  <div className="grid cat-grid">
+                    {subcats.map((cat) => (
                       <Link
+                        key={cat.id}
                         to={`/categoria/${cat.slug}`}
-                        className="btn btn-ghost btn-sm"
+                        className="card cat-card"
                       >
-                        Ver categoría
+                        <span className="cat-card-name">{cat.name}</span>
+                        {typeof cat.productCount === "number" && (
+                          <span className="cat-card-count">
+                            {cat.productCount} producto(s)
+                          </span>
+                        )}
+                        <span className="cat-card-arrow" aria-hidden="true">
+                          →
+                        </span>
                       </Link>
-                    </div>
-                    <BrandGroupedProducts products={items} />
-                  </section>
-                );
-              })
+                    ))}
+                  </div>
+                </section>
+              ))
             )}
           </div>
         )}

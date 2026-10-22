@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { getDataClient } from "@/data/dataClient";
+import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import {
   CatalogControls,
@@ -19,6 +19,7 @@ export function CatalogPage() {
     search: "",
     brandIds: [],
   });
+  const showSampleNotice = getActiveSource() === "mock";
 
   const { status, data, error, reload } = useAsync<{
     products: Product[];
@@ -26,7 +27,7 @@ export function CatalogPage() {
   }>(async () => {
     const client = await getDataClient();
     const [productsPage, brands] = await Promise.all([
-      client.getProducts({ pageSize: 200 }),
+      client.getProducts({ pageSize: 1000 }),
       client.getBrands(),
     ]);
     return { products: productsPage.items, brands };
@@ -59,10 +60,12 @@ export function CatalogPage() {
         </p>
       </div>
 
-      <SampleNotice>
-        <strong>Contenido de muestra.</strong> El catálogo definitivo se cargará
-        con los datos e imágenes de los catálogos PDF de JC Security.
-      </SampleNotice>
+      {showSampleNotice && (
+        <SampleNotice>
+          <strong>Contenido de muestra.</strong> Estás viendo datos de ejemplo
+          para previsualizar el diseño.
+        </SampleNotice>
+      )}
 
       {status === "success" && data && (
         <CatalogControls

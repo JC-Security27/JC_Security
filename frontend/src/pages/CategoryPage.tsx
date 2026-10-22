@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getDataClient } from "@/data/dataClient";
+import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import {
   CatalogControls,
@@ -21,6 +21,7 @@ export function CategoryPage() {
     search: "",
     brandIds: [],
   });
+  const showSampleNotice = getActiveSource() === "mock";
 
   const { status, data, error, reload } = useAsync<{
     category: Category | null;
@@ -30,7 +31,7 @@ export function CategoryPage() {
     const client = await getDataClient();
     const [category, productsPage, allBrands] = await Promise.all([
       client.getCategoryBySlug(slug),
-      client.getProducts({ categorySlug: slug, pageSize: 200 }),
+      client.getProducts({ categorySlug: slug, pageSize: 1000 }),
       client.getBrands(),
     ]);
     const products = productsPage.items;
@@ -72,10 +73,12 @@ export function CategoryPage() {
         {data?.category?.description && <p>{data.category.description}</p>}
       </div>
 
-      <SampleNotice>
-        <strong>Contenido de muestra.</strong> Los productos reales de esta
-        categoría se cargarán desde los catálogos PDF de JC Security.
-      </SampleNotice>
+      {showSampleNotice && (
+        <SampleNotice>
+          <strong>Contenido de muestra.</strong> Estás viendo datos de ejemplo
+          para previsualizar el diseño.
+        </SampleNotice>
+      )}
 
       {status === "success" && data && data.brands.length > 0 && (
         <CatalogControls
