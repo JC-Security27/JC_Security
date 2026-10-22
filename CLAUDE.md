@@ -8,6 +8,10 @@ Contrato de datos: `comunicacion/adjuntos/API_CONTRACT.md`.
 - Esquema, RLS y bucket: `backend/supabase/migrations/0001_catalogo.sql`.
 - Catálogo PDF → datos: `python -I backend/catalog/extract_catalog.py "<pdf>" backend/catalog/output` (pymupdf, pillow).
 - Carga a Supabase: `python -I backend/catalog/load_catalog.py backend/catalog/output`. Lee `backend/.env.supabase`, que no se versiona.
+- `backend/.env.supabase` también tiene `SUPABASE_ACCESS_TOKEN` (Management API: SQL vía `POST /v1/projects/xehegspjlbpkvhsgcdqj/database/query`, secrets) y `OPENAI_API_KEY`. Deploy de funciones: `SUPABASE_ACCESS_TOKEN=... npx supabase functions deploy ai --project-ref xehegspjlbpkvhsgcdqj --use-api` (desde `backend/`).
+- Fotos oficiales Tolsen (800 px) en lugar de las del PDF: `python -I backend/catalog/fetch_official_images.py backend/catalog/output` y luego `load_catalog.py`.
+- Búsqueda sin tildes + tabla `faq`: `backend/supabase/migrations/0002_busqueda_y_faq.sql`.
+- Asistente IA: Edge Function `backend/supabase/functions/ai/index.ts` (OpenAI, decisión del usuario). Responde en `POST /functions/v1/ai/chat` y usa solo el catálogo (`search_products`) y las `faq` aprobadas. Secret `OPENAI_API_KEY`; `verify_jwt = false`.
 
 ## Comunicación con Kiro
 

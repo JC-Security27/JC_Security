@@ -20,6 +20,17 @@ const LOWERCASE = new Set([
   "para", "por", "sin", "y",
 ]);
 
+/**
+ * Normaliza texto para búsquedas: minúsculas y sin tildes.
+ * "MEDICIÓN" y "medicion" se vuelven ambos "medicion".
+ */
+export function normalizeForSearch(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .toLocaleLowerCase("es");
+}
+
 /** Convierte "ALICATE DE PUNTA 20V" -> "Alicate de punta 20V" (tipo oración). */
 export function toDisplayName(raw: string): string {
   if (!raw) return raw;

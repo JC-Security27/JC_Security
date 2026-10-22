@@ -13,6 +13,7 @@ import {
   ErrorState,
   SampleNotice,
 } from "@/components/ui/states";
+import { normalizeForSearch } from "@/lib/format";
 import type { Brand, Category, Product } from "@/types/catalog";
 
 export function CategoryPage() {
@@ -45,13 +46,13 @@ export function CategoryPage() {
 
   const filtered = useMemo(() => {
     if (!data) return [];
-    const q = filters.search.trim().toLowerCase();
+    const q = normalizeForSearch(filters.search.trim());
     return data.products.filter((p) => {
       const matchesSearch =
         !q ||
-        p.reference.toLowerCase().includes(q) ||
-        p.name.toLowerCase().includes(q) ||
-        (p.brandName?.toLowerCase().includes(q) ?? false);
+        normalizeForSearch(p.reference).includes(q) ||
+        normalizeForSearch(p.name).includes(q) ||
+        (p.brandName ? normalizeForSearch(p.brandName).includes(q) : false);
       const matchesBrand =
         filters.brandIds.length === 0 ||
         (p.brandId ? filters.brandIds.includes(p.brandId) : false);

@@ -1,0 +1,5 @@
+project_id = "xehegspjlbpkvhsgcdqj"
+
+# El sitio llama al asistente sin sesión (ver functions/ai/index.ts).
+[functions.ai]
+verify_jwt = false
