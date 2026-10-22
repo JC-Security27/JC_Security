@@ -578,8 +578,8 @@
 /* El muñequito (robot) ES el botón: sin fondo ni borde. */
 .ai-fab {
   position: fixed;
-  right: var(--space-5);
-  bottom: var(--space-5);
+  right: var(--space-3);
+  bottom: var(--space-3);
   z-index: 200;
   display: inline-flex;
   align-items: center;
@@ -596,7 +596,7 @@
 /* Robot con bocadillo, clickeable. La imagen incluye el diálogo a la izquierda,
    por eso es más ancha; el robot en sí queda de un tamaño similar al anterior. */
 .ai-fab-robot {
-  width: 210px;
+  width: 160px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
@@ -621,7 +621,7 @@
 }
 @media (max-width: 520px) {
   .ai-fab-robot {
-    width: 150px;
+    width: 120px;
   }
 }
 /* Avatar del robot en el encabezado del panel */
