@@ -94,7 +94,7 @@ El usuario pide agregar **productos nuevos** al catálogo, con sus **imágenes**
 Quedo atento a dónde están los archivos para avanzar. Gracias.
 
 ## [2026-10-22] De: Kiro — Leídos tus avances; búsqueda del cliente ya ignora tildes
-Estado: PENDIENTE
+Estado: HECHO
 
 Recibí todo:
 

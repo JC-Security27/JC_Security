@@ -1,0 +1,4080 @@
+{
+  "images/tolsen-10001.webp": {
+    "refs": [
+      "10001",
+      "10002"
+    ],
+    "status": "ok",
+    "matchedRef": "10001",
+    "page": "https://www.tolsentools.com/product/combination-pliers-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/COMBINATION-PLIERS.jpg",
+    "file": "images/tolsen-10001-hd.webp",
+    "width": 709,
+    "height": 490
+  },
+  "images/tolsen-10015.webp": {
+    "refs": [
+      "10015"
+    ],
+    "status": "ok",
+    "matchedRef": "10015",
+    "page": "https://www.tolsentools.com/product/combination-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/COMBINATION-PLIERS.jpg",
+    "file": "images/tolsen-10015-hd.webp",
+    "width": 682,
+    "height": 509
+  },
+  "images/tolsen-10022.webp": {
+    "refs": [
+      "10022"
+    ],
+    "status": "ok",
+    "matchedRef": "10022",
+    "page": "https://www.tolsentools.com/product/long-nose-pliers-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/LONG-NOSE-PLIERS-1.jpg",
+    "file": "images/tolsen-10022-hd.webp",
+    "width": 711,
+    "height": 546
+  },
+  "images/tolsen-10023.webp": {
+    "refs": [
+      "10023"
+    ],
+    "status": "ok",
+    "matchedRef": "10023",
+    "page": "https://www.tolsentools.com/product/bent-nose-pliers-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/BENT-NOSE-PLIERS-1.jpg",
+    "file": "images/tolsen-10023-hd.webp",
+    "width": 693,
+    "height": 563
+  },
+  "images/tolsen-10038.webp": {
+    "refs": [
+      "10038"
+    ],
+    "status": "ok",
+    "matchedRef": "10038",
+    "page": "https://www.tolsentools.com/product/3pcs-mini-pliers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/3PCS-MINI-PLIERS-SET.jpg",
+    "file": "images/tolsen-10038-hd.webp",
+    "width": 728,
+    "height": 667
+  },
+  "images/tolsen-10049.webp": {
+    "refs": [
+      "10049"
+    ],
+    "status": "ok",
+    "matchedRef": "10049",
+    "page": "https://www.tolsentools.com/product/locking-pliers-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/LOCKING-PLIERS-1.jpg",
+    "file": "images/tolsen-10049-hd.webp",
+    "width": 707,
+    "height": 510
+  },
+  "images/tolsen-10056.webp": {
+    "refs": [
+      "10056"
+    ],
+    "status": "ok",
+    "matchedRef": "10056",
+    "page": "https://www.tolsentools.com/product/locking-pliers-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/LOCKING-PLIERS-3.jpg",
+    "file": "images/tolsen-10056-hd.webp",
+    "width": 716,
+    "height": 570
+  },
+  "images/tolsen-10359.webp": {
+    "refs": [
+      "10359"
+    ],
+    "status": "ok",
+    "matchedRef": "10359",
+    "page": "https://www.tolsentools.com/product/6pcs-mini-pliers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/09/6PCS-MINI-PLIERS-SET.jpg",
+    "file": "images/tolsen-10359-hd.webp",
+    "width": 490,
+    "height": 607
+  },
+  "images/tolsen-10380.webp": {
+    "refs": [
+      "10380"
+    ],
+    "status": "ok",
+    "matchedRef": "10380",
+    "page": "https://www.tolsentools.com/product/locking-pliers-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/LOCKING-PLIERS-1.jpg",
+    "file": "images/tolsen-10380-hd.webp",
+    "width": 707,
+    "height": 510
+  },
+  "images/tolsen-10301.webp": {
+    "refs": [
+      "10301"
+    ],
+    "status": "ok",
+    "matchedRef": "10301",
+    "page": "https://www.tolsentools.com/product/fencing-plier/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/FENCING-PLIERS-1.jpg",
+    "file": "images/tolsen-10301-hd.webp",
+    "width": 654,
+    "height": 559
+  },
+  "images/tolsen-10400.webp": {
+    "refs": [
+      "10400"
+    ],
+    "status": "ok",
+    "matchedRef": "10400",
+    "page": "https://www.tolsentools.com/product/3pcs-pliers-set-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/3PCS-PLIERS-SET.jpg",
+    "file": "images/tolsen-10400-hd.webp",
+    "width": 717,
+    "height": 548
+  },
+  "images/tolsen-30046.webp": {
+    "refs": [
+      "30046"
+    ],
+    "status": "ok",
+    "matchedRef": "30046",
+    "page": "https://www.tolsentools.com/product/multipurpose-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/MULTIPURPOSE-PLIERS.jpg",
+    "file": "images/tolsen-30046-hd.webp",
+    "width": 713,
+    "height": 641
+  },
+  "images/tolsen-38054.webp": {
+    "refs": [
+      "38054"
+    ],
+    "status": "ok",
+    "matchedRef": "38054",
+    "page": "https://www.tolsentools.com/product/ratchet-modular-crimping-plier/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/RATCHET-MODULAR-CRIMPING-PLIERS.jpg",
+    "file": "images/tolsen-38054-hd.webp",
+    "width": 720,
+    "height": 576
+  },
+  "images/tolsen-38056.webp": {
+    "refs": [
+      "38056"
+    ],
+    "status": "ok",
+    "matchedRef": "38056",
+    "page": "https://www.tolsentools.com/product/ratchet-crimping-plier/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/RATCHET-CRIMPING-PLIERS.jpg",
+    "file": "images/tolsen-38056-hd.webp",
+    "width": 706,
+    "height": 674
+  },
+  "images/tolsen-10003.webp": {
+    "refs": [
+      "10003",
+      "10004"
+    ],
+    "status": "ok",
+    "matchedRef": "10003",
+    "page": "https://www.tolsentools.com/product/diagonal-cutting-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/DIAGONAL-CUTTING-PLIERS.jpg",
+    "file": "images/tolsen-10003-hd.webp",
+    "width": 701,
+    "height": 488
+  },
+  "images/tolsen-33005-b.webp": {
+    "refs": [
+      "33005-B"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-33001.webp": {
+    "refs": [
+      "33001"
+    ],
+    "status": "ok",
+    "matchedRef": "33001",
+    "page": "https://www.tolsentools.com/product/pvc-pipe-cutter-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/PVC-PIPE-CUTTER-1.jpg",
+    "file": "images/tolsen-33001-hd.webp",
+    "width": 669,
+    "height": 498
+  },
+  "images/tolsen-33005.webp": {
+    "refs": [
+      "33005"
+    ],
+    "status": "ok",
+    "matchedRef": "33005",
+    "page": "https://www.tolsentools.com/product/pipe-cutter-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/PIPE-CUTTER-2.jpg",
+    "file": "images/tolsen-33005-hd.webp",
+    "width": 662,
+    "height": 574
+  },
+  "images/tolsen-38020.webp": {
+    "refs": [
+      "38020"
+    ],
+    "status": "ok",
+    "matchedRef": "38020",
+    "page": "https://www.tolsentools.com/product/cable-cutter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/CABLE-CUTTER.jpg",
+    "file": "images/tolsen-38020-hd.webp",
+    "width": 721,
+    "height": 556
+  },
+  "images/tolsen-38022.webp": {
+    "refs": [
+      "38022"
+    ],
+    "status": "ok",
+    "matchedRef": "38022",
+    "page": "https://www.tolsentools.com/product/cable-cutter-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/10-INCH-CABLE-CUTTER.jpg",
+    "file": "images/tolsen-38022-hd.webp",
+    "width": 713,
+    "height": 553
+  },
+  "images/tolsen-41032.webp": {
+    "refs": [
+      "41032"
+    ],
+    "status": "ok",
+    "matchedRef": "41032",
+    "page": "https://www.tolsentools.com/product/blade-for-tile-cutter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/BLADE-FOR-TILE-CUTTER.jpg",
+    "file": "images/tolsen-41032-hd.webp",
+    "width": 660,
+    "height": 687
+  },
+  "images/tolsen-41037.webp": {
+    "refs": [
+      "41037"
+    ],
+    "status": "ok",
+    "matchedRef": "41037",
+    "page": "https://www.tolsentools.com/product/blade-for-tile-cutter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/BLADE-FOR-TILE-CUTTER.jpg",
+    "file": "images/tolsen-41037-hd.webp",
+    "width": 660,
+    "height": 687
+  },
+  "images/tolsen-10029.webp": {
+    "refs": [
+      "10029"
+    ],
+    "status": "ok",
+    "matchedRef": "10029",
+    "page": "https://www.tolsentools.com/product/water-pump-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/WATER-PUMP-PLIERS-1.jpg",
+    "file": "images/tolsen-10029-hd.webp",
+    "width": 700,
+    "height": 562
+  },
+  "images/tolsen-10045.webp": {
+    "refs": [
+      "10045"
+    ],
+    "status": "ok",
+    "matchedRef": "10045",
+    "page": "https://www.tolsentools.com/product/carpenters-pincer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/CARPENTERS-PINCER.jpg",
+    "file": "images/tolsen-10045-hd.webp",
+    "width": 708,
+    "height": 540
+  },
+  "images/tolsen-30003.webp": {
+    "refs": [
+      "30003"
+    ],
+    "status": "ok",
+    "matchedRef": "30003",
+    "page": "https://www.tolsentools.com/product/snap-off-blade-knife-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/SNAP-OFF-BLADE-KNIFE-2.jpg",
+    "file": "images/tolsen-30003-hd.webp",
+    "width": 685,
+    "height": 508
+  },
+  "images/tolsen-30008.webp": {
+    "refs": [
+      "30008"
+    ],
+    "status": "ok",
+    "matchedRef": "30008",
+    "page": "https://www.tolsentools.com/product/10pcs-blade-set-7/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/10PCS-BLADE-SET.jpg",
+    "file": "images/tolsen-30008-hd.webp",
+    "width": 698,
+    "height": 693
+  },
+  "images/tolsen-30010.webp": {
+    "refs": [
+      "30010"
+    ],
+    "status": "ok",
+    "matchedRef": "30010",
+    "page": "https://www.tolsentools.com/product/10pcs-blade-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/10PCS-BLADE-SET.jpg",
+    "file": "images/tolsen-30010-hd.webp",
+    "width": 594,
+    "height": 550
+  },
+  "images/tolsen-30021.webp": {
+    "refs": [
+      "30021"
+    ],
+    "status": "ok",
+    "matchedRef": "30021",
+    "page": "https://www.tolsentools.com/product/10-aviation-snips/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/AVIATION-SNIPS.jpg",
+    "file": "images/tolsen-30021-hd.webp",
+    "width": 715,
+    "height": 548
+  },
+  "images/tolsen-30022.webp": {
+    "refs": [
+      "30022"
+    ],
+    "status": "ok",
+    "matchedRef": "30022",
+    "page": "https://www.tolsentools.com/product/aviation-snip-strianght/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/AVIATION-SNIPS-1.jpg",
+    "file": "images/tolsen-30022-hd.webp",
+    "width": 747,
+    "height": 552
+  },
+  "images/tolsen-30023.webp": {
+    "refs": [
+      "30023"
+    ],
+    "status": "ok",
+    "matchedRef": "30023",
+    "page": "https://www.tolsentools.com/product/aviation-snip-right/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/AVIATION-SNIPS-2.jpg",
+    "file": "images/tolsen-30023-hd.webp",
+    "width": 712,
+    "height": 591
+  },
+  "images/tolsen-30043.webp": {
+    "refs": [
+      "30043"
+    ],
+    "status": "ok",
+    "matchedRef": "30043",
+    "page": "https://www.tolsentools.com/product/electricians-scissors/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/5.5-INCH-ELECTRICIANS-SCISSORS.jpg",
+    "file": "images/tolsen-30043-hd.webp",
+    "width": 736,
+    "height": 569
+  },
+  "images/tolsen-30044.webp": {
+    "refs": [
+      "30044"
+    ],
+    "status": "ok",
+    "matchedRef": "30044",
+    "page": "https://www.tolsentools.com/product/household-scissors/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/HOUSEHOLD-SCISSORS.jpg",
+    "file": "images/tolsen-30044-hd.webp",
+    "width": 685,
+    "height": 533
+  },
+  "images/tolsen-30054.webp": {
+    "refs": [
+      "30054"
+    ],
+    "status": "ok",
+    "matchedRef": "30054",
+    "page": "https://www.tolsentools.com/product/hacksaw-frame-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/tolsen-enduframe-12-inch-300mm-high-tension-hacksaw-frame.jpg",
+    "file": "images/tolsen-30054-hd.webp",
+    "width": 663,
+    "height": 490
+  },
+  "images/tolsen-30061.webp": {
+    "refs": [
+      "30061"
+    ],
+    "status": "ok",
+    "matchedRef": "30061",
+    "page": "https://www.tolsentools.com/product/hacksaw-blade/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/12-INCH-HACKSAW-BLADE.jpg",
+    "file": "images/tolsen-30061-hd.webp",
+    "width": 727,
+    "height": 655
+  },
+  "images/tolsen-31013.webp": {
+    "refs": [
+      "31013"
+    ],
+    "status": "ok",
+    "matchedRef": "31013",
+    "page": "https://www.tolsentools.com/product/universal-ground-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/UNIVERSAL-GROUND-SAW.jpg",
+    "file": "images/tolsen-31013-hd.webp",
+    "width": 518,
+    "height": 263
+  },
+  "images/tolsen-75861.webp": {
+    "refs": [
+      "75861"
+    ],
+    "status": "ok",
+    "matchedRef": "75861",
+    "page": "https://www.tolsentools.com/product/9pcs-bi-metal-hole-saw-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/9PCS-BI-METAL-HOLE-SAW-SET-1.jpg",
+    "file": "images/tolsen-75861-hd.webp",
+    "width": 682,
+    "height": 674
+  },
+  "images/tolsen-31071.webp": {
+    "refs": [
+      "31071"
+    ],
+    "status": "ok",
+    "matchedRef": "31071",
+    "page": "https://www.tolsentools.com/product/hand-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/HAND-SAW-1.jpg",
+    "file": "images/tolsen-31071-hd.webp",
+    "width": 616,
+    "height": 388
+  },
+  "images/tolsen-38041.webp": {
+    "refs": [
+      "38041"
+    ],
+    "status": "ok",
+    "matchedRef": "38041",
+    "page": "https://www.tolsentools.com/product/electrician-tool-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/05/ELECTRICIAN-TOOL-SET-1.jpg",
+    "file": "images/tolsen-38041-hd.webp",
+    "width": 464,
+    "height": 627
+  },
+  "images/tolsen-38052.webp": {
+    "refs": [
+      "38052"
+    ],
+    "status": "ok",
+    "matchedRef": "38052",
+    "page": "https://www.tolsentools.com/product/wire-stripping-and-crimping-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/WIRE-STRIPPING-AND-CRIMPING-PLIERS.jpg",
+    "file": "images/tolsen-38052-hd.webp",
+    "width": 727,
+    "height": 541
+  },
+  "images/tolsen-38048.webp": {
+    "refs": [
+      "38048"
+    ],
+    "status": "ok",
+    "matchedRef": "38048",
+    "page": "https://www.tolsentools.com/product/auto-wire-stripper-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/06/AUTO-WIRE-STRIPPER.jpg",
+    "file": "images/tolsen-38048-hd.webp",
+    "width": 701,
+    "height": 576
+  },
+  "images/tolsen-38051.webp": {
+    "refs": [
+      "38051"
+    ],
+    "status": "ok",
+    "matchedRef": "38051",
+    "page": "https://www.tolsentools.com/product/wire-strippers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/WIRE-STRIPPERS.jpg",
+    "file": "images/tolsen-38051-hd.webp",
+    "width": 717,
+    "height": 548
+  },
+  "images/tolsen-76132.webp": {
+    "refs": [
+      "76132"
+    ],
+    "status": "ok",
+    "matchedRef": "76132",
+    "page": "https://www.tolsentools.com/product/flat-cutting-off-wheel-type-41/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/FLAT-CUTTING-OFF-WHEEL-1.jpg",
+    "file": "images/tolsen-76132-hd.webp",
+    "width": 552,
+    "height": 624
+  },
+  "images/tolsen-76302.webp": {
+    "refs": [
+      "76302"
+    ],
+    "status": "ok",
+    "matchedRef": "76302",
+    "page": "https://www.tolsentools.com/product/depressed-centre-grinding-wheel-metal/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/DEPRESSED-CENTRE-GRINDING-WHEEL-1.jpg",
+    "file": "images/tolsen-76302-hd.webp",
+    "width": 552,
+    "height": 624
+  },
+  "images/tolsen-31035.webp": {
+    "refs": [
+      "31035"
+    ],
+    "status": "ok",
+    "matchedRef": "31035",
+    "page": "https://www.tolsentools.com/product/bypass-pattern-pruning-shears/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/08/8.5-INCH-BYPASS-PATTERN-PRUNING-SHEARS.jpg",
+    "file": "images/tolsen-31035-hd.webp",
+    "width": 697,
+    "height": 704
+  },
+  "images/tolsen-30048.webp": {
+    "refs": [
+      "30048"
+    ],
+    "status": "ok",
+    "matchedRef": "30048",
+    "page": "https://www.tolsentools.com/product/15-in-1-multi-function-pocket-folding-knife/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/15-IN-1-MULTI-FUNCTION-POCKET-FOLDING-KNIFE.jpg",
+    "file": "images/tolsen-30048-hd.webp",
+    "width": 674,
+    "height": 603
+  },
+  "images/tolsen-40210.webp": {
+    "refs": [
+      "40210"
+    ],
+    "status": "ok",
+    "matchedRef": "40210",
+    "page": "https://www.tolsentools.com/product/14-in-1-putty-knife/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/06/14-IN-1-PUTTY-KNIFE.jpg",
+    "file": "images/tolsen-40210-hd.webp",
+    "width": 662,
+    "height": 460
+  },
+  "images/tolsen-25053.webp": {
+    "refs": [
+      "25053",
+      "25052"
+    ],
+    "status": "ok",
+    "matchedRef": "25053",
+    "page": "https://www.tolsentools.com/product/hatchet/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/HATCHET.jpg",
+    "file": "images/tolsen-25053-hd.webp",
+    "width": 685,
+    "height": 662
+  },
+  "images/tolsen-58096.webp": {
+    "refs": [
+      "58096",
+      "58101"
+    ],
+    "status": "ok",
+    "matchedRef": "58096",
+    "page": "https://www.tolsentools.com/product/machete-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/08/MACHETE-1.jpg",
+    "file": "images/tolsen-58096-hd.webp",
+    "width": 635,
+    "height": 296
+  },
+  "images/tolsen-31014.webp": {
+    "refs": [
+      "31014"
+    ],
+    "status": "ok",
+    "matchedRef": "31014",
+    "page": "https://www.tolsentools.com/product/foldable-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/FOLDABLE-SAW.jpg",
+    "file": "images/tolsen-31014-hd.webp",
+    "width": 707,
+    "height": 695
+  },
+  "images/tolsen-31017.webp": {
+    "refs": [
+      "31017"
+    ],
+    "status": "ok",
+    "matchedRef": "31017",
+    "page": "https://www.tolsentools.com/product/mitre-box-with-back-saw-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/MITRE-BOX-WITH-BACK-SAW-SET.jpg",
+    "file": "images/tolsen-31017-hd.webp",
+    "width": 689,
+    "height": 575
+  },
+  "images/tolsen-10346.webp": {
+    "refs": [
+      "10346"
+    ],
+    "status": "ok",
+    "matchedRef": "10346",
+    "page": "https://www.tolsentools.com/product/8-end-cutting-pliers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/END-CUTTING-PLIERS.jpg",
+    "file": "images/tolsen-10346-hd.webp",
+    "width": 529,
+    "height": 387
+  },
+  "images/tolsen-10371.webp": {
+    "refs": [
+      "10371"
+    ],
+    "status": "ok",
+    "matchedRef": "10371",
+    "page": "https://www.tolsentools.com/product/high-leverage-combination-pliers-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/HIGH-LEVERAGE-COMBINATION-PLIERS-1.jpg",
+    "file": "images/tolsen-10371-hd.webp",
+    "width": 591,
+    "height": 459
+  },
+  "images/tolsen-10374.webp": {
+    "refs": [
+      "10374"
+    ],
+    "status": "ok",
+    "matchedRef": "10374",
+    "page": "https://www.tolsentools.com/product/high-leverage-diagonal-cutting-pliers-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/HIGH-LEVERAGE-DIAGONAL-CUTTING-PLIERS-1.jpg",
+    "file": "images/tolsen-10374-hd.webp",
+    "width": 629,
+    "height": 446
+  },
+  "images/tolsen-10411.webp": {
+    "refs": [
+      "10411"
+    ],
+    "status": "ok",
+    "matchedRef": "10411",
+    "page": "https://www.tolsentools.com/product/3pcs-high-leverage-pliers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/3PCS-HIGH-LEVERAGE-PLIERS-SET.jpg",
+    "file": "images/tolsen-10411-hd.webp",
+    "width": 597,
+    "height": 518
+  },
+  "images/tolsen-10450.webp": {
+    "refs": [
+      "10450"
+    ],
+    "status": "ok",
+    "matchedRef": "10450",
+    "page": "https://www.tolsentools.com/product/5-diagonal-flush-cutter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/06/tolsen-5-inch-diagonal-flush-cutter10450.jpg",
+    "file": "images/tolsen-10450-hd.webp",
+    "width": 629,
+    "height": 523
+  },
+  "images/tolsen-31079.webp": {
+    "refs": [
+      "31079"
+    ],
+    "status": "ok",
+    "matchedRef": "31079",
+    "page": "https://www.tolsentools.com/product/12-double-edge-pull-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/DOUBLE-EDGE-PULL-SAW.jpg",
+    "file": "images/tolsen-31079-hd.webp",
+    "width": 657,
+    "height": 360
+  },
+  "images/tolsen-31110.webp": {
+    "refs": [
+      "31110"
+    ],
+    "status": "ok",
+    "matchedRef": "31110",
+    "page": "https://www.tolsentools.com/product/4-in-1-hand-saw-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/05/tolsen-4-in-1-hand-saw.jpg",
+    "file": "images/tolsen-31110-hd.webp",
+    "width": 634,
+    "height": 552
+  },
+  "images/tolsen-85304.webp": {
+    "refs": [
+      "85304"
+    ],
+    "status": "ok",
+    "matchedRef": "85304",
+    "page": "https://www.tolsentools.com/product/5-in-1-multifunctional-pliers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/07/tolsen-5-in-1-multifunctional-pliers-set-85304.jpg",
+    "file": "images/tolsen-85304-hd.webp",
+    "width": 622,
+    "height": 485
+  },
+  "images/tolsen-10112.webp": {
+    "refs": [
+      "10112"
+    ],
+    "status": "ok",
+    "matchedRef": "10112",
+    "page": "https://www.tolsentools.com/product/g-clamp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/G-CLAMP.jpg",
+    "file": "images/tolsen-10112-hd.webp",
+    "width": 665,
+    "height": 512
+  },
+  "images/tolsen-10123.webp": {
+    "refs": [
+      "10123"
+    ],
+    "status": "ok",
+    "matchedRef": "10123",
+    "page": "https://www.tolsentools.com/product/f-clamp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/F-CLAMP.jpg",
+    "file": "images/tolsen-10123-hd.webp",
+    "width": 663,
+    "height": 566
+  },
+  "images/tolsen-10163.webp": {
+    "refs": [
+      "10163",
+      "10191"
+    ],
+    "status": "ok",
+    "matchedRef": "10163",
+    "page": "https://www.tolsentools.com/product/f-clamp-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/F-CLAMP-1.jpg",
+    "file": "images/tolsen-10163-hd.webp",
+    "width": 647,
+    "height": 598
+  },
+  "images/tolsen-10218.webp": {
+    "refs": [
+      "10218"
+    ],
+    "status": "ok",
+    "matchedRef": "10218",
+    "page": "https://www.tolsentools.com/product/cornor-clamp-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/CORNOR-CLAMP.jpg",
+    "file": "images/tolsen-10218-hd.webp",
+    "width": 629,
+    "height": 582
+  },
+  "images/tolsen-10804.webp": {
+    "refs": [
+      "10804"
+    ],
+    "status": "ok",
+    "matchedRef": "10804",
+    "page": "https://www.tolsentools.com/product/bench-vice-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/BENCH-VICE.jpg",
+    "file": "images/tolsen-10804-hd.webp",
+    "width": 663,
+    "height": 499
+  },
+  "images/tolsen-10107.webp": {
+    "refs": [
+      "10107"
+    ],
+    "status": "ok",
+    "matchedRef": "10107",
+    "page": "https://www.tolsentools.com/product/bench-vice-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/BENCH-VICE.jpg",
+    "file": "images/tolsen-10107-hd.webp",
+    "width": 574,
+    "height": 617
+  },
+  "images/tolsen-43021.webp": {
+    "refs": [
+      "43021"
+    ],
+    "status": "ok",
+    "matchedRef": "43021",
+    "page": "https://www.tolsentools.com/product/heavy-duty-3-way-staple-gun/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/HEAVY-DUTY-3-WAY-STAPLE-GUN.jpg",
+    "file": "images/tolsen-43021-hd.webp",
+    "width": 530,
+    "height": 671
+  },
+  "images/tolsen-43018.webp": {
+    "refs": [
+      "43018"
+    ],
+    "status": "ok",
+    "matchedRef": "43018",
+    "page": "https://www.tolsentools.com/product/heavy-duty-staple-gun-43018/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/HEAVY-DUTY-STAPLE-GUN-1.jpg",
+    "file": "images/tolsen-43018-hd.webp",
+    "width": 414,
+    "height": 623
+  },
+  "images/tolsen-25035.webp": {
+    "refs": [
+      "25035"
+    ],
+    "status": "ok",
+    "matchedRef": "25035",
+    "page": "https://www.tolsentools.com/product/rubber-mallet/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/RUBBER-MALLET.jpg",
+    "file": "images/tolsen-25035-hd.webp",
+    "width": 667,
+    "height": 667
+  },
+  "images/tolsen-25132.webp": {
+    "refs": [
+      "25132"
+    ],
+    "status": "ok",
+    "matchedRef": "25132",
+    "page": "https://www.tolsentools.com/product/stoning-hammer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/STONING-HAMMER.jpg",
+    "file": "images/tolsen-25132-hd.webp",
+    "width": 653,
+    "height": 687
+  },
+  "images/tolsen-25151.webp": {
+    "refs": [
+      "25151"
+    ],
+    "status": "ok",
+    "matchedRef": "25151",
+    "page": "https://www.tolsentools.com/product/sledge-hammer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/SLEDGE-HAMMER.jpg",
+    "file": "images/tolsen-25151-hd.webp",
+    "width": 672,
+    "height": 681
+  },
+  "images/tolsen-25088.webp": {
+    "refs": [
+      "25088"
+    ],
+    "status": "ok",
+    "matchedRef": "25088",
+    "page": "https://www.tolsentools.com/product/cold-chisel-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/COLD-CHISEL-1.jpg",
+    "file": "images/tolsen-25088-hd.webp",
+    "width": 653,
+    "height": 571
+  },
+  "images/tolsen-25027.webp": {
+    "refs": [
+      "25027"
+    ],
+    "status": "ok",
+    "matchedRef": "25027",
+    "page": "https://www.tolsentools.com/product/claw-hammer-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/CLAW-HAMMER-1.jpg",
+    "file": "images/tolsen-25027-hd.webp",
+    "width": 576,
+    "height": 516
+  },
+  "images/tolsen-25030.webp": {
+    "refs": [
+      "25030"
+    ],
+    "status": "ok",
+    "matchedRef": "25030",
+    "page": "https://www.tolsentools.com/product/claw-hammer-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/CLAW-HAMMER-1.jpg",
+    "file": "images/tolsen-25030-hd.webp",
+    "width": 703,
+    "height": 696
+  },
+  "images/tolsen-25188.webp": {
+    "refs": [
+      "25188"
+    ],
+    "status": "ok",
+    "matchedRef": "25188",
+    "page": "https://www.tolsentools.com/product/chipping-hammer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/02/CHIPPING-HAMMER.jpg",
+    "file": "images/tolsen-25188-hd.webp",
+    "width": 727,
+    "height": 699
+  },
+  "images/tolsen-25118.webp": {
+    "refs": [
+      "25118"
+    ],
+    "status": "ok",
+    "matchedRef": "25118",
+    "page": "https://www.tolsentools.com/product/heavy-duty-crowbar/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/HEAVY-DUTY-CROWBAR.jpg",
+    "file": "images/tolsen-25118-hd.webp",
+    "width": 648,
+    "height": 532
+  },
+  "images/tolsen-58001.webp": {
+    "refs": [
+      "58001"
+    ],
+    "status": "ok",
+    "matchedRef": "58001",
+    "page": "https://www.tolsentools.com/product/steel-shovel-with-handle/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/STEEL-SHOVEL-WITH-HANDLE.jpg",
+    "file": "images/tolsen-58001-hd.webp",
+    "width": 683,
+    "height": 554
+  },
+  "images/tolsen-43049.webp": {
+    "refs": [
+      "43049"
+    ],
+    "status": "ok",
+    "matchedRef": "43049",
+    "page": "https://www.tolsentools.com/product/heavy-duty-caulking-gun/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/HEAVY-DUTY-CAULKING-GUN.jpg",
+    "file": "images/tolsen-43049-hd.webp",
+    "width": 668,
+    "height": 431
+  },
+  "images/tolsen-43042.webp": {
+    "refs": [
+      "43042"
+    ],
+    "status": "ok",
+    "matchedRef": "43042",
+    "page": "https://www.tolsentools.com/product/caulking-gun/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/CAULKING-GUN-1.jpg",
+    "file": "images/tolsen-43042-hd.webp",
+    "width": 662,
+    "height": 409
+  },
+  "images/tolsen-32038.webp": {
+    "refs": [
+      "32038"
+    ],
+    "status": "ok",
+    "matchedRef": "32038",
+    "page": "https://www.tolsentools.com/product/5pcs-files-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/5PCS-FILES-SET.jpg",
+    "file": "images/tolsen-32038-hd.webp",
+    "width": 670,
+    "height": 707
+  },
+  "images/tolsen-25384.webp": {
+    "refs": [
+      "25384"
+    ],
+    "status": "ok",
+    "matchedRef": "25384",
+    "page": "https://www.tolsentools.com/product/4pcs-wood-chisel-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/4PCS-WOOD-CHISEL-SET.jpg",
+    "file": "images/tolsen-25384-hd.webp",
+    "width": 705,
+    "height": 657
+  },
+  "images/tolsen-15122.webp": {
+    "refs": [
+      "15122",
+      "15123",
+      "15127"
+    ],
+    "status": "ok",
+    "matchedRef": "15122",
+    "page": "https://www.tolsentools.com/product/extension-bar/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/EXTENSION-BAR.jpg",
+    "file": "images/tolsen-15122-hd.webp",
+    "width": 717,
+    "height": 660
+  },
+  "images/tolsen-15818.webp": {
+    "refs": [
+      "15818",
+      "15820",
+      "15821",
+      "15825",
+      "15827"
+    ],
+    "status": "ok",
+    "matchedRef": "15818",
+    "page": "https://www.tolsentools.com/product/combination-spanner-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/COMBINATION-SPANNER.jpg",
+    "file": "images/tolsen-15818-hd.webp",
+    "width": 716,
+    "height": 651
+  },
+  "images/tolsen-15310.webp": {
+    "refs": [
+      "15310"
+    ],
+    "status": "ok",
+    "matchedRef": "15310",
+    "page": "https://www.tolsentools.com/product/adjustable-wrench-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/ADJUSTABLE-WRENCH.jpg",
+    "file": "images/tolsen-15310-hd.webp",
+    "width": 661,
+    "height": 518
+  },
+  "images/tolsen-15138.webp": {
+    "refs": [
+      "15138"
+    ],
+    "status": "ok",
+    "matchedRef": "15138",
+    "page": "https://www.tolsentools.com/product/46pcs-14-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/46PCS-SOCKET-SET.jpg",
+    "file": "images/tolsen-15138-hd.webp",
+    "width": 691,
+    "height": 639
+  },
+  "images/tolsen-18296.webp": {
+    "refs": [
+      "18296"
+    ],
+    "status": "ok",
+    "matchedRef": "18296",
+    "page": "https://www.tolsentools.com/product/10pcs-1-2-deep-impact-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/10PCS-DEEP-IMPACT-SOCKET-SET.jpg",
+    "file": "images/tolsen-18296-hd.webp",
+    "width": 715,
+    "height": 559
+  },
+  "images/tolsen-15145.webp": {
+    "refs": [
+      "15145"
+    ],
+    "status": "ok",
+    "matchedRef": "15145",
+    "page": "https://www.tolsentools.com/product/94pcs-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/94PCS-SOCKET-SET.jpg",
+    "file": "images/tolsen-15145-hd.webp",
+    "width": 600,
+    "height": 675
+  },
+  "images/tolsen-15150.webp": {
+    "refs": [
+      "15150"
+    ],
+    "status": "ok",
+    "matchedRef": "15150",
+    "page": "https://www.tolsentools.com/product/14pcs-1-4-ratchet-handle-with-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/09/14PCS-RATCHET-HANDLE-WITH-SOCKET-SET.jpg",
+    "file": "images/tolsen-15150-hd.webp",
+    "width": 285,
+    "height": 707
+  },
+  "images/tolsen-15151.webp": {
+    "refs": [
+      "15151"
+    ],
+    "status": "ok",
+    "matchedRef": "15151",
+    "page": "https://www.tolsentools.com/product/12pcs-3-8-ratchet-handle-with-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/09/RATCHET-HANDLE-WITH-SOCKET-SET.jpg",
+    "file": "images/tolsen-15151-hd.webp",
+    "width": 254,
+    "height": 700
+  },
+  "images/tolsen-15152.webp": {
+    "refs": [
+      "15152"
+    ],
+    "status": "ok",
+    "matchedRef": "15152",
+    "page": "https://www.tolsentools.com/product/12pcs-1-2-ratchet-handle-with-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/09/RATCHET-HANDLE-WITH-SOCKET-SET-1.jpg",
+    "file": "images/tolsen-15152-hd.webp",
+    "width": 248,
+    "height": 703
+  },
+  "images/tolsen-20035.webp": {
+    "refs": [
+      "20035"
+    ],
+    "status": "ok",
+    "matchedRef": "20035",
+    "page": "https://www.tolsentools.com/product/38pcs-bits-sockets-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/38PCS-BITS-SOCKETS-SET.jpg",
+    "file": "images/tolsen-20035-hd.webp",
+    "width": 662,
+    "height": 559
+  },
+  "images/tolsen-15487.webp": {
+    "refs": [
+      "15487"
+    ],
+    "status": "ok",
+    "matchedRef": "15487",
+    "page": "https://www.tolsentools.com/product/12pcs-combination-spanner-set-inch/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/12PCS-COMBINATION-SPANNER-SET.jpg",
+    "file": "images/tolsen-15487-hd.webp",
+    "width": 647,
+    "height": 535
+  },
+  "images/tolsen-15259.webp": {
+    "refs": [
+      "15259"
+    ],
+    "status": "ok",
+    "matchedRef": "15259",
+    "page": "https://www.tolsentools.com/product/7pcs-flexible-combination-gear-spanner/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/10/7PCS-FLEXIBLE-HEAD-COMBINATION-RATCHET-SPANNER-SET-1.jpg",
+    "file": "images/tolsen-15259-hd.webp",
+    "width": 610,
+    "height": 440
+  },
+  "images/tolsen-20094.webp": {
+    "refs": [
+      "20094"
+    ],
+    "status": "ok",
+    "matchedRef": "20094",
+    "page": "https://www.tolsentools.com/product/36pcs-inch-metric-hex-key-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/36PCS-INCH-METRIC-HEX-KEY-SET.jpg",
+    "file": "images/tolsen-20094-hd.webp",
+    "width": 597,
+    "height": 657
+  },
+  "images/tolsen-20049.webp": {
+    "refs": [
+      "20049"
+    ],
+    "status": "ok",
+    "matchedRef": "20049",
+    "page": "https://www.tolsentools.com/product/9pcs-extra-long-arm-hex-key-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/10/9PCS-EXTRA-LONG-ARM-HEX-KEY-SET-1.jpg",
+    "file": "images/tolsen-20049-hd.webp",
+    "width": 485,
+    "height": 598
+  },
+  "images/tolsen-20056.webp": {
+    "refs": [
+      "20056"
+    ],
+    "status": "ok",
+    "matchedRef": "20056",
+    "page": "https://www.tolsentools.com/product/9pcs-torx-long-arm-hex-key-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/9PCS-TORX-LONG-ARM-HEX-KEY-SET-1.jpg",
+    "file": "images/tolsen-20056-hd.webp",
+    "width": 556,
+    "height": 601
+  },
+  "images/tolsen-15887.webp": {
+    "refs": [
+      "15887"
+    ],
+    "status": "ok",
+    "matchedRef": "15887",
+    "page": "https://www.tolsentools.com/product/8pcs-combination-spanner-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/09/8PCS-COMBINATION-SPANNER-SET.jpg",
+    "file": "images/tolsen-15887-hd.webp",
+    "width": 635,
+    "height": 554
+  },
+  "images/tolsen-19667.webp": {
+    "refs": [
+      "19667"
+    ],
+    "status": "ok",
+    "matchedRef": "19667",
+    "page": "https://www.tolsentools.com/product/micrometer-torque-wrench-with-reversible-ratchet/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/10/MICROMETER-TORQUE-WRENCH-WITH-REVERSIBLE-RATCHET.jpg",
+    "file": "images/tolsen-19667-hd.webp",
+    "width": 736,
+    "height": 657
+  },
+  "images/tolsen-16118.webp": {
+    "refs": [
+      "16118",
+      "16119",
+      "16120"
+    ],
+    "status": "ok",
+    "matchedRef": "16118",
+    "page": "https://www.tolsentools.com/product/reversible-ratchet-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/REVERSIBLE-RATCHET.jpg",
+    "file": "images/tolsen-16118-hd.webp",
+    "width": 679,
+    "height": 642
+  },
+  "images/tolsen-77832.webp": {
+    "refs": [
+      "77832"
+    ],
+    "status": "ok",
+    "matchedRef": "77832",
+    "page": "https://www.tolsentools.com/product/3pcs-magnetic-nut-socket-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/3PCS-MAGNETIC-NUT-SOCKET-SET.jpg",
+    "file": "images/tolsen-77832-hd.webp",
+    "width": 616,
+    "height": 654
+  },
+  "images/tolsen-35022.webp": {
+    "refs": [
+      "35022"
+    ],
+    "status": "ok",
+    "matchedRef": "35022",
+    "page": "https://www.tolsentools.com/product/fibreglass-measuring-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/FIBREGLASS-MEASURING-TAPE.jpg",
+    "file": "images/tolsen-35022-hd.webp",
+    "width": 721,
+    "height": 596
+  },
+  "images/tolsen-36145.webp": {
+    "refs": [
+      "36145"
+    ],
+    "status": "ok",
+    "matchedRef": "36145",
+    "page": "https://www.tolsentools.com/product/measuring-tape-6/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/12/MEASURING-TAPE-2.jpg",
+    "file": "images/tolsen-36145-hd.webp",
+    "width": 707,
+    "height": 519
+  },
+  "images/tolsen-36006.webp": {
+    "refs": [
+      "36006"
+    ],
+    "status": "ok",
+    "matchedRef": "36006",
+    "page": "https://www.tolsentools.com/product/measuring-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/MEASURING-TAPE.jpg",
+    "file": "images/tolsen-36006-hd.webp",
+    "width": 706,
+    "height": 486
+  },
+  "images/tolsen-36013.webp": {
+    "refs": [
+      "36013"
+    ],
+    "status": "ok",
+    "matchedRef": "36013",
+    "page": "https://www.tolsentools.com/product/measuring-tape-metric/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/05/tolsen-measuring-tape.jpg",
+    "file": "images/tolsen-36013-hd.webp",
+    "width": 665,
+    "height": 470
+  },
+  "images/tolsen-35176.webp": {
+    "refs": [
+      "35176"
+    ],
+    "status": "ok",
+    "matchedRef": "35176",
+    "page": "https://www.tolsentools.com/product/laser-distance-meter-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/LASER-DISTANCE-METER-1.jpg",
+    "file": "images/tolsen-35176-hd.webp",
+    "width": 328,
+    "height": 702
+  },
+  "images/tolsen-35192.webp": {
+    "refs": [
+      "35192"
+    ],
+    "status": "ok",
+    "matchedRef": "35192",
+    "page": "https://www.tolsentools.com/product/measuring-wheel-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/MEASURING-WHEEL-1.jpg",
+    "file": "images/tolsen-35192-hd.webp",
+    "width": 389,
+    "height": 749
+  },
+  "images/tolsen-35053.webp": {
+    "refs": [
+      "35053"
+    ],
+    "status": "ok",
+    "matchedRef": "35053",
+    "page": "https://www.tolsentools.com/product/digital-caliper/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/DIGITAL-CALIPER.jpg",
+    "file": "images/tolsen-35053-hd.webp",
+    "width": 714,
+    "height": 576
+  },
+  "images/tolsen-44911.webp": {
+    "refs": [
+      "44911"
+    ],
+    "status": "ok",
+    "matchedRef": "44911",
+    "page": "https://www.tolsentools.com/product/magnetic-welding-holder/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/MAGNETIC-WELDING-HOLDER.jpg",
+    "file": "images/tolsen-44911-hd.webp",
+    "width": 605,
+    "height": 457
+  },
+  "images/tolsen-35153.webp": {
+    "refs": [
+      "35153"
+    ],
+    "status": "ok",
+    "matchedRef": "35153",
+    "page": "https://www.tolsentools.com/product/green-beam-self-leveling-360-horizontal-cross-line-laser-level/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/GREEN-BEAM-SELF-LEVELING-360°-HORIZONTAL-CROSS-LINE-LASER-LEVEL.jpg",
+    "file": "images/tolsen-35153-hd.webp",
+    "width": 578,
+    "height": 677
+  },
+  "images/tolsen-35165.webp": {
+    "refs": [
+      "35165"
+    ],
+    "status": "ok",
+    "matchedRef": "35165",
+    "page": "https://www.tolsentools.com/product/instrument-tripod/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/INSTRUMENT-TRIPOD.jpg",
+    "file": "images/tolsen-35165-hd.webp",
+    "width": 427,
+    "height": 746
+  },
+  "images/tolsen-38033.webp": {
+    "refs": [
+      "38033"
+    ],
+    "status": "ok",
+    "matchedRef": "38033",
+    "page": "https://www.tolsentools.com/product/digital-multimeter-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/DIGITAL-MULTIMETER-1.jpg",
+    "file": "images/tolsen-38033-hd.webp",
+    "width": 493,
+    "height": 653
+  },
+  "images/tolsen-38034.webp": {
+    "refs": [
+      "38034"
+    ],
+    "status": "ok",
+    "matchedRef": "38034",
+    "page": "https://www.tolsentools.com/product/digital-clamp-multimeter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/DIGITAL-CLAMP-MULTIMETER.jpg",
+    "file": "images/tolsen-38034-hd.webp",
+    "width": 305,
+    "height": 678
+  },
+  "images/tolsen-38035.webp": {
+    "refs": [
+      "38035"
+    ],
+    "status": "ok",
+    "matchedRef": "38035",
+    "page": "https://www.tolsentools.com/product/ac-digital-clamp-meter/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/AC-DIGITAL-CLAMP-METER.jpg",
+    "file": "images/tolsen-38035-hd.webp",
+    "width": 280,
+    "height": 682
+  },
+  "images/tolsen-35111.webp": {
+    "refs": [
+      "35111",
+      "35115"
+    ],
+    "status": "ok",
+    "matchedRef": "35111",
+    "page": "https://www.tolsentools.com/product/spirit-level-with-magnetic-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/SPIRIT-LEVEL-WITH-MAGNETIC.jpg",
+    "file": "images/tolsen-35111-hd.webp",
+    "width": 695,
+    "height": 569
+  },
+  "images/tolsen-35059.webp": {
+    "refs": [
+      "35059"
+    ],
+    "status": "ok",
+    "matchedRef": "35059",
+    "page": "https://www.tolsentools.com/product/mini-spirit-level/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/MINI-SPIRIT-LEVEL.jpg",
+    "file": "images/tolsen-35059-hd.webp",
+    "width": 702,
+    "height": 610
+  },
+  "images/tolsen-38110.webp": {
+    "refs": [
+      "38110"
+    ],
+    "status": "ok",
+    "matchedRef": "38110",
+    "page": "https://www.tolsentools.com/product/non-contact-ac-voltage-detector/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/NON-CONTACT-AC-VOLTAGE-DETECTOR.jpg",
+    "file": "images/tolsen-38110-hd.webp",
+    "width": 677,
+    "height": 491
+  },
+  "images/tolsen-38114.webp": {
+    "refs": [
+      "38114"
+    ],
+    "status": "ok",
+    "matchedRef": "38114",
+    "page": "https://www.tolsentools.com/product/voltage-tester-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/VOLTAGE-TESTER.jpg",
+    "file": "images/tolsen-38114-hd.webp",
+    "width": 688,
+    "height": 667
+  },
+  "images/tolsen-35042.webp": {
+    "refs": [
+      "35042"
+    ],
+    "status": "ok",
+    "matchedRef": "35042",
+    "page": "https://www.tolsentools.com/product/angle-square/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/ANGLE-SQUARE-1.jpg",
+    "file": "images/tolsen-35042-hd.webp",
+    "width": 756,
+    "height": 481
+  },
+  "images/tolsen-35037.webp": {
+    "refs": [
+      "35037"
+    ],
+    "status": "ok",
+    "matchedRef": "35037",
+    "page": "https://www.tolsentools.com/product/combination-square/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/COMBINATION-SQUARE.jpg",
+    "file": "images/tolsen-35037-hd.webp",
+    "width": 662,
+    "height": 552
+  },
+  "images/tolsen-35080.webp": {
+    "refs": [
+      "35080"
+    ],
+    "status": "ok",
+    "matchedRef": "35080",
+    "page": "https://www.tolsentools.com/product/angle-square-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/ANGLE-SQUARE.jpg",
+    "file": "images/tolsen-35080-hd.webp",
+    "width": 733,
+    "height": 520
+  },
+  "images/tolsen-20001.webp": {
+    "refs": [
+      "20001"
+    ],
+    "status": "ok",
+    "matchedRef": "20001",
+    "page": "https://www.tolsentools.com/product/screwdriver/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/SCREWDRIVER.jpg",
+    "file": "images/tolsen-20001-hd.webp",
+    "width": 713,
+    "height": 683
+  },
+  "images/tolsen-20012.webp": {
+    "refs": [
+      "20012"
+    ],
+    "status": "ok",
+    "matchedRef": "20012",
+    "page": "https://www.tolsentools.com/product/screwdriver-8/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/02/SCREWDRIVER.jpg",
+    "file": "images/tolsen-20012-hd.webp",
+    "width": 682,
+    "height": 512
+  },
+  "images/tolsen-20031.webp": {
+    "refs": [
+      "20031"
+    ],
+    "status": "ok",
+    "matchedRef": "20031",
+    "page": "https://www.tolsentools.com/product/6pcs-precision-screwdriver-set-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/6PCS-PRECISION-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-20031-hd.webp",
+    "width": 709,
+    "height": 728
+  },
+  "images/tolsen-75100.webp": {
+    "refs": [
+      "75100"
+    ],
+    "status": "ok",
+    "matchedRef": "75100",
+    "page": "https://www.tolsentools.com/product/15pcs-hss-fractional-jobber-length-drill-bits-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/15PCS-HSS-FRACTIONAL-JOBBER-LENGTH-DRILL-BITS-SET.jpg",
+    "file": "images/tolsen-75100-hd.webp",
+    "width": 641,
+    "height": 497
+  },
+  "images/tolsen-20014.webp": {
+    "refs": [
+      "20014"
+    ],
+    "status": "ok",
+    "matchedRef": "20014",
+    "page": "https://www.tolsentools.com/product/6pcs-screwdrivers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/6PCS-SCREWDRIVERS-SET.jpg",
+    "file": "images/tolsen-20014-hd.webp",
+    "width": 729,
+    "height": 634
+  },
+  "images/tolsen-20034.webp": {
+    "refs": [
+      "20034"
+    ],
+    "status": "ok",
+    "matchedRef": "20034",
+    "page": "https://www.tolsentools.com/product/26pcs-bits-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/26PCS-BITS-SET.jpg",
+    "file": "images/tolsen-20034-hd.webp",
+    "width": 647,
+    "height": 623
+  },
+  "images/tolsen-20042.webp": {
+    "refs": [
+      "20042"
+    ],
+    "status": "ok",
+    "matchedRef": "20042",
+    "page": "https://www.tolsentools.com/product/2-in-1-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/2-IN-1-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-20042-hd.webp",
+    "width": 667,
+    "height": 657
+  },
+  "images/tolsen-20043.webp": {
+    "refs": [
+      "20043"
+    ],
+    "status": "ok",
+    "matchedRef": "20043",
+    "page": "https://www.tolsentools.com/product/6-in-1-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/6-IN-1-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-20043-hd.webp",
+    "width": 676,
+    "height": 630
+  },
+  "images/tolsen-20040.webp": {
+    "refs": [
+      "20040"
+    ],
+    "status": "ok",
+    "matchedRef": "20040",
+    "page": "https://www.tolsentools.com/product/14-in-1-ratchet-screwdriver/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/14-IN-1-RATCHET-SCREWDRIVER.jpg",
+    "file": "images/tolsen-20040-hd.webp",
+    "width": 609,
+    "height": 627
+  },
+  "images/tolsen-20179.webp": {
+    "refs": [
+      "20179"
+    ],
+    "status": "ok",
+    "matchedRef": "20179",
+    "page": "https://www.tolsentools.com/product/4pcs-screwdrivers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/4PCS-SCREWDRIVERS-SET.jpg",
+    "file": "images/tolsen-20179-hd.webp",
+    "width": 674,
+    "height": 621
+  },
+  "images/tolsen-20164.webp": {
+    "refs": [
+      "20164"
+    ],
+    "status": "ok",
+    "matchedRef": "20164",
+    "page": "https://www.tolsentools.com/product/screwdriver-8/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/02/SCREWDRIVER.jpg",
+    "file": "images/tolsen-20164-hd.webp",
+    "width": 682,
+    "height": 512
+  },
+  "images/tolsen-20144.webp": {
+    "refs": [
+      "20144"
+    ],
+    "status": "ok",
+    "matchedRef": "20144",
+    "page": "https://www.tolsentools.com/product/screwdriver/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/SCREWDRIVER.jpg",
+    "file": "images/tolsen-20144-hd.webp",
+    "width": 713,
+    "height": 683
+  },
+  "images/tolsen-20181.webp": {
+    "refs": [
+      "20181"
+    ],
+    "status": "ok",
+    "matchedRef": "20181",
+    "page": "https://www.tolsentools.com/product/2pcs-stubby-screwdrivers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/02/2PCS-STUBBY-SCREWDRIVERS-SET.jpg",
+    "file": "images/tolsen-20181-hd.webp",
+    "width": 650,
+    "height": 588
+  },
+  "images/tolsen-20197.webp": {
+    "refs": [
+      "20197"
+    ],
+    "status": "ok",
+    "matchedRef": "20197",
+    "page": "https://www.tolsentools.com/product/7pcs-sae-hex-nut-driver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/7PCS-SAE-HEX-NUT-DRIVER-SET.jpg",
+    "file": "images/tolsen-20197-hd.webp",
+    "width": 551,
+    "height": 539
+  },
+  "images/tolsen-20214.webp": {
+    "refs": [
+      "20214"
+    ],
+    "status": "ok",
+    "matchedRef": "20214",
+    "page": "https://www.tolsentools.com/product/2pcs-screwdriver-bits-set-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/2PCS-SCREWDRIVER-BITS-SET-1.jpg",
+    "file": "images/tolsen-20214-hd.webp",
+    "width": 640,
+    "height": 558
+  },
+  "images/tolsen-20314.webp": {
+    "refs": [
+      "20314"
+    ],
+    "status": "ok",
+    "matchedRef": "20314",
+    "page": "https://www.tolsentools.com/product/2pcs-screwdriver-bits-set-8/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/2PCS-SCREWDRIVER-BITS-SET-8.jpg",
+    "file": "images/tolsen-20314-hd.webp",
+    "width": 709,
+    "height": 540
+  },
+  "images/tolsen-75878.webp": {
+    "refs": [
+      "75878"
+    ],
+    "status": "ok",
+    "matchedRef": "75878",
+    "page": "https://www.tolsentools.com/product/3pcs-titanium-coated-step-drill-bits-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/01/3PCS-TITANIUM-COATED-STEP-DRILL-BITS-SET.jpg",
+    "file": "images/tolsen-75878-hd.webp",
+    "width": 593,
+    "height": 676
+  },
+  "images/tolsen-20740.webp": {
+    "refs": [
+      "20740"
+    ],
+    "status": "ok",
+    "matchedRef": "20740",
+    "page": "https://www.tolsentools.com/product/10pcs-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/10PCS-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-20740-hd.webp",
+    "width": 495,
+    "height": 670
+  },
+  "images/tolsen-33505.webp": {
+    "refs": [
+      "33505"
+    ],
+    "status": "ok",
+    "matchedRef": "33505",
+    "page": "https://www.tolsentools.com/product/5pcs-screw-extractor-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/5PCS-SCREW-EXTRACTOR-SET.jpg",
+    "file": "images/tolsen-33505-hd.webp",
+    "width": 671,
+    "height": 643
+  },
+  "images/tolsen-75628.webp": {
+    "refs": [
+      "75628"
+    ],
+    "status": "ok",
+    "matchedRef": "75628",
+    "page": "https://www.tolsentools.com/product/16pcs-drill-bits-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/16PCS-DRILL-BITS-SET.jpg",
+    "file": "images/tolsen-75628-hd.webp",
+    "width": 606,
+    "height": 468
+  },
+  "images/tolsen-20370.webp": {
+    "refs": [
+      "20370"
+    ],
+    "status": "ok",
+    "matchedRef": "20370",
+    "page": "https://www.tolsentools.com/product/32pcs-screwdriver-bit-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/06/32PCS-SCREWDRIVER-BIT-SET.jpg",
+    "file": "images/tolsen-20370-hd.webp",
+    "width": 674,
+    "height": 647
+  },
+  "images/tolsen-20063.webp": {
+    "refs": [
+      "20063"
+    ],
+    "status": "ok",
+    "matchedRef": "20063",
+    "page": "https://www.tolsentools.com/product/8pcs-torx-t-handle-screwdrivers-set-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/08/8PCS-TORX-T-HANDLE-SCREWDRIVERS-SET.jpg",
+    "file": "images/tolsen-20063-hd.webp",
+    "width": 568,
+    "height": 651
+  },
+  "images/tolsen-77115.webp": {
+    "refs": [
+      "77115"
+    ],
+    "status": "ok",
+    "matchedRef": "77115",
+    "page": "https://www.tolsentools.com/product/250pcs-accessory-set-for-mini-drill/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/250PCS-ACCESSORY-SET-FOR-MINI-DRILL.jpg",
+    "file": "images/tolsen-77115-hd.webp",
+    "width": 594,
+    "height": 614
+  },
+  "images/tolsen-20526.webp": {
+    "refs": [
+      "20526"
+    ],
+    "status": "ok",
+    "matchedRef": "20526",
+    "page": "https://www.tolsentools.com/product/2pcs-impact-screwdriver-bit-set-pozidriv/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/2PCS-IMPACT-SCREWDRIVER-BIT-SET-1.jpg",
+    "file": "images/tolsen-20526-hd.webp",
+    "width": 546,
+    "height": 438
+  },
+  "images/tolsen-20580.webp": {
+    "refs": [
+      "20580"
+    ],
+    "status": "ok",
+    "matchedRef": "20580",
+    "page": "https://www.tolsentools.com/product/10pcs-impact-screwdriver-bit-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/10PCS-IMPACT-SCREWDRIVER-BIT-SET-2.jpg",
+    "file": "images/tolsen-20580-hd.webp",
+    "width": 619,
+    "height": 504
+  },
+  "images/tolsen-75626.webp": {
+    "refs": [
+      "75626"
+    ],
+    "status": "ok",
+    "matchedRef": "75626",
+    "page": "https://www.tolsentools.com/product/8pcs-wood-drill-bits-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/8PCS-WOOD-DRILL-BITS-SET.jpg",
+    "file": "images/tolsen-75626-hd.webp",
+    "width": 591,
+    "height": 606
+  },
+  "images/tolsen-38001.webp": {
+    "refs": [
+      "38001"
+    ],
+    "status": "ok",
+    "matchedRef": "38001",
+    "page": "https://www.tolsentools.com/product/vde-screwdriver/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/VDE-SCREWDRIVER.jpg",
+    "file": "images/tolsen-38001-hd.webp",
+    "width": 689,
+    "height": 528
+  },
+  "images/tolsen-38006.webp": {
+    "refs": [
+      "38006"
+    ],
+    "status": "ok",
+    "matchedRef": "38006",
+    "page": "https://www.tolsentools.com/product/vde-screwdriver-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/VDE-SCREWDRIVER-1.jpg",
+    "file": "images/tolsen-38006-hd.webp",
+    "width": 708,
+    "height": 504
+  },
+  "images/tolsen-v16036.webp": {
+    "refs": [
+      "V16036"
+    ],
+    "status": "ok",
+    "matchedRef": "V16036",
+    "page": "https://www.tolsentools.com/product/insulated-diagonal-cutting-pliers-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/6-INCH-INSULATED-DIAGONAL-CUTTING-PLIERS.jpg",
+    "file": "images/tolsen-v16036-hd.webp",
+    "width": 643,
+    "height": 592
+  },
+  "images/tolsen-v16006.webp": {
+    "refs": [
+      "V16006"
+    ],
+    "status": "ok",
+    "matchedRef": "V16006",
+    "page": "https://www.tolsentools.com/product/insulated-combination-pliers-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/INSULATED-COMBINATION-PLIERS.jpg",
+    "file": "images/tolsen-v16006-hd.webp",
+    "width": 629,
+    "height": 609
+  },
+  "images/tolsen-v32007.webp": {
+    "refs": [
+      "V32007"
+    ],
+    "status": "ok",
+    "matchedRef": "V32007",
+    "page": "https://www.tolsentools.com/product/7pcs-insulated-precision-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/7PCS-INSULATED-PRECISION-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-v32007-hd.webp",
+    "width": 584,
+    "height": 613
+  },
+  "images/tolsen-v33506.webp": {
+    "refs": [
+      "V33506"
+    ],
+    "status": "ok",
+    "matchedRef": "V33506",
+    "page": "https://www.tolsentools.com/product/6pcs-insulated-screwdrivers-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/6PCS-INSULATED-SCREWDRIVERS-SET.jpg",
+    "file": "images/tolsen-v33506-hd.webp",
+    "width": 690,
+    "height": 404
+  },
+  "images/tolsen-v80107.webp": {
+    "refs": [
+      "V80107"
+    ],
+    "status": "ok",
+    "matchedRef": "V80107",
+    "page": "https://www.tolsentools.com/product/7pcs-injection-insulated-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/11/7PCS-INJECTION-INSULATED-SET.jpg",
+    "file": "images/tolsen-v80107-hd.webp",
+    "width": 616,
+    "height": 730
+  },
+  "images/tolsen-v33212.webp": {
+    "refs": [
+      "V33212"
+    ],
+    "status": "ok",
+    "matchedRef": "V33212",
+    "page": "https://www.tolsentools.com/product/12pcs-insulated-changeable-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/12PCS-INSULATED-CHANGEABLE-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-v33212-hd.webp",
+    "width": 650,
+    "height": 404
+  },
+  "images/tolsen-38016.webp": {
+    "refs": [
+      "38016"
+    ],
+    "status": "ok",
+    "matchedRef": "38016",
+    "page": "https://www.tolsentools.com/product/13pcs-vde-insulated-screwdriver-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/13PCS-VDE-INSULATED-SCREWDRIVER-SET.jpg",
+    "file": "images/tolsen-38016-hd.webp",
+    "width": 734,
+    "height": 659
+  },
+  "images/tolsen-v83306.webp": {
+    "refs": [
+      "V83306"
+    ],
+    "status": "ok",
+    "matchedRef": "V83306",
+    "page": "https://www.tolsentools.com/product/6pcs-insulated-hand-tools-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/6PCS-INSULATED-HAND-TOOLS-SET-1.jpg",
+    "file": "images/tolsen-v83306-hd.webp",
+    "width": 684,
+    "height": 698
+  },
+  "images/tolsen-v83825.webp": {
+    "refs": [
+      "V83825"
+    ],
+    "status": "ok",
+    "matchedRef": "V83825",
+    "page": "https://www.tolsentools.com/product/25pcs-insulated-hand-tools-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/25PCS-INSULATED-HAND-TOOLS-SET.jpg",
+    "file": "images/tolsen-v83825-hd.webp",
+    "width": 696,
+    "height": 734
+  },
+  "images/tolsen-87225.webp": {
+    "refs": [
+      "87225"
+    ],
+    "status": "ok",
+    "matchedRef": "87225",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-circular-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/20V-LI-ION-CORDLESS-CIRCULAR-SAW-1.jpg",
+    "file": "images/tolsen-87225-hd.webp",
+    "width": 592,
+    "height": 611
+  },
+  "images/tolsen-87280.webp": {
+    "refs": [
+      "87280"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-79213.webp": {
+    "refs": [
+      "79213"
+    ],
+    "status": "ok",
+    "matchedRef": "79213",
+    "page": "https://www.tolsentools.com/product/12v-li-ion-cordless-drill/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/12V-LI-ION-CORDLESS-DRILL-1.jpg",
+    "file": "images/tolsen-79213-hd.webp",
+    "width": 600,
+    "height": 632
+  },
+  "images/tolsen-87401.webp": {
+    "refs": [
+      "87401"
+    ],
+    "status": "ok",
+    "matchedRef": "87401",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-drill-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/04/20V-LI-ION-CORDLESS-DRILL-1.jpg",
+    "file": "images/tolsen-87401-hd.webp",
+    "width": 553,
+    "height": 655
+  },
+  "images/tolsen-79214.webp": {
+    "refs": [
+      "79214"
+    ],
+    "status": "ok",
+    "matchedRef": "79214",
+    "page": "https://www.tolsentools.com/product/12v-li-ion-impact-driver/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/12V-LI-ION-IMPACT-DRIVER-1.jpg",
+    "file": "images/tolsen-79214-hd.webp",
+    "width": 535,
+    "height": 664
+  },
+  "images/tolsen-87415.webp": {
+    "refs": [
+      "87415"
+    ],
+    "status": "ok",
+    "matchedRef": "87415",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-combo-kit-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/04/20V-LI-ION-CORDLESS-COMBO-KIT-1.jpg",
+    "file": "images/tolsen-87415-hd.webp",
+    "width": 653,
+    "height": 570
+  },
+  "images/tolsen-87272.webp": {
+    "refs": [
+      "87272"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87312.webp": {
+    "refs": [
+      "87312"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87311.webp": {
+    "refs": [
+      "87311"
+    ],
+    "status": "ok",
+    "matchedRef": "87311",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-led-work-light/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/03/20V-LI-ION-LED-WORK-LIGHT-1.jpg",
+    "file": "images/tolsen-87311-hd.webp",
+    "width": 400,
+    "height": 616
+  },
+  "images/tolsen-87231.webp": {
+    "refs": [
+      "87231"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87233.webp": {
+    "refs": [
+      "87233"
+    ],
+    "status": "ok",
+    "matchedRef": "87233",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-random-orbit-sander/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/03/20V-LI-ION-CORDLESS-RANDOM-ORBIT-SANDER-1.jpg",
+    "file": "images/tolsen-87233-hd.webp",
+    "width": 654,
+    "height": 583
+  },
+  "images/tolsen-87417.webp": {
+    "refs": [
+      "87417"
+    ],
+    "status": "ok",
+    "matchedRef": "87417",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-angle-grinder-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/11/20V-LI-ION-CORDLESS-ANGLE-GRINDER-1.jpg",
+    "file": "images/tolsen-87417-hd.webp",
+    "width": 672,
+    "height": 412
+  },
+  "images/tolsen-87328.webp": {
+    "refs": [
+      "87328"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87481.webp": {
+    "refs": [
+      "87481"
+    ],
+    "status": "ok",
+    "matchedRef": "87481",
+    "page": "https://www.tolsentools.com/product/li-ion-battery-charger-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/04/LI-ION-BATTERY-CHARGER-2.jpg",
+    "file": "images/tolsen-87481-hd.webp",
+    "width": 655,
+    "height": 544
+  },
+  "images/tolsen-87472.webp": {
+    "refs": [
+      "87472"
+    ],
+    "status": "ok",
+    "matchedRef": "87472",
+    "page": "https://www.tolsentools.com/product/2a-battery-charger/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/12/tolsen-2a-battery-charger-87480.jpg",
+    "file": "images/tolsen-87472-hd.webp",
+    "width": 664,
+    "height": 617
+  },
+  "images/tolsen-87474.webp": {
+    "refs": [
+      "87474"
+    ],
+    "status": "ok",
+    "matchedRef": "87474",
+    "page": "https://www.tolsentools.com/product/180w-battery-charger/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/180W-BATTERY-CHARGER.jpg",
+    "file": "images/tolsen-87474-hd.webp",
+    "width": 593,
+    "height": 460
+  },
+  "images/tolsen-87320.webp": {
+    "refs": [
+      "87320"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87316.webp": {
+    "refs": [
+      "87316"
+    ],
+    "status": "ok",
+    "matchedRef": "87316",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-glue-gun/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/09/20V-LI-ION-CORDLESS-GLUE-GUN.jpg",
+    "file": "images/tolsen-87316-hd.webp",
+    "width": 598,
+    "height": 622
+  },
+  "images/tolsen-87366.webp": {
+    "refs": [
+      "87366"
+    ],
+    "status": "ok",
+    "matchedRef": "87366",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-brushless-cordless-mini-chain-saw-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/20V-LI-ION-BRUSHLESS-CORDLESS-MINI-CHAIN-SAW-1.jpg",
+    "file": "images/tolsen-87366-hd.webp",
+    "width": 691,
+    "height": 489
+  },
+  "images/tolsen-87372.webp": {
+    "refs": [
+      "87372"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-87381.webp": {
+    "refs": [
+      "87381"
+    ],
+    "status": "ok",
+    "matchedRef": "87381",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-brushless-cordless-shear-industrial-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/03/20V-LI-ION-BRUSHLESS-CORDLESS-SHEAR-5.jpg",
+    "file": "images/tolsen-87381-hd.webp",
+    "width": 381,
+    "height": 724
+  },
+  "images/tolsen-87550.webp": {
+    "refs": [
+      "87550"
+    ],
+    "status": "ok",
+    "matchedRef": "87550",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-high-pressure-washer-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/10/20V-LI-ION-CORDLESS-HIGH-PRESSURE-WASHER.jpg",
+    "file": "images/tolsen-87550-hd.webp",
+    "width": 574,
+    "height": 612
+  },
+  "images/tolsen-87378.webp": {
+    "refs": [
+      "87378"
+    ],
+    "status": "ok",
+    "matchedRef": "87378",
+    "page": "https://www.tolsentools.com/product/20v-li-ion-cordless-sprayer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/09/20V-LI-ION-CORDLESS-SPRAYER.jpg",
+    "file": "images/tolsen-87378-hd.webp",
+    "width": 475,
+    "height": 689
+  },
+  "images/tolsen-79611.webp": {
+    "refs": [
+      "79611"
+    ],
+    "status": "ok",
+    "matchedRef": "79611",
+    "page": "https://www.tolsentools.com/product/gasoline-chain-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/GASOLINE-CHAIN-SAW.jpg",
+    "file": "images/tolsen-79611-hd.webp",
+    "width": 641,
+    "height": 390
+  },
+  "images/tolsen-79618.webp": {
+    "refs": [
+      "79618"
+    ],
+    "status": "ok",
+    "matchedRef": "79618",
+    "page": "https://www.tolsentools.com/product/4-in-1-multi-function-petrol-garden-tool/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/08/PETROL-GARDEN-TOOL.jpg",
+    "file": "images/tolsen-79618-hd.webp",
+    "width": 785,
+    "height": 391
+  },
+  "images/tolsen-79620.webp": {
+    "refs": [
+      "79620"
+    ],
+    "status": "ok",
+    "matchedRef": "79620",
+    "page": "https://www.tolsentools.com/product/gasoline-grass-trimmer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/PETROL-BRUSH-CUTTER-AND-LINE-TRIMMER.jpg",
+    "file": "images/tolsen-79620-hd.webp",
+    "width": 628,
+    "height": 649
+  },
+  "images/tolsen-79625.webp": {
+    "refs": [
+      "79625"
+    ],
+    "status": "ok",
+    "matchedRef": "79625",
+    "page": "https://www.tolsentools.com/product/171cc-petrol-lawn-mower/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/01/tolsen-171cc-4-stroke-ohv-petrol-gas-lawn-mower-with-grass-bag.jpg",
+    "file": "images/tolsen-79625-hd.webp",
+    "width": 696,
+    "height": 727
+  },
+  "images/tolsen-44031.webp": {
+    "refs": [
+      "44031"
+    ],
+    "status": "ok",
+    "matchedRef": "44031",
+    "page": "https://www.tolsentools.com/product/inverter-mma-welding-machine-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/INVERTER-MMA-WELDING-MACHINE.jpg",
+    "file": "images/tolsen-44031-hd.webp",
+    "width": 605,
+    "height": 656
+  },
+  "images/tolsen-79791.webp": {
+    "refs": [
+      "79791"
+    ],
+    "status": "ok",
+    "matchedRef": "79791",
+    "page": "https://www.tolsentools.com/product/hot-air-gun-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/HEAT-GUN.jpg",
+    "file": "images/tolsen-79791-hd.webp",
+    "width": 715,
+    "height": 619
+  },
+  "images/tolsen-79702.webp": {
+    "refs": [
+      "79702"
+    ],
+    "status": "ok",
+    "matchedRef": "79702",
+    "page": "https://www.tolsentools.com/product/6a-impact-drill/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/6A-IMPACT-DRILL.jpg",
+    "file": "images/tolsen-79702-hd.webp",
+    "width": 617,
+    "height": 566
+  },
+  "images/tolsen-79712.webp": {
+    "refs": [
+      "79712"
+    ],
+    "status": "ok",
+    "matchedRef": "79712",
+    "page": "https://www.tolsentools.com/product/sds-plus-rotary-hammer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/7A-SDS-PLUS-ROTARY-HAMMER.jpg",
+    "file": "images/tolsen-79712-hd.webp",
+    "width": 663,
+    "height": 503
+  },
+  "images/tolsen-79720.webp": {
+    "refs": [
+      "79720"
+    ],
+    "status": "ok",
+    "matchedRef": "79720",
+    "page": "https://www.tolsentools.com/product/angle-grinder-7/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/09/6.5A-ANGLE-GRINDER.jpg",
+    "file": "images/tolsen-79720-hd.webp",
+    "width": 651,
+    "height": 579
+  },
+  "images/tolsen-79727.webp": {
+    "refs": [
+      "79727"
+    ],
+    "status": "ok",
+    "matchedRef": "79727",
+    "page": "https://www.tolsentools.com/product/12a-angle-polisher-79727/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/07/12A-ANGLE-POLISHER.jpg",
+    "file": "images/tolsen-79727-hd.webp",
+    "width": 706,
+    "height": 494
+  },
+  "images/tolsen-79732.webp": {
+    "refs": [
+      "79732"
+    ],
+    "status": "ok",
+    "matchedRef": "79732",
+    "page": "https://www.tolsentools.com/product/circular-sawindustrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/08/11A-CIRCULAR-SAW.jpg",
+    "file": "images/tolsen-79732-hd.webp",
+    "width": 632,
+    "height": 660
+  },
+  "images/tolsen-79738.webp": {
+    "refs": [
+      "79738"
+    ],
+    "status": "ok",
+    "matchedRef": "79738",
+    "page": "https://www.tolsentools.com/product/7-5-amp-electric-planer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/7.5A-ELECTRIC-PLANER.jpg",
+    "file": "images/tolsen-79738-hd.webp",
+    "width": 674,
+    "height": 647
+  },
+  "images/tolsen-79741.webp": {
+    "refs": [
+      "79741"
+    ],
+    "status": "ok",
+    "matchedRef": "79741",
+    "page": "https://www.tolsentools.com/product/9a-reciprocating-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/9A-RECIPROCATING-SAW-1.jpg",
+    "file": "images/tolsen-79741-hd.webp",
+    "width": 711,
+    "height": 429
+  },
+  "images/tolsen-79745.webp": {
+    "refs": [
+      "79745"
+    ],
+    "status": "ok",
+    "matchedRef": "79745",
+    "page": "https://www.tolsentools.com/product/jig-saw-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/08/6.5A-JIG-SAW.jpg",
+    "file": "images/tolsen-79745-hd.webp",
+    "width": 679,
+    "height": 620
+  },
+  "images/tolsen-79759.webp": {
+    "refs": [
+      "79759"
+    ],
+    "status": "ok",
+    "matchedRef": "79759",
+    "page": "https://www.tolsentools.com/product/6-8a-belt-sander/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/6.8A-BELT-SANDER-1.jpg",
+    "file": "images/tolsen-79759-hd.webp",
+    "width": 675,
+    "height": 444
+  },
+  "images/tolsen-79761.webp": {
+    "refs": [
+      "79761"
+    ],
+    "status": "ok",
+    "matchedRef": "79761",
+    "page": "https://www.tolsentools.com/product/random-orbital-sander/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/2A-RANDOM-ORBITAL-SANDER.jpg",
+    "file": "images/tolsen-79761-hd.webp",
+    "width": 677,
+    "height": 462
+  },
+  "images/tolsen-79764.webp": {
+    "refs": [
+      "79764"
+    ],
+    "status": "ok",
+    "matchedRef": "79764",
+    "page": "https://www.tolsentools.com/product/2a-1-4-sheet-sander/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/09/tolsen-2a-120v-1-4-sheet-palm-sander-79764.jpg",
+    "file": "images/tolsen-79764-hd.webp",
+    "width": 657,
+    "height": 509
+  },
+  "images/tolsen-79782.webp": {
+    "refs": [
+      "79782"
+    ],
+    "status": "ok",
+    "matchedRef": "79782",
+    "page": "https://www.tolsentools.com/product/vacuum-cleaner-filter-element/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/VACUUM-CLEANER-FILTER-ELEMENT.jpg",
+    "file": "images/tolsen-79782-hd.webp",
+    "width": 579,
+    "height": 614
+  },
+  "images/tolsen-79811.webp": {
+    "refs": [
+      "79811"
+    ],
+    "status": "ok",
+    "matchedRef": "79811",
+    "page": "https://www.tolsentools.com/product/bench-grinder-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/08/BENCH-GRINDER-1.jpg",
+    "file": "images/tolsen-79811-hd.webp",
+    "width": 716,
+    "height": 527
+  },
+  "images/tolsen-79815.webp": {
+    "refs": [
+      "79815"
+    ],
+    "status": "ok",
+    "matchedRef": "79815",
+    "page": "https://www.tolsentools.com/product/cut-off-sawindustrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/08/15A-CUT-OFF-SAW.jpg",
+    "file": "images/tolsen-79815-hd.webp",
+    "width": 517,
+    "height": 656
+  },
+  "images/tolsen-79757.webp": {
+    "refs": [
+      "79757"
+    ],
+    "status": "ok",
+    "matchedRef": "79757",
+    "page": "https://www.tolsentools.com/product/108pcs-rotary-tool-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/108PCS-ROTARY-TOOL-SET.jpg",
+    "file": "images/tolsen-79757-hd.webp",
+    "width": 674,
+    "height": 387
+  },
+  "images/tolsen-79818.webp": {
+    "refs": [
+      "79818"
+    ],
+    "status": "ok",
+    "matchedRef": "79818",
+    "page": "https://www.tolsentools.com/product/15a-mitre-saw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/07/15A-MITRE-SAW.jpg",
+    "file": "images/tolsen-79818-hd.webp",
+    "width": 648,
+    "height": 680
+  },
+  "images/tolsen-79737.webp": {
+    "refs": [
+      "79737"
+    ],
+    "status": "ok",
+    "matchedRef": "79737",
+    "page": "https://www.tolsentools.com/product/5-5a-laminate-trimmer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/12/tolsen-79737-5-5a-laminate-trimmer.jpg",
+    "file": "images/tolsen-79737-hd.webp",
+    "width": 293,
+    "height": 674
+  },
+  "images/tolsen-45006.webp": {
+    "refs": [
+      "45006"
+    ],
+    "status": "ok",
+    "matchedRef": "45006",
+    "page": "https://www.tolsentools.com/product/garden-gloves/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/GARDEN-GLOVES.jpg",
+    "file": "images/tolsen-45006-hd.webp",
+    "width": 616,
+    "height": 534
+  },
+  "images/tolsen-45026.webp": {
+    "refs": [
+      "45026"
+    ],
+    "status": "ok",
+    "matchedRef": "45026",
+    "page": "https://www.tolsentools.com/product/welding-gloves/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/WELDING-GLOVES.jpg",
+    "file": "images/tolsen-45026-hd.webp",
+    "width": 669,
+    "height": 651
+  },
+  "images/tolsen-45040.webp": {
+    "refs": [
+      "45040"
+    ],
+    "status": "ok",
+    "matchedRef": "45040",
+    "page": "https://www.tolsentools.com/product/cut-resistance-protective-gloves-level-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/CUT-RESISTANCE-PROTECTIVE-GLOVES.jpg",
+    "file": "images/tolsen-45040-hd.webp",
+    "width": 631,
+    "height": 544
+  },
+  "images/tolsen-45047.webp": {
+    "refs": [
+      "45047"
+    ],
+    "status": "ok",
+    "matchedRef": "45047",
+    "page": "https://www.tolsentools.com/product/mechanic-gloves/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/MECHANIC-GLOVES.jpg",
+    "file": "images/tolsen-45047-hd.webp",
+    "width": 627,
+    "height": 582
+  },
+  "images/tolsen-45069.webp": {
+    "refs": [
+      "45069"
+    ],
+    "status": "ok",
+    "matchedRef": "45069",
+    "page": "https://www.tolsentools.com/product/safety-goggle-clear/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/SAFETY-GOGGLE.jpg",
+    "file": "images/tolsen-45069-hd.webp",
+    "width": 661,
+    "height": 607
+  },
+  "images/tolsen-45073.webp": {
+    "refs": [
+      "45073"
+    ],
+    "status": "ok",
+    "matchedRef": "45073",
+    "page": "https://www.tolsentools.com/product/safety-goggle-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/SAFETY-GOGGLE-1.jpg",
+    "file": "images/tolsen-45073-hd.webp",
+    "width": 664,
+    "height": 428
+  },
+  "images/tolsen-45072.webp": {
+    "refs": [
+      "45072"
+    ],
+    "status": "ok",
+    "matchedRef": "45072",
+    "page": "https://www.tolsentools.com/product/safety-goggle-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/09/SAFETY-GOGGLE.jpg",
+    "file": "images/tolsen-45072-hd.webp",
+    "width": 657,
+    "height": 611
+  },
+  "images/tolsen-45212.webp": {
+    "refs": [
+      "45212",
+      "45214"
+    ],
+    "status": "ok",
+    "matchedRef": "45212",
+    "page": "https://www.tolsentools.com/product/working-jacket/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/tolsen-working-jacket.jpg",
+    "file": "images/tolsen-45212-hd.webp",
+    "width": 628,
+    "height": 593
+  },
+  "images/tolsen-45266.webp": {
+    "refs": [
+      "45266"
+    ],
+    "status": "ok",
+    "matchedRef": "45266",
+    "page": "https://www.tolsentools.com/product/safety-harness-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/SAFETY-HARNESS.jpg",
+    "file": "images/tolsen-45266-hd.webp",
+    "width": 405,
+    "height": 685
+  },
+  "images/tolsen-45197.webp": {
+    "refs": [
+      "45197",
+      "45198"
+    ],
+    "status": "ok",
+    "matchedRef": "45197",
+    "page": "https://www.tolsentools.com/product/rain-suit-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/07/RAIN-SUIT.jpg",
+    "file": "images/tolsen-45197-hd.webp",
+    "width": 480,
+    "height": 717
+  },
+  "images/tolsen-45242.webp": {
+    "refs": [
+      "45242",
+      "45243",
+      "45244"
+    ],
+    "status": "ok",
+    "matchedRef": "45242",
+    "page": "https://www.tolsentools.com/product/back-support-belt-with-adjustable-suspenders/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/BACK-SUPPORT-BELT-WITH-ADJUSTABLE-SUSPENDERS.jpg",
+    "file": "images/tolsen-45242-hd.webp",
+    "width": 321,
+    "height": 686
+  },
+  "images/tolsen-45087.webp": {
+    "refs": [
+      "45087"
+    ],
+    "status": "ok",
+    "matchedRef": "45087",
+    "page": "https://www.tolsentools.com/product/automatic-welding-mask/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/AUTOMATIC-WELDING-MASK.jpg",
+    "file": "images/tolsen-45087-hd.webp",
+    "width": 614,
+    "height": 592
+  },
+  "images/tolsen-45189.webp": {
+    "refs": [
+      "45189",
+      "45190",
+      "45191",
+      "45188"
+    ],
+    "status": "ok",
+    "matchedRef": "45189",
+    "page": "https://www.tolsentools.com/product/safety-helmet-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/SAFETY-HELMET.jpg",
+    "file": "images/tolsen-45189-hd.webp",
+    "width": 659,
+    "height": 577
+  },
+  "images/tolsen-45216.webp": {
+    "refs": [
+      "45216",
+      "45217",
+      "45218",
+      "45219",
+      "45220",
+      "45221"
+    ],
+    "status": "ok",
+    "matchedRef": "45216",
+    "page": "https://www.tolsentools.com/product/working-trousers/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/tolsen-working-trousers.jpg",
+    "file": "images/tolsen-45216-hd.webp",
+    "width": 282,
+    "height": 586
+  },
+  "images/tolsen-45276.webp": {
+    "refs": [
+      "45276"
+    ],
+    "status": "ok",
+    "matchedRef": "45276",
+    "page": "https://www.tolsentools.com/product/energy-absorber-webbing-lanyards/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/ENERGY-ABSORBER-WEBBING-LANYARDS.jpg",
+    "file": "images/tolsen-45276-hd.webp",
+    "width": 640,
+    "height": 327
+  },
+  "images/tolsen-45097.webp": {
+    "refs": [
+      "45097"
+    ],
+    "status": "ok",
+    "matchedRef": "45097",
+    "page": "https://www.tolsentools.com/product/rain-suit-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/RAINCOAT.jpg",
+    "file": "images/tolsen-45097-hd.webp",
+    "width": 668,
+    "height": 715
+  },
+  "images/tolsen-45371.webp": {
+    "refs": [
+      "45371",
+      "45372",
+      "45373",
+      "45374",
+      "45375",
+      "45376",
+      "45377",
+      "45378"
+    ],
+    "status": "ok",
+    "matchedRef": "45371",
+    "page": "https://www.tolsentools.com/product/safety-boot-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/SAFETY-BOOT.jpg",
+    "file": "images/tolsen-45371-hd.webp",
+    "width": 623,
+    "height": 582
+  },
+  "images/tolsen-45351.webp": {
+    "refs": [
+      "45351",
+      "45352",
+      "45353",
+      "45354",
+      "45355",
+      "45356",
+      "45357",
+      "45358"
+    ],
+    "status": "ok",
+    "matchedRef": "45351",
+    "page": "https://www.tolsentools.com/product/safety-boot-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/SAFETY-BOOT.jpg",
+    "file": "images/tolsen-45351-hd.webp",
+    "width": 621,
+    "height": 488
+  },
+  "images/tolsen-60013.webp": {
+    "refs": [
+      "60013"
+    ],
+    "status": "ok",
+    "matchedRef": "60013",
+    "page": "https://www.tolsentools.com/product/head-lamp-industrial/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/12/HEAD-LAMP.jpg",
+    "file": "images/tolsen-60013-hd.webp",
+    "width": 687,
+    "height": 336
+  },
+  "images/tolsen-60012.webp": {
+    "refs": [
+      "60012"
+    ],
+    "status": "ok",
+    "matchedRef": "60012",
+    "page": "https://www.tolsentools.com/product/rechargeable-sensor-head-lamp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/12/RECHARGEABLE-SENSOR-HEAD-LAMP.jpg",
+    "file": "images/tolsen-60012-hd.webp",
+    "width": 630,
+    "height": 304
+  },
+  "images/tolsen-80130.webp": {
+    "refs": [
+      "80130"
+    ],
+    "status": "ok",
+    "matchedRef": "80130",
+    "page": "https://www.tolsentools.com/product/tool-vest/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/TOOL-VEST.jpg",
+    "file": "images/tolsen-80130-hd.webp",
+    "width": 527,
+    "height": 595
+  },
+  "images/tolsen-45092.webp": {
+    "refs": [
+      "45092",
+      "45152"
+    ],
+    "status": "ok",
+    "matchedRef": "45092",
+    "page": "https://www.tolsentools.com/product/reflector-vest-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/REFLECTOR-VEST.jpg",
+    "file": "images/tolsen-45092-hd.webp",
+    "width": 457,
+    "height": 717
+  },
+  "images/tolsen-45224.webp": {
+    "refs": [
+      "45224"
+    ],
+    "status": "ok",
+    "matchedRef": "45224",
+    "page": "https://www.tolsentools.com/product/working-overalls/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/tolsen-working-overalls.jpg",
+    "file": "images/tolsen-45224-hd.webp",
+    "width": 236,
+    "height": 673
+  },
+  "images/tolsen-45016.webp": {
+    "refs": [
+      "45016"
+    ],
+    "status": "ok",
+    "matchedRef": "45016",
+    "page": "https://www.tolsentools.com/product/working-gloves/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/WORKING-GLOVES.jpg",
+    "file": "images/tolsen-45016-hd.webp",
+    "width": 590,
+    "height": 560
+  },
+  "images/tolsen-45128.webp": {
+    "refs": [
+      "45128",
+      "45129"
+    ],
+    "status": "ok",
+    "matchedRef": "45128",
+    "page": "https://www.tolsentools.com/product/rain-boot/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/RAIN-BOOTS.jpg",
+    "file": "images/tolsen-45128-hd.webp",
+    "width": 482,
+    "height": 675
+  },
+  "images/tolsen-80131.webp": {
+    "refs": [
+      "80131"
+    ],
+    "status": "ok",
+    "matchedRef": "80131",
+    "page": "https://www.tolsentools.com/product/workshop-apron/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/11/WORKSHOP-APRON.jpg",
+    "file": "images/tolsen-80131-hd.webp",
+    "width": 529,
+    "height": 635
+  },
+  "images/tolsen-80132.webp": {
+    "refs": [
+      "80132"
+    ],
+    "status": "ok",
+    "matchedRef": "80132",
+    "page": "https://www.tolsentools.com/product/workshop-apron-80132/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/09/tolsen-heavy-duty-canvas-workshop-apron-with-pockets.jpg",
+    "file": "images/tolsen-80132-hd.webp",
+    "width": 558,
+    "height": 653
+  },
+  "images/tolsen-80040.webp": {
+    "refs": [
+      "80040"
+    ],
+    "status": "ok",
+    "matchedRef": "80040",
+    "page": "https://www.tolsentools.com/product/backpack-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/BACKPACK.jpg",
+    "file": "images/tolsen-80040-hd.webp",
+    "width": 567,
+    "height": 660
+  },
+  "images/tolsen-80042.webp": {
+    "refs": [
+      "80042"
+    ],
+    "status": "ok",
+    "matchedRef": "80042",
+    "page": "https://www.tolsentools.com/product/tool-bag-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/TOOL-BAG-1.jpg",
+    "file": "images/tolsen-80042-hd.webp",
+    "width": 637,
+    "height": 618
+  },
+  "images/tolsen-80101.webp": {
+    "refs": [
+      "80101"
+    ],
+    "status": "ok",
+    "matchedRef": "80101",
+    "page": "https://www.tolsentools.com/product/tool-bag/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/TOOL-BAG.jpg",
+    "file": "images/tolsen-80101-hd.webp",
+    "width": 628,
+    "height": 518
+  },
+  "images/tolsen-80102.webp": {
+    "refs": [
+      "80102"
+    ],
+    "status": "ok",
+    "matchedRef": "80102",
+    "page": "https://www.tolsentools.com/product/tool-bag-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/TOOL-BAG-1.jpg",
+    "file": "images/tolsen-80102-hd.webp",
+    "width": 539,
+    "height": 632
+  },
+  "images/tolsen-80103.webp": {
+    "refs": [
+      "80103"
+    ],
+    "status": "ok",
+    "matchedRef": "80103",
+    "page": "https://www.tolsentools.com/product/tool-bag-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/TOOL-BAG-2.jpg",
+    "file": "images/tolsen-80103-hd.webp",
+    "width": 665,
+    "height": 704
+  },
+  "images/tolsen-80120.webp": {
+    "refs": [
+      "80120"
+    ],
+    "status": "ok",
+    "matchedRef": "80120",
+    "page": "https://www.tolsentools.com/product/tool-pouch/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/01/TOOL-POUCH.jpg",
+    "file": "images/tolsen-80120-hd.webp",
+    "width": 587,
+    "height": 583
+  },
+  "images/tolsen-80201.webp": {
+    "refs": [
+      "80201"
+    ],
+    "status": "ok",
+    "matchedRef": "80201",
+    "page": "https://www.tolsentools.com/product/heavy-duty-plastic-tool-box/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/HEAVY-DUTY-PLASTIC-TOOL-BOX.jpg",
+    "file": "images/tolsen-80201-hd.webp",
+    "width": 626,
+    "height": 603
+  },
+  "images/tolsen-80212.webp": {
+    "refs": [
+      "80212"
+    ],
+    "status": "ok",
+    "matchedRef": "80212",
+    "page": "https://www.tolsentools.com/product/tool-box/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/TOOL-BOX-1.jpg",
+    "file": "images/tolsen-80212-hd.webp",
+    "width": 682,
+    "height": 471
+  },
+  "images/tolsen-80212-p41-8.webp": {
+    "refs": [
+      "80212"
+    ],
+    "status": "ok",
+    "matchedRef": "80212",
+    "page": "https://www.tolsentools.com/product/tool-box/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/TOOL-BOX-1.jpg",
+    "file": "images/tolsen-80212-p41-8-hd.webp",
+    "width": 682,
+    "height": 471
+  },
+  "images/tolsen-83038.webp": {
+    "refs": [
+      "83038"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-80125.webp": {
+    "refs": [
+      "80125"
+    ],
+    "status": "ok",
+    "matchedRef": "80125",
+    "page": "https://www.tolsentools.com/product/tool-pouch-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/05/TOOL-POUCH-1.jpg",
+    "file": "images/tolsen-80125-hd.webp",
+    "width": 578,
+    "height": 598
+  },
+  "images/tolsen-90009.webp": {
+    "refs": [
+      "90009"
+    ],
+    "status": "ok",
+    "matchedRef": "90009",
+    "page": "https://www.tolsentools.com/product/backpack/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/BACKPACK.jpg",
+    "file": "images/tolsen-90009-hd.webp",
+    "width": 625,
+    "height": 694
+  },
+  "images/tolsen-83038-p42-0.webp": {
+    "refs": [
+      "83038"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-80317.webp": {
+    "refs": [
+      "80317"
+    ],
+    "status": "ok",
+    "matchedRef": "80317",
+    "page": "https://www.tolsentools.com/product/7-drawer-roller-cabinet/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/07/7-DRAWER-ROLLER-CABINET.jpg",
+    "file": "images/tolsen-80317-hd.webp",
+    "width": 628,
+    "height": 676
+  },
+  "images/tolsen-80221.webp": {
+    "refs": [
+      "80221"
+    ],
+    "status": "ok",
+    "matchedRef": "80221",
+    "page": "https://www.tolsentools.com/product/three-tray-tool-cart/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/THREE-TRAY-TOOL-CART.jpg",
+    "file": "images/tolsen-80221-hd.webp",
+    "width": 608,
+    "height": 578
+  },
+  "images/tolsen-80122.webp": {
+    "refs": [
+      "80122"
+    ],
+    "status": "ok",
+    "matchedRef": "80122",
+    "page": "https://www.tolsentools.com/product/electrician-tool-pouch/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/05/ELECTRICIAN-TOOL-POUCH-1.jpg",
+    "file": "images/tolsen-80122-hd.webp",
+    "width": 379,
+    "height": 506
+  },
+  "images/tolsen-80162.webp": {
+    "refs": [
+      "80162"
+    ],
+    "status": "ok",
+    "matchedRef": "80162",
+    "page": "https://www.tolsentools.com/product/plastic-organizer-box/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/05/tolsen-plastic-organizer-box.jpg",
+    "file": "images/tolsen-80162-hd.webp",
+    "width": 603,
+    "height": 595
+  },
+  "images/tolsen-38023.webp": {
+    "refs": [
+      "38023"
+    ],
+    "status": "ok",
+    "matchedRef": "38023",
+    "page": "https://www.tolsentools.com/product/pvc-insulating-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/10/PVC-INSULATING-TAPE.jpg",
+    "file": "images/tolsen-38023-hd.webp",
+    "width": 648,
+    "height": 625
+  },
+  "images/tolsen-50245.webp": {
+    "refs": [
+      "50245"
+    ],
+    "status": "ok",
+    "matchedRef": "50245",
+    "page": "https://www.tolsentools.com/product/masking-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/MASKING-TAPE.jpg",
+    "file": "images/tolsen-50245-hd.webp",
+    "width": 578,
+    "height": 652
+  },
+  "images/tolsen-50281.webp": {
+    "refs": [
+      "50281"
+    ],
+    "status": "ok",
+    "matchedRef": "50281",
+    "page": "https://www.tolsentools.com/product/cloth-duct-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/CLOTH-DUCT-TAPE.jpg",
+    "file": "images/tolsen-50281-hd.webp",
+    "width": 581,
+    "height": 652
+  },
+  "images/tolsen-38024.webp": {
+    "refs": [
+      "38024",
+      "38025"
+    ],
+    "status": "ok",
+    "matchedRef": "38024",
+    "page": "https://www.tolsentools.com/product/pvc-insulating-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/10/PVC-INSULATING-TAPE.jpg",
+    "file": "images/tolsen-38024-hd.webp",
+    "width": 648,
+    "height": 625
+  },
+  "images/tolsen-42022.webp": {
+    "refs": [
+      "42022"
+    ],
+    "status": "ok",
+    "matchedRef": "42022",
+    "page": "https://www.tolsentools.com/product/carpenter-pencil-bi-color/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/CARPENTER-PENCIL.jpg",
+    "file": "images/tolsen-42022-hd.webp",
+    "width": 647,
+    "height": 458
+  },
+  "images/tolsen-32060.webp": {
+    "refs": [
+      "32060"
+    ],
+    "status": "ok",
+    "matchedRef": "32060",
+    "page": "https://www.tolsentools.com/product/universal-brush/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/UNIVERSAL-BRUSH.jpg",
+    "file": "images/tolsen-32060-hd.webp",
+    "width": 652,
+    "height": 642
+  },
+  "images/tolsen-38502.webp": {
+    "refs": [
+      "38502"
+    ],
+    "status": "ok",
+    "matchedRef": "38502",
+    "page": "https://www.tolsentools.com/product/glue-gun-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/08/GLUE-GUN.jpg",
+    "file": "images/tolsen-38502-hd.webp",
+    "width": 733,
+    "height": 543
+  },
+  "images/tolsen-38513.webp": {
+    "refs": [
+      "38513",
+      "38515",
+      "38516"
+    ],
+    "status": "ok",
+    "matchedRef": "38513",
+    "page": "https://www.tolsentools.com/product/30w-120v-soldering-iron/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/04/120V-SOLDERING-IRON.jpg",
+    "file": "images/tolsen-38513-hd.webp",
+    "width": 670,
+    "height": 502
+  },
+  "images/tolsen-40145.webp": {
+    "refs": [
+      "40145"
+    ],
+    "status": "ok",
+    "matchedRef": "40145",
+    "page": "https://www.tolsentools.com/product/3-pcs-paint-brush-set-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/3-PCS-PAINT-BRUSH-SET-1.jpg",
+    "file": "images/tolsen-40145-hd.webp",
+    "width": 651,
+    "height": 444
+  },
+  "images/tolsen-44945.webp": {
+    "refs": [
+      "44945"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-50105.webp": {
+    "refs": [
+      "50105"
+    ],
+    "status": "ok",
+    "matchedRef": "50105",
+    "page": "https://www.tolsentools.com/product/nylon-cable-tie/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/NYLON-CABLE-TIE.jpg",
+    "file": "images/tolsen-50105-hd.webp",
+    "width": 605,
+    "height": 626
+  },
+  "images/tolsen-50115.webp": {
+    "refs": [
+      "50115",
+      "50118",
+      "50120",
+      "50522"
+    ],
+    "status": "ok",
+    "matchedRef": "50115",
+    "page": "https://www.tolsentools.com/product/nylon-cable-tie-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/NYLON-CABLE-TIE.jpg",
+    "file": "images/tolsen-50115-hd.webp",
+    "width": 608,
+    "height": 373
+  },
+  "images/tolsen-50190.webp": {
+    "refs": [
+      "50190"
+    ],
+    "status": "ok",
+    "matchedRef": "50190",
+    "page": "https://www.tolsentools.com/product/super-glue-included-12pcs/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/SUPER-GLUE.jpg",
+    "file": "images/tolsen-50190-hd.webp",
+    "width": 628,
+    "height": 434
+  },
+  "images/tolsen-55115.webp": {
+    "refs": [
+      "55115"
+    ],
+    "status": "ok",
+    "matchedRef": "55115",
+    "page": "https://www.tolsentools.com/product/heavy-duty-brass-padlock-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/HEAVY-DUTY-BRASS-PADLOCK.jpg",
+    "file": "images/tolsen-55115-hd.webp",
+    "width": 380,
+    "height": 664
+  },
+  "images/tolsen-55123.webp": {
+    "refs": [
+      "55123"
+    ],
+    "status": "ok",
+    "matchedRef": "55123",
+    "page": "https://www.tolsentools.com/product/combination-brass-padlock/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/COMBINATION-BRASS-PADLOCK.jpg",
+    "file": "images/tolsen-55123-hd.webp",
+    "width": 290,
+    "height": 665
+  },
+  "images/tolsen-38090.webp": {
+    "refs": [
+      "38090"
+    ],
+    "status": "ok",
+    "matchedRef": "38090",
+    "page": "https://www.tolsentools.com/product/helping-hand-magnifier/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/HELPING-HAND-MAGNIFIER.jpg",
+    "file": "images/tolsen-38090-hd.webp",
+    "width": 654,
+    "height": 738
+  },
+  "images/tolsen-60016.webp": {
+    "refs": [
+      "60016"
+    ],
+    "status": "ok",
+    "matchedRef": "60016",
+    "page": "https://www.tolsentools.com/product/worklight/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/WORKLIGHT.jpg",
+    "file": "images/tolsen-60016-hd.webp",
+    "width": 326,
+    "height": 695
+  },
+  "images/tolsen-60018.webp": {
+    "refs": [
+      "60018"
+    ],
+    "status": "ok",
+    "matchedRef": "60018",
+    "page": "https://www.tolsentools.com/product/usb-charging-work-lamp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/USB-CHARGING-WORK-LAMP.jpg",
+    "file": "images/tolsen-60018-hd.webp",
+    "width": 347,
+    "height": 735
+  },
+  "images/tolsen-60033.webp": {
+    "refs": [
+      "60033"
+    ],
+    "status": "ok",
+    "matchedRef": "60033",
+    "page": "https://www.tolsentools.com/product/led-flashlight-with-zoom-function/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/LED-FLASHLIGHT-WITH-ZOOM-FUNCTION.jpg",
+    "file": "images/tolsen-60033-hd.webp",
+    "width": 653,
+    "height": 458
+  },
+  "images/tolsen-60050.webp": {
+    "refs": [
+      "60050"
+    ],
+    "status": "ok",
+    "matchedRef": "60050",
+    "page": "https://www.tolsentools.com/product/working-lamp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/WORKING-LAMP-1.jpg",
+    "file": "images/tolsen-60050-hd.webp",
+    "width": 642,
+    "height": 459
+  },
+  "images/tolsen-62243.webp": {
+    "refs": [
+      "62243"
+    ],
+    "status": "ok",
+    "matchedRef": "62243",
+    "page": "https://www.tolsentools.com/product/2pcs-luggage-rope-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/2PCS-LUGGAGE-ROPE-SET.jpg",
+    "file": "images/tolsen-62243-hd.webp",
+    "width": 656,
+    "height": 340
+  },
+  "images/tolsen-62252.webp": {
+    "refs": [
+      "62252"
+    ],
+    "status": "ok",
+    "matchedRef": "62252",
+    "page": "https://www.tolsentools.com/product/2pcs-ratchet-tie-down-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/2PCS-RATCHET-TIE-DOWN-SET.jpg",
+    "file": "images/tolsen-62252-hd.webp",
+    "width": 640,
+    "height": 464
+  },
+  "images/tolsen-62248.webp": {
+    "refs": [
+      "62248"
+    ],
+    "status": "ok",
+    "matchedRef": "62248",
+    "page": "https://www.tolsentools.com/product/ratchet-tie-down/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/08/RATCHET-TIE-DOWN.jpg",
+    "file": "images/tolsen-62248-hd.webp",
+    "width": 656,
+    "height": 622
+  },
+  "images/tolsen-62442.webp": {
+    "refs": [
+      "62442"
+    ],
+    "status": "ok",
+    "matchedRef": "62442",
+    "page": "https://www.tolsentools.com/product/hand-cable-puller/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/HAND-CABLE-PULLER.jpg",
+    "file": "images/tolsen-62442-hd.webp",
+    "width": 629,
+    "height": 460
+  },
+  "images/tolsen-62602.webp": {
+    "refs": [
+      "62602"
+    ],
+    "status": "ok",
+    "matchedRef": "62602",
+    "page": "https://www.tolsentools.com/product/aluminum-foldable-hand-truck/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/ALUMINUM-FOLDABLE-HAND-TRUCK.jpg",
+    "file": "images/tolsen-62602-hd.webp",
+    "width": 389,
+    "height": 738
+  },
+  "images/tolsen-62602-p46-8.webp": {
+    "refs": [
+      "62602"
+    ],
+    "status": "ok",
+    "matchedRef": "62602",
+    "page": "https://www.tolsentools.com/product/aluminum-foldable-hand-truck/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/ALUMINUM-FOLDABLE-HAND-TRUCK.jpg",
+    "file": "images/tolsen-62602-p46-8-hd.webp",
+    "width": 389,
+    "height": 738
+  },
+  "images/tolsen-43010.webp": {
+    "refs": [
+      "43010"
+    ],
+    "status": "ok",
+    "matchedRef": "43010",
+    "page": "https://www.tolsentools.com/product/open-end-blind-rivet/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/OPEN-END-BLIND-RIVET.jpg",
+    "file": "images/tolsen-43010-hd.webp",
+    "width": 635,
+    "height": 633
+  },
+  "images/tolsen-65402.webp": {
+    "refs": [
+      "65402"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-65463.webp": {
+    "refs": [
+      "65463"
+    ],
+    "status": "ok",
+    "matchedRef": "65463",
+    "page": "https://www.tolsentools.com/product/hydraulic-trolley-jack/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/HYDRAULIC-TROLLEY-JACK-1.jpg",
+    "file": "images/tolsen-65463-hd.webp",
+    "width": 649,
+    "height": 487
+  },
+  "images/tolsen-65483.webp": {
+    "refs": [
+      "65483"
+    ],
+    "status": "ok",
+    "matchedRef": "65483",
+    "page": "https://www.tolsentools.com/product/jack-stands/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/JACK-STANDS.jpg",
+    "file": "images/tolsen-65483-hd.webp",
+    "width": 522,
+    "height": 664
+  },
+  "images/tolsen-57250.webp": {
+    "refs": [
+      "57250"
+    ],
+    "status": "ok",
+    "matchedRef": "57250",
+    "page": "https://www.tolsentools.com/product/expandable-hose/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/EXPANDABLE-HOSE.jpg",
+    "file": "images/tolsen-57250-hd.webp",
+    "width": 595,
+    "height": 622
+  },
+  "images/tolsen-57398.webp": {
+    "refs": [
+      "57398"
+    ],
+    "status": "ok",
+    "matchedRef": "57398",
+    "page": "https://www.tolsentools.com/product/flat-seeper-soaker-hose-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/05/FLAT-SEEPER-SOAKER-HOSE.jpg",
+    "file": "images/tolsen-57398-hd.webp",
+    "width": 587,
+    "height": 642
+  },
+  "images/tolsen-57390.webp": {
+    "refs": [
+      "57390"
+    ],
+    "status": "ok",
+    "matchedRef": "57390",
+    "page": "https://www.tolsentools.com/product/plastic-3-arm-whirler-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/05/PLASTIC-3-ARM-WHIRLER.jpg",
+    "file": "images/tolsen-57390-hd.webp",
+    "width": 575,
+    "height": 622
+  },
+  "images/tolsen-79775.webp": {
+    "refs": [
+      "79775"
+    ],
+    "status": "ok",
+    "matchedRef": "79775",
+    "page": "https://www.tolsentools.com/product/14a-high-pressure-washer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/01/14A-HIGH-PRESSURE-WASHER-1.jpg",
+    "file": "images/tolsen-79775-hd.webp",
+    "width": 362,
+    "height": 709
+  },
+  "images/tolsen-66001.webp": {
+    "refs": [
+      "66001"
+    ],
+    "status": "ok",
+    "matchedRef": "66001",
+    "page": "https://www.tolsentools.com/product/telescoping-pick-up-tool/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/TELESCOPING-PICK-UP-TOOL.jpg",
+    "file": "images/tolsen-66001-hd.webp",
+    "width": 649,
+    "height": 656
+  },
+  "images/tolsen-66015.webp": {
+    "refs": [
+      "66015"
+    ],
+    "status": "ok",
+    "matchedRef": "66015",
+    "page": "https://www.tolsentools.com/product/pick-up-tool-with-claw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2018/08/PICK-UP-TOOL-WITH-CLAW.jpg",
+    "file": "images/tolsen-66015-hd.webp",
+    "width": 654,
+    "height": 505
+  },
+  "images/tolsen-66030.webp": {
+    "refs": [
+      "66030"
+    ],
+    "status": "ok",
+    "matchedRef": "66030",
+    "page": "https://www.tolsentools.com/product/magentic-part-tray/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/MAGNETIC-PART-TRAY.jpg",
+    "file": "images/tolsen-66030-hd.webp",
+    "width": 644,
+    "height": 499
+  },
+  "images/tolsen-54056.webp": {
+    "refs": [
+      "54056"
+    ],
+    "status": "ok",
+    "matchedRef": "54056",
+    "page": "https://www.tolsentools.com/product/drywall-screw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/DRYWALL-SCREW.jpg",
+    "file": "images/tolsen-54056-hd.webp",
+    "width": 614,
+    "height": 477
+  },
+  "images/tolsen-54161.webp": {
+    "refs": [
+      "54161"
+    ],
+    "status": "ok",
+    "matchedRef": "54161",
+    "page": "https://www.tolsentools.com/product/self-drilling-screw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/SELF-DRILLING-SCREW.jpg",
+    "file": "images/tolsen-54161-hd.webp",
+    "width": 640,
+    "height": 667
+  },
+  "images/tolsen-54302.webp": {
+    "refs": [
+      "54302",
+      "54304"
+    ],
+    "status": "ok",
+    "matchedRef": "54302",
+    "page": "https://www.tolsentools.com/product/nylon-wall-plug/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/NYLON-WALL-PLUG.jpg",
+    "file": "images/tolsen-54302-hd.webp",
+    "width": 612,
+    "height": 430
+  },
+  "images/tolsen-43030.webp": {
+    "refs": [
+      "43030"
+    ],
+    "status": "ok",
+    "matchedRef": "43030",
+    "page": "https://www.tolsentools.com/product/staples/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/STAPLES.jpg",
+    "file": "images/tolsen-43030-hd.webp",
+    "width": 662,
+    "height": 493
+  },
+  "images/tolsen-72155.webp": {
+    "refs": [
+      "72155"
+    ],
+    "status": "ok",
+    "matchedRef": "72155",
+    "page": "https://www.tolsentools.com/product/hvlp-air-spray-gun-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/05/HVLP-AIR-SPRAY-GUN-1.jpg",
+    "file": "images/tolsen-72155-hd.webp",
+    "width": 444,
+    "height": 727
+  },
+  "images/tolsen-72190.webp": {
+    "refs": [
+      "72190"
+    ],
+    "status": "ok",
+    "matchedRef": "72190",
+    "page": "https://www.tolsentools.com/product/5pcs-air-tools-kit-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/05/5PCS-AIR-TOOLS-KIT.jpg",
+    "file": "images/tolsen-72190-hd.webp",
+    "width": 730,
+    "height": 768
+  },
+  "images/tolsen-65515.webp": {
+    "refs": [
+      "65515"
+    ],
+    "status": "ok",
+    "matchedRef": "65515",
+    "page": "https://www.tolsentools.com/product/auto-air-compressor-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/POWER-INFLATOR.jpg",
+    "file": "images/tolsen-65515-hd.webp",
+    "width": 645,
+    "height": 655
+  },
+  "images/tolsen-77868.webp": {
+    "refs": [
+      "77868"
+    ],
+    "status": "ok",
+    "matchedRef": "77868",
+    "page": "https://www.tolsentools.com/product/quick-release-bit-holder/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/08/QUICK-RELEASE-BIT-HOLDER.jpg",
+    "file": "images/tolsen-77868-hd.webp",
+    "width": 629,
+    "height": 500
+  },
+  "images/tolsen-75442.webp": {
+    "refs": [
+      "75442"
+    ],
+    "status": "ok",
+    "matchedRef": "75442",
+    "page": "https://www.tolsentools.com/product/sds-plus-flat-chisel-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/SDS-PLUS-FLAT-CHISEL.jpg",
+    "file": "images/tolsen-75442-hd.webp",
+    "width": 617,
+    "height": 649
+  },
+  "images/tolsen-79111.webp": {
+    "refs": [
+      "79111"
+    ],
+    "status": "ok",
+    "matchedRef": "79111",
+    "page": "https://www.tolsentools.com/product/hot-melt-glue-stick-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/12PCS-HOT-MELT-GLUE-STICK-SET.jpg",
+    "file": "images/tolsen-79111-hd.webp",
+    "width": 670,
+    "height": 394
+  },
+  "images/tolsen-85300.webp": {
+    "refs": [
+      "85300"
+    ],
+    "status": "ok",
+    "matchedRef": "85300",
+    "page": "https://www.tolsentools.com/product/9pcs-hand-tool-set-specially-for-110-120v-market/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/11/9PCS-HAND-TOOL-SET-1.jpg",
+    "file": "images/tolsen-85300-hd.webp",
+    "width": 498,
+    "height": 576
+  },
+  "images/tolsen-83021.webp": {
+    "refs": [
+      "83021"
+    ],
+    "status": "ok",
+    "matchedRef": "83021",
+    "page": "https://www.tolsentools.com/product/dual-long-hook/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/DUAL-LONG-HOOK.jpg",
+    "file": "images/tolsen-83021-hd.webp",
+    "width": 652,
+    "height": 609
+  },
+  "images/tolsen-83024.webp": {
+    "refs": [
+      "83024"
+    ],
+    "status": "ok",
+    "matchedRef": "83024",
+    "page": "https://www.tolsentools.com/product/single-long-hook/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/09/SINGLE-LONG-HOOK.jpg",
+    "file": "images/tolsen-83024-hd.webp",
+    "width": 627,
+    "height": 348
+  },
+  "images/tolsen-79617.webp": {
+    "refs": [
+      "79617"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-79029.webp": {
+    "refs": [
+      "79029"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-79031.webp": {
+    "refs": [
+      "79031"
+    ],
+    "status": "ok",
+    "matchedRef": "79031",
+    "page": "https://www.tolsentools.com/product/li-ion-battery-pack-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/LI-ION-BATTERY-PACK-3.jpg",
+    "file": "images/tolsen-79031-hd.webp",
+    "width": 648,
+    "height": 459
+  },
+  "images/tolsen-79049.webp": {
+    "refs": [
+      "79049"
+    ],
+    "status": "ok",
+    "matchedRef": "79049",
+    "page": "https://www.tolsentools.com/product/battery-charger/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/08/BATTERY-CHARGER-1.jpg",
+    "file": "images/tolsen-79049-hd.webp",
+    "width": 648,
+    "height": 409
+  },
+  "images/tolsen-60003.webp": {
+    "refs": [
+      "60003"
+    ],
+    "status": "ok",
+    "matchedRef": "60003",
+    "page": "https://www.tolsentools.com/product/aaa-super-alkaline-battery/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/11/AAA-SUPER-ALKALINE-BATTERY.jpg",
+    "file": "images/tolsen-60003-hd.webp",
+    "width": 599,
+    "height": 490
+  },
+  "images/tolsen-60004.webp": {
+    "refs": [
+      "60004"
+    ],
+    "status": "ok",
+    "matchedRef": "60004",
+    "page": "https://www.tolsentools.com/product/aaa-super-alkaline-battery/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/11/AAA-SUPER-ALKALINE-BATTERY.jpg",
+    "file": "images/tolsen-60004-hd.webp",
+    "width": 599,
+    "height": 490
+  },
+  "images/tolsen-79215-47.webp": {
+    "refs": [
+      "79215-47"
+    ],
+    "status": "sin coincidencia"
+  },
+  "images/tolsen-90024.webp": {
+    "refs": [
+      "90024",
+      "90024"
+    ],
+    "status": "ok",
+    "matchedRef": "90024",
+    "page": "https://www.tolsentools.com/product/tent/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/10/TENT.jpg",
+    "file": "images/tolsen-90024-hd.webp",
+    "width": 587,
+    "height": 551
+  },
+  "images/tolsen-90025.webp": {
+    "refs": [
+      "90025"
+    ],
+    "status": "ok",
+    "matchedRef": "90025",
+    "page": "https://www.tolsentools.com/product/tent/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/10/TENT.jpg",
+    "file": "images/tolsen-90025-hd.webp",
+    "width": 587,
+    "height": 551
+  },
+  "images/tolsen-35198.webp": {
+    "refs": [
+      "35198"
+    ],
+    "status": "ok",
+    "matchedRef": "35198",
+    "page": "https://www.tolsentools.com/product/digital-commercial-price-scale-88lb-40kg/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2023/10/DIGITAL-COMMERCIAL-PRICE-SCALE-1.jpg",
+    "file": "images/tolsen-35198-hd.webp",
+    "width": 700,
+    "height": 558
+  },
+  "images/tolsen-54051.webp": {
+    "refs": [
+      "54051",
+      "54052",
+      "54053",
+      "54054",
+      "54055",
+      "54058"
+    ],
+    "status": "ok",
+    "matchedRef": "54051",
+    "page": "https://www.tolsentools.com/product/drywall-screw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/DRYWALL-SCREW.jpg",
+    "file": "images/tolsen-54051-hd.webp",
+    "width": 614,
+    "height": 477
+  },
+  "images/tolsen-54151.webp": {
+    "refs": [
+      "54151",
+      "54152",
+      "54153"
+    ],
+    "status": "ok",
+    "matchedRef": "54151",
+    "page": "https://www.tolsentools.com/product/self-tapping-screw-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/SELF-TAPPING-SCREW-1.jpg",
+    "file": "images/tolsen-54151-hd.webp",
+    "width": 577,
+    "height": 464
+  },
+  "images/tolsen-54162.webp": {
+    "refs": [
+      "54162",
+      "54163",
+      "54164",
+      "54165"
+    ],
+    "status": "ok",
+    "matchedRef": "54162",
+    "page": "https://www.tolsentools.com/product/self-drilling-screw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/SELF-DRILLING-SCREW.jpg",
+    "file": "images/tolsen-54162-hd.webp",
+    "width": 640,
+    "height": 667
+  },
+  "images/tolsen-54180.webp": {
+    "refs": [
+      "54180",
+      "54182",
+      "54183"
+    ],
+    "status": "ok",
+    "matchedRef": "54180",
+    "page": "https://www.tolsentools.com/product/countersunk-head-self-drilling-screw/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/COUNTERSUNK-HEAD-SELF-DRILLING-SCREW.jpg",
+    "file": "images/tolsen-54180-hd.webp",
+    "width": 630,
+    "height": 655
+  },
+  "images/tolsen-54286.webp": {
+    "refs": [
+      "54286"
+    ],
+    "status": "ok",
+    "matchedRef": "54286",
+    "page": "https://www.tolsentools.com/product/heavy-duty-4pcs-shell-anchor-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/HEAVY-DUTY-4PCS-SHELL-ANCHOR-2.jpg",
+    "file": "images/tolsen-54286-hd.webp",
+    "width": 635,
+    "height": 461
+  },
+  "images/tolsen-54303.webp": {
+    "refs": [
+      "54303"
+    ],
+    "status": "ok",
+    "matchedRef": "54303",
+    "page": "https://www.tolsentools.com/product/nylon-wall-plug/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/09/NYLON-WALL-PLUG.jpg",
+    "file": "images/tolsen-54303-hd.webp",
+    "width": 612,
+    "height": 430
+  },
+  "images/tolsen-62453.webp": {
+    "refs": [
+      "62453"
+    ],
+    "status": "ok",
+    "matchedRef": "62453",
+    "page": "https://www.tolsentools.com/product/hand-winch/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/HAND-WINCH.jpg",
+    "file": "images/tolsen-62453-hd.webp",
+    "width": 655,
+    "height": 495
+  },
+  "images/tolsen-65497.webp": {
+    "refs": [
+      "65497"
+    ],
+    "status": "ok",
+    "matchedRef": "65497",
+    "page": "https://www.tolsentools.com/product/4pcs-anti-fatigue-joint-mat-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/4PCS-ANTI-FATIGUE-JOINT-MAT-SET.jpg",
+    "file": "images/tolsen-65497-hd.webp",
+    "width": 637,
+    "height": 560
+  },
+  "images/tolsen-42013.webp": {
+    "refs": [
+      "42013"
+    ],
+    "status": "ok",
+    "matchedRef": "42013",
+    "page": "https://www.tolsentools.com/product/chalk-line-reel-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/10/CHALK-LINE-REEL-SET.jpg",
+    "file": "images/tolsen-42013-hd.webp",
+    "width": 535,
+    "height": 674
+  },
+  "images/tolsen-10501.webp": {
+    "refs": [
+      "10501"
+    ],
+    "status": "ok",
+    "matchedRef": "10501",
+    "page": "https://www.tolsentools.com/product/angle-grinder-stand/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/ANGLE-GRINDER-STAND-1.jpg",
+    "file": "images/tolsen-10501-hd.webp",
+    "width": 584,
+    "height": 666
+  },
+  "images/tolsen-45271.webp": {
+    "refs": [
+      "45271"
+    ],
+    "status": "ok",
+    "matchedRef": "45271",
+    "page": "https://www.tolsentools.com/product/tool-lanyards/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/TOOL-LANYARDS.jpg",
+    "file": "images/tolsen-45271-hd.webp",
+    "width": 640,
+    "height": 527
+  },
+  "images/tolsen-50004.webp": {
+    "refs": [
+      "50004"
+    ],
+    "status": "ok",
+    "matchedRef": "50004",
+    "page": "https://www.tolsentools.com/product/ceiling-brush/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/CEILING-BRUSH-1.jpg",
+    "file": "images/tolsen-50004-hd.webp",
+    "width": 621,
+    "height": 616
+  },
+  "images/tolsen-57221.webp": {
+    "refs": [
+      "57221"
+    ],
+    "status": "ok",
+    "matchedRef": "57221",
+    "page": "https://www.tolsentools.com/product/hose-reel/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2019/01/HOSE-REEL.jpg",
+    "file": "images/tolsen-57221-hd.webp",
+    "width": 632,
+    "height": 633
+  },
+  "images/tolsen-57295.webp": {
+    "refs": [
+      "57295"
+    ],
+    "status": "ok",
+    "matchedRef": "57295",
+    "page": "https://www.tolsentools.com/product/pressure-sprayer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/16L-GARDEN-PRESSURE-SPRAYER.jpg",
+    "file": "images/tolsen-57295-hd.webp",
+    "width": 341,
+    "height": 645
+  },
+  "images/tolsen-62265.webp": {
+    "refs": [
+      "62265"
+    ],
+    "status": "ok",
+    "matchedRef": "62265",
+    "page": "https://www.tolsentools.com/product/ratchet-tie-down-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/RATCHET-TIE-DOWN-1.jpg",
+    "file": "images/tolsen-62265-hd.webp",
+    "width": 653,
+    "height": 440
+  },
+  "images/tolsen-30104.webp": {
+    "refs": [
+      "30104"
+    ],
+    "status": "ok",
+    "matchedRef": "30104",
+    "page": "https://www.tolsentools.com/product/scraper-30104/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/SCRAPER.jpg",
+    "file": "images/tolsen-30104-hd.webp",
+    "width": 577,
+    "height": 363
+  },
+  "images/tolsen-51029.webp": {
+    "refs": [
+      "51029"
+    ],
+    "status": "ok",
+    "matchedRef": "51029",
+    "page": "https://www.tolsentools.com/product/multipurpose-tarp/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/11/MULTIPURPOSE-TARP.jpg",
+    "file": "images/tolsen-51029-hd.webp",
+    "width": 636,
+    "height": 473
+  },
+  "images/tolsen-57384.webp": {
+    "refs": [
+      "57384"
+    ],
+    "status": "ok",
+    "matchedRef": "57384",
+    "page": "https://www.tolsentools.com/product/1-2-impulse-sprinkler/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/12/tolsen-impulse-sprinkler.jpg",
+    "file": "images/tolsen-57384-hd.webp",
+    "width": 646,
+    "height": 456
+  },
+  "images/tolsen-16127.webp": {
+    "refs": [
+      "16127",
+      "16128"
+    ],
+    "status": "ok",
+    "matchedRef": "16127",
+    "page": "https://www.tolsentools.com/product/flexible-handle/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/FLEXIBLE-HANDLE.jpg",
+    "file": "images/tolsen-16127-hd.webp",
+    "width": 699,
+    "height": 639
+  },
+  "images/tolsen-25231.webp": {
+    "refs": [
+      "25231"
+    ],
+    "status": "ok",
+    "matchedRef": "25231",
+    "page": "https://www.tolsentools.com/product/digging-bar/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/03/tolsen-digging-bar.jpg",
+    "file": "images/tolsen-25231-hd.webp",
+    "width": 568,
+    "height": 613
+  },
+  "images/tolsen-40099.webp": {
+    "refs": [
+      "40099"
+    ],
+    "status": "ok",
+    "matchedRef": "40099",
+    "page": "https://www.tolsentools.com/product/paint-mixer-hex-shank/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/PAINT-MIXER.jpg",
+    "file": "images/tolsen-40099-hd.webp",
+    "width": 582,
+    "height": 665
+  },
+  "images/tolsen-41001.webp": {
+    "refs": [
+      "41001"
+    ],
+    "status": "ok",
+    "matchedRef": "41001",
+    "page": "https://www.tolsentools.com/product/bricklaying-trowel-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/BRICKLAYING-TROWEL.jpg",
+    "file": "images/tolsen-41001-hd.webp",
+    "width": 640,
+    "height": 569
+  },
+  "images/tolsen-41012.webp": {
+    "refs": [
+      "41012"
+    ],
+    "status": "ok",
+    "matchedRef": "41012",
+    "page": "https://www.tolsentools.com/product/plastering-trowel-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/PLASTERING-TROWEL.jpg",
+    "file": "images/tolsen-41012-hd.webp",
+    "width": 627,
+    "height": 448
+  },
+  "images/tolsen-41013.webp": {
+    "refs": [
+      "41013"
+    ],
+    "status": "ok",
+    "matchedRef": "41013",
+    "page": "https://www.tolsentools.com/product/plastering-trowel-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/10/PLASTERING-TROWEL-WITH-TEETH.jpg",
+    "file": "images/tolsen-41013-hd.webp",
+    "width": 662,
+    "height": 492
+  },
+  "images/tolsen-43003.webp": {
+    "refs": [
+      "43003"
+    ],
+    "status": "ok",
+    "matchedRef": "43003",
+    "page": "https://www.tolsentools.com/product/hand-riveter-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/07/HAND-RIVETER.jpg",
+    "file": "images/tolsen-43003-hd.webp",
+    "width": 664,
+    "height": 512
+  },
+  "images/tolsen-43099.webp": {
+    "refs": [
+      "43099"
+    ],
+    "status": "ok",
+    "matchedRef": "43099",
+    "page": "https://www.tolsentools.com/product/hand-riveter-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/08/8-INCH-HAND-RIVETER.jpg",
+    "file": "images/tolsen-43099-hd.webp",
+    "width": 638,
+    "height": 565
+  },
+  "images/tolsen-44928.webp": {
+    "refs": [
+      "44928"
+    ],
+    "status": "ok",
+    "matchedRef": "44928",
+    "page": "https://www.tolsentools.com/product/electrode-holder/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/06/ELECTRODE-HOLDER.jpg",
+    "file": "images/tolsen-44928-hd.webp",
+    "width": 630,
+    "height": 631
+  },
+  "images/tolsen-50228.webp": {
+    "refs": [
+      "50228"
+    ],
+    "status": "ok",
+    "matchedRef": "50228",
+    "page": "https://www.tolsentools.com/product/double-sided-nano-tape/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2026/05/tolsen-double-sided-nano-tape.jpg",
+    "file": "images/tolsen-50228-hd.webp",
+    "width": 468,
+    "height": 579
+  },
+  "images/tolsen-54194.webp": {
+    "refs": [
+      "54194"
+    ],
+    "status": "ok",
+    "matchedRef": "54194",
+    "page": "https://www.tolsentools.com/product/hex-self-drilling-screw-with-rubber-washer/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/HEX-SELF-DRILLING-SCREW-WITH-RUBBER-WASHER.jpg",
+    "file": "images/tolsen-54194-hd.webp",
+    "width": 585,
+    "height": 439
+  },
+  "images/tolsen-55170.webp": {
+    "refs": [
+      "55170"
+    ],
+    "status": "ok",
+    "matchedRef": "55170",
+    "page": "https://www.tolsentools.com/product/bicycle-lock/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/10/BICYCLE-LOCK.jpg",
+    "file": "images/tolsen-55170-hd.webp",
+    "width": 631,
+    "height": 510
+  },
+  "images/tolsen-57400.webp": {
+    "refs": [
+      "57400",
+      "57401"
+    ],
+    "status": "ok",
+    "matchedRef": "57400",
+    "page": "https://www.tolsentools.com/product/garden-hose-specially-for-110-120v-market-3/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2025/02/GARDEN-HOSE.jpg",
+    "file": "images/tolsen-57400-hd.webp",
+    "width": 607,
+    "height": 594
+  },
+  "images/tolsen-62611.webp": {
+    "refs": [
+      "62611"
+    ],
+    "status": "ok",
+    "matchedRef": "62611",
+    "page": "https://www.tolsentools.com/product/pneumatic-wheel-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2024/07/PNEUMATIC-WHEEL.jpg",
+    "file": "images/tolsen-62611-hd.webp",
+    "width": 581,
+    "height": 672
+  },
+  "images/tolsen-65484.webp": {
+    "refs": [
+      "65484"
+    ],
+    "status": "ok",
+    "matchedRef": "65484",
+    "page": "https://www.tolsentools.com/product/jack-stands/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2017/03/JACK-STANDS.jpg",
+    "file": "images/tolsen-65484-hd.webp",
+    "width": 522,
+    "height": 664
+  },
+  "images/tolsen-75863.webp": {
+    "refs": [
+      "75863"
+    ],
+    "status": "ok",
+    "matchedRef": "75863",
+    "page": "https://www.tolsentools.com/product/4pcs-lock-installation-hole-saw-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/4PCS-LOCK-INSTALLATION-HOLE-SAW-SET.jpg",
+    "file": "images/tolsen-75863-hd.webp",
+    "width": 610,
+    "height": 496
+  },
+  "images/tolsen-76681.webp": {
+    "refs": [
+      "76681"
+    ],
+    "status": "ok",
+    "matchedRef": "76681",
+    "page": "https://www.tolsentools.com/product/segmented-turbo-cup-grinding-wheel/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/SEGMENTED-TURBO-CUP-GRINDING-WHEEL.jpg",
+    "file": "images/tolsen-76681-hd.webp",
+    "width": 587,
+    "height": 693
+  },
+  "images/tolsen-76702.webp": {
+    "refs": [
+      "76702"
+    ],
+    "status": "ok",
+    "matchedRef": "76702",
+    "page": "https://www.tolsentools.com/product/diamond-cutting-blade/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/DIAMOND-CUTTING-BLADE.jpg",
+    "file": "images/tolsen-76702-hd.webp",
+    "width": 598,
+    "height": 623
+  },
+  "images/tolsen-77554.webp": {
+    "refs": [
+      "77554"
+    ],
+    "status": "ok",
+    "matchedRef": "77554",
+    "page": "https://www.tolsentools.com/product/3pcs-drill-brush-set/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2021/12/3PCS-DRILL-BRUSH-SET.jpg",
+    "file": "images/tolsen-77554-hd.webp",
+    "width": 615,
+    "height": 352
+  }
+}

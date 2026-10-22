@@ -15,6 +15,7 @@ debajo del texto visible; solo se toma el texto en negro.
 """
 import io
 import json
+import os
 import re
 import sys
 import unicodedata
@@ -29,6 +30,9 @@ IMAGE_MAX_SIDE = 800
 # Lado menor de la foto original. Casi todas las fotos del PDF miden ~100 px;
 # solo se marcan para revisión las que están muy por debajo.
 MIN_SOURCE_PX = 75
+# Escala al renderizar las fotos. 2 basta para el PDF original (~100 px); para un PDF
+# con fotos de más resolución, súbela con la variable de entorno RENDER_ZOOM (ej. 5).
+RENDER_ZOOM = float(os.environ.get("RENDER_ZOOM", "2"))
 
 # Presentaciones que el PDF muestra pero que parecen copiadas de otra tarjeta.
 # No se publican hasta que JC Security las confirme.
@@ -167,7 +171,7 @@ def render_image(page, card, imgs, name_top, out_path):
     clip.y1 = min(clip.y1, name_top - 2)
     if is_new:  # no incluir el sello en la foto
         clip.y0 = max(clip.y0, badge_bottom)
-    pix = page.get_pixmap(clip=clip, matrix=pymupdf.Matrix(2, 2), alpha=False)
+    pix = page.get_pixmap(clip=clip, matrix=pymupdf.Matrix(RENDER_ZOOM, RENDER_ZOOM), alpha=False)
     img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
     # Quitar el margen blanco alrededor del producto.
     box = ImageChops.difference(img, Image.new("RGB", img.size, "white")).point(lambda v: 255 if v > 18 else 0).getbbox()

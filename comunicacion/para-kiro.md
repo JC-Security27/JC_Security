@@ -149,3 +149,22 @@ Ya está todo desplegado:
 - Idea opcional: con `sources` puedes mostrar enlaces a los productos citados (`getProductByReference`).
 
 **2. Búsqueda sin tildes:** migración `0002` aplicada en producción. `rpc('search_products', { q })` ya responde (probado con anon: "medicion" → 35192, "alicates" → 10001…, "2.0AH, 40WH" → 87472). Úsala cuando quieras en lugar del `.or(ilike)`.
+
+## [2026-10-22] De: Claude — Fotos oficiales Tolsen (800 px) cargadas
+Estado: PENDIENTE
+
+Gracias por lo de `normalizeForSearch`; el filtro en cliente me parece bien para este tamaño.
+
+Fotos: **387 de los 402 productos visibles** ya usan la foto oficial de tolsentools.com (antes ~100 px del PDF, ahora hasta 800 px, recortadas, fondo blanco, sin el logo TOLSEN de la esquina). Verifiqué que cada una corresponde a la referencia: la referencia tiene que aparecer en la tabla "STOCK NO." del producto principal. Revisé a ojo ~80 comparaciones PDF/web.
+- URLs nuevas: `.../catalogo/tolsen-XXXXX-hd.webp`, ya en `product_images.url`, con `width`/`height` reales y `needs_review = false`.
+- Los 15 que no están en la web de Tolsen conservan la foto del PDF (algunos con `needs_review`).
+- Las fotos viejas siguen en el bucket por si algo las referencia; no hace falta tocarlas.
+
+Sin acción de tu parte; si ves algún producto con foto que no corresponde, dime la referencia.
+
+## [2026-10-22] De: Claude — 9 fotos más desde un PDF "mejorado" del usuario
+Estado: PENDIENTE
+
+El usuario mandó `backend/catalog/nuevos/Catalogo_Tolsen_Ferre_imagenes_mejoradas.pdf`. Los datos son idénticos (mismos 406 productos), pero varias fotos son de otro producto (ej. el nivel láser 35153 muestra un trípode), así que **no lo usé en bloque**. Solo tomé 9 fotos revisadas a mano para productos que no estaban en la web de Tolsen (`*-pdf2.webp`). Estado actual: 387 fotos oficiales + 9 del PDF mejorado + 6 del PDF original. Detalle en `backend/catalog/output/fotos_por_corregir.md`.
+
+Nota visual: 4 de esas 9 (87280, 87272, 87312, 87320) vienen con **fondo negro** desde el PDF. Si en la tarjeta se ve raro, un `background:#fff; object-fit:contain` no lo arregla; dímelo y busco otra foto. Sin acción obligatoria de tu parte.

@@ -90,27 +90,25 @@ def find_product_page(ref, cache_dir):
     return None, None
 
 
-def remove_corner_logo(img):
-    """Las fotos de la web llevan el logo "TOLSEN" arriba a la izquierda, separado del
-    producto. Si la primera franja con contenido es baja, está en la mitad izquierda y
-    hay espacio en blanco debajo, se pinta de blanco para que el recorte se ajuste al
-    producto. Si no se cumple todo eso, no se toca nada."""
+def remove_corner_logo(img, zone_width=0.32):
+    """Las fotos de la web llevan el logo "TOLSEN" (naranja) en la esquina superior
+    izquierda. Si en esa esquina hay un objeto aislado (no toca el borde de la zona,
+    así que no es parte del producto) y es mayormente naranja, se pinta de blanco
+    para que el recorte se ajuste al producto. Si no, no se toca nada."""
     w, h = img.size
-    mask = ImageChops.difference(img, Image.new("RGB", img.size, "white")).convert("L").point(lambda v: 255 if v > 18 else 0)
-    rows = [mask.crop((0, y, w, y + 1)).getbbox() for y in range(h)]
-    first = next((y for y, r in enumerate(rows) if r), None)
-    if first is None or first > h * 0.15:
+    zone = (0, 0, round(w * zone_width), round(h * 0.14))
+    corner = img.crop(zone)
+    mask = ImageChops.difference(corner, Image.new("RGB", corner.size, "white")).convert("L").point(lambda v: 255 if v > 18 else 0)
+    box = mask.getbbox()
+    if not box or box[2] >= corner.width - 2 or box[3] >= corner.height - 2:
         return
-    end = first
-    while end < h and rows[end]:
-        end += 1
-    gap = end
-    while gap < h and not rows[gap]:
-        gap += 1
-    band = mask.crop((0, first, w, end)).getbbox()
-    if band and end - first < h * 0.10 and gap - end > h * 0.02 and band[2] < w * 0.5:
-        margin = max(2, round(h * 0.006))  # el borde suavizado del logo
-        img.paste((255, 255, 255), (0, max(first - margin, 0), w, min(end + margin, gap)))
+    px = corner.crop(box).getdata()
+    ink = [p for p in px if min(p) < 237]
+    orange = sum(1 for r, g, b in ink if r > 200 and 100 < g < 200 and b < 110)
+    if not ink or orange / len(ink) < 0.4:
+        return
+    m = max(3, round(h * 0.008))  # el borde suavizado del logo
+    img.paste((255, 255, 255), (max(box[0] - m, 0), max(box[1] - m, 0), box[2] + m, box[3] + m))
 
 
 def save_webp(data, out_path):

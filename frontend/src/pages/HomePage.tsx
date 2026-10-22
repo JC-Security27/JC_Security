@@ -65,7 +65,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-visual" aria-hidden="true">
-            <img src="/robot-asistente.png" alt="" className="hero-robot" />
+            <img src="/robot-saludando.png" alt="" className="hero-robot" />
           </div>
         </div>
       </section>
