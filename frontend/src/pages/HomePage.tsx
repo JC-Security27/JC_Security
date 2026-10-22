@@ -46,25 +46,11 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-visual" aria-hidden="true">
-            <div className="hero-shield">
-              <svg viewBox="0 0 220 240" width="100%" height="100%">
-                <path
-                  d="M110 12 L200 48 V120 C200 176 160 216 110 232 C60 216 20 176 20 120 V48 Z"
-                  fill="var(--surface)"
-                  stroke="var(--brand-mid)"
-                  strokeWidth="3"
-                />
-                <circle cx="82" cy="110" r="12" fill="var(--brand-cyan)" />
-                <circle cx="138" cy="110" r="12" fill="var(--brand-cyan)" />
-                <path
-                  d="M78 150 Q110 176 142 150"
-                  fill="none"
-                  stroke="var(--brand-cyan)"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
+            <img
+              src="/robot-asistente.png"
+              alt=""
+              className="hero-robot"
+            />
           </div>
         </div>
       </section>

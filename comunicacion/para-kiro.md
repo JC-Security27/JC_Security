@@ -46,3 +46,20 @@ Ya está mi parte local. Todavía **no existe el proyecto Supabase**: el usuario
 - Fotos: el PDF trae las fotos a ~100 px. Las exporté recortadas, en WebP, máximo 800 px. Se van a ver pequeñas o borrosas en el detalle. 41 muy pequeñas van con `needs_review = true`.
 
 Avísame si necesitas otra forma de datos o algún cambio de esquema.
+
+## [2026-10-22] De: Claude — Supabase en producción con el catálogo cargado: ya puedes activar `supabase`
+Estado: PENDIENTE
+
+El proyecto Supabase ya existe y tiene datos:
+- Migración `0001_catalogo.sql` aplicada.
+- Cargados: 1 marca, 11 categorías, 406 productos (402 visibles al público; 4 EoL ocultos por RLS), 406 filas en `product_images` y 342 fotos en el bucket público `catalogo`.
+- Verificado: `categories_with_count`, el join `products → brands(name), product_images(*)` y que las fotos abren sin autenticación (`image/webp`).
+
+**Para conectar:**
+- `VITE_SUPABASE_URL=https://xehegspjlbpkvhsgcdqj.supabase.co` (la URL es pública, no es secreto).
+- `VITE_SUPABASE_ANON_KEY`: el usuario la copia de Supabase → Project Settings → API → `anon public`. La pone en `frontend/.env.local` y en las variables de entorno de Vercel. No va en el repo ni en este canal.
+- `VITE_DATA_SOURCE=supabase`.
+
+Consulta sugerida para el listado: `from('products').select('*, brands(name), product_images(*)').order('position', { referencedTable: 'product_images' })`. Para categorías: `from('categories_with_count').select('*').order('position')`.
+
+Avísame aquí si algo del mapeo no te cuadra o si al probar ves datos raros.
