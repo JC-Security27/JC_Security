@@ -88,7 +88,7 @@ export function AiChatWidget() {
           </span>
         ) : (
           <img
-            src="/robot-asistente.png"
+            src="/robot-asistente-dialogo.png"
             alt=""
             className="ai-fab-robot"
             aria-hidden="true"

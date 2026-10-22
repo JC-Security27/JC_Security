@@ -593,9 +593,10 @@
 .ai-fab:hover {
   transform: translateY(-4px) scale(1.04);
 }
-/* Robot grande, clickeable */
+/* Robot con bocadillo, clickeable. La imagen incluye el diálogo a la izquierda,
+   por eso es más ancha; el robot en sí queda de un tamaño similar al anterior. */
 .ai-fab-robot {
-  width: 120px;
+  width: 210px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
@@ -620,7 +621,7 @@
 }
 @media (max-width: 520px) {
   .ai-fab-robot {
-    width: 92px;
+    width: 150px;
   }
 }
 /* Avatar del robot en el encabezado del panel */
