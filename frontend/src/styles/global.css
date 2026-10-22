@@ -19,6 +19,10 @@
   --brand-silver: #c7d1d8; /* Gris plateado */
   --brand-ink: #172536; /* Texto oscuro */
 
+  /* Escudo del logo (igual en ambos temas: azul oscuro + borde claro) */
+  --shield-fill: #142b55;
+  --shield-stroke: #d7e2ea;
+
   /* ----- Tipografía ----- */
   --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial,
     sans-serif;

@@ -207,9 +207,29 @@
 .product-card-title {
   font-size: 1rem;
   line-height: 1.3;
+  text-transform: capitalize;
 }
 .product-card-title a {
   color: var(--text);
+}
+/* Etiqueta "Nuevo" sobre la imagen del producto */
+.new-tag {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  background: var(--accent);
+  color: #04222a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  z-index: 1;
+}
+/* Si coinciden Nuevo + Muestra, desplazamos la de muestra para que no se encimen */
+.new-tag + .sample-tag {
+  top: calc(var(--space-2) + 26px);
 }
 .product-card-title a:hover {
   color: var(--accent);
@@ -338,6 +358,7 @@
 .product-detail-info h1 {
   margin: var(--space-2) 0;
   font-size: clamp(1.5rem, 3vw, 2rem);
+  text-transform: capitalize;
 }
 .product-ref-lg {
   color: var(--text-muted);

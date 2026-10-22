@@ -25,6 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
         ) : (
           <div className="product-card-noimg">Sin imagen</div>
         )}
+        {product.isNew && <span className="new-tag">Nuevo</span>}
         {product.isSample && <span className="sample-tag">Muestra</span>}
         {img?.needsReview && (
           <span className="sample-tag review" title="Imagen por revisar">

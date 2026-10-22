@@ -65,6 +65,8 @@ export interface Product {
    * consultan por WhatsApp.
    */
   isService?: boolean;
+  /** true si el catálogo marca el producto como NUEVO (sello del PDF). */
+  isNew?: boolean;
   /**
    * true cuando el registro proviene de datos de muestra (MOCK) y NO de una
    * fuente oficial. El frontend lo usa para advertir visualmente.
