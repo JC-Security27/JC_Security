@@ -207,7 +207,6 @@
 .product-card-title {
   font-size: 1rem;
   line-height: 1.3;
-  text-transform: capitalize;
 }
 .product-card-title a {
   color: var(--text);
@@ -358,7 +357,6 @@
 .product-detail-info h1 {
   margin: var(--space-2) 0;
   font-size: clamp(1.5rem, 3vw, 2rem);
-  text-transform: capitalize;
 }
 .product-ref-lg {
   color: var(--text-muted);

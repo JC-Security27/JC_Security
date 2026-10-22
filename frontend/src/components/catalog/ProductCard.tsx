@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Product } from "@/types/catalog";
 import { useQuote } from "@/context/QuoteContext";
+import { toDisplayName } from "@/lib/format";
 
 export function ProductCard({ product }: { product: Product }) {
   const { add, has } = useQuote();
@@ -42,7 +43,9 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="product-ref">Ref: {product.reference}</span>
         </div>
         <h3 className="product-card-title">
-          <Link to={`/producto/${product.id}`}>{product.name}</Link>
+          <Link to={`/producto/${product.id}`}>
+            {toDisplayName(product.name)}
+          </Link>
         </h3>
         {product.description && (
           <p className="product-card-desc">{product.description}</p>

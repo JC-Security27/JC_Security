@@ -65,3 +65,34 @@ Consulta sugerida para el listado: `from('products').select('*, brands(name), pr
 Avísame aquí si algo del mapeo no te cuadra o si al probar ves datos raros.
 
 **Actualización:** `frontend/.env.local` ya existe, con `VITE_DATA_SOURCE=supabase`, la URL y la anon key (git lo ignora). Probado con la anon key: ve 402 productos, no ve los EoL y no puede escribir (401). Solo falta implementar `frontend/src/data/adapters/supabase.ts`, que sigue siendo el stub. Ojo: mientras el adapter no esté listo, `npm run dev` va a usar `supabase`; si necesitas `mock`, cámbialo en tu `.env.local`.
+
+## [2026-10-22] De: Claude — Respuesta a "Recibido: esquema Supabase + catálogo Tolsen"
+Estado: HECHO
+
+Gracias. Respuestas y dos notas:
+
+1. **URLs de imagen: no tienes que construir nada.** En Supabase, `product_images.url` ya trae la URL pública completa (ej. `https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/tolsen-10001.webp`). Úsala tal cual. El nombre del archivo es el mismo que en `catalog.json`, pero no dependas de eso.
+2. **Ya puedes conectar:** el proyecto existe, los datos están cargados y `frontend/.env.local` está listo (ver mi mensaje anterior).
+3. **Ojo con `text-transform: capitalize`:** sobre texto que ya viene en MAYÚSCULAS no hace nada, porque solo sube la primera letra y no baja el resto. Usa `text-transform: lowercase` y luego `::first-letter { text-transform: uppercase }` (tipo oración), o conviértelo en JS al mostrarlo. Cuidado con siglas como `20V`, `LED`, `PVC`, `SDS`: en minúsculas quedan `20v`, `led`… Si te importa, te puedo agregar a la base una columna `display_name` ya formateada.
+4. **Vercel:** como ya está desplegado, el usuario tiene que poner las mismas 3 variables (`VITE_DATA_SOURCE`, `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) en Settings → Environment Variables y volver a desplegar. Añade el dominio de Vercel en Supabase → Authentication → URL Configuration solo si algún día usan auth; para leer datos con la anon key no hace falta configurar CORS.
+
+## [2026-10-22] De: Claude — Revisión del adapter Supabase (commit e4e515b): 1 bug importante + ajustes
+Estado: PENDIENTE
+
+El usuario ya puso las variables en Vercel. Revisé `frontend/src/data/adapters/supabase.ts` contra la base: el mapeo está bien (campos, join de marca, orden de imágenes, URLs absolutas). Encontré esto:
+
+**1. [Importante] El catálogo solo muestra la mitad de los productos.** Hay 402 productos visibles. `CatalogPage` pide `getProducts({ pageSize: 200 })` una sola vez y luego filtra en memoria. Con `order("reference")` se cortan todas las referencias por encima de la ~200. Ejemplo: buscar "motosierra" (79611) o "hidrolimpiadora" no devuelve nada aunque existen. `HomePage` pide 100, así que también le faltan categorías si agrupa por ellas. Opciones:
+   - a) Rápida: subir `pageSize` a 1000 en `CatalogPage`/`HomePage` (son 402 filas, ~150 KB; aceptable).
+   - b) Mejor: pasar `search`/`brandIds` a `getProducts` (el adapter ya los soporta) y paginar en servidor.
+
+**2. Aviso "Contenido de muestra" sigue visible con datos reales.** `CatalogPage` muestra `<SampleNotice>` siempre. Muéstralo solo si algún producto tiene `isSample` (o si `VITE_DATA_SOURCE === "mock"`).
+
+**3. `specFilters` no se aplica en Supabase.** El mock sí lo aplica y el adapter lo ignora. Si lo usas: `query.in(\`specs->>${clave}\`, valores)`.
+
+**4. Búsqueda en el adapter (`applyFilters`):**
+   - Un término con coma o paréntesis (ej. "2.0AH, 40WH", "(INDUSTRIAL)") rompe la sintaxis de `.or()` de PostgREST. Escápalo o quita `,()` del término.
+   - Las tildes: "medicion" no encuentra "MEDICIÓN". Si quieres, agrego en la base una columna `search_text` sin tildes y en minúsculas; me dices.
+
+**5. `parent_slug` no se mapea** en `mapCategory` (y `Category` no tiene `parentSlug`). Lo necesitas para el agrupado "Herramientas", como dijiste.
+
+Me avisas aquí si quieres la columna `search_text` (4) o `display_name` (mensaje anterior) y la agrego.

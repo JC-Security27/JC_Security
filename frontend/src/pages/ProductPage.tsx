@@ -4,6 +4,7 @@ import { useAsync } from "@/hooks/useAsync";
 import { useQuote } from "@/context/QuoteContext";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { productInquiryMessage } from "@/lib/whatsapp";
+import { toDisplayName } from "@/lib/format";
 import {
   EmptyState,
   ErrorState,
@@ -59,7 +60,7 @@ export function ProductPage() {
           {product.categorySlug}
         </Link>
         <span aria-hidden="true">/</span>
-        <span>{product.name}</span>
+        <span>{toDisplayName(product.name)}</span>
       </nav>
 
       <div className="product-detail">
@@ -84,7 +85,7 @@ export function ProductPage() {
             )}
             {product.isService && <span className="chip">Servicio</span>}
           </div>
-          <h1>{product.name}</h1>
+          <h1>{toDisplayName(product.name)}</h1>
           <p className="product-ref-lg">Referencia: {product.reference}</p>
 
           {product.description && (

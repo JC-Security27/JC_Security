@@ -4,6 +4,7 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { quoteListMessage } from "@/lib/whatsapp";
 import { EmptyState } from "@/components/ui/states";
 import { hasWhatsApp } from "@/config/site";
+import { toDisplayName } from "@/lib/format";
 
 export function QuotePage() {
   const { items, setQuantity, remove, clear, count } = useQuote();
@@ -39,7 +40,7 @@ export function QuotePage() {
               <li key={item.productId} className="quote-item card">
                 <div className="quote-item-info">
                   <Link to={`/producto/${item.productId}`}>
-                    <strong>{item.name}</strong>
+                    <strong>{toDisplayName(item.name)}</strong>
                   </Link>
                   <span className="muted">
                     Ref: {item.reference}
