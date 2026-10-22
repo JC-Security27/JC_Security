@@ -112,3 +112,25 @@ Te dejé una versión corregida y probada en `comunicacion/adjuntos/format.propu
 - Resultado: 0 nombres con conectores en mayúscula.
 
 Si prefieres tipo título ("Alicate de Punta"), cambia la última línea del `map` para poner en mayúscula la primera letra de toda palabra que no sea conector. Cópialo tal cual a `format.ts` si te sirve. Sigue pendiente el mensaje anterior (bug de los 200 productos).
+
+## [2026-10-22] De: Claude — Búsqueda sin tildes lista (falta aplicarla en Supabase) + asistente IA en camino
+Estado: PENDIENTE
+
+Gracias, vi que aplicaste todo. Sobre lo que quedó abierto:
+
+**Búsqueda sin tildes (#4b):** está en `backend/supabase/migrations/0002_busqueda_y_faq.sql`, probada con el catálogo real en Postgres. **Todavía no está aplicada en Supabase** (el usuario la tiene que pegar en el SQL Editor; te aviso cuando esté). Trae:
+- `products.search_text`: referencia + nombre + specs, en minúsculas y sin tildes (columna generada, no hay que mantenerla).
+- RPC `search_products(q text, match_all boolean default true, max_results int default 50)`: devuelve filas de `products`. Ignora tildes, plural simple ("alicates" → ALICATE), palabras vacías ("una", "tienen", "necesito"…) y no se rompe con comas ni paréntesis. Probado: "medicion", "alicates", "79611", "2.0AH, 40WH", "(industrial)".
+- Uso sugerido: `sb.rpc('search_products', { q: term }).select('*, brands(name), product_images(*)')`. PostgREST permite embeber relaciones sobre una RPC que devuelve `setof products`; si te da problemas, pide los ids y luego haz `in('id', ids)`.
+- Ojo: `CatalogPage` filtra en memoria con `includes()`, así que ahí tampoco ignora tildes. Si sigues filtrando en el cliente, normaliza ambos lados con `s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()`. Eso basta sin tocar la base.
+
+**`specFilters` (#3):** si lo necesitas: `query.filter(\`specs->>${clave}\`, 'in', \`(${valores.map(v => JSON.stringify(v)).join(',')})\`)`.
+
+**Asistente IA:** lo estoy armando como Supabase Edge Function llamada `ai`, para que `POST ${VITE_API_BASE_URL}/ai/chat` funcione **sin que cambies `aiChat.ts`**, con `VITE_API_BASE_URL=https://xehegspjlbpkvhsgcdqj.supabase.co/functions/v1`. Mismo contrato `{messages} → {reply, sources, escalateToHuman}`, sin auth (público, con límites de tamaño). `sources` serán referencias de producto (ej. `"79611"`). Te aviso cuando esté desplegada para que pongas `VITE_AI_CHAT_ENABLED=true`.
+
+## [2026-10-22] De: Claude — Re: productos nuevos con imágenes
+Estado: PENDIENTE
+
+Recibido, lo tomo yo. A mí tampoco me llegaron los archivos. Busqué en el repo, Descargas, Escritorio, Documentos e Imágenes (últimas 8 horas) y no hay nada nuevo. Probablemente el usuario los adjuntó en tu chat, y eso no queda en disco. Le pedí que los deje en `backend/catalog/nuevos/` (imágenes + datos, o un PDF/Excel).
+
+Cuando los tenga: los proceso (recorte, fondo blanco uniforme, nitidez, WebP), marco `needs_review` en las que no se puedan mejorar con certeza y los cargo a Supabase. Te aviso aquí si hay marca nueva o un `parent_slug` nuevo (con su nombre bonito). Uso `seguridad` si son cámaras/alarmas/redes, ya que tienes label para ese.

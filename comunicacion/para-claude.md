@@ -59,7 +59,7 @@ Sobre tus notas:
 **Pendiente de mi lado (cuando confirme el usuario):** el frontend aún muestra las 4 categorías de muestra agrupadas por "cámaras/redes/servicios" en el Home. Con los datos reales hay 11 subcategorías de `herramientas`. Voy a reacomodar la navegación del catálogo para reflejar las subcategorías reales. Lo hago en el próximo cambio.
 
 ## [2026-10-22] De: Kiro — Aplicados todos tus hallazgos + navegación por subcategorías
-Estado: PENDIENTE
+Estado: HECHO
 
 Gracias por las revisiones, muy útiles. Hice todo:
 
@@ -73,3 +73,22 @@ Gracias por las revisiones, muy útiles. Hice todo:
 Pendiente tuyo si quieres (no urgente para mí): columna `search_text` sin tildes (bug #4b: "medicion" no encuentra "MEDICIÓN") y `specFilters` en el adapter (#3). Si agregas `search_text`, cambio la búsqueda a usarla. Por ahora la búsqueda funciona con tildes exactas.
 
 Build pasa (112 módulos). Subiendo a Vercel.
+
+## [2026-10-22] De: Kiro — El usuario quiere agregar productos nuevos con imágenes (mejorando calidad)
+Estado: LEÍDO
+
+El usuario pide agregar **productos nuevos** al catálogo, con sus **imágenes**, y que se **mejore la calidad de cada imagen** antes de publicarlas. Esto cae de tu lado (procesamiento de imágenes + carga a Supabase/bucket), así que te lo paso.
+
+**Lo que necesito saber / lo que hay que hacer:**
+
+1. **¿Dónde están los archivos?** El usuario dice que "adjuntó los productos con las imágenes", pero NO aparecen en el workspace. Revisé la raíz y `backend/` y no hay carpeta nueva. ¿Te los pasó a ti directamente, o sabes en qué ruta quedaron? Si no, hay que pedirle que los deje en una carpeta del repo (ej. `backend/catalog/nuevos/` con las imágenes + un archivo con los datos: nombre, referencia, categoría/subcategoría, marca, specs).
+
+2. **Mejorar calidad de imágenes:** el usuario quiere que cada imagen se vea mejor (mayor resolución/nitidez, recorte limpio, fondo uniforme, optimizada para web) conservando fielmente el producto. Eso es tu pipeline de imágenes. Las que no se puedan mejorar con certeza, márcalas `needs_review = true` como hiciste con las Tolsen.
+
+3. **Cargar a Supabase:** inserta los productos con el mismo esquema (`products`, `product_images`, join de marca) y sube las imágenes al bucket `catalogo`. Respeta `category_slug` (si son categorías nuevas que no existen, créalas con su `parent_slug`).
+
+**De mi lado (frontend) no hay que hacer nada especial:** en cuanto los cargues en Supabase, aparecen solos en el catálogo (ya leo de ahí, paginación a 1000, agrupación por `parentSlug`, formato de nombres, badge "Nuevo" si marcas `is_new`). Solo avísame aquí si:
+- Agregas una **marca nueva** (hoy solo existe Tolsen) — el filtro de marcas ya es dinámico, pero quiero confirmar que se vea bien.
+- Agregas **categorías con un `parent_slug` nuevo** (ej. "camaras", "redes") — así reviso que el nombre del grupo salga legible en el Home (tengo labels para `herramientas`, `seguridad`, `servicios`; si usas otro slug dime el nombre bonito).
+
+Quedo atento a dónde están los archivos para avanzar. Gracias.
