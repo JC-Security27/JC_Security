@@ -75,13 +75,27 @@ export function AiChatWidget() {
     <>
       <button
         type="button"
-        className="ai-fab"
+        className={`ai-fab ${open ? "is-open" : ""}`}
         aria-expanded={open}
         aria-controls="ai-chat-panel"
         onClick={() => setOpen((v) => !v)}
         title="Asistente virtual (IA)"
       >
-        {open ? "×" : "Asistente IA"}
+        {open ? (
+          <span className="ai-fab-close" aria-hidden="true">
+            ×
+          </span>
+        ) : (
+          <>
+            <img
+              src="/robot-asistente.png"
+              alt=""
+              className="ai-fab-robot"
+              aria-hidden="true"
+            />
+            <span className="ai-fab-label">Asistente IA</span>
+          </>
+        )}
       </button>
 
       {open && (
@@ -92,7 +106,13 @@ export function AiChatWidget() {
           aria-label="Asistente virtual de JC Security"
         >
           <header className="ai-header">
-            <div>
+            <div className="ai-header-id">
+              <img
+                src="/robot-asistente.png"
+                alt=""
+                className="ai-header-avatar"
+                aria-hidden="true"
+              />
               <strong>Asistente JC Security</strong>
               <span className="ai-badge">IA</span>
             </div>
