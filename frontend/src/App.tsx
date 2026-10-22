@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { HomePage } from "@/pages/HomePage";
@@ -8,7 +8,7 @@ import { ProductPage } from "@/pages/ProductPage";
 import { QuotePage } from "@/pages/QuotePage";
 import { SocialPage } from "@/pages/SocialPage";
 import { GuidesPage } from "@/pages/GuidesPage";
-import { ProjectsPage } from "@/pages/ProjectsPage";
+import { ServicesPage } from "@/pages/ServicesPage";
 import { ContactPage } from "@/pages/ContactPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
@@ -24,7 +24,9 @@ export default function App() {
         <Route path="/cotizacion" element={<QuotePage />} />
         <Route path="/redes" element={<SocialPage />} />
         <Route path="/guias" element={<GuidesPage />} />
-        <Route path="/proyectos" element={<ProjectsPage />} />
+        <Route path="/servicios" element={<ServicesPage />} />
+        {/* Redirección para no romper enlaces antiguos */}
+        <Route path="/proyectos" element={<Navigate to="/servicios" replace />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

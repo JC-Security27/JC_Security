@@ -45,7 +45,7 @@ export function Footer() {
           <h4>Secciones</h4>
           <ul>
             <li>
-              <Link to="/proyectos">Proyectos</Link>
+              <Link to="/servicios">Servicios</Link>
             </li>
             <li>
               <Link to="/guias">Guías de seguridad</Link>

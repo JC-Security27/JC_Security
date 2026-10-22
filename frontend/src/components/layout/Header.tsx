@@ -6,7 +6,7 @@ import { useQuote } from "@/context/QuoteContext";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
-  { to: "/proyectos", label: "Proyectos" },
+  { to: "/servicios", label: "Servicios" },
   { to: "/guias", label: "Guías" },
   { to: "/redes", label: "Redes" },
   { to: "/contacto", label: "Contacto" },

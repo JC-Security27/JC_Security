@@ -1,33 +1,54 @@
+import { useState } from "react";
 import { siteConfig } from "@/config/site";
 
-/* Logo tipográfico + escudo de JC Security.
-   PENDIENTE: sustituir por el logotipo oficial cuando JC Security lo envíe. */
+/* Logo de JC Security.
+   Usa la imagen oficial en /logo.png (colócala en frontend/public/logo.png).
+   Si la imagen no está disponible, muestra un escudo SVG de respaldo con el
+   mismo estilo: escudo con "JC" en cian y "Security" en texto. */
 export function Logo({ compact = false }: { compact?: boolean }) {
+  const [imgOk, setImgOk] = useState(true);
+
+  if (imgOk) {
+    return (
+      <span className="logo" aria-label={siteConfig.name}>
+        <img
+          src="/logo.png"
+          alt={siteConfig.name}
+          className="logo-img"
+          onError={() => setImgOk(false)}
+        />
+      </span>
+    );
+  }
+
+  // Respaldo SVG (si aún no se ha subido logo.png).
   return (
     <span className="logo" aria-label={siteConfig.name}>
       <svg
         className="logo-mark"
-        viewBox="0 0 64 64"
+        viewBox="0 0 56 64"
         width="34"
-        height="34"
+        height="38"
         aria-hidden="true"
       >
         <path
-          d="M32 6 L54 15 V32 C54 45 44 55 32 59 C20 55 10 45 10 32 V15 Z"
+          d="M28 4 L50 13 V30 C50 45 40 56 28 61 C16 56 6 45 6 30 V13 Z"
           fill="none"
           stroke="currentColor"
-          strokeWidth="3"
+          strokeWidth="4"
           strokeLinejoin="round"
         />
-        <circle cx="24" cy="30" r="3.5" fill="var(--accent-strong)" />
-        <circle cx="40" cy="30" r="3.5" fill="var(--accent-strong)" />
-        <path
-          d="M23 40 Q32 47 41 40"
-          fill="none"
-          stroke="var(--accent-strong)"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
+        <text
+          x="28"
+          y="39"
+          textAnchor="middle"
+          fontFamily="var(--font-sans)"
+          fontWeight="800"
+          fontSize="22"
+          fill="var(--accent-strong)"
+        >
+          JC
+        </text>
       </svg>
       {!compact && (
         <span className="logo-text">

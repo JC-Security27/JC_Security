@@ -1,18 +1,18 @@
 import { SampleNotice } from "@/components/ui/states";
 
-export function ProjectsPage() {
+export function ServicesPage() {
   return (
     <section className="section container">
       <div className="section-head">
         <span className="eyebrow">Experiencia</span>
-        <h1>Proyectos realizados</h1>
-        <p>Instalaciones y proyectos ejecutados por JC Security.</p>
+        <h1>Servicios realizados</h1>
+        <p>Instalaciones y servicios ejecutados por JC Security.</p>
       </div>
 
       <SampleNotice>
         <strong>Galería en preparación.</strong> Las fotos y descripciones de
-        proyectos se agregarán cuando JC Security proporcione contenido real. No
-        se inventan proyectos.
+        los servicios se agregarán cuando JC Security proporcione contenido
+        real. No se inventa contenido.
       </SampleNotice>
 
       <div className="grid grid-cards projects-grid">
@@ -21,7 +21,7 @@ export function ProjectsPage() {
             <div className="project-ph-media" aria-hidden="true" />
             <div className="project-ph-body">
               <span className="chip">Próximamente</span>
-              <p className="muted">Proyecto pendiente de publicación.</p>
+              <p className="muted">Servicio pendiente de publicación.</p>
             </div>
           </div>
         ))}
