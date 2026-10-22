@@ -27,22 +27,27 @@
   }
 }
 .logo-text {
-  font-size: 1.15rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
-}
-.logo-text strong {
-  color: var(--accent);
 }
 /* Imagen de logo oficial (frontend/public/logo.png) */
 .logo-img {
-  height: 40px;
+  height: 56px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 @media (max-width: 520px) {
+  .logo-text {
+    font-size: 1.3rem;
+  }
   .logo-img {
-    height: 34px;
+    height: 44px;
+  }
+  .logo-mark {
+    width: 42px;
+    height: 46px;
   }
 }
 

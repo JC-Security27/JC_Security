@@ -42,7 +42,7 @@
 
   /* ----- Layout ----- */
   --container-max: 1200px;
-  --header-height: 68px;
+  --header-height: 78px;
 
   /* ----- Transiciones ----- */
   --transition: 200ms ease;

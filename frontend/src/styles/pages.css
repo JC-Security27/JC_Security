@@ -553,6 +553,7 @@
 }
 
 /* ----- Widget de chat IA ----- */
+/* El muñequito (robot) ES el botón: sin fondo ni borde. */
 .ai-fab {
   position: fixed;
   right: var(--space-5);
@@ -560,47 +561,45 @@
   z-index: 200;
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  background: var(--primary);
-  color: var(--text-on-brand);
+  justify-content: center;
+  background: transparent;
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 0.5rem 1.1rem 0.5rem 0.5rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-hover);
-  transition: transform var(--transition), background var(--transition),
-    box-shadow var(--transition);
-}
-.ai-fab:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-}
-/* Robot asomando dentro del botón flotante */
-.ai-fab-robot {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  object-position: top;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  padding: 0;
+  cursor: pointer;
   transition: transform var(--transition);
 }
-.ai-fab:hover .ai-fab-robot {
-  transform: scale(1.08) translateY(-2px);
+.ai-fab:hover {
+  transform: translateY(-4px) scale(1.04);
 }
-.ai-fab-label {
-  font-size: 0.9rem;
-  white-space: nowrap;
+/* Robot grande, clickeable */
+.ai-fab-robot {
+  width: 96px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
 }
-/* Estado abierto: botón compacto circular con la X */
+/* Estado abierto: círculo compacto con la X */
 .ai-fab.is-open {
-  padding: 0;
   width: 48px;
   height: 48px;
-  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--text-on-brand);
+  box-shadow: var(--shadow-hover);
+}
+.ai-fab.is-open:hover {
+  transform: translateY(-2px);
+  background: var(--primary-hover);
 }
 .ai-fab-close {
   font-size: 1.6rem;
   line-height: 1;
+}
+@media (max-width: 520px) {
+  .ai-fab-robot {
+    width: 76px;
+  }
 }
 /* Avatar del robot en el encabezado del panel */
 .ai-header-id {

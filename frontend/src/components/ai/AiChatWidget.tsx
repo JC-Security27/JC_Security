@@ -79,6 +79,7 @@ export function AiChatWidget() {
         aria-expanded={open}
         aria-controls="ai-chat-panel"
         onClick={() => setOpen((v) => !v)}
+        aria-label={open ? "Cerrar asistente" : "Abrir asistente virtual (IA)"}
         title="Asistente virtual (IA)"
       >
         {open ? (
@@ -86,15 +87,12 @@ export function AiChatWidget() {
             ×
           </span>
         ) : (
-          <>
-            <img
-              src="/robot-asistente.png"
-              alt=""
-              className="ai-fab-robot"
-              aria-hidden="true"
-            />
-            <span className="ai-fab-label">Asistente IA</span>
-          </>
+          <img
+            src="/robot-asistente.png"
+            alt=""
+            className="ai-fab-robot"
+            aria-hidden="true"
+          />
         )}
       </button>
 
