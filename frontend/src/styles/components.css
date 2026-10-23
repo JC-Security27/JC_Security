@@ -41,9 +41,11 @@
   mask: url("/jc-logo.png") center / contain no-repeat;
 }
 .logo-text {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: "Cinzel", Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 /* Imagen de logo oficial (frontend/public/logo.png) */
 .logo-img {
