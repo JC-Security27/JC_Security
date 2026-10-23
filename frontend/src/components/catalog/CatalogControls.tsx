@@ -127,7 +127,10 @@ export function CatalogControls({
                   filters.categorySlug === "" ? "is-active" : ""
                 }`}
                 aria-pressed={filters.categorySlug === ""}
-                onClick={() => onChange({ ...filters, categorySlug: "" })}
+                onClick={() => {
+                  onChange({ ...filters, categorySlug: "" });
+                  setCategoriesOpen(false);
+                }}
               >
                 Todas
               </button>
@@ -139,12 +142,13 @@ export function CatalogControls({
                     type="button"
                     className={`chip filter-chip ${active ? "is-active" : ""}`}
                     aria-pressed={active}
-                    onClick={() =>
+                    onClick={() => {
                       onChange({
                         ...filters,
                         categorySlug: active ? "" : cat.slug,
-                      })
-                    }
+                      });
+                      setCategoriesOpen(false);
+                    }}
                   >
                     {cat.name}
                     {typeof cat.productCount === "number" && (

@@ -189,6 +189,21 @@ export function ProductPage() {
             </div>
           )}
 
+          {/* Características del producto (arriba del bloque de precio). */}
+          {specs.length > 0 && (
+            <div className="specs">
+              <h2>Características</h2>
+              <dl className="specs-list">
+                {specs.map(([k, v]) => (
+                  <div key={k} className="specs-row">
+                    <dt>{k}</dt>
+                    <dd>{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
+
           {/* Sin precios: se consulta por WhatsApp */}
           <div className="price-box">
             <p>
@@ -229,20 +244,6 @@ export function ProductPage() {
               </p>
             )}
           </div>
-
-          {specs.length > 0 && (
-            <div className="specs">
-              <h2>Características</h2>
-              <dl className="specs-list">
-                {specs.map(([k, v]) => (
-                  <div key={k} className="specs-row">
-                    <dt>{k}</dt>
-                    <dd>{v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          )}
 
           {product.isSample && (
             <SampleNotice>

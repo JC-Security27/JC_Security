@@ -785,7 +785,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: var(--space-5);
-  margin: var(--space-5) 0;
+  margin: var(--space-5) 0 0;
 }
 .product-detail-actions {
   display: flex;
@@ -817,6 +817,26 @@
 .specs-row dd {
   font-weight: 600;
   text-align: right;
+}
+/* En pantallas anchas horizontales (tablet apaisado, PC) compactamos los
+   espacios verticales de la columna de info para que Características y el
+   bloque de precio queden un poco más arriba y se vea todo sin bajar. */
+@media (min-width: 900px) {
+  .product-detail-desc {
+    margin: var(--space-3) 0;
+  }
+  .sizes {
+    margin: var(--space-3) 0;
+  }
+  .specs {
+    margin-top: var(--space-4);
+  }
+  .specs-row {
+    padding: var(--space-2) 0;
+  }
+  .price-box {
+    margin-top: var(--space-4);
+  }
 }
 @media (max-width: 760px) {
   .product-detail {
