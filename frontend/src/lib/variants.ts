@@ -43,6 +43,87 @@ export function getSizeLabel(product: Product): string | null {
   return null;
 }
 
+/* Palabras del nombre del producto que indican ropa/calzado -> "Tallas". */
+const APPAREL_WORDS = [
+  "tenis",
+  "bota",
+  "botas",
+  "zapato",
+  "calzado",
+  "guante",
+  "guantes",
+  "chaleco",
+  "jacket",
+  "chaqueta",
+  "camisa",
+  "pantalon",
+  "pantalón",
+  "overol",
+  "casco",
+  "cinturon",
+  "cinturón",
+  "faja",
+  "gafas",
+  "mascarilla",
+  "respirador",
+  "braga",
+  "uniforme",
+  "indumentaria",
+  "ropa",
+];
+
+/* Productos que se venden por cantidad/empaque -> "Presentaciones". */
+const PACK_WORDS = [
+  "tornillo",
+  "taco",
+  "gaza",
+  "remache",
+  "tuerca",
+  "arandela",
+  "clavo",
+  "abrazadera",
+  "brida",
+  "electrodo",
+  "cinta",
+];
+
+/**
+ * Devuelve el texto adecuado para el botón/etiqueta de variantes según lo que
+ * cambia entre ellas. Analiza el nombre del producto y los valores de talla.
+ * - Ropa/calzado -> "Tallas disponibles"
+ * - Consumibles por empaque -> "Presentaciones disponibles"
+ * - Herramientas con medida numérica (7", 10 mm) -> "Medidas disponibles"
+ * - Resto -> "Opciones disponibles"
+ */
+export function getVariantLabel(group: ProductGroup): string {
+  const name = normalizeForSearch(group.name);
+  const words = name.split(/\s+/);
+
+  if (words.some((w) => APPAREL_WORDS.includes(w))) {
+    return "Tallas disponibles";
+  }
+  if (words.some((w) => PACK_WORDS.includes(w))) {
+    return "Presentaciones disponibles";
+  }
+
+  // ¿Las variantes tienen una medida numérica (pulgadas, mm, cm...)?
+  const labels = group.variants
+    .map((v) => getSizeLabel(v))
+    .filter((v): v is string => v !== null);
+  const numericLike = labels.filter((l) => /\d/.test(l));
+  if (labels.length > 0 && numericLike.length >= labels.length / 2) {
+    return "Medidas disponibles";
+  }
+
+  return "Opciones disponibles";
+}
+
+/** Versión corta para la etiqueta de la tarjeta: "tallas", "medidas"… */
+export function getVariantShortLabel(group: ProductGroup): string {
+  const full = getVariantLabel(group); // "Tallas disponibles", etc.
+  return full.split(" ")[0].toLocaleLowerCase("es");
+}
+
 /** Clave de agrupación: nombre + categoría + marca. */
 function groupKey(p: Product): string {
   return [

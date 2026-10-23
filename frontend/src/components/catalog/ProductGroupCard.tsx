@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { ProductGroup } from "@/lib/variants";
+import { type ProductGroup, getVariantShortLabel } from "@/lib/variants";
 import { toDisplayName } from "@/lib/format";
 import { useQuote } from "@/context/QuoteContext";
 
@@ -34,7 +34,7 @@ export function ProductGroupCard({ group }: { group: ProductGroup }) {
         {product.isSample && <span className="sample-tag">Muestra</span>}
         {group.hasVariants && (
           <span className="variants-tag">
-            {group.variants.length} tallas
+            {group.variants.length} {getVariantShortLabel(group)}
           </span>
         )}
       </Link>
@@ -62,7 +62,7 @@ export function ProductGroupCard({ group }: { group: ProductGroup }) {
             to={`/producto/${product.id}`}
             className="btn btn-outline btn-sm"
           >
-            {group.hasVariants ? "Ver tallas" : "Ver detalle"}
+            {group.hasVariants ? "Ver opciones" : "Ver detalle"}
           </Link>
           {!group.hasVariants && (
             <button

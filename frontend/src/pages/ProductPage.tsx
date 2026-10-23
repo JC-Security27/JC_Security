@@ -6,7 +6,11 @@ import { useQuote } from "@/context/QuoteContext";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { productInquiryMessage } from "@/lib/whatsapp";
 import { toDisplayName } from "@/lib/format";
-import { groupByVariants, getSizeLabel } from "@/lib/variants";
+import {
+  groupByVariants,
+  getSizeLabel,
+  getVariantLabel,
+} from "@/lib/variants";
 import { BackButton } from "@/components/ui/BackButton";
 import {
   EmptyState,
@@ -143,7 +147,9 @@ export function ProductPage() {
                 aria-expanded={sizesOpen}
                 onClick={() => setSizesOpen((v) => !v)}
               >
-                <span>Tallas disponibles ({group.variants.length})</span>
+                <span>
+                  {getVariantLabel(group)} ({group.variants.length})
+                </span>
                 <span className={`sizes-caret ${sizesOpen ? "open" : ""}`}>
                   ▾
                 </span>
@@ -192,16 +198,16 @@ export function ProductPage() {
                 {has(selectedVariant.id)
                   ? "En tu lista ✓"
                   : hasVariants
-                  ? "Agregar talla a la lista"
+                  ? "Agregar opción a la lista"
                   : "Agregar a la lista"}
               </button>
             </div>
             {hasVariants && (
               <p className="muted" style={{ marginTop: "var(--space-2)" }}>
-                Se agregará la talla seleccionada
+                Se agregará la opción seleccionada
                 {getSizeLabel(selectedVariant)
                   ? ` (${getSizeLabel(selectedVariant)})`
-                  : ""}
+                  : ` (Ref: ${selectedVariant.reference})`}
                 .
               </p>
             )}
