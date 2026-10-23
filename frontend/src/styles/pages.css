@@ -244,6 +244,83 @@
   background: var(--danger);
   color: #fff;
 }
+/* Etiqueta "N tallas" en la tarjeta de un grupo de variantes */
+.variants-tag {
+  position: absolute;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  background: var(--primary);
+  color: var(--text-on-brand);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+/* ----- Desplegable "Tallas disponibles" en el detalle ----- */
+.sizes {
+  margin: var(--space-4) 0;
+}
+.sizes-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+.sizes-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.sizes-caret {
+  transition: transform var(--transition);
+}
+.sizes-caret.open {
+  transform: rotate(180deg);
+}
+.sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.size-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+  min-width: 96px;
+}
+.size-option:hover {
+  border-color: var(--accent);
+}
+.size-option.is-active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.size-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.size-ref {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
 .product-card-body {
   display: flex;
   flex-direction: column;

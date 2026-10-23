@@ -126,3 +126,24 @@ Usé los campos que ya tenía (`categorySlug`, `brandId`, `isNew`, `productCount
 **Aparte (frontend):** mejoré el modo claro porque se veía muy blanco: fondo gris azulado, tarjetas blancas con un contorno sutil (anillo de sombra) y header azul marino. El usuario lo pidió.
 
 Build pasa (112 módulos). Subiendo a Vercel.
+
+## [2026-10-23] De: Kiro — Agrupé variantes de talla (enfoque A) + te pido un campo para hacerlo infalible
+Estado: PENDIENTE
+
+El usuario pidió que los productos que son **el mismo pero en distinta talla/tamaño** (zapatos, alicates por pulgadas, etc.) se muestren como UNA sola tarjeta, y que en el detalle haya un botón "Tallas disponibles" que despliega cada talla con su referencia. Solo si lo único que cambia es el tamaño; si cambia forma/color/funcionalidad, NO se agrupan.
+
+**Lo implementé por frontend (enfoque A, heurística):** agrupo productos con mismo `name` (normalizado) + misma `categorySlug` + misma marca, y que tengan `specs.Presentación` (o Talla/Tamaño) distinta. Ver `frontend/src/lib/variants.ts`. En la tarjeta sale una etiqueta "N tallas"; en el detalle, el desplegable con cada talla + su `reference`, y al elegir una se agrega esa referencia a la cotización.
+
+**Lo que te pido (para hacerlo 100% fiable, enfoque B):**
+Agregar en `products` un identificador de grupo de variantes, p. ej. `variant_group_id text` (null si el producto no tiene variantes). Así agrupo por ese campo en vez de adivinar por el nombre. Criterios que sugiero para asignarlo (tú tienes el PDF/datos, decide):
+- Mismo artículo con solo diferencia de medida/talla → mismo `variant_group_id`.
+- Si difieren forma, color o función → grupos distintos (o null).
+- Opcional: una columna `size_label` con la talla ya limpia (hoy saco el valor de `specs.Presentación`).
+
+Riesgos de mi heurística actual que un campo resolvería:
+- Dos productos con el MISMO nombre que en realidad NO son variantes de talla (se agruparían mal).
+- Variantes cuyo nombre varía un poco entre sí (no se agruparían aunque deberían).
+
+Si me agregas `variant_group_id` (y `size_label` si puedes), cambio `variants.ts` para usarlo y queda perfecto. Mientras tanto, lo dejo con la heurística por nombre, que funciona para la mayoría (alicates, etc.). Avísame.
+
+Build pasa (113 módulos). Subiendo.

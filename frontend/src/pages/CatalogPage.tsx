@@ -6,7 +6,7 @@ import {
   CatalogControls,
   type CatalogFilters,
 } from "@/components/catalog/CatalogControls";
-import { ProductCard } from "@/components/catalog/ProductCard";
+import { ProductGroupCard } from "@/components/catalog/ProductGroupCard";
 import {
   CardsSkeleton,
   EmptyState,
@@ -14,6 +14,7 @@ import {
   SampleNotice,
 } from "@/components/ui/states";
 import { normalizeForSearch } from "@/lib/format";
+import { groupByVariants } from "@/lib/variants";
 import type { Brand, Category, Product } from "@/types/catalog";
 
 /** Cuántos productos mostrar por categoría en la vista agrupada. */
@@ -101,9 +102,10 @@ export function CatalogPage() {
       .filter((g) => g.items.length > 0);
   }, [data, baseFiltered, filters.categorySlug]);
 
+  // Contamos grupos de variantes (cada "N tallas" cuenta como 1 resultado).
   const totalResults = filters.categorySlug
-    ? inSelectedCategory.length
-    : baseFiltered.length;
+    ? groupByVariants(inSelectedCategory).length
+    : groupByVariants(baseFiltered).length;
 
   return (
     <section className="section container">
@@ -146,14 +148,14 @@ export function CatalogPage() {
         </EmptyState>
       )}
 
-      {/* Vista 1: categoría seleccionada -> lista plana */}
+      {/* Vista 1: categoría seleccionada -> lista plana (agrupando tallas) */}
       {status === "success" &&
         data &&
         filters.categorySlug &&
         inSelectedCategory.length > 0 && (
           <div className="grid grid-cards catalog-grid">
-            {inSelectedCategory.map((p) => (
-              <ProductCard key={p.id} product={p} />
+            {groupByVariants(inSelectedCategory).map((g) => (
+              <ProductGroupCard key={g.representative.id} group={g} />
             ))}
           </div>
         )}
@@ -165,8 +167,10 @@ export function CatalogPage() {
         grouped.length > 0 && (
           <div className="catalog-grouped">
             {grouped.map(({ cat, items }) => {
-              const preview = items.slice(0, PREVIEW_PER_CATEGORY);
-              const hasMore = items.length > PREVIEW_PER_CATEGORY;
+              // Agrupamos las tallas: cada grupo cuenta como un producto.
+              const groups = groupByVariants(items);
+              const preview = groups.slice(0, PREVIEW_PER_CATEGORY);
+              const hasMore = groups.length > PREVIEW_PER_CATEGORY;
               return (
                 <section key={cat.id} className="catalog-cat-block">
                   <div className="catalog-cat-head">
@@ -178,12 +182,15 @@ export function CatalogPage() {
                         setFilters({ ...filters, categorySlug: cat.slug })
                       }
                     >
-                      Ver todos ({items.length})
+                      Ver todos ({groups.length})
                     </button>
                   </div>
                   <div className="grid grid-cards catalog-grid">
-                    {preview.map((p) => (
-                      <ProductCard key={p.id} product={p} />
+                    {preview.map((g) => (
+                      <ProductGroupCard
+                        key={g.representative.id}
+                        group={g}
+                      />
                     ))}
                   </div>
                   {hasMore && (
@@ -195,7 +202,7 @@ export function CatalogPage() {
                           setFilters({ ...filters, categorySlug: cat.slug })
                         }
                       >
-                        Ver los {items.length} de {cat.name}
+                        Ver los {groups.length} de {cat.name}
                       </button>
                     </div>
                   )}
