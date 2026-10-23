@@ -59,12 +59,13 @@
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --bg: var(--brand-white);
+  /* Fondo gris azulado suave para dar profundidad; tarjetas en blanco. */
+  --bg: #e8eef4;
   --bg-elevated: #ffffff;
   --surface: #ffffff;
-  --surface-2: #eef3f6;
-  --border: var(--brand-silver);
-  --divider: #dbe3e8;
+  --surface-2: #eef3f7;
+  --border: #d2dde6;
+  --divider: #dde5ec;
 
   --text: var(--brand-ink);
   --text-muted: #51637a;
@@ -77,11 +78,15 @@
   --accent-strong: var(--brand-cyan);
   --focus-ring: #0f9fb0;
 
-  --header-bg: rgba(245, 248, 250, 0.85);
-  --shadow-card: 0 1px 2px rgba(10, 23, 40, 0.06),
-    0 8px 24px rgba(10, 23, 40, 0.08);
-  --shadow-hover: 0 4px 10px rgba(10, 23, 40, 0.1),
-    0 16px 40px rgba(10, 23, 40, 0.14);
+  /* Header azul marino en modo claro (identidad de marca). */
+  --header-bg: rgba(20, 43, 85, 0.92);
+  --header-text: #ffffff;
+  --header-border: rgba(255, 255, 255, 0.12);
+
+  --shadow-card: 0 1px 2px rgba(10, 23, 40, 0.08),
+    0 8px 24px rgba(10, 23, 40, 0.1);
+  --shadow-hover: 0 6px 14px rgba(10, 23, 40, 0.14),
+    0 20px 46px rgba(10, 23, 40, 0.18);
 
   --success: #1f9d55;
   --danger: #c0392b;
@@ -114,6 +119,8 @@
     --focus-ring: var(--brand-cyan);
 
     --header-bg: rgba(10, 23, 40, 0.82);
+    --header-text: #eaf1f7;
+    --header-border: #1c3651;
     --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3),
       0 10px 30px rgba(0, 0, 0, 0.35);
     --shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.4),
@@ -150,6 +157,8 @@
   --focus-ring: var(--brand-cyan);
 
   --header-bg: rgba(10, 23, 40, 0.82);
+  --header-text: #eaf1f7;
+  --header-border: #1c3651;
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
   --shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.4), 0 18px 46px rgba(0, 0, 0, 0.5);
 

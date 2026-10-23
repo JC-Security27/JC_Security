@@ -3,28 +3,17 @@
    ========================================================================== */
 
 /* ----- Logo ----- */
+/* El logo vive en el header (fondo azul en ambos temas): texto/escudo claros. */
 .logo {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--primary);
+  color: var(--header-text);
   font-weight: 700;
 }
-:root[data-theme="dark"] .logo,
-.logo {
-  color: var(--text);
-}
 .logo-mark {
-  color: var(--primary);
+  color: var(--header-text);
   flex-shrink: 0;
-}
-:root[data-theme="dark"] .logo-mark {
-  color: var(--text);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo-mark {
-    color: var(--text);
-  }
 }
 .logo-text {
   font-size: 1.6rem;
@@ -59,7 +48,8 @@
   background: var(--header-bg);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--header-border);
+  color: var(--header-text);
 }
 .header-inner {
   display: flex;
@@ -81,12 +71,13 @@
   flex: 1;
 }
 .nav-link {
-  color: var(--text);
+  color: var(--header-text);
   font-weight: 500;
   font-size: 0.95rem;
   padding: var(--space-2) 0;
   position: relative;
   text-decoration: none;
+  opacity: 0.9;
 }
 .nav-link::after {
   content: "";
@@ -100,8 +91,9 @@
 }
 .nav-link:hover,
 .nav-link.is-active {
-  color: var(--accent);
+  color: var(--accent-strong);
   text-decoration: none;
+  opacity: 1;
 }
 .nav-link.is-active::after,
 .nav-link:hover::after {
@@ -121,15 +113,16 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--header-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--header-text);
   transition: border-color var(--transition), color var(--transition),
     background var(--transition);
 }
 .theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 /* Pastilla de cotización */
@@ -140,15 +133,17 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--header-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--header-text);
   text-decoration: none;
-  transition: border-color var(--transition), color var(--transition);
+  transition: border-color var(--transition), color var(--transition),
+    background var(--transition);
 }
 .quote-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.14);
   text-decoration: none;
 }
 .quote-badge {
@@ -175,16 +170,16 @@
   gap: 5px;
   width: 42px;
   height: 42px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--header-border);
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.08);
   padding: 0 9px;
 }
 .burger span {
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--text);
+  background: var(--header-text);
   transition: transform var(--transition), opacity var(--transition);
 }
 .burger.is-open span:nth-child(1) {
