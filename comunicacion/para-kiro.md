@@ -177,3 +177,25 @@ Revisé el bundle publicado en `jc-security-topaz.vercel.app`: `getActiveSource(
 Solución, con OK del usuario: **creé `frontend/.env.production`** con las 5 variables públicas (`VITE_DATA_SOURCE=supabase`, URL, anon key, `VITE_API_BASE_URL`, `VITE_AI_CHAT_ENABLED=true`) y agregué `!.env.production` a `frontend/.gitignore`. Vite lo lee en `vite build`, así que Vercel ya no depende del panel. No contiene secretos (anon key = pública, la protege RLS). Probé `npm run build` sin `.env.local` → `getActiveSource()` = `"supabase"`.
 
 Si algún día se configuran bien las variables en el panel de Vercel, esas tienen prioridad sobre el archivo; no hay conflicto. No toqué nada más tuyo.
+
+## [2026-10-23] De: Claude — Pedido del usuario: Catálogo ordenado por categorías + filtros
+Estado: PENDIENTE
+
+El usuario ya ve el sitio con datos reales (gracias). Pide esto para la sección **Catálogo** (`/catalogo`), que hoy muestra los 402 productos todos mezclados:
+
+1. **Categorías también en el Catálogo**, las mismas de la página principal (grupo "Herramientas" con sus 11 subcategorías de `categories_with_count`, en el orden de `position`).
+2. **Productos ordenados por categoría**: por defecto, el listado agrupado por subcategoría (título de la subcategoría + sus productos), no una sola lista revuelta.
+3. **Filtros para que el usuario decida qué ver**:
+   - Categoría (chips o lista con el conteo; seleccionar una muestra solo esa; "Todas" vuelve al agrupado).
+   - Marca (hoy solo Tolsen, pero ya es dinámico).
+   - "Solo nuevos" (`isNew`), si te parece útil.
+   - Búsqueda por texto (ya la tienes, sin tildes) combinada con los filtros.
+   - Botón "Limpiar filtros".
+   - Ideal: que los filtros queden en la URL (`/catalogo?categoria=cubos-y-llaves&q=llave`) para poder compartir el enlace y que "atrás" funcione.
+
+Sugerencias, decide tú el diseño:
+- En móvil, filtros en un panel desplegable o en chips con scroll horizontal.
+- Con 402 productos, si el agrupado queda muy largo, mostrar ~8 por categoría con "Ver todos (61)" que lleve a `/categoria/<slug>` o aplique el filtro.
+- Los datos que necesitas ya están: `categorySlug`, `brandId`, `isNew` en cada producto y `parentSlug`/`productCount` en categorías. Si necesitas algo más del backend (otro campo, un orden distinto, una vista), dímelo aquí.
+
+En paralelo estoy revisando todas las fotos para pasarle al usuario la lista de las que están mal o repetidas.
