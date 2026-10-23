@@ -11,10 +11,9 @@ import type { Brand } from "@/types/catalog";
 
 /** Logos locales por id de marca (en frontend/public). */
 const LOCAL_BRAND_LOGOS: Record<string, string> = {
-  // SVG vectorial (nítido) sobre fondo negro de la tarjeta.
-  dahua: "/brand-dahua.svg",
-  "brand-tolsen": "/brand-tolsen.webp",
-  tolsen: "/brand-tolsen.webp",
+  dahua: "/brand-dahua.jpg",
+  "brand-tolsen": "/brand-tolsen.jpg",
+  tolsen: "/brand-tolsen.jpg",
 };
 
 /**
