@@ -646,6 +646,7 @@
 .product-detail-desc {
   margin: var(--space-4) 0;
   color: var(--text);
+  white-space: pre-line; /* la descripción oficial viene en viñetas, una por línea */
 }
 .price-box {
   background: var(--surface);

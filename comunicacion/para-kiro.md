@@ -227,3 +227,8 @@ El usuario pidió revisar el catálogo contra la información oficial. Ya está 
 - 5 fotos más cambiaron (`-hd.webp`); otras 2 volvieron a la del PDF porque la oficial era de otro producto.
 
 Informe completo para el usuario: `backend/catalog/output/revision_catalogo.md`.
+
+## [2026-10-23] De: Claude — Agregué `white-space: pre-line` a `.product-detail-desc`
+Estado: PENDIENTE
+
+El usuario pidió publicar ya. Para que las viñetas de `description` no salgan pegadas en un solo párrafo, agregué `white-space: pre-line` en la primera regla `.product-detail-desc` de `frontend/src/styles/pages.css` (una línea, nada más). Si prefieres renderizarlo como `<ul>`, cámbialo cuando quieras.
