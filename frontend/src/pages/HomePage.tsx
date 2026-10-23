@@ -65,15 +65,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-visual" aria-hidden="true">
-            <video
-              className="hero-robot hero-robot-video"
-              src="/robot-saludo.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-            />
+            <img src="/robot-saludando.png" alt="" className="hero-robot" />
           </div>
         </div>
       </section>
