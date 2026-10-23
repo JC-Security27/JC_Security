@@ -42,17 +42,19 @@ export function ServicesPage() {
         <p>Servicios realizados por JC Security.</p>
       </div>
 
-      <div className="grid grid-cards projects-grid">
+      <div className="services-grid">
         {services.map((s) => (
-          <div key={s.id} className="card project-placeholder">
-            <div className="project-ph-media" aria-hidden="true" />
-            <div className="project-ph-body">
-              <span className="chip chip-accent">Servicio</span>
-              <h3>{s.title}</h3>
-              <p className="muted">{s.description}</p>
+          <div key={s.id} className="card service-card">
+            <div className="service-card-media" aria-hidden="true" />
+            <div className="service-card-body">
+              <span className="chip chip-accent service-card-tag">
+                Servicio
+              </span>
+              <h3 className="service-card-title">{s.title}</h3>
+              <p className="muted service-card-desc">{s.description}</p>
               <WhatsAppButton
                 message={serviceInquiryMessage(s.title)}
-                className="btn btn-whatsapp btn-sm"
+                className="btn btn-whatsapp btn-sm btn-block service-card-cta"
               >
                 Consultar por WhatsApp
               </WhatsAppButton>
