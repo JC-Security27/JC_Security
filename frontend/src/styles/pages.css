@@ -875,7 +875,7 @@
 /* Robot con bocadillo, clickeable. La imagen incluye el diálogo a la izquierda,
    por eso es más ancha; el robot en sí queda de un tamaño similar al anterior. */
 .ai-fab-robot {
-  width: 160px;
+  width: 200px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
@@ -900,7 +900,13 @@
 }
 @media (max-width: 520px) {
   .ai-fab-robot {
-    width: 120px;
+    width: 150px;
+  }
+}
+/* En pantallas muy pequeñas, un poco menos para no tapar contenido */
+@media (max-width: 380px) {
+  .ai-fab-robot {
+    width: 128px;
   }
 }
 /* Avatar del robot en el encabezado del panel */
