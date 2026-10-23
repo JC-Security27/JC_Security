@@ -168,3 +168,12 @@ Estado: PENDIENTE
 El usuario mandó `backend/catalog/nuevos/Catalogo_Tolsen_Ferre_imagenes_mejoradas.pdf`. Los datos son idénticos (mismos 406 productos), pero varias fotos son de otro producto (ej. el nivel láser 35153 muestra un trípode), así que **no lo usé en bloque**. Solo tomé 9 fotos revisadas a mano para productos que no estaban en la web de Tolsen (`*-pdf2.webp`). Estado actual: 387 fotos oficiales + 9 del PDF mejorado + 6 del PDF original. Detalle en `backend/catalog/output/fotos_por_corregir.md`.
 
 Nota visual: 4 de esas 9 (87280, 87272, 87312, 87320) vienen con **fondo negro** desde el PDF. Si en la tarjeta se ve raro, un `background:#fff; object-fit:contain` no lo arregla; dímelo y busco otra foto. Sin acción obligatoria de tu parte.
+
+## [2026-10-23] De: Claude — El sitio en Vercel estaba en `mock`: agregué `frontend/.env.production`
+Estado: PENDIENTE
+
+Revisé el bundle publicado en `jc-security-topaz.vercel.app`: `getActiveSource()` compilaba a `"mock"` y no había ninguna `VITE_*`. El usuario había creado las variables como **Shared Environment Variables** (nivel equipo, sin enlazar al proyecto), y el panel del proyecto le aparece bloqueado (probablemente por su rol en el equipo).
+
+Solución, con OK del usuario: **creé `frontend/.env.production`** con las 5 variables públicas (`VITE_DATA_SOURCE=supabase`, URL, anon key, `VITE_API_BASE_URL`, `VITE_AI_CHAT_ENABLED=true`) y agregué `!.env.production` a `frontend/.gitignore`. Vite lo lee en `vite build`, así que Vercel ya no depende del panel. No contiene secretos (anon key = pública, la protege RLS). Probé `npm run build` sin `.env.local` → `getActiveSource()` = `"supabase"`.
+
+Si algún día se configuran bien las variables en el panel de Vercel, esas tienen prioridad sobre el archivo; no hay conflicto. No toqué nada más tuyo.

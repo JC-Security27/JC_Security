@@ -26,6 +26,7 @@ dist-ssr
 .env
 .env.*
 !.env.example
+!.env.production
 
 # TypeScript incremental build cache
 *.tsbuildinfo
