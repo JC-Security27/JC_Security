@@ -533,6 +533,48 @@
   font-size: 0.85rem;
 }
 
+/* ----- Categorías desplegables ----- */
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.category-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+.category-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.category-toggle-current {
+  color: var(--accent);
+  font-weight: 700;
+}
+.category-caret {
+  transition: transform var(--transition);
+}
+.category-caret.open {
+  transform: rotate(180deg);
+}
+.category-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
 /* ----- Selector de marcas con logo ----- */
 .brand-filter {
   display: flex;

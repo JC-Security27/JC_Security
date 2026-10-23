@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Brand, Category } from "@/types/catalog";
 import { BrandSelector } from "./BrandSelector";
 
@@ -35,6 +36,16 @@ export function CatalogControls({
     filters.categorySlug !== "" ||
     filters.brandIds.length > 0 ||
     filters.onlyNew;
+
+  // Lista de categorías recogida; se despliega al tocar el botón "Categorías".
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
+
+  // Nombre de la categoría seleccionada, para mostrarlo en el botón cerrado.
+  const selectedCategoryName =
+    filters.categorySlug === ""
+      ? "Todas"
+      : categories.find((c) => c.slug === filters.categorySlug)?.name ??
+        "Todas";
 
   return (
     <div className="catalog-controls">
@@ -86,46 +97,64 @@ export function CatalogControls({
         )}
       </div>
 
-      {/* Categorías */}
+      {/* Categorías: lista recogida que se despliega al tocar el botón. */}
       {categories.length > 0 && (
-        <div
-          className="filter-row"
-          role="group"
-          aria-label="Filtrar por categoría"
-        >
-          <span className="filter-label">Categorías:</span>
+        <div className="category-filter">
           <button
             type="button"
-            className={`chip filter-chip ${
-              filters.categorySlug === "" ? "is-active" : ""
-            }`}
-            aria-pressed={filters.categorySlug === ""}
-            onClick={() => onChange({ ...filters, categorySlug: "" })}
+            className="category-toggle"
+            aria-expanded={categoriesOpen}
+            onClick={() => setCategoriesOpen((v) => !v)}
           >
-            Todas
+            <span className="category-toggle-label">Categorías</span>
+            <span className="category-toggle-current">
+              {selectedCategoryName}
+            </span>
+            <span className={`category-caret ${categoriesOpen ? "open" : ""}`}>
+              ▾
+            </span>
           </button>
-          {categories.map((cat) => {
-            const active = filters.categorySlug === cat.slug;
-            return (
+
+          {categoriesOpen && (
+            <div
+              className="category-list"
+              role="group"
+              aria-label="Filtrar por categoría"
+            >
               <button
-                key={cat.id}
                 type="button"
-                className={`chip filter-chip ${active ? "is-active" : ""}`}
-                aria-pressed={active}
-                onClick={() =>
-                  onChange({
-                    ...filters,
-                    categorySlug: active ? "" : cat.slug,
-                  })
-                }
+                className={`chip filter-chip ${
+                  filters.categorySlug === "" ? "is-active" : ""
+                }`}
+                aria-pressed={filters.categorySlug === ""}
+                onClick={() => onChange({ ...filters, categorySlug: "" })}
               >
-                {cat.name}
-                {typeof cat.productCount === "number" && (
-                  <span className="chip-count"> {cat.productCount}</span>
-                )}
+                Todas
               </button>
-            );
-          })}
+              {categories.map((cat) => {
+                const active = filters.categorySlug === cat.slug;
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className={`chip filter-chip ${active ? "is-active" : ""}`}
+                    aria-pressed={active}
+                    onClick={() =>
+                      onChange({
+                        ...filters,
+                        categorySlug: active ? "" : cat.slug,
+                      })
+                    }
+                  >
+                    {cat.name}
+                    {typeof cat.productCount === "number" && (
+                      <span className="chip-count"> {cat.productCount}</span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
 
