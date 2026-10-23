@@ -105,3 +105,24 @@ Recibí todo:
 **Productos nuevos:** confirmado que a ninguno de los dos nos llegaron los archivos. El usuario tiene que dejarlos en `backend/catalog/nuevos/`. Se lo recuerdo yo también.
 
 Build pasa (112 módulos). Subiendo.
+
+## [2026-10-23] De: Kiro — Catálogo con categorías + filtros HECHO, y modo claro mejorado
+Estado: PENDIENTE
+
+Hice el pedido del usuario para `/catalogo`:
+
+1. **Agrupado por subcategoría** cuando categoría = "Todas": cada subcategoría es un bloque (título + hasta 8 productos de preview) en el orden de `position` del backend, con botón "Ver todos (N)".
+2. **Filtros combinables:** categoría (chips con `productCount`), marca (dinámico), "Solo nuevos" (`isNew`) y búsqueda de texto (sin tildes). Botón "Limpiar filtros".
+3. **Filtros en la URL:** `/catalogo?q=...&categoria=...&marcas=...&nuevos=1`. Compartible y el botón "atrás" del navegador funciona (uso `useSearchParams`).
+4. Al seleccionar una categoría pasa a lista plana de esa categoría + enlace "← Ver todas las categorías".
+
+Usé los campos que ya tenía (`categorySlug`, `brandId`, `isNew`, `productCount`, orden de `categories`). No necesito nada nuevo del backend por ahora.
+
+**Sobre tus notas (todo LEÍDO):**
+- Fotos HD 800px: genial, el front las toma solas. Si me pasas la lista de fotos mal/repetidas que estás revisando, puedo marcar visualmente las dudosas, pero no es urgente.
+- Las 4 con fondo negro (87280, 87272, 87312, 87320): cuando las veas en una tarjeta dime si se ven raras y busco solución (o las cambias). Por ahora las dejo.
+- `.env.production`: perfecto, gracias por resolver lo del panel bloqueado de Vercel. Confirmo que el sitio ya sale en `supabase` con datos reales.
+
+**Aparte (frontend):** mejoré el modo claro porque se veía muy blanco: fondo gris azulado, tarjetas blancas con un contorno sutil (anillo de sombra) y header azul marino. El usuario lo pidió.
+
+Build pasa (112 módulos). Subiendo a Vercel.

@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import {
@@ -13,42 +14,96 @@ import {
   SampleNotice,
 } from "@/components/ui/states";
 import { normalizeForSearch } from "@/lib/format";
-import type { Brand, Product } from "@/types/catalog";
+import type { Brand, Category, Product } from "@/types/catalog";
+
+/** Cuántos productos mostrar por categoría en la vista agrupada. */
+const PREVIEW_PER_CATEGORY = 8;
 
 export function CatalogPage() {
-  const [filters, setFilters] = useState<CatalogFilters>({
-    search: "",
-    brandIds: [],
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
   const showSampleNotice = getActiveSource() === "mock";
+
+  // Los filtros viven en la URL (compartible y con botón "atrás").
+  const filters: CatalogFilters = {
+    search: searchParams.get("q") ?? "",
+    categorySlug: searchParams.get("categoria") ?? "",
+    brandIds: (searchParams.get("marcas") ?? "")
+      .split(",")
+      .filter(Boolean),
+    onlyNew: searchParams.get("nuevos") === "1",
+  };
+
+  const setFilters = (next: CatalogFilters) => {
+    const params: Record<string, string> = {};
+    if (next.search.trim()) params.q = next.search.trim();
+    if (next.categorySlug) params.categoria = next.categorySlug;
+    if (next.brandIds.length) params.marcas = next.brandIds.join(",");
+    if (next.onlyNew) params.nuevos = "1";
+    setSearchParams(params, { replace: true });
+  };
 
   const { status, data, error, reload } = useAsync<{
     products: Product[];
+    categories: Category[];
     brands: Brand[];
   }>(async () => {
     const client = await getDataClient();
-    const [productsPage, brands] = await Promise.all([
+    const [productsPage, categories, brands] = await Promise.all([
       client.getProducts({ pageSize: 1000 }),
+      client.getCategories(),
       client.getBrands(),
     ]);
-    return { products: productsPage.items, brands };
+    return { products: productsPage.items, categories, brands };
   }, []);
 
-  const filtered = useMemo(() => {
-    if (!data) return [];
+  // Aplica búsqueda + marca + nuevos (la categoría se maneja aparte para poder
+  // agrupar cuando no hay una seleccionada).
+  const matchesCommon = (p: Product): boolean => {
     const q = normalizeForSearch(filters.search.trim());
-    return data.products.filter((p) => {
-      const matchesSearch =
-        !q ||
-        normalizeForSearch(p.reference).includes(q) ||
-        normalizeForSearch(p.name).includes(q) ||
-        (p.brandName ? normalizeForSearch(p.brandName).includes(q) : false);
-      const matchesBrand =
-        filters.brandIds.length === 0 ||
-        (p.brandId ? filters.brandIds.includes(p.brandId) : false);
-      return matchesSearch && matchesBrand;
-    });
-  }, [data, filters]);
+    const matchesSearch =
+      !q ||
+      normalizeForSearch(p.reference).includes(q) ||
+      normalizeForSearch(p.name).includes(q) ||
+      (p.brandName ? normalizeForSearch(p.brandName).includes(q) : false);
+    const matchesBrand =
+      filters.brandIds.length === 0 ||
+      (p.brandId ? filters.brandIds.includes(p.brandId) : false);
+    const matchesNew = !filters.onlyNew || Boolean(p.isNew);
+    return matchesSearch && matchesBrand && matchesNew;
+  };
+
+  const baseFiltered = useMemo(() => {
+    if (!data) return [];
+    return data.products.filter(matchesCommon);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, filters.search, filters.brandIds.join(","), filters.onlyNew]);
+
+  // Lista final cuando hay una categoría seleccionada.
+  const inSelectedCategory = useMemo(
+    () =>
+      filters.categorySlug
+        ? baseFiltered.filter((p) => p.categorySlug === filters.categorySlug)
+        : [],
+    [baseFiltered, filters.categorySlug]
+  );
+
+  // Vista agrupada por subcategoría (cuando categoría = "Todas").
+  const grouped = useMemo(() => {
+    if (!data || filters.categorySlug) return [];
+    const byCat = new Map<string, Product[]>();
+    for (const p of baseFiltered) {
+      if (!byCat.has(p.categorySlug)) byCat.set(p.categorySlug, []);
+      byCat.get(p.categorySlug)!.push(p);
+    }
+    // Respeta el orden de las categorías (position) devuelto por el backend.
+    return data.categories
+      .map((cat) => ({ cat, items: byCat.get(cat.slug) ?? [] }))
+      .filter((g) => g.items.length > 0);
+  }, [data, baseFiltered, filters.categorySlug]);
+
+  const totalResults = filters.categorySlug
+    ? inSelectedCategory.length
+    : baseFiltered.length;
 
   return (
     <section className="section container">
@@ -56,8 +111,8 @@ export function CatalogPage() {
         <span className="eyebrow">Catálogo</span>
         <h1>Productos y servicios</h1>
         <p>
-          Busca por referencia, nombre o marca y combina filtros. Para precio y
-          disponibilidad, consulta por WhatsApp.
+          Explora por categoría, filtra por marca o busca por referencia. Para
+          precio y disponibilidad, consulta por WhatsApp.
         </p>
       </div>
 
@@ -70,10 +125,11 @@ export function CatalogPage() {
 
       {status === "success" && data && (
         <CatalogControls
+          categories={data.categories}
           brands={data.brands}
           filters={filters}
           onChange={setFilters}
-          resultCount={filtered.length}
+          resultCount={totalResults}
         />
       )}
 
@@ -83,19 +139,87 @@ export function CatalogPage() {
         </div>
       )}
       {status === "error" && <ErrorState error={error} onRetry={reload} />}
+
+      {status === "success" && data && totalResults === 0 && (
+        <EmptyState title="No encontramos productos">
+          Prueba con otra referencia o quita algún filtro.
+        </EmptyState>
+      )}
+
+      {/* Vista 1: categoría seleccionada -> lista plana */}
       {status === "success" &&
         data &&
-        (filtered.length === 0 ? (
-          <EmptyState title="No encontramos productos">
-            Prueba con otra referencia o quita algún filtro.
-          </EmptyState>
-        ) : (
+        filters.categorySlug &&
+        inSelectedCategory.length > 0 && (
           <div className="grid grid-cards catalog-grid">
-            {filtered.map((p) => (
+            {inSelectedCategory.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
-        ))}
+        )}
+
+      {/* Vista 2: "Todas" -> agrupado por subcategoría con preview */}
+      {status === "success" &&
+        data &&
+        !filters.categorySlug &&
+        grouped.length > 0 && (
+          <div className="catalog-grouped">
+            {grouped.map(({ cat, items }) => {
+              const preview = items.slice(0, PREVIEW_PER_CATEGORY);
+              const hasMore = items.length > PREVIEW_PER_CATEGORY;
+              return (
+                <section key={cat.id} className="catalog-cat-block">
+                  <div className="catalog-cat-head">
+                    <h2>{cat.name}</h2>
+                    <button
+                      type="button"
+                      className="btn btn-ghost btn-sm"
+                      onClick={() =>
+                        setFilters({ ...filters, categorySlug: cat.slug })
+                      }
+                    >
+                      Ver todos ({items.length})
+                    </button>
+                  </div>
+                  <div className="grid grid-cards catalog-grid">
+                    {preview.map((p) => (
+                      <ProductCard key={p.id} product={p} />
+                    ))}
+                  </div>
+                  {hasMore && (
+                    <div className="catalog-cat-more">
+                      <button
+                        type="button"
+                        className="btn btn-outline btn-sm"
+                        onClick={() =>
+                          setFilters({ ...filters, categorySlug: cat.slug })
+                        }
+                      >
+                        Ver los {items.length} de {cat.name}
+                      </button>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
+          </div>
+        )}
+
+      {/* Volver a todas cuando hay una categoría seleccionada */}
+      {status === "success" && data && filters.categorySlug && (
+        <div style={{ marginTop: "var(--space-6)" }}>
+          <Link
+            to="/catalogo"
+            className="btn btn-ghost btn-sm"
+            onClick={(e) => {
+              e.preventDefault();
+              setFilters({ ...filters, categorySlug: "" });
+            }}
+          >
+            ← Ver todas las categorías
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

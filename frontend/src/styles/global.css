@@ -60,12 +60,12 @@
   color-scheme: light;
 
   /* Fondo gris azulado suave para dar profundidad; tarjetas en blanco. */
-  --bg: #e8eef4;
+  --bg: #e6edf3;
   --bg-elevated: #ffffff;
   --surface: #ffffff;
   --surface-2: #eef3f7;
-  --border: #d2dde6;
-  --divider: #dde5ec;
+  --border: #bfccd9; /* un poco más marcado para definir contornos */
+  --divider: #d3dde6;
 
   --text: var(--brand-ink);
   --text-muted: #51637a;
@@ -83,10 +83,11 @@
   --header-text: #ffffff;
   --header-border: rgba(255, 255, 255, 0.12);
 
-  --shadow-card: 0 1px 2px rgba(10, 23, 40, 0.08),
-    0 8px 24px rgba(10, 23, 40, 0.1);
-  --shadow-hover: 0 6px 14px rgba(10, 23, 40, 0.14),
-    0 20px 46px rgba(10, 23, 40, 0.18);
+  /* La primera capa (anillo tenue) da contorno sin recargar. */
+  --shadow-card: 0 0 0 1px rgba(20, 43, 85, 0.06),
+    0 1px 2px rgba(10, 23, 40, 0.08), 0 8px 24px rgba(10, 23, 40, 0.1);
+  --shadow-hover: 0 0 0 1px rgba(20, 43, 85, 0.1),
+    0 6px 14px rgba(10, 23, 40, 0.14), 0 20px 46px rgba(10, 23, 40, 0.18);
 
   --success: #1f9d55;
   --danger: #c0392b;

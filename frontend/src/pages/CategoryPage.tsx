@@ -4,6 +4,7 @@ import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import {
   CatalogControls,
+  EMPTY_FILTERS,
   type CatalogFilters,
 } from "@/components/catalog/CatalogControls";
 import { BrandGroupedProducts } from "@/components/catalog/BrandGroupedProducts";
@@ -19,8 +20,7 @@ import type { Brand, Category, Product } from "@/types/catalog";
 export function CategoryPage() {
   const { slug = "" } = useParams();
   const [filters, setFilters] = useState<CatalogFilters>({
-    search: "",
-    brandIds: [],
+    ...EMPTY_FILTERS,
   });
   const showSampleNotice = getActiveSource() === "mock";
 
@@ -56,7 +56,8 @@ export function CategoryPage() {
       const matchesBrand =
         filters.brandIds.length === 0 ||
         (p.brandId ? filters.brandIds.includes(p.brandId) : false);
-      return matchesSearch && matchesBrand;
+      const matchesNew = !filters.onlyNew || Boolean(p.isNew);
+      return matchesSearch && matchesBrand && matchesNew;
     });
   }, [data, filters]);
 
@@ -81,8 +82,9 @@ export function CategoryPage() {
         </SampleNotice>
       )}
 
-      {status === "success" && data && data.brands.length > 0 && (
+      {status === "success" && data && (
         <CatalogControls
+          categories={[]}
           brands={data.brands}
           filters={filters}
           onChange={setFilters}
