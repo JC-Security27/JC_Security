@@ -294,13 +294,8 @@
     "refs": [
       "30008"
     ],
-    "status": "ok",
-    "matchedRef": "30008",
-    "page": "https://www.tolsentools.com/product/10pcs-blade-set-7/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2021/11/10PCS-BLADE-SET.jpg",
-    "file": "images/tolsen-30008-hd.webp",
-    "width": 698,
-    "height": 693
+    "status": "rechazada",
+    "reason": "la web asocia la ref. a un set de cuchillas, no al cúter de aluminio"
   },
   "images/tolsen-30010.webp": {
     "refs": [
@@ -438,8 +433,13 @@
     "refs": [
       "38041"
     ],
-    "status": "rechazada",
-    "reason": "la web muestra un porta-herramientas, no la cuchilla"
+    "status": "ok",
+    "matchedRef": "38041",
+    "page": "https://www.tolsentools.com/product/electricians-knife-2/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/195mm-ELECTRICIANS-KNIFE.jpg",
+    "file": "images/tolsen-38041-hd.webp",
+    "width": 675,
+    "height": 526
   },
   "images/tolsen-38052.webp": {
     "refs": [
@@ -1999,15 +1999,25 @@
     "refs": [
       "87472"
     ],
-    "status": "rechazada",
-    "reason": "la web muestra un cargador, no la batería"
+    "status": "ok",
+    "matchedRef": "87472",
+    "page": "https://www.tolsentools.com/product/li-ion-battery-pack-4/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/03/2.0Ah-LI-ION-BATTERY-PACK.jpg",
+    "file": "images/tolsen-87472-hd.webp",
+    "width": 618,
+    "height": 434
   },
   "images/tolsen-87474.webp": {
     "refs": [
       "87474"
     ],
-    "status": "rechazada",
-    "reason": "la web muestra un cargador doble, no la batería"
+    "status": "ok",
+    "matchedRef": "87474",
+    "page": "https://www.tolsentools.com/product/li-ion-battery-pack-5/",
+    "source": "https://www.tolsentools.com/wp-content/uploads/2022/03/4.0Ah-LI-ION-BATTERY-PACK.jpg",
+    "file": "images/tolsen-87474-hd.webp",
+    "width": 611,
+    "height": 489
   },
   "images/tolsen-87320.webp": {
     "refs": [
@@ -3509,20 +3519,19 @@
     "refs": [
       "79049"
     ],
-    "status": "ok",
-    "matchedRef": "79049",
-    "page": "https://www.tolsentools.com/product/battery-charger/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2023/08/BATTERY-CHARGER-1.jpg",
-    "file": "images/tolsen-79049-hd.webp",
-    "width": 648,
-    "height": 409
+    "status": "rechazada",
+    "reason": "la web asocia la ref. a un cargador, no a la batería 12V"
   },
   "images/tolsen-60003.webp": {
     "refs": [
       "60003"
     ],
-    "status": "rechazada",
-    "reason": "la web muestra pilas AA, no AAA"
+    "status": "ok",
+    "matchedRef": "60003",
+    "page": "https://www.tolsentools.com/product/aaa-super-alkaline-battery/",
+    "source": null,
+    "file": null,
+    "manual": true
   },
   "images/tolsen-60004.webp": {
     "refs": [

@@ -214,3 +214,16 @@ Gracias por el catálogo con filtros, se ve muy bien el pedido cubierto.
 - Caso a revisar en la UI: el cautín (38513/15/16) se agrupa por **potencia** (30W, 50W, 60W), no por tamaño. Su nombre en el PDF es "CAUTÍN 30W 120V" para los tres. Si prefieres no agruparlo, lo saco.
 
 **Fotos:** la lista de fotos mal/repetidas que me pediste está en `backend/catalog/output/fotos_por_corregir.md`. Ya corregí en la base las 8 que mostraban otro producto (volvieron a la foto del PDF, correcta pero chica). Si quieres marcar algo visualmente, serían las 14 de la sección 1 (baja calidad); no lo veo necesario.
+
+## [2026-10-23] De: Claude — Fichas oficiales: `description`, `source_url` y 13 nombres corregidos
+Estado: PENDIENTE
+
+El usuario pidió revisar el catálogo contra la información oficial. Ya está en producción:
+
+- **`products.description`**: 381 de 402 productos tienen ahora las características oficiales de Tolsen traducidas, **una por línea, empezando con "• "** (separadas por `\n`). Para mostrarlas: `white-space: pre-line`, o `description.split("\n")` → `<ul>`. Los 21 restantes no tienen ficha oficial: `description = null`.
+- **`specs`** ahora suma la fila oficial de la referencia (`Medida`, `Talla EU/UK/US`, `Capacidad`, etc.) a la `Presentación` del PDF. Ej. 45351: `{"Presentación": "(39)", "Talla EU": "39", "Talla UK": "6", "Talla US": "7"}`.
+- Columnas nuevas (migración `0004`): `source_url` (página oficial) y `official_name` (nombre en inglés, uso interno). Si quieres, un enlace "Ficha del fabricante" en el detalle usaría `source_url`.
+- **13 nombres corregidos** (el PDF tenía el nombre equivocado, verificado con ficha y foto). Ej.: V16006 "Pelador de cable" → "ALICATE UNIVERSAL AISLADO"; 44911 "Escuadra falsa" → "SOPORTE MAGNÉTICO PARA SOLDAR"; 10003/10004 → "ALICATE DE CORTE DIAGONAL"; cautín 38513/15/16 → "CAUTÍN 120V". No cambia nada de tu lado.
+- 5 fotos más cambiaron (`-hd.webp`); otras 2 volvieron a la del PDF porque la oficial era de otro producto.
+
+Informe completo para el usuario: `backend/catalog/output/revision_catalogo.md`.

@@ -44,6 +44,18 @@ REJECTED = {
     "tolsen-80212-p41-8.webp": "la web muestra la caja metálica vacía, no el kit de herramientas",
     "tolsen-62602-p46-8.webp": "la web muestra la carretilla de aluminio, no la de plataforma",
     "tolsen-60003.webp": "la web muestra pilas AA, no AAA",
+    "tolsen-30008.webp": "la web asocia la ref. a un set de cuchillas, no al cúter de aluminio",
+    "tolsen-79049.webp": "la web asocia la ref. a un cargador, no a la batería 12V",
+}
+
+# Páginas oficiales encontradas a mano (la búsqueda por referencia no las encuentra
+# o encuentra otra). use_image = False: la página es la correcta para la descripción,
+# pero su foto no (se mantiene la del PDF). Tienen prioridad sobre REJECTED.
+OVERRIDES = {
+    "tolsen-38041.webp": (f"{SITE}/product/electricians-knife-2/", True),
+    "tolsen-87472.webp": (f"{SITE}/product/li-ion-battery-pack-4/", True),
+    "tolsen-87474.webp": (f"{SITE}/product/li-ion-battery-pack-5/", True),
+    "tolsen-60003.webp": (f"{SITE}/product/aaa-super-alkaline-battery/", False),
 }
 
 
@@ -158,7 +170,19 @@ def main(out_dir):
     results = {}
     for i, (original, products) in enumerate(cards.items(), 1):
         refs = [p["reference"] for p in products]
-        if Path(original).name in REJECTED:
+        if Path(original).name in OVERRIDES:
+            page_url, use_image = OVERRIDES[Path(original).name]
+            page, _ = fetch(page_url, cache_dir)
+            if not use_image:
+                for p in products:
+                    if p["images"][0].get("officialImage"):
+                        p["images"][0].update({"url": original, "officialImage": False})
+                results[original] = {"refs": refs, "status": "ok", "matchedRef": refs[0], "page": page_url,
+                                     "source": None, "file": None, "manual": True}
+                print(f"[{i}/{len(cards)}] {refs[0]}: página manual, foto del PDF")
+                continue
+            found = (refs[0], page_url, main_image_url(page))
+        elif Path(original).name in REJECTED:
             for p in products:
                 img = p["images"][0]
                 if img.get("officialImage"):
@@ -166,8 +190,9 @@ def main(out_dir):
             results[original] = {"refs": refs, "status": "rechazada", "reason": REJECTED[Path(original).name]}
             print(f"[{i}/{len(cards)}] {refs[0]}: rechazada ({REJECTED[Path(original).name]})")
             continue
-        found = None
-        for ref in refs:
+        else:
+            found = None
+        for ref in refs if not found else []:
             try:
                 page, page_url = find_product_page(ref, cache_dir)
                 if page and (img_url := main_image_url(page)):
