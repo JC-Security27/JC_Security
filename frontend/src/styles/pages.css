@@ -597,12 +597,13 @@
   color: var(--text);
 }
 .brand-tile-all {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.2;
+  font-size: 1.05rem;
+  line-height: 1.15;
   text-align: center;
   white-space: normal;
+  padding: 0 4px;
 }
 @media (max-width: 520px) {
   .brand-tile {
