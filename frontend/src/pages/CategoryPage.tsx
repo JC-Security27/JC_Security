@@ -15,6 +15,7 @@ import {
   SampleNotice,
 } from "@/components/ui/states";
 import { normalizeForSearch } from "@/lib/format";
+import { BackButton } from "@/components/ui/BackButton";
 import type { Brand, Category, Product } from "@/types/catalog";
 
 export function CategoryPage() {
@@ -63,6 +64,9 @@ export function CategoryPage() {
 
   return (
     <section className="section container">
+      <div className="detail-topbar">
+        <BackButton fallback="/catalogo" />
+      </div>
       <nav className="breadcrumb" aria-label="Ruta de navegación">
         <Link to="/catalogo">Catálogo</Link>
         <span aria-hidden="true">/</span>

@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { productInquiryMessage } from "@/lib/whatsapp";
 import { toDisplayName } from "@/lib/format";
 import { groupByVariants, getSizeLabel } from "@/lib/variants";
+import { BackButton } from "@/components/ui/BackButton";
 import {
   EmptyState,
   ErrorState,
@@ -88,6 +89,9 @@ export function ProductPage() {
 
   return (
     <section className="section container">
+      <div className="detail-topbar">
+        <BackButton fallback="/catalogo" />
+      </div>
       <nav className="breadcrumb" aria-label="Ruta de navegación">
         <Link to="/catalogo">Catálogo</Link>
         <span aria-hidden="true">/</span>

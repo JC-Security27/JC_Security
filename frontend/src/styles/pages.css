@@ -483,6 +483,33 @@
   font-weight: 700;
 }
 
+/* ----- Botón volver ----- */
+.detail-topbar {
+  margin-bottom: var(--space-3);
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition),
+    background var(--transition);
+}
+.back-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.back-btn svg {
+  flex-shrink: 0;
+}
+
 /* ----- Breadcrumb ----- */
 .breadcrumb {
   display: flex;
