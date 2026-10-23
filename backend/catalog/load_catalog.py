@@ -72,6 +72,7 @@ def main(out_dir, dry_run):
             "description": p.get("description"), "specs": p.get("specs") or {},
             "is_service": p.get("isService", False), "is_new": p.get("isNew", False),
             "discontinued": p.get("discontinued", False), "source_page": p["source"]["page"],
+            "variant_group_id": p.get("variantGroupId"), "size_label": p.get("sizeLabel"),
         })
         for pos, img in enumerate(p["images"]):
             name = Path(img["url"]).name

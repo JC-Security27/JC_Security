@@ -107,7 +107,7 @@ Recibí todo:
 Build pasa (112 módulos). Subiendo.
 
 ## [2026-10-23] De: Kiro — Catálogo con categorías + filtros HECHO, y modo claro mejorado
-Estado: PENDIENTE
+Estado: HECHO
 
 Hice el pedido del usuario para `/catalogo`:
 
@@ -128,7 +128,7 @@ Usé los campos que ya tenía (`categorySlug`, `brandId`, `isNew`, `productCount
 Build pasa (112 módulos). Subiendo a Vercel.
 
 ## [2026-10-23] De: Kiro — Agrupé variantes de talla (enfoque A) + te pido un campo para hacerlo infalible
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario pidió que los productos que son **el mismo pero en distinta talla/tamaño** (zapatos, alicates por pulgadas, etc.) se muestren como UNA sola tarjeta, y que en el detalle haya un botón "Tallas disponibles" que despliega cada talla con su referencia. Solo si lo único que cambia es el tamaño; si cambia forma/color/funcionalidad, NO se agrupan.
 

@@ -112,7 +112,9 @@
       "source": {
         "page": 4,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-10001",
+      "sizeLabel": "7”"
     },
     {
       "id": "tolsen-10002",
@@ -140,7 +142,9 @@
       "source": {
         "page": 4,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-10001",
+      "sizeLabel": "8”"
     },
     {
       "id": "tolsen-10015",
@@ -168,7 +172,9 @@
       "source": {
         "page": 4,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10022",
@@ -196,7 +202,9 @@
       "source": {
         "page": 4,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10023",
@@ -224,7 +232,9 @@
       "source": {
         "page": 4,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10038",
@@ -252,7 +262,9 @@
       "source": {
         "page": 4,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10049",
@@ -280,7 +292,9 @@
       "source": {
         "page": 4,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-10049",
+      "sizeLabel": "10”"
     },
     {
       "id": "tolsen-10056",
@@ -308,7 +322,9 @@
       "source": {
         "page": 4,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10359",
@@ -336,7 +352,9 @@
       "source": {
         "page": 4,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10380",
@@ -364,7 +382,9 @@
       "source": {
         "page": 4,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-10049",
+      "sizeLabel": "7”"
     },
     {
       "id": "tolsen-10301",
@@ -392,7 +412,9 @@
       "source": {
         "page": 5,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10400",
@@ -420,7 +442,9 @@
       "source": {
         "page": 5,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30046",
@@ -448,7 +472,9 @@
       "source": {
         "page": 5,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38054",
@@ -474,7 +500,9 @@
       "source": {
         "page": 5,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38056",
@@ -500,7 +528,9 @@
       "source": {
         "page": 5,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10003",
@@ -528,7 +558,9 @@
       "source": {
         "page": 5,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-10003",
+      "sizeLabel": "6”"
     },
     {
       "id": "tolsen-10004",
@@ -556,7 +588,9 @@
       "source": {
         "page": 5,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-10003",
+      "sizeLabel": "7”"
     },
     {
       "id": "tolsen-33005-b",
@@ -580,7 +614,9 @@
       "source": {
         "page": 5,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-33001",
@@ -608,7 +644,9 @@
       "source": {
         "page": 5,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-33005",
@@ -636,7 +674,9 @@
       "source": {
         "page": 5,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38020",
@@ -664,7 +704,9 @@
       "source": {
         "page": 6,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38022",
@@ -692,7 +734,9 @@
       "source": {
         "page": 6,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-41032",
@@ -703,13 +747,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-41032-hd.webp",
+          "url": "images/tolsen-41032.webp",
           "alt": "Cortadora de azulejos resistentes Tolsen",
-          "width": 660,
-          "height": 687,
+          "width": 249,
+          "height": 152,
           "needsReview": false,
           "pdfUrl": "images/tolsen-41032.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {
@@ -720,7 +764,9 @@
       "source": {
         "page": 6,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-41037",
@@ -746,7 +792,9 @@
       "source": {
         "page": 6,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10029",
@@ -772,7 +820,9 @@
       "source": {
         "page": 6,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10045",
@@ -800,7 +850,9 @@
       "source": {
         "page": 6,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30003",
@@ -828,7 +880,9 @@
       "source": {
         "page": 6,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30008",
@@ -854,7 +908,9 @@
       "source": {
         "page": 6,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30010",
@@ -882,7 +938,9 @@
       "source": {
         "page": 7,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30021",
@@ -908,7 +966,9 @@
       "source": {
         "page": 7,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30022",
@@ -934,7 +994,9 @@
       "source": {
         "page": 7,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30023",
@@ -960,7 +1022,9 @@
       "source": {
         "page": 7,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30043",
@@ -986,7 +1050,9 @@
       "source": {
         "page": 7,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30044",
@@ -1014,7 +1080,9 @@
       "source": {
         "page": 7,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30054",
@@ -1040,7 +1108,9 @@
       "source": {
         "page": 7,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30061",
@@ -1066,7 +1136,9 @@
       "source": {
         "page": 7,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31013",
@@ -1094,7 +1166,9 @@
       "source": {
         "page": 7,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75861",
@@ -1122,7 +1196,9 @@
       "source": {
         "page": 8,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31071",
@@ -1150,7 +1226,9 @@
       "source": {
         "page": 8,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38041",
@@ -1161,13 +1239,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-38041-hd.webp",
+          "url": "images/tolsen-38041.webp",
           "alt": "Cuchilla para electricista, plegable con agarre de madera Tolsen",
-          "width": 464,
-          "height": 627,
+          "width": 284,
+          "height": 172,
           "needsReview": false,
           "pdfUrl": "images/tolsen-38041.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {},
@@ -1176,7 +1254,9 @@
       "source": {
         "page": 8,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38052",
@@ -1204,7 +1284,9 @@
       "source": {
         "page": 8,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38048",
@@ -1230,7 +1312,9 @@
       "source": {
         "page": 8,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38051",
@@ -1258,7 +1342,9 @@
       "source": {
         "page": 8,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-76132",
@@ -1286,7 +1372,9 @@
       "source": {
         "page": 8,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-76302",
@@ -1314,7 +1402,9 @@
       "source": {
         "page": 8,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31035",
@@ -1340,7 +1430,9 @@
       "source": {
         "page": 8,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30048",
@@ -1366,7 +1458,9 @@
       "source": {
         "page": 9,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-40210",
@@ -1392,7 +1486,9 @@
       "source": {
         "page": 9,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25053",
@@ -1420,7 +1516,9 @@
       "source": {
         "page": 9,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-25052",
+      "sizeLabel": "600g (380mm)"
     },
     {
       "id": "tolsen-25052",
@@ -1448,7 +1546,9 @@
       "source": {
         "page": 9,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-25052",
+      "sizeLabel": "1500g (800mm)"
     },
     {
       "id": "tolsen-58096",
@@ -1476,7 +1576,9 @@
       "source": {
         "page": 9,
         "card": 3
-      }
+      },
+      "variantGroupId": "tolsen-58096",
+      "sizeLabel": "360mm, 14”"
     },
     {
       "id": "tolsen-58101",
@@ -1504,7 +1606,9 @@
       "source": {
         "page": 9,
         "card": 3
-      }
+      },
+      "variantGroupId": "tolsen-58096",
+      "sizeLabel": "610mm, 24”"
     },
     {
       "id": "tolsen-31014",
@@ -1530,7 +1634,9 @@
       "source": {
         "page": 9,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31017",
@@ -1556,7 +1662,9 @@
       "source": {
         "page": 9,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10346",
@@ -1582,7 +1690,9 @@
       "source": {
         "page": 9,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10371",
@@ -1608,7 +1718,9 @@
       "source": {
         "page": 9,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10374",
@@ -1634,7 +1746,9 @@
       "source": {
         "page": 9,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10411",
@@ -1660,7 +1774,9 @@
       "source": {
         "page": 10,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10450",
@@ -1686,7 +1802,9 @@
       "source": {
         "page": 10,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31079",
@@ -1712,7 +1830,9 @@
       "source": {
         "page": 10,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-31110",
@@ -1738,7 +1858,9 @@
       "source": {
         "page": 10,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-85304",
@@ -1764,7 +1886,9 @@
       "source": {
         "page": 10,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10112",
@@ -1792,7 +1916,9 @@
       "source": {
         "page": 12,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10123",
@@ -1820,7 +1946,9 @@
       "source": {
         "page": 12,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10163",
@@ -1848,7 +1976,9 @@
       "source": {
         "page": 12,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-10163",
+      "sizeLabel": "50x250mm"
     },
     {
       "id": "tolsen-10191",
@@ -1876,7 +2006,9 @@
       "source": {
         "page": 12,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-10163",
+      "sizeLabel": "120x500mm"
     },
     {
       "id": "tolsen-10218",
@@ -1902,7 +2034,9 @@
       "source": {
         "page": 12,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10804",
@@ -1930,7 +2064,9 @@
       "source": {
         "page": 12,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10107",
@@ -1956,7 +2092,9 @@
       "source": {
         "page": 12,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43021",
@@ -1984,7 +2122,9 @@
       "source": {
         "page": 12,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43018",
@@ -2012,7 +2152,9 @@
       "source": {
         "page": 12,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25035",
@@ -2038,7 +2180,9 @@
       "source": {
         "page": 12,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25132",
@@ -2064,7 +2208,9 @@
       "source": {
         "page": 12,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25151",
@@ -2090,7 +2236,9 @@
       "source": {
         "page": 13,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25088",
@@ -2116,7 +2264,9 @@
       "source": {
         "page": 13,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25027",
@@ -2144,7 +2294,9 @@
       "source": {
         "page": 13,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25030",
@@ -2170,7 +2322,9 @@
       "source": {
         "page": 13,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25188",
@@ -2198,7 +2352,9 @@
       "source": {
         "page": 13,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25118",
@@ -2226,7 +2382,9 @@
       "source": {
         "page": 13,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-58001",
@@ -2254,7 +2412,9 @@
       "source": {
         "page": 13,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43049",
@@ -2282,7 +2442,9 @@
       "source": {
         "page": 13,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43042",
@@ -2310,7 +2472,9 @@
       "source": {
         "page": 13,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-32038",
@@ -2336,7 +2500,9 @@
       "source": {
         "page": 14,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-25384",
@@ -2364,7 +2530,9 @@
       "source": {
         "page": 14,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15122",
@@ -2392,7 +2560,9 @@
       "source": {
         "page": 16,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-15122",
+      "sizeLabel": "¼”x100m (4”)"
     },
     {
       "id": "tolsen-15123",
@@ -2420,7 +2590,9 @@
       "source": {
         "page": 16,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-15122",
+      "sizeLabel": "3/8”x75m (3”)"
     },
     {
       "id": "tolsen-15127",
@@ -2448,7 +2620,9 @@
       "source": {
         "page": 16,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-15122",
+      "sizeLabel": "1/2”x125m (5”)"
     },
     {
       "id": "tolsen-15818",
@@ -2476,7 +2650,9 @@
       "source": {
         "page": 16,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-15818",
+      "sizeLabel": "10mm"
     },
     {
       "id": "tolsen-15820",
@@ -2504,7 +2680,9 @@
       "source": {
         "page": 16,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-15818",
+      "sizeLabel": "11mm"
     },
     {
       "id": "tolsen-15821",
@@ -2532,7 +2710,9 @@
       "source": {
         "page": 16,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-15818",
+      "sizeLabel": "13mm"
     },
     {
       "id": "tolsen-15825",
@@ -2560,7 +2740,9 @@
       "source": {
         "page": 16,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-15818",
+      "sizeLabel": "17mm"
     },
     {
       "id": "tolsen-15827",
@@ -2588,7 +2770,9 @@
       "source": {
         "page": 16,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-15818",
+      "sizeLabel": "19mm"
     },
     {
       "id": "tolsen-15310",
@@ -2614,7 +2798,9 @@
       "source": {
         "page": 16,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15138",
@@ -2642,7 +2828,9 @@
       "source": {
         "page": 16,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-18296",
@@ -2670,7 +2858,9 @@
       "source": {
         "page": 16,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15145",
@@ -2698,7 +2888,9 @@
       "source": {
         "page": 16,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15150",
@@ -2726,7 +2918,9 @@
       "source": {
         "page": 16,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15151",
@@ -2754,7 +2948,9 @@
       "source": {
         "page": 16,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15152",
@@ -2782,7 +2978,9 @@
       "source": {
         "page": 16,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20035",
@@ -2810,7 +3008,9 @@
       "source": {
         "page": 17,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15487",
@@ -2838,7 +3038,9 @@
       "source": {
         "page": 17,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15259",
@@ -2866,7 +3068,9 @@
       "source": {
         "page": 17,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20094",
@@ -2894,7 +3098,9 @@
       "source": {
         "page": 17,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20049",
@@ -2922,7 +3128,9 @@
       "source": {
         "page": 17,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20056",
@@ -2950,7 +3158,9 @@
       "source": {
         "page": 17,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-15887",
@@ -2978,7 +3188,9 @@
       "source": {
         "page": 17,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-19667",
@@ -3004,7 +3216,9 @@
       "source": {
         "page": 17,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-16118",
@@ -3032,7 +3246,9 @@
       "source": {
         "page": 17,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-16118",
+      "sizeLabel": "1/4”"
     },
     {
       "id": "tolsen-16119",
@@ -3060,7 +3276,9 @@
       "source": {
         "page": 17,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-16118",
+      "sizeLabel": "3/8”"
     },
     {
       "id": "tolsen-16120",
@@ -3088,7 +3306,9 @@
       "source": {
         "page": 17,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-16118",
+      "sizeLabel": "1/2”"
     },
     {
       "id": "tolsen-77832",
@@ -3114,7 +3334,9 @@
       "source": {
         "page": 17,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35022",
@@ -3142,7 +3364,9 @@
       "source": {
         "page": 19,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-36145",
@@ -3170,7 +3394,9 @@
       "source": {
         "page": 19,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-36006",
@@ -3198,7 +3424,9 @@
       "source": {
         "page": 19,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-36013",
@@ -3226,7 +3454,9 @@
       "source": {
         "page": 19,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35176",
@@ -3254,7 +3484,9 @@
       "source": {
         "page": 19,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35192",
@@ -3282,7 +3514,9 @@
       "source": {
         "page": 19,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35053",
@@ -3310,7 +3544,9 @@
       "source": {
         "page": 19,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-44911",
@@ -3338,7 +3574,9 @@
       "source": {
         "page": 19,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35153",
@@ -3366,7 +3604,9 @@
       "source": {
         "page": 20,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35165",
@@ -3392,7 +3632,9 @@
       "source": {
         "page": 20,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38033",
@@ -3418,7 +3660,9 @@
       "source": {
         "page": 20,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38034",
@@ -3444,7 +3688,9 @@
       "source": {
         "page": 20,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38035",
@@ -3470,7 +3716,9 @@
       "source": {
         "page": 20,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35111",
@@ -3498,7 +3746,9 @@
       "source": {
         "page": 20,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-35111",
+      "sizeLabel": "40cm / 16”"
     },
     {
       "id": "tolsen-35115",
@@ -3526,7 +3776,9 @@
       "source": {
         "page": 20,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-35111",
+      "sizeLabel": "120cm/48”"
     },
     {
       "id": "tolsen-35059",
@@ -3554,7 +3806,9 @@
       "source": {
         "page": 20,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38110",
@@ -3580,7 +3834,9 @@
       "source": {
         "page": 21,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38114",
@@ -3608,7 +3864,9 @@
       "source": {
         "page": 21,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35042",
@@ -3636,7 +3894,9 @@
       "source": {
         "page": 21,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35037",
@@ -3664,7 +3924,9 @@
       "source": {
         "page": 21,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35080",
@@ -3692,7 +3954,9 @@
       "source": {
         "page": 21,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20001",
@@ -3720,7 +3984,9 @@
       "source": {
         "page": 23,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-20001",
+      "sizeLabel": "3.0x75mm"
     },
     {
       "id": "tolsen-20012",
@@ -3748,7 +4014,9 @@
       "source": {
         "page": 23,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20031",
@@ -3776,7 +4044,9 @@
       "source": {
         "page": 23,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75100",
@@ -3804,7 +4074,9 @@
       "source": {
         "page": 23,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20014",
@@ -3832,7 +4104,9 @@
       "source": {
         "page": 23,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20034",
@@ -3858,7 +4132,9 @@
       "source": {
         "page": 23,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20042",
@@ -3884,7 +4160,9 @@
       "source": {
         "page": 23,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20043",
@@ -3910,7 +4188,9 @@
       "source": {
         "page": 23,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20040",
@@ -3936,7 +4216,9 @@
       "source": {
         "page": 24,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20179",
@@ -3964,7 +4246,9 @@
       "source": {
         "page": 24,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20164",
@@ -3992,7 +4276,9 @@
       "source": {
         "page": 24,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20144",
@@ -4020,7 +4306,9 @@
       "source": {
         "page": 24,
         "card": 3
-      }
+      },
+      "variantGroupId": "tolsen-20001",
+      "sizeLabel": "6.5 100mm"
     },
     {
       "id": "tolsen-20181",
@@ -4046,7 +4334,9 @@
       "source": {
         "page": 24,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20197",
@@ -4074,7 +4364,9 @@
       "source": {
         "page": 24,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20214",
@@ -4100,7 +4392,9 @@
       "source": {
         "page": 24,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20314",
@@ -4128,7 +4422,9 @@
       "source": {
         "page": 24,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75878",
@@ -4156,7 +4452,9 @@
       "source": {
         "page": 25,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20740",
@@ -4184,7 +4482,9 @@
       "source": {
         "page": 25,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-33505",
@@ -4212,7 +4512,9 @@
       "source": {
         "page": 25,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75628",
@@ -4240,7 +4542,9 @@
       "source": {
         "page": 25,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20370",
@@ -4268,7 +4572,9 @@
       "source": {
         "page": 25,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20063",
@@ -4296,7 +4602,9 @@
       "source": {
         "page": 25,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-77115",
@@ -4324,7 +4632,9 @@
       "source": {
         "page": 25,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20526",
@@ -4350,7 +4660,9 @@
       "source": {
         "page": 26,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-20580",
@@ -4376,7 +4688,9 @@
       "source": {
         "page": 26,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75626",
@@ -4402,7 +4716,9 @@
       "source": {
         "page": 26,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38001",
@@ -4428,7 +4744,9 @@
       "source": {
         "page": 28,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38006",
@@ -4454,7 +4772,9 @@
       "source": {
         "page": 28,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v16036",
@@ -4482,7 +4802,9 @@
       "source": {
         "page": 28,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v16006",
@@ -4510,7 +4832,9 @@
       "source": {
         "page": 28,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v32007",
@@ -4538,7 +4862,9 @@
       "source": {
         "page": 28,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v33506",
@@ -4566,7 +4892,9 @@
       "source": {
         "page": 28,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v80107",
@@ -4594,7 +4922,9 @@
       "source": {
         "page": 28,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v33212",
@@ -4622,7 +4952,9 @@
       "source": {
         "page": 28,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38016",
@@ -4650,7 +4982,9 @@
       "source": {
         "page": 28,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v83306",
@@ -4678,7 +5012,9 @@
       "source": {
         "page": 28,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-v83825",
@@ -4706,7 +5042,9 @@
       "source": {
         "page": 28,
         "card": 10
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87225",
@@ -4732,7 +5070,9 @@
       "source": {
         "page": 30,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87280",
@@ -4757,7 +5097,9 @@
       "source": {
         "page": 30,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79213",
@@ -4783,7 +5125,9 @@
       "source": {
         "page": 30,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87401",
@@ -4811,7 +5155,9 @@
       "source": {
         "page": 30,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79214",
@@ -4837,7 +5183,9 @@
       "source": {
         "page": 30,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87415",
@@ -4865,7 +5213,9 @@
       "source": {
         "page": 30,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87272",
@@ -4892,7 +5242,9 @@
       "source": {
         "page": 30,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87312",
@@ -4917,7 +5269,9 @@
       "source": {
         "page": 30,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87311",
@@ -4943,7 +5297,9 @@
       "source": {
         "page": 30,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87231",
@@ -4967,7 +5323,9 @@
       "source": {
         "page": 31,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87233",
@@ -4993,7 +5351,9 @@
       "source": {
         "page": 31,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87417",
@@ -5021,7 +5381,9 @@
       "source": {
         "page": 31,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87328",
@@ -5045,7 +5407,9 @@
       "source": {
         "page": 31,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87481",
@@ -5071,7 +5435,9 @@
       "source": {
         "page": 31,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87472",
@@ -5082,13 +5448,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-87472-hd.webp",
+          "url": "images/tolsen-87472.webp",
           "alt": "Batería de ion de litio 2.0ah, 40wh Tolsen",
-          "width": 664,
-          "height": 617,
+          "width": 275,
+          "height": 193,
           "needsReview": false,
           "pdfUrl": "images/tolsen-87472.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {
@@ -5099,7 +5465,9 @@
       "source": {
         "page": 31,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87474",
@@ -5110,13 +5478,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-87474-hd.webp",
+          "url": "images/tolsen-87474.webp",
           "alt": "Batería de ion de litio 20v 4.0ah Tolsen",
-          "width": 593,
-          "height": 460,
+          "width": 267,
+          "height": 186,
           "needsReview": false,
           "pdfUrl": "images/tolsen-87474.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {},
@@ -5125,7 +5493,9 @@
       "source": {
         "page": 31,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87320",
@@ -5150,7 +5520,9 @@
       "source": {
         "page": 32,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87316",
@@ -5176,7 +5548,9 @@
       "source": {
         "page": 32,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87366",
@@ -5202,7 +5576,9 @@
       "source": {
         "page": 32,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87372",
@@ -5226,7 +5602,9 @@
       "source": {
         "page": 32,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87381",
@@ -5252,7 +5630,9 @@
       "source": {
         "page": 32,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87550",
@@ -5278,7 +5658,9 @@
       "source": {
         "page": 32,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-87378",
@@ -5304,7 +5686,9 @@
       "source": {
         "page": 32,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79611",
@@ -5330,7 +5714,9 @@
       "source": {
         "page": 32,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79618",
@@ -5356,7 +5742,9 @@
       "source": {
         "page": 32,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79620",
@@ -5382,7 +5770,9 @@
       "source": {
         "page": 32,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79625",
@@ -5408,7 +5798,9 @@
       "source": {
         "page": 32,
         "card": 10
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-44031",
@@ -5434,7 +5826,9 @@
       "source": {
         "page": 34,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79791",
@@ -5460,7 +5854,9 @@
       "source": {
         "page": 34,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79702",
@@ -5486,7 +5882,9 @@
       "source": {
         "page": 34,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79712",
@@ -5512,7 +5910,9 @@
       "source": {
         "page": 34,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79720",
@@ -5538,7 +5938,9 @@
       "source": {
         "page": 34,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79727",
@@ -5566,7 +5968,9 @@
       "source": {
         "page": 34,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79732",
@@ -5592,7 +5996,9 @@
       "source": {
         "page": 34,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79738",
@@ -5618,7 +6024,9 @@
       "source": {
         "page": 34,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79741",
@@ -5644,7 +6052,9 @@
       "source": {
         "page": 35,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79745",
@@ -5670,7 +6080,9 @@
       "source": {
         "page": 35,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79759",
@@ -5696,7 +6108,9 @@
       "source": {
         "page": 35,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79761",
@@ -5722,7 +6136,9 @@
       "source": {
         "page": 35,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79764",
@@ -5748,7 +6164,9 @@
       "source": {
         "page": 35,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79782",
@@ -5759,13 +6177,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-79782-hd.webp",
+          "url": "images/tolsen-79782.webp",
           "alt": "Aspiradora (industrial) 110-120v 1000w 9a Tolsen",
-          "width": 579,
-          "height": 614,
+          "width": 166,
+          "height": 206,
           "needsReview": false,
           "pdfUrl": "images/tolsen-79782.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {
@@ -5776,7 +6194,9 @@
       "source": {
         "page": 35,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79811",
@@ -5802,7 +6222,9 @@
       "source": {
         "page": 35,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79815",
@@ -5830,7 +6252,9 @@
       "source": {
         "page": 35,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79757",
@@ -5856,7 +6280,9 @@
       "source": {
         "page": 35,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79818",
@@ -5882,7 +6308,9 @@
       "source": {
         "page": 35,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79737",
@@ -5908,7 +6336,9 @@
       "source": {
         "page": 35,
         "card": 10
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45006",
@@ -5934,7 +6364,9 @@
       "source": {
         "page": 37,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45026",
@@ -5960,7 +6392,9 @@
       "source": {
         "page": 37,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45040",
@@ -5988,7 +6422,9 @@
       "source": {
         "page": 37,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45047",
@@ -6014,7 +6450,9 @@
       "source": {
         "page": 37,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45069",
@@ -6040,7 +6478,9 @@
       "source": {
         "page": 37,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45073",
@@ -6066,7 +6506,9 @@
       "source": {
         "page": 37,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45072",
@@ -6092,7 +6534,9 @@
       "source": {
         "page": 37,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45212",
@@ -6120,7 +6564,9 @@
       "source": {
         "page": 37,
         "card": 7
-      }
+      },
+      "variantGroupId": "tolsen-45212",
+      "sizeLabel": "L"
     },
     {
       "id": "tolsen-45214",
@@ -6148,7 +6594,9 @@
       "source": {
         "page": 37,
         "card": 7
-      }
+      },
+      "variantGroupId": "tolsen-45212",
+      "sizeLabel": "XL"
     },
     {
       "id": "tolsen-45266",
@@ -6174,7 +6622,9 @@
       "source": {
         "page": 37,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45197",
@@ -6202,7 +6652,9 @@
       "source": {
         "page": 38,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45197",
+      "sizeLabel": "L"
     },
     {
       "id": "tolsen-45198",
@@ -6230,7 +6682,9 @@
       "source": {
         "page": 38,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45197",
+      "sizeLabel": "XL"
     },
     {
       "id": "tolsen-45242",
@@ -6258,7 +6712,9 @@
       "source": {
         "page": 38,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45242",
+      "sizeLabel": "M (110cm)"
     },
     {
       "id": "tolsen-45243",
@@ -6286,7 +6742,9 @@
       "source": {
         "page": 38,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45242",
+      "sizeLabel": "L (120cm)"
     },
     {
       "id": "tolsen-45244",
@@ -6314,7 +6772,9 @@
       "source": {
         "page": 38,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45242",
+      "sizeLabel": "XL (130cm)"
     },
     {
       "id": "tolsen-45087",
@@ -6340,7 +6800,9 @@
       "source": {
         "page": 38,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45189",
@@ -6366,7 +6828,9 @@
       "source": {
         "page": 38,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45190",
@@ -6392,7 +6856,9 @@
       "source": {
         "page": 38,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45191",
@@ -6418,7 +6884,9 @@
       "source": {
         "page": 38,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45188",
@@ -6444,7 +6912,9 @@
       "source": {
         "page": 38,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45216",
@@ -6472,7 +6942,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "S"
     },
     {
       "id": "tolsen-45217",
@@ -6500,7 +6972,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "M"
     },
     {
       "id": "tolsen-45218",
@@ -6528,7 +7002,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "L"
     },
     {
       "id": "tolsen-45219",
@@ -6556,7 +7032,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "XL"
     },
     {
       "id": "tolsen-45220",
@@ -6584,7 +7062,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "XXL"
     },
     {
       "id": "tolsen-45221",
@@ -6612,7 +7092,9 @@
       "source": {
         "page": 38,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-45216",
+      "sizeLabel": "XXXL"
     },
     {
       "id": "tolsen-45276",
@@ -6640,7 +7122,9 @@
       "source": {
         "page": 38,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45097",
@@ -6666,7 +7150,9 @@
       "source": {
         "page": 38,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45371",
@@ -6694,7 +7180,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "39"
     },
     {
       "id": "tolsen-45372",
@@ -6722,7 +7210,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "40"
     },
     {
       "id": "tolsen-45373",
@@ -6750,7 +7240,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "41"
     },
     {
       "id": "tolsen-45374",
@@ -6778,7 +7270,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "42"
     },
     {
       "id": "tolsen-45375",
@@ -6806,7 +7300,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "43"
     },
     {
       "id": "tolsen-45376",
@@ -6834,7 +7330,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "44"
     },
     {
       "id": "tolsen-45377",
@@ -6862,7 +7360,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "45"
     },
     {
       "id": "tolsen-45378",
@@ -6890,7 +7390,9 @@
       "source": {
         "page": 39,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-45371",
+      "sizeLabel": "46"
     },
     {
       "id": "tolsen-45351",
@@ -6918,7 +7420,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "39"
     },
     {
       "id": "tolsen-45352",
@@ -6946,7 +7450,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "40"
     },
     {
       "id": "tolsen-45353",
@@ -6974,7 +7480,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "41"
     },
     {
       "id": "tolsen-45354",
@@ -7002,7 +7510,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "42"
     },
     {
       "id": "tolsen-45355",
@@ -7030,7 +7540,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "43"
     },
     {
       "id": "tolsen-45356",
@@ -7058,7 +7570,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "44"
     },
     {
       "id": "tolsen-45357",
@@ -7086,7 +7600,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "45"
     },
     {
       "id": "tolsen-45358",
@@ -7114,7 +7630,9 @@
       "source": {
         "page": 39,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-45351",
+      "sizeLabel": "46"
     },
     {
       "id": "tolsen-60013",
@@ -7140,7 +7658,9 @@
       "source": {
         "page": 39,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60012",
@@ -7166,7 +7686,9 @@
       "source": {
         "page": 39,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80130",
@@ -7192,7 +7714,9 @@
       "source": {
         "page": 39,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45092",
@@ -7220,7 +7744,9 @@
       "source": {
         "page": 39,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-45092",
+      "sizeLabel": "L"
     },
     {
       "id": "tolsen-45152",
@@ -7248,7 +7774,9 @@
       "source": {
         "page": 39,
         "card": 5
-      }
+      },
+      "variantGroupId": "tolsen-45092",
+      "sizeLabel": "XL"
     },
     {
       "id": "tolsen-45224",
@@ -7274,7 +7802,9 @@
       "source": {
         "page": 39,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45016",
@@ -7302,7 +7832,9 @@
       "source": {
         "page": 39,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45128",
@@ -7330,7 +7862,9 @@
       "source": {
         "page": 39,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-45128",
+      "sizeLabel": "10"
     },
     {
       "id": "tolsen-45129",
@@ -7358,7 +7892,9 @@
       "source": {
         "page": 39,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-45128",
+      "sizeLabel": "11"
     },
     {
       "id": "tolsen-80131",
@@ -7384,7 +7920,9 @@
       "source": {
         "page": 39,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80132",
@@ -7410,7 +7948,9 @@
       "source": {
         "page": 39,
         "card": 10
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80040",
@@ -7436,7 +7976,9 @@
       "source": {
         "page": 41,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80042",
@@ -7462,7 +8004,9 @@
       "source": {
         "page": 41,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80101",
@@ -7488,7 +8032,9 @@
       "source": {
         "page": 41,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80102",
@@ -7514,7 +8060,9 @@
       "source": {
         "page": 41,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80103",
@@ -7542,7 +8090,9 @@
       "source": {
         "page": 41,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80120",
@@ -7568,7 +8118,9 @@
       "source": {
         "page": 41,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80201",
@@ -7594,7 +8146,9 @@
       "source": {
         "page": 41,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80212",
@@ -7622,7 +8176,9 @@
       "source": {
         "page": 41,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80212-p41",
@@ -7633,13 +8189,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-80212-p41-8-hd.webp",
+          "url": "images/tolsen-80212-p41-8.webp",
           "alt": "Caja de herramientas de mano Tolsen",
-          "width": 682,
-          "height": 471,
+          "width": 220,
+          "height": 184,
           "needsReview": false,
           "pdfUrl": "images/tolsen-80212-p41-8.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {
@@ -7650,7 +8206,9 @@
       "source": {
         "page": 41,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-83038",
@@ -7675,7 +8233,9 @@
       "source": {
         "page": 41,
         "card": 9
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80125",
@@ -7701,7 +8261,9 @@
       "source": {
         "page": 41,
         "card": 10
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-90009",
@@ -7727,7 +8289,9 @@
       "source": {
         "page": 41,
         "card": 11
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-83038-p42",
@@ -7752,7 +8316,9 @@
       "source": {
         "page": 42,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80317",
@@ -7778,7 +8344,9 @@
       "source": {
         "page": 42,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80221",
@@ -7804,7 +8372,9 @@
       "source": {
         "page": 42,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80122",
@@ -7830,7 +8400,9 @@
       "source": {
         "page": 42,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-80162",
@@ -7856,7 +8428,9 @@
       "source": {
         "page": 42,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38023",
@@ -7882,7 +8456,9 @@
       "source": {
         "page": 44,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50245",
@@ -7910,7 +8486,9 @@
       "source": {
         "page": 44,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50281",
@@ -7936,7 +8514,9 @@
       "source": {
         "page": 44,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38024",
@@ -7962,7 +8542,9 @@
       "source": {
         "page": 44,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38025",
@@ -7988,7 +8570,9 @@
       "source": {
         "page": 44,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-42022",
@@ -8014,7 +8598,9 @@
       "source": {
         "page": 44,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-32060",
@@ -8042,7 +8628,9 @@
       "source": {
         "page": 44,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38502",
@@ -8068,7 +8656,9 @@
       "source": {
         "page": 44,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38513",
@@ -8096,7 +8686,9 @@
       "source": {
         "page": 44,
         "card": 7
-      }
+      },
+      "variantGroupId": "tolsen-38513",
+      "sizeLabel": "30W 120V"
     },
     {
       "id": "tolsen-38515",
@@ -8124,7 +8716,9 @@
       "source": {
         "page": 44,
         "card": 7
-      }
+      },
+      "variantGroupId": "tolsen-38513",
+      "sizeLabel": "50W/120V"
     },
     {
       "id": "tolsen-38516",
@@ -8152,7 +8746,9 @@
       "source": {
         "page": 44,
         "card": 7
-      }
+      },
+      "variantGroupId": "tolsen-38513",
+      "sizeLabel": "60W/120V"
     },
     {
       "id": "tolsen-40145",
@@ -8180,7 +8776,9 @@
       "source": {
         "page": 44,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-44945",
@@ -8205,7 +8803,9 @@
       "source": {
         "page": 45,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50105",
@@ -8233,7 +8833,9 @@
       "source": {
         "page": 45,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50115",
@@ -8261,7 +8863,9 @@
       "source": {
         "page": 45,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-50115",
+      "sizeLabel": "2.5x100mm / 100pcs"
     },
     {
       "id": "tolsen-50118",
@@ -8289,7 +8893,9 @@
       "source": {
         "page": 45,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-50115",
+      "sizeLabel": "3.6x200mm / 100pcs"
     },
     {
       "id": "tolsen-50120",
@@ -8317,7 +8923,9 @@
       "source": {
         "page": 45,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-50115",
+      "sizeLabel": "4.8x300mm / 100pcs"
     },
     {
       "id": "tolsen-50522",
@@ -8345,7 +8953,9 @@
       "source": {
         "page": 45,
         "card": 2
-      }
+      },
+      "variantGroupId": "tolsen-50115",
+      "sizeLabel": "4,8x400mm / 50pcs"
     },
     {
       "id": "tolsen-50190",
@@ -8373,7 +8983,9 @@
       "source": {
         "page": 45,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-55115",
@@ -8399,7 +9011,9 @@
       "source": {
         "page": 45,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-55123",
@@ -8425,7 +9039,9 @@
       "source": {
         "page": 45,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-38090",
@@ -8451,7 +9067,9 @@
       "source": {
         "page": 45,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60016",
@@ -8477,7 +9095,9 @@
       "source": {
         "page": 45,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60018",
@@ -8503,7 +9123,9 @@
       "source": {
         "page": 46,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60033",
@@ -8531,7 +9153,9 @@
       "source": {
         "page": 46,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60050",
@@ -8557,7 +9181,9 @@
       "source": {
         "page": 46,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62243",
@@ -8585,7 +9211,9 @@
       "source": {
         "page": 46,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62252",
@@ -8613,7 +9241,9 @@
       "source": {
         "page": 46,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62248",
@@ -8639,7 +9269,9 @@
       "source": {
         "page": 46,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62442",
@@ -8667,7 +9299,9 @@
       "source": {
         "page": 46,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62602",
@@ -8695,7 +9329,9 @@
       "source": {
         "page": 46,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62602-p46",
@@ -8706,13 +9342,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-62602-p46-8-hd.webp",
+          "url": "images/tolsen-62602-p46-8.webp",
           "alt": "Carretilla de mano con plataforma plegable Tolsen",
-          "width": 389,
-          "height": 738,
+          "width": 222,
+          "height": 245,
           "needsReview": false,
           "pdfUrl": "images/tolsen-62602-p46-8.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {
@@ -8723,7 +9359,9 @@
       "source": {
         "page": 46,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43010",
@@ -8751,7 +9389,9 @@
       "source": {
         "page": 47,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65402",
@@ -8776,7 +9416,9 @@
       "source": {
         "page": 47,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65463",
@@ -8802,7 +9444,9 @@
       "source": {
         "page": 47,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65483",
@@ -8828,7 +9472,9 @@
       "source": {
         "page": 47,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57250",
@@ -8856,7 +9502,9 @@
       "source": {
         "page": 47,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57398",
@@ -8884,7 +9532,9 @@
       "source": {
         "page": 47,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57390",
@@ -8910,7 +9560,9 @@
       "source": {
         "page": 47,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79775",
@@ -8936,7 +9588,9 @@
       "source": {
         "page": 47,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-66001",
@@ -8964,7 +9618,9 @@
       "source": {
         "page": 47,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-66015",
@@ -8992,7 +9648,9 @@
       "source": {
         "page": 48,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-66030",
@@ -9018,7 +9676,9 @@
       "source": {
         "page": 48,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54056",
@@ -9046,7 +9706,9 @@
       "source": {
         "page": 48,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54161",
@@ -9074,7 +9736,9 @@
       "source": {
         "page": 48,
         "card": 3
-      }
+      },
+      "variantGroupId": "tolsen-54161",
+      "sizeLabel": "8x1 / 2” / 500pcs"
     },
     {
       "id": "tolsen-54302",
@@ -9102,7 +9766,9 @@
       "source": {
         "page": 48,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54304",
@@ -9130,7 +9796,9 @@
       "source": {
         "page": 48,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43030",
@@ -9158,7 +9826,9 @@
       "source": {
         "page": 48,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-72155",
@@ -9186,7 +9856,9 @@
       "source": {
         "page": 48,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-72190",
@@ -9212,7 +9884,9 @@
       "source": {
         "page": 48,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65515",
@@ -9238,7 +9912,9 @@
       "source": {
         "page": 48,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-77868",
@@ -9266,7 +9942,9 @@
       "source": {
         "page": 49,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75442",
@@ -9292,7 +9970,9 @@
       "source": {
         "page": 49,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79111",
@@ -9320,7 +10000,9 @@
       "source": {
         "page": 49,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-85300",
@@ -9348,7 +10030,9 @@
       "source": {
         "page": 49,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-83021",
@@ -9376,7 +10060,9 @@
       "source": {
         "page": 49,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-83024",
@@ -9404,7 +10090,9 @@
       "source": {
         "page": 49,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79617",
@@ -9429,7 +10117,9 @@
       "source": {
         "page": 49,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79029",
@@ -9453,7 +10143,9 @@
       "source": {
         "page": 49,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79031",
@@ -9479,7 +10171,9 @@
       "source": {
         "page": 49,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79049",
@@ -9505,7 +10199,9 @@
       "source": {
         "page": 50,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60003",
@@ -9516,13 +10212,13 @@
       "brandName": "Tolsen",
       "images": [
         {
-          "url": "images/tolsen-60003-hd.webp",
+          "url": "images/tolsen-60003.webp",
           "alt": "Batería super alcalina aaa (lr03) lr03(aaa) Tolsen",
-          "width": 599,
-          "height": 490,
+          "width": 182,
+          "height": 220,
           "needsReview": false,
           "pdfUrl": "images/tolsen-60003.webp",
-          "officialImage": true
+          "officialImage": false
         }
       ],
       "specs": {},
@@ -9531,7 +10227,9 @@
       "source": {
         "page": 50,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-60004",
@@ -9557,7 +10255,9 @@
       "source": {
         "page": 50,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-79215-47",
@@ -9581,7 +10281,9 @@
       "source": {
         "page": 50,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-90024",
@@ -9609,7 +10311,9 @@
       "source": {
         "page": 50,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-90024-p50",
@@ -9637,7 +10341,9 @@
       "source": {
         "page": 50,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-90025",
@@ -9665,7 +10371,9 @@
       "source": {
         "page": 50,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-35198",
@@ -9693,7 +10401,9 @@
       "source": {
         "page": 50,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54051",
@@ -9719,7 +10429,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54052",
@@ -9745,7 +10457,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54053",
@@ -9771,7 +10485,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54054",
@@ -9797,7 +10513,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54055",
@@ -9823,7 +10541,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54058",
@@ -9849,7 +10569,9 @@
       "source": {
         "page": 50,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54151",
@@ -9877,7 +10599,9 @@
       "source": {
         "page": 50,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-54151",
+      "sizeLabel": "4.2x13mm"
     },
     {
       "id": "tolsen-54152",
@@ -9905,7 +10629,9 @@
       "source": {
         "page": 50,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-54151",
+      "sizeLabel": "4.2x19mm"
     },
     {
       "id": "tolsen-54153",
@@ -9933,7 +10659,9 @@
       "source": {
         "page": 50,
         "card": 8
-      }
+      },
+      "variantGroupId": "tolsen-54151",
+      "sizeLabel": "4.2x25mm"
     },
     {
       "id": "tolsen-54162",
@@ -9961,7 +10689,9 @@
       "source": {
         "page": 51,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-54161",
+      "sizeLabel": "4.2x16mm"
     },
     {
       "id": "tolsen-54163",
@@ -9989,7 +10719,9 @@
       "source": {
         "page": 51,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-54161",
+      "sizeLabel": "4.2x19mm"
     },
     {
       "id": "tolsen-54164",
@@ -10017,7 +10749,9 @@
       "source": {
         "page": 51,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-54161",
+      "sizeLabel": "4.2x25mm"
     },
     {
       "id": "tolsen-54165",
@@ -10045,7 +10779,9 @@
       "source": {
         "page": 51,
         "card": 0
-      }
+      },
+      "variantGroupId": "tolsen-54161",
+      "sizeLabel": "4.2x32mm"
     },
     {
       "id": "tolsen-54180",
@@ -10073,7 +10809,9 @@
       "source": {
         "page": 51,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-54180",
+      "sizeLabel": "4.8x25mm"
     },
     {
       "id": "tolsen-54182",
@@ -10101,7 +10839,9 @@
       "source": {
         "page": 51,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-54180",
+      "sizeLabel": "4.8x38mm"
     },
     {
       "id": "tolsen-54183",
@@ -10129,7 +10869,9 @@
       "source": {
         "page": 51,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-54180",
+      "sizeLabel": "4.8x50mm"
     },
     {
       "id": "tolsen-54286",
@@ -10155,7 +10897,9 @@
       "source": {
         "page": 51,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54303",
@@ -10181,7 +10925,9 @@
       "source": {
         "page": 51,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62453",
@@ -10207,7 +10953,9 @@
       "source": {
         "page": 51,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65497",
@@ -10233,7 +10981,9 @@
       "source": {
         "page": 51,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-42013",
@@ -10261,7 +11011,9 @@
       "source": {
         "page": 51,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-10501",
@@ -10287,7 +11039,9 @@
       "source": {
         "page": 51,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-45271",
@@ -10313,7 +11067,9 @@
       "source": {
         "page": 51,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50004",
@@ -10339,7 +11095,9 @@
       "source": {
         "page": 52,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57221",
@@ -10365,7 +11123,9 @@
       "source": {
         "page": 52,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57295",
@@ -10391,7 +11151,9 @@
       "source": {
         "page": 52,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-62265",
@@ -10417,7 +11179,9 @@
       "source": {
         "page": 52,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-30104",
@@ -10443,7 +11207,9 @@
       "source": {
         "page": 52,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-51029",
@@ -10469,7 +11235,9 @@
       "source": {
         "page": 52,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57384",
@@ -10495,7 +11263,9 @@
       "source": {
         "page": 53,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-16127",
@@ -10523,7 +11293,9 @@
       "source": {
         "page": 53,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-16127",
+      "sizeLabel": "1/2×15”"
     },
     {
       "id": "tolsen-16128",
@@ -10551,7 +11323,9 @@
       "source": {
         "page": 53,
         "card": 1
-      }
+      },
+      "variantGroupId": "tolsen-16127",
+      "sizeLabel": "1/2×18”"
     },
     {
       "id": "tolsen-25231",
@@ -10577,7 +11351,9 @@
       "source": {
         "page": 53,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-40099",
@@ -10603,7 +11379,9 @@
       "source": {
         "page": 53,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-41001",
@@ -10629,7 +11407,9 @@
       "source": {
         "page": 53,
         "card": 4
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-41012",
@@ -10655,7 +11435,9 @@
       "source": {
         "page": 53,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-41013",
@@ -10681,7 +11463,9 @@
       "source": {
         "page": 53,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43003",
@@ -10709,7 +11493,9 @@
       "source": {
         "page": 53,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-43099",
@@ -10737,7 +11523,9 @@
       "source": {
         "page": 53,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-44928",
@@ -10763,7 +11551,9 @@
       "source": {
         "page": 54,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-50228",
@@ -10789,7 +11579,9 @@
       "source": {
         "page": 54,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-54194",
@@ -10815,7 +11607,9 @@
       "source": {
         "page": 54,
         "card": 2
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-55170",
@@ -10841,7 +11635,9 @@
       "source": {
         "page": 54,
         "card": 3
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-57400",
@@ -10869,7 +11665,9 @@
       "source": {
         "page": 54,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-57400",
+      "sizeLabel": "1/2”x25ft"
     },
     {
       "id": "tolsen-57401",
@@ -10897,7 +11695,9 @@
       "source": {
         "page": 54,
         "card": 4
-      }
+      },
+      "variantGroupId": "tolsen-57400",
+      "sizeLabel": "1/2”x50ft"
     },
     {
       "id": "tolsen-62611",
@@ -10923,7 +11723,9 @@
       "source": {
         "page": 54,
         "card": 5
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-65484",
@@ -10949,7 +11751,9 @@
       "source": {
         "page": 54,
         "card": 6
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-75863",
@@ -10975,7 +11779,9 @@
       "source": {
         "page": 54,
         "card": 7
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-76681",
@@ -11001,7 +11807,9 @@
       "source": {
         "page": 54,
         "card": 8
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-76702",
@@ -11027,7 +11835,9 @@
       "source": {
         "page": 55,
         "card": 0
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     },
     {
       "id": "tolsen-77554",
@@ -11053,7 +11863,9 @@
       "source": {
         "page": 55,
         "card": 1
-      }
+      },
+      "variantGroupId": null,
+      "sizeLabel": null
     }
   ]
 }

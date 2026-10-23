@@ -239,13 +239,8 @@
     "refs": [
       "41032"
     ],
-    "status": "ok",
-    "matchedRef": "41032",
-    "page": "https://www.tolsentools.com/product/blade-for-tile-cutter/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2016/01/BLADE-FOR-TILE-CUTTER.jpg",
-    "file": "images/tolsen-41032-hd.webp",
-    "width": 660,
-    "height": 687
+    "status": "rechazada",
+    "reason": "la web muestra la cuchilla 41037, no la cortadora"
   },
   "images/tolsen-41037.webp": {
     "refs": [
@@ -443,13 +438,8 @@
     "refs": [
       "38041"
     ],
-    "status": "ok",
-    "matchedRef": "38041",
-    "page": "https://www.tolsentools.com/product/electrician-tool-set/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2024/05/ELECTRICIAN-TOOL-SET-1.jpg",
-    "file": "images/tolsen-38041-hd.webp",
-    "width": 464,
-    "height": 627
+    "status": "rechazada",
+    "reason": "la web muestra un porta-herramientas, no la cuchilla"
   },
   "images/tolsen-38052.webp": {
     "refs": [
@@ -2009,25 +1999,15 @@
     "refs": [
       "87472"
     ],
-    "status": "ok",
-    "matchedRef": "87472",
-    "page": "https://www.tolsentools.com/product/2a-battery-charger/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2025/12/tolsen-2a-battery-charger-87480.jpg",
-    "file": "images/tolsen-87472-hd.webp",
-    "width": 664,
-    "height": 617
+    "status": "rechazada",
+    "reason": "la web muestra un cargador, no la batería"
   },
   "images/tolsen-87474.webp": {
     "refs": [
       "87474"
     ],
-    "status": "ok",
-    "matchedRef": "87474",
-    "page": "https://www.tolsentools.com/product/180w-battery-charger/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2025/10/180W-BATTERY-CHARGER.jpg",
-    "file": "images/tolsen-87474-hd.webp",
-    "width": 593,
-    "height": 460
+    "status": "rechazada",
+    "reason": "la web muestra un cargador doble, no la batería"
   },
   "images/tolsen-87320.webp": {
     "refs": [
@@ -2309,13 +2289,8 @@
     "refs": [
       "79782"
     ],
-    "status": "ok",
-    "matchedRef": "79782",
-    "page": "https://www.tolsentools.com/product/vacuum-cleaner-filter-element/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2022/12/VACUUM-CLEANER-FILTER-ELEMENT.jpg",
-    "file": "images/tolsen-79782-hd.webp",
-    "width": 579,
-    "height": 614
+    "status": "rechazada",
+    "reason": "la web muestra el filtro, no la aspiradora"
   },
   "images/tolsen-79811.webp": {
     "refs": [
@@ -2829,13 +2804,8 @@
     "refs": [
       "80212"
     ],
-    "status": "ok",
-    "matchedRef": "80212",
-    "page": "https://www.tolsentools.com/product/tool-box/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2015/08/TOOL-BOX-1.jpg",
-    "file": "images/tolsen-80212-p41-8-hd.webp",
-    "width": 682,
-    "height": 471
+    "status": "rechazada",
+    "reason": "la web muestra la caja metálica vacía, no el kit de herramientas"
   },
   "images/tolsen-83038.webp": {
     "refs": [
@@ -3225,13 +3195,8 @@
     "refs": [
       "62602"
     ],
-    "status": "ok",
-    "matchedRef": "62602",
-    "page": "https://www.tolsentools.com/product/aluminum-foldable-hand-truck/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2020/07/ALUMINUM-FOLDABLE-HAND-TRUCK.jpg",
-    "file": "images/tolsen-62602-p46-8-hd.webp",
-    "width": 389,
-    "height": 738
+    "status": "rechazada",
+    "reason": "la web muestra la carretilla de aluminio, no la de plataforma"
   },
   "images/tolsen-43010.webp": {
     "refs": [
@@ -3556,13 +3521,8 @@
     "refs": [
       "60003"
     ],
-    "status": "ok",
-    "matchedRef": "60003",
-    "page": "https://www.tolsentools.com/product/aaa-super-alkaline-battery/",
-    "source": "https://www.tolsentools.com/wp-content/uploads/2023/11/AAA-SUPER-ALKALINE-BATTERY.jpg",
-    "file": "images/tolsen-60003-hd.webp",
-    "width": 599,
-    "height": 490
+    "status": "rechazada",
+    "reason": "la web muestra pilas AA, no AAA"
   },
   "images/tolsen-60004.webp": {
     "refs": [

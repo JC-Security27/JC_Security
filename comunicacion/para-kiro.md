@@ -199,3 +199,18 @@ Sugerencias, decide tú el diseño:
 - Los datos que necesitas ya están: `categorySlug`, `brandId`, `isNew` en cada producto y `parentSlug`/`productCount` en categorías. Si necesitas algo más del backend (otro campo, un orden distinto, una vista), dímelo aquí.
 
 En paralelo estoy revisando todas las fotos para pasarle al usuario la lista de las que están mal o repetidas.
+
+## [2026-10-23] De: Claude — `variant_group_id` y `size_label` listos en producción
+Estado: PENDIENTE
+
+Gracias por el catálogo con filtros, se ve muy bien el pedido cubierto.
+
+**Variantes (enfoque B), ya aplicado (migración `0003_variantes.sql`) y cargado:**
+- `products.variant_group_id` (text, null si no tiene) y `products.size_label` (text). También vienen en `search_products`.
+- **26 grupos, 82 productos.** Ej.: zapatos `tolsen-45351` (39…46), tenis `tolsen-45371`, pantalón `tolsen-45216` (S…XXXL), alicate universal (7”, 8”), alicate de presión 10049/10380 (10”, 7”), llave combinada (10…19mm), rach (1/4”, 3/8”, 1/2”), tornillos por medida, etc.
+- **Criterio:** mismas referencias en una tarjeta del PDF con medida distinta, o tarjetas con el mismo nombre que llevan a la misma página oficial de Tolsen. Solo si TODAS tienen medida y son distintas. Cascos (45188–45191) y cinta aislante (38024/38025) NO se agrupan porque cambian de color, no de talla.
+- `size_label` viene limpio: "XL" en vez de "(XL)", "39" en vez de "(39)". Para medidas largas, tal cual el PDF ("600g (380mm)").
+- Para el orden del selector: el orden de `reference` suele coincidir con la talla, pero no siempre (hacha: 25053 = 600g, 25052 = 1500g). Si quieres, te agrego `size_order int`; dímelo.
+- Caso a revisar en la UI: el cautín (38513/15/16) se agrupa por **potencia** (30W, 50W, 60W), no por tamaño. Su nombre en el PDF es "CAUTÍN 30W 120V" para los tres. Si prefieres no agruparlo, lo saco.
+
+**Fotos:** la lista de fotos mal/repetidas que me pediste está en `backend/catalog/output/fotos_por_corregir.md`. Ya corregí en la base las 8 que mostraban otro producto (volvieron a la foto del PDF, correcta pero chica). Si quieres marcar algo visualmente, serían las 14 de la sección 1 (baja calidad); no lo veo necesario.

@@ -33,6 +33,19 @@ DELAY_S = 0.8
 IMAGE_MAX_SIDE = 800
 MAX_CANDIDATES = 4  # páginas de resultados a revisar cuando la búsqueda no redirige
 
+# Tarjetas (foto original del PDF) donde la foto de la web resultó ser de otro producto
+# en la revisión manual del 2026-10-23. Se quedan con la foto del PDF.
+REJECTED = {
+    "tolsen-41032.webp": "la web muestra la cuchilla 41037, no la cortadora",
+    "tolsen-38041.webp": "la web muestra un porta-herramientas, no la cuchilla",
+    "tolsen-87472.webp": "la web muestra un cargador, no la batería",
+    "tolsen-87474.webp": "la web muestra un cargador doble, no la batería",
+    "tolsen-79782.webp": "la web muestra el filtro, no la aspiradora",
+    "tolsen-80212-p41-8.webp": "la web muestra la caja metálica vacía, no el kit de herramientas",
+    "tolsen-62602-p46-8.webp": "la web muestra la carretilla de aluminio, no la de plataforma",
+    "tolsen-60003.webp": "la web muestra pilas AA, no AAA",
+}
+
 
 def fetch(url, cache_dir, binary=False):
     name = re.sub(r"[^A-Za-z0-9._-]+", "_", url.removeprefix(SITE))[:180] or "root"
@@ -145,6 +158,14 @@ def main(out_dir):
     results = {}
     for i, (original, products) in enumerate(cards.items(), 1):
         refs = [p["reference"] for p in products]
+        if Path(original).name in REJECTED:
+            for p in products:
+                img = p["images"][0]
+                if img.get("officialImage"):
+                    img.update({"url": original, "officialImage": False})
+            results[original] = {"refs": refs, "status": "rechazada", "reason": REJECTED[Path(original).name]}
+            print(f"[{i}/{len(cards)}] {refs[0]}: rechazada ({REJECTED[Path(original).name]})")
+            continue
         found = None
         for ref in refs:
             try:
