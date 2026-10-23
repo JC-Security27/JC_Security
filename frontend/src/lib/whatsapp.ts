@@ -56,3 +56,12 @@ export function quoteListMessage(items: QuoteMessageItem[]): string {
 export function generalContactMessage(): string {
   return `Hola ${siteConfig.name}, me gustaría recibir más información.`;
 }
+
+/** Mensaje para consultar por un servicio por su nombre. */
+export function serviceInquiryMessage(serviceName: string): string {
+  return [
+    `Hola ${siteConfig.name}, me interesa el servicio de ${serviceName}.`,
+    "",
+    "¿Me pueden dar más información? Gracias.",
+  ].join("\n");
+}
