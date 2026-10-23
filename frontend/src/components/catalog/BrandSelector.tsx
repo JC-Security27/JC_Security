@@ -1,5 +1,5 @@
 import type { Brand } from "@/types/catalog";
-import { getBrandLogo } from "@/config/brandLogos";
+import { getBrandLogo, getBrandLogoFit } from "@/config/brandLogos";
 
 /* Selector de marca con logo. Muestra una tarjeta "Todas" + una por marca.
    Si la marca tiene logo, se muestra sobre una tarjeta blanca (los logos
@@ -40,19 +40,27 @@ export function BrandSelector({
 
       {brands.map((b) => {
         const logo = getBrandLogo(b);
+        const fit = getBrandLogoFit(b);
         const active = selectedBrandIds.includes(b.id);
         return (
           <button
             key={b.id}
             type="button"
-            className={`brand-tile ${active ? "is-active" : ""}`}
+            className={`brand-tile ${active ? "is-active" : ""} ${
+              logo ? "has-logo" : ""
+            }`}
             aria-pressed={active}
             onClick={() => selectOne(b.id)}
             title={b.name}
           >
             {logo ? (
               <span className="brand-tile-logo">
-                <img src={logo} alt={b.name} loading="lazy" />
+                <img
+                  src={logo}
+                  alt={b.name}
+                  loading="lazy"
+                  style={{ objectFit: fit }}
+                />
               </span>
             ) : (
               <span className="brand-tile-name">{b.name}</span>

@@ -549,12 +549,14 @@
   align-items: center;
   justify-content: center;
   min-width: 120px;
+  width: 150px;
   height: 56px;
   padding: var(--space-2) var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--surface);
   cursor: pointer;
+  overflow: hidden;
   transition: border-color var(--transition), box-shadow var(--transition),
     transform var(--transition);
 }
@@ -566,22 +568,28 @@
   border-color: var(--accent);
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
 }
-/* Los logos suelen venir sobre blanco: tarjeta blanca para que luzcan bien
-   en ambos temas. */
+/* El logo ocupa TODA la tarjeta (el logo ES el botón). Sin padding, sin fondo
+   ni borde visible: solo se ve el logo. El celeste aparece al seleccionar. */
+.brand-tile.has-logo {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+}
+.brand-tile.has-logo.is-active {
+  border-color: var(--accent);
+}
 .brand-tile-logo {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 100%;
   height: 100%;
-  background: #ffffff;
-  border-radius: var(--radius-sm);
-  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 .brand-tile-logo img {
-  max-height: 34px;
-  max-width: 120px;
-  width: auto;
-  object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit se define por marca (cover/contain) desde el componente */
 }
 .brand-tile-name {
   font-weight: 700;

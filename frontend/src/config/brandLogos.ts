@@ -9,11 +9,30 @@
 
 import type { Brand } from "@/types/catalog";
 
-/** Logos locales por id de marca (en frontend/public). */
+/** Logos locales por id de marca (en frontend/public). Logos cuadrados con
+    su propio fondo, para que llenen toda la tarjeta. */
 const LOCAL_BRAND_LOGOS: Record<string, string> = {
-  dahua: "/brand-dahua.svg",
-  // tolsen: "/brand-tolsen.svg", // pendiente: falta el logo oficial de Tolsen
+  dahua: "/brand-dahua-sq.jpg",
+  "brand-tolsen": "/brand-tolsen.webp",
+  tolsen: "/brand-tolsen.webp",
 };
+
+/**
+ * Cómo ajustar el logo dentro de la tarjeta:
+ * - "cover": el logo llena toda la tarjeta (logos cuadrados con su propio
+ *   fondo, como Tolsen naranja o Dahua negro).
+ * - "contain": el logo se ve completo centrado (logos transparentes).
+ */
+const BRAND_LOGO_FIT: Record<string, "cover" | "contain"> = {
+  "brand-tolsen": "cover",
+  tolsen: "cover",
+  dahua: "cover",
+};
+
+/** Modo de ajuste del logo para una marca. */
+export function getBrandLogoFit(brand: Brand): "cover" | "contain" {
+  return BRAND_LOGO_FIT[brand.id] ?? "contain";
+}
 
 /**
  * Marcas que mostramos en el selector como ejemplo aunque aún no tengan
