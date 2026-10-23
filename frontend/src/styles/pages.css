@@ -690,6 +690,30 @@
     grid-template-columns: 1fr;
   }
 }
+/* Blindaje del detalle para que nada desborde en móvil */
+.product-detail,
+.product-detail-info,
+.price-box,
+.specs,
+.sizes {
+  min-width: 0;
+  max-width: 100%;
+}
+.product-detail-info h1,
+.product-detail-desc {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.specs-row {
+  min-width: 0;
+}
+.specs-row dd {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.sizes-list {
+  max-width: 100%;
+}
 
 /* ----- Lista de cotización ----- */
 .quote-layout {
