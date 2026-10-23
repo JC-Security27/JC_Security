@@ -1,51 +1,102 @@
 import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
-import { getDataClient, getActiveSource } from "@/data/dataClient";
-import { useAsync } from "@/hooks/useAsync";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
-import {
-  CardsSkeleton,
-  EmptyState,
-  ErrorState,
-  SampleNotice,
-} from "@/components/ui/states";
-import type { Category } from "@/types/catalog";
 
-/** Nombres legibles para los grupos (categoría padre). */
-const GROUP_LABELS: Record<string, string> = {
-  herramientas: "Herramientas",
-  seguridad: "Seguridad",
-  servicios: "Servicios",
-};
-
-function useHomeData() {
-  return useAsync<{ categories: Category[] }>(async () => {
-    const client = await getDataClient();
-    const categories = await client.getCategories();
-    return { categories };
-  }, []);
+/* Secciones que ofrece JC Security, mostradas como tarjetas en la portada.
+   Cada una lleva a su sección (las mismas del menú superior). */
+interface Offering {
+  to: string;
+  title: string;
+  description: string;
+  icon: ReactNode;
 }
 
-/** Agrupa las categorías por su parentSlug, conservando el orden recibido. */
-function groupByParent(categories: Category[]): [string, Category[]][] {
-  const groups = new Map<string, Category[]>();
-  const order: string[] = [];
-  for (const cat of categories) {
-    const key = cat.parentSlug ?? cat.slug;
-    if (!groups.has(key)) {
-      groups.set(key, []);
-      order.push(key);
-    }
-    groups.get(key)!.push(cat);
-  }
-  return order.map((k) => [k, groups.get(k)!]);
-}
+const offerings: Offering[] = [
+  {
+    to: "/catalogo",
+    title: "Catálogo de productos",
+    description:
+      "Herramientas y equipos de seguridad organizados por categoría y marca.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path
+          d="M4 7h16M4 12h16M4 17h10"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    to: "/servicios",
+    title: "Servicios",
+    description:
+      "Instalaciones y servicios de seguridad realizados por JC Security.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path
+          d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    to: "/guias",
+    title: "Guías de seguridad",
+    description:
+      "Consejos prácticos para proteger tu hogar y tu negocio.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path
+          d="M12 3 20 6v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-3Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    to: "/redes",
+    title: "Redes sociales",
+    description: "Síguenos para novedades, promociones y novedades de productos.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17" cy="6" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17" cy="18" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M8.2 11 15 7M8.2 13 15 17" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
+  {
+    to: "/contacto",
+    title: "Contacto",
+    description:
+      "Escríbenos por WhatsApp para precio, disponibilidad y asesoría.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path
+          d="M4 5h16v12H7l-3 3V5Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
 
 export function HomePage() {
-  const { status, data, error, reload } = useHomeData();
-  const showSampleNotice = getActiveSource() === "mock";
-
   return (
     <>
       {/* ----- Hero ----- */}
@@ -70,64 +121,33 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ----- Catálogo por categorías ----- */}
+      {/* ----- Lo que ofrecemos ----- */}
       <section className="section container">
         <div className="section-head">
-          <span className="eyebrow">Catálogo</span>
-          <h2>Explora por categorías</h2>
+          <span className="eyebrow">JC Security</span>
+          <h2>Lo que ofrecemos</h2>
           <p>
-            Encuentra productos organizados por categoría. Consulta precio y
-            disponibilidad por WhatsApp.
+            Explora nuestras áreas. Entra a cada una para ver todo lo que
+            tenemos disponible.
           </p>
         </div>
 
-        {showSampleNotice && (
-          <SampleNotice>
-            <strong>Contenido de muestra.</strong> Estás viendo datos de ejemplo
-            para previsualizar el diseño.
-          </SampleNotice>
-        )}
-
-        {status === "loading" && (
-          <div style={{ marginTop: "var(--space-6)" }}>
-            <CardsSkeleton />
-          </div>
-        )}
-        {status === "error" && <ErrorState error={error} onRetry={reload} />}
-        {status === "success" && data && (
-          <div className="home-groups">
-            {data.categories.length === 0 ? (
-              <EmptyState title="Aún no hay categorías" />
-            ) : (
-              groupByParent(data.categories).map(([groupKey, subcats]) => (
-                <section key={groupKey} className="home-group">
-                  <div className="home-group-head">
-                    <h3>{GROUP_LABELS[groupKey] ?? subcats[0]?.name ?? groupKey}</h3>
-                  </div>
-                  <div className="grid cat-grid">
-                    {subcats.map((cat) => (
-                      <Link
-                        key={cat.id}
-                        to={`/categoria/${cat.slug}`}
-                        className="card cat-card"
-                      >
-                        <span className="cat-card-name">{cat.name}</span>
-                        {typeof cat.productCount === "number" && (
-                          <span className="cat-card-count">
-                            {cat.productCount} producto(s)
-                          </span>
-                        )}
-                        <span className="cat-card-arrow" aria-hidden="true">
-                          →
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              ))
-            )}
-          </div>
-        )}
+        <div className="grid offerings-grid">
+          {offerings.map((o) => (
+            <Link key={o.to} to={o.to} className="card offering-card">
+              <span className="offering-icon" aria-hidden="true">
+                {o.icon}
+              </span>
+              <span className="offering-body">
+                <span className="offering-title">{o.title}</span>
+                <span className="offering-desc">{o.description}</span>
+              </span>
+              <span className="offering-arrow" aria-hidden="true">
+                →
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       {/* ----- Franja WhatsApp ----- */}
