@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import {
   CatalogControls,
   type CatalogFilters,
@@ -18,12 +19,20 @@ import { groupByVariants } from "@/lib/variants";
 import { withDemoBrands } from "@/config/brandLogos";
 import type { Brand, Category, Product } from "@/types/catalog";
 
-/** Cuántos productos mostrar por categoría en la vista agrupada. */
-const PREVIEW_PER_CATEGORY = 8;
+/** Cuántos productos mostrar por categoría en la vista agrupada.
+ *  En móvil mostramos menos para que la página no quede tan larga. */
+const PREVIEW_PER_CATEGORY_DESKTOP = 8;
+const PREVIEW_PER_CATEGORY_MOBILE = 4;
 
 export function CatalogPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const showSampleNotice = getActiveSource() === "mock";
+
+  // En pantallas angostas mostramos solo 4 productos por categoría.
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const previewPerCategory = isMobile
+    ? PREVIEW_PER_CATEGORY_MOBILE
+    : PREVIEW_PER_CATEGORY_DESKTOP;
 
   // Los filtros viven en la URL (compartible y con botón "atrás").
   const filters: CatalogFilters = {
@@ -171,8 +180,8 @@ export function CatalogPage() {
             {grouped.map(({ cat, items }) => {
               // Agrupamos las tallas: cada grupo cuenta como un producto.
               const groups = groupByVariants(items);
-              const preview = groups.slice(0, PREVIEW_PER_CATEGORY);
-              const hasMore = groups.length > PREVIEW_PER_CATEGORY;
+              const preview = groups.slice(0, previewPerCategory);
+              const hasMore = groups.length > previewPerCategory;
               return (
                 <section key={cat.id} className="catalog-cat-block">
                   <div className="catalog-cat-head">
