@@ -11,9 +11,30 @@
   color: var(--header-text);
   font-weight: 700;
 }
-.logo-mark {
-  color: var(--header-text);
+/* Escudo + monograma JC superpuesto */
+.logo-shield {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 52px;
   flex-shrink: 0;
+}
+.logo-shield-bg {
+  display: block;
+}
+/* El monograma JC (jc-logo.png) recoloreado a cian con máscara CSS,
+   centrado dentro del escudo. Mantiene el diseño oficial. */
+.logo-jc {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--accent-strong);
+  -webkit-mask: url("/jc-logo.png") center / contain no-repeat;
+  mask: url("/jc-logo.png") center / contain no-repeat;
 }
 .logo-text {
   font-size: 1.6rem;
@@ -34,9 +55,13 @@
   .logo-img {
     height: 44px;
   }
-  .logo-mark {
+  .logo-shield {
     width: 42px;
     height: 46px;
+  }
+  .logo-jc {
+    width: 27px;
+    height: 27px;
   }
 }
 
