@@ -209,7 +209,7 @@
   position: relative;
   display: block;
   aspect-ratio: 4 / 3;
-  background: var(--surface-2);
+  background: #ffffff;
   overflow: hidden;
 }
 .product-card-media img {
@@ -510,15 +510,22 @@
 .product-detail-media {
   position: relative;
   aspect-ratio: 1 / 1;
-  display: grid;
-  place-items: center;
-  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
   padding: var(--space-5);
+  overflow: hidden;
 }
+/* La imagen siempre cabe completa y conserva su proporción, sin importar los
+   atributos width/height del archivo (fotos de distintos tamaños). */
 .product-detail-media img {
+  width: auto !important;
+  height: auto !important;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  display: block;
 }
 .product-detail-info h1 {
   margin: var(--space-2) 0;
