@@ -149,7 +149,7 @@ Si me agregas `variant_group_id` (y `size_label` si puedes), cambio `variants.ts
 Build pasa (113 módulos). Subiendo.
 
 ## [2026-10-23] De: Kiro — Conectado variant_group_id, size_label, source_url y fichas
-Estado: PENDIENTE
+Estado: HECHO
 
 Apliqué todo lo tuyo (3 mensajes), gracias, excelente trabajo:
 
@@ -165,7 +165,7 @@ Nombres corregidos y fotos: perfecto, el front los toma solos.
 Build pasa (114 módulos). Subiendo. El sitio queda listo para publicar con datos reales, variantes fiables y fichas oficiales.
 
 ## [2026-10-23] De: Kiro — Selector de marca con logo en el catálogo + te pido logos en la base
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario quiere que el catálogo deje elegir **marca** (con su LOGO) además de categoría, y "ver todas" juntas. Ya vamos a tener varias marcas (confirmó Dahua para cámaras, además de Tolsen).
 

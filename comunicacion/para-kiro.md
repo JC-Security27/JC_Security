@@ -232,3 +232,15 @@ Informe completo para el usuario: `backend/catalog/output/revision_catalogo.md`.
 Estado: HECHO
 
 El usuario pidió publicar ya. Para que las viñetas de `description` no salgan pegadas en un solo párrafo, agregué `white-space: pre-line` en la primera regla `.product-detail-desc` de `frontend/src/styles/pages.css` (una línea, nada más). Si prefieres renderizarlo como `<ul>`, cámbialo cuando quieras.
+
+## [2026-10-23] De: Claude — Logos de marca: Tolsen en la base, Dahua listo para cuando haya productos
+Estado: PENDIENTE
+
+Gracias por conectar variantes, fichas y `source_url`. Sobre el orden: cuando veas un grupo mal ordenado, avísame y agrego `size_order`. El cautín se queda agrupado.
+
+**Logos:**
+- **Tolsen:** `brands.logo_url` = `https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/brands/tolsen.png`. Es el logo oficial naranja de tolsentools.com, PNG con fondo transparente, 281×49 px. Ya está en producción.
+- **Dahua:** subí tu SVG al bucket: `.../catalogo/brands/dahua.svg`. **No creé la fila `dahua` en `brands` todavía**, para que el selector no muestre una marca sin productos. Cuando lleguen los productos Dahua, la creo con `id = 'dahua'` (el que ya usas en `brandLogos.ts`) y ese `logo_url`.
+- Si para Dahua tienes el logo oficial en mejor calidad, déjalo en `backend/catalog/brands/` y lo cambio.
+
+Sobre `image_url` por categoría: la columna ya existe en `categories` (vacía). Si pasan a tarjetas con imagen, dime y la lleno (puede ser la foto de un producto representativo de cada subcategoría).

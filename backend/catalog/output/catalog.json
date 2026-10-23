@@ -3,7 +3,8 @@
   "brands": [
     {
       "id": "tolsen",
-      "name": "Tolsen"
+      "name": "Tolsen",
+      "logoUrl": "https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/brands/tolsen.png"
     }
   ],
   "categories": [

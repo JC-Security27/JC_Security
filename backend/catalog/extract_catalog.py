@@ -24,7 +24,8 @@ from pathlib import Path
 import pymupdf
 from PIL import Image, ImageChops
 
-BRAND = {"id": "tolsen", "name": "Tolsen"}
+BRAND = {"id": "tolsen", "name": "Tolsen",
+         "logoUrl": "https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/brands/tolsen.png"}
 PARENT_CATEGORY = "herramientas"
 IMAGE_MAX_SIDE = 800
 # Lado menor de la foto original. Casi todas las fotos del PDF miden ~100 px;
