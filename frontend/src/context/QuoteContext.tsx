@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import type { Product } from "@/types/catalog";
+import { getSizeLabel } from "@/lib/variants";
 
 /* ==========================================================================
    Lista de interés / cotización
@@ -20,6 +21,8 @@ export interface QuoteItem {
   reference: string;
   name: string;
   brandName?: string;
+  /** Talla/medida de la variante elegida ("39", "XL", "10 mm"), si aplica. */
+  sizeLabel?: string;
   quantity: number;
 }
 
@@ -73,6 +76,7 @@ export function QuoteProvider({ children }: { children: ReactNode }) {
           reference: product.reference,
           name: product.name,
           brandName: product.brandName,
+          sizeLabel: getSizeLabel(product) ?? undefined,
           quantity,
         },
       ];

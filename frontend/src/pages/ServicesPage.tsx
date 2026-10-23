@@ -8,8 +8,28 @@ const services = [
     id: "planos-electricos",
     title: "Planos eléctricos",
     description:
-      "Diseño y elaboración de planos eléctricos para hogares y negocios. " +
-      "Consulta por WhatsApp para contarnos tu proyecto.",
+      "Diseño y elaboración de planos eléctricos para hogares y negocios.",
+  },
+  {
+    id: "cerca-electrica",
+    title: "Instalación de cerca eléctrica",
+    description:
+      "Instalación de cercas eléctricas perimetrales para proteger tu " +
+      "propiedad.",
+  },
+  {
+    id: "camaras-seguridad",
+    title: "Instalación de cámaras de seguridad",
+    description:
+      "Montaje y configuración de cámaras de seguridad para hogares y " +
+      "negocios.",
+  },
+  {
+    id: "trabajos-altura",
+    title: "Trabajos de altura",
+    description:
+      "Trabajos en altura con el equipo y las medidas de seguridad " +
+      "adecuadas.",
   },
 ];
 

@@ -14,6 +14,7 @@ export function QuotePage() {
       name: i.name,
       reference: i.reference,
       quantity: i.quantity,
+      sizeLabel: i.sizeLabel,
     }))
   );
 
@@ -44,6 +45,7 @@ export function QuotePage() {
                   </Link>
                   <span className="muted">
                     Ref: {item.reference}
+                    {item.sizeLabel ? ` · Talla/medida: ${item.sizeLabel}` : ""}
                     {item.brandName ? ` · ${item.brandName}` : ""}
                   </span>
                 </div>
