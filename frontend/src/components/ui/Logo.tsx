@@ -9,7 +9,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
     <span className="logo" aria-label={siteConfig.name}>
       <span className="logo-shield" aria-hidden="true">
         {/* Escudo */}
-        <svg className="logo-shield-bg" viewBox="0 0 64 72" width="46" height="52">
+        <svg className="logo-shield-bg" viewBox="0 0 64 72" width="100%" height="100%">
           <path
             d="M32 3
                C 32 3, 50 11, 57 13
