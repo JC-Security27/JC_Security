@@ -13,6 +13,7 @@ interface Offering {
   icon: ReactNode;
 }
 
+/* Sección 1: lo que ofrecemos (productos / contenido). */
 const offerings: Offering[] = [
   {
     to: "/catalogo",
@@ -50,8 +51,7 @@ const offerings: Offering[] = [
   {
     to: "/guias",
     title: "Guías de seguridad",
-    description:
-      "Consejos prácticos para proteger tu hogar y tu negocio.",
+    description: "Consejos prácticos para proteger tu hogar y tu negocio.",
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
         <path
@@ -64,19 +64,10 @@ const offerings: Offering[] = [
       </svg>
     ),
   },
-  {
-    to: "/redes",
-    title: "Redes sociales",
-    description: "Síguenos para novedades, promociones y novedades de productos.",
-    icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-        <circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="17" cy="6" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="17" cy="18" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <path d="M8.2 11 15 7M8.2 13 15 17" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
+];
+
+/* Sección 2: contáctanos (contacto / redes). */
+const contactOptions: Offering[] = [
   {
     to: "/contacto",
     title: "Contacto",
@@ -94,7 +85,37 @@ const offerings: Offering[] = [
       </svg>
     ),
   },
+  {
+    to: "/redes",
+    title: "Redes sociales",
+    description: "Síguenos para novedades, promociones y lanzamientos.",
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17" cy="6" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17" cy="18" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M8.2 11 15 7M8.2 13 15 17" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
 ];
+
+function OfferingCard({ offering }: { offering: Offering }) {
+  return (
+    <Link to={offering.to} className="card offering-card">
+      <span className="offering-icon" aria-hidden="true">
+        {offering.icon}
+      </span>
+      <span className="offering-body">
+        <span className="offering-title">{offering.title}</span>
+        <span className="offering-desc">{offering.description}</span>
+      </span>
+      <span className="offering-arrow" aria-hidden="true">
+        →
+      </span>
+    </Link>
+  );
+}
 
 export function HomePage() {
   return (
@@ -134,18 +155,22 @@ export function HomePage() {
 
         <div className="grid offerings-grid">
           {offerings.map((o) => (
-            <Link key={o.to} to={o.to} className="card offering-card">
-              <span className="offering-icon" aria-hidden="true">
-                {o.icon}
-              </span>
-              <span className="offering-body">
-                <span className="offering-title">{o.title}</span>
-                <span className="offering-desc">{o.description}</span>
-              </span>
-              <span className="offering-arrow" aria-hidden="true">
-                →
-              </span>
-            </Link>
+            <OfferingCard key={o.to} offering={o} />
+          ))}
+        </div>
+      </section>
+
+      {/* ----- Contáctanos ----- */}
+      <section className="section container">
+        <div className="section-head">
+          <span className="eyebrow">¿Hablamos?</span>
+          <h2>Contáctanos</h2>
+          <p>Estamos para ayudarte. Elige cómo prefieres comunicarte.</p>
+        </div>
+
+        <div className="grid offerings-grid">
+          {contactOptions.map((o) => (
+            <OfferingCard key={o.to} offering={o} />
           ))}
         </div>
       </section>
