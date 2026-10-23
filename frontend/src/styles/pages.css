@@ -1310,3 +1310,76 @@
   outline: none;
   border-color: var(--accent);
 }
+
+/* ==========================================================================
+   Ajustes responsive consolidados (móvil)
+   -------------------------------------------------------------------------
+   Pasada general para que toda la interfaz quede bien acomodada en celular.
+   Se agrega al final para que estas reglas tengan prioridad sobre las de
+   arriba ante igualdad de especificidad.
+   ========================================================================== */
+
+/* En móvil, los botones con texto largo pueden envolver en vez de forzar una
+   sola línea (que desborda o se ve apretada). No afecta escritorio. */
+@media (max-width: 640px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* Secciones con menos aire vertical para no hacer scroll de más. */
+  .section {
+    padding-block: var(--space-8);
+  }
+  .section-head {
+    margin-bottom: var(--space-5);
+  }
+
+  /* Fila de búsqueda del catálogo: campo arriba, botón limpiar debajo, ambos
+     a ancho completo y fáciles de tocar. */
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-field {
+    min-width: 0;
+  }
+  .search-row > .btn {
+    width: 100%;
+  }
+
+  /* Acciones del detalle de producto: botones apilados a ancho completo. */
+  .product-detail-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .product-detail-actions .btn {
+    width: 100%;
+  }
+
+  /* Selector de marcas: que no se corte y permita scroll si hay varias. */
+  .brand-selector {
+    gap: var(--space-2);
+  }
+
+  /* Tarjetas de servicios y ofertas a una sola columna real. */
+  .services-grid,
+  .projects-grid,
+  .offerings-grid,
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* En pantallas muy angostas, bajamos un punto el tamaño del texto de secciones
+   y dejamos que el robot flotante no tape los botones de las tarjetas. */
+@media (max-width: 400px) {
+  .catalog-cat-head h2 {
+    font-size: 1.1rem;
+  }
+  /* Espacio extra al final del contenido para que el robot IA no tape nada. */
+  #main {
+    padding-bottom: 96px;
+  }
+}
