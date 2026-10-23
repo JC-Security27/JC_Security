@@ -163,7 +163,6 @@ export function HomePage() {
       {/* ----- Contáctanos ----- */}
       <section className="section container">
         <div className="section-head">
-          <span className="eyebrow">¿Hablamos?</span>
           <h2>Contáctanos</h2>
           <p>Estamos para ayudarte. Elige cómo prefieres comunicarte.</p>
         </div>
