@@ -284,6 +284,19 @@ ul {
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--space-5);
+  box-sizing: border-box;
+}
+/* En móvil, menos padding lateral para aprovechar el ancho */
+@media (max-width: 520px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+
+#main {
+  display: block;
+  width: 100%;
+  overflow-x: clip;
 }
 
 .section {
