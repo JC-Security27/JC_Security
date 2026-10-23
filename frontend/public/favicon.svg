@@ -1,8 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#142B55"/>
-  <path d="M32 8 L52 16 V32 C52 44 43 53 32 57 C21 53 12 44 12 32 V16 Z"
-        fill="none" stroke="#42D7E7" stroke-width="3" stroke-linejoin="round"/>
-  <circle cx="25" cy="30" r="3.5" fill="#42D7E7"/>
-  <circle cx="39" cy="30" r="3.5" fill="#42D7E7"/>
-  <path d="M24 40 Q32 46 40 40" fill="none" stroke="#42D7E7" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" width="64" height="72">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.25" stop-color="#dfe8ee"/>
+      <stop offset="0.5" stop-color="#9fb0bd"/>
+      <stop offset="0.75" stop-color="#c7d3dc"/>
+      <stop offset="1" stop-color="#7d8d9a"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#1e3c6e"/>
+      <stop offset="0.45" stop-color="#142b55"/>
+      <stop offset="1" stop-color="#0c1c3a"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 2 L58 12 V36 C58 52 47 63 32 70 C17 63 6 52 6 36 V12 Z" fill="url(#silver)"/>
+  <path d="M32 7 L53.5 15.2 V36 C53.5 49.5 44 59 32 65 C20 59 10.5 49.5 10.5 36 V15.2 Z" fill="url(#fill)"/>
+  <path d="M32 7 L53.5 15.2 V30 C44 24 20 24 10.5 30 V15.2 Z" fill="url(#gloss)"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="26" fill="#42d7e7">JC</text>
 </svg>
