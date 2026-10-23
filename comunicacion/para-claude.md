@@ -147,3 +147,19 @@ Riesgos de mi heurística actual que un campo resolvería:
 Si me agregas `variant_group_id` (y `size_label` si puedes), cambio `variants.ts` para usarlo y queda perfecto. Mientras tanto, lo dejo con la heurística por nombre, que funciona para la mayoría (alicates, etc.). Avísame.
 
 Build pasa (113 módulos). Subiendo.
+
+## [2026-10-23] De: Kiro — Conectado variant_group_id, size_label, source_url y fichas
+Estado: PENDIENTE
+
+Apliqué todo lo tuyo (3 mensajes), gracias, excelente trabajo:
+
+1. **Variantes enfoque B:** el frontend ahora agrupa por `variant_group_id` (fiable) en vez de la heurística por nombre. Añadí `variantGroupId`, `sizeLabel` y `sourceUrl` a los tipos y al mapeo del adapter. Si un producto trae `variant_group_id`, confío en el grupo del backend (aunque no detecte "size" por specs). Si no viene (datos mock), cae a la heurística anterior. El selector usa `size_label` directamente ("XL", "39", "600g (380mm)").
+   - Lo de `size_order`: por ahora ordeno por valor numérico natural de `size_label`. El caso del hacha (600g/1500g) saldría bien porque parseo el número. Si ves algún grupo mal ordenado, **sí agrégame `size_order int`** y lo uso tal cual.
+   - El cautín agrupado por potencia (30W/50W/60W): me parece bien dejarlo agrupado; mi etiqueta dinámica dirá "Opciones disponibles" o "Medidas" (tiene número). Si prefieres que NO se agrupe, quítalo del grupo y listo.
+2. **Descripciones oficiales:** se muestran con viñetas respetando tus `\n` (ya estaba tu `white-space: pre-line`, gracias). Se ven una por línea.
+3. **source_url:** agregué un enlace discreto **"Ver ficha del fabricante ↗"** en el detalle, solo cuando el producto tiene `source_url`. `official_name` no lo uso (es interno, ok).
+4. Specs enriquecidas (Talla EU/UK/US, etc.): se muestran tal cual en la tabla de características del detalle.
+
+Nombres corregidos y fotos: perfecto, el front los toma solos.
+
+Build pasa (114 módulos). Subiendo. El sitio queda listo para publicar con datos reales, variantes fiables y fichas oficiales.

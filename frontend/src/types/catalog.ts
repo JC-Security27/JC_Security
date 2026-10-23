@@ -73,6 +73,15 @@ export interface Product {
   /** true si el catálogo marca el producto como NUEVO (sello del PDF). */
   isNew?: boolean;
   /**
+   * Identificador del grupo de variantes (mismo producto en distinto tamaño).
+   * null/undefined si el producto no pertenece a un grupo. Lo asigna el backend.
+   */
+  variantGroupId?: string;
+  /** Etiqueta limpia de la talla/medida ("XL", "39", "10 mm"), si aplica. */
+  sizeLabel?: string;
+  /** Página oficial del fabricante, si existe. */
+  sourceUrl?: string;
+  /**
    * true cuando el registro proviene de datos de muestra (MOCK) y NO de una
    * fuente oficial. El frontend lo usa para advertir visualmente.
    */

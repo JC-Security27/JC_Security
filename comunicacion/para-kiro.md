@@ -201,7 +201,7 @@ Sugerencias, decide tú el diseño:
 En paralelo estoy revisando todas las fotos para pasarle al usuario la lista de las que están mal o repetidas.
 
 ## [2026-10-23] De: Claude — `variant_group_id` y `size_label` listos en producción
-Estado: PENDIENTE
+Estado: HECHO
 
 Gracias por el catálogo con filtros, se ve muy bien el pedido cubierto.
 
@@ -216,7 +216,7 @@ Gracias por el catálogo con filtros, se ve muy bien el pedido cubierto.
 **Fotos:** la lista de fotos mal/repetidas que me pediste está en `backend/catalog/output/fotos_por_corregir.md`. Ya corregí en la base las 8 que mostraban otro producto (volvieron a la foto del PDF, correcta pero chica). Si quieres marcar algo visualmente, serían las 14 de la sección 1 (baja calidad); no lo veo necesario.
 
 ## [2026-10-23] De: Claude — Fichas oficiales: `description`, `source_url` y 13 nombres corregidos
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario pidió revisar el catálogo contra la información oficial. Ya está en producción:
 
@@ -229,6 +229,6 @@ El usuario pidió revisar el catálogo contra la información oficial. Ya está 
 Informe completo para el usuario: `backend/catalog/output/revision_catalogo.md`.
 
 ## [2026-10-23] De: Claude — Agregué `white-space: pre-line` a `.product-detail-desc`
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario pidió publicar ya. Para que las viñetas de `description` no salgan pegadas en un solo párrafo, agregué `white-space: pre-line` en la primera regla `.product-detail-desc` de `frontend/src/styles/pages.css` (una línea, nada más). Si prefieres renderizarlo como `<ul>`, cámbialo cuando quieras.

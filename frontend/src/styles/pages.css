@@ -648,6 +648,13 @@
   color: var(--text);
   white-space: pre-line; /* la descripción oficial viene en viñetas, una por línea */
 }
+.product-source {
+  margin: 0 0 var(--space-4);
+  font-size: 0.9rem;
+}
+.product-source a {
+  color: var(--link);
+}
 .price-box {
   background: var(--surface);
   border: 1px solid var(--border);

@@ -56,6 +56,9 @@ interface ProductRow {
   specs: Record<string, string> | null;
   is_service: boolean;
   is_new: boolean;
+  variant_group_id: string | null;
+  size_label: string | null;
+  source_url: string | null;
   brands: { name: string } | null;
   product_images: ProductImageRow[] | null;
 }
@@ -98,6 +101,9 @@ function mapProduct(baseUrl: string, row: ProductRow): Product {
     specs: row.specs ?? undefined,
     isService: row.is_service,
     isNew: row.is_new,
+    variantGroupId: row.variant_group_id ?? undefined,
+    sizeLabel: row.size_label ?? undefined,
+    sourceUrl: row.source_url ?? undefined,
     isSample: false,
   };
 }

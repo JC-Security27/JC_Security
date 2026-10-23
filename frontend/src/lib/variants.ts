@@ -33,8 +33,9 @@ export interface ProductGroup {
   name: string;
 }
 
-/** Devuelve el valor de talla/tamaño de un producto, si lo tiene. */
+/** Devuelve la talla/tamaño: prioriza size_label del backend, luego specs. */
 export function getSizeLabel(product: Product): string | null {
+  if (product.sizeLabel) return product.sizeLabel;
   if (!product.specs) return null;
   for (const key of SIZE_SPEC_KEYS) {
     const v = product.specs[key];
@@ -124,9 +125,14 @@ export function getVariantShortLabel(group: ProductGroup): string {
   return full.split(" ")[0].toLocaleLowerCase("es");
 }
 
-/** Clave de agrupación: nombre + categoría + marca. */
+/**
+ * Clave de agrupación. Si el backend proveyó variantGroupId (fiable), se usa
+ * ese. Si no (datos mock), cae a la heurística nombre + categoría + marca.
+ */
 function groupKey(p: Product): string {
+  if (p.variantGroupId) return `vg:${p.variantGroupId}`;
   return [
+    "n:",
     normalizeForSearch(p.name),
     p.categorySlug,
     p.brandId ?? "sin-marca",
@@ -152,10 +158,11 @@ export function groupByVariants(products: Product[]): ProductGroup[] {
 
   return order.map((key) => {
     const variants = map.get(key)!;
-    // Solo tratamos como "grupo con tallas" si hay más de uno Y al menos uno
-    // tiene etiqueta de tamaño (para no agrupar duplicados sin sentido).
+    // Si el grupo viene del backend (variantGroupId), confiamos en él. Si es
+    // por heurística, exigimos que al menos uno tenga etiqueta de tamaño.
+    const fromBackend = variants.some((v) => Boolean(v.variantGroupId));
     const anySize = variants.some((v) => getSizeLabel(v) !== null);
-    const hasVariants = variants.length > 1 && anySize;
+    const hasVariants = variants.length > 1 && (fromBackend || anySize);
 
     // Orden de variantes: por talla de forma natural (número si se puede).
     const sorted = hasVariants ? sortVariants(variants) : variants;

@@ -138,6 +138,18 @@ export function ProductPage() {
             <p className="product-detail-desc">{product.description}</p>
           )}
 
+          {product.sourceUrl && (
+            <p className="product-source">
+              <a
+                href={product.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver ficha del fabricante ↗
+              </a>
+            </p>
+          )}
+
           {/* ----- Tallas disponibles (solo si hay variantes de tamaño) ----- */}
           {hasVariants && group && (
             <div className="sizes">
