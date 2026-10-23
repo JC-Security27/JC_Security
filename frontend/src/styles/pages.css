@@ -599,7 +599,10 @@
 .brand-tile-all {
   font-weight: 600;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
 }
 @media (max-width: 520px) {
   .brand-tile {

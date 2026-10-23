@@ -40,10 +40,12 @@ export const DEMO_BRANDS: Brand[] = [
   { id: "dahua", name: "Dahua" },
 ];
 
-/** Devuelve la URL del logo de una marca, o null si no hay. */
+/** Devuelve la URL del logo de una marca, o null si no hay.
+ *  Si tenemos un logo local para esa marca, ese manda (son los logos
+ *  rectangulares aprobados por el cliente, con las letras en el color
+ *  correcto). Solo caemos al logoUrl del backend si no hay local. */
 export function getBrandLogo(brand: Brand): string | null {
-  if (brand.logoUrl) return brand.logoUrl; // backend tiene prioridad
-  return LOCAL_BRAND_LOGOS[brand.id] ?? null;
+  return LOCAL_BRAND_LOGOS[brand.id] ?? brand.logoUrl ?? null;
 }
 
 /**
