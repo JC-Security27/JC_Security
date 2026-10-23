@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/states";
 import { normalizeForSearch } from "@/lib/format";
 import { groupByVariants } from "@/lib/variants";
+import { withDemoBrands } from "@/config/brandLogos";
 import type { Brand, Category, Product } from "@/types/catalog";
 
 /** Cuántos productos mostrar por categoría en la vista agrupada. */
@@ -54,7 +55,8 @@ export function CatalogPage() {
       client.getCategories(),
       client.getBrands(),
     ]);
-    return { products: productsPage.items, categories, brands };
+    // Incluye marcas de ejemplo (Dahua) aunque aún no tengan productos.
+    return { products: productsPage.items, categories, brands: withDemoBrands(brands) };
   }, []);
 
   // Aplica búsqueda + marca + nuevos (la categoría se maneja aparte para poder
