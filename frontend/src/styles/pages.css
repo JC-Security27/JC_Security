@@ -684,9 +684,31 @@
   margin-top: var(--space-4);
   text-align: center;
 }
+/* El texto del botón "Ver los N de ..." puede ser largo: dejamos que
+   envuelva y centramos, en vez de forzar una sola línea que desborda. */
+.catalog-cat-more .btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+  max-width: 100%;
+}
 .chip-count {
   opacity: 0.7;
   font-weight: 700;
+}
+/* En móvil, los botones de "ver más / ver todos" ocupan el ancho completo
+   para que el texto respire y no queden apretados contra los bordes. */
+@media (max-width: 640px) {
+  .catalog-cat-more .btn {
+    width: 100%;
+  }
+  .catalog-cat-head {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .catalog-cat-head .btn {
+    white-space: normal;
+  }
 }
 
 /* ----- Botón volver ----- */
