@@ -451,3 +451,10 @@ ul {
 .grid-cards {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
+/* En móvil: siempre 2 productos por fila. */
+@media (max-width: 640px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+}

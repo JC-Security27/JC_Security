@@ -448,6 +448,26 @@
   flex: 1;
 }
 
+/* En móvil, con 2 tarjetas por fila, apilamos los botones y compactamos. */
+@media (max-width: 640px) {
+  .product-card-body {
+    padding: var(--space-3);
+    gap: var(--space-1);
+  }
+  .product-card-title {
+    font-size: 0.92rem;
+  }
+  .product-card-actions {
+    flex-direction: column;
+  }
+  .product-card-actions .btn {
+    width: 100%;
+  }
+  .product-ref {
+    font-size: 0.72rem;
+  }
+}
+
 /* ----- Controles del catálogo ----- */
 .catalog-controls {
   margin: var(--space-6) 0 var(--space-6);
