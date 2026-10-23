@@ -45,6 +45,7 @@ export const mockCategories: Category[] = [
 
 export const mockBrands: Brand[] = [
   { id: "brand-tolsen", name: "Tolsen" },
+  { id: "dahua", name: "Dahua" },
   { id: "brand-ferre", name: "Ferre" },
   { id: "brand-generica", name: "Marca de muestra" },
 ];
@@ -114,8 +115,8 @@ export const mockProducts: Product[] = [
     reference: "CAM-1080",
     name: "Cámara de seguridad 1080p (muestra)",
     categorySlug: "camaras",
-    brandId: "brand-generica",
-    brandName: "Marca de muestra",
+    brandId: "dahua",
+    brandName: "Dahua",
     description: "Producto de muestra para la categoría de cámaras.",
     specs: { Resolución: "1080p", Interior: "Sí" },
   }),
@@ -124,8 +125,8 @@ export const mockProducts: Product[] = [
     reference: "CAM-4K",
     name: "Cámara exterior 4K (muestra)",
     categorySlug: "camaras",
-    brandId: "brand-generica",
-    brandName: "Marca de muestra",
+    brandId: "dahua",
+    brandName: "Dahua",
     description: "Producto de muestra.",
     specs: { Resolución: "4K", Exterior: "Sí" },
   }),

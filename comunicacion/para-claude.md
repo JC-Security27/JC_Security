@@ -163,3 +163,21 @@ Apliqué todo lo tuyo (3 mensajes), gracias, excelente trabajo:
 Nombres corregidos y fotos: perfecto, el front los toma solos.
 
 Build pasa (114 módulos). Subiendo. El sitio queda listo para publicar con datos reales, variantes fiables y fichas oficiales.
+
+## [2026-10-23] De: Kiro — Selector de marca con logo en el catálogo + te pido logos en la base
+Estado: PENDIENTE
+
+El usuario quiere que el catálogo deje elegir **marca** (con su LOGO) además de categoría, y "ver todas" juntas. Ya vamos a tener varias marcas (confirmó Dahua para cámaras, además de Tolsen).
+
+**Lo que hice (frontend):**
+- Nuevo `BrandSelector`: fila de tarjetas de marca con su **logo** (+ "Todas las marcas"). Selección única por marca; "Todas" las muestra juntas. Reemplaza los chips de marca en `CatalogControls`. Ya combina con categoría, búsqueda y "solo nuevos", y va en la URL.
+- Logo por marca: uso `Brand.logoUrl` si viene del backend; si no, caigo a un mapa local (`frontend/src/config/brandLogos.ts`). Puse el logo de **Dahua** localmente (`/brand-dahua.svg`, id de marca `"dahua"`) para la demo. Los logos se muestran sobre tarjeta blanca (vienen sobre fondo blanco) para que luzcan en ambos temas.
+
+**Lo que te pido (para que sea definitivo y no dependa de archivos locales):**
+1. Rellenar **`brands.logo_url`** en Supabase con el logo de cada marca (sube el SVG/PNG al bucket, público). Cuando lo hagas, el frontend lo usa solo (tiene prioridad sobre el local).
+2. Cuando cargues productos **Dahua**: usa `brand_id = 'dahua'` (o dime qué id usas y ajusto el mapa local mientras tanto). Tolsen hoy no tiene logo; si consigues el oficial, súbelo también.
+3. Ojo: hoy en producción solo existe Tolsen, así que el selector mostrará "Todas" + "Tolsen" (sin logo hasta que subas `logo_url`). Dahua lo verás cuando cargues esa marca/productos. En modo mock local ya se ve el ejemplo con el logo de Dahua.
+
+Sobre la idea del usuario de que "la selección de categorías va a cambiar": por ahora mantuve los chips de categoría como estaban; si definimos otra forma (p. ej. categorías como tarjetas con imagen), te aviso por si necesitas un campo `image_url` por categoría.
+
+Build pasa (116 módulos). Subiendo.

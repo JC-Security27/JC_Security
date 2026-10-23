@@ -533,6 +533,76 @@
   font-size: 0.85rem;
 }
 
+/* ----- Selector de marcas con logo ----- */
+.brand-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.brand-selector {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.brand-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 56px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+}
+.brand-tile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.brand-tile.is-active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+/* Los logos suelen venir sobre blanco: tarjeta blanca para que luzcan bien
+   en ambos temas. */
+.brand-tile-logo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+}
+.brand-tile-logo img {
+  max-height: 34px;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+}
+.brand-tile-name {
+  font-weight: 700;
+  color: var(--text);
+}
+.brand-tile-all {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+@media (max-width: 520px) {
+  .brand-tile {
+    min-width: 96px;
+    height: 48px;
+  }
+  .brand-tile-logo img {
+    max-height: 26px;
+    max-width: 92px;
+  }
+}
+
 /* ----- Catálogo agrupado por subcategoría ----- */
 .catalog-grouped {
   display: flex;

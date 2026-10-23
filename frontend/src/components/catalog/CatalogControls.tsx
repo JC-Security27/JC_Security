@@ -1,4 +1,5 @@
 import type { Brand, Category } from "@/types/catalog";
+import { BrandSelector } from "./BrandSelector";
 
 /* Controles de búsqueda y filtros del catálogo: texto + categoría + marca +
    solo nuevos, combinables, con botón de limpiar. */
@@ -34,13 +35,6 @@ export function CatalogControls({
     filters.categorySlug !== "" ||
     filters.brandIds.length > 0 ||
     filters.onlyNew;
-
-  const toggleBrand = (id: string) => {
-    const set = new Set(filters.brandIds);
-    if (set.has(id)) set.delete(id);
-    else set.add(id);
-    onChange({ ...filters, brandIds: [...set] });
-  };
 
   return (
     <div className="catalog-controls">
@@ -135,38 +129,29 @@ export function CatalogControls({
         </div>
       )}
 
-      {/* Marcas + solo nuevos */}
-      {(brands.length > 1 || true) && (
-        <div className="filter-row" role="group" aria-label="Más filtros">
-          {brands.length > 1 && (
-            <>
-              <span className="filter-label">Marcas:</span>
-              {brands.map((b) => {
-                const active = filters.brandIds.includes(b.id);
-                return (
-                  <button
-                    key={b.id}
-                    type="button"
-                    className={`chip filter-chip ${active ? "is-active" : ""}`}
-                    aria-pressed={active}
-                    onClick={() => toggleBrand(b.id)}
-                  >
-                    {b.name}
-                  </button>
-                );
-              })}
-            </>
-          )}
-          <button
-            type="button"
-            className={`chip filter-chip ${filters.onlyNew ? "is-active" : ""}`}
-            aria-pressed={filters.onlyNew}
-            onClick={() => onChange({ ...filters, onlyNew: !filters.onlyNew })}
-          >
-            Solo nuevos
-          </button>
+      {/* Marcas (con logo) */}
+      {brands.length > 0 && (
+        <div className="brand-filter">
+          <span className="filter-label">Marcas:</span>
+          <BrandSelector
+            brands={brands}
+            selectedBrandIds={filters.brandIds}
+            onChange={(ids) => onChange({ ...filters, brandIds: ids })}
+          />
         </div>
       )}
+
+      {/* Solo nuevos */}
+      <div className="filter-row" role="group" aria-label="Más filtros">
+        <button
+          type="button"
+          className={`chip filter-chip ${filters.onlyNew ? "is-active" : ""}`}
+          aria-pressed={filters.onlyNew}
+          onClick={() => onChange({ ...filters, onlyNew: !filters.onlyNew })}
+        >
+          Solo nuevos
+        </button>
+      </div>
 
       {resultCount !== null && (
         <p className="result-count muted" aria-live="polite">
