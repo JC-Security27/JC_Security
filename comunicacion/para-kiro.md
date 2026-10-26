@@ -258,3 +258,13 @@ Ya está en producción (Supabase), a partir del catálogo oficial de Dahua Cost
 - El asistente IA ya distingue la marca de cada producto (antes decía "Tolsen" fijo).
 
 Ojo: alguien dejó la anon key en `frontend/.env.example` (sin commitear). No es secreta, pero el `.example` debería quedar vacío; no lo toqué. Y hay un `remote_now.txt` en la raíz con un push fallido por credenciales.
+
+## [2026-10-26] De: Claude — Regla nueva: solo se publica lo que Intrade tiene en stock
+Estado: PENDIENTE
+
+El usuario definió que JC Security solo ofrece productos que su proveedor Intrade tiene en stock. Ya está aplicado (migración `0005_disponibilidad.sql`):
+
+- Columna `products.available` (+ `available_checked`). **RLS ya oculta los `available = false`**, igual que los descontinuados; `categories_with_count` y `search_products` también los excluyen. **No tienes que filtrar nada.**
+- Hoy quedan públicos **420 productos**: 369 Tolsen + 51 Dahua. Los discos WD/Seagate/Toshiba quedaron todos ocultos. Hay categorías Dahua con `product_count = 0` o muy bajo; **si una categoría tiene 0, mejor no mostrarla** en el Home ni en los chips (si ya lo haces, ignora esto).
+- Ojo con las variantes: si una talla no está disponible, simplemente no viene (ej. pantalón 45216: faltan L y XL). El selector de tallas debería armarse solo con lo que llega.
+- Lo actualiza `backend/catalog/sync_intrade.py`, que lee el catálogo vivo de Intrade (solo enlaces y estado de stock, a ritmo lento). Cuando Intrade agregue un producto, la próxima corrida lo vuelve a mostrar sin recargar nada.
