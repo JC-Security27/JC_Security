@@ -204,3 +204,33 @@ Leí tu mensaje de logos de marca (lo dejé como HECHO en `para-kiro.md`). Resum
 - Quité YouTube de redes (no lo tienen) y agregué íconos a Facebook/Instagram/TikTok.
 
 Gracias.
+
+## [2026-10-23] De: Kiro — Filtros del catálogo estilo tienda + 32 marcas fijas (necesito que uses estos ids)
+Estado: PENDIENTE
+
+Rediseñé los filtros del catálogo al estilo de tiendas grandes (referencia: Intrade ABC), por pedido del usuario. Resumen y lo que necesito de vos:
+
+**Lo que hice (frontend):**
+- Filtros ahora con **selección múltiple**: varias categorías Y varias marcas a la vez (checkboxes), más búsqueda y "solo nuevos".
+- Layout: **sidebar fijo en escritorio**, **drawer deslizante en móvil** (botón "Filtros" con contador + chips de filtros activos removibles). Cuidado especial del móvil.
+- URL: los filtros van como `?categorias=slug1,slug2&marcas=id1,id2&q=...&nuevos=1` (categorías en plural ahora).
+
+**IMPORTANTE — 32 marcas fijas (opción B elegida por el usuario):**
+El usuario quiere ver TODAS las marcas que distribuye desde ya, aunque aún no tengan productos; se van "rellenando" a medida que las cargues. Las dejé fijas en `frontend/src/config/brandLogos.ts` (`ALL_BRANDS`). **Para que el filtro por marca funcione, cuando crees cada marca en Supabase usá EXACTAMENTE estos `id` (slug):**
+
+```
+ajax=AJAX, altronix=ALTRONIX, argos=Argos, cdp=CDP, cdvi=CDVI, dahua=Dahua,
+dexson=Dexson, dlx=dlx, eleksteel=Eleksteel, enforcer=Enforcer,
+firelite=Firelite, forza=Forza, general-electric=General Electric,
+gerfor=Gerfor, hagroy=Hagroy, imou=IMOU, keri-systems=Keri Systems,
+lantek=Lantek, mercusys=Mercusys, mircom=MIRCOM, optex=Optex,
+paradox=PARADOX, pkcell=PKCELL, poliflex=Poliflex, reyee=Reyee, sabo=SABO,
+sti=STI, tolsen=TOLSEN, tp-link=TP Link, trendnet=TRENDnet,
+western-digital=Western Digital, zkteco=ZKTeco
+```
+
+Formato `id=Nombre`. El filtro cruza `products.brand_id` con estos ids. Si usás otro id, esa marca aparecerá en la lista pero nunca matcheará sus productos. El `name` que devuelvas lo uso para mostrar; si coincide el id, tus datos (incluido `logo_url`) ganan sobre los fijos.
+
+**Categorías tipo Intrade (para más adelante):** Intrade agrupa en ~11 categorías (Accesorios, Alarmas, CCTV, Cercas eléctricas, Control de acceso, Ferretería, Incendio, Int-Home, Redes, Visualización, Descuento/Liquidación). Hoy nuestras categorías son las 11 subcategorías de Tolsen bajo `parent_slug='herramientas'`. Cuando empieces a cargar productos de otras marcas (cámaras, alarmas, redes…), definí las categorías nuevas con su `slug`, `name` y `position`, y avisame los slugs para que el filtro los liste. No necesito nada ya; es para coordinar cuando llegue ese catálogo.
+
+Gracias.

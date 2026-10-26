@@ -1413,3 +1413,264 @@
     padding-bottom: 96px;
   }
 }
+
+/* ==========================================================================
+   Catálogo con filtros tipo tienda (sidebar en escritorio / drawer en móvil)
+   ========================================================================== */
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+  margin-top: var(--space-4);
+}
+.catalog-results {
+  min-width: 0; /* evita que el grid de productos desborde */
+}
+
+/* ----- Panel de filtros ----- */
+.filters-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.filters-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.filters-title {
+  font-size: 1.15rem;
+  margin: 0;
+}
+.filters-search {
+  position: relative;
+}
+.filters-search .search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.filters-search input {
+  width: 100%;
+  padding: 0.6rem 0.8rem 0.6rem 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.filters-search input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.filter-group-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-1);
+}
+.filter-brand-search {
+  width: 100%;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-1);
+}
+.filter-brand-search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.filter-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+/* El bloque de marcas puede ser largo: scroll interno para no estirar todo. */
+.filter-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+.filter-check:hover {
+  background: var(--surface-2);
+}
+.filter-check input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.filter-check-label {
+  flex: 1;
+  min-width: 0;
+}
+.filter-check-count {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.filter-more-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--link);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: var(--space-1) 0;
+  cursor: pointer;
+}
+.filter-more-btn:hover {
+  text-decoration: underline;
+}
+.filter-empty {
+  font-size: 0.85rem;
+}
+
+/* ----- Toolbar de resultados (botón Filtros + conteo) ----- */
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.catalog-filters-btn {
+  /* Oculto en escritorio: el panel ya está a la vista en el sidebar. */
+  display: none;
+}
+.catalog-filters-badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #04222a;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* ----- Chips de filtros activos ----- */
+.active-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.active-chip-x {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.active-chip:hover .active-chip-x {
+  opacity: 1;
+}
+
+/* El encabezado y pie del drawer solo se ven en móvil. */
+.catalog-drawer-head,
+.catalog-drawer-foot {
+  display: none;
+}
+
+/* ----- Móvil: el sidebar se vuelve un drawer deslizante ----- */
+@media (max-width: 960px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+  .catalog-filters-btn {
+    display: inline-flex;
+  }
+  .catalog-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 300;
+    width: min(320px, 86vw);
+    background: var(--bg-elevated);
+    border-right: 1px solid var(--divider);
+    box-shadow: var(--shadow-hover);
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: var(--space-4);
+  }
+  .catalog-sidebar.is-open {
+    transform: translateX(0);
+  }
+  .catalog-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 290;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .catalog-drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-3);
+    border-bottom: 1px solid var(--divider);
+  }
+  .catalog-drawer-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--text);
+    padding: var(--space-1);
+  }
+  .catalog-drawer-foot {
+    display: block;
+    position: sticky;
+    bottom: 0;
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--divider);
+    background: var(--bg-elevated);
+  }
+  /* En el drawer, la lista de marcas puede usar más alto. */
+  .filter-check-list {
+    max-height: none;
+  }
+}

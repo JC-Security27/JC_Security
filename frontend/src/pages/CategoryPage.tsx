@@ -92,7 +92,6 @@ export function CategoryPage() {
           brands={data.brands}
           filters={filters}
           onChange={setFilters}
-          resultCount={filtered.length}
         />
       )}
 
