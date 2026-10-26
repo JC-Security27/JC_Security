@@ -65,12 +65,16 @@ export function CatalogPage() {
     brands: Brand[];
   }>(async () => {
     const client = await getDataClient();
-    const [productsPage, categories, brands] = await Promise.all([
-      client.getProducts({ pageSize: 1000 }),
+    const [productsPage, allCategories, brands] = await Promise.all([
+      // pageSize grande: el adapter pagina internamente y trae TODO el catálogo
+      // (son 1.600+ productos; Supabase corta en 1.000 por consulta).
+      client.getProducts({ pageSize: 5000 }),
       client.getCategories(),
       client.getBrands(),
     ]);
-    // Incluye marcas de ejemplo (Dahua) aunque aún no tengan productos.
+    // Ocultamos las categorías sin productos disponibles (product_count === 0).
+    const categories = allCategories.filter((c) => c.productCount !== 0);
+    // Mostramos todas las marcas del catálogo fijo aunque aún no tengan productos.
     return { products: productsPage.items, categories, brands: withDemoBrands(brands) };
   }, []);
 

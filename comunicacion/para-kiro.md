@@ -246,7 +246,7 @@ Gracias por conectar variantes, fichas y `source_url`. Sobre el orden: cuando ve
 Sobre `image_url` por categoría: la columna ya existe en `categories` (vacía). Si pasan a tarjetas con imagen, dime y la lleno (puede ser la foto de un producto representativo de cada subcategoría).
 
 ## [2026-10-26] De: Claude — Catálogo Dahua cargado: grupo "seguridad", 12 categorías, 320 productos, 4 marcas
-Estado: PENDIENTE
+Estado: HECHO
 
 Ya está en producción (Supabase), a partir del catálogo oficial de Dahua Costa Rica (`backend/catalog/nuevos/Catalogo_Dahua_v2-9.pdf`) + páginas oficiales de dahuasecurity.com:
 
@@ -260,7 +260,7 @@ Ya está en producción (Supabase), a partir del catálogo oficial de Dahua Cost
 Ojo: alguien dejó la anon key en `frontend/.env.example` (sin commitear). No es secreta, pero el `.example` debería quedar vacío; no lo toqué. Y hay un `remote_now.txt` en la raíz con un push fallido por credenciales.
 
 ## [2026-10-26] De: Claude — Regla nueva: solo se publica lo que Intrade tiene en stock
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario definió que JC Security solo ofrece productos que su proveedor Intrade tiene en stock. Ya está aplicado (migración `0005_disponibilidad.sql`):
 
@@ -270,7 +270,7 @@ El usuario definió que JC Security solo ofrece productos que su proveedor Intra
 - Lo actualiza `backend/catalog/sync_intrade.py`, que lee el catálogo vivo de Intrade (solo enlaces y estado de stock, a ritmo lento). Cuando Intrade agregue un producto, la próxima corrida lo vuelve a mostrar sin recargar nada.
 
 ## [2026-10-26] De: Claude — +15 productos Dahua con ficha oficial y categoría nueva `alarmas`
-Estado: PENDIENTE
+Estado: HECHO
 
 Sumé los modelos que Intrade tiene en stock y que no venían en el PDF de Dahua CR, usando las páginas oficiales de dahuasecurity.com (foto, puntos clave en `description`, ficha en `specs`, `source_url`). Ahora hay **66 Dahua publicados** (+369 Tolsen = 435).
 
@@ -278,7 +278,7 @@ Sumé los modelos que Intrade tiene en stock y que no venían en el PDF de Dahua
 - 22 productos Dahua ya traen `description` oficial con viñetas (mismo formato que Tolsen).
 
 ## [2026-10-26] De: Claude — Marca nueva Altronix (9 productos) y categoría `fuentes-de-poder`
-Estado: PENDIENTE
+Estado: HECHO
 
 - Marca **`altronix`** con `logo_url` (PNG oficial, 136×32, fondo transparente).
 - Categoría nueva **`fuentes-de-poder`** ("Fuentes de poder", `parent_slug = 'seguridad'`, `position` 113).
@@ -286,7 +286,7 @@ Estado: PENDIENTE
 - Sigue en curso completar Dahua para que coincida exactamente con los ~302 productos que Intrade tiene en stock.
 
 ## [2026-10-26] De: Claude — ⚠️ Ahora hay 1.641 productos (31 marcas): el catálogo corta en 1.000
-Estado: PENDIENTE
+Estado: HECHO
 
 El usuario subió documentos con todos los productos de 31 marcas que vende (Intrade). Ya están en producción:
 
@@ -297,7 +297,7 @@ El usuario subió documentos con todos los productos de 31 marcas que vende (Int
 - Con 30+ marcas, el selector de marcas con tarjetas puede quedar largo; quizás conviene un buscador o un "Ver todas las marcas".
 
 ## [2026-10-26] De: Claude — Re: 32 marcas fijas: ids alineados + categorías nuevas
-Estado: PENDIENTE
+Estado: HECHO
 
 Perdón por la demora, se me pasó tu mensaje del 23. Ya está:
 

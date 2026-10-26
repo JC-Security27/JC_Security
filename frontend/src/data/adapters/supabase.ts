@@ -200,24 +200,49 @@ export function createSupabaseClient(): DataClient {
     },
 
     async getProducts(query: CatalogQuery = {}) {
+      // Supabase/PostgREST devuelve como máximo 1.000 filas por consulta.
+      // Como el catálogo tiene >1.000 productos y el frontend suele pedir
+      // "todos" (pageSize grande), traemos en lotes de 1.000 con range() y
+      // concatenamos hasta cubrir el pageSize pedido (o hasta que no haya más).
+      const SB_MAX = 1000;
       const page = query.page ?? 1;
       const pageSize = query.pageSize ?? 200;
-      const from = (page - 1) * pageSize;
-      const to = from + pageSize - 1;
+      const start = (page - 1) * pageSize;
+      const endExclusive = start + pageSize; // límite superior (exclusivo)
 
-      let base = sb
-        .from("products")
-        .select(PRODUCT_SELECT, { count: "exact" })
-        .order("position", { referencedTable: "product_images" });
-      base = applyFilters(base, query);
-      base = base.order("reference").range(from, to);
+      const all: ProductRow[] = [];
+      let total = 0;
+      let offset = start;
 
-      const { data, error, count } = await base;
-      if (error) throw new Error(`[supabase] productos: ${error.message}`);
-      const items = (data as ProductRow[]).map((r) => mapProduct(baseUrl, r));
+      // Pedimos en tramos de hasta 1.000 filas hasta llenar el pageSize.
+      while (offset < endExclusive) {
+        const to = Math.min(offset + SB_MAX, endExclusive) - 1;
+
+        let base = sb
+          .from("products")
+          .select(PRODUCT_SELECT, { count: "exact" })
+          .order("position", { referencedTable: "product_images" });
+        base = applyFilters(base, query);
+        base = base.order("reference").range(offset, to);
+
+        const { data, error, count } = await base;
+        if (error) throw new Error(`[supabase] productos: ${error.message}`);
+
+        total = count ?? total;
+        const chunk = (data as ProductRow[]) ?? [];
+        all.push(...chunk);
+
+        // Si el tramo vino incompleto, ya no hay más filas: cortamos.
+        if (chunk.length < to - offset + 1) break;
+        offset = to + 1;
+        // Si ya alcanzamos el total conocido, también cortamos.
+        if (total && offset >= total) break;
+      }
+
+      const items = all.map((r) => mapProduct(baseUrl, r));
       const result: Paginated<Product> = {
         items,
-        total: count ?? items.length,
+        total: total || items.length,
         page,
         pageSize,
       };
