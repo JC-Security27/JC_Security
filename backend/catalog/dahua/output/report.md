@@ -1,6 +1,6 @@
 # Catálogo Dahua: revisión
 
-320 productos cargados; 5 con ficha oficial de dahuasecurity.com; 40 verificados en la lista de Intrade.
+336 productos cargados; 22 con ficha oficial de dahuasecurity.com; 56 verificados en la lista de Intrade.
 
 ## Código y modelo no concuerdan en el PDF (revisar) (5)
 

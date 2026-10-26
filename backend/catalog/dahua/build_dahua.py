@@ -21,6 +21,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -46,6 +47,7 @@ CATEGORIES = [  # slug, nombre, posición (las de Tolsen van de 0 a 10)
     ("solucion-movil", "Videovigilancia móvil"),
     ("videoporteros", "Videoporteros"),
     ("control-de-acceso", "Control de acceso y asistencia"),
+    ("alarmas", "Alarmas"),
     ("redes", "Switches y redes"),
     ("monitores", "Monitores"),
     ("otros-seguridad", "Otros de seguridad"),
@@ -71,14 +73,16 @@ PDF_SCHEMA = {"type": "object", "properties": {"items": {"type": "array", "items
 
 WEB_PROMPT = """Preparas fichas en español para un distribuidor autorizado de Dahua en Costa Rica, con la información OFICIAL de Dahua (en inglés).
 Devuelve:
+- name_es: nombre comercial corto en español, en MAYÚSCULAS, con los datos principales del nombre oficial (tipo de producto, resolución, lente…), sin el modelo ni la palabra DAHUA. No inventes.
 - features_es: los puntos clave traducidos fielmente, uno por elemento; no agregues ni resumas.
 - specs: entre 6 y 14 características de la tabla oficial, las más útiles para un comprador (resolución, sensor, lente, alcance IR, canales, compresión, almacenamiento, audio, alimentación, PoE, protección IP/IK…). Nombre en español; valor tal cual (traduce solo palabras sueltas como "Yes", "Auto", "Indoor"). No inventes."""
 
 WEB_SCHEMA = {"type": "object", "properties": {
+    "name_es": {"type": "string"},
     "features_es": {"type": "array", "items": {"type": "string"}},
     "specs": {"type": "array", "items": {"type": "object", "properties": {
         "name": {"type": "string"}, "value": {"type": "string"}}, "required": ["name", "value"], "additionalProperties": False}}},
-    "required": ["features_es", "specs"], "additionalProperties": False}
+    "required": ["name_es", "features_es", "specs"], "additionalProperties": False}
 
 
 def key(code):
@@ -105,6 +109,24 @@ def clean_model(model):
     m = re.sub(r"^DHI(NVR|IPC|ITC)", r"DHI-\1", m)
     m = re.sub(r"\b(HAC|IPC)-HD-(W|BW|FW)", r"\1-HD\2", m)
     return m
+
+
+URL_CATEGORY = [  # sección de dahuasecurity.com -> categoría del sitio
+    (r"alarm", "alarmas"),
+    (r"video-intercom|/vto|/vth|/vtm", "videoporteros"),
+    (r"access-control|time-attendance", "control-de-acceso"),
+    (r"network-recorder|/nvr|/xvr|recorders", "grabadores"),
+    (r"hdcvi-camera", "camaras-hdcvi"),
+    (r"camera-accessor|/accessories|mount|tester|keyboard", "accesorios-seguridad"),
+    (r"transmission|switch", "redes"),
+    (r"monitor|display", "monitores"),
+    (r"network-camera|wireless-products|4g-camera|wi-fi|ptz|camera", "camaras-ip"),
+]
+
+
+def category_from_url(url):
+    path = url.lower()
+    return next((c for pat, c in URL_CATEGORY if re.search(pat, path)), "otros-seguridad")
 
 
 def number_conflict(code, model):
@@ -180,6 +202,28 @@ def fetch_bytes(url):
     return cached.read_bytes()
 
 
+def clean_name(name):
+    """Nombre en MAYÚSCULAS y solo con letras latinas (el modelo a veces mete otro alfabeto)."""
+    fixes = {"ენერგ": "ENERG"}  # georgiano que el modelo metió en "ENERGÍA"
+    for bad, good in fixes.items():
+        name = name.replace(bad, good)
+    name = name.upper()
+    odd = [c for c in name if c.isalpha() and not ("A" <= c <= "Z" or c in "ÁÉÍÓÚÑÜ")]
+    if odd:
+        raise ValueError(f"Nombre con caracteres raros: {name}")
+    return name
+
+
+def first_image(urls, out_path):
+    """Primera foto oficial que se pueda descargar (algunas devuelven 403)."""
+    for url in urls:
+        try:
+            return to_webp(fetch_bytes(url), out_path)
+        except (urllib.error.URLError, OSError):
+            continue
+    return None
+
+
 def to_webp(data, out_path, min_side=0):
     img = Image.open(io.BytesIO(data)).convert("RGBA")
     img = Image.alpha_composite(Image.new("RGBA", img.size, "white"), img).convert("RGB")
@@ -244,8 +288,9 @@ def main():
             description = "\n".join(f"• {f}" for f in web["features_es"]) or None
             specs = {x["name"]: x["value"] for x in web["specs"] if x["value"]}
             source_url, official_name = url, f"{data['model']} {data['name']}"
-            if data["images"]:
-                w, h = to_webp(fetch_bytes(data["images"][0]), OUT / "images" / fname)
+            size = first_image(data["images"], OUT / "images" / fname)
+            if size:
+                w, h = size
                 image = {"width": w, "height": h, "needsReview": False, "officialImage": True}
         if not specs:
             specs = {x["name"]: x["value"] for x in s["specs"] if x["value"]}
@@ -259,12 +304,36 @@ def main():
         brand = next((b for pat, b in OTHER_BRANDS if re.search(pat, model)), BRAND)
         specs = {"Código Dahua CR": p["code"], **specs}
         products.append({
-            "id": f"dahua-{k}", "reference": model, "name": s["name_es"], "categorySlug": p["category"],
+            "id": f"dahua-{k}", "reference": model, "name": clean_name(s["name_es"]), "categorySlug": p["category"],
             "brandId": brand["id"], "brandName": brand["name"], "description": description,
             "images": [{"url": f"images/{fname}", "alt": f"{s['name_es'].capitalize()} {brand['name']} {model}", **image}] if image else [],
             "specs": specs, "isNew": False, "discontinued": False, "sourceUrl": source_url, "officialName": official_name,
             "verifiedIntrade": verified, "source": {"page": p["page"]},
         })
+    # Modelos con página oficial (vienen de la lista de Intrade) que no estaban en el PDF.
+    present = {key(p["reference"]) for p in products}
+    for k, (url, data) in official.items():
+        if k in present or not data["images"]:
+            continue
+        web = ask(WEB_PROMPT, WEB_SCHEMA, {"model": data["model"], "name": data["name"], "features": data["features"],
+                                            "specs": data["specs"]}, api_key)
+        fname = f"dahua-{k}.webp"
+        size = first_image(data["images"], OUT / "images" / fname)
+        if not size:
+            report["sin_foto"].append(f"{data['model']}: la web de Dahua no deja descargar sus fotos (no se carga)")
+            continue
+        w, h = size
+        products.append({
+            "id": f"dahua-{k}", "reference": data["model"], "name": clean_name(web["name_es"]), "categorySlug": category_from_url(url),
+            "brandId": BRAND["id"], "brandName": BRAND["name"],
+            "description": "\n".join(f"• {f}" for f in web["features_es"]) or None,
+            "images": [{"url": f"images/{fname}", "alt": f"{web['name_es'].capitalize()} Dahua {data['model']}",
+                        "width": w, "height": h, "needsReview": False, "officialImage": True}],
+            "specs": {x["name"]: x["value"] for x in web["specs"] if x["value"]}, "isNew": False, "discontinued": False,
+            "sourceUrl": url, "officialName": f"{data['model']} {data['name']}", "verifiedIntrade": True,
+            "source": {"page": None},
+        })
+        print(f"oficial: {data['model']} -> {web['name_es']} [{category_from_url(url)}]")
     used = {p["categorySlug"] for p in products}
     brands = [BRAND] + [b for _, b in OTHER_BRANDS if any(p["brandId"] == b["id"] for p in products)]
     catalog = {"source": "Catalogo_Dahua_v2-9.pdf + dahuasecurity.com", "brands": brands,

@@ -268,3 +268,11 @@ El usuario definió que JC Security solo ofrece productos que su proveedor Intra
 - Hoy quedan públicos **420 productos**: 369 Tolsen + 51 Dahua. Los discos WD/Seagate/Toshiba quedaron todos ocultos. Hay categorías Dahua con `product_count = 0` o muy bajo; **si una categoría tiene 0, mejor no mostrarla** en el Home ni en los chips (si ya lo haces, ignora esto).
 - Ojo con las variantes: si una talla no está disponible, simplemente no viene (ej. pantalón 45216: faltan L y XL). El selector de tallas debería armarse solo con lo que llega.
 - Lo actualiza `backend/catalog/sync_intrade.py`, que lee el catálogo vivo de Intrade (solo enlaces y estado de stock, a ritmo lento). Cuando Intrade agregue un producto, la próxima corrida lo vuelve a mostrar sin recargar nada.
+
+## [2026-10-26] De: Claude — +15 productos Dahua con ficha oficial y categoría nueva `alarmas`
+Estado: PENDIENTE
+
+Sumé los modelos que Intrade tiene en stock y que no venían en el PDF de Dahua CR, usando las páginas oficiales de dahuasecurity.com (foto, puntos clave en `description`, ficha en `specs`, `source_url`). Ahora hay **66 Dahua publicados** (+369 Tolsen = 435).
+
+- Categoría nueva **`alarmas`** (`parent_slug = 'seguridad'`, `position` 109). Las siguientes se corrieron un lugar (`redes` 110, `monitores` 111, `otros-seguridad` 112).
+- 22 productos Dahua ya traen `description` oficial con viñetas (mismo formato que Tolsen).

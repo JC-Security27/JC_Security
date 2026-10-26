@@ -84,25 +84,32 @@
       "position": 108
     },
     {
+      "id": "alarmas",
+      "slug": "alarmas",
+      "name": "Alarmas",
+      "parentSlug": "seguridad",
+      "position": 109
+    },
+    {
       "id": "redes",
       "slug": "redes",
       "name": "Switches y redes",
       "parentSlug": "seguridad",
-      "position": 109
+      "position": 110
     },
     {
       "id": "monitores",
       "slug": "monitores",
       "name": "Monitores",
       "parentSlug": "seguridad",
-      "position": 110
+      "position": 111
     },
     {
       "id": "otros-seguridad",
       "slug": "otros-seguridad",
       "name": "Otros de seguridad",
       "parentSlug": "seguridad",
-      "position": 111
+      "position": 112
     }
   ],
   "products": [
@@ -4650,7 +4657,7 @@
       "categorySlug": "camaras-ip",
       "brandId": "dahua",
       "brandName": "Dahua",
-      "description": "• Vista panorámica ojo de pez\n• Salida máxima de 8 MP (3280 × 2480) a 30 fps\n• Admite dewarping frontal y dewarping posterior para una visualización intuitiva\n• LED IR integrado, la distancia máxima de iluminación es de 10 m\n• Micrófono dual y altavoz integrados: conversación segura en tiempo real\n• Clasificación IP67 e IK10 para protección contra entornos hostiles\n• Conteo de personas y mapa de calor para análisis del tráfico de clientes",
+      "description": "• Vista fisheye panorámica\n• Entrega un máximo de 8 MP (3280 × 2480) a 30 fps\n• Admite dewarping frontal y dewarping posterior para una visualización intuitiva\n• LED IR integrado; la distancia máxima de iluminación es de 10 m\n• Micrófono dual y altavoz integrados: comunicación segura en tiempo real\n• Clasificación IP67 e IK10 para protección contra entornos hostiles\n• Conteo de personas y mapa de calor para análisis del tráfico de clientes",
       "images": [
         {
           "url": "images/dahua-ipcebw8842as.webp",
@@ -4663,18 +4670,18 @@
       ],
       "specs": {
         "Código Dahua CR": "IPC-EBW8842AS",
-        "Resolución máxima": "3280 (H) × 2480 (V)",
         "Sensor de imagen": "1/1.7\" CMOS",
+        "Resolución máxima": "3280 (H) × 2480 (V)",
         "Lente": "1.85 mm",
-        "Distancia de iluminación": "1.85 mm: Up to 10 m (32.81 ft) (IR LED)",
+        "Apertura máxima": "F2.0",
+        "Distancia de iluminación": "Up to 10 m (32.81 ft) (IR LED)",
         "Compresión de video": "H.265; H.264; H.264H; MJPEG (Only supported by the sub stream)",
-        "Flujo de video": "3 streams",
-        "Compresión de audio": "G.711a; G.711Mu; G.726; PCM; G.723",
-        "Micrófono integrado": "Sí",
-        "Altavoz integrado": "Sí",
+        "Canales de audio": "1 channel (RCA port) / 1 channel (RCA port)",
+        "Almacenamiento": "FTP; SFTP; Micro SD card (support max. 256 G); NAS",
         "Alimentación": "12 VDC/PoE",
         "Protección": "IP67; IK10",
-        "Almacenamiento": "FTP; SFTP; Micro SD card (support max. 256 G); NAS"
+        "Temperatura de operación": "–40 °C to +60 °C (–40 °F to +140 °F)",
+        "Conteo de personas": "Supports 4 rules to count the number of people entering, exiting, and staying separately. It will trigger alarm linkage when the number of people who entering, exiting or staying exceeds the threshold. It can display and export reports based on year, month, week, day or custom time. Supports 4 rules to count the number of people in area and will trigger alarm linkage when the average strand time or people number in the area exceeds the threshold. It can display and export reports based on month, week, day or custom time."
       },
       "isNew": false,
       "discontinued": false,
@@ -7196,7 +7203,7 @@
       "categorySlug": "accesorios-seguridad",
       "brandId": "dahua",
       "brandName": "Dahua",
-      "description": "• Construida en aleación de aluminio\n• Caja de conexiones IP66\n• Contiene salidas de cable en la parte inferior y en los laterales para hacer el cableado más conveniente\n• Compatible con cámaras específicas, diseño bonito y elegante",
+      "description": "• Fabricada en aleación de aluminio\n• Caja de conexiones IP66\n• Contiene salidas para cables en la parte inferior y los lados para facilitar el cableado\n• Compatible con cámaras específicas, con un diseño bello y elegante",
       "images": [
         {
           "url": "images/dahua-pfa121.webp",
@@ -7376,7 +7383,7 @@
       "categorySlug": "accesorios-seguridad",
       "brandId": "dahua",
       "brandName": "Dahua",
-      "description": "• Construido de material SECC y SUS304\n• Compatible con cajas de conexión, soportes de montaje en pared, cajas de alimentación y articulaciones universales\n• Diseñado para múltiples tipos de postes de 80-150 mm de ancho",
+      "description": "• Fabricado en material SECC y SUS304\n• Compatible con cajas de conexión, soportes de montaje en pared, cajas de alimentación y juntas universales\n• Diseñado para múltiples tipos de postes de 80 a 150 mm de ancho",
       "images": [
         {
           "url": "images/dahua-pfa150.webp",
@@ -7828,7 +7835,7 @@
       "categorySlug": "accesorios-seguridad",
       "brandId": "dahua",
       "brandName": "Dahua",
-      "description": null,
+      "description": "• Control de visualización de video HDCVI/AHD/TVI/CVBS\n• Fuente de alimentación CC de 12 V/1 A para la cámara\n• Compatible con control RS-485\n• Compatible con prueba de audio\n• Carga a través de conector USB\n• Compacto y portátil, diseñado con una correa de muñeca desmontable\n• Batería de ion de litio 18650 reemplazable",
       "images": [
         {
           "url": "images/dahua-pfm904.webp",
@@ -7844,8 +7851,8 @@
       },
       "isNew": false,
       "discontinued": false,
-      "sourceUrl": null,
-      "officialName": null,
+      "sourceUrl": "https://www.dahuasecurity.com/products/accessories/camera-accessories/testers/pfm904",
+      "officialName": "PFM904 Integrated Mount Tester",
       "verifiedIntrade": true,
       "source": {
         "page": 37
@@ -9189,7 +9196,7 @@
       "categorySlug": "control-de-acceso",
       "brandId": "dahua",
       "brandName": "Dahua",
-      "description": "• Lector de tarjetas resistente al agua\n• Protocolo RS-485 y Wiegand 34\n• Lectura de tarjeta Mifare Classic 1K (13.56MHz)\n• Avisos mediante zumbador y luz indicadora\n• Protección IP67",
+      "description": "• Lector de tarjetas resistente al agua\n• Protocolo RS-485 y Wiegand 34\n• Lectura de tarjeta Mifare Classic 1K (13,56 MHz)\n• Indicaciones mediante zumbador y luz indicadora\n• Protección IP67",
       "images": [
         {
           "url": "images/dahua-asr1200e.webp",
@@ -10922,6 +10929,558 @@
       "verifiedIntrade": false,
       "source": {
         "page": 58
+      }
+    },
+    {
+      "id": "dahua-sd49425gbhnr",
+      "reference": "SD49425GB-HNR",
+      "name": "CÁMARA PTZ DE RED IR STARLIGHT 4MP 25X",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 4 MP\n• Zoom óptico de 25× que proporciona vistas de cerca sobre áreas extensas\n• Vista nocturna amplia con distancia IR de hasta 100 m para monitoreo 24/7\n• Clasificación mejorada de personas y vehículos basada en aprendizaje profundo\n• Detección de rostros con soporte para captura simultánea de 32 rostros\n• Excelente rendimiento en baja iluminación con tecnología Starlight\n• Alta velocidad preestablecida y manual que hacen que la PTZ sea receptiva\n• Protección IP66 y TVS 6000 V con resistencia a rayos/sobretensión/transitorios de voltaje",
+      "images": [
+        {
+          "url": "images/dahua-sd49425gbhnr.webp",
+          "alt": "Cámara ptz de red ir starlight 4mp 25x Dahua SD49425GB-HNR",
+          "width": 514,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución": "4MP",
+        "Zoom óptico": "25×",
+        "Distancia IR": "100 m",
+        "Clasificación de personas y vehículos": "Yes",
+        "Detección de rostros": "Yes",
+        "Captura simultánea de rostros": "32 faces",
+        "Tecnología Starlight": "Yes",
+        "Protección": "IP66 & TVS 6000V"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/network-products/ptz-cameras/wizsense-series/sd4/sd49425gb-hnr",
+      "officialName": "SD49425GB-HNR 4MP 25x Starlight IR Network PTZ Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-pfb300c",
+      "reference": "PFB300C",
+      "name": "SOPORTE DE TECHO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Fabricado en aleación de aluminio y material PC, es rentable\n• Adecuado para una variedad de cámaras y tiene un diseño elegante",
+      "images": [
+        {
+          "url": "images/dahua-pfb300c.webp",
+          "alt": "Soporte de techo Dahua PFB300C",
+          "width": 470,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/accessories/camera-accessories/camera-mounts/ceiling-mount-brackets/pfb300c",
+      "officialName": "PFB300C Ceiling Mount Bracket",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipcpfw3849sa180aspv",
+      "reference": "IPC-PFW3849S-A180-AS-PV",
+      "name": "CÁMARA IP BULLET FIJA 8 MP 180° TIOC DUO",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 8 MP\n• Imagen de 180° mediante fusión de empalme a nivel de píxel\n• Smart Dual Light: luces IR y LED integradas con 3 modos de iluminación compatibles\n• Luces de advertencia rojas y azules y sonidos de alarma para disuasión activa\n• Ampliación electrónica y seguimiento de los objetivos de las alarmas inteligentes\n• Clasificación de personas y vehículos basada en aprendizaje profundo mejorado\n• Micrófono dual y altavoz integrados: conversación segura en tiempo real\n• IP67 para protección contra entornos adversos",
+      "images": [
+        {
+          "url": "images/dahua-ipcpfw3849sa180aspv.webp",
+          "alt": "Cámara ip bullet fija 8 mp 180° tioc duo Dahua IPC-PFW3849S-A180-AS-PV",
+          "width": 800,
+          "height": 607,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución máxima": "8 MP",
+        "Sensor de imagen": "1/2.7\" CMOS",
+        "Lente": "2.8 mm",
+        "Iluminación IR": "50 m",
+        "Luz blanca": "40 m",
+        "Compresión de video": "H.265",
+        "Audio": "Micrófono dual y altavoz integrados",
+        "Almacenamiento": "Tarjeta Micro SD",
+        "Alimentación": "12 V CC/PoE",
+        "Protección": "IP67"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw3849s-a180-as-pv",
+      "officialName": "IPC-PFW3849S-A180-AS-PV 2x4MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipchfw3449t1aspvpro",
+      "reference": "IPC-HFW3449T1-AS-PV-PRO",
+      "name": "CÁMARA DE RED BALA FIJA WIZSENSE 4 MP CON DETERRENCIA ACTIVA Y DOBLE ILUMINACIÓN",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 4 MP\n• Calidad de imagen excepcional en entornos con poca luz mediante la tecnología WizColor\n• Luces de advertencia rojas y azules y sonidos de alarma para disuasión activa\n• Modelos Xinghan Vision: mejora integral de la detección de objetivos e imagen\n• Clasificación mejorada de humanos y vehículos basada en aprendizaje profundo\n• AcuPick permite una búsqueda rápida y precisa de humanos y vehículos\n• Micrófono dual y altavoz integrados: conversación segura en tiempo real\n• IP67 para protección contra entornos hostiles",
+      "images": [
+        {
+          "url": "images/dahua-ipchfw3449t1aspvpro.webp",
+          "alt": "Cámara de red bala fija wizsense 4 mp con deterrencia activa y doble iluminación Dahua IPC-HFW3449T1-AS-PV-PRO",
+          "width": 800,
+          "height": 463,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución máxima": "2688 (H) × 1520 (V)",
+        "Sensor de imagen": "1/1.8\" CMOS",
+        "Distancia de iluminación": "2.8 mm: Hasta 40 m (IR); Hasta 40 m (luz cálida) 3.6 mm: Hasta 60 m (IR); Hasta 50 m (luz cálida)",
+        "Distancia focal": "2.8 mm; 3.6 mm",
+        "Apertura máxima": "F1.0",
+        "Protección": "IP67",
+        "Temperatura de operación": "–40 °C a +60 °C (–40 °F a +140 °F)",
+        "Alimentación": "12 VDC (±30%); PoE+ (802.3at)",
+        "Consumo de energía": "Básico: 3.7 W (12 VDC), 5.5 W (PoE); Máx.: 11.4 W (12 VDC), 14.3 W (PoE) (H.265 + WDR+ luz cálida + sirena y luz de disuasión activa + inteligencia activada)",
+        "Compresión de video": "H.265; H.264; H.264H; H.264B; MJPEG (solo compatible con el substream)",
+        "Velocidad de bits de video": "H.264: 3 kbps–16384 kbps; H.265: 3 kbps–16384 kbps",
+        "Almacenamiento": "FTP; SFTP; tarjeta Micro SD (soporta máx. 512 GB); NAS",
+        "Puerto de red": "RJ-45 (10/100 Base-T)",
+        "Audio / Micrófono integrado": "Sí, micrófono dual integrado"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3449t1-as-pv-pro",
+      "officialName": "IPC-HFW3449T1-AS-PV-PRO 4MP Smart Dual Light Active Deterrence Fixed-focal Bullet WizSense Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipchdbw3441rasp",
+      "reference": "IPC-HDBW3441R-AS-P",
+      "name": "CÁMARA DOMO FIJA DE RED WIZSENSE 4 MP GRAN ANGULAR",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 4 MP\n• 3 flujos para diversas necesidades de aplicación\n• Clasificación mejorada de humanos y vehículos basada en aprendizaje profundo\n• Amplía electrónicamente y sigue los objetivos de las alarmas inteligentes\n• Estrategias adaptativas de control de tasa de bits para reducir el costo de almacenamiento\n• Micrófono integrado para seguridad de audio en tiempo real\n• Compatible con tarjeta Micro SD de hasta xxxG\n• Clasificación IP67 e IK10 para protección contra entornos adversos",
+      "images": [
+        {
+          "url": "images/dahua-ipchdbw3441rasp.webp",
+          "alt": "Cámara domo fija de red wizsense 4 mp gran angular Dahua IPC-HDBW3441R-AS-P",
+          "width": 800,
+          "height": 735,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Sensor de imagen": "1/3\" CMOS",
+        "Resolución máxima": "2688 × 1520",
+        "Lente": "2.8 mm",
+        "Distancia de infrarrojos": "30 m",
+        "Compresión de video": "H.265",
+        "Audio": "Micrófono integrado",
+        "Ranura para tarjeta Micro SD": "Max. 256 GB",
+        "Alimentación": "12 VDC / PoE",
+        "Protección": "IP67, IK10"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/network-products/network-cameras/wizsense-3-series/ir/ipc-hdbw3441r-as-p",
+      "officialName": "IPC-HDBW3441R-AS-P 4MP Wide Angle Fixed Dome WizSense Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-hap301",
+      "reference": "HAP301",
+      "name": "MICRÓFONO DE ALTA FIDELIDAD ANALÓGICO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Captación de alta fidelidad.\n• Usado para la adquisición de sonido dentro de 1~150 metros cuadrados.",
+      "images": [
+        {
+          "url": "images/dahua-hap301.webp",
+          "alt": "Micrófono de alta fidelidad analógico Dahua HAP301",
+          "width": 767,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Tipo": "Analog pickup",
+        "Micrófono": "High-fidelity silicone microphone",
+        "Direccionalidad": "Omnidirection",
+        "Rango de captación": "1–150 square meters; around 7 m radius",
+        "Respuesta de frecuencia": "20 Hz–20 kHz",
+        "Relación señal/ruido": "71 dB (1 KHz and Max dB SPL)",
+        "Nivel de ruido equivalente": "≤28 dB spl (A)",
+        "Rango dinámico": "54 dB (1 KHz and Max dB SPL)",
+        "Sensibilidad": "–38 dB ± 1 dB (re 0 dB=1 V/Pa@1 kHz）",
+        "Alimentación": "12 VDC",
+        "Consumo de energía": "<2 W",
+        "Protección": "IP2X"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/discontinued-products/accessories/hap301",
+      "officialName": "HAP301 Hi-fidelity Pickup",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-cs40108et110",
+      "reference": "CS4010-8ET-110",
+      "name": "SWITCH DE ESCRITORIO GESTIONADO EN LA NUBE DE 10 PUERTOS CON 8 PUERTOS POE",
+      "categorySlug": "redes",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Soporta gestión en la nube mediante DoLynk Care\n• Genera automáticamente la topología de red, simplificando la gestión\n• Cumple con IEEE802.3af, IEEE802.3at, Hi-PoE e IEEE802.3bt, hasta 90 W para un solo puerto\n• Funciona en temperaturas de -10 °C a +55 °C\n• Admite transmisión PoE de larga distancia de 250 m, PoE watchdog",
+      "images": [
+        {
+          "url": "images/dahua-cs40108et110.webp",
+          "alt": "Switch de escritorio gestionado en la nube de 10 puertos con 8 puertos poe Dahua CS4010-8ET-110",
+          "width": 800,
+          "height": 366,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/transmission/cloud-managed-switches/cs4010-8et-110",
+      "officialName": "CS4010-8ET-110 10-Port Cloud Managed Desktop Switch with 8-Port PoE",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-asr2200ab",
+      "reference": "ASR2200A-B",
+      "name": "LECTOR DE TARJETAS Y BLUETOOTH",
+      "categorySlug": "control-de-acceso",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Lector resistente al agua delgado para tarjeta y Bluetooth\n• Protocolo RS-485 y Wiegand 34\n• Lectura de tarjeta Mifare Classic 1K (13.56MHz)\n• Compatible con ASC3202B\n• Avisos mediante zumbador y luz indicadora\n• Protección IP66",
+      "images": [
+        {
+          "url": "images/dahua-asr2200ab.webp",
+          "alt": "Lector de tarjetas y bluetooth Dahua ASR2200A-B",
+          "width": 315,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Tipo de producto": "Slim Water-proof Card and Bluetooth Reader",
+        "Protocolo": "RS-485 and Wiegand 34 Protocol",
+        "Tarjeta compatible": "Mifare Classic 1K Card (13.56MHz) Reading",
+        "Compatibilidad": "Works with ASC3202B",
+        "Indicadores": "Prompts Using The Buzzer and Indicator Light",
+        "Protección": "IP66 Protection"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/access-control-&-time-attendance/access-control/readers/asr2200a-b",
+      "officialName": "ASR2200A-B Dahua Card Swiping, Bluetooth card Reader",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-arm320w2",
+      "reference": "ARM320-W2",
+      "name": "EXPANSOR DE ENTRADAS INALÁMBRICO",
+      "categorySlug": "alarmas",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Admite seis tipos de alarmas: intrusión, médica, incendio, emergencia, gas y sabotaje.\n• Otorga alta seguridad y estabilidad de comunicación mediante un mecanismo de comunicación inalámbrica cifrada bidireccional.\n• Activa alarmas cuando el dispositivo se mueve.",
+      "images": [
+        {
+          "url": "images/dahua-arm320w2.webp",
+          "alt": "Expansor de entradas inalámbrico Dahua ARM320-W2",
+          "width": 392,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/la/products/alarms/wireless-alarm/accessories/arm320-w2",
+      "officialName": "ARM320-W2 Dahua Wireless Input Expander",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-vto2201fps2",
+      "reference": "VTO2201F-P-S2",
+      "name": "ESTACIÓN DE PUERTA IP PARA VILLA 2MP 168.6°",
+      "categorySlug": "videoporteros",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Cámara HD colorida de 2 MP y 168.6°\n• IK07 e IP65; carcasa metálica\n• Admite montaje en superficie y empotrado\n• Fuente de alimentación PoE estándar\n• Puertos del dispositivo: 1 RS485, 1 salida de alarma, 1 botón de salida, 1 detección de estado de puerta, 1 control de cerradura (1 con modo seguro)",
+      "images": [
+        {
+          "url": "images/dahua-vto2201fps2.webp",
+          "alt": "Estación de puerta ip para villa 2mp 168.6° Dahua VTO2201F-P-S2",
+          "width": 584,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución": "2MP",
+        "Ángulo de visión": "168.6°",
+        "Protección IK": "IK07",
+        "Protección IP": "IP65",
+        "Montaje": "Surface and Flush Mount",
+        "Alimentación": "Standard PoE",
+        "Puertos del dispositivo": "1 RS485, 1 Alarm Output, 1 Exit Button, 1 Door Status Detection, 1 Lock Control (1 with Secure Mode)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/products/video-intercoms/ip-series/villa-door-station/pro-series/vto2201f-p-s2",
+      "officialName": "VTO2201F-P-S2 IP Villa Door Station",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-p3d3fpvp",
+      "reference": "P3D-3F-PV-P",
+      "name": "CÁMARA WI-FI DE DOBLE LENTE PAN Y TILT PARA EXTERIOR 3+3 MP WIZCOLOR",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Emparejamiento rápido con Bluetooth\n• Wi-Fi 6 ofrece alta velocidad con un sólido rendimiento antiinterferencias\n• Una cámara para una vista de 360° sin puntos ciegos\n• La tecnología WizColor, tan brillante como la luz del día\n• Conecte rápidamente la cámara inalámbrica con la cuenta mediante PoE o Wi-Fi.\n• Active alertas inmediatas con sonido y luz para disuadir a los intrusos\n• Detección inteligente para ambas lentes para centrarse en lo que importa\n• La supervisión coordinada de la lente fija y la lente PT garantiza una vigilancia completa en seguridad",
+      "images": [
+        {
+          "url": "images/dahua-p3d3fpvp.webp",
+          "alt": "Cámara wi-fi de doble lente pan y tilt para exterior 3+3 mp wizcolor Dahua P3D-3F-PV-P",
+          "width": 598,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/products/wireless-products/outdoor-cameras/picoo-series/p3d-3f-pv-p",
+      "officialName": "P3D-3F-PV-P 3+3MP Outdoor WizColor Wi-Fi Dual-Lens Pan & Tilt Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipcpts2649c3e3z4gb20",
+      "reference": "IPC-PTS2649C-3E3Z-4GB20",
+      "name": "CÁMARA DE RED PT HÍBRIDA 3+3 MP WIZCOLOR CON 4G Y ENERGÍA SOLAR",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• El modo AOV permite grabación 24/7 con consumo de energía ultrabajo\n• Amplía su conectividad con 4G\n• Operación ininterrumpida mediante batería y carga solar\n• Tecnología WizColor, tan brillante como la luz del día\n• La monitorización coordinada de lente fija y lente PT garantiza vigilancia completa en seguridad\n• Una cámara para una vista de 360° sin puntos ciegos",
+      "images": [
+        {
+          "url": "images/dahua-ipcpts2649c3e3z4gb20.webp",
+          "alt": "Cámara de red pt híbrida 3+3 mp wizcolor con 4g y ენერგía solar Dahua IPC-PTS2649C-3E3Z-4GB20",
+          "width": 627,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/products/All-Products/Network-Cameras/Wireless-Series/CCTV-Channel/4G-Camera/Battery-Powered-Cameras/IPC-PTS2649C-3E3Z-4GB20",
+      "officialName": "IPC-PTS2649C-3E3Z-4GB20 3+3MP WizColor Hybrid-zoom PT 4G Solar Power Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipcmfw5241t2e3ase",
+      "reference": "IPC-MFW5241T2-E3-ASE",
+      "name": "CÁMARA DE RED BALA TRIPLE VISIÓN 3 × 2 MP",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 3 × 2 MP\n• Distancia de detección de largo alcance de 140 m con modelos Xinghan Vision\n• Micro-PTZ, ajusta remotamente los ángulos de las lentes\n• Clasificación IP67 e IK10 para protección contra entornos hostiles",
+      "images": [
+        {
+          "url": "images/dahua-ipcmfw5241t2e3ase.webp",
+          "alt": "Cámara de red bala triple visión 3 × 2 mp Dahua IPC-MFW5241T2-E3-ASE",
+          "width": 800,
+          "height": 459,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución": "3 × 2 MP",
+        "Distancia de detección": "140 m",
+        "Ajuste de lentes": "Remotely Adjust Lenses Angles",
+        "Protección": "IP67",
+        "Protección contra impactos": "IK10",
+        "Tipo de producto": "Network Camera",
+        "Aplicación": "Perimeter Protection",
+        "Serie/tecnología": "WizMind"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/au/products/network-products/network-cameras/wizmind-5-series/perimeter-protection-camera/ipc-mfw5241t2-e3-ase",
+      "officialName": "IPC-MFW5241T2-E3-ASE 3 × 2 MP Triple-Sight Perimeter Protection Bullet WizMind Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-ipchdw2849tspro",
+      "reference": "IPC-HDW2849T-S-PRO",
+      "name": "CÁMARA DE RED EYEBALL FIJA WIZSENSE WIZCOLOR 8 MP",
+      "categorySlug": "camaras-ip",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Imágenes de alta calidad con resolución de 8 MP\n• Calidad de imagen excepcional en entornos con poca luz gracias a la tecnología WizColor\n• Clasificación de humanos y vehículos basada en aprendizaje profundo\n• Micrófono integrado para seguridad de audio en tiempo real\n• Compatible con tarjeta Micro SD de hasta 256 G\n• Tecnología de compresión H.264+/H.265+ eficiente\n• Clasificación IP67 para protección contra entornos hostiles",
+      "images": [
+        {
+          "url": "images/dahua-ipchdw2849tspro.webp",
+          "alt": "Cámara de red eyeball fija wizsense wizcolor 8 mp Dahua IPC-HDW2849T-S-PRO",
+          "width": 722,
+          "height": 800,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Resolución máxima": "3840 (H) × 2160 (V)",
+        "Sensor de imagen": "1/1.8\" CMOS",
+        "Lente": "2.8 mm; 3.6 mm",
+        "Apertura máxima": "F1.0",
+        "Distancia de iluminación": "2.8 mm: Hasta 20 m (luz cálida) 3.6 mm: Hasta 30 m (luz cálida)",
+        "Almacenamiento": "FTP; SFTP; tarjeta Micro SD (soporta máx. 256 GB); NAS",
+        "Audio / Micrófono integrado": "Sí, micrófono integrado",
+        "Compresión de video": "H.265; H.264; H.264H; H.264B; MJPEG (solo compatible con subflujo)",
+        "Compresión de audio": "G.711a; G.711Mu; PCM; G.726",
+        "Alimentación": "12 VDC (±30%); PoE (802.3af)",
+        "Protección": "IP67",
+        "Temperatura de funcionamiento": "–40 °C a +60 °C (–40 °F a +140 °F)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/Products/All-Products/Network-Cameras/WizSense-Series/2-Series/WizColor/IPC-HDW2849T-S-PRO",
+      "officialName": "IPC-HDW2849T-S-PRO 8MP WizColor Fixed-focal Eyeball WizSense Network Camera",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-isceta1r111",
+      "reference": "ISC-ETA1-R111",
+      "name": "ETIQUETA AM CON CÓDIGO DE BARRAS",
+      "categorySlug": "otros-seguridad",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Fácil de usar, adecuada para la mayoría de las mercancías.\n• Pequeña en tamaño, capaz de proporcionar protección oculta.\n• Adopta un proceso autoadhesivo, que tiene buena adherencia y deja menos residuo adhesivo.",
+      "images": [
+        {
+          "url": "images/dahua-isceta1r111.webp",
+          "alt": "Etiqueta am con código de barras Dahua ISC-ETA1-R111",
+          "width": 800,
+          "height": 194,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {},
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/products/security-screening-&-esl-&-eas/eas/labels/isc-eta1-r111",
+      "officialName": "ISC-ETA1-R111 AM Label",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dahua-cs421816et135",
+      "reference": "CS4218-16ET-135",
+      "name": "SWITCH DE ESCRITORIO ADMINISTRADO EN LA NUBE DE 18 PUERTOS CON 16 PUERTOS POE",
+      "categorySlug": "redes",
+      "brandId": "dahua",
+      "brandName": "Dahua",
+      "description": "• Admite gestión en la nube mediante DoLynk Care\n• Genera automáticamente la topología de red, simplificando la gestión\n• Cumple con IEEE802.3af, IEEE802.3at, Hi-PoE e IEEE802.3bt, hasta 90 W para un solo puerto\n• Opera en temperaturas de -10 °C a +55 °C\n• Admite transmisión PoE de larga distancia de 250 m, PoE watchdog",
+      "images": [
+        {
+          "url": "images/dahua-cs421816et135.webp",
+          "alt": "Switch de escritorio administrado en la nube de 18 puertos con 16 puertos poe Dahua CS4218-16ET-135",
+          "width": 800,
+          "height": 280,
+          "needsReview": false,
+          "officialImage": true
+        }
+      ],
+      "specs": {
+        "Puertos totales": "18",
+        "Puertos PoE": "16",
+        "Gestión en la nube": "DoLynk Care",
+        "Estándares PoE": "IEEE802.3af, IEEE802.3at, Hi-PoE & IEEE802.3bt",
+        "Potencia máxima por puerto": "90W",
+        "Temperatura de trabajo": "-10°C to +55°C",
+        "Transmisión PoE de larga distancia": "250 m",
+        "PoE watchdog": "Yes"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.dahuasecurity.com/th/products/All-Products/Transmission/Cloud-Managed-Switches/CS4218-16ET-135",
+      "officialName": "CS4218-16ET-135 18-Port Cloud Managed Desktop Switch with 16-Port PoE",
+      "verifiedIntrade": true,
+      "source": {
+        "page": null
       }
     }
   ]
