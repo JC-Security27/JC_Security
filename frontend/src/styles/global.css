@@ -474,8 +474,8 @@ ul {
   gap: var(--space-5);
 }
 .grid-cards {
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-5);
 }
 /* En móvil: siempre 2 productos por fila. */
 @media (max-width: 640px) {
