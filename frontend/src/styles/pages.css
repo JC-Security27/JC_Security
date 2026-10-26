@@ -992,10 +992,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-3);
   padding: var(--space-5);
 }
 .social-name {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
   font-weight: 600;
+}
+/* Ícono de cada red con el color de su marca para que se reconozca. */
+.social-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  flex-shrink: 0;
+}
+.social-icon-facebook {
+  background: #1877f2;
+}
+.social-icon-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c 35%, #dc2743 60%, #bc1888);
+}
+.social-icon-tiktok {
+  background: #000000;
 }
 
 /* ----- Guías / placeholders ----- */

@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { SampleNotice } from "@/components/ui/states";
+import { SocialIcon } from "@/components/ui/SocialIcon";
 
 export function SocialPage() {
   return (
@@ -21,7 +22,12 @@ export function SocialPage() {
           const available = Boolean(s.url);
           return (
             <div key={s.id} className="card social-card">
-              <span className="social-name">{s.label}</span>
+              <span className="social-name">
+                <span className={`social-icon social-icon-${s.id}`}>
+                  <SocialIcon id={s.id} size={22} />
+                </span>
+                {s.label}
+              </span>
               {available ? (
                 <a
                   className="btn btn-outline btn-sm"
