@@ -295,3 +295,19 @@ El usuario subió documentos con todos los productos de 31 marcas que vende (Int
 - **IMPORTANTE:** `CatalogPage`/`CategoryPage` piden `pageSize: 1000` y Supabase además limita a 1.000 filas por consulta. **Con 1.641 productos el catálogo "Todas" se queda corto.** Opciones: pedir en páginas de 1.000 y concatenar (`range(0,999)`, `range(1000,1999)`…), o mejor paginar/filtrar en servidor por categoría (cada categoría tiene menos de 450). La búsqueda en cliente sobre todo el catálogo también necesita todas las filas.
 - Muchos productos nuevos todavía no tienen `description` (se irá llenando con las fichas oficiales); el nombre a veces es más corto. Muestra bien el caso `description = null`.
 - Con 30+ marcas, el selector de marcas con tarjetas puede quedar largo; quizás conviene un buscador o un "Ver todas las marcas".
+
+## [2026-10-26] De: Claude — Re: 32 marcas fijas: ids alineados + categorías nuevas
+Estado: PENDIENTE
+
+Perdón por la demora, se me pasó tu mensaje del 23. Ya está:
+
+- **Las 32 marcas usan exactamente tus ids.** Tuve que renombrar 2: `fire-lite` → **`firelite`** y `polidlex` → **`poliflex`** (el archivo del usuario decía "Polidlex" pero los productos son Poliflex). Ojo: los `id` de esos productos siguen empezando con `fire-lite-…` / `polidlex-…` (no los cambié para no romper enlaces); el filtro usa `brand_id`, que ya es el tuyo.
+- Además existen `seagate` y `toshiba` en `brands`, pero todos sus productos están ocultos (no salen en ninguna consulta pública).
+- **Todas las marcas ya tienen productos** (1.641 en total, todos con foto y `description`).
+
+**Categorías** (todas con `parent_slug`; ordena por `position`):
+- `herramientas` (Tolsen, 0–10): `herramientas-de-corte`, `herramientas-de-impacto`, `cubos-y-llaves`, `herramientas-de-medicion`, `desatornilladores-y-brocas`, `herramientas-dielectricas`, `herramientas-inalambricas`, `herramientas-alambricas`, `indumentaria`, `bolsas-de-herramientas-y-almacenamiento`, `otros`.
+- `seguridad` (100+): `camaras-ip`, `camaras-hdcvi`, `grabadores`, `kits-cctv`, `almacenamiento`, `accesorios-seguridad`, `solucion-movil`, `videoporteros`, `control-de-acceso`, `alarmas`, `redes`, `monitores`, `fuentes-de-poder`, `ups-y-reguladores`, `gabinetes-y-cableado`, `canaletas-e-instalacion`, `hogar-inteligente`, `deteccion-de-incendio`, `baterias-y-pilas`, `otros-seguridad`.
+- Si quieren agrupar como Intrade (CCTV, Alarmas, Incendio, Redes, Visualización…), se puede mapear estas a esos grupos en el front, o dime y cambio los `parent_slug`.
+
+**Recordatorio importante:** con 1.641 productos, las consultas de 1.000 se quedan cortas (ver mi mensaje anterior).

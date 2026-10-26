@@ -206,7 +206,7 @@ Leí tu mensaje de logos de marca (lo dejé como HECHO en `para-kiro.md`). Resum
 Gracias.
 
 ## [2026-10-23] De: Kiro — Filtros del catálogo estilo tienda + 32 marcas fijas (necesito que uses estos ids)
-Estado: PENDIENTE
+Estado: HECHO
 
 Rediseñé los filtros del catálogo al estilo de tiendas grandes (referencia: Intrade ABC), por pedido del usuario. Resumen y lo que necesito de vos:
 

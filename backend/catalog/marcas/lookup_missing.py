@@ -20,10 +20,10 @@ import publish_docs as pd  # noqa: E402
 
 SITES = {  # sitio oficial de cada marca (para orientar la búsqueda)
     "ajax": "ajax.systems", "argos": "", "cdp": "cdpenergy.com", "cdvi": "cdvi.com", "dahua": "dahuasecurity.com",
-    "dexson": "dexson.com", "dlx": "", "eleksteel": "", "enforcer": "seco-larm.com", "fire-lite": "firelite.com",
+    "dexson": "dexson.com", "dlx": "", "eleksteel": "", "enforcer": "seco-larm.com", "firelite": "firelite.com",
     "forza": "forzaups.com", "general-electric": "", "gerfor": "gerfor.com", "hagroy": "", "imou": "imoulife.com",
     "keri-systems": "kerisys.com", "lantek": "", "mercusys": "mercusys.com", "mircom": "mircom.com",
-    "optex": "optexamerica.com", "paradox": "paradox.com", "pkcell": "pkcell.net", "polidlex": "", "reyee": "reyee.ruijie.com",
+    "optex": "optexamerica.com", "paradox": "paradox.com", "pkcell": "pkcell.net", "poliflex": "", "reyee": "reyee.ruijie.com",
     "sabo": "", "sti": "sti-usa.com", "tolsen": "tolsentools.com", "tp-link": "tp-link.com", "trendnet": "trendnet.com",
     "western-digital": "westerndigital.com", "zkteco": "zkteco.com",
 }
@@ -40,8 +40,8 @@ def main():
             continue
         published = json.loads((pd.OUT / "catalog.json").read_text(encoding="utf-8"))["products"]
         pending = {p["specs"]["Código Intrade"] for p in published if p["brandId"] == bid and not p["description"]}
-        brand = {"id": bid, "name": bname, "site": SITES.get(bid, "")}
-        cache = HERE / bid / ".cache"
+        brand = {"id": pd.LEGACY_PREFIX.get(bid, bid), "name": bname, "site": SITES.get(bid, "")}
+        cache = HERE / pd.LEGACY_PREFIX.get(bid, bid) / ".cache"
         cache.mkdir(parents=True, exist_ok=True)
         jobs += [(brand, sku, raw, cache) for sku, raw, _ in bb.read_doc(path) if sku in pending]
     print(f"{len(jobs)} productos sin ficha; buscando con {WORKERS} en paralelo", flush=True)

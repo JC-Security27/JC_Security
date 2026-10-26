@@ -124,7 +124,7 @@ def main(dry_run):
     def work(job):
         r, (sku, raw, bname) = job
         try:
-            info = wide_lookup((r["brand_id"], bname), sku, raw, api_key)
+            info = wide_lookup((pd.LEGACY_PREFIX.get(r["brand_id"], r["brand_id"]), bname), sku, raw, api_key)
             if info.get("found") and info.get("sources") and bb.agrees(raw, info) and info.get("features_es"):
                 return r, sku, raw, info, "web"
             return r, sku, raw, basic_sheet(raw, api_key), "basica"

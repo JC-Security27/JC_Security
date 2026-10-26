@@ -37,12 +37,12 @@ BRANDS = {
     "CDVI": ("cdvi", "CDVI", "control-de-acceso"), "Dahua": ("dahua", "Dahua", None),
     "DEXSON": ("dexson", "Dexson", "canaletas-e-instalacion"), "dlx": ("dlx", "DLX", None),
     "ELEKSTEEL": ("eleksteel", "Eleksteel", None), "Enforcer": ("enforcer", "Enforcer", None),
-    "Firelite": ("fire-lite", "Fire-Lite", None), "Forza": ("forza", "Forza", "ups-y-reguladores"),
+    "Firelite": ("firelite", "Fire-Lite", None), "Forza": ("forza", "Forza", "ups-y-reguladores"),
     "General Electric": ("general-electric", "General Electric", None), "Gerfor": ("gerfor", "Gerfor", None),
     "Hagroy": ("hagroy", "Hagroy", None), "IMOU": ("imou", "Imou", None), "Keri Systems": ("keri-systems", "Keri Systems", "control-de-acceso"),
     "Lantek": ("lantek", "Lantek", None), "Mercusys": ("mercusys", "Mercusys", "redes"), "MIRCOM": ("mircom", "Mircom", None),
     "Optex": ("optex", "Optex", None), "PARADOX": ("paradox", "Paradox", None), "PKCELL": ("pkcell", "PKCELL", "baterias-y-pilas"),
-    "Polidlex": ("polidlex", "Polidlex", None), "Reyee": ("reyee", "Reyee", "redes"), "SABO": ("sabo", "SABO", None),
+    "Polidlex": ("poliflex", "Poliflex", None), "Reyee": ("reyee", "Reyee", "redes"), "SABO": ("sabo", "SABO", None),
     "STI": ("sti", "STI", None), "TOLSEN_Revisar": ("tolsen", "Tolsen", None), "TP Link": ("tp-link", "TP-Link", "redes"),
     "TRENDnet": ("trendnet", "TRENDnet", "redes"), "Western Digital": ("western-digital", "Western Digital", "almacenamiento"),
     "ZKTeco": ("zkteco", "ZKTeco", "control-de-acceso"),
@@ -58,6 +58,10 @@ TOLSEN_CATEGORIES = {  # las del PDF de Tolsen (grupo herramientas)
     "indumentaria": "Indumentaria", "bolsas-de-herramientas-y-almacenamiento": "Bolsas de herramientas y almacenamiento",
     "otros": "Otros",
 }
+
+# Marcas renombradas para usar los ids fijos de Kiro (2026-10-26): sus productos y su caché
+# conservan el prefijo anterior para no duplicar productos ni repetir búsquedas.
+LEGACY_PREFIX = {"firelite": "fire-lite", "poliflex": "polidlex"}
 
 CLASSIFY_PROMPT = """Clasificas productos de un catálogo en categorías. Para cada producto (sku, name) elige UNA categoría de la lista (usa el slug exacto). Responde solo JSON."""
 
@@ -105,11 +109,25 @@ def classify(items, categories, api_key):
 
 def cached_lookup(brand_id, sku, raw_name):
     """Ficha oficial ya buscada por build_brand.py (no hace búsquedas nuevas)."""
-    path = HERE / brand_id / ".cache" / f"web-{hashlib.sha1(f'{bb.MODEL}|{brand_id}|{sku}|{raw_name}'.encode()).hexdigest()[:16]}.json"
+    path = HERE / LEGACY_PREFIX.get(brand_id, brand_id) / ".cache" / f"web-{hashlib.sha1(f'{bb.MODEL}|{LEGACY_PREFIX.get(brand_id, brand_id)}|{sku}|{raw_name}'.encode()).hexdigest()[:16]}.json"
     if path.exists():
         info = json.loads(path.read_text(encoding="utf-8"))
         if info.get("found") and info.get("sources") and bb.agrees(raw_name, info):
             return info
+    return None
+
+
+def completed_lookup(brand_id, sku, raw_name):
+    """Ficha que puso complete_missing.py (búsqueda amplia o ficha básica), desde su caché."""
+    prefix = LEGACY_PREFIX.get(brand_id, brand_id)
+    wide = CACHE / f"wide-{hashlib.sha1(f'{prefix}|{sku}|{raw_name}'.encode()).hexdigest()[:16]}.json"
+    if wide.exists():
+        info = json.loads(wide.read_text(encoding="utf-8"))
+        if info.get("found") and info.get("sources") and info.get("features_es") and bb.agrees(raw_name, info):
+            return info
+    basic = CACHE / f"basic-{hashlib.sha1(raw_name.encode()).hexdigest()[:16]}.json"
+    if basic.exists():
+        return {**json.loads(basic.read_text(encoding="utf-8")), "sources": []}
     return None
 
 
@@ -161,16 +179,17 @@ def main(dry_run):
         news = [(s, n, img) for s, n, img in items if key(s) not in idx]
         matched = {idx[key(s)] for s, _, _ in items if key(s) in idx}
         doc_ids += sorted(matched)
-        doc_new_ids = {f"{bid}-{re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')}" for s, _, _ in news}
+        prefix = LEGACY_PREFIX.get(bid, bid)
+        doc_new_ids = {f"{prefix}-{re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')}" for s, _, _ in news}
         hide_ids += [p["id"] for p in hide_candidates if p["brand_id"] == bid and p["id"] not in matched and p["id"] not in doc_new_ids]
         cls = {} if fixed or not news or dry_run else classify([(s, bb.clean_name(n, bname)[0]) for s, n, _ in news], cats, api_key)
         for sku, raw, blob in news:
             name, truncated = bb.clean_name(raw, bname)
-            info = cached_lookup(bid, sku, raw)
-            if info and info.get("name_es"):
+            info = cached_lookup(bid, sku, raw) or completed_lookup(bid, sku, raw)
+            if info and info.get("name_es") and (info.get("sources") or truncated):
                 name = info["name_es"].strip().upper()
             cat = fixed or cls.get(sku) or ("otros" if bid == "tolsen" else "otros-seguridad")
-            pid = f"{bid}-{re.sub(r'[^a-z0-9]+', '-', sku.lower()).strip('-')}"
+            pid = f"{prefix}-{re.sub(r'[^a-z0-9]+', '-', sku.lower()).strip('-')}"
             used_cats[cat] = (cats.get(cat) or SECURITY_CATEGORIES.get(cat, cat), parent)
             specs = {"Código Intrade": sku}
             if info:
