@@ -1,0 +1,3657 @@
+{
+  "source": "Info_Completa/AJAX.docx + fichas oficiales",
+  "brands": [
+    {
+      "id": "ajax",
+      "name": "Ajax",
+      "logoUrl": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "camaras-ip",
+      "slug": "camaras-ip",
+      "name": "Cámaras IP",
+      "parentSlug": "seguridad",
+      "position": 100
+    },
+    {
+      "id": "grabadores",
+      "slug": "grabadores",
+      "name": "Grabadores (NVR / XVR)",
+      "parentSlug": "seguridad",
+      "position": 102
+    },
+    {
+      "id": "accesorios-seguridad",
+      "slug": "accesorios-seguridad",
+      "name": "Accesorios para CCTV",
+      "parentSlug": "seguridad",
+      "position": 105
+    },
+    {
+      "id": "alarmas",
+      "slug": "alarmas",
+      "name": "Alarmas",
+      "parentSlug": "seguridad",
+      "position": 109
+    },
+    {
+      "id": "hogar-inteligente",
+      "slug": "hogar-inteligente",
+      "name": "Automatización y hogar inteligente",
+      "parentSlug": "seguridad",
+      "position": 116
+    },
+    {
+      "id": "otros-seguridad",
+      "slug": "otros-seguridad",
+      "name": "Otros de seguridad",
+      "parentSlug": "seguridad",
+      "position": 117
+    }
+  ],
+  "products": [
+    {
+      "id": "ajax-52975-155-bl3",
+      "reference": "Ajax WaterStop Jeweller",
+      "name": "VÁLVULA DE CORTE DE AGUA INALÁMBRICA 3/4\" DN20",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Válvula inteligente de corte de agua con control remoto.\n• Permite controlar la posición de la válvula desde las apps Ajax.\n• Puede operarse manualmente con el botón del cuerpo o la palanca de la válvula.\n• Integra escenarios de automatización para cierre por alarma o por programación.\n• Comunicación cifrada con la central mediante protocolo Jeweller.\n• Alcance de comunicación de hasta 1.100 m en campo abierto.\n• Funciona con baterías preinstaladas y también admite alimentación externa.\n• Disponible con rosca BSPP en 3 tamaños: 1/2\", 3/4\" y 1\".",
+      "images": [
+        {
+          "url": "images/ajax-52975-155-bl3.webp",
+          "alt": "Válvula de corte de agua inalámbrica 3/4\" dn20 Ajax Ajax WaterStop Jeweller",
+          "width": 352,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "52975.155.BL3",
+        "Modelo oficial": "WaterStop Jeweller",
+        "Conexión de la válvula": "3/4\" BSPP (DN 20, 20 mm)",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.100 m en espacio abierto",
+        "Alimentación principal": "4 baterías CR123A preinstaladas",
+        "Autonomía": "Hasta 3 años",
+        "Alimentación externa": "7,5–14 V⎓",
+        "Corriente de alimentación externa": "Mínimo 1,8 A",
+        "Control": "Desde apps Ajax, botón del cuerpo y automatización",
+        "Protección": "Tamper anti-manipulación"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/de/manuals/waterstop/",
+      "officialName": "Ajax WaterStop Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-52971-154-bl3",
+      "reference": "WaterStop Jeweller",
+      "name": "VÁLVULA DE CIERRE DE AGUA INTELIGENTE CON CONTROL REMOTO, CONEXIÓN DE 1 PULGADA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Válvula de cierre de agua inteligente con control remoto.\n• Funciona como parte de un sistema antiallagamiento automático Ajax.\n• Controlable desde la app Ajax, desde cualquier lugar con Internet.\n• También se puede accionar con el botón en la carcasa o con la palanca de la válvula.\n• Compatible con escenarios de automatización.\n• Comunicación inalámbrica mediante protocolo Jeweller.\n• Disponible con conexión BSPP de 1 pulgada.\n• Puede alimentarse con fuente externa de 7,5 a 14 V⎓.",
+      "images": [
+        {
+          "url": "images/ajax-52971-154-bl3.webp",
+          "alt": "Válvula de cierre de agua inteligente con control remoto, conexión de 1 pulgada Ajax WaterStop Jeweller",
+          "width": 352,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "52971.154.BL3",
+        "Modelo": "WaterStop Jeweller",
+        "Tipo": "Válvula de cierre de agua inteligente",
+        "Conexión de la válvula": "1″ (DN 25, 25 mm) BSPP",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "1100 m en campo abierto",
+        "Alimentación externa": "7,5–14 V⎓",
+        "Corriente de funcionamiento mínima": "1,8 A",
+        "Batería": "Preinstalada, hasta 3 años",
+        "Métodos de control": "Botón en la carcasa, palanca de la válvula, app Ajax y escenarios",
+        "Función": "Control remoto del suministro de agua / protección antialagamiento"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/it/manuals/waterstop/",
+      "officialName": "WaterStop Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-160705-122-bl3",
+      "reference": "160705.122.BL3",
+      "name": "VIDEOGRABADOR NVR DE 32 CANALES CON ANALÍTICA IA, 16 PUERTOS POE, COLOR NEGRO",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Videograbador de red con salida HDMI.\n• Admite 32 canales de video.\n• Cuenta con 2 bahías SATA para discos duros.\n• Incluye 16 salidas PoE.\n• Dispone de 2 interfaces Gigabit Ethernet.\n• Soporta funciones de IA.\n• Acabado en color negro.",
+      "images": [
+        {
+          "url": "images/ajax-160705-122-bl3.webp",
+          "alt": "Videograbador nvr de 32 canales con analítica ia, 16 puertos poe, color negro Ajax 160705.122.BL3",
+          "width": 480,
+          "height": 290,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "160705.122.BL3",
+        "Canales": "32",
+        "Salidas PoE": "16",
+        "Bahías para disco duro": "2",
+        "Interfaz de red": "2 × Gigabit Ethernet",
+        "Salida de video": "HDMI 4K",
+        "Color": "Negro",
+        "Funciones inteligentes": "Analítica IA",
+        "Modelo del fabricante": "160705.122.BL3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/faqs/how-to-read-nvr-model-names/",
+      "officialName": "160705.122.BL3",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-160697-122-bl3",
+      "reference": "Superior NVR H2DAI2GAC",
+      "name": "VIDEOGRABADOR NVR DE 32 CANALES CON IA, DOBLE BAHÍA SATA, SALIDA HDMI 4K, NEGRO",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Videograbador NVR con inteligencia artificial.\n• Compatible con 32 canales.\n• Incluye 2 bahías SATA para almacenamiento.\n• Salida HDMI 4K.\n• 2 interfaces Gigabit Ethernet.\n• Funciona con corriente alterna.\n• Color negro.",
+      "images": [
+        {
+          "url": "images/ajax-160697-122-bl3.webp",
+          "alt": "Videograbador nvr de 32 canales con ia, doble bahía sata, salida hdmi 4k, negro Ajax Superior NVR H2DAI2GAC",
+          "width": 480,
+          "height": 290,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "160697.122.BL3",
+        "Modelo oficial": "Superior NVR H2DAI2GAC",
+        "Canales": "32",
+        "Salidas de video": "HDMI 4K",
+        "Bahías de disco duro": "2 SATA",
+        "Interfaz de red": "2 Gigabit Ethernet",
+        "Alimentación": "Corriente alterna (AC)",
+        "Color": "Negro",
+        "Tipo de equipo": "Grabador de video en red (NVR)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.en.adiglobaldistribution.ca/Product/XY-160697122BL3",
+      "officialName": "Superior NVR H2DAI2GAC",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-157782-345-wh3",
+      "reference": "157782.345.WH3",
+      "name": "DETECTOR MINI TIPO CORTINA EXTERIOR E INTERIOR, DOBLE TECNOLOGÍA, INALÁMBRICO, BLANCO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento tipo cortina para uso en exteriores e interiores.\n• Tecnología de detección dual con sensor PIR y sensor de microondas banda K.\n• Inmunidad a mascotas y aves de hasta 70 cm de altura.\n• Sistema antienmascaramiento para mayor protección contra sabotaje.\n• Ángulo de visión horizontal estrecho de 15°.\n• Cobertura de detección de hasta 5 m.\n• Tres niveles de sensibilidad configurables desde la app.\n• Hasta 3 años de autonomía de batería.",
+      "images": [
+        {
+          "url": "images/ajax-157782-345-wh3.webp",
+          "alt": "Detector mini tipo cortina exterior e interior, doble tecnología, inalámbrico, blanco Ajax 157782.345.WH3",
+          "width": 274,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "157782.345.WH3",
+        "Tecnología de detección": "1 sensor PIR + 1 sensor de microondas banda K",
+        "Alcance de detección": "Hasta 5 m",
+        "Ángulo de visión horizontal": "15°",
+        "Ángulo de visión vertical": "100°",
+        "Inmunidad a mascotas": "Hasta 70 cm de altura",
+        "Antienmascaramiento": "Sí",
+        "Comunicación": "Hasta 1.700 m",
+        "Sensibilidad": "3 niveles",
+        "Autonomía de batería": "Hasta 3 años",
+        "Uso": "Exterior e interior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/indoor-security/motionprotect-curtain/",
+      "officialName": "157782.345.WH3",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-99974-286-bl3",
+      "reference": "99974.286.BL3",
+      "name": "TECLADO INALÁMBRICO PARA EXTERIORES E INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Admite autenticación mediante Pass, Tag, smartphones y códigos.\n• Diseñado para uso en exteriores e interiores.\n• Teclado inalámbrico con comunicación Jeweller.\n• Botones mecánicos grandes para uso rápido y cómodo.\n• Confirmación de autorización para armado y desarmado.\n• Modo bypass para zona de entrada/salida.\n• Buzzer integrado para avisos de alarma y cambio de modo.\n• Hasta 3 años de vida útil de batería.",
+      "images": [
+        {
+          "url": "images/ajax-99974-286-bl3.webp",
+          "alt": "Teclado inalámbrico para exteriores e interiores Ajax 99974.286.BL3",
+          "width": 166,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "99974.286.BL3",
+        "Marca": "Ajax",
+        "Modelo del fabricante": "99974.286.BL3",
+        "Número de parte del fabricante": "99974.286.BL3",
+        "UPC": "4823114074615",
+        "Tipo de producto": "Teclado inalámbrico de seguridad",
+        "Tecnología de comunicación": "Jeweller",
+        "Métodos de autenticación": "Pass, Tag, smartphones y códigos",
+        "Uso": "Exterior e interior",
+        "Alimentación": "Batería preinstalada",
+        "Duración de la batería": "Hasta 3 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "99974.286.BL3",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-99973-286-wh3",
+      "reference": "KeyPad Outdoor Jeweller",
+      "name": "TECLADO INALÁMBRICO PARA EXTERIORES E INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado inalámbrico para gestionar el sistema Ajax.\n• Admite autenticación mediante Pass, Tag, smartphones y códigos.\n• Diseñado para uso en exteriores e interiores.\n• Comunicación por radio Jeweller.\n• Permite el armado y desarmado del sistema con código o credenciales autorizadas.",
+      "images": [
+        {
+          "url": "images/ajax-99973-286-wh3.webp",
+          "alt": "Teclado inalámbrico para exteriores e interiores Ajax KeyPad Outdoor Jeweller",
+          "width": 170,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "99973.286.WH3",
+        "Tipo": "Teclado inalámbrico",
+        "Autenticación": "Pass, Tag, smartphones y códigos",
+        "Uso": "Exterior e interior",
+        "Tecnología de comunicación": "Jeweller",
+        "Color": "Blanco",
+        "Código de fabricante": "99973.286.WH3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "KeyPad Outdoor Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-125718-314-bl",
+      "reference": "125718.314.BL",
+      "name": "CAJA DE ENTRADA LATERAL DE CABLES EN54",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Instalación limpia y profesional.\n• Permite entrada lateral ordenada de cables al gabinete del EN54 Fire Hub Jeweller.\n• Compatible con prensaestopas de hasta 20 mm de diámetro.\n• Dispone de 16 posiciones para prensaestopas, 4 por cada lado.\n• Incluye elementos para facilitar la instalación: nivel de burbuja, marca UP y centrado del CIE.\n• Tiene una parte perforada para el botón tamper del CIE.\n• Enclosure con grado de protección IP20.\n• Disponible en color negro y blanco.",
+      "images": [
+        {
+          "url": "images/ajax-125718-314-bl.webp",
+          "alt": "Caja de entrada lateral de cables en54 Ajax 125718.314.BL",
+          "width": 480,
+          "height": 414,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "125718.314.BL",
+        "Código de fabricante": "125718.314.BL",
+        "Compatibilidad": "EN54 Fire Hub Jeweller",
+        "Dimensiones": "263 × 223 × 40 mm",
+        "Peso": "335 g",
+        "Temperatura de operación": "−10 °C a +40 °C",
+        "Humedad de operación": "Hasta 75 % sin condensación",
+        "Clase de protección": "IP20",
+        "Retardancia a la llama": "UL 94 V-0",
+        "Diámetro máximo de prensaestopa": "20 mm",
+        "Puntos para prensaestopas": "16",
+        "Color": "Negro"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/ar/en54-line/",
+      "officialName": "125718.314.BL",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101368-142-nc",
+      "reference": "101368.142.NC",
+      "name": "RELÉ INTELIGENTE DE 4 VÍAS PARA CONTROL DE ILUMINACIÓN MULTIUBICACIÓN",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Relé para interruptor de 4 vías.\n• Controla la alimentación del dispositivo de iluminación.\n• No requiere cable neutro.\n• Diseñado para conmutación inteligente multiubicación.",
+      "images": [
+        {
+          "url": "images/ajax-101368-142-nc.webp",
+          "alt": "Relé inteligente de 4 vías para control de iluminación multiubicación Ajax 101368.142.NC",
+          "width": 317,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101368.142.NC",
+        "Marca": "AJAX",
+        "Número de parte del fabricante": "101368.142.NC",
+        "Nombre comercial": "LightCore 4-Way Relay for Multi-Location Smart Switching",
+        "Tipo de producto": "Relé para interruptor de 4 vías",
+        "Función": "Controla la alimentación del dispositivo de iluminación",
+        "Cable neutro": "No requiere",
+        "Categoría comercial": "Smart Dimmers & Light Switches",
+        "Origen": "Ucrania"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.adiglobaldistribution.us/Product/XY-101368142NC",
+      "officialName": "101368.142.NC",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-88882-234-bl",
+      "reference": "JunctionBox (118×59)",
+      "name": "CAJA DE MONTAJE PARA UNA CÁMARA IP DE SEGURIDAD CON CABLES 118×59, NEGRO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Caja de montaje para una cámara IP de seguridad con cables.\n• Apta para uso en exterior e interior.",
+      "images": [
+        {
+          "url": "images/ajax-88882-234-bl.webp",
+          "alt": "Caja de montaje para una cámara ip de seguridad con cables 118×59, negro Ajax JunctionBox (118×59)",
+          "width": 387,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "88882.234.BL",
+        "Modelo oficial": "JunctionBox (118×59)",
+        "Tipo de producto": "Caja de montaje para una cámara IP de seguridad con cables",
+        "Dimensiones": "118 × 59 mm",
+        "Aplicación": "Cámara IP de seguridad con cables",
+        "Uso": "Exterior e interior",
+        "Color": "Negro"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/video-surveillance/",
+      "officialName": "JunctionBox (118×59)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-88881-234-wh",
+      "reference": "JunctionBox (118×59)",
+      "name": "CAJA DE MONTAJE PARA UNA CÁMARA IP DE SEGURIDAD, 118×59, BLANCO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Caja de montaje para una cámara IP de seguridad con cable.\n• Diseñada para videovigilancia Ajax.\n• Formato compacto de 118 × 59 mm.",
+      "images": [
+        {
+          "url": "images/ajax-88881-234-wh.webp",
+          "alt": "Caja de montaje para una cámara ip de seguridad, 118×59, blanco Ajax JunctionBox (118×59)",
+          "width": 387,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "88881.234.WH",
+        "Modelo oficial": "JunctionBox (118×59)",
+        "Tipo de producto": "Caja de montaje para cámara IP de seguridad con cable",
+        "Dimensiones": "118 × 59 mm",
+        "Color": "Blanco",
+        "Línea": "Video Surveillance"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/video-surveillance/",
+      "officialName": "JunctionBox (118×59)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-119295-310-wh3",
+      "reference": "MotionCam (PhOD) Jeweller",
+      "name": "CÁMARA MOTIONCAM CON VERIFICACIÓN FOTOGRÁFICA, PHOD, JEWELLER",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector PIR inalámbrico con verificación fotográfica ampliada.\n• Permite fotos bajo demanda.\n• Permite fotos por alarma.\n• Permite fotos por escenario.\n• Permite fotos por programación.\n• Comunicación por Jeweller.\n• Alimentación con 2 baterías CR123A.\n• Autonomía de hasta 4 años.",
+      "images": [
+        {
+          "url": "images/ajax-119295-310-wh3.webp",
+          "alt": "Cámara motioncam con verificación fotográfica, phod, jeweller Ajax MotionCam (PhOD) Jeweller",
+          "width": 280,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "119295.310.WH3",
+        "Tipo de detector": "PIR inalámbrico",
+        "Verificación fotográfica": "Sí",
+        "Funciones de foto": "Bajo demanda, por alarma, por escenario y por programación",
+        "Protocolo de comunicación": "Jeweller",
+        "Alimentación": "2 × CR123A",
+        "Autonomía de las baterías": "Hasta 4 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "MotionCam (PhOD) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-manualcallpointr",
+      "reference": "MANUALCALLPOINTR",
+      "name": "ESTACIÓN MANUAL, COLOR ROJO, 76382.171.NC1",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-manualcallpointr.webp",
+          "alt": "Estación manual, color rojo, 76382.171.nc1 Ajax MANUALCALLPOINTR",
+          "width": 414,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "MANUALCALLPOINTR"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-manualcallpointb",
+      "reference": "ManualCallPoint (Blue) Jeweller",
+      "name": "ESTACIÓN MANUAL AZUL",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Botón inalámbrico reajustable.\n• Diseñado para uso en interiores.\n• Permite activar manualmente alarmas o escenarios de automatización.\n• Versión de color azul.\n• Se restablece con una llave especial.\n• Cuenta con cubierta transparente para evitar pulsaciones accidentales.\n• Puede activar sirenas y zumbadores de detectores de incendio al presionarse.",
+      "images": [
+        {
+          "url": "images/ajax-manualcallpointb.webp",
+          "alt": "Estación manual azul Ajax ManualCallPoint (Blue) Jeweller",
+          "width": 480,
+          "height": 210,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "MANUALCALLPOINTB",
+        "Código de fabricante": "84236.171.NC3",
+        "UPC": "4823114050589",
+        "Tipo": "Botón/estación manual inalámbrica reajustable",
+        "Comunicación": "Jeweller",
+        "Color": "Azul",
+        "Uso": "Interior",
+        "Restablecimiento": "Con llave especial",
+        "Aplicación": "Activación manual de alarmas o escenarios de automatización"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "ManualCallPoint (Blue) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-curtainoutdoor",
+      "reference": "Curtain Outdoor Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO TIPO CORTINA, INALÁMBRICO, DE DOBLE TECNOLOGÍA PARA EXTERIORES E INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de movimiento tipo cortina de doble tecnología.\n• Diseñado para uso en exteriores e interiores.\n• Un solo lado de detección de movimiento.\n• Cuenta con antienmascaramiento.\n• Incluye inmunidad a mascotas.\n• Ángulo de detección horizontal estrecho de 8°.\n• Alcance de comunicación de hasta 1.700 m.\n• Alcance de detección de movimiento de hasta 8–12 m, según los parámetros.",
+      "images": [
+        {
+          "url": "images/ajax-curtainoutdoor.webp",
+          "alt": "Detector de movimiento tipo cortina, inalámbrico, de doble tecnología para exteriores e interiores Ajax Curtain Outdoor Jeweller",
+          "width": 480,
+          "height": 279,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CURTAINOUTDOOR",
+        "Uso": "En exteriores e interiores",
+        "Lados de detección de movimiento": "1",
+        "Antienmascaramiento": "Sí",
+        "Inmunidad a mascotas": "Sí",
+        "Ángulo de detección, horizontal": "8°",
+        "Alcance de comunicación": "hasta 1.700 m",
+        "Alcance de detección de movimiento": "hasta 8–12 m (depende de los parámetros)",
+        "Duración de la batería": "hasta 3 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/outdoor-security/curtain-outdoor-jeweller/",
+      "officialName": "Curtain Outdoor Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bwaterstop",
+      "reference": "BWATERSTOP",
+      "name": "ELECTROVÁLVULA WATERSTOP, DE 1/2, COLOR NEGRO, 52973.146.BL3",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bwaterstop.webp",
+          "alt": "Electroválvula waterstop, de 1/2, color negro, 52973.146.bl3 Ajax BWATERSTOP",
+          "width": 296,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BWATERSTOP"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bturretcam",
+      "reference": "TurretCam (5 Mp/2.8 mm)",
+      "name": "CÁMARA TURRET IP DE 5 MP CON LENTE DE 2.8 MM, CABLEADA, CON ILUMINACIÓN INFRARROJA INTELIGENTE Y RECONOCIMIENTO DE OBJETOS",
+      "categorySlug": "camaras-ip",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Cámara IP cableada con conexión Ethernet.\n• Iluminación infrarroja (IR) inteligente.\n• Reconocimiento de objetos.\n• Permite ver video en vivo y grabaciones archivadas en las apps Ajax.\n• Compatible con almacenamiento en tarjeta microSD o mediante NVR.\n• Admite códecs de video H.264 y H.265.\n• Clasificación IP65 para instalación en exteriores.\n• Carcasa metálica para mayor protección contra sabotaje.",
+      "images": [
+        {
+          "url": "images/ajax-bturretcam.webp",
+          "alt": "Cámara turret ip de 5 mp con lente de 2.8 mm, cableada, con iluminación infrarroja inteligente y reconocimiento de objetos Ajax TurretCam (5 Mp/2.8 mm)",
+          "width": 399,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BTURRETCAM",
+        "Resolución": "5 MP",
+        "Lente": "2.8 mm",
+        "Conexión de red": "Ethernet",
+        "Clasificación de protección": "IP65",
+        "Tarjeta de memoria compatible": "microSD de 32 GB a 256 GB",
+        "Clase de velocidad de tarjeta": "V30 o superior",
+        "Códecs de video": "H.264 / H.265",
+        "Almacenamiento alterno": "NVR con disco duro",
+        "Garantía": "2 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/uk/manuals/turretcam/",
+      "officialName": "TurretCam (5 Mp/2.8 mm)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-btag",
+      "reference": "Tag",
+      "name": "LLAVERO CIFRADO SIN CONTACTO PARA TECLADO, COLOR NEGRO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Llavero cifrado sin contacto para teclados Ajax.\n• Permite gestionar los modos de seguridad del sistema Ajax.\n• Compatible con teclados Ajax que admiten Tag/Pass.\n• Puede funcionar con varios hubs al mismo tiempo.\n• Basado en tecnología DESFire® para autenticación segura.",
+      "images": [
+        {
+          "url": "images/ajax-btag.webp",
+          "alt": "Llavero cifrado sin contacto para teclado, color negro Ajax Tag",
+          "width": 357,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BTAG",
+        "Tipo de dispositivo": "Llavero cifrado sin contacto",
+        "Uso": "Para teclado / control de modos de seguridad",
+        "Tecnología de identificación": "DESFire®",
+        "Compatibilidad": "Teclados Ajax con lectura de Tag/Pass",
+        "Cantidad máxima de hubs": "13",
+        "Color": "Negro"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "Tag",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bstreetsirendouble",
+      "reference": "StreetSiren DoubleDeck",
+      "name": "SIRENA INALÁMBRICA PARA EXTERIORES CON CIERRE DE CLIP PARA PLACA FRONTAL CON MARCA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Sirena inalámbrica para exteriores.\n• Incluye cierre de clip para placa frontal con marca.\n• Permite montar una placa frontal Brandplate con logo y datos de contacto.\n• La sirena puede activarse desde el sistema Ajax.\n• Comparte las mismas características de software y hardware que StreetSiren; la diferencia es la placa frontal personalizable.",
+      "images": [
+        {
+          "url": "images/ajax-bstreetsirendouble.webp",
+          "alt": "Sirena inalámbrica para exteriores con cierre de clip para placa frontal con marca Ajax StreetSiren DoubleDeck",
+          "width": 480,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BSTREETSIRENDOUBLE",
+        "Tipo": "Sirena inalámbrica para exteriores",
+        "Sistema compatible": "Ajax",
+        "Cierre frontal": "Clip lock para placa frontal con marca",
+        "Duración de la alarma": "De 3 segundos a 3 minutos",
+        "Cantidad máxima de sirenas por hub": "Hasta 10",
+        "Diferencia con StreetSiren": "Mismos parámetros de software y hardware; permite montar una placa frontal Brandplate"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/sirens/page/2/",
+      "officialName": "StreetSiren DoubleDeck",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bstreetsiren",
+      "reference": "StreetSiren",
+      "name": "SIRENA INALÁMBRICA PARA EXTERIOR CON MARCO LED Y ZUMBADOR",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Sirena inalámbrica para interior y exterior.\n• Aviso acústico y luminoso mediante LED.\n• Volumen de alarma ajustable de 85 a 113 dB a 1 m.\n• Puede funcionar con baterías o con alimentación externa de 12 V DC.\n• Comunicación protegida por protocolo Jeweller.\n• Alcance de comunicación de hasta 1.500 m en espacio abierto.\n• Protección contra desmontaje mediante acelerómetro.\n• Grado de protección IP54, apta para instalación exterior.",
+      "images": [
+        {
+          "url": "images/ajax-bstreetsiren.webp",
+          "alt": "Sirena inalámbrica para exterior con marco led y zumbador Ajax StreetSiren",
+          "width": 480,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BSTREETSIREN",
+        "Volumen de notificación sonora": "85 a 113 dB a 1 m (ajustable)",
+        "Frecuencia del zumbador piezoeléctrico": "3.4 ± 0.5 kHz",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Alcance de radio": "hasta 1.500 m en espacio abierto",
+        "Alimentación": "4 × CR123A, 3 V",
+        "Vida útil de la batería": "hasta 5 años",
+        "Tensión de alimentación externa": "12 V DC",
+        "Consumo máximo con alimentación externa": "1.5 A",
+        "Grado de protección": "IP54",
+        "Rango de temperatura de operación": "de -25 °C a +60 °C",
+        "Humedad de operación": "hasta 95%"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/09/Guide_StreetSiren_en_web.pdf",
+      "officialName": "StreetSiren",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bsocket",
+      "reference": "Socket (type B) Jeweller",
+      "name": "ENCHUFE INTELIGENTE, INALÁMBRICO, CON MONITOR DE CONSUMO ELÉCTRICO",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Enchufe inteligente tipo B con monitoreo de consumo eléctrico.\n• Controla la alimentación de equipos conectados desde la app Ajax.\n• Protección contra sobrecarga y sobrecorriente.\n• Indicación LED del nivel de carga.\n• Comunicación inalámbrica segura mediante Jeweller.\n• Permite controlar y automatizar equipos eléctricos conectados.",
+      "images": [
+        {
+          "url": "images/ajax-bsocket.webp",
+          "alt": "Enchufe inteligente, inalámbrico, con monitor de consumo eléctrico Ajax Socket (type B) Jeweller",
+          "width": 480,
+          "height": 139,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BSOCKET",
+        "Voltaje de alimentación": "230 V ±10%, 50 Hz",
+        "Corriente máxima de carga": "11 A (continuo), 13 A (hasta 5 segundos)",
+        "Potencia de salida": "hasta 2,5 kW",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de radio": "hasta 1000 m (en espacio abierto)",
+        "Clase de protección": "IP20",
+        "Temperatura de funcionamiento": "de 0 °C a +64 °C",
+        "Humedad de funcionamiento": "hasta 75%",
+        "Dimensiones": "65,5 × 45 × 45 mm",
+        "Peso": "58 g",
+        "Monitoreo de consumo": "corriente, voltaje y potencia consumida"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/automation/",
+      "officialName": "Socket (type B) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-brex",
+      "reference": "BREX",
+      "name": "MÓDULO REPETIDOR DE SEÑAL DE RADIO, REX, HASTA 1800 M, COLOR NEGRO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-brex.webp",
+          "alt": "Módulo repetidor de señal de radio, rex, hasta 1800 m, color negro Ajax BREX",
+          "width": 474,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BREX"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bnvr16",
+      "reference": "BNVR16",
+      "name": "VIDEO GRABADOR, 16 CANALES, 4K, 25/30FPS, 1HDD MÁXIMO, 16TB, 100MBPS",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bnvr16.webp",
+          "alt": "Video grabador, 16 canales, 4k, 25/30fps, 1hdd máximo, 16tb, 100mbps Ajax BNVR16",
+          "width": 422,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BNVR16"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bnvr",
+      "reference": "BNVR",
+      "name": "VIDEO GRABADOR, 8 CANALES, 4K, 25/30FPS, 1HDD MÁXIMO, 16TB, 100MBPS",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bnvr.webp",
+          "alt": "Video grabador, 8 canales, 4k, 25/30fps, 1hdd máximo, 16tb, 100mbps Ajax BNVR",
+          "width": 422,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BNVR"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bmotionprotectplus",
+      "reference": "MotionProtect Plus Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO CON SENSOR DE MICROONDAS E INMUNIDAD A MASCOTAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento inalámbrico con sensor PIR y sensor de microondas de 24 GHz.\n• Inmunidad a mascotas de hasta 20 kg y 50 cm de altura.\n• Alcance de detección de movimiento de hasta 12 m.\n• Comunicación radio protegida Jeweller con alcance de hasta 1.200 m en espacio abierto.\n• Diseñado para uso en interiores.\n• Funciona con una batería CR123A de 3 V.\n• Autonomía de batería de hasta 5 años.\n• Incluye botón anti-sabotaje y ajuste de sensibilidad.",
+      "images": [
+        {
+          "url": "images/ajax-bmotionprotectplus.webp",
+          "alt": "Detector de movimiento inalámbrico con sensor de microondas e inmunidad a mascotas Ajax MotionProtect Plus Jeweller",
+          "width": 292,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BMOTIONPROTECTPLUS",
+        "Elemento sensible": "Sensor PIR y sensor de microondas (24 GHz)",
+        "Distancia de detección de movimiento": "Hasta 12 m",
+        "Ángulos de visión del detector (H/V)": "88.5° / 80°",
+        "Inmunidad a animales": "Hasta 20 kg, hasta 50 cm",
+        "Alcance de la señal de radio": "Hasta 1.200 m (sin obstáculos)",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "8.57 dBm / 7,20 mW (límite 25 mW)",
+        "Modulación": "GFSK",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Rango de temperatura de funcionamiento": "De 0 °C a +50 °C",
+        "Dimensiones totales": "110 x 65 x 50 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/fr/indoor-security/motionprotect-plus/",
+      "officialName": "MotionProtect Plus Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bmotionprotectcurtai",
+      "reference": "MotionProtect Curtain Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO TIPO CORTINA CON ÁNGULO DE VISIÓN ESTRECHO PARA INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento inalámbrico tipo cortina\n• Uso exclusivo en interiores\n• Ángulo de detección horizontal estrecho\n• Alcance de comunicación de hasta 1.700 m en espacio abierto\n• Incorpora dos sensores PIR\n• Función de procesamiento de señal de correlación para reducir falsas alarmas\n• Funciona con la app Ajax y notifica eventos al instante\n• Incluye protección antisabotaje (tamper)",
+      "images": [
+        {
+          "url": "images/ajax-bmotionprotectcurtai.webp",
+          "alt": "Detector de movimiento tipo cortina con ángulo de visión estrecho para interiores Ajax MotionProtect Curtain Jeweller",
+          "width": 167,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BMOTIONPROTECTCURTAI",
+        "Uso": "Solo en interiores",
+        "Tipo de detector": "Detector de movimiento inalámbrico tipo cortina",
+        "Ángulo de detección horizontal": "6°",
+        "Alcance de detección de movimiento": "Hasta 6–15 m",
+        "Alcance de comunicación": "Hasta 1.700 m en espacio abierto",
+        "Duración de la batería": "Hasta 5 años",
+        "Alimentación": "1 batería integrada",
+        "Protocolo de comunicación": "Jeweller"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/indoor-security/motionprotect-curtain/",
+      "officialName": "MotionProtect Curtain Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bmotionprotect",
+      "reference": "MotionProtect",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO INMUNE A MASCOTAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento inalámbrico para interiores.\n• Inmune a mascotas de hasta 20 kg y 50 cm de altura.\n• Sensor PIR para detección de movimiento.\n• Alcance de detección de hasta 12 m.\n• Ángulos de visión 88.5°/80° (horizontal/vertical).\n• Comunicación cifrada Jeweller con alcance de hasta 1.200 m sin obstáculos.\n• Funciona con una batería CR123A preinstalada.\n• Recomendado para instalación en pared a 2,4 m de altura.",
+      "images": [
+        {
+          "url": "images/ajax-bmotionprotect.webp",
+          "alt": "Detector de movimiento inalámbrico inmune a mascotas Ajax MotionProtect",
+          "width": 296,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BMOTIONPROTECT",
+        "Modelo": "MotionProtect",
+        "Tipo": "Detector de movimiento inalámbrico",
+        "Tecnología de detección": "Sensor PIR",
+        "Distancia de detección": "Hasta 12 m",
+        "Ángulo de visión": "88.5° / 80°",
+        "Inmunidad a mascotas": "Hasta 20 kg y 50 cm de altura",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.200 m sin obstáculos",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Frecuencia de radio": "868.0–868.6 MHz",
+        "Potencia de salida RF máxima": "Hasta 20 mW"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2017/11/Guide_MotionProtect_en.pdf",
+      "officialName": "MotionProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-blifequality",
+      "reference": "BLIFEQUALITY",
+      "name": "MONITOR DE CALIDAD DEL AIRE, COLOR NEGRO, 46499.135.BL3",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-blifequality.webp",
+          "alt": "Monitor de calidad del aire, color negro, 46499.135.bl3 Ajax BLIFEQUALITY",
+          "width": 469,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BLIFEQUALITY"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bkeypadtouch",
+      "reference": "KeyPad TouchScreen Jeweller",
+      "name": "TECLADO INALÁMBRICO CON PANTALLA TÁCTIL PARA SISTEMAS AJAX",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado inalámbrico para gestionar el sistema Ajax.\n• Pantalla táctil para control de modos de seguridad.\n• Autenticación mediante smartphones, tarjetas Pass, llaveros Tag y códigos.\n• Compatible con funciones de alarma antisabotaje y confirmación de intrusiones.\n• Diseñado para uso en interiores.\n• Funciona con el protocolo seguro Jeweller.\n• Alimentación con 6 baterías AA.\n• Autonomía de hasta 1,5 años.",
+      "images": [
+        {
+          "url": "images/ajax-bkeypadtouch.webp",
+          "alt": "Teclado inalámbrico con pantalla táctil para sistemas ajax Ajax KeyPad TouchScreen Jeweller",
+          "width": 480,
+          "height": 457,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BKEYPADTOUCH",
+        "Modelo": "KeyPad TouchScreen Jeweller",
+        "Autenticación": "smartphones, Pass, Tag y códigos",
+        "Tipo de comunicación": "Jeweller",
+        "Alcance de comunicación": "hasta 1.700 m (sin obstáculos)",
+        "Alimentación": "6 × AA",
+        "Voltaje de alimentación": "1,5 V por batería",
+        "Autonomía": "hasta 1,5 años",
+        "Uso": "interior",
+        "Protección": "contra adivinación de códigos",
+        "Batería de emergencia": "no indicada en la ficha consultada"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "KeyPad TouchScreen Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bkeypadplus",
+      "reference": "KeyPad Plus",
+      "name": "TECLADO TÁCTIL INALÁMBRICO CON TARJETAS Y LLAVEROS SIN CONTACTO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado táctil inalámbrico para gestionar el sistema de seguridad Ajax.\n• Permite armar, desarmar y activar el Modo Noche.\n• Admite autenticación mediante tarjetas Pass y llaveros Tag.\n• Compatible con dispositivos de terceros con tecnología DESFire®.\n• Diseñado para uso en interiores.\n• Se comunica con el hub mediante el protocolo seguro Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-bkeypadplus.webp",
+          "alt": "Teclado táctil inalámbrico con tarjetas y llaveros sin contacto Ajax KeyPad Plus",
+          "width": 331,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BKEYPADPLUS",
+        "Tipo de dispositivo": "Teclado táctil inalámbrico",
+        "Autenticación": "Tarjetas Pass, llaveros Tag y dispositivos de terceros con DESFire®",
+        "Comunicación": "Jeweller",
+        "Uso": "Interior",
+        "Funciones de seguridad": "Armado, desarmado, Modo Noche, alarma de pánico y silenciar alarma de incendio",
+        "Compatibilidad de hub": "Hub Ajax con OS Malevich 2.35 o posterior",
+        "Compatibilidad normativa": "Compatible con requisitos SIA CP-01 con firmware 5.60.7 o posterior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "KeyPad Plus",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bkeypadcombi",
+      "reference": "KeyPad Combi (9NA)",
+      "name": "TECLADO TÁCTIL INALÁMBRICO CON SIRENA INCORPORADA Y LECTOR DE TARJETAS Y LLAVEROS DESFIRE",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado táctil inalámbrico para gestionar el sistema de seguridad Ajax.\n• Autenticación mediante códigos, tarjetas Pass y llaveros Tag.\n• Sirena incorporada para notificación local de alarmas y eventos.\n• Diseñado para instalación en interiores.\n• Compatible con hub y extensores de radio señal Ajax compatibles.\n• Protección contra adivinación del código.\n• Protección antisabotaje.\n• Se integra con la app Ajax para control y configuración.",
+      "images": [
+        {
+          "url": "images/ajax-bkeypadcombi.webp",
+          "alt": "Teclado táctil inalámbrico con sirena incorporada y lector de tarjetas y llaveros desfire Ajax KeyPad Combi (9NA)",
+          "width": 480,
+          "height": 177,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BKEYPADCOMBI",
+        "Tecnología de comunicación": "Jeweller, inalámbrica",
+        "Alimentación": "4 × CR123A",
+        "Autonomía de batería": "hasta 3,5 años",
+        "Tipo de autenticación": "códigos, Pass y Tag",
+        "Altavoz/sirena integrada": "sí",
+        "Instalación": "interior",
+        "Compatibilidad": "Hub (4G) Jeweller, Hub Plus Jeweller, Hub 2 Jeweller, Hub 2 Plus Jeweller, Hub Hybrid",
+        "Compatibilidad con extensores": "sí",
+        "Dimensiones": "115 × 182 × 27 mm",
+        "Referencia de modelo": "9NA"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/configure-according-ul-requirements/",
+      "officialName": "KeyPad Combi (9NA)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bkeypad",
+      "reference": "KeyPad",
+      "name": "TECLADO TÁCTIL INALÁMBRICO BIDIRECCIONAL",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado táctil inalámbrico para gestionar el sistema de seguridad Ajax.\n• Protección contra el intento de adivinar el código.\n• Permite generar una alarma silenciosa en caso de coacción.\n• Funciona con protocolo inalámbrico seguro Jeweller.\n• Diseñado para uso en interiores.",
+      "images": [
+        {
+          "url": "images/ajax-bkeypad.webp",
+          "alt": "Teclado táctil inalámbrico bidireccional Ajax KeyPad",
+          "width": 345,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BKEYPAD",
+        "Tipo de sensor": "Capacitivo",
+        "Alimentación": "4 baterías AAA",
+        "Tensión de alimentación": "3 V",
+        "Alcance de comunicación": "Hasta 1,700 m sin obstáculos",
+        "Duración de la batería": "Hasta 2 años",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia máxima de salida RF": "Hasta 20 mW",
+        "Modulación": "FM",
+        "Temperatura de funcionamiento": "De -10 °C a +50 °C",
+        "Humedad de funcionamiento": "Hasta 80 %",
+        "Dimensiones": "150 × 102.5 × 13.2 mm",
+        "Peso": "172 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/ar/manuals/keypad/",
+      "officialName": "KeyPad",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bhub4g",
+      "reference": "BHUB4G",
+      "name": "PANEL DE ALARMA, INALÁMBRICO, CON PUERTO RJ45+4G, HUB, 4G LITE",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bhub4g.webp",
+          "alt": "Panel de alarma, inalámbrico, con puerto rj45+4g, hub, 4g lite Ajax BHUB4G",
+          "width": 480,
+          "height": 473,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BHUB4G"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bhub2plus",
+      "reference": "BHUB2PLUS",
+      "name": "PANEL DE ALARMA, INALÁMBRICO, CON PUERTO RJ45, VIDEOVIGILANCIA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bhub2plus.webp",
+          "alt": "Panel de alarma, inalámbrico, con puerto rj45, videovigilancia Ajax BHUB2PLUS",
+          "width": 480,
+          "height": 465,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BHUB2PLUS"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bhub24g",
+      "reference": "Hub 2 (4G) Jeweller",
+      "name": "PANEL DE ALARMA INALÁMBRICO CON PUERTO RJ45 Y VERIFICACIÓN FOTOGRÁFICA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Panel de control inalámbrico para sistema Ajax.\n• Compatible con verificación fotográfica.\n• Conexión a Internet por Ethernet y dos tarjetas SIM.\n• Soporta redes móviles 2G/3G/4G (LTE).\n• Tecnología de comunicación Jeweller/Wings.\n• Admite hasta 9 grupos.\n• Batería de respaldo integrada.\n• Control y supervisión desde la app Ajax.",
+      "images": [
+        {
+          "url": "images/ajax-bhub24g.webp",
+          "alt": "Panel de alarma inalámbrico con puerto rj45 y verificación fotográfica Ajax Hub 2 (4G) Jeweller",
+          "width": 480,
+          "height": 478,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BHUB24G",
+        "Modelo": "Hub 2 (4G) Jeweller",
+        "Canales de comunicación": "Ethernet y 2 tarjetas SIM",
+        "Red móvil": "2G/3G/4G (LTE)",
+        "Verificación fotográfica": "Sí",
+        "Tecnología de comunicación": "Jeweller / Wings",
+        "Número de grupos": "9",
+        "Batería de respaldo": "Hasta 14 horas",
+        "Tipo de dispositivo": "Panel de control inalámbrico"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/faqs/hub-2-one-sim/",
+      "officialName": "Hub 2 (4G) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bhub2",
+      "reference": "Hub 2 (2G) / (4G)",
+      "name": "PANEL DE ALARMA INALÁMBRICO CON PUERTO RJ45 Y VERIFICACIÓN FOTOGRÁFICA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Panel de control inalámbrico.\n• Soporta verificación fotográfica.\n• Se conecta por Ethernet y dos tarjetas SIM (2G/3G/LTE).\n• Permite integrar videovigilancia; Ajax indica hasta 25 cámaras con Hub 2.\n• Compatible con el ecosistema Ajax y control desde la app.",
+      "images": [
+        {
+          "url": "images/ajax-bhub2.webp",
+          "alt": "Panel de alarma inalámbrico con puerto rj45 y verificación fotográfica Ajax Hub 2 (2G) / (4G)",
+          "width": 480,
+          "height": 469,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BHUB2",
+        "Tipo": "Panel de control inalámbrico",
+        "Conectividad": "Ethernet y dos tarjetas SIM (2G/3G/LTE)",
+        "Función destacada": "Soporte de verificación fotográfica",
+        "Cámaras de videovigilancia compatibles": "Hasta 25 cámaras",
+        "Modelos indicados por Ajax": "Hub 2 (2G) / (4G)",
+        "Certificación UL/SIA en soporte oficial": "Hub 2 (4G) (9NA)",
+        "Alimentación": "120–240 V~, 60 Hz, hasta 0.083 A (10 W)",
+        "Batería de respaldo": "Li-ion Polymer recargable 3.7 V⎓, 3 Ah",
+        "Firmware mínimo indicado para UL": "NA 2.X.X y superior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "Hub 2 (2G) / (4G)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bholder",
+      "reference": "BHOLDER",
+      "name": "SOPORTE PARA BOTÓN, COLOR NEGRO, 38214.82.BL",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bholder.webp",
+          "alt": "Soporte para botón, color negro, 38214.82.bl Ajax BHOLDER",
+          "width": 402,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BHOLDER"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bglassprotect",
+      "reference": "GlassProtect",
+      "name": "DETECTOR DE ROTURA DE CRISTAL INALÁMBRICO CON MICROFONO, HASTA 9 M DE DISTANCIA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de rotura de cristal.\n• Detecta rotura de cristal hasta 9 m de distancia.\n• Ángulo de cobertura del micrófono de 180°.\n• Comunicación con el sistema Ajax mediante protocolo Jeweller protegido.\n• Alcance de comunicación de hasta 1.000 m en campo abierto.\n• Funciona con una batería CR123A preinstalada.\n• Autonomía de hasta 5 años.\n• Diseñado para uso en interiores.",
+      "images": [
+        {
+          "url": "images/ajax-bglassprotect.webp",
+          "alt": "Detector de rotura de cristal inalámbrico con microfono, hasta 9 m de distancia Ajax GlassProtect",
+          "width": 480,
+          "height": 356,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BGLASSPROTECT",
+        "Elemento sensible": "Micrófono electret",
+        "Distancia de detección de rotura de cristal": "Hasta 9 m",
+        "Ángulo de cobertura del micrófono": "180°",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "6.01 dBm / 3.99 mW",
+        "Alcance de la señal de radio": "Hasta 1.000 m (sin obstáculos)",
+        "Fuente de alimentación": "1 batería CR123A, 3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Temperatura de funcionamiento": "De 0 °C a +50 °C",
+        "Humedad de funcionamiento": "Hasta 90%"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/09/Guide_GlassProtect_en_web.pdf",
+      "officialName": "GlassProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bfireprotect2rbcoul",
+      "reference": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+      "name": "SENSOR DE HUMO, CALOR Y CO, INALÁMBRICO, UL, COLOR NEGRO, CON SIRENA INTEGRADA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Alarma inalámbrica de humo, calor y monóxido de carbono.\n• Sirena integrada para aviso local.\n• Diseñado para instalación en interiores.\n• Comunicación por radio segura Jeweller con el hub.\n• Versión UL/ULC certificada.\n• Compatible con hubs que ejecuten OS Malevich 2.19 o posterior.\n• Usa baterías reemplazables.\n• Dispone de cámara de humo y doble tamper.",
+      "images": [
+        {
+          "url": "images/ajax-bfireprotect2rbcoul.webp",
+          "alt": "Sensor de humo, calor y co, inalámbrico, ul, color negro, con sirena integrada Ajax FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+          "width": 480,
+          "height": 478,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BFIREPROTECT2RBCOUL",
+        "Modelo oficial": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+        "Tipo": "Detector inalámbrico de humo, calor y CO",
+        "Certificación": "UL/ULC",
+        "Baterías": "2 × CR123A",
+        "Autonomía de batería": "Hasta 5 años",
+        "Compatibilidad de hub": "OS Malevich 2.19 o posterior",
+        "Alcance de comunicación": "Hasta 5,577 ft sin obstáculos",
+        "Instalación": "Interior",
+        "Color": "Negro"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/it/fire-protection/fireprotect-2-smoke-heat-co/",
+      "officialName": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bfireprotect2rb",
+      "reference": "BFIREPROTECT2RB",
+      "name": "SENSOR DE HUMO Y CALOR, INALÁMBRICO, COLOR NEGRO. 50780.136.BL3",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bfireprotect2rb.webp",
+          "alt": "Sensor de humo y calor, inalámbrico, color negro. 50780.136.bl3 Ajax BFIREPROTECT2RB",
+          "width": 480,
+          "height": 382,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BFIREPROTECT2RB"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bdoorprotect",
+      "reference": "DoorProtect",
+      "name": "CONTACTO MAGNÉTICO INALÁMBRICO PARA PUERTAS Y VENTANAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de apertura para puertas y ventanas. ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))\n• Funciona con un imán pequeño o grande para detectar apertura/cierre. ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))\n• Admite conexión de un detector externo con contacto normalmente cerrado (NC). ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))\n• Diseñado para instalación en interiores. ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))\n• Protección contra sabotaje mediante tamper. ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))\n• Comunicación inalámbrica con el hub mediante el protocolo seguro Jeweller. ([support.ajax.systems](https://support.ajax.systems/?utm_source=openai))",
+      "images": [
+        {
+          "url": "images/ajax-bdoorprotect.webp",
+          "alt": "Contacto magnético inalámbrico para puertas y ventanas Ajax DoorProtect",
+          "width": 251,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BDOORPROTECT",
+        "Modelo": "DoorProtect ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Tipo de dispositivo": "Detector inalámbrico de apertura para puertas y ventanas ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Umbral de activación (imán pequeño)": "1 cm ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Umbral de activación (imán grande)": "2 cm ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Protección antisabotaje": "Sí ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Frecuencia de radio": "868.0–868.6 MHz o 868.7–869.2 MHz según la región ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Alcance de comunicación": "Hasta 1.200 m en campo abierto ([ajax.systems](https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf?utm_source=openai))",
+        "Alimentación": "1 batería CR123A, 3 V ([ajax.systems](https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf?utm_source=openai))",
+        "Vida útil de la batería": "Hasta 7 años ([support.ajax.systems](https://support.ajax.systems/pl/how-long-operate-from-batteries/?utm_source=openai))",
+        "Temperatura de funcionamiento": "De 0 °C a +50 °C ([ajax.systems](https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf?utm_source=openai))",
+        "Humedad de funcionamiento": "Hasta 80% ([ajax.systems](https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf?utm_source=openai))",
+        "Dimensiones": "20 × 90 mm ([ajax.systems](https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf?utm_source=openai))",
+        "Peso": "29 g ([ajax.systems](https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf?utm_source=openai))"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2017/11/Guide_DoorProtect_ru.pdf",
+      "officialName": "DoorProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bdoorbell",
+      "reference": "DoorBell",
+      "name": "VIDEO TIMBRE CON IA INTEGRADA, SENSOR PIR Y CONTROL A TRAVÉS DE APPS",
+      "categorySlug": "camaras-ip",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Video timbre con IA integrada.\n• Sensor PIR para detección de movimiento.\n• Control y gestión desde las apps Ajax.\n• Comunicación de voz bidireccional.\n• Relleno de vídeo y notificaciones al pulsar el timbre.\n• Conexión por Wi‑Fi con canal de respaldo mediante hub Ajax.\n• Grabaciones almacenables en Ajax NVR o Ajax Cloud Storage.",
+      "images": [
+        {
+          "url": "images/ajax-bdoorbell.webp",
+          "alt": "Video timbre con ia integrada, sensor pir y control a través de apps Ajax DoorBell",
+          "width": 189,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BDOORBELL",
+        "Conectividad principal": "Wi‑Fi",
+        "Canal de respaldo": "Hub Ajax",
+        "Almacenamiento de vídeo": "Ajax NVR o Ajax Cloud Storage",
+        "Comunicación de audio": "Voz bidireccional",
+        "Detección de movimiento": "Sensor PIR",
+        "Iluminación nocturna": "Infrarroja (IR)",
+        "Control": "Mediante apps Ajax",
+        "Tipo de dispositivo": "Video timbre"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/video-surveillance/",
+      "officialName": "DoorBell",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bcombiprotect",
+      "reference": "CombiProtect",
+      "name": "SENSOR DE ROTURA DE CRISTAL E INFRARROJO DE MOVIMIENTO INALÁMBRICO CON INMUNIDAD A MASCOTAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico combinado de movimiento y rotura de cristal.\n• Inmunidad a mascotas.\n• Diseñado para el sistema de seguridad Ajax.\n• Comunicación mediante el protocolo protegido Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-bcombiprotect.webp",
+          "alt": "Sensor de rotura de cristal e infrarrojo de movimiento inalámbrico con inmunidad a mascotas Ajax CombiProtect",
+          "width": 319,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BCOMBIPROTECT",
+        "Tipo de dispositivo": "Detector inalámbrico de movimiento y rotura de cristal",
+        "Compatibilidad": "Sistema de seguridad Ajax",
+        "Conectividad": "Protocolo protegido Jeweller",
+        "Función de detección": "Movimiento y rotura de cristal",
+        "Inmunidad a mascotas": "Sí"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "CombiProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bbutton",
+      "reference": "BBUTTON",
+      "name": "BOTÓN DE EMERGENCIA, INALÁMBRICO, COLOR NEGRO, 28202.26.BL3",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bbutton.webp",
+          "alt": "Botón de emergencia, inalámbrico, color negro, 28202.26.bl3 Ajax BBUTTON",
+          "width": 377,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BBUTTON"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bbrandplate",
+      "reference": "BBRANDPLATE",
+      "name": "PLACA, PARA STREETSIREN, DOUBLEDECK, COLOR NEGRO, 20379.63.BL1",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bbrandplate.webp",
+          "alt": "Placa, para streetsiren, doubledeck, color negro, 20379.63.bl1 Ajax BBRANDPLATE",
+          "width": 480,
+          "height": 400,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BBRANDPLATE"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-baxrex2",
+      "reference": "ReX 2 Jeweller",
+      "name": "MÓDULO REPETIDOR DE SEÑAL DE RADIO CON SOPORTE DE VERIFICACIÓN FOTOGRÁFICA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Repetidor de señal de radio inalámbrico para ampliar el alcance del sistema Ajax.\n• Compatible con verificación fotográfica de alarmas.\n• Se comunica con el hub mediante los protocolos Jeweller y Wings.\n• Diseñado para instalación en interiores.\n• Con alimentación estándar de 110-240 V~.\n• Puede funcionar con fuentes de 12-24 V⎓ mediante PSU tipo A.\n• Puede funcionar con fuentes de 6 V⎓ mediante PSU tipo A.",
+      "images": [
+        {
+          "url": "images/ajax-baxrex2.webp",
+          "alt": "Módulo repetidor de señal de radio con soporte de verificación fotográfica Ajax ReX 2 Jeweller",
+          "width": 474,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BAXREX2",
+        "Modelo oficial": "ReX 2 Jeweller",
+        "Tipo de dispositivo": "Repetidor de señal de radio inalámbrico",
+        "Compatibilidad": "Sistemas Ajax con soporte para ReX 2",
+        "Protocolos de comunicación": "Jeweller / Wings",
+        "Soporte de verificación fotográfica": "Sí",
+        "Alimentación estándar": "110-240 V~",
+        "Alimentación alternativa": "6 V⎓ con PSU tipo A",
+        "Instalación": "Interior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "ReX 2 Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-bajaxpass",
+      "reference": "BAJAXPASS",
+      "name": "TARJETA ENCRIPTADA, PARA TECLADO, COLOR NEGRO, 23501.89.BL",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-bajaxpass.webp",
+          "alt": "Tarjeta encriptada, para teclado, color negro, 23501.89.bl Ajax BAJAXPASS",
+          "width": 480,
+          "height": 390,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BAJAXPASS"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajwaterstop",
+      "reference": "52972.146.WH3",
+      "name": "ELECTᲠᲝᲕÁLVULA WATERSTOP DE 1/2, COLOR BLANCO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Válvula inteligente de cierre de agua con control remoto.\n• Funciona como parte de un sistema antiallagamiento Ajax.\n• Controlable desde la app Ajax, desde el botón del dispositivo, desde la palanca de la válvula o mediante escenarios de automatización.\n• Comunicación inalámbrica Jeweller con alcance en espacio abierto de hasta 1.100 m.\n• Funciona con 4 baterías CR123A preinstaladas y puede alimentarse con una fuente externa.\n• Soporta válvula RuB con rosca BSPP de 1/2\" (DN 15).\n• Incluye protección antisabotaje contra la retirada del actuador.\n• Permite mantenimiento preventivo automático para evitar que la válvula se atasque.",
+      "images": [
+        {
+          "url": "images/ajax-ajwaterstop.webp",
+          "alt": "Electროვálvula waterstop de 1/2, color blanco Ajax 52972.146.WH3",
+          "width": 307,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJWATERSTOP",
+        "Marca": "Ajax",
+        "Modelo": "WaterStop Jeweller",
+        "Código": "52972.146.WH3",
+        "Tipo de producto": "Válvula inteligente de cierre de agua",
+        "Color": "Blanco",
+        "Tamaño de válvula": "1/2\" (DN 15, 15 mm)",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.100 m en espacio abierto",
+        "Alimentación principal": "4 baterías CR123A preinstaladas",
+        "Alimentación externa": "7,5–14 V⎓, mínimo 1,8 A",
+        "Compatibilidad de válvula": "RuB con rosca BSPP",
+        "Garantía": "2 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/it/manuals/waterstop/",
+      "officialName": "52972.146.WH3",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajwallswitch",
+      "reference": "WallSwitch",
+      "name": "RELÉ DE POTENCIA PARA CONTROLAR EL SUMINISTRO ELÉCTRICO DE MANERA REMOTA",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Relé de potencia inalámbrico para controlar de forma remota el suministro eléctrico de aparatos de 110/230 V~.\n• Incluye medición de consumo eléctrico y monitorización de corriente, voltaje y potencia consumida.\n• Soporta una carga de hasta 3 kW con carga resistiva a 230 V.\n• Protección contra sobretensión y sobrecorriente integradas.\n• Comunicación con el sistema Ajax mediante protocolo Jeweller.\n• Alcance de comunicación de hasta 1.000 m en campo abierto.\n• Diseñado para instalación dentro de una caja de empotrar europea.\n• El relé tiene una vida útil de 200.000 conmutaciones.",
+      "images": [
+        {
+          "url": "images/ajax-ajwallswitch.webp",
+          "alt": "Relé de potencia para controlar el suministro eléctrico de manera remota Ajax WallSwitch",
+          "width": 480,
+          "height": 444,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJWALLSWITCH",
+        "Modelo": "WallSwitch",
+        "Tipo de dispositivo": "Relé de potencia inalámbrico con monitor de energía",
+        "Tensión de alimentación": "110-230 V AC ±10%, 50/60 Hz",
+        "Corriente máxima de carga": "13 A",
+        "Potencia máxima de salida": "Hasta 3 kW (carga resistiva a 230 V)",
+        "Protección de tensión": "Sí, mínimo 161 V y máximo 264 V",
+        "Protección de corriente máxima": "Sí, 13 A",
+        "Consumo eléctrico del dispositivo en espera": "Menos de 1 Wh",
+        "Banda de frecuencia": "868.0-868.6 MHz",
+        "Alcance de radio": "Hasta 1.000 m (sin obstáculos)",
+        "Temperatura de funcionamiento": "De 0 °C a +64 °C",
+        "Dimensiones totales": "38 x 25 x 18 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/09/Guide_WallSwitch_en_web.pdf",
+      "officialName": "WallSwitch",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajturretcam",
+      "reference": "TurretCam (5 Mp/2.8 mm)",
+      "name": "CÁMARA TURRET IP 5MP 2.8 MM CABLEADA CON RECONOCIMIENTO DE OBJETOS E ILUMINACIÓN INFRARROJA INTELIGENTE",
+      "categorySlug": "camaras-ip",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Cámara IP cableada\n• Resolución de 5 MP\n• Lente de 2.8 mm\n• Iluminación infrarroja (IR) inteligente\n• Reconocimiento de objetos\n• Visualización de video en vivo y grabado en apps Ajax\n• Almacenamiento en tarjeta microSD o en NVR con disco duro\n• Conexión por Ethernet",
+      "images": [
+        {
+          "url": "images/ajax-ajturretcam.webp",
+          "alt": "Cámara turret ip 5mp 2.8 mm cableada con reconocimiento de objetos e iluminación infrarroja inteligente Ajax TurretCam (5 Mp/2.8 mm)",
+          "width": 455,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJTURRETCAM",
+        "Modelo": "TurretCam (5 Mp/2.8 mm)",
+        "Tipo": "Cámara IP",
+        "Resolución": "5 MP",
+        "Lente": "2.8 mm",
+        "Conexión de red": "Ethernet",
+        "Iluminación": "Infrarroja inteligente (IR)",
+        "Funciones": "Reconocimiento de objetos",
+        "Almacenamiento": "Tarjeta microSD o NVR con disco duro",
+        "Versiones disponibles": "5 Mp/2.8 mm, 8 Mp/2.8 mm, 5 Mp/4 mm, 8 Mp/4 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/uk/manuals/turretcam/",
+      "officialName": "TurretCam (5 Mp/2.8 mm)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajtransmitter",
+      "reference": "AJ-TRANSMITTER",
+      "name": "MÓDULO TRANSMISOR INALÁMBRICO PARA INTEGRAR DISPOSITIVOS CABLEADOS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Integra un dispositivo de terceros en el sistema Ajax.\n• Transmite alarmas y señales de tamper.\n• Puede alimentar el detector conectado.\n• Protección contra desmontaje mediante acelerómetro.\n• Configuración y monitoreo desde la app Ajax.\n• Comunicación por radio en banda Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-ajtransmitter.webp",
+          "alt": "Módulo transmisor inalámbrico para integrar dispositivos cableados Ajax AJ-TRANSMITTER",
+          "width": 227,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJTRANSMITTER",
+        "Baterías": "3 × CR123A, 3 V",
+        "Alimentación del detector conectado": "Sí, 3.3 V",
+        "Alcance de comunicación": "Hasta 1,600 m",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "5.48 dBm / 3.53 mW",
+        "Modulación": "GFSK",
+        "Modo del detector externo": "Pulse o biestable",
+        "Temperatura de operación": "-25 °C a +50 °C",
+        "Tipo de entrada del detector": "NC/NO",
+        "Tipo de tamper": "NC/NO"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "AJ-TRANSMITTER",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajtag",
+      "reference": "Tag",
+      "name": "LLAVERO CIFRADO SIN CONTACTO PARA TECLADO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Llavero cifrado sin contacto para control de modos de seguridad.\n• Funciona con teclados Ajax compatibles con lectura de Pass/Tag.\n• Utiliza tecnología DESFire® para identificación rápida y segura.\n• El sistema de autenticación emplea cifrado de 128 bits y protección contra copiado.\n• Puede funcionar con varios hubs al mismo tiempo.",
+      "images": [
+        {
+          "url": "images/ajax-ajtag.webp",
+          "alt": "Llavero cifrado sin contacto para teclado Ajax Tag",
+          "width": 348,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJTAG",
+        "Tipo de dispositivo": "Llavero cifrado sin contacto",
+        "Tecnología de autenticación": "DESFire®",
+        "Base de la tecnología": "ISO 14443",
+        "Cifrado": "128 bits",
+        "Protección": "Contra copiado",
+        "Compatibilidad": "Teclados Ajax con lector Pass/Tag",
+        "Número máximo de hubs": "13"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "Tag",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajstreetsirendouble",
+      "reference": "StreetSiren DoubleDeck",
+      "name": "SIRENA INALÁMBRICA PARA INTERIORES Y EXTERIORES CON CIERRE DE CLIP PARA UNA PLACA FRONTAL DE MARCA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Sirena inalámbrica para uso en interiores y exteriores.\n• Incluye cierre de clip para una placa frontal de marca.\n• Permite ajustar la duración y el volumen de la alarma desde las apps Ajax.\n• Permite definir qué detectores activan la sirena.\n• La duración de alarma puede configurarse de 3 segundos a 3 minutos.\n• La duración de alarma de hasta 15 minutos está disponible con firmware NA 5.60.4.14 o superior.\n• El ID del dispositivo es el número de serie.\n• Es parte de la línea de sirenas Ajax StreetSiren DoubleDeck.",
+      "images": [
+        {
+          "url": "images/ajax-ajstreetsirendouble.webp",
+          "alt": "Sirena inalámbrica para interiores y exteriores con cierre de clip para una placa frontal de marca Ajax StreetSiren DoubleDeck",
+          "width": 354,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJSTREETSIRENDOUBLE",
+        "Tipo": "Sirena inalámbrica",
+        "Uso": "Interior y exterior",
+        "Sistema de montaje frontal": "Cierre de clip para placa frontal de marca",
+        "Duración de alarma": "De 3 segundos a 3 minutos",
+        "Duración extendida": "Hasta 15 minutos con firmware NA 5.60.4.14 o superior",
+        "Ajuste de alarma": "Volumen y duración configurables en las apps Ajax",
+        "Activación": "Se puede definir qué detectores activan la sirena",
+        "Identificador": "El ID es el número de serie del dispositivo"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/tr/sirens/streetsiren-doubledeck/",
+      "officialName": "StreetSiren DoubleDeck",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajstreetsiren",
+      "reference": "StreetSiren",
+      "name": "SIRENA INALÁMBRICA PARA INTERIORES Y EXTERIORES CON LUZ ESTROBOSCÓPICA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Sirena inalámbrica para exterior con luz LED de señalización.\n• Volumen de alarma ajustable de 85 a 113 dB a 1 m.\n• Comunicación con el hub mediante protocolo Jeweller protegido.\n• Alcance de comunicación de hasta 1.500 m en espacio abierto.\n• Puede funcionar con baterías o con alimentación externa de 12 V DC.\n• Protección anti-sabotaje por acelerómetro.\n• Grado de protección IP54 para instalación en exteriores.\n• Permite configurar duración de la alarma e indicación de armado/desarmado.",
+      "images": [
+        {
+          "url": "images/ajax-ajstreetsiren.webp",
+          "alt": "Sirena inalámbrica para interiores y exteriores con luz estroboscópica Ajax StreetSiren",
+          "width": 451,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJSTREETSIREN",
+        "Modelo": "StreetSiren",
+        "Tipo de notificación": "Sonido y luz (LED)",
+        "Volumen de alarma": "85 a 113 dB a 1 m (ajustable)",
+        "Frecuencia de funcionamiento del piezoanunciador": "3.4 ± 0.5 kHz",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "8.63 dBm / 7.29 mW",
+        "Alcance de radio": "Hasta 1.500 m (sin obstáculos)",
+        "Alimentación": "4 × CR123A, 3 V",
+        "Voltaje de alimentación externa": "12 V DC",
+        "Consumo máximo desde alimentación externa": "1.5 A",
+        "Protección de la carcasa": "IP54",
+        "Temperatura de operación": "-25 °C a +60 °C"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/09/Guide_StreetSiren_en_web.pdf",
+      "officialName": "StreetSiren",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajspacecontrol",
+      "reference": "Ajax SpaceControl",
+      "name": "MANDO DE SEGURIDAD INALÁMBRICO BIDIRECCIONAL CON BOTÓN DE PÁNICO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Control remoto inalámbrico bidireccional para el sistema de seguridad\n• Permite armar, desarmar y activar el modo parcial de seguridad\n• Incluye botón de pánico\n• Tiene 4 botones programables",
+      "images": [
+        {
+          "url": "images/ajax-ajspacecontrol.webp",
+          "alt": "Mando de seguridad inalámbrico bidireccional con botón de pánico Ajax Ajax SpaceControl",
+          "width": 271,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJSPACECONTROL",
+        "Cantidad de botones": "4",
+        "Botón de pánico": "Sí",
+        "Banda de frecuencia de radio": "868.0–868.6 MHz o 868.7–869.2 MHz",
+        "Potencia de señal de radio": "20 mW",
+        "Distancia máxima entre mando y central": "1000 m (espacio abierto)",
+        "Tipo de batería": "CR2032",
+        "Tensión de alimentación": "3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Temperatura de funcionamiento": "-20 °C a +50 °C",
+        "Humedad de funcionamiento": "Hasta 90 %",
+        "Dimensiones": "65 × 37 × 10 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "Ajax SpaceControl",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajsocket",
+      "reference": "Socket (type F) Jeweller",
+      "name": "ENCHUFE INTELIGENTE INALÁMBRICO CON MONITOR DE CONSUMO ELÉCTRICO",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Enchufe inteligente tipo F para controlar la alimentación de equipos eléctricos.\n• Monitorea el consumo eléctrico: corriente, voltaje y potencia consumida.\n• Protección contra sobretensión y sobrecorriente.\n• Indicación LED del nivel de carga.\n• Comunicación inalámbrica segura con el hub mediante Jeweller.\n• Compatible con automatización y escenarios en la app Ajax.",
+      "images": [
+        {
+          "url": "images/ajax-ajsocket.webp",
+          "alt": "Enchufe inteligente inalámbrico con monitor de consumo eléctrico Ajax Socket (type F) Jeweller",
+          "width": 480,
+          "height": 271,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJSOCKET",
+        "Tipo de enchufe": "Schuko tipo F",
+        "Tensión de alimentación": "230 V AC ±10%, 50 Hz",
+        "Corriente máxima de carga": "11 A (continuo), 13 A (hasta 5 s)",
+        "Potencia máxima de salida": "Hasta 2,5 kW",
+        "Protección de voltaje": "184–253 V",
+        "Protección de corriente": "11 A cuando está activa; hasta 13 A cuando no está activa",
+        "Protección de temperatura": "+85 °C",
+        "Frecuencia de radio": "868,0–868,6 MHz o 868,7–869,2 MHz según la región",
+        "Potencia máxima de radio": "Hasta 25 mW",
+        "Alcance de radio": "Hasta 1000 m",
+        "Dimensiones": "65,5 × 45 × 45 mm",
+        "Peso": "58 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/automation/",
+      "officialName": "Socket (type F) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajrex",
+      "reference": "ReX Jeweller",
+      "name": "MÓDULO REPETIDOR DE SEÑAL DE RADIO, HASTA 1800 M, COLOR BLANCO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Amplía hasta 2 veces el alcance de comunicación por radio de los dispositivos Ajax conectados al hub.\n• Diseñado para instalación en interiores.\n• Solo es compatible con hubs Ajax.\n• Incluye interruptor antisabotaje incorporado.\n• Cuenta con batería integrada con hasta 35 horas de funcionamiento sin alimentación externa.\n• Recibe y retransmite señales entre el hub y los dispositivos conectados.\n• Permite recibir notificaciones de eventos por push, SMS y llamadas (si están activadas).\n• Se configura desde la app móvil Ajax para iOS y Android.",
+      "images": [
+        {
+          "url": "images/ajax-ajrex.webp",
+          "alt": "Módulo repetidor de señal de radio, hasta 1800 m, color blanco Ajax ReX Jeweller",
+          "width": 480,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJREX",
+        "Tipo de dispositivo": "Repetidor de señal de radio",
+        "Compatibilidad": "Solo con hubs Ajax",
+        "Instalación": "Interior",
+        "Autonomía con batería": "Hasta 35 horas",
+        "Tiempo de transmisión de alarmas": "0,3 segundos",
+        "Cantidad máxima por hub": "1 en Hub (2G) / Hub (4G); hasta 5 en Hub Plus, Hub 2, Hub 2 Plus, Hub BP y Superior Hub compatibles",
+        "Función principal": "Amplía el alcance de la señal de radio del sistema"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/manuals/rex/",
+      "officialName": "ReX Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajrelay",
+      "reference": "Ajax Relay",
+      "name": "RELÉ DE BAJA POTENCIA PARA EL CONTROL REMOTO DE ELECTRODOMÉSTICOS",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Relé inalámbrico con contacto seco libre de potencial.\n• Permite encender y apagar dispositivos alimentados por 7–24 V CC.\n• Incluye función de control por pulso para equipos.\n• Se integra al sistema Ajax mediante el protocolo Jeweller.\n• Alcance de comunicación de hasta 1.000 m en espacio abierto.\n• Diseñado para instalarse dentro de cajas de conexión, paneles eléctricos o gabinetes de interruptores.\n• Protección incorporada contra sobretemperatura y sobrevoltaje.\n• Consumo energético inferior a 1 W/h.",
+      "images": [
+        {
+          "url": "images/ajax-ajrelay.webp",
+          "alt": "Relé de baja potencia para el control remoto de electrodomésticos Ajax Ajax Relay",
+          "width": 480,
+          "height": 462,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJRELAY",
+        "Tipo de dispositivo": "Relé inalámbrico con contacto seco libre de potencial",
+        "Alimentación": "7–24 V CC",
+        "Voltaje recomendado": "12 V o 24 V",
+        "Potencia de salida (carga resistiva 230 V)": "Hasta 3 kW",
+        "Consumo energético": "Menos de 1 W/h",
+        "Alcance de comunicación": "Hasta 1.000 m (sin obstáculos)",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "3.99 mW (6.01 dBm)",
+        "Modulación": "GFSK",
+        "Temperatura de operación": "De 0 °C a +64 °C",
+        "Grado de protección": "IP20",
+        "Dimensiones": "38 × 25 × 18 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/01/Guide_Relay_en.pdf",
+      "officialName": "Ajax Relay",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajnvr16",
+      "reference": "AJNVR16",
+      "name": "VIDEO GRABADOR, 16 CANALES, 4K, 25/30FPS, 1HDD MÁXIMO, 16TB, 100MBPS",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajnvr16.webp",
+          "alt": "Video grabador, 16 canales, 4k, 25/30fps, 1hdd máximo, 16tb, 100mbps Ajax AJNVR16",
+          "width": 423,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJNVR16"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajnvr",
+      "reference": "AJNVR",
+      "name": "VIDEO GRABADOR, 8 CANALES, 4K, 25/30FPS, 1HDD MÁXIMO, 16TB, 100MBPS",
+      "categorySlug": "grabadores",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajnvr.webp",
+          "alt": "Video grabador, 8 canales, 4k, 25/30fps, 1hdd máximo, 16tb, 100mbps Ajax AJNVR",
+          "width": 425,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJNVR"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmultitransmitter",
+      "reference": "MultiTransmitter Jeweller",
+      "name": "MÓDULO DE INTEGRACIÓN PARA CONECTAR DISPOSITIVOS ALÁMBRICOS DE TERCEROS AL SISTEMA DE SEGURIDAD AJAX",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Módulo inalámbrico para integrar hasta 18 dispositivos de terceros en el sistema Ajax.\n• Permite conectar sensores y detectores cableados de terceros.\n• Admite varios tipos de conexión: NO, NC, EOL, 2EOL y 3EOL.\n• Compatible con detectores de tipo pulsado y biestable.\n• Se integra con hubs Ajax compatibles para supervisión y eventos de alarma.",
+      "images": [
+        {
+          "url": "images/ajax-ajmultitransmitter.webp",
+          "alt": "Módulo de integración para conectar dispositivos alámbricos de terceros al sistema de seguridad ajax Ajax MultiTransmitter Jeweller",
+          "width": 400,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMULTITRANSMITTER",
+        "Modelo oficial": "MultiTransmitter Jeweller",
+        "Número máximo de dispositivos de terceros": "Hasta 18",
+        "Tipos de conexión compatibles": "NO, NC, EOL, 2EOL y 3EOL",
+        "Tipos de detectores compatibles": "Pulsado y biestable",
+        "Centrales compatibles": "Hub Plus, Hub 2, Hub 2 Plus y Superior Hub Hybrid",
+        "Compatibilidad 2EOL/3EOL": "Disponible con firmware 2.13 y posterior",
+        "Función principal": "Integrar dispositivos alámbricos de terceros en el sistema Ajax"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "MultiTransmitter Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmotionprotectplus",
+      "reference": "MotionProtect Plus Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO CON SENSOR MICROONDAS Y ANTIMASCOTA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detecta movimiento hasta a 12 m.\n• Incorpora sensor PIR y sensor de microondas K-band para reducir falsas alarmas.\n• Inmune a mascotas cuando está instalado y configurado correctamente.\n• Comunicación inalámbrica cifrada Jeweller con alcance de hasta 1.200 m sin obstáculos.\n• Diseñado para uso en interiores.\n• Funciona con batería.\n• Incluye tamper contra apertura o desmontaje.\n• Compatible con hubs Ajax con OS Malevich actualizado.",
+      "images": [
+        {
+          "url": "images/ajax-ajmotionprotectplus.webp",
+          "alt": "Detector de movimiento inalámbrico con sensor microondas y antimascota Ajax MotionProtect Plus Jeweller",
+          "width": 290,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMOTIONPROTECTPLUS",
+        "Tipo de detector": "Detector de movimiento inalámbrico",
+        "Sensores": "PIR + microondas K-band",
+        "Distancia de detección": "Hasta 12 m",
+        "Ángulo de detección": "88,5° / 80° (H/V)",
+        "Inmunidad a mascotas": "Hasta 20 kg y hasta 50 cm de altura",
+        "Alcance de comunicación": "Hasta 1.200 m sin obstáculos",
+        "Batería": "1 × CR123A, 3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Rango de temperatura de funcionamiento": "0 °C a +50 °C",
+        "Humedad de funcionamiento": "Hasta 80 %",
+        "Dimensiones": "110 × 65 × 50 mm",
+        "Peso": "96 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/manuals/motionprotect-plus-u-jeweller/",
+      "officialName": "MotionProtect Plus Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmotionprotectoutd",
+      "reference": "MotionProtect Outdoor Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO PARA EXTERIORES CON ANTI-MASCARILLA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de movimiento por infrarrojos para interior y exterior.\n• Incorpora protección anti-masking.\n• Diseñado para detectar intrusiones y reducir falsas alarmas.\n• Comunicación protegida con el sistema Ajax mediante Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-ajmotionprotectoutd.webp",
+          "alt": "Detector de movimiento inalámbrico para exteriores con anti-mascarilla Ajax MotionProtect Outdoor Jeweller",
+          "width": 220,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMOTIONPROTECTOUTD",
+        "Tipo de dispositivo": "Detector inalámbrico de movimiento IR",
+        "Uso": "Interior y exterior",
+        "Marca": "Ajax",
+        "Modelo oficial": "MotionProtect Outdoor Jeweller",
+        "Protocolo de comunicación": "Jeweller"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "MotionProtect Outdoor Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmotionprotectcurta",
+      "reference": "MotionProtect Curtain Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO TIPO CORTINA DE ÁNGULO ESTRECHO PARA USO EN INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento inalámbrico tipo cortina con ángulo de visión estrecho.\n• Uso exclusivo en interiores.\n• Un solo lado de detección de movimiento.\n• Sin antienmascaramiento.\n• Sin inmunidad a mascotas.\n• Ángulo de detección horizontal de 6°.\n• Alcance de comunicación de hasta 1.700 m en espacio abierto.\n• Autonomía de la batería de hasta 5 años.",
+      "images": [
+        {
+          "url": "images/ajax-ajmotionprotectcurta.webp",
+          "alt": "Detector de movimiento tipo cortina de ángulo estrecho para uso en interiores Ajax MotionProtect Curtain Jeweller",
+          "width": 166,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMOTIONPROTECTCURTA",
+        "Uso": "Solo en interiores",
+        "Lados de detección de movimiento": "1",
+        "Antienmascaramiento": "No",
+        "Inmunidad a mascotas": "No",
+        "Ángulo de detección horizontal": "6°",
+        "Alcance de comunicación": "Hasta 1.700 m",
+        "Alcance de detección de movimiento": "Hasta 6–15 m o hasta 6–8 m, según los parámetros",
+        "Duración de la batería": "Hasta 5 años",
+        "Versión de firmware": "6.53.1.1 y posterior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/indoor-security/motionprotect-curtain/",
+      "officialName": "MotionProtect Curtain Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmotionprotect",
+      "reference": "MotionProtect",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO INMUNE A MASCOTAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento PIR inalámbrico.\n• Inmune a mascotas de hasta 20 kg y 50 cm de altura.\n• Alcance de detección de hasta 12 m.\n• Comunicación segura con el hub mediante protocolo Jeweller.\n• Alcance de comunicación de hasta 1.700 m sin obstáculos.\n• Diseñado para uso en interiores.\n• Funciona con una batería CR123A preinstalada.\n• Autonomía de batería de hasta 7 años.",
+      "images": [
+        {
+          "url": "images/ajax-ajmotionprotect.webp",
+          "alt": "Detector de movimiento inalámbrico inmune a mascotas Ajax MotionProtect",
+          "width": 290,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMOTIONPROTECT",
+        "Tipo de detector": "PIR inalámbrico",
+        "Alcance de detección": "Hasta 12 m",
+        "Ángulo de visión (H/V)": "88,5° / 80°",
+        "Inmunidad a mascotas": "Hasta 20 kg y 50 cm de altura",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.700 m (sin obstáculos)",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Duración de la batería": "Hasta 7 años",
+        "Temperatura de operación": "De 0 °C a +50 °C",
+        "Humedad de operación": "Hasta 80 %",
+        "Dimensiones": "110 × 65 × 50 mm",
+        "Peso": "86 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2017/11/Guide_MotionProtect_en.pdf",
+      "officialName": "MotionProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmotioncamoutdoor",
+      "reference": "MotionCam Outdoor Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO CON CÁMARA PARA EXTERIOR",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento inalámbrico para uso interior y exterior.\n• Foto por alarma con cámara incorporada para verificar eventos.\n• Comunicación bidireccional con el hub mediante protocolos Jeweller y Wings.\n• Detección ajustable de 3 a 15 m.\n• Inmunidad a mascotas de hasta 80 cm cuando está instalado y configurado correctamente.\n• Protección contra intemperie con grado IP56.\n• Funciona con baterías CR123A preinstaladas.\n• Alcance de comunicación de hasta 1,700 m sin obstáculos.",
+      "images": [
+        {
+          "url": "images/ajax-ajmotioncamoutdoor.webp",
+          "alt": "Detector de movimiento inalámbrico con cámara para exterior Ajax MotionCam Outdoor Jeweller",
+          "width": 272,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMOTIONCAMOUTDOOR",
+        "Resolución de foto": "320 × 176 px (predeterminada); 640 × 352 px",
+        "Tiempo de entrega de foto": "Hasta 9 s (320 × 176 px); hasta 20 s (640 × 352 px)",
+        "Distancia de detección": "3 a 15 m",
+        "Alcance de comunicación": "Hasta 1,700 m sin obstáculos",
+        "Baterías": "4 × CR123A de 3 V",
+        "Autonomía": "Hasta 3 años",
+        "Temperatura de operación": "-25 °C a +60 °C",
+        "Humedad de operación": "Hasta 95 %",
+        "Grado de protección": "IP56",
+        "Compatibilidad de hubs": "Hub 2, Hub 2 Plus y Superior Hub Hybrid",
+        "Tecnología de comunicación": "Jeweller y Wings",
+        "Inmunidad a mascotas": "Hasta 80 cm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/outdoor-security/motioncam-outdoor/page/2/",
+      "officialName": "MotionCam Outdoor Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajmcophod",
+      "reference": "MotionCam Outdoor (PhOD) Jeweller",
+      "name": "DETECTOR INALÁMBRICO PIR DE MOVIMIENTO PARA EXTERIOR CON VERIFICACIÓN FOTOGRÁFICA AMPLIADA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de movimiento PIR inalámbrico para interior y exterior.\n• Permite foto bajo demanda, foto por escenario y foto por programación.\n• Toma fotos por alarma además de las funciones PhOD.\n• Dos protocolos de radio: Jeweller para eventos y Wings para fotos.\n• Alcance de comunicación de hasta 1.700 m en campo abierto.\n• Detección de movimiento ajustable de 3 a 15 m.\n• Ignora mascotas de hasta 80 cm cuando está bien instalado y configurado.\n• Funciona con 4 baterías CR123A y no admite alimentación externa.",
+      "images": [
+        {
+          "url": "images/ajax-ajmcophod.webp",
+          "alt": "Detector inalámbrico pir de movimiento para exterior con verificación fotográfica ampliada Ajax MotionCam Outdoor (PhOD) Jeweller",
+          "width": 243,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJMCOPHOD",
+        "Modelo": "MotionCam Outdoor (PhOD) Jeweller",
+        "Tipo": "Detector PIR inalámbrico de movimiento para interior y exterior",
+        "Función fotográfica": "Foto por alarma, foto bajo demanda, foto por escenario y foto por programación",
+        "Resolución de foto": "320 × 176 px (por defecto) / 640 × 352 px",
+        "Tiempo de entrega de foto": "hasta 9 s / hasta 20 s",
+        "Distancia de detección": "3 a 15 m",
+        "Alcance de comunicación": "hasta 1.700 m sin obstáculos",
+        "Baterías": "4 × CR123A, 3 V",
+        "Autonomía": "hasta 3 años",
+        "Protección": "IP56",
+        "Temperatura de operación": "-25 °C a +60 °C",
+        "Humedad de operación": "hasta 95 %"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/outdoor-security/motioncam-outdoor/page/2/",
+      "officialName": "MotionCam Outdoor (PhOD) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajlifequality",
+      "reference": "AJLIFEQUALITY",
+      "name": "MONITOR DE CALIDAD DEL AIRE, COLOR BLANCO, 46500.135.WH3",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajlifequality.webp",
+          "alt": "Monitor de calidad del aire, color blanco, 46500.135.wh3 Ajax AJLIFEQUALITY",
+          "width": 450,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJLIFEQUALITY"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajleaksprotect",
+      "reference": "LeaksProtect",
+      "name": "DETECTOR DE FUGAS DE AGUA INALÁMBRICO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector de inundaciones inalámbrico.\n• Detecta una fuga mínima de agua.\n• Comunicación protegida mediante el protocolo Jeweller.\n• Alcance de comunicación de hasta 1.300 m en espacio abierto.\n• Funciona con 2 baterías AAA de 3 V.\n• Autonomía de hasta 5 años.\n• No requiere fijación a la superficie.\n• Compatible con integración mediante ocBridge Plus y uartBridge.",
+      "images": [
+        {
+          "url": "images/ajax-ajleaksprotect.webp",
+          "alt": "Detector de fugas de agua inalámbrico Ajax LeaksProtect",
+          "width": 366,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJLEAKSPROTECT",
+        "Tipo de dispositivo": "Detector de inundaciones inalámbrico",
+        "Modelo": "Ajax LeaksProtect",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de radio": "Hasta 1.300 m (en espacio abierto)",
+        "Alimentación": "2 × AAA, 3 V",
+        "Autonomía": "Hasta 5 años",
+        "Modulación": "GFSK",
+        "Potencia radiada efectiva": "8.49 dBm / 7.06 mW",
+        "Banda de frecuencia": "868.0–868.6 MHz"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/flood-protection/leaksprotect/",
+      "officialName": "LeaksProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajkeypadtouch",
+      "reference": "KeyPad TouchScreen Jeweller",
+      "name": "TECLADO CON PANTALLA TÁCTIL INALÁMBRICO PARA GESTIONAR EL SISTEMA AJAX",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado inalámbrico con pantalla táctil para gestionar el sistema Ajax.\n• Compatible con autenticación mediante smartphones, tarjetas Tag, tarjetas Pass y códigos.\n• Permite cambiar modos de seguridad y controlar dispositivos de automatización.\n• Diseñado para uso en interiores.\n• El dispositivo funciona como parte del sistema Ajax con comunicación segura Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-ajkeypadtouch.webp",
+          "alt": "Teclado con pantalla táctil inalámbrico para gestionar el sistema ajax Ajax KeyPad TouchScreen Jeweller",
+          "width": 480,
+          "height": 457,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJKEYPADTOUCH",
+        "Modelo oficial": "KeyPad TouchScreen Jeweller",
+        "Tipo": "Teclado inalámbrico con pantalla táctil",
+        "Autenticación": "Smartphones, Tag, Pass y códigos",
+        "Uso": "Interior",
+        "Baterías": "6 × AA (1,5 V)",
+        "Duración de la batería": "Hasta 1,5 años",
+        "Comunicación": "Protocolo seguro Jeweller",
+        "Control": "Cambio de modos de seguridad y control de automatización"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "KeyPad TouchScreen Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajkeypadplus",
+      "reference": "KeyPad Plus Jeweller",
+      "name": "TECLADO TÁCTIL INALÁMBRICO PARA GESTIONAR LOS MODOS DE SEGURIDAD DEL SISTEMA DE SEGURIDAD AJAX CON TARJETAS Y LLAVEROS PROTEGIDOS SIN CONTACTO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado táctil inalámbrico para controlar el sistema de seguridad Ajax.\n• Admite autenticación con tarjetas sin contacto Pass y llaveros cifrados Tag.\n• Permite gestionar los modos de seguridad del sistema.\n• Diseñado para el ecosistema Ajax.\n• Producto oficial de Ajax Systems.",
+      "images": [
+        {
+          "url": "images/ajax-ajkeypadplus.webp",
+          "alt": "Teclado táctil inalámbrico para gestionar los modos de seguridad del sistema de seguridad ajax con tarjetas y llaveros protegidos sin contacto Ajax KeyPad Plus Jeweller",
+          "width": 344,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJKEYPADPLUS",
+        "Tipo de dispositivo": "teclado táctil inalámbrico",
+        "Autenticación": "tarjetas Pass y llaveros Tag protegidos sin contacto",
+        "Función principal": "gestión de los modos de seguridad",
+        "Compatibilidad": "sistema de seguridad Ajax",
+        "Marca": "Ajax Systems"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/controls/",
+      "officialName": "KeyPad Plus Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajkeypadcombi",
+      "reference": "KeyPad Combi Jeweller",
+      "name": "TECLADO TÁCTIL INALÁMBRICO CON LECTOR DE TARJETAS Y LLAVEROS CIFRADOS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado inalámbrico para gestionar el sistema de seguridad Ajax.\n• Compatible con autenticación mediante Pass, Tag y códigos.\n• Funciona con 4 baterías CR123A.\n• Autonomía de hasta 3,5 años.",
+      "images": [
+        {
+          "url": "images/ajax-ajkeypadcombi.webp",
+          "alt": "Teclado táctil inalámbrico con lector de tarjetas y llaveros cifrados Ajax KeyPad Combi Jeweller",
+          "width": 480,
+          "height": 322,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJKEYPADCOMBI",
+        "Modelo": "KeyPad Combi Jeweller",
+        "Baterías": "4 × CR123A",
+        "Autonomía estimada": "hasta 3,5 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/configure-according-ul-requirements/",
+      "officialName": "KeyPad Combi Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajkeypad",
+      "reference": "KeyPad",
+      "name": "TECLADO TÁCTIL INALÁMBRICO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Teclado táctil inalámbrico para controlar el sistema de seguridad Ajax.\n• Protección contra el intento de adivinar el código.\n• Admite alarma silenciosa en caso de coacción.\n• Comunicación por el protocolo seguro Jeweller.\n• Alcance de comunicación de hasta 1.700 m en espacio abierto.\n• Diseñado para uso en interiores.\n• Funciona con 4 baterías AAA incluidas.\n• Cuenta con tamper antisabotaje.",
+      "images": [
+        {
+          "url": "images/ajax-ajkeypad.webp",
+          "alt": "Teclado táctil inalámbrico Ajax KeyPad",
+          "width": 344,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJKEYPAD",
+        "Tipo de sensor": "Capacitivo",
+        "Tipo de dispositivo": "Teclado táctil inalámbrico bidireccional",
+        "Protección contra adivinación de código": "Sí",
+        "Tamper antisabotaje": "Sí",
+        "Banda de frecuencia": "868.0–868.6 MHz",
+        "Potencia máxima de RF": "Hasta 20 mW",
+        "Modulación": "FM",
+        "Alcance de comunicación": "Hasta 1.700 m (sin obstáculos)",
+        "Alimentación": "4 x baterías AAA",
+        "Tensión de alimentación": "3 V",
+        "Autonomía": "Hasta 2 años",
+        "Temperatura de funcionamiento": "0 °C a +50 °C"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2017/11/Guide_KeyPad_en.pdf",
+      "officialName": "KeyPad",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhub4g",
+      "reference": "AJHUB4G",
+      "name": "PANEL DE ALARMA, INALÁMBRICO, CON PUERTO RJ45+4G, HUB, 4G LITE",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajhub4g.webp",
+          "alt": "Panel de alarma, inalámbrico, con puerto rj45+4g, hub, 4g lite Ajax AJHUB4G",
+          "width": 476,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHUB4G"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhub2plus",
+      "reference": "Hub 2 Plus Jeweller",
+      "name": "PANEL DE ALARMA INALÁMBRICO CON PUERTO RJ45, VERIFICACIÓN FOTOGRÁFICA, WI‑FI Y DOS TARJETAS SIM",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Panel de control inalámbrico para el sistema de seguridad Ajax.\n• Compatible con verificación fotográfica.\n• Conectividad por Wi‑Fi, Ethernet (RJ45) y dos tarjetas SIM.\n• Admite hasta 25 grupos.\n• Compatible con foto por escenario.\n• Funciona con dispositivos Ajax inalámbricos.\n• Soporta hasta 5 repetidores ReX Jeweller.\n• Certificado según ANSI/SIA CP-01-2019.",
+      "images": [
+        {
+          "url": "images/ajax-ajhub2plus.webp",
+          "alt": "Panel de alarma inalámbrico con puerto rj45, verificación fotográfica, wi‑fi y dos tarjetas sim Ajax Hub 2 Plus Jeweller",
+          "width": 480,
+          "height": 475,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHUB2PLUS",
+        "Tecnología de comunicación": "Jeweller / Wings",
+        "Canales de comunicación": "Wi‑Fi, Ethernet y 2×SIM (2G/3G/LTE)",
+        "Verificación fotográfica": "Sí",
+        "Número máximo de grupos": "25",
+        "Número máximo de repetidores ReX Jeweller": "5",
+        "Comunicación con dispositivos Ajax": "Hasta 2.000 m en espacio abierto",
+        "Compatibilidad con foto por escenario": "Sí",
+        "Certificación ANSI/SIA CP-01-2019": "Sí"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "Hub 2 Plus Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhub24g",
+      "reference": "AJHUB24G",
+      "name": "PANEL DE ALARMA, INALÁMBRICO, CON PUERTO RJ45, VIDEOVIGILANCIA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajhub24g.webp",
+          "alt": "Panel de alarma, inalámbrico, con puerto rj45, videovigilancia Ajax AJHUB24G",
+          "width": 480,
+          "height": 475,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHUB24G"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhub2",
+      "reference": "Hub 2 (4G) Jeweller",
+      "name": "PANEL DE ALARMA INALÁMBRICO CON PUERTO RJ45 Y VIDEOVIGILANCIA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Panel de control inalámbrico con verificación fotográfica.\n• Conectable por Ethernet y dos tarjetas SIM.\n• Compatible con cámaras IP y videograbadores integrados en la app Ajax.\n• Admite hasta 25 cámaras en el sistema.\n• Funciona con dispositivos Ajax inalámbricos.",
+      "images": [
+        {
+          "url": "images/ajax-ajhub2.webp",
+          "alt": "Panel de alarma inalámbrico con puerto rj45 y videovigilancia Ajax Hub 2 (4G) Jeweller",
+          "width": 480,
+          "height": 475,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHUB2",
+        "Tipo": "Panel de control inalámbrico",
+        "Comunicación por cable": "Ethernet",
+        "Conectividad móvil": "2G/3G/LTE",
+        "Tarjetas SIM": "2",
+        "Verificación fotográfica": "Sí",
+        "Cámaras IP compatibles": "Hasta 25",
+        "ReX compatibles": "Hasta 5",
+        "Grupos de seguridad": "9"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "Hub 2 (4G) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhood",
+      "reference": "AJHOOD",
+      "name": "CUBIERTA, PARA MOTIONPROTECT OUTDOOR, COLOR BLANCO, 38216.60.WH",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajhood.webp",
+          "alt": "Cubierta, para motionprotect outdoor, color blanco, 38216.60.wh Ajax AJHOOD",
+          "width": 480,
+          "height": 375,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHOOD"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajhomesiren",
+      "reference": "HomeSiren",
+      "name": "SIRENA ACÚSTICA AJUSTABLE DE INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Sirena inalámbrica para interiores.\n• Volumen de notificación ajustable de 81 a 105 dB a 1 m.\n• Indicación LED integrada y posibilidad de conectar un indicador luminoso externo.\n• Comunicación segura con el hub mediante protocolo Jeweller.\n• Alcance de comunicación de hasta 2.000 m en campo abierto.\n• Duración de alarma configurable de 3 a 180 segundos por evento.\n• Funcionamiento con 2 baterías CR123A.\n• Diseñada para instalación en interiores.",
+      "images": [
+        {
+          "url": "images/ajax-ajhomesiren.webp",
+          "alt": "Sirena acústica ajustable de interiores Ajax HomeSiren",
+          "width": 438,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHOMESIREN",
+        "Tipo de notificación": "Acústica",
+        "Uso": "Interior",
+        "Volumen de notificación sonora": "81–105 dB a 1 m (ajustable)",
+        "Frecuencia de la señal acústica": "3,4 ± 0,5 kHz",
+        "Banda de frecuencia": "868,0–868,6 MHz",
+        "Potencia máxima de RF": "Hasta 20 mW",
+        "Alcance de radio": "Hasta 2.000 m (sin obstáculos)",
+        "Alimentación": "2 × CR123A, 3 V",
+        "Vida útil de la batería": "Hasta 5 años",
+        "Nivel de protección de la carcasa": "IP50",
+        "Dimensiones": "75 × 75 × 27 mm",
+        "Peso": "96 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2017/11/Guide_HomeSiren_en.pdf",
+      "officialName": "HomeSiren",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajholder",
+      "reference": "AJHOLDER",
+      "name": "SOPORTE PARA BOTÓN, COLOR BLANCO, 38215.82.WH",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajholder.webp",
+          "alt": "Soporte para botón, color blanco, 38215.82.wh Ajax AJHOLDER",
+          "width": 480,
+          "height": 429,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJHOLDER"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajglassprotect",
+      "reference": "GlassProtect",
+      "name": "DETECTOR DE ROTURA DE CRISTAL INALÁMBRICO CON MICROFONO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de rotura de cristal.\n• Detecta la rotura de vidrio hasta 9 m.\n• Micrófono con ángulo de cobertura de 180°.\n• Funciona con protocolo Jeweller de Ajax.\n• Diseñado para uso en interiores.\n• Incluye entrada para detector externo con contacto NC.\n• Protección antisabotaje con tamper.\n• Autonomía de batería de hasta 5 años.",
+      "images": [
+        {
+          "url": "images/ajax-ajglassprotect.webp",
+          "alt": "Detector de rotura de cristal inalámbrico con microfono Ajax GlassProtect",
+          "width": 166,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJGLASSPROTECT",
+        "Elemento sensible": "Micrófono electret",
+        "Distancia de detección de rotura de cristal": "Hasta 9 m",
+        "Ángulo de cobertura del micrófono": "180°",
+        "Frecuencia de operación": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "6.01 dBm / 3.99 mW",
+        "Señal de radio": "Hasta 1,000 m sin obstáculos",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Vida útil de la batería": "Hasta 5 años",
+        "Rango de temperatura de operación": "De 0 °C a +50 °C",
+        "Humedad de operación": "Hasta 90%",
+        "Dimensiones": "Ø 20 × 90 mm",
+        "Peso": "30 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/pt/indoor-security/glassprotect/",
+      "officialName": "GlassProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajfireprotect2rbul",
+      "reference": "FireProtect 2 RB (Heat/Smoke) UL Jeweller",
+      "name": "SENSOR DE HUMO Y CALOR INALÁMBRICO UL BLANCO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de incendio para instalación en interiores.\n• Detecta humo y aumento de temperatura.\n• Incluye sirena integrada.\n• Cuenta con sensor óptico de doble espectro para detección de humo.\n• Usa algoritmos HazeFlow 2 para reducir falsas alarmas.\n• Dispone de dos termistores para detección de calor.\n• Versión UL/ULC con baterías reemplazables.\n• Comunicación segura con el hub mediante Jeweller.",
+      "images": [
+        {
+          "url": "images/ajax-ajfireprotect2rbul.webp",
+          "alt": "Sensor de humo y calor inalámbrico ul blanco Ajax FireProtect 2 RB (Heat/Smoke) UL Jeweller",
+          "width": 443,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJFIREPROTECT2RBUL",
+        "Modelo oficial": "FireProtect 2 RB (Heat/Smoke) UL Jeweller",
+        "Código / MPN": "68695.136.WH3",
+        "Color": "Blanco",
+        "Tipo de dispositivo": "Detector inalámbrico de humo y calor",
+        "Instalación": "Interior",
+        "Alimentación": "Baterías reemplazables",
+        "Certificación": "UL/ULC",
+        "Comunicación": "Jeweller",
+        "Alcance de comunicación con el hub": "Hasta 5,577 ft",
+        "Compatibilidad de hub": "OS Malevich 2.19 o posterior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/manuals/fireprotect-2-heat-smoke/",
+      "officialName": "FireProtect 2 RB (Heat/Smoke) UL Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajfireprotect2rbco",
+      "reference": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+      "name": "SENSOR DE HUMO, CALOR Y CO, INALÁMBRICO, UL, COLOR BLANCO",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Alarma inalámbrica de humo, calor y monóxido de carbono\n• Sensor óptico de doble espectro para detección de humo\n• Dos termistores integrados para detección de aumento de temperatura\n• Sirena integrada\n• Comunicación segura Jeweller con el hub\n• Certificación UL/ULC para la versión UL\n• Funciona como parte del sistema Ajax\n• Diseñado para instalación en interiores",
+      "images": [
+        {
+          "url": "images/ajax-ajfireprotect2rbco.webp",
+          "alt": "Sensor de humo, calor y co, inalámbrico, ul, color blanco Ajax FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+          "width": 464,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJFIREPROTECT2RBCO",
+        "Modelo oficial": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+        "Tipo de detector": "Detector inalámbrico de humo, calor y CO",
+        "Comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 5,577 ft (sin obstáculos)",
+        "Alimentación": "2 × CR123A",
+        "Autonomía de la batería": "Hasta 5 años",
+        "Certificación": "UL/ULC",
+        "Compatibilidad": "Hubs con OS Malevich 2.19 o posterior",
+        "Instalación": "Interior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/es/manuals/fireprotect-2-heat-smoke/",
+      "officialName": "FireProtect 2 RB (Heat/Smoke/CO) UL Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajdualcurtainoutdoor",
+      "reference": "DualCurtain Outdoor Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO BIDIRECCIONAL TIPO CORTINA PARA EXTERIORES E INTERIORES",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de movimiento tipo cortina bidireccional\n• Diseñado para uso en exteriores e interiores\n• Rango de detección ajustable\n• Antienmascaramiento\n• Inmunidad a mascotas\n• Ángulo de detección horizontal estrecho\n• Comunicación por Jeweller\n• Hasta 4 años de duración de batería",
+      "images": [
+        {
+          "url": "images/ajax-ajdualcurtainoutdoor.webp",
+          "alt": "Detector de movimiento bidireccional tipo cortina para exteriores e interiores Ajax DualCurtain Outdoor Jeweller",
+          "width": 393,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJDUALCURTAINOUTDOOR",
+        "Lados de detección de movimiento": "2",
+        "Ángulo de detección, horizontal": "4.5°",
+        "Alcance de comunicación": "hasta 1.700 m",
+        "Alcance de detección de movimiento": "hasta 30 m (4–15 m por cada lado, según parámetros)",
+        "Antienmascaramiento": "Sí",
+        "Inmunidad a mascotas": "Sí",
+        "Alimentación": "2 × CR123A, 3 V",
+        "Duración de la batería": "hasta 4 años"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "DualCurtain Outdoor Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajdoorprotectplus",
+      "reference": "DoorProtect Plus",
+      "name": "DETECTOR DE APERTURA INALÁMBRICO DE VIBRACIÓN E INCLINACIÓN",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de apertura con sensor de impacto y de inclinación.\n• Compatible con el sistema de seguridad Ajax mediante el protocolo Jeweller.\n• Admite conexión de un detector cableado externo con contacto NC.\n• Alcance de comunicación de hasta 1.200 m sin obstáculos.\n• Sensor de inclinación con activación desde 5° o más.\n• Sensibilidad de choque con 3 niveles ajustables.\n• Incluye dos imanes: pequeño y grande, para diferentes distancias de activación.\n• Diseñado para uso en interiores.",
+      "images": [
+        {
+          "url": "images/ajax-ajdoorprotectplus.webp",
+          "alt": "Detector de apertura inalámbrico de vibración e inclinación Ajax DoorProtect Plus",
+          "width": 234,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJDOORPROTECTPLUS",
+        "Modelo": "Ajax DoorProtect Plus",
+        "Tipo de detección": "Apertura, choque e inclinación",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.200 m sin obstáculos",
+        "Frecuencia de operación": "868.0–868.6 MHz",
+        "Potencia radiada efectiva": "7.91 dBm / 6.19 mW (límite 20 mW)",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Duración de la batería": "Hasta 5 años",
+        "Umbral de activación del sensor de inclinación": "5° o más (ajustable)",
+        "Dimensiones": "Ø20 × 90 mm",
+        "Peso": "29 g",
+        "Temperatura de funcionamiento": "0 °C a +50 °C"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/wp-content/uploads/2018/09/Guide_DoorProtect_Plus_en_web.pdf",
+      "officialName": "DoorProtect Plus",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajdoorprotect",
+      "reference": "DoorProtect",
+      "name": "CONTACTO MAGNÉTICO INALÁMBRICO PARA PUERTAS Y VENTANAS, DE INTERIOR",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico de apertura magnético.\n• Diseñado para uso en interiores.\n• Funciona con el sistema de seguridad Ajax.\n• Comunicación por el protocolo protegido Jeweller.\n• Detecta la apertura de puertas y ventanas.",
+      "images": [
+        {
+          "url": "images/ajax-ajdoorprotect.webp",
+          "alt": "Contacto magnético inalámbrico para puertas y ventanas, de interior Ajax DoorProtect",
+          "width": 234,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJDOORPROTECT",
+        "Tipo de detector": "Detector de apertura magnético inalámbrico",
+        "Uso": "Interior",
+        "Protocolo de comunicación": "Jeweller",
+        "Alcance de comunicación": "Hasta 1.200 m sin obstáculos",
+        "Elemento de detección": "Interruptor de láminas (reed switch)",
+        "Alimentación": "1 batería CR123A, 3 V",
+        "Autonomía": "Hasta 7 años",
+        "Rango de activación del imán pequeño": "Hasta 1 cm",
+        "Rango de activación del imán grande": "Hasta 2 cm",
+        "Frecuencia de radio": "868.0–868.6 MHz"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "DoorProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajdinholder",
+      "reference": "AJDINHOLDER",
+      "name": "SOPORTE DIN PARA RELÉ, WALLSWITCH, 51170.132.BL",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajdinholder.webp",
+          "alt": "Soporte din para relé, wallswitch, 51170.132.bl Ajax AJDINHOLDER",
+          "width": 436,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJDINHOLDER"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajdemocase",
+      "reference": "AJDEMOCASE",
+      "name": "MALETA DE ALUMINIO CON LOGO, BM-001",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajdemocase.webp",
+          "alt": "Maleta de aluminio con logo, bm-001 Ajax AJDEMOCASE",
+          "width": 428,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJDEMOCASE"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajcombiprotect",
+      "reference": "CombiProtect",
+      "name": "SENSOR DE ROTURA DE CRISTAL Y MOVIMIENTO INALÁMBRICO CON INMUNIDAD A MASCOTAS",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector inalámbrico combinado de movimiento y rotura de cristal.\n• Inmunidad a mascotas.\n• Funciona dentro del sistema Ajax mediante el protocolo seguro Jeweller.\n• Diseñado para uso en interiores.",
+      "images": [
+        {
+          "url": "images/ajax-ajcombiprotect.webp",
+          "alt": "Sensor de rotura de cristal y movimiento inalámbrico con inmunidad a mascotas Ajax CombiProtect",
+          "width": 296,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJCOMBIPROTECT",
+        "Tipo de detector": "Movimiento y rotura de cristal",
+        "Comunicación": "Jeweller",
+        "Alcance de comunicación con el hub": "Hasta 1.200 m en espacio abierto",
+        "Inmunidad a mascotas": "Sí",
+        "Alimentación": "1 batería CR123A",
+        "Vida útil de la batería": "Hasta 5 años",
+        "Temperatura de funcionamiento": "De 0 °C a +50 °C",
+        "Humedad de funcionamiento": "Hasta 80%"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "CombiProtect",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajbutton",
+      "reference": "AJBUTTON",
+      "name": "BOTÓN DE EMERGENCIA, INALÁMBRICO, COLOR BLANCO, 28203.26.WH3",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajbutton.webp",
+          "alt": "Botón de emergencia, inalámbrico, color blanco, 28203.26.wh3 Ajax AJBUTTON",
+          "width": 480,
+          "height": 238,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJBUTTON"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajbulletcam",
+      "reference": "BulletCam (5 Mp/2.8 mm)",
+      "name": "CÁMARA BULLET IP DE SEGURIDAD ALÁMBRICA CON IA DE 5 MP Y LENTE DE 2.8 MM",
+      "categorySlug": "camaras-ip",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Cámara IP cableada con inteligencia artificial.\n• Ángulo de visión de 110°.\n• Resolución máxima de 2880 × 1620 px.\n• Velocidad de captura de hasta 25 FPS.\n• Infrarrojo integrado para visión nocturna.\n• TrueWDR para mejor manejo de contraluz.\n• Micrófono integrado.\n• Alimentación por PoE o 12 V.\n• Uso para interiores y exteriores.",
+      "images": [
+        {
+          "url": "images/ajax-ajbulletcam.webp",
+          "alt": "Cámara bullet ip de seguridad alámbrica con ia de 5 mp y lente de 2.8 mm Ajax BulletCam (5 Mp/2.8 mm)",
+          "width": 480,
+          "height": 295,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJBULLETCAM",
+        "Tipo": "Cámara IP de seguridad cableada",
+        "Modelo": "5 Mp/2.8 mm",
+        "Resolución máxima": "2880 × 1620 px",
+        "Velocidad de fotogramas": "Hasta 25 FPS",
+        "Lente": "2.8 mm",
+        "Ángulo de visión": "110°",
+        "Tecnologías de imagen": "IR, TrueWDR",
+        "Audio": "Micrófono integrado",
+        "Alimentación": "PoE / 12 V",
+        "Uso": "Interior y exterior"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://ajax.systems/products/specs/bulletcam-5-mp-2-8-mm/",
+      "officialName": "BulletCam (5 Mp/2.8 mm)",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajbrandplate",
+      "reference": "39279.63.WH",
+      "name": "PLACA FRONTAL PERSONALIZABLE PARA STREETSIREN DOUBLEDECK, COLOR BLANCO",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Placa frontal para personalizar la sirena exterior StreetSiren DoubleDeck.\n• Permite imprimir logotipo, nombre de empresa y datos de contacto.\n• Diseñada para usarse con sirenas Ajax compatibles con Brandplate.\n• Pensada para instalaciones de seguridad como soporte de marca visible.\n• Color blanco.",
+      "images": [
+        {
+          "url": "images/ajax-ajbrandplate.webp",
+          "alt": "Placa frontal personalizable para streetsiren doubledeck, color blanco Ajax 39279.63.WH",
+          "width": 480,
+          "height": 401,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJBRANDPLATE",
+        "Compatibilidad": "StreetSiren DoubleDeck",
+        "Tipo de producto": "Placa frontal personalizable",
+        "Color": "Blanco",
+        "Material": "Plástico",
+        "Método de instalación": "Pestañas plásticas + tornillo de fijación",
+        "Dimensiones": "184 × 184 × 17 mm",
+        "Peso": "111 g",
+        "Temperatura de operación": "-25 °C a +60 °C",
+        "Humedad permitida": "Hasta 95%",
+        "Contenido por lote": "10 placas Brandplate"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/sirens/streetsiren-doubledeck/",
+      "officialName": "39279.63.WH",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajaxrex2",
+      "reference": "ReX 2 Jeweller",
+      "name": "MÓDULO REPETIDOR DE SEÑAL DE RADIO CON SOPORTE DE VERIFICACIÓN FOTOGRÁFICA DE ALARMA",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Repetidor de señal de radio inalámbrico.\n• Soporta verificación fotográfica de alarmas.\n• Compatible con los protocolos seguros Jeweller y Wings.\n• Puede ampliar la cobertura de dispositivos Ajax dentro del sistema.\n• Compatible con hubs Ajax con OS Malevich 2.15 o posterior.\n• Permite conectar hasta 5 repetidores ReX 2 a un hub compatible.\n• Diseñado para funcionar con dispositivos Ajax compatibles con fotoverificación.\n• Disponible para sistemas Ajax de intrusión con verificación visual.",
+      "images": [
+        {
+          "url": "images/ajax-ajaxrex2.webp",
+          "alt": "Módulo repetidor de señal de radio con soporte de verificación fotográfica de alarma Ajax ReX 2 Jeweller",
+          "width": 480,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJAXREX2",
+        "Modelo": "ReX 2 Jeweller",
+        "Tipo de dispositivo": "Repetidor de señal de radio inalámbrico",
+        "Compatibilidad": "Hubs Ajax compatibles con OS Malevich 2.15 o posterior",
+        "Protocolos de radio": "Jeweller y Wings",
+        "Función principal": "Soporte para verificación fotográfica de alarma",
+        "Cantidad máxima por hub": "Hasta 5 repetidores ReX 2",
+        "Operación autónoma": "36 horas (según requisitos NF y A2P)",
+        "Cumplimiento": "Configuración para requisitos RTC 50131-6 / NF y A2P"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/",
+      "officialName": "ReX 2 Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-ajajaxpass",
+      "reference": "AJAJAXPASS",
+      "name": "TARJETA ENCRIPTADA, PARA TECLADO, COLOR BLANCO, 23503.89.WH",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-ajajaxpass.webp",
+          "alt": "Tarjeta encriptada, para teclado, color blanco, 23503.89.wh Ajax AJAJAXPASS",
+          "width": 480,
+          "height": 367,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AJAJAXPASS"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-107889-282-wh3",
+      "reference": "MotionCam Outdoor (PhOD) Jeweller",
+      "name": "DETECTOR DE MOVIMIENTO INALÁMBRICO PARA EXTERIORES E INTERIORES CON CÁMARA PHOD Y DOBLE PIR",
+      "categorySlug": "alarmas",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Detector PIR inalámbrico para uso en exteriores e interiores.\n• Verificación fotográfica ampliada: fotos bajo demanda, por escenario y por programación, además de foto por alarma.\n• Alcance de detección configurable de 3 a 15 m.\n• Inmunidad a mascotas de hasta 80 cm cuando se instala y configura correctamente.\n• Comunicación hasta 1.700 m con el hub sin obstáculos.\n• Protección IP56.\n• Funciona con 4 baterías CR123A de 3 V.\n• Autonomía de hasta 3 años con baterías preinstaladas.",
+      "images": [
+        {
+          "url": "images/ajax-107889-282-wh3.webp",
+          "alt": "Detector de movimiento inalámbrico para exteriores e interiores con cámara phod y doble pir Ajax MotionCam Outdoor (PhOD) Jeweller",
+          "width": 222,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "107889.282.WH3",
+        "Tipo de detector": "PIR inalámbrico",
+        "Uso": "Exteriores e interiores",
+        "Verificación fotográfica": "Foto por alarma, bajo demanda, por escenario y por programación",
+        "Resolución de foto": "320 × 176 px (por defecto) / 640 × 352 px",
+        "Tiempo de entrega de fotos": "Hasta 9 s / hasta 20 s",
+        "Distancia de detección": "3 a 15 m",
+        "Inmunidad a mascotas": "Hasta 80 cm",
+        "Alcance de comunicación": "Hasta 1.700 m",
+        "Alimentación": "4 baterías CR123A de 3 V",
+        "Autonomía": "Hasta 3 años",
+        "Clase de protección": "IP56",
+        "Temperatura de funcionamiento": "-25 °C a +60 °C"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://support.ajax.systems/en/outdoor-security/motioncam-outdoor/page/2/",
+      "officialName": "MotionCam Outdoor (PhOD) Jeweller",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-104122-141-nc",
+      "reference": "104122.141.NC",
+      "name": "MARCO PARA CINCO DISPOSITIVOS LIGHTSWITCH 120",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": "• Se utiliza para instalar dos o más interruptores juntos.\n• Marco para cinco dispositivos.\n• Compatible con instalaciones de la línea LightSwitch de Ajax.",
+      "images": [
+        {
+          "url": "images/ajax-104122-141-nc.webp",
+          "alt": "Marco para cinco dispositivos lightswitch 120 Ajax 104122.141.NC",
+          "width": 480,
+          "height": 149,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "104122.141.NC",
+        "Código de fabricante": "104122.141.NC",
+        "ADI Part Number": "XY-FRAME5S",
+        "Marca": "AJAX",
+        "Línea de producto": "Baseline, Comfort and automation",
+        "Garantía limitada": "2 años",
+        "País de origen": "Ucrania",
+        "Nombre comercial": "Frame, 5-Seats, 120-Frame for Five LightSwitch Devices",
+        "Número de plazas": "5"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.en.adiglobaldistribution.ca/product/XY-FRAME5S",
+      "officialName": "104122.141.NC",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-104120-141-nc",
+      "reference": "104120.141.NC",
+      "name": "FRAME, 3 SEATS, 120V, 104120.141.NC",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-104120-141-nc.webp",
+          "alt": "Frame, 3 seats, 120v, 104120.141.nc Ajax 104120.141.NC",
+          "width": 480,
+          "height": 208,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "104120.141.NC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-104119-141-nc",
+      "reference": "104119.141.NC",
+      "name": "FRAME, 2 SEATS, 120V, 104119.141.NC",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-104119-141-nc.webp",
+          "alt": "Frame, 2 seats, 120v, 104119.141.nc Ajax 104119.141.NC",
+          "width": 480,
+          "height": 279,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "104119.141.NC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101871-140-bl3",
+      "reference": "101871.140.BL3",
+      "name": "CENTERBUTTON, 1-GANG, 120V, COLOR NEGRO, 101871.140.BL3",
+      "categorySlug": "otros-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101871-140-bl3.webp",
+          "alt": "Centerbutton, 1-gang, 120v, color negro, 101871.140.bl3 Ajax 101871.140.BL3",
+          "width": 426,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101871.140.BL3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101870-140-wh3",
+      "reference": "101870.140.WH3",
+      "name": "CENTERBUTTON, 1-GANG, 120V, COLOR BLANCO, 101870.140.WH3",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101870-140-wh3.webp",
+          "alt": "Centerbutton, 1-gang, 120v, color blanco, 101870.140.wh3 Ajax 101870.140.WH3",
+          "width": 425,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101870.140.WH3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101862-143-bl3",
+      "reference": "101862.143.BL3",
+      "name": "SIDEBUTTON, 1-GANG, 120V, COLOR NEGRO, 101862.143.BL3",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101862-143-bl3.webp",
+          "alt": "Sidebutton, 1-gang, 120v, color negro, 101862.143.bl3 Ajax 101862.143.BL3",
+          "width": 458,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101862.143.BL3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101861-143-wh3",
+      "reference": "101861.143.WH3",
+      "name": "SIDEBUTTON, 1-GANG, 120V, COLOR BLANCO, 101861.143.WH3",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101861-143-wh3.webp",
+          "alt": "Sidebutton, 1-gang, 120v, color blanco, 101861.143.wh3 Ajax 101861.143.WH3",
+          "width": 462,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101861.143.WH3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101853-144-wh3",
+      "reference": "101853.144.WH3",
+      "name": "SOLOBUTTON, 1-GANG, 120V, COLOR BLANCO, 101853.144.WH3",
+      "categorySlug": "accesorios-seguridad",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101853-144-wh3.webp",
+          "alt": "Solobutton, 1-gang, 120v, color blanco, 101853.144.wh3 Ajax 101853.144.WH3",
+          "width": 480,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101853.144.WH3"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101367-142-nc",
+      "reference": "101367.142.NC",
+      "name": "LIGHTCORE, RELÉ 3-WAY, 120V, 9NA, 101367.142.NC",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101367-142-nc.webp",
+          "alt": "Lightcore, relé 3-way, 120v, 9na, 101367.142.nc Ajax 101367.142.NC",
+          "width": 480,
+          "height": 407,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101367.142.NC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "ajax-101366-142-nc",
+      "reference": "101366.142.NC",
+      "name": "LIGHTCORE, INTERRUPTOR INTELIGENTE, 1-GANG, 120V, 9NA, 101366.142.NC",
+      "categorySlug": "hogar-inteligente",
+      "brandId": "ajax",
+      "brandName": "Ajax",
+      "description": null,
+      "images": [
+        {
+          "url": "images/ajax-101366-142-nc.webp",
+          "alt": "Lightcore, interruptor inteligente, 1-gang, 120v, 9na, 101366.142.nc Ajax 101366.142.NC",
+          "width": 268,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "101366.142.NC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    }
+  ]
+}

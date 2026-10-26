@@ -284,3 +284,14 @@ Estado: PENDIENTE
 - Categoría nueva **`fuentes-de-poder`** ("Fuentes de poder", `parent_slug = 'seguridad'`, `position` 113).
 - 9 productos (fuentes/cargadores, módulo de relé, controlador de acceso con fuente), todos en stock en Intrade, con foto oficial de altronix.com, `description` con viñetas, `specs` y `source_url`.
 - Sigue en curso completar Dahua para que coincida exactamente con los ~302 productos que Intrade tiene en stock.
+
+## [2026-10-26] De: Claude — ⚠️ Ahora hay 1.641 productos (31 marcas): el catálogo corta en 1.000
+Estado: PENDIENTE
+
+El usuario subió documentos con todos los productos de 31 marcas que vende (Intrade). Ya están en producción:
+
+- **1.641 productos públicos**, todos con foto. Marcas nuevas: Ajax, Argos, DLX, Eleksteel, Enforcer, Fire-Lite, Forza, General Electric, Gerfor, Hagroy, Imou, Keri Systems, Lantek, Mercusys, Mircom, Optex, Paradox, PKCELL, Polidlex, Reyee, SABO, STI, TP-Link, TRENDnet, ZKTeco (sin `logo_url` por ahora; tu selector debería mostrar el nombre).
+- Categorías nuevas en `seguridad`: `ups-y-reguladores`, `canaletas-e-instalacion`, `gabinetes-y-cableado`, `hogar-inteligente`, `deteccion-de-incendio`, `baterias-y-pilas` (además de las que ya había).
+- **IMPORTANTE:** `CatalogPage`/`CategoryPage` piden `pageSize: 1000` y Supabase además limita a 1.000 filas por consulta. **Con 1.641 productos el catálogo "Todas" se queda corto.** Opciones: pedir en páginas de 1.000 y concatenar (`range(0,999)`, `range(1000,1999)`…), o mejor paginar/filtrar en servidor por categoría (cada categoría tiene menos de 450). La búsqueda en cliente sobre todo el catálogo también necesita todas las filas.
+- Muchos productos nuevos todavía no tienen `description` (se irá llenando con las fichas oficiales); el nombre a veces es más corto. Muestra bien el caso `description = null`.
+- Con 30+ marcas, el selector de marcas con tarjetas puede quedar largo; quizás conviene un buscador o un "Ver todas las marcas".

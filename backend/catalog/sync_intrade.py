@@ -122,12 +122,23 @@ def main(dry_run):
     base, key = env()
     slugs = intrade_slugs()
     slugs_alnum = [re.sub(r"[^a-z0-9]", "", s) for s in slugs]
-    products = json.loads(request("GET", f"{base}/rest/v1/products?select=id,reference,name,brand_id,specs,available"
-                                         f"&discontinued=eq.false&limit=5000", key))
+    products, offset = [], 0
+    while True:  # Supabase entrega como máximo 1000 filas por consulta: se pide por páginas
+        page = json.loads(request("GET", f"{base}/rest/v1/products?select=id,reference,name,brand_id,specs,available"
+                                         f"&discontinued=eq.false&order=id&limit=1000&offset={offset}", key))
+        products += page
+        if len(page) < 1000:
+            break
+        offset += 1000
     now = datetime.now(timezone.utc).isoformat()
+    # Marcas con documento del usuario (Info_Completa): se muestra exactamente lo del documento
+    # (lo arma marcas/publish_docs.py). Las demás marcas siguen el stock de Intrade.
+    docs_file = HERE / "marcas" / "docs_index.json"
+    doc_ids = set(json.loads(docs_file.read_text(encoding="utf-8"))) if docs_file.exists() else set()
+    doc_brands = {p["brand_id"] for p in products if p["id"] in doc_ids}
     changes, by_brand = {True: [], False: []}, {}
     for p in products:
-        ok = is_available(p, slugs, slugs_alnum)
+        ok = (p["id"] in doc_ids) if p["brand_id"] in doc_brands else is_available(p, slugs, slugs_alnum)
         b = by_brand.setdefault(p["brand_id"], [0, 0])
         b[0 if ok else 1] += 1
         changes[ok].append(p)
@@ -135,6 +146,10 @@ def main(dry_run):
         print(f"  {brand}: {yes} disponibles, {no} ocultos")
     if dry_run:
         return
+    # Lo que está en un documento del usuario se vende aunque el PDF original lo marcara EoL.
+    revive = ",".join(f'"{x}"' for x in doc_ids)
+    if revive:
+        request("PATCH", f"{base}/rest/v1/products?discontinued=eq.true&id=in.({revive})", key, {"discontinued": False})
     for value, items in changes.items():
         ids = [p["id"] for p in items]
         for i in range(0, len(ids), 150):
@@ -143,7 +158,7 @@ def main(dry_run):
                     {"available": value, "available_checked": now})
     lines = [f"# Disponibilidad en Intrade — {now[:16].replace('T', ' ')} UTC", "",
              f"Intrade en stock: {len(slugs)} productos. Publicados: {len(changes[True])}. Ocultos: {len(changes[False])}.", "",
-             "## Ocultos (no están en Intrade)", ""]
+             "## Ocultos (no están en Intrade o no están en el documento de su marca)", ""]
     lines += [f"- {p['brand_id']} · {p['reference']} · {p['name']}" for p in sorted(changes[False], key=lambda x: (x["brand_id"], x["reference"]))]
     (HERE / "intrade_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("Listo. Detalle en backend/catalog/intrade_report.md")
