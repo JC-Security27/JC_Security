@@ -268,16 +268,24 @@
 }
 .product-card-media {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 4 / 3;
   background: #ffffff;
   overflow: hidden;
-}
-.product-card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   padding: var(--space-3);
+}
+/* La imagen se muestra COMPLETA (contain) y centrada, sin importar las
+   dimensiones reales del archivo (los atributos width/height del <img> no
+   deben deformarla ni recortarla). Esto vale para fotos muy altas o anchas. */
+.product-card-media img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .product-card-noimg {
   display: grid;

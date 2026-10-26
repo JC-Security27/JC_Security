@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Verificar imágenes al agregarlas",
+      "trigger": "PostFileCreate",
+      "description": "Cuando se agrega una imagen, revisa que las imágenes de frontend/public se vean bien (tamaño, proporción y peso) y avisa si alguna puede salir borrosa, cortada o pesada.",
+      "matcher": "\\.(png|jpe?g|webp|gif)$",
+      "action": {
+        "type": "command",
+        "command": "node frontend/scripts/check-images.mjs"
+      }
+    },
+    {
+      "name": "Verificar imágenes al guardarlas",
+      "trigger": "PostFileSave",
+      "description": "Cuando se reemplaza o guarda una imagen, vuelve a revisar que todas las imágenes de frontend/public se vean bien (tamaño, proporción y peso).",
+      "matcher": "\\.(png|jpe?g|webp|gif)$",
+      "action": {
+        "type": "command",
+        "command": "node frontend/scripts/check-images.mjs"
+      }
+    }
+  ]
+}

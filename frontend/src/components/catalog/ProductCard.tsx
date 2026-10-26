@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { Product } from "@/types/catalog";
 import { useQuote } from "@/context/QuoteContext";
 import { toDisplayName } from "@/lib/format";
+import { ProductImage } from "./ProductImage";
 
 export function ProductCard({ product }: { product: Product }) {
   const { add, has } = useQuote();
@@ -15,17 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
         className="product-card-media"
         aria-label={`Ver ${product.name}`}
       >
-        {img ? (
-          <img
-            src={img.url}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-            loading="lazy"
-          />
-        ) : (
-          <div className="product-card-noimg">Sin imagen</div>
-        )}
+        <ProductImage image={img} alt={product.name} />
         {product.isNew && <span className="new-tag">Nuevo</span>}
         {product.isSample && <span className="sample-tag">Muestra</span>}
         {img?.needsReview && (

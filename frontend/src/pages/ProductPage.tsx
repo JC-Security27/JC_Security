@@ -12,6 +12,7 @@ import {
   getVariantLabel,
 } from "@/lib/variants";
 import { BackButton } from "@/components/ui/BackButton";
+import { ProductImage } from "@/components/catalog/ProductImage";
 import {
   EmptyState,
   ErrorState,
@@ -108,16 +109,7 @@ export function ProductPage() {
 
       <div className="product-detail">
         <div className="product-detail-media card">
-          {img ? (
-            <img
-              src={img.url}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
-            />
-          ) : (
-            <div className="product-card-noimg">Sin imagen</div>
-          )}
+          <ProductImage image={img} alt={toDisplayName(product.name)} />
           {product.isSample && <span className="sample-tag">Muestra</span>}
         </div>
 

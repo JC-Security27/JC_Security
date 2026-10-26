@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { type ProductGroup, getVariantShortLabel } from "@/lib/variants";
 import { toDisplayName } from "@/lib/format";
 import { useQuote } from "@/context/QuoteContext";
+import { ProductImage } from "./ProductImage";
 
 /* Tarjeta de un grupo de variantes. Si el grupo tiene varias tallas, muestra
    una etiqueta "N tallas" y lleva al detalle del representante (donde se
@@ -19,17 +20,7 @@ export function ProductGroupCard({ group }: { group: ProductGroup }) {
         className="product-card-media"
         aria-label={`Ver ${toDisplayName(product.name)}`}
       >
-        {img ? (
-          <img
-            src={img.url}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-            loading="lazy"
-          />
-        ) : (
-          <div className="product-card-noimg">Sin imagen</div>
-        )}
+        <ProductImage image={img} alt={toDisplayName(product.name)} />
         {product.isNew && <span className="new-tag">Nuevo</span>}
         {product.isSample && <span className="sample-tag">Muestra</span>}
         {group.hasVariants && (
