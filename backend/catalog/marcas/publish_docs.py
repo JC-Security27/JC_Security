@@ -125,7 +125,19 @@ def main(dry_run):
     e = env()
     base, skey, api_key = e["SUPABASE_URL"].rstrip("/"), e["SUPABASE_SERVICE_ROLE_KEY"], e["OPENAI_API_KEY"]
     sb = {"apikey": skey, "Authorization": f"Bearer {skey}", "Content-Type": "application/json"}
-    existing = http("GET", f"{base}/rest/v1/products?select=id,reference,brand_id,specs&limit=10000", sb)
+    existing, off = [], 0
+    while True:  # de a 1000 (límite de Supabase)
+        page = http("GET", f"{base}/rest/v1/products?select=id,reference,brand_id,specs&order=id&limit=1000&offset={off}", sb)
+        existing += page
+        if len(page) < 1000:
+            break
+        off += 1000
+    # Los que creó este mismo script en una corrida anterior se rehacen (así toman las fichas
+    # oficiales que build_brand.py haya encontrado después); los de otros procesos se respetan.
+    prev = OUT / "catalog.json"
+    mine = {p["id"] for p in json.loads(prev.read_text(encoding="utf-8"))["products"]} if prev.exists() else set()
+    hide_candidates = existing
+    existing = [p for p in existing if p["id"] not in mine]
 
     def existing_index(brand_id):
         idx = {}
@@ -149,7 +161,8 @@ def main(dry_run):
         news = [(s, n, img) for s, n, img in items if key(s) not in idx]
         matched = {idx[key(s)] for s, _, _ in items if key(s) in idx}
         doc_ids += sorted(matched)
-        hide_ids += [p["id"] for p in existing if p["brand_id"] == bid and p["id"] not in matched]
+        doc_new_ids = {f"{bid}-{re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')}" for s, _, _ in news}
+        hide_ids += [p["id"] for p in hide_candidates if p["brand_id"] == bid and p["id"] not in matched and p["id"] not in doc_new_ids]
         cls = {} if fixed or not news or dry_run else classify([(s, bb.clean_name(n, bname)[0]) for s, n, _ in news], cats, api_key)
         for sku, raw, blob in news:
             name, truncated = bb.clean_name(raw, bname)
@@ -177,7 +190,7 @@ def main(dry_run):
             })
             doc_ids.append(pid)
         brands.append({"id": bid, "name": bname, "logoUrl": None})
-        summary.append(f"{bname:18s} doc {len(items):4d} | ya existían {len(matched):4d} | nuevos {len(news):4d} | se ocultan {sum(1 for p in existing if p['brand_id'] == bid and p['id'] not in matched):3d}")
+        summary.append(f"{bname:18s} doc {len(items):4d} | ya existían {len(matched):4d} | nuevos/actualizados {len(news):4d} | con ficha {sum(1 for s, n, _ in news if cached_lookup(bid, s, n)):4d}")
     print("\n".join(summary))
     print(f"TOTAL en documentos: {len(doc_ids)} | nuevos a cargar: {len(new_products)} | a ocultar: {len(hide_ids)}")
     if dry_run:
