@@ -1,0 +1,881 @@
+{
+  "source": "Info_Completa/CDVI.docx + fichas oficiales",
+  "brands": [
+    {
+      "id": "cdvi",
+      "name": "CDVI",
+      "logoUrl": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "control-de-acceso",
+      "slug": "control-de-acceso",
+      "name": "Control de acceso y asistencia",
+      "parentSlug": "seguridad",
+      "position": 108
+    }
+  ],
+  "products": [
+    {
+      "id": "cdvi-rsip",
+      "reference": "RSIP",
+      "name": "MÓDULO CONVERTIDOR TCP/IP A RS-232 CON CONECTIVIDAD ETHERNET",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Servidor de dispositivos serial a Ethernet compacto.\n• Proporciona conectividad Ethernet rápida y sencilla a dispositivos con interfaz serial.\n• Compatible con módulos RS232 y con el controlador CT-V900-A.\n• Programación e instalación sencillas.\n• Utiliza protocolo TCP/IP.\n• Permite dirección IP estática.\n• Comunicación estándar para configuración de software.",
+      "images": [
+        {
+          "url": "images/cdvi-rsip.webp",
+          "alt": "Módulo convertidor tcp/ip a rs-232 con conectividad ethernet CDVI RSIP",
+          "width": 480,
+          "height": 428,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "RSIP",
+        "Tecnología": "radio",
+        "Temperatura mínima": "-40 °C",
+        "Temperatura máxima": "85 °C",
+        "Voltaje mínimo": "5 V",
+        "Voltaje máximo": "15 V",
+        "Voltaje AC/DC": "DC",
+        "Consumo máximo de energía": "1.3 W",
+        "Color": "negro y plata",
+        "Altura del producto": "28 mm",
+        "Ancho del producto": "245 mm",
+        "Profundidad del producto": "33 mm",
+        "Peso del producto": "70 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/rsip/",
+      "officialName": "RSIP",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-rs1",
+      "reference": "RS1",
+      "name": "CONTROL REMOTO DELGADO DE 1 BOTÓN RADIUM",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Transmisor RADIUM de 1 canal\n• Alcance de hasta 820 pies (250 m)\n• Compatible con receptores inalámbricos RADIUM estándar de 433 MHz\n• Codificación de alta seguridad KeeLoq® de código rodante\n• Diseño delgado con botón de goma\n• Batería CR2032 incluida\n• Puede equiparse con una etiqueta pasiva\n• Disponible también con etiquetas RS1-C, RS1-H y RS1-EV2",
+      "images": [
+        {
+          "url": "images/cdvi-rs1.webp",
+          "alt": "Control remoto delgado de 1 botón radium CDVI RS1",
+          "width": 325,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "RS1",
+        "Tecnología": "radio",
+        "Montaje": "de mano",
+        "Temperatura mínima": "-25 °C",
+        "Temperatura máxima": "55 °C",
+        "Canales": "1",
+        "Frecuencia": "433 MHz",
+        "Modulación": "AM/ASK",
+        "Codificación": "Código rodante KeeLoq®",
+        "Alcance en campo abierto": "250 m (820 pies)",
+        "Voltaje mínimo": "3 V",
+        "Corriente": "20 mA",
+        "Material de superficie": "policarbonato"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/rs1/",
+      "officialName": "RS1",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-k1bt",
+      "reference": "K1BT",
+      "name": "LECTOR MÓVIL KRYPTO CON BLUETOOTH",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Compatible con el controlador ATRIUM A22K y la app ATRIUM BT.\n• Compatible con KRYPTO Mobile-PASS.\n• Lee credenciales KRYPTO Mobile-PASS, MIFARE Classic 13,56 MHz y DESFire EV1/EV2.\n• Tecnologías Bluetooth y NFC integradas.\n• Sellado en epoxi.\n• Compatible con OSDP-2.\n• Alcance de lectura de hasta 5 cm.\n• Diseño para montaje en superficie.",
+      "images": [
+        {
+          "url": "images/cdvi-k1bt.webp",
+          "alt": "Lector móvil krypto con bluetooth CDVI K1BT",
+          "width": 261,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "K1BT",
+        "Tecnología de lectura": "MIFARE Classic, DESFire EV2",
+        "Nivel de seguridad": "Alto",
+        "Bluetooth": "Sí",
+        "NFC": "Sí",
+        "Montaje": "Superficie",
+        "Temperatura mínima": "-40 °C",
+        "Temperatura máxima": "70 °C",
+        "Frecuencia": "13,56 MHz",
+        "Alcance en campo abierto": "5 cm",
+        "Tensión mínima": "12 VDC",
+        "Consumo máximo": "200 mA",
+        "Grado de protección IP": "IP65",
+        "Resistencia IK": "IK10",
+        "Material de superficie": "Policarbonato",
+        "Color": "Negro",
+        "Dimensiones (alto x ancho x fondo)": "140 x 42 x 24 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/our-products/k1bt/",
+      "officialName": "K1BT",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-iso",
+      "reference": "ISO25",
+      "name": "TARJETA ISO IMPRIMIBLE (125 KHZ)",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tarjeta ISO delgada e imprimible\n• Chip RFID de 125 kHz\n• Tecnología de proximidad\n• Imprimible por ambos lados\n• Número decimal secuencial impreso en cada tarjeta\n• Disponible en paquetes de 25 unidades\n• Codificación CDVI de 26 bits\n• Color blanco y material PVC",
+      "images": [
+        {
+          "url": "images/cdvi-iso.webp",
+          "alt": "Tarjeta iso imprimible (125 khz) CDVI ISO25",
+          "width": 480,
+          "height": 321,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "ISO",
+        "Tecnología": "Proximity",
+        "Nivel de seguridad": "Estándar",
+        "Frecuencia": "125 kHz",
+        "Codificación": "CDVI 26-bit",
+        "Material de superficie": "PVC",
+        "Color": "Blanco",
+        "Altura del producto": "54 mm",
+        "Ancho del producto": "85 mm",
+        "Grosor del producto": "0.8 mm",
+        "Peso del producto": "8 g",
+        "Formato": "Tarjeta ISO imprimible",
+        "Presentación": "Paquete de 25 unidades"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/iso25/",
+      "officialName": "ISO25",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-galeow",
+      "reference": "GALEOW",
+      "name": "TECLADO ANTIVANDÁLICO WIEGAND 26 BITS PARA USO INTERIOR Y EXTERIOR",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Teclado Wiegand estándar de 26 bits\n• Apto para instalación en interiores y exteriores\n• Carcasa robusta de aleación Zamak®\n• Botonera con retroiluminación azul\n• Resistente a la intemperie y al vandalismo\n• PCB sellada en epoxi\n• Montaje en superficie\n• Compatible con ATRIUM, CENTAUR y otros sistemas Wiegand de 26 bits",
+      "images": [
+        {
+          "url": "images/cdvi-galeow.webp",
+          "alt": "Teclado antivandálico wiegand 26 bits para uso interior y exterior CDVI GALEOW",
+          "width": 347,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "GALEOW",
+        "Tecnología": "Wiegand",
+        "Nivel de seguridad": "Estándar",
+        "Montaje": "Superficie",
+        "Temperatura mínima de operación": "-25 °C",
+        "Temperatura máxima de operación": "70 °C",
+        "Voltaje mínimo": "12 V DC",
+        "Consumo máximo": "100 mA",
+        "Grado de protección": "IP64",
+        "Resistencia al impacto": "IK10",
+        "Material de la superficie": "Zamak®",
+        "Color": "Plateado",
+        "Dimensiones": "110 x 75 x 15 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/our-products/galeow-2/",
+      "officialName": "GALEOW",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-f01040000002",
+      "reference": "F01040000002",
+      "name": "TARJETA DE PROXIMIDAD PARA DIGIPROX, CENTAURO, F01040000002",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdvi-f01040000002.webp",
+          "alt": "Tarjeta de proximidad para digiprox, centauro, f01040000002 CDVI F01040000002",
+          "width": 480,
+          "height": 321,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "F01040000002"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-dgprox",
+      "reference": "DGPROX",
+      "name": "LECTOR Y TECLADO DE PROXIMIDAD AUTÓNOMO DE 1 PUERTA",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Gestiona 1 puerta y hasta 500 usuarios gracias a su controlador integrado.\n• Funciona con credenciales de proximidad de 125 kHz y/o códigos PIN.\n• Permite 3 modos de operación: credencial + código, solo credencial, o credencial o código.\n• Admite lectores remotos adicionales a una distancia de hasta 50 m.\n• Incluye retroalimentación visual y audible.\n• Incorpora interruptor de sabotaje.\n• Cuenta con entrada de solicitud de salida para conectar contrachapas o botones de salida.\n• Programación sencilla mediante código maestro para ajustar el tiempo de cierre y administrar usuarios.",
+      "images": [
+        {
+          "url": "images/cdvi-dgprox.webp",
+          "alt": "Lector y teclado de proximidad autónomo de 1 puerta CDVI DGPROX",
+          "width": 322,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DGPROX",
+        "Tecnología de lectura": "Proximidad 125 kHz",
+        "Límite de usuarios": "Hasta 500",
+        "Número de relés": "2",
+        "Montaje": "Superficie",
+        "Frecuencia": "125 kHz",
+        "Voltaje": "12 V AC/DC",
+        "Consumo máximo": "250 mA",
+        "Índice de protección": "IP53",
+        "Material": "Policarbonato",
+        "Color": "Negro",
+        "Altura": "145 mm",
+        "Ancho": "80 mm",
+        "Profundidad": "28 mm",
+        "Peso": "0,219 kg"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/dgprox/",
+      "officialName": "DGPROX",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-dglp",
+      "reference": "DGLP",
+      "name": "LECTOR DIGIPROX, CENTAURO, PARA CONTROL ACCESO, RANGO DE 6 PULGADAS",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdvi-dglp.webp",
+          "alt": "Lector digiprox, centauro, para control acceso, rango de 6 pulgadas CDVI DGLP",
+          "width": 235,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DGLP"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-cubekit",
+      "reference": "CUBEKIT",
+      "name": "KIT DE RADIO INALÁMBRICO DE 1 RELÉ CON GESTIÓN POR SMARTPHONE Y 2 MANDOS DE 1 CANAL",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Kit de radiofrecuencia inalámbrico CUBE X con 1 receptor de 1 relé y 2 transmisores.\n• Gestión y programación remota desde smartphone mediante Bluetooth.\n• Compatible con aplicaciones gratuitas para instalador y usuario final en iOS y Android.\n• Incluye credenciales móviles gratuitas de alta inicial.\n• Permite automatizar puertas, portones, ascensores e iluminación.\n• Compatible con transmisores ERONE y RADIUM.\n• Memoria para hasta 250 transmisores y 100 smartphones.\n• Código rodante KeeLoq® para mayor seguridad.",
+      "images": [
+        {
+          "url": "images/cdvi-cubekit.webp",
+          "alt": "Kit de radio inalámbrico de 1 relé con gestión por smartphone y 2 mandos de 1 canal CDVI CUBEKIT",
+          "width": 480,
+          "height": 272,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CUBEKIT",
+        "Tecnología": "Radiofrecuencia y Bluetooth",
+        "Bluetooth": "Sí",
+        "Frecuencia": "433.92 MHz",
+        "Modulación": "AM/ASK",
+        "Codificación": "KeeLoq®",
+        "Alcance en campo abierto": "250 m",
+        "Capacidad de memoria": "hasta 250 transmisores y 100 smartphones",
+        "Canales": "1 por transmisor",
+        "Número de relés": "1",
+        "Temperatura mínima de operación": "-20 °C",
+        "Temperatura máxima de operación": "65 °C",
+        "Voltaje de alimentación": "12-24 V AC/DC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdviberica.com/es/radiofrecuencia/cubekit/",
+      "officialName": "CUBEKIT",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-csm",
+      "reference": "CSM",
+      "name": "TARJETA DE PROXIMIDAD TIPO CLAMSHELL MIFARE CLÁSICO 1K",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tarjeta clamshell estándar de proximidad.\n• Chip RFID MIFARE Classic de 13.56 MHz.\n• Número hexadecimal impreso en cada tarjeta.\n• Se vende en paquetes de 25 unidades.\n• Solución económica para proyectos estándar de control de acceso.",
+      "images": [
+        {
+          "url": "images/cdvi-csm.webp",
+          "alt": "Tarjeta de proximidad tipo clamshell mifare clásico 1k CDVI CSM",
+          "width": 480,
+          "height": 322,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CSM",
+        "Tecnología de lectura": "MIFARE Classic",
+        "Nivel de seguridad": "Estándar",
+        "Frecuencia": "13.56 MHz",
+        "Material de superficie": "PVC",
+        "Color": "Blanco",
+        "Altura": "54 mm",
+        "Ancho": "85 mm",
+        "Grosor": "1.8 mm",
+        "Peso": "8 g"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/our-products/csm/",
+      "officialName": "CSM",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-csh25",
+      "reference": "CSH25",
+      "name": "TARJETAS DE PROXIMIDAD HID ATRIUM, CHIP RFID DE 125 KHZ, PAQUETE DE 25 UNIDADES",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tarjeta clamshell de proximidad de 125 kHz.\n• Formato HID 26-bit.\n• Se vende en paquete de 25 unidades.\n• Número de tarjeta decimal secuencial impreso.\n• Compatible con sistemas de control de acceso de CDVI.\n• Cuerpo de PVC color blanco.\n• Formato estándar de 85 x 54 x 1.8 mm.",
+      "images": [
+        {
+          "url": "images/cdvi-csh25.webp",
+          "alt": "Tarjetas de proximidad hid atrium, chip rfid de 125 khz, paquete de 25 unidades CDVI CSH25",
+          "width": 480,
+          "height": 305,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CSH25",
+        "Tecnología": "Proximidad",
+        "Frecuencia": "125 kHz",
+        "Codificación": "HID 26-bit",
+        "Tipo de tarjeta": "Clamshell",
+        "Material de superficie": "PVC",
+        "Color": "Blanco",
+        "Altura": "54 mm",
+        "Ancho": "85 mm",
+        "Profundidad": "1.8 mm",
+        "Peso": "8 g",
+        "Presentación": "Paquete de 25 unidades"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/cs25/",
+      "officialName": "CSH25",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-csev2",
+      "reference": "CSEV2",
+      "name": "TARJETA DE CLAMSHELL MIFARE DESFIRE EV2 4K",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tarjeta de alta seguridad con chip RFID MIFARE DESFire EV2.\n• Compatible con lectores MIFARE DESFire y KRYPTO de CDVI.\n• Cifrado AES128 para ayudar a prevenir la clonación de tarjetas.\n• Formato clamshell rígido.\n• Se suministra en paquetes de 25 unidades.\n• Frecuencia de 13.56 MHz.\n• Superficie de PVC color blanco.",
+      "images": [
+        {
+          "url": "images/cdvi-csev2.webp",
+          "alt": "Tarjeta de clamshell mifare desfire ev2 4k CDVI CSEV2",
+          "width": 480,
+          "height": 324,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CSEV2",
+        "Tecnología": "MIFARE DESFire EV2",
+        "Nivel de seguridad": "Alta",
+        "Frecuencia": "13.56 MHz",
+        "Material de superficie": "PVC",
+        "Color": "Blanco",
+        "Altura": "54 mm",
+        "Ancho": "85 mm",
+        "Profundidad": "1.8 mm",
+        "Peso": "8 g",
+        "Presentación": "Paquete de 25 unidades"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/csev2/",
+      "officialName": "CSEV2",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-cs25",
+      "reference": "CS25",
+      "name": "TARJETA DURA NO IMPRIMIBLE DE PROXIMIDAD 125 KHZ",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tarjeta de almeja estándar.\n• Contiene un chip RFID de proximidad de 125 kHz.\n• Codificación CDVI de 26 bits.\n• Número decimal secuencial impreso en cada tarjeta.\n• Disponible en paquetes de 25 unidades.\n• Solución económica para proyectos estándar de control de acceso.",
+      "images": [
+        {
+          "url": "images/cdvi-cs25.webp",
+          "alt": "Tarjeta dura no imprimible de proximidad 125 khz CDVI CS25",
+          "width": 480,
+          "height": 319,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CS25",
+        "Tecnología": "proximidad",
+        "Nivel de seguridad": "estándar",
+        "Frecuencia": "125 kHz",
+        "Codificación": "CDVI 26-bit",
+        "Material de superficie": "PVC",
+        "Color": "blanco",
+        "Altura del producto": "54 mm / 2 in",
+        "Ancho del producto": "85 mm / 3.35 in",
+        "Profundidad del producto": "1.8 mm / 0.07 in",
+        "Peso del producto": "8 g / 0.2 oz"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/cs25/",
+      "officialName": "CS25",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-caa480a",
+      "reference": "CAA480A",
+      "name": "MÓDULO DE CONTROL DE ASCENSORES EN GABINETE",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Se conecta al bus de expansión de la central CTV900ATR.\n• Permite controlar hasta 16 plantas por módulo.\n• Incluye 16 relés de control de plantas integrados.\n• Admite programación individual por planta.\n• Ofrece modo de control de destino con módulo CAA482P.\n• Incluye supervisión completa, batería de respaldo y entrada de alarma de incendio.\n• Cuenta con gabinete metálico.\n• Se alimenta con transformador TR1640.",
+      "images": [
+        {
+          "url": "images/cdvi-caa480a.webp",
+          "alt": "Módulo de control de ascensores en gabinete CDVI CAA480A",
+          "width": 480,
+          "height": 390,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CAA480A",
+        "Número de relés": "16",
+        "Plantas controlables": "Hasta 16",
+        "Tensión mínima": "16 Vac",
+        "Tensión máxima": "40 Vac",
+        "Tipo de alimentación": "AC",
+        "Consumo máximo": "2,5 mA",
+        "Temperatura mínima de operación": "0 °C",
+        "Temperatura máxima de operación": "49 °C",
+        "Material del gabinete": "Metálico",
+        "Altura": "420 mm",
+        "Ancho": "340 mm",
+        "Profundidad": "100 mm",
+        "Peso": "3,53 kg"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.de/de/unsere-produkte/caa-480a/",
+      "officialName": "CAA480A",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-caa470",
+      "reference": "CA-A470-A",
+      "name": "TARJETA EXPANSORA, 2 PUERTAS, ALCANCE DE 1200 MTS",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Módulo de expansión CENTAUR para 2 puertas y 2 lectores.\n• Tecnología E-Bus con alcance de hasta 1.220 m entre el controlador y el expansor.\n• Permite conectar localmente lector, teclado, contacto de puerta, REX y salidas de lector cerca de las puertas.\n• Incluye 2 salidas de cerradura.\n• Dispone de 4 entradas para contacto magnético y dispositivo REX.\n• Soporta hasta 3 módulos CA-A470-A por cada CT-V900-A.",
+      "images": [
+        {
+          "url": "images/cdvi-caa470.webp",
+          "alt": "Tarjeta expansora, 2 puertas, alcance de 1200 mts CDVI CA-A470-A",
+          "width": 480,
+          "height": 266,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CAA470",
+        "Nivel de seguridad": "Estándar",
+        "Número de relés": "2 relés de forma C",
+        "Montaje": "Superficie",
+        "Temperatura mínima": "0 °C",
+        "Temperatura máxima": "49 °C",
+        "Voltaje mínimo": "12 V DC",
+        "Voltaje máximo": "24 V DC",
+        "Consumo máximo de energía": "2,5 mA",
+        "Bus de expansión": "RS485, plug and play",
+        "Alcance E-Bus": "Hasta 1.220 m"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/ca-a470-a/",
+      "officialName": "CA-A470-A",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-c900k",
+      "reference": "C900K",
+      "name": "CONTROLADOR DE ACCESO IP C900IP, CENTAURO, 2 PUERTAS",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdvi-c900k.webp",
+          "alt": "Controlador de acceso ip c900ip, centauro, 2 puertas CDVI C900K",
+          "width": 480,
+          "height": 401,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "C900K"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-btag25",
+      "reference": "BTAG25",
+      "name": "TAG DE LLAVE DE PROXIMIDAD AZUL",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Tag de proximidad azul de CDVI\n• Tecnología RFID de 125 kHz\n• Codificación CDVI de 26 bits\n• Número decimal secuencial impreso\n• Incluye práctico llavero metálico\n• Disponible en paquetes de 25 unidades\n• Solución económica para control de acceso estándar",
+      "images": [
+        {
+          "url": "images/cdvi-btag25.webp",
+          "alt": "Tag de llave de proximidad azul CDVI BTAG25",
+          "width": 363,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "BTAG25",
+        "Tecnología": "Proximidad",
+        "Frecuencia": "125 kHz",
+        "Nivel de seguridad": "Estándar",
+        "Material de superficie": "PVC",
+        "Color": "Azul",
+        "Diámetro del producto": "1.25 in / 32 mm",
+        "Peso del producto": "0.2 oz / 8 g",
+        "Codificación": "CDVI 26-bit (125 kHz)",
+        "Presentación": "Paquetes de 25 unidades"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/btag25/",
+      "officialName": "BTAG25",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-atu48p",
+      "reference": "ATU48P",
+      "name": "CREDENCIALES ADHESIVAS PARA COCHE A PRUEBA DE MANIPULACIONES, 865 MHZ (PAQUETE DE 10)",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Credencial adhesiva para uso con lectores U4GO\n• Tecnología UHF de 865 MHz\n• Diseñada para pegarse al parabrisas\n• Versión a prueba de manipulaciones\n• Al retirarla del parabrisas, la credencial se daña\n• Detección de vehículos hasta 80 km/h\n• Compatible con lectores A6U48 y A10U48\n• Se suministra en paquete de 10 unidades",
+      "images": [
+        {
+          "url": "images/cdvi-atu48p.webp",
+          "alt": "Credenciales adhesivas para coche a prueba de manipulaciones, 865 mhz (paquete de 10) CDVI ATU48P",
+          "width": 480,
+          "height": 219,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "ATU48P",
+        "Referencia": "F0103000142",
+        "Tecnología": "Ultra High Frequency (UHF)",
+        "Frecuencia": "865 MHz",
+        "Formato": "Paquete de 10",
+        "Aplicación": "Parabrisas",
+        "Compatibilidad": "A6U48 y A10U48",
+        "Velocidad de detección": "Hasta 80 km/h",
+        "Tipo": "Credencial adhesiva a prueba de manipulaciones"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdviwireless.com/en/our-products/atu48p/",
+      "officialName": "ATU48P",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-amc25",
+      "reference": "AMC25",
+      "name": "LICENCIA PARA 25 CREDENCIALES MÓVILES KRYPTO MOBILE-PASS",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Paquete de 25 credenciales móviles para el sistema ATRIUM.\n• Permite usar el smartphone como credencial de acceso.\n• Compatible con lectores Bluetooth KRYPTO.\n• Las credenciales pueden emitirse en sitio o remotamente por correo electrónico o SMS.\n• La activación remota se completa cuando la app es detectada por un lector del sitio.\n• No requiere cuotas anuales ni costos de almacenamiento en la nube.\n• Se usa con la aplicación gratuita ATRIUM BT.\n• Cada credencial móvil queda vinculada permanentemente al smartphone del usuario.",
+      "images": [
+        {
+          "url": "images/cdvi-amc25.webp",
+          "alt": "Licencia para 25 credenciales móviles krypto mobile-pass CDVI AMC25",
+          "width": 480,
+          "height": 324,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "AMC25",
+        "Código de producto": "AMC25",
+        "Cantidad de licencias": "25 credenciales móviles",
+        "Tipo de licencia": "Licencia",
+        "Sistema compatible": "ATRIUM",
+        "Compatibilidad": "Lectores Bluetooth KRYPTO",
+        "Métodos de emisión": "En sitio o remota por correo electrónico/SMS",
+        "Aplicación": "ATRIUM BT",
+        "Cuotas": "Sin cuotas anuales",
+        "Vinculación de credencial": "Permanente al smartphone",
+        "Referencias del fabricante": "F0108000047"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdviberica.com/es/control-de-accesos-online/atrium-krypto/licencias/amc25/",
+      "officialName": "AMC25",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-a6u49",
+      "reference": "A6U49",
+      "name": "LECTOR UHF DE MEDIO ALCANCE 6 M (20 PIES)",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Lector UHF de rango medio para identificación de vehículos y personas.\n• Opera en modo autónomo o Wiegand.\n• Compatible con cifrado AES128.\n• Alcance de lectura de hasta 6 m (20 pies).\n• Puede detectar vehículos en movimiento hasta 80 km/h.\n• Incluye receptor, fuente de poder y soportes de instalación.\n• Compatible con sistemas de control de acceso como ATRIUM o CENTAUR.",
+      "images": [
+        {
+          "url": "images/cdvi-a6u49.webp",
+          "alt": "Lector uhf de medio alcance 6 m (20 pies) CDVI A6U49",
+          "width": 432,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "A6U49",
+        "Tecnología": "UHF (ultra high frequency)",
+        "Frecuencia": "902-928 MHz",
+        "Modulación": "FHSS / GFSK",
+        "Alcance en campo abierto": "20 ft / 6 m",
+        "Modo de operación": "Autónomo o Wiegand",
+        "Nivel de seguridad": "Estándar",
+        "Límite de usuario": "Autónomo: 7,560 credenciales; Wiegand: dependiente del control de acceso",
+        "Número de relés": "2",
+        "Voltaje mínimo": "12 VDC",
+        "Voltaje máximo": "24 VDC",
+        "Consumo máximo de energía": "700 mA",
+        "Índice de protección": "IP55"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/es/nuestros-productos/a6u49/",
+      "officialName": "A6U49",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-a22kitdgf",
+      "reference": "A22KITDGF",
+      "name": "KIT DE CONTROL DE ACCESO ATRIUM DE 2 PUERTAS CON 2 LECTORES DGLP",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Controla 2 puertas y 2 lectores\n• Incluye fuente de poder universal preensamblada de 120/240 V\n• Se puede usar como controlador de 2 puertas o como expansor\n• Puerto Ethernet integrado con cifrado AES de 256 bits\n• Bus de comunicación RS-485 integrado\n• Servidor web embebido para administración\n• Auto-detección de módulos de hardware\n• Proceso rápido y sencillo de alta de tarjetas",
+      "images": [
+        {
+          "url": "images/cdvi-a22kitdgf.webp",
+          "alt": "Kit de control de acceso atrium de 2 puertas con 2 lectores dglp CDVI A22KITDGF",
+          "width": 480,
+          "height": 416,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "A22KITDGF",
+        "Número de puertas": "2",
+        "Número de lectores": "2",
+        "Tecnología": "Proximidad y MIFARE® Classic",
+        "Límite de usuarios": "10,000",
+        "Número de relés": "2 x Form C (contacto seco)",
+        "Salida de cerradura": "2 x 12 VDC, 750 mA cada una",
+        "Comunicación": "Ethernet y RS-485",
+        "Longitud máxima RS-485": "1220 m (4000 pies)",
+        "Rango de temperatura mínima": "-20 °C",
+        "Rango de temperatura máxima": "50 °C",
+        "Montaje": "Superficie, PCB montado en gabinete metálico con cerradura",
+        "Fuente de alimentación": "120/240 VAC, universal preensamblada"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.adiglobaldistribution.us/Product/CV-A22KITDGF",
+      "officialName": "A22KITDGF",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-a22kdgnc",
+      "reference": "A22KDGNC",
+      "name": "KIT DE CONTROL DE ACCESO, A22K CTRL + 2XDGLP FN WLC26, A22KDGNC",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdvi-a22kdgnc.webp",
+          "alt": "Kit de control de acceso, a22k ctrl + 2xdglp fn wlc26, a22kdgnc CDVI A22KDGNC",
+          "width": 480,
+          "height": 329,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "A22KDGNC"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdvi-a22k1",
+      "reference": "A22K1",
+      "name": "KIT DE CONTROL DE ACCESO KRIPTO, CONTROLADOR DE 2 PUERTAS, 2 LECTORES Y 25 CREDENCIALES DESFIRE EV2",
+      "categorySlug": "control-de-acceso",
+      "brandId": "cdvi",
+      "brandName": "CDVI",
+      "description": "• Kit de alta seguridad KRYPTO para proyectos de control de acceso.\n• Incluye un controlador A22K para 2 puertas.\n• Incluye 2 lectores K1 de alta seguridad.\n• Incluye 25 credenciales TAG-EV2.\n• Compatible con credenciales MIFARE DESFire EV2/EV3.\n• Integra software ATRIUM.\n• Permite hasta 10.000 usuarios con ATRIUM.\n• Cuenta con 2 relés de control.",
+      "images": [
+        {
+          "url": "images/cdvi-a22k1.webp",
+          "alt": "Kit de control de acceso kripto, controlador de 2 puertas, 2 lectores y 25 credenciales desfire ev2 CDVI A22K1",
+          "width": 480,
+          "height": 341,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "A22K1",
+        "Tecnología de lectura": "MIFARE® DESFire EV2/EV3",
+        "Nivel de seguridad": "alto",
+        "Bluetooth": "no",
+        "Límite de usuarios": "10.000 usuarios con ATRIUM",
+        "Número de relés": "2",
+        "Modo falla": "sí",
+        "Voltaje mínimo": "120 V",
+        "Voltaje máximo": "240 V",
+        "Salida de voltaje": "24 V DC",
+        "Consumo máximo": "750 mA",
+        "Material de carcasa": "Gabinete metálico",
+        "Dimensiones (Al x An x Pr)": "290 x 310 x 90 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdvi.ca/our-products/a22k1/",
+      "officialName": "A22K1",
+      "source": {
+        "page": null
+      }
+    }
+  ]
+}

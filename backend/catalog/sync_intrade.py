@@ -44,6 +44,9 @@ def env():
     return vals["SUPABASE_URL"].rstrip("/"), vals["SUPABASE_SERVICE_ROLE_KEY"]
 
 
+SKUS = {}  # dirección -> código que Intrade muestra en el listado
+
+
 def intrade_slugs():
     """Direcciones de los productos que Intrade tiene en stock (y cuántos están agotados)."""
     in_stock, out_of_stock, n = [], 0, 1
@@ -56,14 +59,17 @@ def intrade_slugs():
             if e.code == 404:  # se acabaron las páginas
                 break
             raise
-        items = re.findall(r'<li class="([^"]*\btype-product\b[^"]*)">\s*<a href="https://intradeabc\.com/producto/([^"/]+)/?"', page)
+        items = re.findall(r'<li class="([^"]*\btype-product\b[^"]*)">\s*<a href="https://intradeabc\.com/producto/([^"/]+)/?"'
+                           r'(.*?)</li>', page, re.S)
         if not items:
             break
-        for classes, slug in items:
+        for classes, slug, rest in items:
             if "outofstock" in classes.split():
                 out_of_stock += 1
             else:
+                sku = re.search(r'<span class="intrade-sku">\s*([^<]+?)\s*</span>', rest)
                 in_stock.append(slug)
+                SKUS[slug] = sku.group(1) if sku else None
         print(f"  página {n}: {len(items)} productos", flush=True)
         n += 1
         time.sleep(DELAY_S)
@@ -72,7 +78,7 @@ def intrade_slugs():
     print(f"Intrade: {len(in_stock)} en stock, {out_of_stock} agotados")
     # Copia de la lista (solo direcciones) para los scripts de cada marca.
     (HERE / "intrade_snapshot.json").write_text(json.dumps(
-        {"fecha": datetime.now(timezone.utc).isoformat(), "en_stock": in_stock}, indent=0), encoding="utf-8")
+        {"fecha": datetime.now(timezone.utc).isoformat(), "en_stock": in_stock, "sku": SKUS}, indent=0), encoding="utf-8")
     return in_stock
 
 
@@ -83,15 +89,24 @@ def norm(code):
 
 def is_available(product, slugs, slugs_alnum):
     ref = product["reference"]
+    specs = product.get("specs") or {}
+    # 1) Código contra código: el que Intrade muestra en su listado.
+    sku_set = {norm(s) for s in SKUS.values() if s}
+    if any(norm(c) in sku_set for c in (ref, specs.get("Código Intrade"), specs.get("Código Dahua CR")) if c and len(norm(c)) >= 3):
+        return True
     if re.fullmatch(r"[A-Z]?\d{5}(-[A-Z0-9]+)?", ref):  # Tolsen: número de 5 cifras
         pat = re.compile(rf"(?<![0-9]){re.escape(ref.lower())}(?![0-9])")
         return any(pat.search(s) for s in slugs)
-    codes = [ref, (product.get("specs") or {}).get("Código Dahua CR")]
+    codes = [ref, specs.get("Código Dahua CR"), specs.get("Código Intrade")]
     if any(len(norm(c)) >= 5 and any(norm(c) in s for s in slugs_alnum) for c in codes if c):
         return True
     # Códigos cortos (Altronix SMP7, AL624…): deben aparecer como palabra completa en la dirección.
-    pat = re.compile(rf"(?<![a-z0-9]){re.escape(ref.lower())}(?![a-z0-9])")
-    return any(pat.search(s) for s in slugs)
+    for c in codes:
+        if c:
+            pat = re.compile(rf"(?<![a-z0-9]){re.escape(c.lower())}(?![a-z0-9])")
+            if any(pat.search(s) for s in slugs):
+                return True
+    return False
 
 
 def request(method, url, key, body=None):

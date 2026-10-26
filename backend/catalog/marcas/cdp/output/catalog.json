@@ -1,0 +1,289 @@
+{
+  "source": "Info_Completa/CDP.docx + fichas oficiales",
+  "brands": [
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "logoUrl": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "ups-y-reguladores",
+      "slug": "ups-y-reguladores",
+      "name": "UPS y reguladores de voltaje",
+      "parentSlug": "seguridad",
+      "position": 113
+    }
+  ],
+  "products": [
+    {
+      "id": "cdp-cd00031",
+      "reference": "R-SMART1510",
+      "name": "UPS INTELIGENTE 1500VA/900W CON REGULADOR AUTOMÁTICO DE VOLTAJE, 10 SALIDAS, PANEL LCD, PROTECCIÓN RJ45 Y COAXIAL",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": "• Regulador de voltaje automático (AVR) que corrige variaciones de voltaje sin usar las baterías.\n• 10 salidas NEMA 5-15R: 5 con respaldo de batería y supresión de picos, y 5 con supresión de picos.\n• Panel LCD multifunción.\n• Protección contra picos de hasta 560 joules.\n• Supresor de picos para línea Ethernet RJ45 y línea coaxial.\n• Software inteligente con apagado remoto automático.\n• Topología line interactive.\n• Ideal para computadoras, sistemas de red y video juegos.",
+      "images": [
+        {
+          "url": "images/cdp-cd00031.webp",
+          "alt": "Ups inteligente 1500va/900w con regulador automático de voltaje, 10 salidas, panel lcd, protección rj45 y coaxial CDP R-SMART1510",
+          "width": 280,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CD00031",
+        "Capacidad": "1500VA/900W",
+        "Topología": "Line Interactive",
+        "Cantidad y tipo de salidas": "10 NEMA 5-15R (5 con respaldo de batería y AVR / 5 con supresión de pico)",
+        "Protección contra picos": "560 joules",
+        "Rango de voltaje de entrada": "154 - 290 Vca",
+        "Regulación de voltaje de salida": "120 VCA +/- 10%",
+        "Puertos de protección de datos": "RJ45 (Ethernet) y coaxial",
+        "Indicador": "Panel LCD multifunción"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdpenergy.com/productdetails.asp?prdn=Ui1TTUFSVDE1MTA&prd=MTAx&ccoun=pr",
+      "officialName": "R-SMART1510",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-ruavr604",
+      "reference": "RU-AVR604",
+      "name": "REGULADOR DE VOLTAJE AUTOMÁTICO DE 600 VA CON PROTECCIÓN CONTRA SOBRETENSIONES, 4 TOMAS NEMA 5-15 REGULADAS Y 4 PUERTOS USB",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": "• Regulador de voltaje automático (AVR) de 600 VA / 300 W\n• Protección contra sobretensiones\n• 4 salidas NEMA 5-15R reguladas\n• 4 puertos USB de carga\n• Indicadores LED de potencia y calidad de voltaje de entrada\n• Disyuntor termomagnético de sobrecarga con reinicio\n• Plástico anti-flama conforme a UL\n• Disponible en versión de 120 Vca",
+      "images": [
+        {
+          "url": "images/cdp-ruavr604.webp",
+          "alt": "Regulador de voltaje automático de 600 va con protección contra sobretensiones, 4 tomas nema 5-15 reguladas y 4 puertos usb CDP RU-AVR604",
+          "width": 448,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "RUAVR604",
+        "Capacidad": "600 VA / 300 W",
+        "Voltaje": "120 Vca",
+        "Tipo de salida / número": "4 NEMA 5-15R con AVR y supresión de picos",
+        "Cargadores USB": "4 pzas. (2.1 A máx.)",
+        "Conector de entrada": "NEMA 5-15P",
+        "Rango de voltaje de entrada": "85 - 145 VCA",
+        "Frecuencia": "50/60 Hz (auto-sensing)",
+        "Protección de picos de voltaje": "175 Joules",
+        "Regulación de voltaje de salida": "120 VCA +/- 10%",
+        "Peso": "0.88 kg",
+        "Dimensiones": "95 x 95 x 95 mm (Largo x Alto x Profundo)",
+        "Certificaciones": "ISO 9001, ISO 14001, CIDET y NOM"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.cdpenergy.com/productdetails.asp?ccoun=py&mf=cHJvdGVjdGlvbg&prd=MTM0&prdn=UlUtQVZSNjA0",
+      "officialName": "RU-AVR604",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-pw00095",
+      "reference": "RUPR604",
+      "name": "NO-BREAK INTERACTIVO 600VA/300W, 120V, CON REGULADOR DE VOLTAJE Y SUPRESIÓN DE PICOS DE 175 JOULES",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": "• UPS interactiva de 600VA/300W.\n• Regulación automática de voltaje (AVR) para corregir variaciones menores sin usar la batería.\n• 4 salidas NEMA 5-15R con respaldo de batería y supresión de picos.\n• Protección contra sobretensiones de hasta 175 Joules.\n• Entrada y salida nominal de 120 Vca.\n• Frecuencia de 50/60 Hz con detección automática.\n• Indicadores LED de estado.\n• Diseño compacto para equipos esenciales.",
+      "images": [
+        {
+          "url": "images/cdp-pw00095.webp",
+          "alt": "No-break interactivo 600va/300w, 120v, con regulador de voltaje y supresión de picos de 175 joules CDP RUPR604",
+          "width": 444,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "PW00095",
+        "Capacidad": "600VA/300W",
+        "Voltaje de entrada": "120 Vca",
+        "Voltaje de salida": "120 Vca",
+        "Topología": "Línea interactiva (AVR)",
+        "Número de salidas": "4 x NEMA 5-15R",
+        "Protección contra picos": "175 Joules",
+        "Frecuencia": "50/60 Hz (auto-sensing)",
+        "Factor de potencia": "0.5",
+        "Tipo de onda": "Senoidal",
+        "Longitud del cable": "1 m",
+        "Regulación de voltaje de salida": "120 Vca +/- 10%",
+        "Indicadores": "LED"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://cdpenergy.com/productdetails.asp?mf=&prd=MTE0Mg&prdn=UlVQUjYwNA",
+      "officialName": "RUPR604",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-cd00030",
+      "reference": "CD00030",
+      "name": "UPS, 1000VA/500W, CON REGULADOR DE VOLTAJE",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdp-cd00030.webp",
+          "alt": "Ups, 1000va/500w, con regulador de voltaje CDP CD00030",
+          "width": 480,
+          "height": 422,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CD00030"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-cd00028",
+      "reference": "CD00028",
+      "name": "UPS, 750VA/350W, REGULADOR DE VOLTAJE",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdp-cd00028.webp",
+          "alt": "Ups, 750va/350w, regulador de voltaje CDP CD00028",
+          "width": 480,
+          "height": 329,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CD00028"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-toma070",
+      "reference": "TOMA070",
+      "name": "REGLETA ATERRIZADA, 5 TOMAS NEMA UNIVERSAL, 110V, 15AMPR",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdp-toma070.webp",
+          "alt": "Regleta aterrizada, 5 tomas nema universal, 110v, 15ampr CDP TOMA070",
+          "width": 371,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "TOMA070"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-cd00220",
+      "reference": "CD00220",
+      "name": "INVERSOR PARA VEHÍCULO, MULTIFUNCIÓN, ENTRADA 12V, 200W, CD00220",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": null,
+      "images": [
+        {
+          "url": "images/cdp-cd00220.webp",
+          "alt": "Inversor para vehículo, multifunción, entrada 12v, 200w, cd00220 CDP CD00220",
+          "width": 480,
+          "height": 437,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CD00220"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "cdp-cd00056",
+      "reference": "R-PP2M",
+      "name": "SUPRESOR DOBLE DE PARED, COLOR BLANCO, 350 JOULES, 120V",
+      "categorySlug": "ups-y-reguladores",
+      "brandId": "cdp",
+      "brandName": "CDP",
+      "description": "• 2 salidas con protección\n• Montaje en pared\n• Supresión de picos de 350 joules\n• Selector de reconexión retardada de 15 s, 30 s y 3 min\n• Caja plástica antiflamable\n• Indicadores LED de estado\n• Tecnología con MOVs para absorber exceso de energía",
+      "images": [
+        {
+          "url": "images/cdp-cd00056.webp",
+          "alt": "Supresor doble de pared, color blanco, 350 joules, 120v CDP R-PP2M",
+          "width": 480,
+          "height": 436,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "CD00056",
+        "Capacidad de salida": "1800 W (15 A)",
+        "Voltaje de entrada": "120 Vac",
+        "Rango de voltaje de entrada": "90-140 Vac",
+        "Protección contra picos de voltaje": "350 Joules",
+        "Conector de entrada": "Nema 5-15P",
+        "Salidas": "2 x Nema 5-15R",
+        "Frecuencia": "50/60 Hz (auto-sensing)",
+        "Retardo de reconexión": "15 s, 30 s y 3 min",
+        "Regulación de voltaje de salida": "120 VCA +/- 5%",
+        "Factor de potencia": "0.5",
+        "Distorsión armónica": "<3%",
+        "Topología": "TVSS"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://cdpenergy.com/productdetails.asp?ccoun=ni&mf=cHJvdGVjdGlvbg&prd=MTM5&prdn=Ui1QUDIgTQ",
+      "officialName": "R-PP2M",
+      "source": {
+        "page": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "source": "Info_Completa/DEXSON.docx + fichas oficiales",
+  "brands": [
+    {
+      "id": "dexson",
+      "name": "Dexson",
+      "logoUrl": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "canaletas-e-instalacion",
+      "slug": "canaletas-e-instalacion",
+      "name": "Canaletas y accesorios de instalación",
+      "parentSlug": "seguridad",
+      "position": 115
+    }
+  ],
+  "products": [
+    {
+      "id": "dexson-dxn33031",
+      "reference": "DXN33031",
+      "name": "CINTA DOBLE FAZ 3/4\" X 5 M",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Permite realizar fijaciones sin tornillos en superficies compatibles.\n• Facilita el montaje de canaletas y otros elementos ligeros.\n• Debe aplicarse sobre una superficie limpia, seca y estable.\n• El rollo puede cortarse según la longitud requerida en la instalación.",
+      "images": [
+        {
+          "url": "images/dexson-dxn33031.webp",
+          "alt": "Cinta doble faz 3/4\" x 5 m Dexson DXN33031",
+          "width": 480,
+          "height": 246,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN33031",
+        "Referencia": "DXN33031",
+        "Nombre comercial": "Cinta doble faz Dexson de 3/4\" x 5 m",
+        "Ancho": "3/4\"",
+        "Longitud": "5 m",
+        "Uso principal": "Fijaciones sin tornillos"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/co/es/product/DXN33031/cinta-doble-faz-dexson-de-3-4-x-5-m/",
+      "officialName": "DXN33031",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn3200b",
+      "reference": "DXN3200B",
+      "name": "BASES ADHESIVAS, COLOR BLANCO, BOLSA DE 50UND, DXN3200B",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": null,
+      "images": [
+        {
+          "url": "images/dexson-dxn3200b.webp",
+          "alt": "Bases adhesivas, color blanco, bolsa de 50und, dxn3200b Dexson DXN3200B",
+          "width": 464,
+          "height": 480,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN3200B"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11076",
+      "reference": "DXN11076",
+      "name": "ACCESORIO DE UNIÓN PARA CANALETA DE 32 X 12 MM EN COLOR BLANCO",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Accesorio de unión en color blanco para canaleta de 32 x 12 mm.\n• Fabricado en material ABS+PC resistente a las flamas.\n• Cumple con las normas IEC61084-2-1 y HB UL 94.\n• Permite unir y redirigir canaletas evitando cortes innecesarios.\n• Brinda protección en la instalación.\n• Compatible con canaletas DXN10101, DXN10111, DXN10121 y DXN10131.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11076.webp",
+          "alt": "Accesorio de unión para canaleta de 32 x 12 mm en color blanco Dexson DXN11076",
+          "width": 480,
+          "height": 380,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11076",
+        "Sección transversal": "32 x 12 mm",
+        "Tipo de producto o componente": "Pieza de cubierta de unión",
+        "Color": "Blanco",
+        "Material": "ABS+PC resistente a las flamas",
+        "Normas": "IEC61084-2-1 y HB UL 94",
+        "Compatibilidad": "DXN10101, DXN10111, DXN10121 y DXN10131"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/mx/es/product/DXN11076/accesorio-de-uni%C3%B3n-dexson-de-32-mm-x-12-mm-en-color-blanco/",
+      "officialName": "DXN11076",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11075",
+      "reference": "DXN11075",
+      "name": "ACCESORIO TAPA FINAL BLANCO 32X12",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Accesorio tapa final para canaleta Dexson de 32 x 12 mm.\n• Color blanco.\n• Se fija a presión.\n• Ayuda a dar un acabado más estético a la instalación de canalización.\n• Compatible con la línea Dexson de canaletas y accesorios.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11075.webp",
+          "alt": "Accesorio tapa final blanco 32x12 Dexson DXN11075",
+          "width": 480,
+          "height": 363,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11075",
+        "Código": "DXN11075",
+        "Referencia antigua": "3ACTFBL32x12",
+        "Descripción": "Accesorio Tapa Final Blanco 32x12",
+        "Tipo": "Tapa final",
+        "Color": "Blanco",
+        "Medida": "32 x 12 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://delectricasac.com/wp-content/uploads/2025/01/Catalogo_Dexson.pdf",
+      "officialName": "DXN11075",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11074",
+      "reference": "DXN11074",
+      "name": "ACCESORIO DERIVACIÓN EN T PARA CANALETA 32 X 12 MM BLANCA",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Derivación en T para canaleta de 32 x 12 mm.\n• Color blanco.\n• Accesorio para canalización de cableado.\n• Fabricado en PVC de alta resistencia.\n• Presentación en empaque de 10 piezas.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11074.webp",
+          "alt": "Accesorio derivación en t para canaleta 32 x 12 mm blanca Dexson DXN11074",
+          "width": 480,
+          "height": 299,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11074",
+        "Referencia": "DXN11074",
+        "Descripción": "Derivación T 32x12",
+        "Tipo": "Accesorio",
+        "Para canaleta": "32 x 12 mm",
+        "Color": "Blanco",
+        "Material": "PVC alta resistencia",
+        "Empaque": "10 pzas",
+        "Compatibilidad": "Sistema de canaleta 32 x 12 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.homedepot.com.mx/p/dexson-derivacion-en-t-para-canaleta-32-x-12-mm-blanca-dxn11074hd-131013",
+      "officialName": "DXN11074",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11073",
+      "reference": "DXN11073",
+      "name": "ÁNGULO PLANO PARA CANALETA 32 X 12 MM, COLOR BLANCO",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Permite el cambio de dirección del sistema de canalización.\n• Brinda un acabado estético y profesional al tendido de cables.\n• Fabricado en ABS + PC de alta durabilidad.\n• Material resistente a la flama y autoextinguible.\n• Compatible con canaletas Dexson de 32 x 12 mm.\n• Diseñado para unir y redirigir canaletas evitando cortes innecesarios.\n• Cumple con IEC 61084-2-1 y HB UL 94.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11073.webp",
+          "alt": "Ángulo plano para canaleta 32 x 12 mm, color blanco Dexson DXN11073",
+          "width": 480,
+          "height": 281,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11073",
+        "Modelo": "DXN11073",
+        "Tipo de accesorio": "Ángulo plano",
+        "Color": "Blanco",
+        "Dimensiones de canaleta compatibles": "32 x 12 mm",
+        "Material": "ABS + PC",
+        "Propiedad del material": "Resistente a las flamas / autoextinguible",
+        "Normas": "IEC 61084-2-1 y HB UL 94",
+        "Compatibilidad": "Canaletas DXN10101, DXN10111, DXN10121 y DXN10131",
+        "Función": "Unir y redirigir canaletas",
+        "Acabado": "Estético, limpio y profesional"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/mx/es/product/DXN11073/accesorio-con-%C3%A1ngulo-plano-dexson-de-32-mm-x-12-mm-en-color-blanco/",
+      "officialName": "DXN11073",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11045",
+      "reference": "DXN11045",
+      "name": "TAPA FINAL PARA CANALETA DE 20 X 12 MM, BLANCO",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Accesorio diseñado para cerrar el extremo de la canaleta.\n• Compatible con canaletas Dexson de 20 x 12 mm.\n• Ayuda a mantener la continuidad y protección del sistema de canalización.\n• Instalación a presión para agilizar el montaje.\n• Acabado blanco para integrarse con la instalación.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11045.webp",
+          "alt": "Tapa final para canaleta de 20 x 12 mm, blanco Dexson DXN11045",
+          "width": 480,
+          "height": 396,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11045",
+        "Tipo de producto o componente": "Extremo de parada",
+        "Modelo": "DXN11045",
+        "Compatibilidad": "Canaletas Dexson de 20 x 12 mm",
+        "Color": "Blanco",
+        "Material": "ABS-PC o ABS",
+        "Instalación": "A presión",
+        "Función": "Cerrar el extremo de la canaleta",
+        "Huella de carbono": "0 kg CO2 eq."
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/co/es/product/DXN11045/tapa-final-dexson-para-canaleta-de-20-x-12-mm-blanco/",
+      "officialName": "DXN11045",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11042",
+      "reference": "DXN11042",
+      "name": "ÁNGULO INTERNO PARA CANALETA 20 X 12 MM, BLANCO, PAQUETE DE 25 UNDS",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Accesorio para canalización superficial Dexson.\n• Permite resolver cambios de dirección en esquinas interiores.\n• Compatible con canaleta de 20 x 12 mm.\n• Color blanco.\n• Presentación de empaque con 25 piezas.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11042.webp",
+          "alt": "Ángulo interno para canaleta 20 x 12 mm, blanco, paquete de 25 unds Dexson DXN11042",
+          "width": 480,
+          "height": 440,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11042",
+        "Marca": "Dexson",
+        "Referencia / SKU": "DXN11042",
+        "Descripción": "Ángulo interno 20x12",
+        "Tipo": "Accesorio",
+        "Compatibilidad": "Canaleta 20 x 12 mm",
+        "Color": "Blanco",
+        "Empaque": "25 piezas",
+        "Material": "PVC de alta resistencia"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/mx/es/product/DXN11042/accesorio-con-%C3%A1ngulo-interno-dexson-de-20-mm-x-12-mm-en-color-blanco/",
+      "officialName": "DXN11042",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn11041",
+      "reference": "DXN11041",
+      "name": "ÁNGULO EXTERNO PARA CANALETA 20 X 12 MM BLANCO",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": "• Doblado de 90° para cambio de dirección.\n• Facilita la instalación de la canalización.\n• Proporciona un acabado estético al sistema de cables.\n• Fabricado en material duradero ABS + PC.\n• Propagación sin llama y autoextinguible.\n• Recomendado para uso interior.",
+      "images": [
+        {
+          "url": "images/dexson-dxn11041.webp",
+          "alt": "Ángulo externo para canaleta 20 x 12 mm blanco Dexson DXN11041",
+          "width": 480,
+          "height": 412,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN11041",
+        "Referencia": "DXN11041",
+        "Descripción comercial": "Accesorio Dexson blanco ángulo externo 20 x 12 mm",
+        "Tipo de producto o componente": "Ángulo externo",
+        "Ángulo": "90°",
+        "Color": "Blanco",
+        "Material": "ABS + PC",
+        "Uso": "Interior",
+        "Compatibilidad": "Canaleta Dexson de 20 x 12 mm"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.se.com/cr/es/product/DXN11041/external-corner-dexson-20x12mm-abs%2Bpc-white/",
+      "officialName": "DXN11041",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "dexson-dxn10031",
+      "reference": "DXN10031",
+      "name": "CANALETA 1/2″, COLOR BLANCO, 13 X 7, CON ADHESIVO, ADL004",
+      "categorySlug": "canaletas-e-instalacion",
+      "brandId": "dexson",
+      "brandName": "Dexson",
+      "description": null,
+      "images": [
+        {
+          "url": "images/dexson-dxn10031.webp",
+          "alt": "Canaleta 1/2″, color blanco, 13 x 7, con adhesivo, adl004 Dexson DXN10031",
+          "width": 480,
+          "height": 250,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Código Intrade": "DXN10031"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": null,
+      "officialName": null,
+      "source": {
+        "page": null
+      }
+    }
+  ]
+}
