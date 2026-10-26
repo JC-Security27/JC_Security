@@ -24,8 +24,8 @@ export const EMPTY_FILTERS: CatalogFilters = {
   onlyNew: false,
 };
 
-/** Cuántas marcas mostrar antes del botón "Ver más". */
-const BRANDS_COLLAPSED = 8;
+/** A partir de cuántas marcas mostramos el mini-buscador de marcas. */
+const BRANDS_SEARCH_THRESHOLD = 8;
 
 export function CatalogControls({
   categories,
@@ -39,7 +39,6 @@ export function CatalogControls({
   onChange: (next: CatalogFilters) => void;
 }) {
   const [brandQuery, setBrandQuery] = useState("");
-  const [brandsExpanded, setBrandsExpanded] = useState(false);
 
   const toggleCategory = (slug: string) => {
     const set = new Set(filters.categorySlugs);
@@ -59,14 +58,12 @@ export function CatalogControls({
     filters.brandIds.length > 0 ||
     filters.onlyNew;
 
-  // Filtro del mini-buscador de marcas.
+  // Filtro del mini-buscador de marcas. Se muestran TODAS las marcas (con
+  // scroll interno en la lista); el mini-buscador solo ayuda a encontrar una.
   const q = brandQuery.trim().toLowerCase();
-  const filteredBrands = q
+  const visibleBrands = q
     ? brands.filter((b) => b.name.toLowerCase().includes(q))
     : brands;
-  const visibleBrands =
-    brandsExpanded || q ? filteredBrands : filteredBrands.slice(0, BRANDS_COLLAPSED);
-  const hiddenBrandCount = filteredBrands.length - visibleBrands.length;
 
   return (
     <div className="filters-panel">
@@ -136,7 +133,7 @@ export function CatalogControls({
       {brands.length > 0 && (
         <div className="filter-group">
           <h3 className="filter-group-title">Marcas</h3>
-          {brands.length > BRANDS_COLLAPSED && (
+          {brands.length > BRANDS_SEARCH_THRESHOLD && (
             <input
               type="search"
               className="filter-brand-search"
@@ -163,25 +160,7 @@ export function CatalogControls({
               );
             })}
           </ul>
-          {!q && hiddenBrandCount > 0 && (
-            <button
-              type="button"
-              className="filter-more-btn"
-              onClick={() => setBrandsExpanded(true)}
-            >
-              Ver {hiddenBrandCount} marcas más
-            </button>
-          )}
-          {!q && brandsExpanded && brands.length > BRANDS_COLLAPSED && (
-            <button
-              type="button"
-              className="filter-more-btn"
-              onClick={() => setBrandsExpanded(false)}
-            >
-              Ver menos
-            </button>
-          )}
-          {q && filteredBrands.length === 0 && (
+          {q && visibleBrands.length === 0 && (
             <p className="muted filter-empty">Sin marcas que coincidan.</p>
           )}
         </div>
