@@ -44,7 +44,6 @@ export const siteConfig = {
     { id: "facebook", label: "Facebook", url: PENDING },
     { id: "instagram", label: "Instagram", url: PENDING },
     { id: "tiktok", label: "TikTok", url: PENDING },
-    { id: "youtube", label: "YouTube", url: PENDING },
   ] as SocialLink[],
 
   /** Datos de contacto. PENDIENTE: los proporciona JC Security. */
