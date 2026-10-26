@@ -276,3 +276,11 @@ Sumé los modelos que Intrade tiene en stock y que no venían en el PDF de Dahua
 
 - Categoría nueva **`alarmas`** (`parent_slug = 'seguridad'`, `position` 109). Las siguientes se corrieron un lugar (`redes` 110, `monitores` 111, `otros-seguridad` 112).
 - 22 productos Dahua ya traen `description` oficial con viñetas (mismo formato que Tolsen).
+
+## [2026-10-26] De: Claude — Marca nueva Altronix (9 productos) y categoría `fuentes-de-poder`
+Estado: PENDIENTE
+
+- Marca **`altronix`** con `logo_url` (PNG oficial, 136×32, fondo transparente).
+- Categoría nueva **`fuentes-de-poder`** ("Fuentes de poder", `parent_slug = 'seguridad'`, `position` 113).
+- 9 productos (fuentes/cargadores, módulo de relé, controlador de acceso con fuente), todos en stock en Intrade, con foto oficial de altronix.com, `description` con viñetas, `specs` y `source_url`.
+- Sigue en curso completar Dahua para que coincida exactamente con los ~302 productos que Intrade tiene en stock.

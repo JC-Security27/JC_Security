@@ -87,7 +87,11 @@ def is_available(product, slugs, slugs_alnum):
         pat = re.compile(rf"(?<![0-9]){re.escape(ref.lower())}(?![0-9])")
         return any(pat.search(s) for s in slugs)
     codes = [ref, (product.get("specs") or {}).get("Código Dahua CR")]
-    return any(len(norm(c)) >= 5 and any(norm(c) in s for s in slugs_alnum) for c in codes if c)
+    if any(len(norm(c)) >= 5 and any(norm(c) in s for s in slugs_alnum) for c in codes if c):
+        return True
+    # Códigos cortos (Altronix SMP7, AL624…): deben aparecer como palabra completa en la dirección.
+    pat = re.compile(rf"(?<![a-z0-9]){re.escape(ref.lower())}(?![a-z0-9])")
+    return any(pat.search(s) for s in slugs)
 
 
 def request(method, url, key, body=None):

@@ -1,0 +1,374 @@
+{
+  "source": "altronix.com + ALTRONIX_Intrade.docx",
+  "brands": [
+    {
+      "id": "altronix",
+      "name": "Altronix",
+      "logoUrl": "https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/brands/altronix.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": "fuentes-de-poder",
+      "slug": "fuentes-de-poder",
+      "name": "Fuentes de poder",
+      "parentSlug": "seguridad",
+      "position": 113
+    }
+  ],
+  "products": [
+    {
+      "id": "altronix-smp7",
+      "reference": "SMP7",
+      "name": "FUENTE DE ALIMENTACIÓN Y CARGADOR DE SALIDA ÚNICA 12/24VDC @ 6A, 24/28VAC",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de CA de bajo voltaje en una salida de 12VDC o 24VDC.\n• Aplicaciones para accesorios de control de acceso, seguridad y CCTV que requieren alimentación adicional.\n• Salida seleccionable de 12VDC o 24VDC.\n• Corriente de suministro de 6A.\n• Salidas filtradas y reguladas electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Cargador incorporado para baterías selladas de plomo-ácido o de gel.\n• Máxima corriente de carga de 0.7A.\n• Cambio a respaldo por batería sin caída de voltaje.\n• Indicadores LED de entrada de CA y salida de CC.",
+      "images": [
+        {
+          "url": "images/altronix-smp7.webp",
+          "alt": "Fuente de alimentación y cargador de salida única 12/24vdc @ 6a, 24/28vac Altronix SMP7",
+          "width": 500,
+          "height": 396,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "28VAC",
+        "Salida": "12VDC o 24VDC seleccionable",
+        "Corriente de suministro": "6A",
+        "Corriente máxima de carga": "0.7A",
+        "Temperatura de operación": "0 °C a 49 °C",
+        "Temperatura de almacenamiento": "- 20 °C a 70 °C",
+        "Humedad relativa": "85% +/- 5%",
+        "BTU/Hr aproximados": "12VDC: 37 BTU/Hr; 24VDC: 75 BTU/Hr",
+        "Requerimiento de VA de entrada CA del sistema": "184VA",
+        "Dimensiones aproximadas": "7.045\" W x 4.266\" L x 2.127\" H (178.95 mm W x 108.36 mm L x 54.05 mm H)",
+        "Peso del producto": "0.5 Lbs. (0.23 kg)",
+        "Peso de envío": "0.65 Lbs. (0.29 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/SMP7",
+      "officialName": "SMP7 Power Supply Charger, Single Output, 12/24VDC @ 6A, 24/28VAC, Board SMP7 power supply/charger converts a low voltage AC input into a 12VDC or 24VDC output",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-smp5",
+      "reference": "SMP5",
+      "name": "FUENTE/CARGADOR DE SALIDA ÚNICA 6/12/24VDC @ 4A, 24/28VAC",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de CA de bajo voltaje en una salida de 6VDC, 12VDC o 24VDC.\n• Aplicaciones en control de acceso, seguridad y accesorios de sistemas CCTV que requieren alimentación adicional.\n• Salida seleccionable de 6VDC, 12VDC o 24VDC.\n• Corriente de suministro de 4A.\n• Salidas filtradas y reguladas electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Cargador integrado para baterías de plomo-ácido selladas o de tipo gel.\n• Corriente máxima de carga de 0.3A.\n• Cambio a respaldo de batería sin caída de voltaje.\n• Incluye indicadores LED de entrada de CA y salida de CC.",
+      "images": [
+        {
+          "url": "images/altronix-smp5.webp",
+          "alt": "Fuente/cargador de salida única 6/12/24vdc @ 4a, 24/28vac Altronix SMP5",
+          "width": 800,
+          "height": 706,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Salida": "6VDC, 12VDC o 24VDC seleccionable",
+        "Corriente de salida": "4A",
+        "Regulación": "Salidas filtradas y reguladas electrónicamente",
+        "Protecciones": "Protección contra cortocircuito y sobrecarga térmica",
+        "Carga de batería": "Cargador integrado para baterías de plomo-ácido selladas o de tipo gel",
+        "Corriente máxima de carga": "0.3A",
+        "Cambio a batería": "Sin caída de voltaje",
+        "Indicadores visuales": "LED de entrada de CA y salida de CC",
+        "Temperatura de operación": "0 °C a 49 °C (32 °F a 120 °F)",
+        "Temperatura de almacenamiento": "- 20 °C a 70 °C ( - 4 °F a 158 °F)",
+        "Humedad relativa": "85% +/- 5%",
+        "Dimensiones aproximadas": "3\"W x 3.5\"L x 2\"H (76.2 mm W x 88.9 mm L x 50.8 mm H)",
+        "Peso del producto": "0.35 Lbs. (0.158 kg)",
+        "Peso de envío": "0.45 Lbs. (0.204 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/SMP5",
+      "officialName": "SMP5 Power Supply Charger, Single Output, 6/12/24VDC @ 4A, 24/28VAC, Board SMP5 power supply/charger converts a low voltage AC input into a 6VDC, 12VDC or 24VDC output",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-smp10",
+      "reference": "SMP10",
+      "name": "FUENTE DE ALIMENTACIÓN Y CARGADOR DE SALIDA SIMPLE 12/24VDC @ 10A, 24VAC",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de CA de bajo voltaje en 12VDC o 24VDC con 10A de corriente continua de suministro.\n• Fuente de alimentación de propósito general para aplicaciones de control de acceso, seguridad y accesorios de sistemas CCTV que requieren alimentación adicional.\n• Salida seleccionable de 12VDC o 24VDC.\n• Salidas filtradas y reguladas electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Cargador integrado para baterías selladas de plomo-ácido o de gel.\n• Corriente máxima de carga de 0.7A.\n• Cero caída de voltaje al cambiar a respaldo por batería.\n• Indicadores LED de entrada de CA y salida de CC.\n• La batería se vende por separado.",
+      "images": [
+        {
+          "url": "images/altronix-smp10.webp",
+          "alt": "Fuente de alimentación y cargador de salida simple 12/24vdc @ 10a, 24vac Altronix SMP10",
+          "width": 500,
+          "height": 394,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "24/28VAC",
+        "Salida": "12VDC o 24VDC seleccionable",
+        "Corriente de suministro": "10A",
+        "Tipo de salida": "Salidas filtradas y reguladas electrónicamente",
+        "Protección": "Protección contra cortocircuito y sobrecarga térmica",
+        "Carga de batería": "Cargador integrado para baterías selladas de plomo-ácido o de gel",
+        "Corriente máxima de carga": "0.7A",
+        "Cambio a respaldo de batería": "Cero caída de voltaje",
+        "Indicadores visuales": "Indicadores LED de entrada de CA y salida de CC",
+        "Temperatura de operación": "0° C a 49° C (32° F a 120° F)",
+        "Temperatura de almacenamiento": "- 20° C a 70° C (-4° F a 158° F)",
+        "Dimensiones": "7\"W x 4.25\"L x 1.25\"H (177.8 mm W x 107.9 mm L x 31.75 mm H)",
+        "Peso del producto": "1.3 Lbs. (0.59 kg)",
+        "Peso de envío": "1.5 Lbs. (0.68 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/SMP10",
+      "officialName": "SMP10 Power Supply Charger, Single Output, 12/24VDC @ 10A, 24VAC, Board SMP10 power supply/charger converts low voltage AC input into 12VDC or 24VDC @ 10A of continuous supply current (refer to specif",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-rb610",
+      "reference": "RB610",
+      "name": "MÓDULO DE RELÉ DE ROTURA, 6 CANALES, 12/24VDC, SPDT 10A",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Cada conjunto contiene seis (6) módulos de relé que pueden separarse fácilmente si se desea.\n• Operación seleccionable a 12VDC o 24VDC.\n• Contacto SPDT con capacidad de 10A a 120VAC o 28VDC.\n• Indicador LED de activación de relé.\n• Rango de temperatura de operación de -25ºC a 55ºC.\n• Rango de temperatura de almacenamiento de -25ºC a 70ºC.\n• Humedad relativa de 85% +/- 5%.",
+      "images": [
+        {
+          "url": "images/altronix-rb610.webp",
+          "alt": "Módulo de relé de rotura, 6 canales, 12/24vdc, spdt 10a Altronix RB610",
+          "width": 800,
+          "height": 533,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Voltaje de entrada": "12VDC o 24VDC seleccionable",
+        "Consumo de corriente": "50mA",
+        "Capacidad de contacto": "10A/120VAC o 28VDC",
+        "Tipo de contacto": "SPDT",
+        "Indicador": "LED de activación: el relé está activado",
+        "Temperatura de operación": "-25ºC a 55ºC ( -13ºF a 131ºF)",
+        "Temperatura de almacenamiento": "-25ºC a 70ºC ( -13ºF a 158ºF)",
+        "Humedad relativa": "85% +/- 5%",
+        "Dimensiones aproximadas": "1.6\" W x 2\" L x 0.75\" H (40.6 mm W x 50.8 mm L x 19.1 mm H)",
+        "Peso del producto": "0.6 Lbs. (0.27 kg)",
+        "Peso de envío": "0.7 Lbs. (0.32 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/RB610",
+      "officialName": "RB610 Relay Module, Breakaway, 6 - 12/24VDC, SPDT @ 10A - 120VAC/28VDC Each cluster contains six (6) relay modules that can easily be separated if desired",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-fireswitch108",
+      "reference": "FIRESWITCH108",
+      "name": "FUENTE DE ALIMENTACIÓN NAC 24VDC 10A, 4 CLASE A / 8 CLASE B",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Extensor de potencia NAC administrado y rentable para paneles de control de alarma contra incendios de 12 o 24VDC.\n• Proporciona expansión de circuitos de notificación para bocinas y estrobos adicionales para ayudar al cumplimiento ADA.\n• Entrega alimentación NAC de 24VDC regulada y filtrada electrónicamente para circuitos de lazo Clase B o Clase A.\n• La corriente de alarma puede dividirse entre las ocho salidas para alimentar dispositivos NAC.\n• Cada salida tiene una capacidad máxima de 2.5A y puede programarse de forma independiente para Steady, Temporal Code 3 o sincronización de estrobos.\n• Todas las salidas pueden programarse en modo Follower de entrada a salida.\n• Ofrece supervisión independiente de lazo para circuitos NAC Clase A y/o Clase B en condición normal.\n• Incluye dos salidas de señalización FACP configurables para controlar la supervisión y el suministro de energía a cualquier combinación de las ocho salidas.\n• Dispone de interfaz LCD programable y puerto Ethernet para programación y monitoreo remotos.\n• Incluye protección térmica y contra cortocircuito con auto-rearme.",
+      "images": [
+        {
+          "url": "images/altronix-fireswitch108.webp",
+          "alt": "Fuente de alimentación nac 24vdc 10a, 4 clase a / 8 clase b Altronix FIRESWITCH108",
+          "width": 500,
+          "height": 640,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada de alimentación": "120VAC, 60Hz, 4.8A",
+        "Entradas FACP": "Dos (2) entradas FACP Clase A o dos (2) Clase B",
+        "Rango de entradas INP1 e INP2": "8-30VDC 6.5mA máx. desde FACP",
+        "Voltaje de salida": "24VDC regulado y limitado por potencia para NAC",
+        "Corriente total de salida": "10A máx. de corriente total de alarma",
+        "Corriente en espera": "7A máx. en espera sin batería de respaldo",
+        "Salida auxiliar": "1A (regulada, con respaldo de batería)",
+        "Salidas NAC programables": "Ocho (8) Clase B o cuatro (4) Clase A, o cualquier combinación de circuitos Clase A y Clase B",
+        "Temperatura de operación": "0ºC a 49ºC (32ºF a 120ºF)",
+        "Dimensiones": "12.23\"W x 15.5\"H x 4.5\"D (310.6 mm W x 393.7 mm H x 114.3 mm D)",
+        "Peso del producto": "12.4 Lbs. (5.62 kg)",
+        "Peso de envío": "13.7 Lbs. (6.21 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/FIRESWITCH108",
+      "officialName": "FireSwitch108 NAC Power Supply, 4 Class A, 8 Class B, 24VDC @ 10A, LCD and Network Connection for Programming and Status Monitoring, 115VAC, Red BC400 Enclosure The Altronix FireSwitch108 is a cost-ef",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-al624",
+      "reference": "AL624",
+      "name": "FUENTE DE ALIMENTACIÓN LINEAL CON CARGADOR, SALIDA ÚNICA, 6/12/24VDC @ 1.2A",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de CA de bajo voltaje en salida de 6VDC, 12VDC o 24VDC.\n• Fuente de alimentación de propósito general para aplicaciones de control de acceso, seguridad y accesorios de sistemas CCTV que requieren energía adicional.\n• Salida seleccionable mediante interruptor.\n• Salida filtrada y regulada electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Cargador incorporado para baterías selladas de plomo-ácido o tipo gel.\n• Cambio automático a batería de reserva cuando falla la CA.\n• Indicadores LED de entrada de CA y salida de CC.\n• Protección de batería PTC.\n• Las baterías se venden por separado.",
+      "images": [
+        {
+          "url": "images/altronix-al624.webp",
+          "alt": "Fuente de alimentación lineal con cargador, salida única, 6/12/24vdc @ 1.2a Altronix AL624",
+          "width": 687,
+          "height": 800,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "16VAC a 24VAC, 20VA a 40VA",
+        "Salida": "Filtrada y regulada electrónicamente",
+        "Corriente de salida": "6VDC o 12VDC @ 1.2A o 24VDC @ 0.75A",
+        "Protección": "Protección contra cortocircuito y sobrecarga térmica",
+        "Cargador de batería": "Cargador incorporado para baterías selladas de plomo-ácido o tipo gel",
+        "Corriente máxima de carga": "0.3A",
+        "Indicadores visuales": "Indicadores LED de entrada de CA y salida de CC",
+        "Temperatura de operación": "0 °C a 49 °C (32 °F a 120 °F)",
+        "Temperatura de almacenamiento": "- 20 °C a 70 °C ( - 4 °F a 158 °F)",
+        "Dimensiones": "2.5\"W x 3\"L x 1.5\"H (63.5 mm W x 76.2 mm L x 38.1 mm H)",
+        "Peso del producto": "0.1 Lbs. (0.05 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/AL624",
+      "officialName": "AL624 Linear Power Supply Charger, Single Output, 6/12/24VDC @ 1",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-al600ulx",
+      "reference": "AL600ULX",
+      "name": "FUENTE/CARGADOR DE SALIDA ÚNICA 12/24VDC 6A 115VAC",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de 115VAC/60Hz en una salida única de 12VDC o 24VDC no limitada por potencia.\n• Salida seleccionable de 12VDC o 24VDC.\n• Corriente continua de suministro de 6A.\n• Salida filtrada y regulada electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Cargador integrado para baterías selladas de plomo-ácido o tipo gel.\n• Conmutación automática a batería de reserva cuando falla la CA.\n• Corriente máxima de carga de 0.7A.\n• Supervisión de falla de CA, batería baja y presencia de batería mediante contactos form C.\n• Indicadores LED de entrada de CA y salida de CC.",
+      "images": [
+        {
+          "url": "images/altronix-al600ulx.webp",
+          "alt": "Fuente/cargador de salida única 12/24vdc 6a 115vac Altronix AL600ULX",
+          "width": 800,
+          "height": 635,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "115VAC, 60Hz, 3.5A",
+        "Salida": "12VDC o 24VDC seleccionable",
+        "Corriente de suministro": "6A continuos",
+        "Corriente máxima de carga": "0.7A",
+        "Supervisión de falla de CA": "Contactos form C",
+        "Supervisión de batería baja": "Contactos form C",
+        "Supervisión de presencia de batería": "Contactos form C",
+        "Indicadores visuales": "Indicadores LED de entrada de CA y salida de CC",
+        "Temperatura de operación": "0 °C a 49 °C (32 °F a 120 °F)",
+        "Temperatura de almacenamiento": "-20 °C a 70 °C (-4 °F a 158 °F)",
+        "Dimensiones": "12.5\"W x 13\"H x 3.25\"D (317.5 mm W x 330.2 mm H x 82.6 mm D)",
+        "Peso del producto": "7.05 Lbs. (3.2 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/AL600ULX",
+      "officialName": "AL600ULX Power Supply Charger, Single Output, 12/24VDC @ 6A, 115VAC, BC300 Enclosure AL600ULX is a power supply/charger which converts a 115VAC/60Hz input into a single 12VDC or 24VDC non power-limite",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-al400ulacm",
+      "reference": "AL400ULACM",
+      "name": "CONTROLADOR DE ACCESO CON FUENTE/CARGADOR, 8 SALIDAS DE RELÉ FUSIBLES CLASE 2, 12/24VCC @ 4A, FAI, 115VCA",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de 115VAC 60Hz en ocho (8) salidas controladas de forma independiente de 12VDC o 24VDC, a prueba de falla y/o a prueba de seguridad.\n• Proporciona una corriente total de suministro de 4A a 12VDC o 3A a 24VDC.\n• Las salidas se activan mediante una salida de colector abierto o una entrada seca normalmente abierta (NO) desde un sistema de control de acceso, lector de tarjetas, teclado, pulsador, PIR, etc.\n• Puede alimentar dispositivos de control de acceso como cerraduras magnéticas, chapas eléctricas y retenedores magnéticos.\n• Las salidas operan en modos Fail-Safe y/o Fail-Secure.\n• Diseñado para funcionar con una fuente de alimentación común o con dos fuentes de alimentación totalmente independientes.\n• La interfaz FACP permite evacuación de emergencia, supervisión de alarma o disparo de otros dispositivos auxiliares.\n• La desconexión por alarma de incendio puede seleccionarse individualmente para cualquiera o todas las ocho (8) salidas.\n• Incluye protección contra cortocircuito y sobrecarga térmica.\n• Cuenta con cargador integrado para baterías de plomo-ácido selladas o de gel y con conmutación automática a batería de respaldo al fallar la CA.",
+      "images": [
+        {
+          "url": "images/altronix-al400ulacm.webp",
+          "alt": "Controlador de acceso con fuente/cargador, 8 salidas de relé fusibles clase 2, 12/24vcc @ 4a, fai, 115vca Altronix AL400ULACM",
+          "width": 800,
+          "height": 735,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "115VAC 60Hz con clasificación de 3.5A",
+        "Salidas": "Ocho (8) salidas controladas de forma independiente",
+        "Voltaje de salida": "12VDC o 24VDC",
+        "Corriente de salida": "12VDC @ 4A o 24VDC @ 3A",
+        "Tipo de salidas": "Salidas limitadas de potencia con clasificación Clase 2",
+        "Opciones de salida": "Ocho (8) salidas de alimentación Fail-Safe y/o Fail-Secure",
+        "Relés de salida": "Ocho (8) salidas de relé form \"C\" clasificadas a 5A",
+        "Salidas auxiliares": "Ocho (8) salidas auxiliares de alimentación (sin conmutación)",
+        "Supervisión de CA": "Contactos form \"C\"",
+        "Temperatura de operación": "0ºC a 49ºC (32ºF a 120ºF)",
+        "Dimensiones": "12.23\"W x 15.5\"H x 4.5\"D (310.6 mm W x 393.7 mm H x 114.3 mm D)",
+        "Peso del producto": "10.7 Lbs. (4.85 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/AL400ULACM",
+      "officialName": "AL400ULACM Access Power Controller w/ Power Supply/Charger, 8 Fused Class 2 Relay Outputs, 12/24VDC @ 4A, FAI, 115VAC, BC400 Enclosure Altronix AL400ULACM converts a 115VAC 60Hz input into eight (8) i",
+      "source": {
+        "page": null
+      }
+    },
+    {
+      "id": "altronix-al175ulx",
+      "reference": "AL175ULX",
+      "name": "FUENTE DE ALIMENTACIÓN/CARGADOR PARA CONTROL DE ACCESO DE 2 SALIDAS 12/24VDC 1.75A",
+      "categorySlug": "fuentes-de-poder",
+      "brandId": "altronix",
+      "brandName": "Altronix",
+      "description": "• Convierte una entrada de 115VAC 60Hz en dos salidas de 12VDC o 24VDC seleccionables, protegidas individualmente por PTC.\n• Salidas de potencia limitadas para dos circuitos Clase 2.\n• Salida de cerradura Fail-Safe/Fail-Secure conmutada.\n• Salida de alimentación auxiliar sin conmutar.\n• Protección PTC en las salidas, con capacidad nominal de 2.5A.\n• Salida filtrada y regulada electrónicamente.\n• Protección contra cortocircuito y sobrecarga térmica.\n• Conmutación automática a batería de reserva cuando falla la corriente alterna.\n• Supervisión de falla de AC mediante contactos form C.\n• Indicadores LED de entrada AC y salida DC.",
+      "images": [
+        {
+          "url": "images/altronix-al175ulx.webp",
+          "alt": "Fuente de alimentación/cargador para control de acceso de 2 salidas 12/24vdc 1.75a Altronix AL175ULX",
+          "width": 500,
+          "height": 380,
+          "needsReview": false
+        }
+      ],
+      "specs": {
+        "Entrada": "115VAC, 60Hz, 0.6A",
+        "Salida": "12VDC o 24VDC seleccionable",
+        "Corriente de suministro": "1.75A",
+        "Salidas": "Dos salidas de potencia limitadas con clasificación Clase 2",
+        "Protección de salidas": "PTC, 2.5A",
+        "Corriente máxima de carga": "400mA",
+        "Supervisión": "Falla de AC con contactos form C",
+        "Desconexión por alarma de incendio": "Supervisada, con enclavamiento con reset o sin enclavamiento",
+        "Temperatura de operación": "0ºC a 49ºC (32ºF a 120ºF)",
+        "Dimensiones": "12.5\"W x 13\"H x 3.25\"D (317.5 mm W x 330.2 mm H x 82.6 mm D)",
+        "Peso del producto": "8.4 Lbs. (3.81 kg)",
+        "Peso de envío": "9.4 Lbs. (4.263 kg)"
+      },
+      "isNew": false,
+      "discontinued": false,
+      "sourceUrl": "https://www.altronix.com/products/AL175ULX",
+      "officialName": "AL175ULX Access Control Power Supply Charger, 2 PTC Class 2 Outputs, 12/24VDC @ 1",
+      "source": {
+        "page": null
+      }
+    }
+  ]
+}
