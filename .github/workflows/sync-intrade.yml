@@ -1,0 +1,31 @@
+# Revisión automática del stock de Intrade (opción B: lunes y jueves).
+# Publica solo los productos que Intrade tiene en stock y oculta el resto
+# (products.available en Supabase). Ver backend/catalog/sync_intrade.py.
+name: Stock Intrade
+
+on:
+  schedule:
+    - cron: "0 12 * * 1,4"  # lunes y jueves 12:00 UTC = 6:00 a. m. en Costa Rica
+  workflow_dispatch: {}     # también se puede correr a mano desde la pestaña Actions
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sincronizar disponibilidad con Intrade
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python -I backend/catalog/sync_intrade.py
+      - name: Guardar el informe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: intrade-report
+          path: backend/catalog/intrade_report.md
+          if-no-files-found: ignore

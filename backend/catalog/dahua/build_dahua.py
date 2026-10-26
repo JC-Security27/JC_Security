@@ -85,6 +85,30 @@ WEB_SCHEMA = {"type": "object", "properties": {
     "required": ["name_es", "features_es", "specs"], "additionalProperties": False}
 
 
+SEARCH_PROMPT = """Preparas fichas en español para un distribuidor autorizado de Dahua en Costa Rica.
+Recibes el modelo y el nombre OFICIAL de Dahua (en inglés), tal como aparece en su web.
+Devuelve:
+- name_es: nombre comercial en español, en MAYÚSCULAS, que traduzca fielmente el nombre oficial (tipo de producto, canales, resolución, lente…), sin el modelo ni la palabra DAHUA. No agregues nada que no diga el nombre.
+- specs: solo los datos que el nombre oficial dice explícitamente (Canales, Resolución, Discos, Lente, Puertos, PoE, Tamaño…), nombre en español y valor tal cual. Puede ser una lista vacía."""
+
+SEARCH_SCHEMA = {"type": "object", "properties": {
+    "name_es": {"type": "string"},
+    "specs": {"type": "array", "items": {"type": "object", "properties": {
+        "name": {"type": "string"}, "value": {"type": "string"}}, "required": ["name", "value"], "additionalProperties": False}}},
+    "required": ["name_es", "specs"], "additionalProperties": False}
+
+
+def search_hits():
+    """Resultados exactos del buscador oficial (search_dahua.py) para los modelos de Intrade."""
+    hits = {}
+    for f in sorted(CACHE.glob("search-*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        exact = sorted(data["exact"], key=lambda r: r["discontinued"])  # primero los vigentes
+        if exact:
+            hits[key(data["query"])] = exact[0]
+    return hits
+
+
 def key(code):
     k = re.sub(r"[^a-z0-9]", "", (code or "").lower())
     return re.sub(r"^dhi?(?=(ipc|hac|xvr|nvr|pfs|vto|vth|asi|sd|pfm|pfb|pfa|hd|itc|its|nkb|asc|lm|tfc|hdd))", "", k)
@@ -334,6 +358,31 @@ def main():
             "source": {"page": None},
         })
         print(f"oficial: {data['model']} -> {web['name_es']} [{category_from_url(url)}]")
+    # Modelos de Intrade encontrados en el buscador oficial (search_dahua.py).
+    present = {key(p["reference"]) for p in products}
+    for k, hit in search_hits().items():
+        if k in present:
+            continue
+        name_en = hit["text"].replace("Ver más", "").replace(hit["model"], "", 1).strip()
+        res = ask(SEARCH_PROMPT, SEARCH_SCHEMA, {"model": hit["model"], "name": name_en}, api_key)
+        fname = f"dahua-{k}.webp"
+        size = first_image([hit["image"].replace("_crop_thumb.png", "_crop.png"), hit["image"]], OUT / "images" / fname)
+        if not size:
+            report["sin_foto"].append(f"{hit['model']}: no se pudo descargar la foto oficial (no se carga)")
+            continue
+        w, h = size
+        name = clean_name(res["name_es"])
+        products.append({
+            "id": f"dahua-{k}", "reference": hit["model"], "name": name, "categorySlug": category_from_url(hit["url"]),
+            "brandId": BRAND["id"], "brandName": BRAND["name"], "description": None,
+            "images": [{"url": f"images/{fname}", "alt": f"{name.capitalize()} Dahua {hit['model']}",
+                        "width": w, "height": h, "needsReview": False, "officialImage": True}],
+            "specs": {x["name"]: x["value"] for x in res["specs"] if x["value"]}, "isNew": False, "discontinued": False,
+            "sourceUrl": hit["url"], "officialName": f"{hit['model']} {name_en}", "verifiedIntrade": True,
+            "source": {"page": None},
+        })
+        present.add(k)
+        print(f"buscador: {hit['model']} -> {name} [{category_from_url(hit['url'])}]")
     used = {p["categorySlug"] for p in products}
     brands = [BRAND] + [b for _, b in OTHER_BRANDS if any(p["brandId"] == b["id"] for p in products)]
     catalog = {"source": "Catalogo_Dahua_v2-9.pdf + dahuasecurity.com", "brands": brands,

@@ -33,6 +33,9 @@ UA = "Mozilla/5.0 (JC Security availability check)"
 
 
 def env():
+    # En GitHub Actions las claves llegan como secretos (variables de entorno).
+    if os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_SERVICE_ROLE_KEY"):
+        return os.environ["SUPABASE_URL"].rstrip("/"), os.environ["SUPABASE_SERVICE_ROLE_KEY"]
     vals = {}
     for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
         k, sep, v = line.partition("=")
@@ -67,6 +70,9 @@ def intrade_slugs():
     if len(in_stock) < 200:  # no se pudo leer bien: mejor no ocultar todo el catálogo
         sys.exit(f"Catálogo de Intrade incompleto ({len(in_stock)} productos); no se cambia nada.")
     print(f"Intrade: {len(in_stock)} en stock, {out_of_stock} agotados")
+    # Copia de la lista (solo direcciones) para los scripts de cada marca.
+    (HERE / "intrade_snapshot.json").write_text(json.dumps(
+        {"fecha": datetime.now(timezone.utc).isoformat(), "en_stock": in_stock}, indent=0), encoding="utf-8")
     return in_stock
 
 
