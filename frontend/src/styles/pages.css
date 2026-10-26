@@ -268,29 +268,30 @@
 }
 .product-card-media {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block; /* el img se posiciona absoluto dentro */
   aspect-ratio: 4 / 3;
   background: #ffffff;
   overflow: hidden;
-  padding: var(--space-3);
 }
 /* La imagen se muestra COMPLETA (contain) y centrada, sin importar las
-   dimensiones reales del archivo (los atributos width/height del <img> no
-   deben deformarla ni recortarla). Esto vale para fotos muy altas o anchas. */
+   dimensiones reales del archivo. Usamos posición absoluta llenando el
+   contenedor en vez de max-height:100% dentro de flex, porque Safari de iOS
+   no siempre limita bien la altura de un <img> flex-hijo y la foto se
+   "sale" o se ve recortada. Así se comporta igual en todos los navegadores. */
 .product-card-media img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: contain;
+  padding: var(--space-3);
   display: block;
 }
 .product-card-noimg {
+  position: absolute;
+  inset: 0;
   display: grid;
   place-items: center;
-  height: 100%;
   color: var(--text-muted);
   font-size: 0.85rem;
 }
@@ -773,21 +774,19 @@
 .product-detail-media {
   position: relative;
   aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #ffffff;
-  padding: var(--space-5);
   overflow: hidden;
 }
-/* La imagen siempre cabe completa y conserva su proporción, sin importar los
-   atributos width/height del archivo (fotos de distintos tamaños). */
+/* La imagen siempre cabe completa y conserva su proporción. Posición absoluta
+   llenando el contenedor (en vez de max-height dentro de flex) para que Safari
+   de iOS no la recorte ni la deje salirse. */
 .product-detail-media img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: contain;
+  padding: var(--space-5);
   display: block;
 }
 .product-detail-info h1 {
