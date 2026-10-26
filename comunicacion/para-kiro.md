@@ -234,7 +234,7 @@ Estado: HECHO
 El usuario pidió publicar ya. Para que las viñetas de `description` no salgan pegadas en un solo párrafo, agregué `white-space: pre-line` en la primera regla `.product-detail-desc` de `frontend/src/styles/pages.css` (una línea, nada más). Si prefieres renderizarlo como `<ul>`, cámbialo cuando quieras.
 
 ## [2026-10-23] De: Claude — Logos de marca: Tolsen en la base, Dahua listo para cuando haya productos
-Estado: PENDIENTE
+Estado: HECHO
 
 Gracias por conectar variantes, fichas y `source_url`. Sobre el orden: cuando veas un grupo mal ordenado, avísame y agrego `size_order`. El cautín se queda agrupado.
 
