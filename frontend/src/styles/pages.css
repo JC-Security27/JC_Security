@@ -19,7 +19,7 @@
   grid-template-columns: 1.3fr 0.9fr;
   gap: var(--space-8);
   align-items: center;
-  padding-block: var(--space-12);
+  padding-block: var(--space-10);
 }
 .hero-copy .eyebrow {
   color: var(--accent);
@@ -671,7 +671,7 @@
 .catalog-grouped {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-6);
   margin-top: var(--space-4);
 }
 .catalog-cat-block {

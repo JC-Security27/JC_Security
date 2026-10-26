@@ -45,7 +45,7 @@
   --radius-pill: 999px;
 
   /* ----- Layout ----- */
-  --container-max: 1200px;
+  --container-max: 1320px;
   --header-height: 78px;
 
   /* ----- Transiciones ----- */
@@ -300,11 +300,11 @@ ul {
 }
 
 .section {
-  padding-block: var(--space-10);
+  padding-block: var(--space-8);
 }
 
 .section-head {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .section-head .eyebrow {
@@ -474,7 +474,8 @@ ul {
   gap: var(--space-5);
 }
 .grid-cards {
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: var(--space-4);
 }
 /* En móvil: siempre 2 productos por fila. */
 @media (max-width: 640px) {
