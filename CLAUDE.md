@@ -5,6 +5,8 @@ Contrato de datos: `comunicacion/adjuntos/API_CONTRACT.md`.
 
 ## Backend
 
+**Regla del negocio (2026-10-26): solo se publica lo que Intrade (proveedor) tiene en stock**, para todas las marcas. Después de cargar productos, correr `python -I backend/catalog/sync_intrade.py` (marca `products.available`; RLS oculta lo no disponible). Lee el listado vivo de intradeabc.com: solo enlaces y estado de stock, nunca fotos ni textos.
+
 - Esquema, RLS y bucket: `backend/supabase/migrations/0001_catalogo.sql`.
 - Catálogo PDF → datos: `python -I backend/catalog/extract_catalog.py "<pdf>" backend/catalog/output` (pymupdf, pillow).
 - Carga a Supabase: `python -I backend/catalog/load_catalog.py backend/catalog/output`. Lee `backend/.env.supabase`, que no se versiona.
