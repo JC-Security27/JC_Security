@@ -116,13 +116,19 @@ async function supabase(path: string, init?: RequestInit) {
   return res.json();
 }
 
-type ProductRow = { reference: string; name: string; category_slug: string; specs: Record<string, string> | null };
+type ProductRow = {
+  reference: string;
+  name: string;
+  category_slug: string;
+  specs: Record<string, string> | null;
+  brands: { name: string } | null;
+};
 
 async function loadContext(messages: ChatMessage[]): Promise<string> {
   // Las dos últimas preguntas, para seguir el hilo ("¿y de 8 pulgadas?").
   const query = messages.filter((m) => m.role === "user").slice(-2).map((m) => m.content).join(" ");
   const [products, categories, faq] = await Promise.all([
-    supabase("rpc/search_products?select=reference,name,category_slug,specs", {
+    supabase("rpc/search_products?select=reference,name,category_slug,specs,brands(name)", {
       method: "POST",
       body: JSON.stringify({ q: query, match_all: false, max_results: MAX_PRODUCTS }),
     }) as Promise<ProductRow[]>,
@@ -135,7 +141,7 @@ async function loadContext(messages: ChatMessage[]): Promise<string> {
   const catalog = products.length
     ? products.map((p) => {
       const specs = Object.entries(p.specs ?? {}).map(([k, v]) => `${k}: ${v}`).join("; ");
-      return `- ref. ${p.reference} | ${p.name} | marca Tolsen | categoría ${p.category_slug}${specs ? ` | ${specs}` : ""}`;
+      return `- ref. ${p.reference} | ${p.name} | marca ${p.brands?.name ?? "sin marca"} | categoría ${p.category_slug}${specs ? ` | ${specs}` : ""}`;
     }).join("\n")
     : "(ningún producto coincide con la pregunta)";
 

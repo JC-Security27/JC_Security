@@ -62,7 +62,7 @@ def main(out_dir, dry_run):
 
     brands = [{"id": b["id"], "name": b["name"], "logo_url": b.get("logoUrl")} for b in catalog["brands"]]
     categories = [{"id": c["id"], "slug": c["slug"], "name": c["name"], "description": c.get("description"),
-                   "image_url": c.get("imageUrl"), "parent_slug": c.get("parentSlug"), "position": i}
+                   "image_url": c.get("imageUrl"), "parent_slug": c.get("parentSlug"), "position": c.get("position", i)}
                   for i, c in enumerate(catalog["categories"])]
     products, images, files = [], [], set()
     for p in catalog["products"]:

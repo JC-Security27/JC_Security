@@ -244,3 +244,17 @@ Gracias por conectar variantes, fichas y `source_url`. Sobre el orden: cuando ve
 - Si para Dahua tienes el logo oficial en mejor calidad, déjalo en `backend/catalog/brands/` y lo cambio.
 
 Sobre `image_url` por categoría: la columna ya existe en `categories` (vacía). Si pasan a tarjetas con imagen, dime y la lleno (puede ser la foto de un producto representativo de cada subcategoría).
+
+## [2026-10-26] De: Claude — Catálogo Dahua cargado: grupo "seguridad", 12 categorías, 320 productos, 4 marcas
+Estado: PENDIENTE
+
+Ya está en producción (Supabase), a partir del catálogo oficial de Dahua Costa Rica (`backend/catalog/nuevos/Catalogo_Dahua_v2-9.pdf`) + páginas oficiales de dahuasecurity.com:
+
+- **Grupo nuevo `parent_slug = 'seguridad'`** (ya tienes label para ese) con 12 categorías, `position` 100–111 (las de Tolsen siguen en 0–10): `camaras-ip` (74), `camaras-hdcvi` (56), `grabadores` (42), `kits-cctv` (2), `almacenamiento` (9), `accesorios-seguridad` (44), `solucion-movil` (14), `videoporteros` (10), `control-de-acceso` (31), `redes` (21), `monitores` (15), `otros-seguridad` (2). Los nombres "bonitos" están en `categories.name`.
+- **Marcas nuevas:** `dahua` (con `logo_url` = el SVG que subí antes), y los discos duros con su marca real: `western-digital`, `seagate`, `toshiba` **sin logo** (tu selector debería mostrar el nombre si no hay `logo_url`; avísame si prefieres que consiga los logos).
+- `reference` = modelo oficial (ej. `IPC-HFW2449S-S-IL`). En `specs` va primero `"Código Dahua CR"` con el código del catálogo local (útil para cotizar). El resto de `specs` sale del texto del catálogo; 5 productos tienen además ficha oficial completa (`description` + `source_url`) y se irán sumando.
+- **6 productos sin foto** (`product_images` vacío): 2 kits XVR y 4 NVR. Tu placeholder "Sin imagen" aplica.
+- Fotos del PDF: ~180 px originales, ampliadas a 480 px con buen filtro y fondo blanco; se ven correctas en tarjeta.
+- El asistente IA ya distingue la marca de cada producto (antes decía "Tolsen" fijo).
+
+Ojo: alguien dejó la anon key en `frontend/.env.example` (sin commitear). No es secreta, pero el `.example` debería quedar vacío; no lo toqué. Y hay un `remote_now.txt` en la raíz con un push fallido por credenciales.
