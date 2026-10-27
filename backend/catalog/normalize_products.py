@@ -69,16 +69,6 @@ PROMPT = """Corriges fichas de productos de un catálogo en español (Costa Rica
    Quita cualquier precio. Quita la característica "Descripción" si solo repite el nombre.
 8. Quita la característica "Presentación", pero su dato NO se pierde: pásalo a la característica correcta (Piezas, Contenido, Medida, Peso, Largo, Diámetro, Talla, Capacidad…) salvo que ya esté igual en otra característica.
 9. NUNCA quites características técnicas (puertos, potencia, voltaje, consumo, resolución, dimensiones, capacidad, protección, tasas, tablas, compatibilidad, etc.) ni líneas de descripción con información. Solo se quitan las cosas de las reglas 6, 7c y 8 y los duplicados exactos. Si no hay nada que corregir, devuelve el producto igual (traducido si hacía falta).
-10. Estructura de características (pedido del usuario). Cuando el dato exista (en specs o en la descripción), usa estas etiquetas exactas:
-   - "Material": composición (acero inoxidable, nylon 66, aluminio, Cr-V, PVC…).
-   - "Acabado": terminación superficial (zincado, galvanizado, cromado, pavonado, pulido, color de pintura…).
-   - "Tipo": forma o modelo base (cabeza plana, cabeza truss, rosca fina, punta broca, encastre Phillips, tipo bullet, tipo domo…).
-   - "Dimensiones": las medidas de la pieza en un solo valor (largo, diámetro, ancho, grosor, calibre, paso), ej. "4.2 x 13 mm (0.17 x 0.51")" o "Largo 200 mm (7.87"); diámetro 6 mm". Si ya hay varias características de medida (Medida, Largo, Diámetro, Tamaño, Ancho, Alto), júntalas aquí. Excepción: la medida que identifica la variante en herramientas (ej. "Medida: 6"" de un alicate) puede quedar como "Dimensiones" igual.
-   - "Peso unitario": peso de una pieza (o del equipo, si se vende por unidad).
-   - "Resistencia": capacidad de carga, tensión, torque, presión, voltaje de aislamiento, protección IP/IK, temperatura de trabajo, según aplique.
-   - "Uso recomendado": aplicación o superficie para la que sirve (ej. "Chapa de acero, perfiles metálicos", "Exteriores"). Si la descripción dice para qué se usa ("Para usar en…", "Ideal para…", "Diseñado para…"), resúmelo aquí siempre.
-   - "Contenido": cuántas piezas trae UNA unidad de venta (bolsa, caja o paquete que se compra). Si el dato habla de una caja que trae varias bolsas, pon solo lo de una bolsa.
-   Los demás datos técnicos (resolución, puertos, potencia, capacidad, compatibilidad, etc.) quedan con su propia etiqueta clara. No inventes ningún dato: si no está, no pongas la etiqueta. Una línea de descripción que solo repetía un dato pasado a características (ej. "Cromado", "Aluminio", "Nylon 66") se quita de la descripción; las frases descriptivas se quedan.
 - name: en MAYÚSCULAS, en español. No quites el modelo/código si lo trae.
 - description: lista de líneas en español (sin el "• "). Puede quedar vacía si no venía.
 - specs: lista de {name, value} ya corregida. Sin duplicados.
@@ -111,6 +101,9 @@ PACKING = re.compile(r"empaque|embalaje|packing|blíster|blister|presentaci|mast
 
 
 PRICE = re.compile(r"precio|price|costo", re.I)
+# La garantía de las fichas es la del fabricante, no la que ofrecen Intrade/JC Security: no se muestra
+# (decisión del usuario, 2026-10-27).
+WARRANTY = re.compile(r"garant[ií]a|warranty", re.I)
 # Citas de la búsqueda web pegadas al texto: " ([sitio.com](https://...))". No se muestran.
 CITATION = re.compile(r"\s*\(\[[^\]]*\]\([^)]*\)\)|\s*\[[^\]]*\]\(https?://[^)]*\)")
 
@@ -135,8 +128,9 @@ def lost_data(p, new):
         n = float(n)
         return n <= 1 or any(abs(n * f - a) <= 0.02 * max(n * f, 1) for f in factors for a in after)
 
-    before = [f"{k}: {v}" for k, v in (p["specs"] or {}).items() if k not in KEEP_SPECS and not PRICE.search(k)]
-    before += [l for l in (p["description"] or "").split("\n") if l.strip()]
+    before = [f"{k}: {v}" for k, v in (p["specs"] or {}).items()
+              if k not in KEEP_SPECS and not PRICE.search(k) and not WARRANTY.search(k)]
+    before += [l for l in (p["description"] or "").split("\n") if l.strip() and not WARRANTY.search(l)]
     return [t for t in before if not PACKING.search(t) and not all(kept(n) for n in numbers(t))]
 
 
@@ -197,10 +191,12 @@ def main():
         specs = {**keep, **{s["name"]: s["value"] for s in r["specs"] if s["name"] and s["value"]
                             # "Código de stock: 36002" repite el código de Intrade
                             and not ("código" in s["name"].lower() and code and si.norm(s["value"]) == code)}}
-        # Sin precios (regla del usuario) ni cantidades de despacho.
-        specs = {k: v for k, v in specs.items() if k.strip().lower() not in DROP_SPECS and not PRICE.search(k)}
+        # Sin precios ni garantía (reglas del usuario) ni cantidades de despacho.
+        specs = {k: v for k, v in specs.items() if k.strip().lower() not in DROP_SPECS and not PRICE.search(k)
+                 and not WARRANTY.search(k)}
         new = {"name": r["name"].strip().upper(),
-               "description": "\n".join(f"• {l}" for l in r["description"] if l.strip()) or None, "specs": specs}
+               "description": "\n".join(f"• {l}" for l in r["description"] if l.strip() and not WARRANTY.search(l)) or None,
+               "specs": specs}
         if p["id"] in SOLD_BY_UNIT:
             new["specs"].pop("Contenido", None)
         for old, fixed in FIXES.get(p["id"], []):

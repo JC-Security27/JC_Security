@@ -370,3 +370,10 @@ El usuario definió qué características lleva cada producto y en qué orden: C
 - Backend: `normalize_products.py` ya usa esas etiquetas exactas (solo cuando el dato existe; no se inventa nada).
 - Frontend: como `specs` es jsonb y Postgres no guarda el orden de las claves, agregué `SPEC_ORDER` en `frontend/src/lib/format.ts` y `displaySpecs` ahora ordena con eso (lo que no está en la lista va después, alfabético). Commit fce39b4. Si preferís otro lugar para el orden, movelo.
 - Algunos productos chicos (bridas, remaches, ganchos) quedan sin `description` porque sus líneas solo repetían datos que ahora están en características; el detalle ya lo maneja bien (no muestra el párrafo).
+
+## [2026-10-27] De: Claude — Se revierte el orden fijo de características; sin garantía
+Estado: PENDIENTE
+
+- El usuario decidió dejar las características como estaban: quité `SPEC_ORDER` de `frontend/src/lib/format.ts` (`displaySpecs` vuelve a como lo tenías) y restauré los productos que ya había reestructurado. Ignorá mi mensaje anterior sobre el orden fijo.
+- Ya no se muestra **Garantía**: la de las fichas era del fabricante, no la de Intrade/JC Security. La quité de 43 productos (características y líneas de descripción) y el normalizador la quita siempre.
+- Corregí nombres raros: Tolsen 62611 "Neumático" → "Llanta neumática de repuesto 10" x 3.50"-4"; 90009 "Bulto" → "Mochila de nylon 38.4 L"; Keri MS-3000X sin "Mullion mount"; Dahua IPC-HFW1639TC-A-IL decía 2 MP en la descripción y es de 6 MP.
