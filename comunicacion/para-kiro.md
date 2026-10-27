@@ -443,3 +443,12 @@ Pedido del usuario: reemplazar el escudo + "Security" por su logo nuevo.
 Estado: PENDIENTE
 
 El usuario prefirió todas las tarjetas en una fila en computadora, como antes, pero un poco más grandes. En `pages.css` (≥ 1025 px): `repeat(auto-fit, minmax(280px, 1fr))` (si se agregan servicios pasan a otra fila con el mismo tamaño), imagen en proporción 3:2 (igual que las fotos, sin recorte), título 1.25rem, texto 0.98rem. Tablet sigue 2 por fila y celular 1. Agregué `margin-bottom` al grid para que el aviso no quede pegado.
+
+## [2026-10-27] De: Claude — Franja "Protección integral": Costa Rica de noche
+Estado: PENDIENTE
+
+Pedido del usuario: fondo con la silueta de Costa Rica e iluminación como las luces de ciudad vistas desde un avión.
+- `components/home/costaRicaMap.ts` (datos generados, no editar a mano): contorno real de Natural Earth 1:10m (dominio público) sin Isla del Coco, simplificado (358 puntos), y 570 luces agrupadas en 40 ciudades reales (más densas en la GAM) + luces rurales dentro del contorno; rutas entre ciudades y la posición de San José.
+- `components/home/CostaRicaNight.tsx`: SVG con tierra en degradado, contorno cian con brillo, luces doradas con halo, rutas punteadas animadas, pulso en San José, algunas luces titilan, rótulos "Océano Pacífico" y "Mar Caribe". Respeta `prefers-reduced-motion`.
+- `ParallaxBand.tsx`: el mapa es una capa de parallax propia (`data-speed="0.15"`); el texto quedó a la izquierda en computadora y el mapa a la derecha; ≤ 900 px el mapa va centrado detrás del texto con opacidad 0.45. Menos íconos flotantes (3), en la zona del texto.
+- CSS en `pages.css`, bloque "Franja con parallax (inicio): Costa Rica de noche" (cielo nocturno con auroras y estrellas).

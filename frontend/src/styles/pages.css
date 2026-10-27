@@ -234,43 +234,117 @@
 }
 
 /* ----- CTA band ----- */
-/* ----- Franja con parallax (inicio) ----- */
+/* ----- Franja con parallax (inicio): Costa Rica de noche ----- */
 .parallax-band {
   position: relative;
   overflow: hidden;
   isolation: isolate;
   margin-top: var(--space-12);
-  padding-block: clamp(5rem, 12vw, 9rem);
-  background: var(--brand-deep, #0a1728);
+  padding-block: clamp(5rem, 11vw, 8.5rem);
+  min-height: clamp(520px, 62vw, 760px);
+  display: flex;
+  align-items: center;
+  background: #040b16;
   color: #eaf1f7;
-  text-align: center;
 }
-/* Capa de fondo: más alta que la franja para que al moverse nunca se vea el borde. */
+/* Cielo nocturno: degradado profundo, auroras suaves y estrellas tenues.
+   Capa más alta que la franja para que al moverse no se vea el borde. */
 .parallax-bg {
   position: absolute;
-  inset: -45% 0;
-  z-index: -2;
-  background: radial-gradient(
-      600px 360px at 20% 35%,
-      color-mix(in srgb, var(--brand-cyan) 28%, transparent),
-      transparent 70%
-    ),
-    radial-gradient(
-      520px 320px at 82% 65%,
-      color-mix(in srgb, var(--brand-mid, #2f5d9e) 45%, transparent),
-      transparent 70%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.05) 0 1px,
-      transparent 1px 48px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.05) 0 1px,
-      transparent 1px 48px
-    );
+  inset: -40% 0;
+  z-index: -3;
+  background:
+    radial-gradient(900px 520px at 78% 50%, rgba(66, 215, 231, 0.16), transparent 70%),
+    radial-gradient(700px 420px at 12% 30%, rgba(45, 91, 154, 0.35), transparent 70%),
+    radial-gradient(600px 300px at 60% 95%, rgba(255, 170, 70, 0.08), transparent 70%),
+    radial-gradient(1.2px 1.2px at 12% 18%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 32% 62%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1.4px 1.4px at 48% 12%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 22% 82%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1.2px 1.2px at 92% 22%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 66% 8%, rgba(255, 255, 255, 0.5), transparent),
+    linear-gradient(180deg, #050d1c 0%, #071a2e 55%, #04101f 100%);
   will-change: transform;
+}
+/* Mapa: a la derecha en computadora, detrás del texto en celular. */
+.parallax-map {
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  right: 2%;
+  width: min(58%, 760px);
+  margin-top: calc(min(58vw, 760px) * -0.477);
+  will-change: transform;
+}
+.cr-night {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.cr-land {
+  stroke: rgba(66, 215, 231, 0.75);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.cr-routes path {
+  fill: none;
+  stroke: rgba(66, 215, 231, 0.45);
+  stroke-width: 1.6;
+  stroke-dasharray: 6 10;
+  animation: cr-flow 3.5s linear infinite;
+}
+.cr-twinkle {
+  animation: cr-twinkle 3.2s ease-in-out infinite;
+}
+.cr-pulse {
+  fill: none;
+  stroke: #ffd27a;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cr-pulse 3s ease-out infinite;
+}
+.cr-pulse--late {
+  animation-delay: 1.5s;
+}
+.cr-sea {
+  fill: rgba(159, 179, 199, 0.45);
+  font-size: 26px;
+  font-style: italic;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+@keyframes cr-flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+@keyframes cr-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes cr-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cr-routes path,
+  .cr-twinkle,
+  .cr-pulse {
+    animation: none;
+  }
 }
 .parallax-icons {
   position: absolute;
@@ -280,15 +354,19 @@
 .parallax-icon {
   position: absolute;
   color: var(--brand-cyan);
-  opacity: 0.4;
+  opacity: 0.3;
   filter: drop-shadow(0 0 12px color-mix(in srgb, var(--brand-cyan) 45%, transparent));
   will-change: transform;
 }
 .parallax-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-4);
+  text-align: left;
+}
+.parallax-content > * {
+  max-width: 560px;
 }
 .parallax-content .eyebrow {
   color: var(--brand-cyan);
@@ -299,34 +377,33 @@
 }
 .parallax-content h2 {
   color: #fff;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 4.6vw, 3.3rem);
   margin: 0;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 .parallax-content p {
-  color: #b9c8d8;
-  max-width: 56ch;
+  color: #c3d1df;
   font-size: 1.05rem;
   margin: 0;
 }
 .parallax-stats {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   list-style: none;
   padding: 0;
-  margin: var(--space-4) 0;
+  margin: var(--space-3) 0;
 }
 .parallax-stats li {
   display: flex;
   flex-direction: column;
-  min-width: 150px;
+  min-width: 140px;
   padding: var(--space-4) var(--space-5);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(8, 22, 40, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .parallax-stats strong {
   color: #fff;
@@ -336,10 +413,30 @@
   color: #9fb3c7;
   font-size: 0.9rem;
 }
-@media (max-width: 640px) {
-  .parallax-icon {
-    opacity: 0.25;
+/* Tablet y celular: el mapa queda centrado detrás del texto, más tenue. */
+@media (max-width: 900px) {
+  .parallax-band {
+    min-height: 0;
   }
+  .parallax-map {
+    right: 50%;
+    width: min(110%, 640px);
+    margin-right: calc(min(110vw, 640px) * -0.5);
+    margin-top: calc(min(110vw, 640px) * -0.477);
+    opacity: 0.45;
+  }
+  .parallax-content {
+    align-items: center;
+    text-align: center;
+  }
+  .parallax-stats {
+    justify-content: center;
+  }
+  .parallax-icon {
+    opacity: 0.2;
+  }
+}
+@media (max-width: 640px) {
   .parallax-stats li {
     min-width: 0;
     flex: 1 1 40%;

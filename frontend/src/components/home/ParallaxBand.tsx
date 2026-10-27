@@ -1,5 +1,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { CostaRicaNight } from "@/components/home/CostaRicaNight";
 
 /**
  * Franja con parallax dinámico: cada capa marcada con data-speed se desplaza a
@@ -110,13 +111,11 @@ const icons: Record<string, ReactNode> = {
 };
 
 // Posición, tamaño y velocidad de cada ícono (velocidad negativa = sentido contrario).
+// Van en la columna del texto y los bordes, para no tapar el mapa.
 const floating = [
-  { icon: "camera", top: "12%", left: "6%", size: 64, speed: 0.25 },
-  { icon: "shield", top: "62%", left: "14%", size: 48, speed: -0.15 },
-  { icon: "lock", top: "18%", left: "84%", size: 56, speed: 0.35 },
-  { icon: "wifi", top: "70%", left: "78%", size: 60, speed: -0.2 },
-  { icon: "bell", top: "40%", left: "92%", size: 40, speed: 0.12 },
-  { icon: "tool", top: "84%", left: "32%", size: 44, speed: -0.3 },
+  { icon: "camera", top: "10%", left: "4%", size: 56, speed: 0.25 },
+  { icon: "shield", top: "74%", left: "6%", size: 44, speed: -0.15 },
+  { icon: "wifi", top: "84%", left: "40%", size: 48, speed: -0.2 },
 ];
 
 export function ParallaxBand() {
@@ -125,6 +124,10 @@ export function ParallaxBand() {
   return (
     <section ref={ref} className="parallax-band" aria-labelledby="parallax-title">
       <div className="parallax-bg" data-speed="0.4" aria-hidden="true" />
+      {/* Costa Rica de noche (capa propia, se mueve más lento que el texto) */}
+      <div className="parallax-map" data-speed="0.15" aria-hidden="true">
+        <CostaRicaNight />
+      </div>
       <div className="parallax-icons" aria-hidden="true">
         {floating.map((f) => (
           <svg
