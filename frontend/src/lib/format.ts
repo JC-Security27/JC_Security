@@ -76,16 +76,36 @@ const SPEC_HIDE = new Set([
 ]);
 
 /**
- * Devuelve las entradas de specs listas para mostrar: renombra "Código
- * Intrade" a "Código" y omite las de cantidad por caja. Conserva el orden.
+ * Devuelve las entradas de specs listas para mostrar:
+ * - renombra "Código Intrade" a "Código",
+ * - omite las de cantidad por caja (venta por unidad),
+ * - omite "SKU" cuando su valor es igual al del "Código" (es el mismo dato).
+ * Conserva el orden original.
  */
 export function displaySpecs(
   specs: Record<string, string> | undefined
 ): [string, string][] {
   if (!specs) return [];
+
+  // Valor del "Código" (tras renombrar), para detectar un SKU duplicado.
+  const codigoValue = (
+    specs["Código Intrade"] ??
+    specs["Codigo Intrade"] ??
+    specs["Código"] ??
+    specs["Codigo"] ??
+    ""
+  )
+    .trim()
+    .toLowerCase();
+
   const out: [string, string][] = [];
   for (const [key, value] of Object.entries(specs)) {
-    if (SPEC_HIDE.has(key.trim().toLowerCase())) continue;
+    const keyLower = key.trim().toLowerCase();
+    if (SPEC_HIDE.has(keyLower)) continue;
+    // Oculta el SKU si es idéntico al Código (dato repetido).
+    if (keyLower === "sku" && value.trim().toLowerCase() === codigoValue) {
+      continue;
+    }
     out.push([SPEC_RENAME[key] ?? key, value]);
   }
   return out;
