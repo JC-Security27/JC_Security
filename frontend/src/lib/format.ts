@@ -48,3 +48,45 @@ export function toDisplayName(raw: string): string {
     })
     .join(" ");
 }
+
+
+/* ==========================================================================
+   Limpieza de las características (specs) para mostrar al cliente.
+   - "Código Intrade" -> "Código" (somos distribuidor autorizado; no exponemos
+     el nombre del proveedor).
+   - Se ocultan las claves de venta por caja/empaque mayorista, porque los
+     productos se venden POR UNIDAD y esos datos confunden al cliente.
+   ========================================================================== */
+
+/** Renombres de claves de spec (clave original -> cómo se muestra). */
+const SPEC_RENAME: Record<string, string> = {
+  "Código Intrade": "Código",
+  "Codigo Intrade": "Código",
+};
+
+/** Claves de spec que NO se muestran (venta por caja / empaque mayorista). */
+const SPEC_HIDE = new Set([
+  "cantidad por caja",
+  "cantidad por empaque",
+  "unidades por caja",
+  "piezas por caja",
+  "pares por caja",
+  "cantidad de empaque",
+  "empaque por caja",
+]);
+
+/**
+ * Devuelve las entradas de specs listas para mostrar: renombra "Código
+ * Intrade" a "Código" y omite las de cantidad por caja. Conserva el orden.
+ */
+export function displaySpecs(
+  specs: Record<string, string> | undefined
+): [string, string][] {
+  if (!specs) return [];
+  const out: [string, string][] = [];
+  for (const [key, value] of Object.entries(specs)) {
+    if (SPEC_HIDE.has(key.trim().toLowerCase())) continue;
+    out.push([SPEC_RENAME[key] ?? key, value]);
+  }
+  return out;
+}

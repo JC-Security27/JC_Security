@@ -5,7 +5,7 @@ import { useAsync } from "@/hooks/useAsync";
 import { useQuote } from "@/context/QuoteContext";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { productInquiryMessage } from "@/lib/whatsapp";
-import { toDisplayName } from "@/lib/format";
+import { toDisplayName, displaySpecs } from "@/lib/format";
 import {
   groupByVariants,
   getSizeLabel,
@@ -87,10 +87,9 @@ export function ProductPage() {
     (selectedId && group?.variants.find((v) => v.id === selectedId)) ||
     product;
 
-  // Las specs a mostrar son las de la variante seleccionada.
-  const specs = selectedVariant.specs
-    ? Object.entries(selectedVariant.specs)
-    : [];
+  // Las specs a mostrar son las de la variante seleccionada, limpiadas:
+  // "Código Intrade" -> "Código" y sin cantidades por caja (venta por unidad).
+  const specs = displaySpecs(selectedVariant.specs);
 
   return (
     <section className="section container">
