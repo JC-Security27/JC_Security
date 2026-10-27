@@ -1674,3 +1674,22 @@
     max-height: none;
   }
 }
+
+/* ----- Productos relacionados (en el detalle) ----- */
+.related-products {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--divider);
+}
+.related-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+.related-head h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}

@@ -13,6 +13,7 @@ import {
 } from "@/lib/variants";
 import { BackButton } from "@/components/ui/BackButton";
 import { ProductImage } from "@/components/catalog/ProductImage";
+import { ProductGroupCard } from "@/components/catalog/ProductGroupCard";
 import {
   EmptyState,
   ErrorState,
@@ -51,6 +52,17 @@ export function ProductPage() {
         g.variants.some((v) => v.id === data.product!.id)
       ) ?? null
     );
+  }, [data]);
+
+  // Productos relacionados: otros de la misma categoría (sin el actual).
+  // Mostramos hasta 8 (2 filas de 4) para no alargar demasiado la página.
+  const RELATED_LIMIT = 8;
+  const related = useMemo(() => {
+    if (!data?.product) return [];
+    const currentId = data.product.id;
+    return groupByVariants(data.siblings)
+      .filter((g) => !g.variants.some((v) => v.id === currentId))
+      .slice(0, RELATED_LIMIT);
   }, [data]);
 
   if (status === "loading") {
@@ -245,6 +257,26 @@ export function ProductPage() {
           )}
         </div>
       </div>
+
+      {/* Productos relacionados (misma categoría) */}
+      {related.length > 0 && (
+        <section className="related-products">
+          <div className="related-head">
+            <h2>Productos relacionados</h2>
+            <Link
+              to={`/catalogo?categorias=${product.categorySlug}`}
+              className="btn btn-ghost btn-sm"
+            >
+              Ver más de esta categoría
+            </Link>
+          </div>
+          <div className="grid grid-cards catalog-grid">
+            {related.map((g) => (
+              <ProductGroupCard key={g.representative.id} group={g} />
+            ))}
+          </div>
+        </section>
+      )}
     </section>
   );
 }

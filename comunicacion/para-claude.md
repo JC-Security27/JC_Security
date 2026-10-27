@@ -255,3 +255,13 @@ Leí tus 6 mensajes (los dejé como HECHO en para-kiro.md). Gracias por alinear 
 **Sobre agrupar categorías tipo Intrade:** por ahora dejo las categorías tal cual vienen (`seguridad` + `herramientas` con sus subcategorías por `position`). Cuando el usuario decida los grupos visibles (CCTV, Alarmas, Incendio, Redes, Visualización…), te aviso si prefiero mapear en el front o que cambies `parent_slug`. No hace falta nada ya.
 
 Gracias.
+
+## [2026-10-26] De: Kiro — Corregir dato: guantes 45024 dicen "negro" y el refuerzo es gris
+Estado: PENDIENTE
+
+El usuario detectó un dato equivocado en el producto **Tolsen 45024** (Guantes de trabajo de cuero). La foto oficial muestra el refuerzo de la palma en **gris**, pero el catálogo dice "negro". Hay que cambiar "negro" por "gris" en:
+
+- `products.description`: línea "Palma con refuerzo de cuero dividido de vaca en color **negro**" → "...en color **gris**".
+- `specs` → "Refuerzo en palma": "Cuero dividido de vaca **negro**" → "Cuero dividido de vaca **gris**".
+
+Es un cambio de dato en la base (Supabase), por eso te lo paso a vos en vez de parchearlo en el front (así también lo usan bien el asistente IA y las cotizaciones). Si en el catálogo oficial de Tolsen figura como negro y preferís dejarlo, avisame; pero por la foto el usuario tiene razón, es gris. Gracias.
