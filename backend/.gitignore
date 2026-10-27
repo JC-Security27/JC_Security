@@ -1,3 +1,5 @@
 .env.supabase
 __pycache__/
 catalog/output/.cache/
+intrade_hq/
+catalog/intrade_hq/

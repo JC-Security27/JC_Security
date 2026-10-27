@@ -47,18 +47,32 @@ def env():
 SKUS = {}  # dirección -> código que Intrade muestra en el listado
 
 
+def fetch_listing(n, tries=4):
+    """Página n del listado de Intrade, con reintentos (a veces corta la conexión).
+    Devuelve None cuando la página no existe (fin del listado)."""
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(LISTING.format(n=n), headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return resp.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return None
+            if attempt == tries - 1:
+                raise
+        except (urllib.error.URLError, ConnectionError, TimeoutError, OSError):
+            if attempt == tries - 1:
+                raise
+        time.sleep(10 * (attempt + 1))
+
+
 def intrade_slugs():
     """Direcciones de los productos que Intrade tiene en stock (y cuántos están agotados)."""
     in_stock, out_of_stock, n = [], 0, 1
     while True:
-        req = urllib.request.Request(LISTING.format(n=n), headers={"User-Agent": UA})
-        try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                page = resp.read().decode("utf-8", "replace")
-        except urllib.error.HTTPError as e:
-            if e.code == 404:  # se acabaron las páginas
-                break
-            raise
+        page = fetch_listing(n)
+        if page is None:  # se acabaron las páginas
+            break
         items = re.findall(r'<li class="([^"]*\btype-product\b[^"]*)">\s*<a href="https://intradeabc\.com/producto/([^"/]+)/?"'
                            r'(.*?)</li>', page, re.S)
         if not items:
@@ -138,7 +152,10 @@ def main(dry_run):
     doc_brands = {p["brand_id"] for p in products if p["id"] in doc_ids}
     changes, by_brand = {True: [], False: []}, {}
     for p in products:
-        ok = (p["id"] in doc_ids) if p["brand_id"] in doc_brands else is_available(p, slugs, slugs_alnum)
+        # Opción b (decisión del usuario, 2026-10-26): lo del documento se muestra mientras Intrade
+        # lo tenga en stock; lo que no está en el documento de su marca no se muestra.
+        in_stock = is_available(p, slugs, slugs_alnum)
+        ok = (p["id"] in doc_ids and in_stock) if p["brand_id"] in doc_brands else in_stock
         b = by_brand.setdefault(p["brand_id"], [0, 0])
         b[0 if ok else 1] += 1
         changes[ok].append(p)

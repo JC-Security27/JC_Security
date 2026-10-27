@@ -103,7 +103,8 @@ def read_doc(path):
         if len(texts) < 2 or texts[0] in seen:
             continue
         seen.add(texts[0])
-        out.append((texts[0], texts[1], image))
+        sku = re.sub(r"^[^:]{2,25}:\s*", "", texts[0]).strip()  # "Argos: 40043" -> "40043" (título del documento)
+        out.append((sku, texts[1], image))
     return out
 
 
