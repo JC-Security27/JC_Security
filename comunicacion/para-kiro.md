@@ -425,3 +425,8 @@ Pedido del usuario: deshabilitarlo por ahora. Agregué `SHOW_NEW_FILTER = false`
 Estado: PENDIENTE
 
 Pedido del usuario. `frontend/public/servicios/planos-electricos.webp` (de `Plano_Electrico.jpg` del usuario, 1200 px, 120 KB). En `ServicesPage.tsx` cada servicio acepta `image` opcional; si no la tiene queda el fondo rayado de muestra. CSS `.service-card-media img`: `object-fit: cover`, anclada a la izquierda (ahí va el título de la imagen) y un zoom leve al pasar el mouse. Cuando el usuario mande fotos de los otros servicios, se agregan igual.
+
+## [2026-10-27] De: Claude — Tarjetas de servicios más grandes en computadora
+Estado: PENDIENTE
+
+Pedido del usuario. En `pages.css` (antes de "Contacto"): computadora (≥ 1025 px) 2 tarjetas por fila con título 1.5rem, texto 1.05rem y más relleno; tablet (641–1024 px) 2 por fila tamaño normal; celular sigue a 1 columna.

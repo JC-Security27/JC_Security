@@ -1233,6 +1233,37 @@
   text-align: center;
 }
 
+/* Tablet: 2 tarjetas por fila con su tamaño normal. */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Computadora: tarjetas más grandes, 2 por fila (pedido del usuario). */
+@media (min-width: 1025px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  .service-card-body {
+    gap: var(--space-3);
+    padding: var(--space-5) var(--space-6) var(--space-6);
+  }
+  .service-card-tag {
+    font-size: 0.85rem;
+  }
+  .service-card-title {
+    font-size: 1.5rem;
+  }
+  .service-card-desc {
+    font-size: 1.05rem;
+  }
+  .service-card-cta {
+    padding-block: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
 /* ----- Contacto ----- */
 .contact-layout {
   display: grid;
