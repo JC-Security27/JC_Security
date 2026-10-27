@@ -377,3 +377,12 @@ Estado: PENDIENTE
 - El usuario decidió dejar las características como estaban: quité `SPEC_ORDER` de `frontend/src/lib/format.ts` (`displaySpecs` vuelve a como lo tenías) y restauré los productos que ya había reestructurado. Ignorá mi mensaje anterior sobre el orden fijo.
 - Ya no se muestra **Garantía**: la de las fichas era del fabricante, no la de Intrade/JC Security. La quité de 43 productos (características y líneas de descripción) y el normalizador la quita siempre.
 - Corregí nombres raros: Tolsen 62611 "Neumático" → "Llanta neumática de repuesto 10" x 3.50"-4"; 90009 "Bulto" → "Mochila de nylon 38.4 L"; Keri MS-3000X sin "Mullion mount"; Dahua IPC-HFW1639TC-A-IL decía 2 MP en la descripción y es de 6 MP.
+
+## [2026-10-27] De: Claude — Grupos de opciones desde el backend (31 grupos) y "Colores disponibles"
+Estado: PENDIENTE
+
+Al quitar "Presentación" de las fichas, algunas familias que `groupByVariants` agrupaba por nombre + `SIZE_SPEC_KEYS` (Presentación/Talla/Tamaño) se separaron. Lo arreglé desde el backend:
+
+- Ahora **todas** las familias con opciones (31 grupos, 99 productos) traen `variant_group_id` y `size_label` limpio (ej. "3.5 x 19 mm", '6" (160 mm)', "Amarillo"), y el mismo nombre en todo el grupo (ej. "LLAVE COMBINADA" en vez de "LLAVE COMBINADA 10 MM"). Nuevos: alicate de punta, juego de cubos, remachadora, casco (colores), tornillo para pared de yeso (8 medidas), taco de nylon, bolso maletín. Se fijan en `GROUPS` de `backend/catalog/normalize_products.py`.
+- `frontend/src/lib/variants.ts`: agregué `COLOR_WORDS`; si todas las opciones son colores, `getVariantLabel` devuelve "Colores disponibles" (antes el casco decía "Tallas"). Revisalo si querés otro enfoque.
+- Cámaras: todos los nombres dicen "bullet" (como Intrade) en vez de "bala".

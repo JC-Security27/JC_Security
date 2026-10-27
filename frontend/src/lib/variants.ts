@@ -73,6 +73,21 @@ const APPAREL_WORDS = [
   "ropa",
 ];
 
+/* Opciones que son solo un color -> "Colores disponibles". */
+const COLOR_WORDS = [
+  "amarillo",
+  "azul",
+  "rojo",
+  "verde",
+  "blanco",
+  "negro",
+  "gris",
+  "naranja",
+  "anaranjado",
+  "cafe",
+  "transparente",
+];
+
 /* Productos que se venden por cantidad/empaque -> "Presentaciones". */
 const PACK_WORDS = [
   "tornillo",
@@ -99,6 +114,17 @@ const PACK_WORDS = [
 export function getVariantLabel(group: ProductGroup): string {
   const name = normalizeForSearch(group.name);
   const words = name.split(/\s+/);
+
+  // Si todas las opciones son colores (ej. cascos amarillo/azul/rojo) -> "Colores".
+  const optionLabels = group.variants.map((v) => getSizeLabel(v));
+  if (
+    optionLabels.length > 0 &&
+    optionLabels.every(
+      (l) => l !== null && COLOR_WORDS.includes(normalizeForSearch(l))
+    )
+  ) {
+    return "Colores disponibles";
+  }
 
   if (words.some((w) => APPAREL_WORDS.includes(w))) {
     return "Tallas disponibles";

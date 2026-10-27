@@ -52,6 +52,51 @@ FIXES = {
 # Los que sí se venden por caja: lápiz 42022, Super Glue 50190 y ganchos 83021/83024 (conservan "Contenido").
 SOLD_BY_UNIT = {"tolsen-42025", "tolsen-38052"}
 
+# Productos con varias opciones (medida, talla o color): mismo variant_group_id, etiqueta limpia en size_label
+# y el mismo nombre para todo el grupo. Se fijan aquí porque la página antes agrupaba algunos solo por
+# "Presentación" (que ya no se muestra) y las etiquetas viejas venían desordenadas. (2026-10-27)
+GROUPS = {
+    "ALICATE DE CORTE DIAGONAL": {"tolsen-10003": "6\"", "tolsen-10004": "7\""},
+    "ALICATE DE PERRO O DE PRESIÓN": {"tolsen-10049": "10\"", "tolsen-10380": "7\""},
+    "ALICATE DE PUNTA": {"tolsen-10022": "8\" (200 mm)", "tolsen-10023": "6\" (160 mm)"},
+    "ALICATE UNIVERSAL": {"tolsen-10001": "7\"", "tolsen-10002": "8\""},
+    "BOLSO PARA HERRAMIENTAS TIPO MALETÍN": {"tolsen-80101": "17\" (43.2 cm)", "tolsen-80103": "16\" (40.6 cm)"},
+    "BRIDA PLÁSTICA NEGRA": {"tolsen-50115": "2.5 x 100 mm", "tolsen-50118": "3.6 x 200 mm", "tolsen-50120": "4.8 x 300 mm", "tolsen-50522": "4.8 x 400 mm"},
+    "CAPA Y PANTALÓN IMPERMEABLES": {"tolsen-45197": "L", "tolsen-45198": "XL"},
+    "CASCO DE SEGURIDAD (APROBADO CE)": {"tolsen-45188": "Amarillo", "tolsen-45189": "Azul", "tolsen-45190": "Rojo"},
+    "CAUTÍN 120 V": {"tolsen-38513": "30 W", "tolsen-38515": "50 W", "tolsen-38516": "60 W"},
+    "CHALECO REFLECTANTE": {"tolsen-45092": "L", "tolsen-45152": "XL"},
+    "CINTURÓN LUMBAR CON TIRANTES Y REFUERZO AJUSTABLE": {"tolsen-45242": "M (110 cm)", "tolsen-45243": "L (120 cm)", "tolsen-45244": "XL (130 cm)"},
+    "DESTORNILLADOR PLANO IMANTADO": {"tolsen-20001": "3.0 x 75 mm", "tolsen-20144": "6.5 x 100 mm"},
+    "EXTENSIÓN PARA CUBO": {"tolsen-15122": "1/4\" x 100 mm (4\")", "tolsen-15123": "3/8\" x 75 mm (3\")", "tolsen-15127": "1/2\" x 125 mm (5\")"},
+    "HACHA": {"tolsen-25052": "1.5 kg · 800 mm (31.5\")", "tolsen-25053": "600 g · 380 mm (15\")"},
+    "JUEGO DE CUBOS": {"tolsen-15138": "1/4\" · 46 piezas", "tolsen-15150": "1/4\" · 14 piezas", "tolsen-15151": "3/8\" · 12 piezas", "tolsen-15152": "1/2\" · 12 piezas"},
+    "LLAVE COMBINADA": {"tolsen-15818": "10 mm", "tolsen-15820": "12 mm", "tolsen-15821": "13 mm", "tolsen-15825": "17 mm", "tolsen-15827": "19 mm"},
+    "LLAVE DE CARRACA": {"tolsen-16118": "1/4\"", "tolsen-16119": "3/8\"", "tolsen-16120": "1/2\""},
+    "MACHETE": {"tolsen-58096": "360 mm (14\")", "tolsen-58101": "610 mm (24\")"},
+    "MANGO FLEXIBLE": {"tolsen-16127": "1/2\" x 15\"", "tolsen-16128": "1/2\" x 18\""},
+    "MANGUERA DE JARDÍN": {"tolsen-57400": "1/2\" x 25 ft (7.6 m)", "tolsen-57401": "1/2\" x 50 ft (15.2 m)"},
+    "NIVEL MAGNÉTICO": {"tolsen-35111": "40 cm (16\")", "tolsen-35115": "120 cm (48\")"},
+    "PANTALÓN DE TRABAJO PESADO": {"tolsen-45216": "S", "tolsen-45217": "M", "tolsen-45220": "XXL", "tolsen-45221": "XXXL"},
+    "PRENSA SARGENTO": {"tolsen-10163": "50 x 250 mm", "tolsen-10191": "120 x 500 mm"},
+    "REMACHADORA MANUAL": {"tolsen-43003": "10.5\" (26.7 cm)", "tolsen-43099": "8\""},
+    "TACO DE PARED DE NYLON": {"tolsen-54302": "6 x 30 mm", "tolsen-54303": "8 x 40 mm", "tolsen-54304": "10 x 50 mm"},
+    "TENIS DE SEGURIDAD": {"tolsen-45371": "39", "tolsen-45372": "40", "tolsen-45373": "41", "tolsen-45374": "42", "tolsen-45375": "43", "tolsen-45376": "44", "tolsen-45377": "45", "tolsen-45378": "46"},
+    "TORNILLO AUTOPERFORANTE": {"tolsen-54161": "4.2 x 13 mm", "tolsen-54162": "4.2 x 16 mm", "tolsen-54163": "4.2 x 19 mm", "tolsen-54164": "4.2 x 25 mm", "tolsen-54165": "4.2 x 32 mm"},
+    "TORNILLO AUTOPERFORANTE DE CABEZA AVELLANADA": {"tolsen-54180": "4.8 x 25 mm", "tolsen-54183": "4.8 x 50 mm"},
+    "TORNILLO AUTORROSCANTE": {"tolsen-54151": "4.2 x 13 mm", "tolsen-54152": "4.2 x 19 mm", "tolsen-54153": "4.2 x 25 mm"},
+    "TORNILLO PARA PARED DE YESO": {"tolsen-54051": "3.5 x 19 mm", "tolsen-54052": "3.5 x 25 mm", "tolsen-54053": "3.5 x 32 mm", "tolsen-54054": "3.5 x 38 mm", "tolsen-54055": "3.5 x 45 mm", "tolsen-54056": "3.5 x 50 mm", "tolsen-54057": "4.2 x 70 mm", "tolsen-54058": "4.2 x 80 mm"},
+    "ZAPATO DE SEGURIDAD": {"tolsen-45351": "39", "tolsen-45352": "40", "tolsen-45353": "41", "tolsen-45354": "42", "tolsen-45355": "43", "tolsen-45356": "44", "tolsen-45357": "45", "tolsen-45358": "46"},
+}
+
+
+def apply_groups(base, key):
+    for name, members in GROUPS.items():
+        gid = sorted(members)[0]
+        for pid, label in members.items():
+            si.request("PATCH", f"{base}/rest/v1/products?id=eq.{pid}", key,
+                       {"variant_group_id": gid, "size_label": label, "name": name})
+
 PROMPT = """Corriges fichas de productos de un catálogo en español (Costa Rica). Para cada producto recibes name, description (líneas que empiezan con "• ") y specs (nombre: valor). Devuelve el mismo producto corregido con estas reglas, SIN agregar datos nuevos:
 
 1. Peso: nunca solo en onzas. Conviértelo a g (o kg si es ≥ 1000 g) y puedes dejar las oz entre paréntesis, ej. "227 g (8 oz)". 1 oz = 28,35 g; 1 lb = 453,6 g.
@@ -104,6 +149,7 @@ PRICE = re.compile(r"precio|price|costo", re.I)
 # La garantía de las fichas es la del fabricante, no la que ofrecen Intrade/JC Security: no se muestra
 # (decisión del usuario, 2026-10-27).
 WARRANTY = re.compile(r"garant[ií]a|warranty", re.I)
+BALA = re.compile(r"\b(?:TIPO )?BALA\b")
 # Citas de la búsqueda web pegadas al texto: " ([sitio.com](https://...))". No se muestran.
 CITATION = re.compile(r"\s*\(\[[^\]]*\]\([^)]*\)\)|\s*\[[^\]]*\]\(https?://[^)]*\)")
 
@@ -197,6 +243,8 @@ def main():
         new = {"name": r["name"].strip().upper(),
                "description": "\n".join(f"• {l}" for l in r["description"] if l.strip() and not WARRANTY.search(l)) or None,
                "specs": specs}
+        # "Bullet" como en Intrade (decisión del usuario, 2026-10-27): "cámara tipo bala" -> "cámara bullet".
+        new["name"] = BALA.sub("BULLET", new["name"])
         if p["id"] in SOLD_BY_UNIT:
             new["specs"].pop("Contenido", None)
         for old, fixed in FIXES.get(p["id"], []):
@@ -237,6 +285,7 @@ def main():
             if not sample:
                 print(f"  {done} actualizados", flush=True)
     if not sample:
+        apply_groups(base, key)
         print(f"\nListo: {done} productos actualizados; {errors} con error (se reintentan en la próxima corrida)")
         if skipped:  # no se tocan: el modelo quitaba datos. Revisar a mano.
             print(f"{len(skipped)} sin cambios porque se perdían datos:\n  " + "\n  ".join(skipped))
