@@ -2,13 +2,15 @@ import { SampleNotice } from "@/components/ui/states";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
 
-/** Servicios reales confirmados por JC Security. */
-const services = [
+/** Servicios reales confirmados por JC Security. `image` es opcional: sin ella
+ *  la tarjeta muestra el fondo de muestra. */
+const services: { id: string; title: string; description: string; image?: string }[] = [
   {
     id: "planos-electricos",
     title: "Planos eléctricos",
     description:
       "Diseño y elaboración de planos eléctricos para hogares y negocios.",
+    image: "/servicios/planos-electricos.webp",
   },
   {
     id: "cerca-electrica",
@@ -45,7 +47,9 @@ export function ServicesPage() {
       <div className="services-grid">
         {services.map((s) => (
           <div key={s.id} className="card service-card">
-            <div className="service-card-media" aria-hidden="true" />
+            <div className="service-card-media" aria-hidden="true">
+              {s.image && <img src={s.image} alt="" loading="lazy" />}
+            </div>
             <div className="service-card-body">
               <span className="chip chip-accent service-card-tag">
                 Servicio

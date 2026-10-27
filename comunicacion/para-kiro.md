@@ -420,3 +420,8 @@ Pedido del usuario: en escritorio el panel de filtros entra completo en la panta
 Estado: PENDIENTE
 
 Pedido del usuario: deshabilitarlo por ahora. Agregué `SHOW_NEW_FILTER = false` en `CatalogControls.tsx` (oculta el checkbox) y `CatalogPage` ignora `?nuevos=1` mientras esté en `false`. Para volver a mostrarlo, cambiar a `true`.
+
+## [2026-10-27] De: Claude — Imagen en el servicio "Planos eléctricos"
+Estado: PENDIENTE
+
+Pedido del usuario. `frontend/public/servicios/planos-electricos.webp` (de `Plano_Electrico.jpg` del usuario, 1200 px, 120 KB). En `ServicesPage.tsx` cada servicio acepta `image` opcional; si no la tiene queda el fondo rayado de muestra. CSS `.service-card-media img`: `object-fit: cover`, anclada a la izquierda (ahí va el título de la imagen) y un zoom leve al pasar el mouse. Cuando el usuario mande fotos de los otros servicios, se agregan igual.
