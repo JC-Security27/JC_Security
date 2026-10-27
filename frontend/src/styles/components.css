@@ -257,6 +257,74 @@
   }
 }
 
+/* ----- Búsqueda del encabezado ----- */
+.header-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 1 340px;
+  min-width: 0;
+}
+.header-search .search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.header-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.55rem 5.2rem 0.55rem 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.header-search input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.header-search-btn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.header-search-btn:hover {
+  background: var(--accent-strong);
+}
+/* En móvil va en su propia fila debajo del logo */
+.header-search-row {
+  display: none;
+}
+/* Entre 861 y 1024 px el menú ocupa casi todo el ancho: la búsqueda baja a su propia fila. */
+@media (max-width: 1024px) {
+  .header-search-desktop {
+    display: none;
+  }
+  .header-search-row {
+    display: block;
+    padding-bottom: var(--space-3);
+  }
+  .header-search-row .header-search {
+    flex: 1;
+  }
+  .header-search-row input {
+    font-size: 16px; /* evita el zoom automático de iOS */
+  }
+}
+
 /* ----- Footer ----- */
 .site-footer {
   margin-top: var(--space-8);

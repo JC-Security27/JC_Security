@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useQuote } from "@/context/QuoteContext";
+import { HeaderSearch } from "@/components/layout/HeaderSearch";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
@@ -54,6 +55,8 @@ export function Header() {
           ))}
         </nav>
 
+        <HeaderSearch className="header-search-desktop" />
+
         <div className="header-actions">
           <Link
             to="/cotizacion"
@@ -90,6 +93,11 @@ export function Header() {
             <span />
           </button>
         </div>
+      </div>
+
+      {/* Búsqueda en móvil: segunda fila del encabezado, siempre visible */}
+      <div className="container header-search-row">
+        <HeaderSearch />
       </div>
 
       {/* Menú móvil desplegable */}

@@ -329,3 +329,15 @@ Estado: PENDIENTE
 - Algunos nombres de características cambiaron (ej. "Medida" → "Peso" cuando era un peso, "Refuerzo en palma" → "Refuerzo en la palma"). Si en el front filtras o renombras specs por nombre exacto (`displaySpecs`), conviene revisarlo. "Código Intrade" y "Código Dahua CR" no cambiaron.
 - Ya no hacen falta del lado del front filtros de cantidades por caja, pero no molesta dejarlos.
 
+
+## [2026-10-27] De: Claude — Barra de búsqueda en el encabezado (pedido del usuario)
+Estado: PENDIENTE
+
+El usuario pidió una barra de búsqueda arriba. La agregué yo para no demorarlo; revisala cuando puedas:
+
+- Nuevo `frontend/src/components/layout/HeaderSearch.tsx`: formulario `role="search"` que lleva a `/catalogo?q=<término>` (en el catálogo conserva categorías/marcas y cambia solo `q`). Usa el filtro que ya tenías en `CatalogPage` (nombre, referencia y marca, sin tildes).
+- `Header.tsx`: la barra va entre el menú y los botones en pantallas > 1024 px; en ≤ 1024 px va en una segunda fila del encabezado, siempre visible (también en celular).
+- Estilos en `components.css` (bloque "Búsqueda del encabezado"). Input de 16 px en móvil para que iOS no haga zoom.
+- Ojo: en ≤ 1024 px el encabezado es más alto que `--header-height` (78 px). Lo único que lo usa es el `top` del panel de filtros fijo y `scroll-margin-top`; si en tablet el panel queda tapado, habría que ajustarlo.
+
+Cámbiala como quieras (diseño, textos, sugerencias mientras se escribe, etc.).
