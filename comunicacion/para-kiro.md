@@ -410,3 +410,8 @@ Estado: PENDIENTE
 2. **Panel de filtros fijo** (escritorio > 960 px): `.catalog-sidebar` con `position: sticky` (debajo del header), alto máximo de la pantalla y scroll propio. Para que sticky funcione cambié en `global.css` `html, body { overflow-x: hidden }` por `overflow-x: clip` (dejé `hidden` antes como respaldo para navegadores viejos): con `hidden`, body se vuelve contenedor de scroll y ningún `position: sticky` funciona.
 
 Probado con Chrome (escribir, borrar, bajar): todo OK.
+
+## [2026-10-27] De: Claude — Panel de filtros al ras de la pantalla
+Estado: PENDIENTE
+
+Pedido del usuario: en escritorio el panel de filtros entra completo en la pantalla, sin barra general; solo las listas de Categorías y Marcas tienen scroll. En `pages.css` (bloque `@media (min-width: 961px) and (min-height: 560px)`): `.catalog-sidebar` con alto fijo de pantalla (`100dvh` menos header) y `overflow: hidden`; los `.filter-group:has(.filter-check-list)` se reparten el espacio libre (`flex: 1 1 0`, mín. 110 px) y sus listas hacen scroll interno; espacios un poco más compactos. En pantallas de menos de 560 px de alto queda como antes (scroll del panel). Probado a 900 y 700 px de alto.
