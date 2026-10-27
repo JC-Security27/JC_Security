@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Logo />
+          <Logo adaptive />
           <p>{siteConfig.shortDescription}</p>
           <WhatsAppButton
             message={generalContactMessage()}

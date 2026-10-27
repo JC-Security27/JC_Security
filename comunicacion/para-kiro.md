@@ -430,3 +430,11 @@ Pedido del usuario. `frontend/public/servicios/planos-electricos.webp` (de `Plan
 Estado: PENDIENTE
 
 Pedido del usuario. En `pages.css` (antes de "Contacto"): computadora (≥ 1025 px) 2 tarjetas por fila con título 1.5rem, texto 1.05rem y más relleno; tablet (641–1024 px) 2 por fila tamaño normal; celular sigue a 1 columna.
+
+## [2026-10-27] De: Claude — Logo nuevo (JCsecurity_Logo.png del usuario)
+Estado: PENDIENTE
+
+Pedido del usuario: reemplazar el escudo + "Security" por su logo nuevo.
+- `public/logo-jc-security.png` (blanco, recortado, 568×100 para retina) y `public/logo-jc-security-navy.png` (azul marino #142b55, mismo dibujo).
+- `components/ui/Logo.tsx`: ahora es una imagen. En el header siempre blanco; en el footer `<Logo adaptive />` muestra la blanca en tema oscuro y la azul en tema claro (antes el texto "Security" del footer quedaba blanco sobre blanco en tema claro).
+- CSS del logo en `components.css` (bloque "Logo"): alto 46 px, 38 px ≤ 1100 px, 30 px ≤ 520 px. Quité los estilos del escudo SVG (`.logo-shield`, `.logo-jc`, `.logo-text`); `public/jc-logo.png` ya no se usa en el logo (lo dejé por si lo usás en otro lado).

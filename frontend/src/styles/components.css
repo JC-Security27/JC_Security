@@ -3,72 +3,44 @@
    ========================================================================== */
 
 /* ----- Logo ----- */
-/* El logo vive en el header (fondo azul en ambos temas): texto/escudo claros. */
+/* Imagen del logo oficial (public/logo-jc-security*.png, proporción 5.7:1). */
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  color: var(--header-text);
-  font-weight: 700;
 }
-/* Escudo + monograma JC superpuesto */
-.logo-shield {
-  position: relative;
-  display: inline-grid;
-  place-items: center;
-  width: 58px;
-  height: 66px;
-  flex-shrink: 0;
-}
-.logo-shield-bg {
-  display: block;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-/* El monograma JC (jc-logo.png) recoloreado a cian con máscara CSS,
-   centrado dentro del escudo. Mantiene el diseño oficial. */
-.logo-jc {
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 46px;
-  height: 46px;
-  background-color: var(--accent-strong);
-  -webkit-mask: url("/jc-logo.png") center / contain no-repeat;
-  mask: url("/jc-logo.png") center / contain no-repeat;
-}
-.logo-text {
-  font-family: "Cinzel", Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1;
-}
-/* Imagen de logo oficial (frontend/public/logo.png) */
 .logo-img {
-  height: 56px;
-  width: auto;
   display: block;
-  object-fit: contain;
+  height: 46px;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 1100px) {
+  .logo-img {
+    height: 38px;
+  }
 }
 @media (max-width: 520px) {
-  .logo-text {
-    font-size: 1.3rem;
-  }
   .logo-img {
-    height: 44px;
+    height: 30px;
   }
-  .logo-shield {
-    width: 50px;
-    height: 56px;
+}
+/* Pie de página: versión azul marino en tema claro, blanca en tema oscuro. */
+.logo-img--on-dark {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-img--on-dark {
+    display: block;
   }
-  .logo-jc {
-    width: 40px;
-    height: 40px;
+  :root:not([data-theme="light"]) .logo-img--on-light {
+    display: none;
   }
+}
+:root[data-theme="dark"] .logo-img--on-dark {
+  display: block;
+}
+:root[data-theme="dark"] .logo-img--on-light {
+  display: none;
 }
 
 /* ----- Header ----- */
