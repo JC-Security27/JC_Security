@@ -42,6 +42,8 @@ FIXES = {
     # La foto muestra el refuerzo gris (pedido por Kiro/usuario, 2026-10-26).
     "tolsen-45024": [("en color negro", "en color gris"), ("Cuero dividido de vaca negro", "Cuero dividido de vaca gris")],
     # Nombres raros del documento (revisión 2026-10-27).
+    # Intrade y el documento del usuario las llaman "gaza plástica" (decisión del usuario, 2026-10-27).
+    "tolsen-50105": [("BRIDA PLÁSTICA", "GAZA PLÁSTICA BLANCA"), ("Brida", "Gaza"), ("brida", "gaza")],
     "tolsen-62611": [("NEUMÁTICO", "LLANTA NEUMÁTICA DE REPUESTO 10\" X 3.50\"-4")],
     "tolsen-90009": [("BULTO", "MOCHILA DE NYLON 38.4 L")],
     "keri-systems-ms3000x": [("MULLION MOUNT", "PARA MONTAJE EN MARCO DE PUERTA")],
@@ -61,7 +63,7 @@ GROUPS = {
     "ALICATE DE PUNTA": {"tolsen-10022": "8\" (200 mm)", "tolsen-10023": "6\" (160 mm)"},
     "ALICATE UNIVERSAL": {"tolsen-10001": "7\"", "tolsen-10002": "8\""},
     "BOLSO PARA HERRAMIENTAS TIPO MALETÍN": {"tolsen-80101": "17\" (43.2 cm)", "tolsen-80103": "16\" (40.6 cm)"},
-    "BRIDA PLÁSTICA NEGRA": {"tolsen-50115": "2.5 x 100 mm", "tolsen-50118": "3.6 x 200 mm", "tolsen-50120": "4.8 x 300 mm", "tolsen-50522": "4.8 x 400 mm"},
+    "GAZA PLÁSTICA NEGRA": {"tolsen-50115": "2.5 x 100 mm", "tolsen-50118": "3.6 x 200 mm", "tolsen-50120": "4.8 x 300 mm", "tolsen-50522": "4.8 x 400 mm"},
     "CAPA Y PANTALÓN IMPERMEABLES": {"tolsen-45197": "L", "tolsen-45198": "XL"},
     "CASCO DE SEGURIDAD (APROBADO CE)": {"tolsen-45188": "Amarillo", "tolsen-45189": "Azul", "tolsen-45190": "Rojo"},
     "CAUTÍN 120 V": {"tolsen-38513": "30 W", "tolsen-38515": "50 W", "tolsen-38516": "60 W"},

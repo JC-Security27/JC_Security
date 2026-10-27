@@ -15,7 +15,7 @@ import {
   ErrorState,
   SampleNotice,
 } from "@/components/ui/states";
-import { normalizeForSearch } from "@/lib/format";
+import { matchesSearch } from "@/lib/search";
 import { groupByVariants } from "@/lib/variants";
 import { withDemoBrands } from "@/config/brandLogos";
 import type { Brand, Category, Product } from "@/types/catalog";
@@ -81,17 +81,13 @@ export function CatalogPage() {
   // Aplica búsqueda + marca + nuevos (la categoría se maneja aparte para poder
   // agrupar cuando no hay una seleccionada).
   const matchesCommon = (p: Product): boolean => {
-    const q = normalizeForSearch(filters.search.trim());
-    const matchesSearch =
-      !q ||
-      normalizeForSearch(p.reference).includes(q) ||
-      normalizeForSearch(p.name).includes(q) ||
-      (p.brandName ? normalizeForSearch(p.brandName).includes(q) : false);
+    // Con sinónimos: "brida" encuentra las gazas, "bala" las cámaras bullet…
+    const matchesQuery = matchesSearch(p, filters.search);
     const matchesBrand =
       filters.brandIds.length === 0 ||
       (p.brandId ? filters.brandIds.includes(p.brandId) : false);
     const matchesNew = !filters.onlyNew || Boolean(p.isNew);
-    return matchesSearch && matchesBrand && matchesNew;
+    return matchesQuery && matchesBrand && matchesNew;
   };
 
   const baseFiltered = useMemo(() => {

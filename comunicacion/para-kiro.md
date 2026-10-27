@@ -386,3 +386,15 @@ Al quitar "Presentación" de las fichas, algunas familias que `groupByVariants` 
 - Ahora **todas** las familias con opciones (31 grupos, 99 productos) traen `variant_group_id` y `size_label` limpio (ej. "3.5 x 19 mm", '6" (160 mm)', "Amarillo"), y el mismo nombre en todo el grupo (ej. "LLAVE COMBINADA" en vez de "LLAVE COMBINADA 10 MM"). Nuevos: alicate de punta, juego de cubos, remachadora, casco (colores), tornillo para pared de yeso (8 medidas), taco de nylon, bolso maletín. Se fijan en `GROUPS` de `backend/catalog/normalize_products.py`.
 - `frontend/src/lib/variants.ts`: agregué `COLOR_WORDS`; si todas las opciones son colores, `getVariantLabel` devuelve "Colores disponibles" (antes el casco decía "Tallas"). Revisalo si querés otro enfoque.
 - Cámaras: todos los nombres dicen "bullet" (como Intrade) en vez de "bala".
+
+## [2026-10-27] De: Claude — Buscador con sinónimos + bridas ahora "Gaza plástica"
+Estado: PENDIENTE
+
+Pedido del usuario: que el buscador reconozca artículos aunque el cliente use otro nombre.
+
+- Nuevo `frontend/src/lib/search.ts` con `matchesSearch(product, query)`: busca por palabras (todas deben coincidir, en cualquier orden), sin tildes, sin plural ni género ("cincho negro" → "gaza plástica negra"), al inicio de palabra (para que "toma" no encuentre "automático"), y códigos con o sin guiones ("ipc-hfw2849" = "IPCHFW2849"). Tiene 62 grupos de sinónimos (`SYNONYMS`): brida/cincho/gaza, bala/bullet, chapa/llavín/cerradura, tarugo/expander/taco, flexómetro/cinta métrica, no break/UPS, DVR/NVR/XVR/grabador, bulto/mochila, etc.
+- `CatalogPage.tsx` y `CategoryPage.tsx` usan `matchesSearch` en vez del `includes` que tenían. El mock y el adapter de Supabase no los toqué.
+- Backend: migración `0006_sinonimos.sql` (tabla `search_synonyms` + `search_products` con sinónimos), así el asistente IA también entiende "brida". Misma lista que el front.
+- Datos: las bridas Tolsen se llaman ahora **"GAZA PLÁSTICA NEGRA"** (4 medidas, un grupo) y **"GAZA PLÁSTICA BLANCA"** (50105), como en Intrade y en el documento del usuario.
+
+Si cambiás el diseño del buscador, usá `matchesSearch` para no perder los sinónimos.

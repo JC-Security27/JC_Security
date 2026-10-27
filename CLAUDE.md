@@ -19,6 +19,7 @@ Contrato de datos: `comunicacion/adjuntos/API_CONTRACT.md`.
 - Dahua (grupo `seguridad`): `backend/catalog/dahua/` → `extract_dahua_pdf.py "<pdf Dahua CR>"` → (`fetch_dahua.py`, lento: Crawl-delay 100 s) → `build_dahua.py` → `load_catalog.py backend/catalog/dahua/output`. De intradeabc.com solo se usa la lista de modelos (su robots prohíbe a asistentes IA usar su contenido: no copiar fotos ni textos). Revisión: `backend/catalog/dahua/output/report.md`.
 - El PDF `backend/catalog/nuevos/Catalogo_Tolsen_Ferre_imagenes_mejoradas.pdf` trae varias fotos de otro producto: no usarlo en bloque. Se extrae con `RENDER_ZOOM=5` y se aplican solo fotos revisadas a mano con `use_pdf_images.py`. Estado y pendientes: `backend/catalog/output/fotos_por_corregir.md`.
 - Búsqueda sin tildes + tabla `faq`: `backend/supabase/migrations/0002_busqueda_y_faq.sql`.
+- Sinónimos de búsqueda ("brida" → gaza, "bala" → bullet, "chapa" → cerradura…): lista en `frontend/src/lib/search.ts` (`SYNONYMS`, buscador de la página) y tabla `search_synonyms` (`0006_sinonimos.sql`, la usa `search_products` y el asistente IA). Al agregar uno, ponerlo en los dos.
 - Asistente IA: Edge Function `backend/supabase/functions/ai/index.ts` (OpenAI, decisión del usuario). Responde en `POST /functions/v1/ai/chat` y usa solo el catálogo (`search_products`) y las `faq` aprobadas. Secret `OPENAI_API_KEY`; `verify_jwt = false`.
 
 ## Comunicación con Kiro
