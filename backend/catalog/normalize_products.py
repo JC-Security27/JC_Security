@@ -41,6 +41,12 @@ DROP_SPECS = ("master", "master pack", "inner", "inner pack")  # cantidades por 
 FIXES = {
     # La foto muestra el refuerzo gris (pedido por Kiro/usuario, 2026-10-26).
     "tolsen-45024": [("en color negro", "en color gris"), ("Cuero dividido de vaca negro", "Cuero dividido de vaca gris")],
+    # Nombres raros del documento (revisión 2026-10-27).
+    "tolsen-62611": [("NEUMÁTICO", "LLANTA NEUMÁTICA DE REPUESTO 10\" X 3.50\"-4")],
+    "tolsen-90009": [("BULTO", "MOCHILA DE NYLON 38.4 L")],
+    "keri-systems-ms3000x": [("MULLION MOUNT", "PARA MONTAJE EN MARCO DE PUERTA")],
+    # Es de 6 MP (3200 × 1800); la descripción decía 2 MP. "Bala" -> "bullet" como el resto del catálogo.
+    "dahua-ipchfw1639tcail": [("resolución de 2 MP", "resolución de 6 MP"), ("CÁMARA BALA", "CÁMARA BULLET")],
 }
 # Se venden por unidad aunque el documento diga cuántos vienen en la caja (confirmado por el usuario, 2026-10-27).
 # Los que sí se venden por caja: lápiz 42022, Super Glue 50190 y ganchos 83021/83024 (conservan "Contenido").
@@ -198,6 +204,7 @@ def main():
         if p["id"] in SOLD_BY_UNIT:
             new["specs"].pop("Contenido", None)
         for old, fixed in FIXES.get(p["id"], []):
+            new["name"] = new["name"].replace(old, fixed)
             new["description"] = new["description"] and new["description"].replace(old, fixed)
             new["specs"] = {k: v.replace(old, fixed) for k, v in new["specs"].items()}
         return new
