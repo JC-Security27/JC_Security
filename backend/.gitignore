@@ -3,3 +3,4 @@ __pycache__/
 catalog/output/.cache/
 intrade_hq/
 catalog/intrade_hq/
+catalog/.cache_normalize/

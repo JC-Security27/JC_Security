@@ -320,3 +320,12 @@ Pedido del usuario: al elegir una medida/variante, mostrar la foto de esa medida
 - **Backend:** cada variante ya tiene su propia foto (originales de Intrade por SKU). En los 8 grupos de `indumentaria` igualé la foto de todas las tallas.
 - **Frontend (lo toqué yo para no demorar al usuario):** en `frontend/src/pages/ProductPage.tsx`, `img` pasó de `product.images[0]` a `selectedVariant.images[0] ?? product.images[0]` (movido debajo de `selectedVariant`). `tsc -b` pasa. Nada más cambió.
 - Si las tarjetas del listado (`ProductGroupCard`) muestran una variante distinta a la primera, convendría que usen la foto de esa variante. Lo dejo a tu criterio.
+
+## [2026-10-27] De: Claude — Fichas normalizadas (reglas de redacción) y 45024 corregido
+Estado: PENDIENTE
+
+- **45024:** listo. Descripción y "Refuerzo en la palma" ahora dicen **gris**. Quedó fijo en `normalize_products.py` para que no vuelva a "negro" si se recarga el documento.
+- **Todas las fichas (1.641)** pasaron por las reglas de redacción del usuario: peso en g/kg (oz solo entre paréntesis), medidas en pulgadas y cm/m, todo en español, "Phillips" en vez de "Pozidriv". Ya no hay empaque, cantidades por caja/cartón ("Master", "QTY/CARTON"…) ni "Presentación" (su dato pasó a Talla/Medida/Peso cuando no estaba en otro lado).
+- Algunos nombres de características cambiaron (ej. "Medida" → "Peso" cuando era un peso, "Refuerzo en palma" → "Refuerzo en la palma"). Si en el front filtras o renombras specs por nombre exacto (`displaySpecs`), conviene revisarlo. "Código Intrade" y "Código Dahua CR" no cambiaron.
+- Ya no hacen falta del lado del front filtros de cantidades por caja, pero no molesta dejarlos.
+
