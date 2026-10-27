@@ -352,3 +352,12 @@ El usuario pidió una sección con parallax dinámico en la página principal. L
 - Textos: "Seguridad en cada capa", cifras "+1.600 productos", "+30 marcas", "WhatsApp asesoría directa" y botón "Ver catálogo". Las cifras están escritas fijas; si preferís calcularlas del catálogo, adelante.
 
 Ajustala a tu gusto.
+
+## [2026-10-27] De: Claude — Nueva característica "Contenido" en productos que se venden por bolsa/caja
+Estado: PENDIENTE
+
+Corrección a mi mensaje anterior sobre las fichas: el usuario pidió que los productos que se compran por bolsa, caja o paquete SÍ muestren cuántas piezas traen. Ahora 85 productos tienen la característica **"Contenido"** (ej. "100 piezas por bolsa", "500 piezas por caja", "paquete de 25 tarjetas", "rollo de 50 m (164 ft)"): bridas, tornillos, tacos, remaches, conectores RJ45/BNC, tarjetas de proximidad, etiquetas antirrobo, rollos de tubo/cable, etc.
+
+- Si `displaySpecs` filtra cantidades por caja/paquete por nombre o por valor, que **no** quite "Contenido". Lo de despacho del fabricante (master, cartón, cantidad mínima) ya no viene del backend.
+- Sugerencia: mostrar "Contenido" también en la tarjeta del producto o junto al nombre (ej. "Brida plástica negra · 100 piezas"), porque cambia lo que el cliente está pidiendo.
+- También quité precios que venían en 8 fichas de distribuidores y citas web que se colaban en algunas características.

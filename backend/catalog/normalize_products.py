@@ -22,6 +22,7 @@ No se agregan datos: solo se convierte, traduce, reetiqueta o quita.
 import concurrent.futures as cf
 import hashlib
 import json
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -33,7 +34,7 @@ import sync_intrade as si  # noqa: E402
 MODEL = "gpt-5.4-mini"
 CACHE = HERE / ".cache_normalize"
 WORKERS = 3
-BATCH = 8
+BATCH = 4
 KEEP_SPECS = ("Código Intrade", "Código Dahua CR")  # códigos: no se tocan
 DROP_SPECS = ("master", "master pack", "inner", "inner pack")  # cantidades por caja del fabricante
 # Correcciones del usuario que no están en sus documentos: (texto viejo, texto nuevo) por producto.
@@ -49,9 +50,16 @@ PROMPT = """Corriges fichas de productos de un catálogo en español (Costa Rica
 3. Medidas de longitud en pulgadas y en cm o m, ej. '7" (18 cm)', '8 m (26 ft)'. Si solo viene en mm, puedes dejar mm y agregar pulgadas convertidas. Usa coma o punto decimal de forma consistente (punto).
 4. Todo en español: traduce nombre, descripción y características que estén en inglés. Conserva modelos, marcas, normas y siglas (LED, PoE, IP67, H.265…).
 5. Usa "Phillips" en lugar de "Pozidriv" (y "PH" en lugar de "PZ").
-6. Quita el método de empaque (blíster, caja de color, bolsa, "packing", "empaque", etc.), sea línea de descripción o característica.
-7. Quita cantidades por caja/paquete/cartón del fabricante (ej. "QTY/CARTON", "caja con 15 unidades", "paquete de 100" cuando se refiere a cómo se despacha). Conserva las piezas que forman el producto (ej. "Juego de 6 piezas", "Kit de 3 alicates").
-8. Quita la característica "Presentación". Si su dato no aparece en otro lado, pásalo a la característica correcta (Medida, Peso, Piezas, Talla, Capacidad…).
+6. Quita el método de empaque (blíster, caja de color, bolsa con colgador, caja expositora, "packing"…): cómo viene envuelto no interesa. Pero NO quites la cantidad que trae la unidad de venta (ver 7).
+7. Cantidades. Distingue tres casos:
+   a) Unidad de venta: productos pequeños que se compran por bolsa, caja o paquete (tornillos, tacos, remaches, clavos, grapas, bridas/cinchos, gazas, conectores RJ45/BNC, glándulas, tarjetas y llaveros de proximidad, etiquetas antirrobo, ángulos y accesorios de canaleta, rollos de tubo o cable…). CONSERVA cuántas trae lo que se compra, como característica "Contenido", ej. "Contenido: 100 piezas por bolsa", "Contenido: 500 piezas por caja", "Contenido: paquete de 25 tarjetas", "Contenido: rollo de 50 m (164 ft)".
+   b) Piezas de un juego o kit: CONSERVA, como "Piezas: 9" o en el nombre ("Juego de 9 piezas").
+   c) Cantidades de despacho del fabricante: QUITA (caja master, inner, "QTY/CARTON", "unidades por caja" de herramientas o equipos que se venden por unidad, "cantidad mínima", "mínimo por master").
+   En tornillos, tacos, remaches, clavos, anclajes y similares, "Piezas/caja", "Pzs/caja" o "Pcs/caja" es la unidad de venta (caso a): "Contenido: 500 piezas por caja".
+   Si "Piezas por empaque" o similar vale 1, quítalo.
+   Quita cualquier precio. Quita la característica "Descripción" si solo repite el nombre.
+8. Quita la característica "Presentación", pero su dato NO se pierde: pásalo a la característica correcta (Piezas, Contenido, Medida, Peso, Largo, Diámetro, Talla, Capacidad…) salvo que ya esté igual en otra característica.
+9. NUNCA quites características técnicas (puertos, potencia, voltaje, consumo, resolución, dimensiones, capacidad, protección, tasas, tablas, compatibilidad, etc.) ni líneas de descripción con información. Solo se quitan las cosas de las reglas 6, 7c y 8 y los duplicados exactos. Si no hay nada que corregir, devuelve el producto igual (traducido si hacía falta).
 - name: en MAYÚSCULAS, en español. No quites el modelo/código si lo trae.
 - description: lista de líneas en español (sin el "• "). Puede quedar vacía si no venía.
 - specs: lista de {name, value} ya corregida. Sin duplicados.
@@ -76,6 +84,41 @@ def payload(p):
     specs = {k: v for k, v in (p["specs"] or {}).items() if k not in KEEP_SPECS}
     desc = [l.lstrip("• ").strip() for l in (p["description"] or "").split("\n") if l.strip()]
     return {"id": p["id"], "name": p["name"], "description": desc, "specs": [{"name": k, "value": str(v)} for k, v in specs.items()]}
+
+
+# Lo que sí se puede quitar (reglas 6, 7c y 8). Cualquier otro dato que desaparezca es un error del modelo.
+PACKING = re.compile(r"empaque|embalaje|packing|blíster|blister|presentaci|master|inner|cart[oó]n|qty|m[ií]nim|"
+                     r"por caja|/caja|de caja|caja de color|expositor|display box|colgador|c[oó]digo|sku|stock|ean", re.I)
+
+
+PRICE = re.compile(r"precio|price|costo", re.I)
+# Citas de la búsqueda web pegadas al texto: " ([sitio.com](https://...))". No se muestran.
+CITATION = re.compile(r"\s*\(\[[^\]]*\]\([^)]*\)\)|\s*\[[^\]]*\]\(https?://[^)]*\)")
+
+
+def clean(p):
+    """Producto sin citas web en descripción ni características."""
+    return {**p, "description": CITATION.sub("", p["description"] or "").strip() or None,
+            "specs": {k: CITATION.sub("", str(v)).strip() for k, v in (p["specs"] or {}).items()}}
+
+
+def numbers(text):
+    return set(re.findall(r"\d+(?:\.\d+)?", text.replace(",", ".")))
+
+
+def lost_data(p, new):
+    """Características o líneas de descripción del original cuyos números ya no aparecen en el resultado
+    (se aceptan conversiones: mm↔cm↔m, g↔kg, pulgadas↔cm)."""
+    after = [float(n) for n in numbers(json.dumps(new, ensure_ascii=False))]
+    factors = (1, 10, 100, 1000, 0.1, 0.01, 0.001, 2.54, 1 / 2.54, 25.4, 1 / 25.4)
+
+    def kept(n):
+        n = float(n)
+        return n <= 1 or any(abs(n * f - a) <= 0.02 * max(n * f, 1) for f in factors for a in after)
+
+    before = [f"{k}: {v}" for k, v in (p["specs"] or {}).items() if k not in KEEP_SPECS and not PRICE.search(k)]
+    before += [l for l in (p["description"] or "").split("\n") if l.strip()]
+    return [t for t in before if not PACKING.search(t) and not all(kept(n) for n in numbers(t))]
 
 
 def normalize_batch(batch, api_key):
@@ -109,6 +152,7 @@ def main():
         if len(page) < 1000:
             break
         off += 1000
+    rows = [clean(r) for r in rows]
     if sample:
         import random
         random.seed(11)
@@ -116,6 +160,9 @@ def main():
         hints = ("oz", "Pozidriv", "Presentación", "Packing", "QTY", "Empaque", "Color box")
         hot = [r for r in rows if any(h.lower() in json.dumps(r, ensure_ascii=False).lower() for h in hints)]
         rows = random.sample(hot, min(sample, len(hot)))
+    if "--ids" in sys.argv:  # --ids a,b,c: solo esos productos
+        ids = set(sys.argv[sys.argv.index("--ids") + 1].split(","))
+        rows = [r for r in rows if r["id"] in ids]
     batches = [rows[i:i + BATCH] for i in range(0, len(rows), BATCH)]
     print(f"{len(rows)} productos en {len(batches)} lotes", flush=True)
 
@@ -125,6 +172,22 @@ def main():
         except Exception as e:
             return batch, e
 
+    def build(p, r):
+        keep = {k: v for k, v in (p["specs"] or {}).items() if k in KEEP_SPECS}
+        code = si.norm(keep.get("Código Intrade") or "")
+        specs = {**keep, **{s["name"]: s["value"] for s in r["specs"] if s["name"] and s["value"]
+                            # "Código de stock: 36002" repite el código de Intrade
+                            and not ("código" in s["name"].lower() and code and si.norm(s["value"]) == code)}}
+        # Sin precios (regla del usuario) ni cantidades de despacho.
+        specs = {k: v for k, v in specs.items() if k.strip().lower() not in DROP_SPECS and not PRICE.search(k)}
+        new = {"name": r["name"].strip().upper(),
+               "description": "\n".join(f"• {l}" for l in r["description"] if l.strip()) or None, "specs": specs}
+        for old, fixed in FIXES.get(p["id"], []):
+            new["description"] = new["description"] and new["description"].replace(old, fixed)
+            new["specs"] = {k: v.replace(old, fixed) for k, v in new["specs"].items()}
+        return new
+
+    skipped = []
     done = errors = 0
     with cf.ThreadPoolExecutor(WORKERS) as pool:
         for batch, result in pool.map(work, batches):
@@ -138,17 +201,15 @@ def main():
                 if not r or not r["name"].strip():
                     errors += 1
                     continue
-                keep = {k: v for k, v in (p["specs"] or {}).items() if k in KEEP_SPECS}
-                code = si.norm(keep.get("Código Intrade") or "")
-                specs = {**keep, **{s["name"]: s["value"] for s in r["specs"] if s["name"] and s["value"]
-                                    # "Código de stock: 36002" repite el código de Intrade
-                                    and not ("código" in s["name"].lower() and code and si.norm(s["value"]) == code)}}
-                specs = {k: v for k, v in specs.items() if k.strip().lower() not in DROP_SPECS}
-                new = {"name": r["name"].strip().upper(),
-                       "description": "\n".join(f"• {l}" for l in r["description"] if l.strip()) or None, "specs": specs}
-                for old, fixed in FIXES.get(p["id"], []):
-                    new["description"] = new["description"] and new["description"].replace(old, fixed)
-                    new["specs"] = {k: v.replace(old, fixed) for k, v in new["specs"].items()}
+                new = build(p, r)
+                if lost_data(p, new):  # el modelo borró datos: se reintenta el producto solo
+                    try:
+                        new = build(p, normalize_batch([p], api_key)[0])
+                    except Exception:
+                        pass
+                    if lost_data(p, new):
+                        skipped.append(f"{p['id']}: {lost_data(p, new)[:3]}")
+                        continue
                 if sample:
                     print(f"\n=== {p['id']}\nANTES : {p['name']}\n        {p['description']}\n        {p['specs']}")
                     print(f"AHORA : {new['name']}\n        {new['description']}\n        {new['specs']}")
@@ -159,6 +220,8 @@ def main():
                 print(f"  {done} actualizados", flush=True)
     if not sample:
         print(f"\nListo: {done} productos actualizados; {errors} con error (se reintentan en la próxima corrida)")
+        if skipped:  # no se tocan: el modelo quitaba datos. Revisar a mano.
+            print(f"{len(skipped)} sin cambios porque se perdían datos:\n  " + "\n  ".join(skipped))
 
 
 if __name__ == "__main__":
