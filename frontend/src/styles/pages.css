@@ -1175,6 +1175,7 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--space-5);
   margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
   align-items: stretch;
 }
 .service-card {
@@ -1239,28 +1240,27 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* Computadora: tarjetas más grandes, 2 por fila (pedido del usuario). */
+/* Computadora: todas las tarjetas en una fila, a todo el ancho (respetando los
+   márgenes) y un poco más grandes. Si se agregan más servicios, pasan solas a
+   otra fila con el mismo tamaño (mínimo 280 px por tarjeta). */
 @media (min-width: 1025px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-6);
+  }
+  /* Misma proporción que las fotos (3:2): más alta y sin recortar. */
+  .service-card-media {
+    aspect-ratio: 3 / 2;
   }
   .service-card-body {
     gap: var(--space-3);
-    padding: var(--space-5) var(--space-6) var(--space-6);
-  }
-  .service-card-tag {
-    font-size: 0.85rem;
+    padding: var(--space-5);
   }
   .service-card-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .service-card-desc {
-    font-size: 1.05rem;
-  }
-  .service-card-cta {
-    padding-block: 0.8rem;
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 }
 

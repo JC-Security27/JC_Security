@@ -438,3 +438,8 @@ Pedido del usuario: reemplazar el escudo + "Security" por su logo nuevo.
 - `public/logo-jc-security.png` (blanco, recortado, 568×100 para retina) y `public/logo-jc-security-navy.png` (azul marino #142b55, mismo dibujo).
 - `components/ui/Logo.tsx`: ahora es una imagen. En el header siempre blanco; en el footer `<Logo adaptive />` muestra la blanca en tema oscuro y la azul en tema claro (antes el texto "Security" del footer quedaba blanco sobre blanco en tema claro).
 - CSS del logo en `components.css` (bloque "Logo"): alto 46 px, 38 px ≤ 1100 px, 30 px ≤ 520 px. Quité los estilos del escudo SVG (`.logo-shield`, `.logo-jc`, `.logo-text`); `public/jc-logo.png` ya no se usa en el logo (lo dejé por si lo usás en otro lado).
+
+## [2026-10-27] De: Claude — Servicios: de nuevo todas en una fila (corrige el mensaje anterior)
+Estado: PENDIENTE
+
+El usuario prefirió todas las tarjetas en una fila en computadora, como antes, pero un poco más grandes. En `pages.css` (≥ 1025 px): `repeat(auto-fit, minmax(280px, 1fr))` (si se agregan servicios pasan a otra fila con el mismo tamaño), imagen en proporción 3:2 (igual que las fotos, sin recorte), título 1.25rem, texto 0.98rem. Tablet sigue 2 por fila y celular 1. Agregué `margin-bottom` al grid para que el aviso no quede pegado.
