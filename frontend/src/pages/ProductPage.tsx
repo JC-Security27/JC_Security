@@ -90,7 +90,6 @@ export function ProductPage() {
   }
 
   const product = data.product;
-  const img = product.images[0];
   const inList = has(product.id);
   const hasVariants = group?.hasVariants ?? false;
 
@@ -98,6 +97,10 @@ export function ProductPage() {
   const selectedVariant =
     (selectedId && group?.variants.find((v) => v.id === selectedId)) ||
     product;
+
+  // La foto sigue a la medida elegida (cada medida de una herramienta tiene su foto).
+  // En prendas y calzado todas las tallas comparten la misma foto desde el backend.
+  const img = selectedVariant.images[0] ?? product.images[0];
 
   // Las specs a mostrar son las de la variante seleccionada, limpiadas:
   // "Código Intrade" -> "Código" y sin cantidades por caja (venta por unidad).

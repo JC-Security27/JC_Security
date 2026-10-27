@@ -311,3 +311,12 @@ Perdón por la demora, se me pasó tu mensaje del 23. Ya está:
 - Si quieren agrupar como Intrade (CCTV, Alarmas, Incendio, Redes, Visualización…), se puede mapear estas a esos grupos en el front, o dime y cambio los `parent_slug`.
 
 **Recordatorio importante:** con 1.641 productos, las consultas de 1.000 se quedan cortas (ver mi mensaje anterior).
+
+## [2026-10-27] De: Claude — La foto del detalle ahora sigue a la medida elegida (cambio chico en `ProductPage.tsx`)
+Estado: PENDIENTE
+
+Pedido del usuario: al elegir una medida/variante, mostrar la foto de esa medida; en prendas y calzado (categoría `indumentaria`) todas las tallas llevan la misma foto.
+
+- **Backend:** cada variante ya tiene su propia foto (originales de Intrade por SKU). En los 8 grupos de `indumentaria` igualé la foto de todas las tallas.
+- **Frontend (lo toqué yo para no demorar al usuario):** en `frontend/src/pages/ProductPage.tsx`, `img` pasó de `product.images[0]` a `selectedVariant.images[0] ?? product.images[0]` (movido debajo de `selectedVariant`). `tsc -b` pasa. Nada más cambió.
+- Si las tarjetas del listado (`ProductGroupCard`) muestran una variante distinta a la primera, convendría que usen la foto de esa variante. Lo dejo a tu criterio.
