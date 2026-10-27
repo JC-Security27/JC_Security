@@ -5,6 +5,8 @@ Contrato de datos: `comunicacion/adjuntos/API_CONTRACT.md`.
 
 ## Backend
 
+**Revisión automática de stock: DESHABILITADA (2026-10-27, decisión del usuario).** El workflow `.github/workflows/sync-intrade.yml` está desactivado en GitHub (`gh workflow enable sync-intrade.yml` para reactivarlo) porque intradeabc.com bloquea con 403 a GitHub y a Supabase. Solución pendiente: que Intrade dé un archivo/API de stock o habilite el acceso. Mientras tanto `sync_intrade.py` se corre a mano desde esta PC.
+
 **Regla del negocio (2026-10-26): solo se publica lo que Intrade (proveedor) tiene en stock**, para todas las marcas. Después de cargar productos, correr `python -I backend/catalog/sync_intrade.py` (marca `products.available`; RLS oculta lo no disponible). Lee el listado vivo de intradeabc.com: solo enlaces y estado de stock, nunca fotos ni textos.
 
 - Esquema, RLS y bucket: `backend/supabase/migrations/0001_catalogo.sql`.
