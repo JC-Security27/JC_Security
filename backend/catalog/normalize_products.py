@@ -63,6 +63,16 @@ PROMPT = """Corriges fichas de productos de un catálogo en español (Costa Rica
    Quita cualquier precio. Quita la característica "Descripción" si solo repite el nombre.
 8. Quita la característica "Presentación", pero su dato NO se pierde: pásalo a la característica correcta (Piezas, Contenido, Medida, Peso, Largo, Diámetro, Talla, Capacidad…) salvo que ya esté igual en otra característica.
 9. NUNCA quites características técnicas (puertos, potencia, voltaje, consumo, resolución, dimensiones, capacidad, protección, tasas, tablas, compatibilidad, etc.) ni líneas de descripción con información. Solo se quitan las cosas de las reglas 6, 7c y 8 y los duplicados exactos. Si no hay nada que corregir, devuelve el producto igual (traducido si hacía falta).
+10. Estructura de características (pedido del usuario). Cuando el dato exista (en specs o en la descripción), usa estas etiquetas exactas:
+   - "Material": composición (acero inoxidable, nylon 66, aluminio, Cr-V, PVC…).
+   - "Acabado": terminación superficial (zincado, galvanizado, cromado, pavonado, pulido, color de pintura…).
+   - "Tipo": forma o modelo base (cabeza plana, cabeza truss, rosca fina, punta broca, encastre Phillips, tipo bullet, tipo domo…).
+   - "Dimensiones": las medidas de la pieza en un solo valor (largo, diámetro, ancho, grosor, calibre, paso), ej. "4.2 x 13 mm (0.17 x 0.51")" o "Largo 200 mm (7.87"); diámetro 6 mm". Si ya hay varias características de medida (Medida, Largo, Diámetro, Tamaño, Ancho, Alto), júntalas aquí. Excepción: la medida que identifica la variante en herramientas (ej. "Medida: 6"" de un alicate) puede quedar como "Dimensiones" igual.
+   - "Peso unitario": peso de una pieza (o del equipo, si se vende por unidad).
+   - "Resistencia": capacidad de carga, tensión, torque, presión, voltaje de aislamiento, protección IP/IK, temperatura de trabajo, según aplique.
+   - "Uso recomendado": aplicación o superficie para la que sirve (ej. "Chapa de acero, perfiles metálicos", "Exteriores"). Si la descripción dice para qué se usa ("Para usar en…", "Ideal para…", "Diseñado para…"), resúmelo aquí siempre.
+   - "Contenido": cuántas piezas trae UNA unidad de venta (bolsa, caja o paquete que se compra). Si el dato habla de una caja que trae varias bolsas, pon solo lo de una bolsa.
+   Los demás datos técnicos (resolución, puertos, potencia, capacidad, compatibilidad, etc.) quedan con su propia etiqueta clara. No inventes ningún dato: si no está, no pongas la etiqueta. Una línea de descripción que solo repetía un dato pasado a características (ej. "Cromado", "Aluminio", "Nylon 66") se quita de la descripción; las frases descriptivas se quedan.
 - name: en MAYÚSCULAS, en español. No quites el modelo/código si lo trae.
 - description: lista de líneas en español (sin el "• "). Puede quedar vacía si no venía.
 - specs: lista de {name, value} ya corregida. Sin duplicados.

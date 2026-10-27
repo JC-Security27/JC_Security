@@ -64,6 +64,23 @@ const SPEC_RENAME: Record<string, string> = {
   "Codigo Intrade": "Código",
 };
 
+/**
+ * Orden de las características (pedido del usuario). La base (jsonb) no guarda
+ * el orden de las claves, así que se ordena aquí; lo demás va después, alfabético.
+ */
+const SPEC_ORDER = [
+  "Código",
+  "Material",
+  "Acabado",
+  "Tipo",
+  "Dimensiones",
+  "Peso unitario",
+  "Resistencia",
+  "Uso recomendado",
+  "Contenido",
+  "Piezas",
+];
+
 /** Claves de spec que NO se muestran (venta por caja / empaque mayorista). */
 const SPEC_HIDE = new Set([
   "cantidad por caja",
@@ -80,7 +97,7 @@ const SPEC_HIDE = new Set([
  * - renombra "Código Intrade" a "Código",
  * - omite las de cantidad por caja (venta por unidad),
  * - omite "SKU" cuando su valor es igual al del "Código" (es el mismo dato).
- * Conserva el orden original.
+ * Ordena según SPEC_ORDER (lo demás, alfabético).
  */
 export function displaySpecs(
   specs: Record<string, string> | undefined
@@ -108,5 +125,11 @@ export function displaySpecs(
     }
     out.push([SPEC_RENAME[key] ?? key, value]);
   }
-  return out;
+  const rank = (k: string) => {
+    const i = SPEC_ORDER.indexOf(k);
+    return i === -1 ? SPEC_ORDER.length : i;
+  };
+  return out.sort(
+    ([a], [b]) => rank(a) - rank(b) || a.localeCompare(b, "es")
+  );
 }
