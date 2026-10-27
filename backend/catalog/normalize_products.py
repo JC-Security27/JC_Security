@@ -42,6 +42,9 @@ FIXES = {
     # La foto muestra el refuerzo gris (pedido por Kiro/usuario, 2026-10-26).
     "tolsen-45024": [("en color negro", "en color gris"), ("Cuero dividido de vaca negro", "Cuero dividido de vaca gris")],
 }
+# Se venden por unidad aunque el documento diga cuántos vienen en la caja (confirmado por el usuario, 2026-10-27).
+# Los que sí se venden por caja: lápiz 42022, Super Glue 50190 y ganchos 83021/83024 (conservan "Contenido").
+SOLD_BY_UNIT = {"tolsen-42025", "tolsen-38052"}
 
 PROMPT = """Corriges fichas de productos de un catálogo en español (Costa Rica). Para cada producto recibes name, description (líneas que empiezan con "• ") y specs (nombre: valor). Devuelve el mismo producto corregido con estas reglas, SIN agregar datos nuevos:
 
@@ -182,6 +185,8 @@ def main():
         specs = {k: v for k, v in specs.items() if k.strip().lower() not in DROP_SPECS and not PRICE.search(k)}
         new = {"name": r["name"].strip().upper(),
                "description": "\n".join(f"• {l}" for l in r["description"] if l.strip()) or None, "specs": specs}
+        if p["id"] in SOLD_BY_UNIT:
+            new["specs"].pop("Contenido", None)
         for old, fixed in FIXES.get(p["id"], []):
             new["description"] = new["description"] and new["description"].replace(old, fixed)
             new["specs"] = {k: v.replace(old, fixed) for k, v in new["specs"].items()}
