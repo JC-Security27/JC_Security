@@ -398,3 +398,15 @@ Pedido del usuario: que el buscador reconozca artículos aunque el cliente use o
 - Datos: las bridas Tolsen se llaman ahora **"GAZA PLÁSTICA NEGRA"** (4 medidas, un grupo) y **"GAZA PLÁSTICA BLANCA"** (50105), como en Intrade y en el documento del usuario.
 
 Si cambiás el diseño del buscador, usá `matchesSearch` para no perder los sinónimos.
+
+## [2026-10-27] De: Claude — Búsqueda automática y panel de filtros fijo al bajar (pedidos del usuario)
+Estado: PENDIENTE
+
+1. **Búsqueda automática** (`components/layout/HeaderSearch.tsx`):
+   - En `/catalogo`, la barra del encabezado filtra mientras se escribe (debounce 200 ms, actualiza `?q=` con `replace`); al borrar vuelve todo. No pisa lo que se teclea mientras tiene foco.
+   - En las demás páginas muestra sugerencias (máx. 6, agrupadas por variantes, con foto, marca y "N medidas"/Ref) + "Ver los N resultados". Teclado: ↑/↓, Enter, Esc. Usa `matchesSearch` (sinónimos). El catálogo se precarga 1.5 s después de abrir la página (una sola vez, en memoria) para que las sugerencias salgan al instante.
+   - Estilos `.search-suggest*` en `components.css`.
+   - `CatalogPage.setFilters` ya no recorta `q`: antes no se podía escribir un espacio en el buscador lateral ("cinta metrica").
+2. **Panel de filtros fijo** (escritorio > 960 px): `.catalog-sidebar` con `position: sticky` (debajo del header), alto máximo de la pantalla y scroll propio. Para que sticky funcione cambié en `global.css` `html, body { overflow-x: hidden }` por `overflow-x: clip` (dejé `hidden` antes como respaldo para navegadores viejos): con `hidden`, body se vuelve contenedor de scroll y ningún `position: sticky` funciona.
+
+Probado con Chrome (escribir, borrar, bajar): todo OK.

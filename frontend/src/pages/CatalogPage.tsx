@@ -52,7 +52,8 @@ export function CatalogPage() {
 
   const setFilters = (next: CatalogFilters) => {
     const params: Record<string, string> = {};
-    if (next.search.trim()) params.q = next.search.trim();
+    // Sin recortar: así se puede escribir un espacio entre palabras ("cinta metrica").
+    if (next.search.trim()) params.q = next.search;
     if (next.categorySlugs.length) params.categorias = next.categorySlugs.join(",");
     if (next.brandIds.length) params.marcas = next.brandIds.join(",");
     if (next.onlyNew) params.nuevos = "1";

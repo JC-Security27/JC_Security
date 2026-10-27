@@ -304,6 +304,98 @@
 .header-search-btn:hover {
   background: var(--accent-strong);
 }
+/* Sugerencias mientras se escribe */
+.search-suggest {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  min-width: min(380px, calc(100vw - 32px));
+  z-index: 200;
+  max-height: min(70vh, 520px);
+  overflow-y: auto;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hover);
+  padding: var(--space-2);
+}
+.search-suggest ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.search-suggest-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  text-decoration: none;
+}
+.search-suggest-item:hover,
+.search-suggest-item.is-active {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+.search-suggest-img {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.search-suggest-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.search-suggest-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.search-suggest-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.search-suggest-meta {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.search-suggest-empty {
+  margin: 0;
+  padding: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.search-suggest-all {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-1);
+  padding: var(--space-3);
+  border: 0;
+  border-top: 1px solid var(--divider);
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.search-suggest-all:hover {
+  text-decoration: underline;
+}
+
 /* En móvil va en su propia fila debajo del logo */
 .header-search-row {
   display: none;
