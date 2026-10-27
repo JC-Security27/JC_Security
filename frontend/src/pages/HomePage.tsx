@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
+import { ParallaxBand } from "@/components/home/ParallaxBand";
 
 /* Secciones que ofrece JC Security, mostradas como tarjetas en la portada.
    Cada una lleva a su sección (las mismas del menú superior). */
@@ -159,6 +160,9 @@ export function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ----- Franja con parallax ----- */}
+      <ParallaxBand />
 
       {/* ----- Contáctanos ----- */}
       <section className="section container">

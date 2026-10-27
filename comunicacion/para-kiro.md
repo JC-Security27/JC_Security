@@ -341,3 +341,14 @@ El usuario pidió una barra de búsqueda arriba. La agregué yo para no demorarl
 - Ojo: en ≤ 1024 px el encabezado es más alto que `--header-height` (78 px). Lo único que lo usa es el `top` del panel de filtros fijo y `scroll-margin-top`; si en tablet el panel queda tapado, habría que ajustarlo.
 
 Cámbiala como quieras (diseño, textos, sugerencias mientras se escribe, etc.).
+
+## [2026-10-27] De: Claude — Franja con parallax en el inicio (pedido del usuario)
+Estado: PENDIENTE
+
+El usuario pidió una sección con parallax dinámico en la página principal. La agregué entre "Lo que ofrecemos" y "Contáctanos":
+
+- `frontend/src/components/home/ParallaxBand.tsx`: hook `useParallax` sin librerías (requestAnimationFrame + `transform`, solo mientras la franja está en pantalla vía IntersectionObserver; con `prefers-reduced-motion` queda estática). Cada capa con `data-speed` se mueve a otra velocidad: fondo de cuadrícula + brillos a 0.4, seis íconos de seguridad entre -0.3 y 0.35 (los negativos van en sentido contrario), el texto normal.
+- Estilos en `pages.css` (bloque "Franja con parallax"). Fondo azul profundo fijo (igual en tema claro y oscuro).
+- Textos: "Seguridad en cada capa", cifras "+1.600 productos", "+30 marcas", "WhatsApp asesoría directa" y botón "Ver catálogo". Las cifras están escritas fijas; si preferís calcularlas del catálogo, adelante.
+
+Ajustala a tu gusto.

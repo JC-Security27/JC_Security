@@ -234,6 +234,118 @@
 }
 
 /* ----- CTA band ----- */
+/* ----- Franja con parallax (inicio) ----- */
+.parallax-band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin-top: var(--space-12);
+  padding-block: clamp(5rem, 12vw, 9rem);
+  background: var(--brand-deep, #0a1728);
+  color: #eaf1f7;
+  text-align: center;
+}
+/* Capa de fondo: más alta que la franja para que al moverse nunca se vea el borde. */
+.parallax-bg {
+  position: absolute;
+  inset: -45% 0;
+  z-index: -2;
+  background: radial-gradient(
+      600px 360px at 20% 35%,
+      color-mix(in srgb, var(--brand-cyan) 28%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      520px 320px at 82% 65%,
+      color-mix(in srgb, var(--brand-mid, #2f5d9e) 45%, transparent),
+      transparent 70%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 48px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 48px
+    );
+  will-change: transform;
+}
+.parallax-icons {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.parallax-icon {
+  position: absolute;
+  color: var(--brand-cyan);
+  opacity: 0.4;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--brand-cyan) 45%, transparent));
+  will-change: transform;
+}
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+.parallax-content .eyebrow {
+  color: var(--brand-cyan);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.parallax-content h2 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0;
+}
+.parallax-content p {
+  color: #b9c8d8;
+  max-width: 56ch;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.parallax-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+}
+.parallax-stats li {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.parallax-stats strong {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.parallax-stats span {
+  color: #9fb3c7;
+  font-size: 0.9rem;
+}
+@media (max-width: 640px) {
+  .parallax-icon {
+    opacity: 0.25;
+  }
+  .parallax-stats li {
+    min-width: 0;
+    flex: 1 1 40%;
+  }
+}
+
 .cta-band {
   background: var(--primary);
   color: var(--text-on-brand);
