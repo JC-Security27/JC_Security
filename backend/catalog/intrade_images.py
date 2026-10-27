@@ -33,6 +33,9 @@ LISTING = "https://intradeabc.com/productos/page/{n}/"
 MIN_KEEP = 600   # fotos actuales con lado mayor menor a esto se reemplazan
 MIN_NEW = 500    # la de Intrade tiene que ser al menos así de grande para valer la pena
 WORKERS = 3
+# --brand tolsen: reemplaza TODAS las fotos de la marca por las de Intrade. El usuario confirmó
+# (2026-10-27) que las fotos de su documento Tolsen son las correctas para cada producto.
+BRAND = sys.argv[sys.argv.index("--brand") + 1] if "--brand" in sys.argv else None
 OUT = HERE / "intrade_hq"
 UA = "Mozilla/5.0 (JC Security catalog sync)"
 
@@ -92,7 +95,10 @@ def main(dry_run):
         if len(page) < 1000:
             break
         off += 1000
-    todo = [r for r in rows if not r["product_images"] or max(r["product_images"][0]["width"] or 0, r["product_images"][0]["height"] or 0) < MIN_KEEP]
+    if BRAND:  # --brand X: todas las fotos de esa marca, sin importar el tamaño actual
+        todo = [r for r in rows if r["brand_id"] == BRAND]
+    else:
+        todo = [r for r in rows if not r["product_images"] or max(r["product_images"][0]["width"] or 0, r["product_images"][0]["height"] or 0) < MIN_KEEP]
     print(f"{len(rows)} visibles; {len(todo)} con foto chica (< {MIN_KEEP} px)", flush=True)
     images = listing_images()
     jobs = []
@@ -114,7 +120,7 @@ def main(dry_run):
                 data = resp.read()
             if max(Image.open(io.BytesIO(data)).size) < MIN_NEW:
                 return r["id"], "original chico"
-            name = f"{r['id']}-hq.webp"
+            name = f"{r['id']}-hq2.webp" if BRAND else f"{r['id']}-hq.webp"  # nombre nuevo: evita la caché del navegador
             w, h = to_webp(data, OUT / name)
             req = urllib.request.Request(f"{base}/storage/v1/object/catalogo/{name}", data=(OUT / name).read_bytes(), method="POST",
                                          headers={"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "image/webp",
