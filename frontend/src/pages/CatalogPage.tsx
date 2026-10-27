@@ -5,6 +5,7 @@ import { useAsync } from "@/hooks/useAsync";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import {
   CatalogControls,
+  SHOW_NEW_FILTER,
   EMPTY_FILTERS,
   type CatalogFilters,
 } from "@/components/catalog/CatalogControls";
@@ -47,7 +48,7 @@ export function CatalogPage() {
     brandIds: (searchParams.get("marcas") ?? "")
       .split(",")
       .filter(Boolean),
-    onlyNew: searchParams.get("nuevos") === "1",
+    onlyNew: SHOW_NEW_FILTER && searchParams.get("nuevos") === "1",
   };
 
   const setFilters = (next: CatalogFilters) => {

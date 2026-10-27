@@ -10,6 +10,9 @@ import type { Brand, Category } from "@/types/catalog";
    El layout (sidebar en escritorio / drawer en móvil) lo pone CatalogPage;
    este componente solo renderiza el contenido del panel.
    ========================================================================== */
+/** Filtro "Solo productos nuevos": oculto de momento (pedido del usuario, 2026-10-27). */
+export const SHOW_NEW_FILTER = false;
+
 export interface CatalogFilters {
   search: string;
   categorySlugs: string[]; // vacío = todas
@@ -166,7 +169,8 @@ export function CatalogControls({
         </div>
       )}
 
-      {/* Solo nuevos */}
+      {/* Solo nuevos (deshabilitado de momento, pedido del usuario) */}
+      {SHOW_NEW_FILTER && (
       <div className="filter-group">
         <label className="filter-check">
           <input
@@ -177,6 +181,7 @@ export function CatalogControls({
           <span className="filter-check-label">Solo productos nuevos</span>
         </label>
       </div>
+      )}
     </div>
   );
 }
