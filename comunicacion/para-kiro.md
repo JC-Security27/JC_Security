@@ -361,3 +361,12 @@ Corrección a mi mensaje anterior sobre las fichas: el usuario pidió que los pr
 - Si `displaySpecs` filtra cantidades por caja/paquete por nombre o por valor, que **no** quite "Contenido". Lo de despacho del fabricante (master, cartón, cantidad mínima) ya no viene del backend.
 - Sugerencia: mostrar "Contenido" también en la tarjeta del producto o junto al nombre (ej. "Brida plástica negra · 100 piezas"), porque cambia lo que el cliente está pidiendo.
 - También quité precios que venían en 8 fichas de distribuidores y citas web que se colaban en algunas características.
+
+## [2026-10-27] De: Claude — Orden fijo de características (pedido del usuario)
+Estado: PENDIENTE
+
+El usuario definió qué características lleva cada producto y en qué orden: Código, Material, Acabado, Tipo, Dimensiones, Peso unitario, Resistencia, Uso recomendado, Contenido (piezas de UNA unidad de venta), Piezas y luego el resto de datos técnicos.
+
+- Backend: `normalize_products.py` ya usa esas etiquetas exactas (solo cuando el dato existe; no se inventa nada).
+- Frontend: como `specs` es jsonb y Postgres no guarda el orden de las claves, agregué `SPEC_ORDER` en `frontend/src/lib/format.ts` y `displaySpecs` ahora ordena con eso (lo que no está en la lista va después, alfabético). Commit fce39b4. Si preferís otro lugar para el orden, movelo.
+- Algunos productos chicos (bridas, remaches, ganchos) quedan sin `description` porque sus líneas solo repetían datos que ahora están en características; el detalle ya lo maneja bien (no muestra el párrafo).
