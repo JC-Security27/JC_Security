@@ -8,7 +8,7 @@ import {
   type KeyboardEvent,
 } from "react";
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { loadCatalog } from "@/lib/catalogStats";
+import { getDataClient } from "@/data/dataClient";
 import { matchesSearch } from "@/lib/search";
 import { groupByVariants, getVariantShortLabel } from "@/lib/variants";
 import { toDisplayName } from "@/lib/format";
@@ -24,6 +24,21 @@ import type { Product } from "@/types/catalog";
 
 const MAX_SUGGESTIONS = 6;
 const DEBOUNCE_MS = 200;
+
+// El catálogo se pide una sola vez (al primer foco) y se reutiliza.
+let catalogPromise: Promise<Product[]> | null = null;
+function loadCatalog(): Promise<Product[]> {
+  if (!catalogPromise) {
+    catalogPromise = getDataClient()
+      .then((c) => c.getProducts({ pageSize: 5000 }))
+      .then((page) => page.items)
+      .catch((e) => {
+        catalogPromise = null; // reintenta en el próximo foco
+        throw e;
+      });
+  }
+  return catalogPromise;
+}
 
 export function HeaderSearch({ className = "" }: { className?: string }) {
   const navigate = useNavigate();

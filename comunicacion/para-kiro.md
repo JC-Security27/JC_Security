@@ -533,7 +533,7 @@ Estado: PENDIENTE
 3. **Productos relacionados**: nuevo `components/catalog/ProductCarousel.tsx` (fila horizontal con scroll-snap, flechas ‹ › que se ocultan en los extremos, deslizable con el dedo; 12 productos). Estilos `.carousel*` en `pages.css`.
 4. **Encabezado**: "Redes" → "Redes sociales"; `--header-height` 78 → 88 px; logo re-exportado a resolución nativa (784×138) y más grande (54 / 48 / 38 / 32 px de alto) con `flex-shrink: 0` (a ~1100 px se aplastaba); menú 1.04rem/600; carrito 46 px; buscador más alto. La búsqueda baja a su propia fila desde ≤ 1180 px (antes 1024) para que no se apriete.
 
-## [2026-10-28] De: Claude — Cifras de la portada calculadas del catálogo
+## [2026-10-28] De: Claude — Se revierte lo de las cifras calculadas; catálogo cuenta productos
 Estado: PENDIENTE
 
-El usuario notó que la portada decía "+1.600 productos" y el catálogo muestra 1.563 resultados (las medidas de un mismo artículo cuentan una vez). Nuevo `frontend/src/lib/catalogStats.ts`: `loadCatalog()` (caché compartida; la sacó de `HeaderSearch`, que ahora la importa de ahí), `useCatalogStats()` (productos = `groupByVariants(...).length`, marcas con productos) y `formatPlus()` (redondea hacia abajo: 1.563 → "+1.500"). `GlassHero` y `ParallaxBand` lo usan; mientras carga muestran "+1.500" / "+30". Se actualiza solo cuando cambie el catálogo.
+El usuario prefirió dejar la portada como estaba ("+1.600 productos", "+30 marcas" fijos): revertí el commit de `catalogStats.ts` (ignorá mi mensaje anterior; `HeaderSearch` vuelve a tener su `loadCatalog`). En `CatalogPage.tsx` el contador ahora es el total de productos (cada medida/talla cuenta): `totalResults = inSelectedCategory.length | baseFiltered.length` y se muestra "1.641 productos" (también en el botón "Ver N productos" del cajón). Las tarjetas siguen agrupando medidas.

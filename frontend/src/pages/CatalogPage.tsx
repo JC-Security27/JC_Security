@@ -90,7 +90,7 @@ export function CatalogPage() {
     const client = await getDataClient();
     const [productsPage, allCategories, brands] = await Promise.all([
       // pageSize grande: el adapter pagina internamente y trae TODO el catálogo
-      // (son más de 1.500 productos; Supabase corta en 1.000 por consulta).
+      // (son 1.600+ productos; Supabase corta en 1.000 por consulta).
       client.getProducts({ pageSize: 5000 }),
       client.getCategories(),
       client.getBrands(),
@@ -149,10 +149,14 @@ export function CatalogPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, baseFiltered, hasCategoryFilter]);
 
-  // Contamos grupos de variantes (cada "N tallas" cuenta como 1 resultado).
+  // Total de productos (cada medida o talla cuenta, pedido del usuario: el
+  // catálogo completo muestra 1.641). Las tarjetas igual agrupan las medidas.
   const totalResults = hasCategoryFilter
-    ? groupByVariants(inSelectedCategory).length
-    : groupByVariants(baseFiltered).length;
+    ? inSelectedCategory.length
+    : baseFiltered.length;
+  const totalLabel = `${totalResults.toLocaleString("es-CR").replace(/\s/g, ".")} ${
+    totalResults === 1 ? "producto" : "productos"
+  }`;
 
   // Cantidad de filtros activos (para el badge del botón "Filtros").
   const activeFilterCount =
@@ -238,7 +242,7 @@ export function CatalogPage() {
                   className="btn btn-primary btn-block"
                   onClick={() => setFiltersOpen(false)}
                 >
-                  Ver {totalResults} resultado(s)
+                  Ver {totalLabel}
                 </button>
               </div>
             </aside>
@@ -279,7 +283,7 @@ export function CatalogPage() {
                 )}
               </button>
               <span className="result-count muted" aria-live="polite">
-                {totalResults} resultado(s)
+                {totalLabel}
               </span>
             </div>
           )}
