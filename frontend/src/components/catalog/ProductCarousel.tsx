@@ -39,7 +39,7 @@ export function ProductCarousel({ groups, label }: { groups: ProductGroup[]; lab
   };
 
   return (
-    <div className="carousel">
+    <div className={`carousel ${canPrev ? "can-prev" : ""} ${canNext ? "can-next" : ""}`}>
       <button
         type="button"
         className="carousel-btn carousel-btn--prev"
@@ -47,7 +47,9 @@ export function ProductCarousel({ groups, label }: { groups: ProductGroup[]; lab
         disabled={!canPrev}
         aria-label="Ver anteriores"
       >
-        ‹
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </button>
       <div className="carousel-track" ref={track} role="region" aria-label={label} tabIndex={0}>
         {groups.map((g) => (
@@ -63,7 +65,9 @@ export function ProductCarousel({ groups, label }: { groups: ProductGroup[]; lab
         disabled={!canNext}
         aria-label="Ver siguientes"
       >
-        ›
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </button>
     </div>
   );

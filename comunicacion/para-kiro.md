@@ -559,3 +559,14 @@ Pedidos del usuario:
 2. **Bot de IA**: el botón flotante usa `robot-asistente.png` (sin el globo "¡Hola!…"); `.ai-fab-robot` ahora se dimensiona por alto (178/134/114 px). Borré `robot-asistente-dialogo.png`.
 3. **Robots**: en `robot-asistente.png` y `robot-saludando.png` reemplacé el escudo del pecho por el monograma JC plateado (el escudo ya no se usa en la marca).
 4. **Servicios**: nuevo `public/robot-ingeniero.png` (el robot con casco blanco, tabla y lápiz; editado a partir de la imagen original). `ServicesPage.tsx` tiene un encabezado `.services-hero` con texto (15 años), 3 cifras, 3 pasos "cómo trabajamos", botón de WhatsApp y el robot; título "Nuestros servicios" antes de las tarjetas. Estilos en `pages.css` (bloque antes de "Contacto").
+
+## [2026-10-28] De: Claude — Robot JC por sección, volver arriba, filas completas, flechas del carrusel
+Estado: PENDIENTE
+
+Pedidos del usuario:
+1. **Robot JC** (el usuario dejó 6 versiones en `public/JC_Robot_Normal/`, sin versionar): las agrandé 2× con IA (EDSR) y quedaron en `public/robots/robot-{home,catalogo,servicios,guias,redes,contacto}.webp` (+ `robot-asistente.webp` para el botón de IA, que el usuario movió de `public/`). Nuevo `components/ui/RobotStage.tsx`: `RobotStage` (robot + anillo + 4 tarjetas de vidrio con imagen o ícono y nombre) y `PageHero` (texto + robot). Lo usan Catálogo, Guías, Redes sociales y Contacto (reemplaza `.section-head`), Servicios (en `.services-hero`) y la portada (`GlassHero` usa `robot-home.webp`). Estilos en `styles/robot-stage.css`. Borré `robot-ingeniero.png`; `robot-saludando.png` también se fue.
+2. **Servicios**: imágenes nuevas del usuario (planos, inspección, trabajos de altura ahora horizontal → ya sin `imageFit: "contain"`). Se quitó la cifra "N servicios" (el usuario no quiere mostrar cuántos hay) → "Hogar y negocio".
+3. **Portada** (`homeStory.ts`): Vigila "Monitoreo continuo 24/7", Conecta "Conexión sin interrupciones", Equípate "El equipo que necesitas".
+4. **Volver arriba**: `components/ui/BackToTop.tsx` en `Layout`; aparece al bajar 1,2 pantallas; fijo abajo a la derecha, a la izquierda del robot del asistente (estilos al final de `components.css`).
+5. **Catálogo**: `previewPerCategory` = filas completas según columnas reales (ResizeObserver lee `grid-template-columns` de `.catalog-grid`): mínimo 8 redondeado a la fila (3→9, 4→8, 5→10). Celular sigue en 4.
+6. **Carrusel**: flechas SVG en círculo de vidrio con borde cian (hover relleno cian), y desvanecido fino en los bordes (`.carousel.can-prev/.can-next`).
