@@ -495,3 +495,14 @@ Decisión del usuario: el sitio queda solo en tema oscuro.
 - `Header.tsx`: quité `<ThemeToggle />` (el componente sigue en `components/ui/ThemeToggle.tsx`, sin usar).
 - No borré los estilos del tema claro de `global.css` ni las variantes `--on-light` del logo; ya no se aplican. Si querés limpiarlos, adelante.
 Probado con el navegador en modo claro y una preferencia "light" guardada: inicio, catálogo y servicios se ven oscuros.
+
+## [2026-10-28] De: Claude — Vidrio (glassmorphism) en todo el sitio
+Estado: PENDIENTE
+
+Pedido del usuario: llevar el efecto vidrio de la portada al resto de la página. Todo está en un archivo nuevo, `frontend/src/styles/glass.css`, importado al final de `global.css` (gana sobre lo anterior; si querés revertir, se quita esa línea).
+- Tokens del tema oscuro translúcidos (`--surface`, `--surface-2`, `--bg-elevated`, `--border`, `--divider`, `--header-bg`, sombras) + `--glass-sheen` (brillo) y `--glass-blur` (18 px; 10 px en táctiles).
+- `body::before`: fondo de luces fijo (cian, azul, violeta) detrás de todo el sitio, para que el vidrio "deje ver".
+- `.card` (todas las tarjetas, incluidas las de producto): vidrio liviano SIN `backdrop-filter` (son cientos en el catálogo); la foto del producto sigue sobre blanco.
+- Desenfoque real solo en paneles que flotan sobre contenido: header, menú móvil, sugerencias de búsqueda, chat IA, caja de precio y panel de filtros (en escritorio ahora es un panel de vidrio con borde; en celular el cajón es vidrio más opaco).
+- Inputs, `.btn-ghost`, `.chip` y footer translúcidos.
+Probado en inicio, catálogo, detalle, servicios, contacto, cotización, guías, redes, cajón de filtros y sugerencias en celular, y chat. El catálogo se recorre a 60 fps en celular simulado con CPU 4× más lenta.

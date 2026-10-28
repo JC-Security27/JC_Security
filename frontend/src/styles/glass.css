@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Vidrio (glassmorphism) en todo el sitio (pedido del usuario, 2026-10-28).
+   El sitio es solo oscuro: aquí se vuelven translúcidas las superficies del
+   tema y se agrega un fondo de luces fijo para que el vidrio "deje ver".
+
+   Rendimiento:
+   - Las tarjetas (hay cientos en el catálogo) usan vidrio "liviano": brillo,
+     borde y transparencia, SIN backdrop-filter.
+   - El desenfoque real (backdrop-filter) solo va en paneles que flotan sobre
+     contenido: header, menú móvil, sugerencias, filtros, chat, precio.
+   - En táctiles el desenfoque es menor.
+   Se importa al final de global.css: gana sobre los estilos anteriores.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  --surface: rgba(20, 44, 72, 0.42);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --bg-elevated: rgba(10, 24, 42, 0.82);
+  --border: rgba(160, 205, 245, 0.2);
+  --divider: rgba(148, 190, 230, 0.12);
+  --header-bg: rgba(7, 18, 33, 0.62);
+  --header-border: rgba(148, 190, 230, 0.12);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-hover: 0 16px 44px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  --glass-sheen: linear-gradient(155deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 42%, rgba(66, 215, 231, 0.04));
+  --glass-blur: 18px;
+}
+@media (hover: none), (pointer: coarse) {
+  :root[data-theme="dark"] {
+    --glass-blur: 10px;
+  }
+}
+
+/* Fondo de luces fijo detrás de todo el sitio (capa propia de la GPU). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 620px at 88% -6%, rgba(66, 215, 231, 0.24), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, rgba(45, 91, 154, 0.5), transparent 70%),
+    radial-gradient(760px 560px at 64% 106%, rgba(139, 124, 255, 0.22), transparent 70%),
+    radial-gradient(520px 420px at 40% 55%, rgba(66, 215, 231, 0.07), transparent 70%),
+    linear-gradient(180deg, #0a1728, #07111f);
+  will-change: transform;
+}
+
+/* Clase reutilizable para paneles de vidrio con desenfoque real. */
+.glass-panel,
+.site-header,
+.mobile-nav,
+.search-suggest,
+.ai-panel,
+.price-box {
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+}
+
+/* ----- Tarjetas: vidrio liviano ----- */
+.card {
+  background: var(--glass-sheen), var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+.card {
+  border-top-color: rgba(200, 230, 255, 0.28);
+}
+.card:hover {
+  border-color: color-mix(in srgb, var(--accent) 38%, transparent);
+}
+/* La foto del producto sigue sobre blanco (los productos se ven mejor). */
+.product-card-media {
+  background: #ffffff;
+}
+
+/* ----- Paneles ----- */
+.price-box {
+  background: var(--glass-sheen), var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+.search-suggest,
+.mobile-nav {
+  background: rgba(10, 24, 42, 0.72);
+}
+.ai-panel {
+  background: var(--glass-sheen), rgba(10, 24, 42, 0.78);
+}
+
+/* Panel de filtros del catálogo: en escritorio, un panel de vidrio fijo. */
+@media (min-width: 961px) {
+  .catalog-sidebar {
+    padding: var(--space-4) var(--space-3) var(--space-4) var(--space-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--glass-sheen), var(--surface);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  }
+}
+/* En celular el panel es un cajón lateral: vidrio más opaco para leer bien. */
+@media (max-width: 960px) {
+  .catalog-sidebar {
+    background: rgba(10, 24, 42, 0.86);
+    backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  }
+  .catalog-drawer-foot {
+    background: rgba(10, 24, 42, 0.92);
+  }
+}
+
+/* ----- Entradas de texto y botones secundarios ----- */
+.filters-search input,
+.header-search input,
+.filter-brand-search,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--border);
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.chip {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ----- Pie de página: vidrio sin desenfoque (es grande y se mueve con el scroll) ----- */
+.site-footer {
+  background: var(--glass-sheen), rgba(10, 24, 42, 0.6);
+  border-top-color: var(--border);
+}
+
+/* ----- Encabezados de página (catálogo, servicios…) sobre el fondo de luces ----- */
+.cta-band:not(.cta-glass) {
+  background: linear-gradient(135deg, rgba(45, 91, 154, 0.55), rgba(16, 48, 90, 0.55));
+  border-block: 1px solid var(--border);
+}

@@ -8,6 +8,7 @@
 @import "./components.css";
 @import "./pages.css";
 @import "./home.css";
+@import "./glass.css";
 
 :root {
   /* ----- Colores de marca (constantes, no cambian con el tema) ----- */
