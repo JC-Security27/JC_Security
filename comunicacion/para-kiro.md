@@ -452,3 +452,13 @@ Pedido del usuario: fondo con la silueta de Costa Rica e iluminación como las l
 - `components/home/CostaRicaNight.tsx`: SVG con tierra en degradado, contorno cian con brillo, luces doradas con halo, rutas punteadas animadas, pulso en San José, algunas luces titilan, rótulos "Océano Pacífico" y "Mar Caribe". Respeta `prefers-reduced-motion`.
 - `ParallaxBand.tsx`: el mapa es una capa de parallax propia (`data-speed="0.15"`); el texto quedó a la izquierda en computadora y el mapa a la derecha; ≤ 900 px el mapa va centrado detrás del texto con opacidad 0.45. Menos íconos flotantes (3), en la zona del texto.
 - CSS en `pages.css`, bloque "Franja con parallax (inicio): Costa Rica de noche" (cielo nocturno con auroras y estrellas).
+
+## [2026-10-28] De: Claude — Franja Costa Rica: parallax optimizado y adaptado a todos los tamaños
+Estado: PENDIENTE
+
+Pedido del usuario: que el movimiento se vea bien y que funcione en cualquier dispositivo.
+- `CostaRicaNight.tsx` en dos capas: `.cr-static` (mapa + 570 luces con filtros, sin animaciones, `will-change: transform` → la GPU la dibuja una vez y solo la desplaza) y `.cr-anim` (rutas, pulso y ~40 luces que titilan, sin filtros). Las animaciones se pausan cuando la franja no está en pantalla (`.parallax-band:not(.is-visible)`).
+- `useParallax`: suavizado (interpolación 0.14 por cuadro hacia la posición del scroll), intensidad 1 / 0.75 / 0.55 según ancho (> 900 / ≤ 900 / ≤ 640), clase `is-visible` vía IntersectionObserver, sin trabajo fuera de pantalla. Mapa con `data-speed="0.28"` (antes 0.15) para que el movimiento se note.
+- `backdrop-filter` de las tarjetas de cifras solo en computadoras con mouse (> 900 px); en táctiles fondo sólido (el blur sobre capas en movimiento es caro en celulares).
+- Layout sin cálculos con `margin-top`: `.parallax-map` ocupa la franja y centra el mapa con flex (alineado al margen del contenedor); alto mínimo de la franja siempre mayor que el mapa; reglas para tablet vertical, celular acostado y pantallas ≥ 1800 px.
+- Medido: 60 fps constantes haciendo scroll en celular simulado con CPU 4× más lenta. Sin desborde horizontal en 360, 390, 844×390, 768, 1024, 1366, 1920 y 2560 px.

@@ -4,9 +4,16 @@ import { CostaRicaNight } from "@/components/home/CostaRicaNight";
 
 /**
  * Franja con parallax dinámico: cada capa marcada con data-speed se desplaza a
- * otra velocidad que el scroll (fondo más lento, íconos a distintos ritmos y
- * algunos en sentido contrario). Sin librerías: requestAnimationFrame + transform,
- * solo mientras la franja está en pantalla. Con "reducir movimiento" queda estática.
+ * otra velocidad que el scroll (fondo y mapa más lentos, íconos a distintos
+ * ritmos y algunos en sentido contrario). Sin librerías:
+ * - Solo `transform: translate3d` (lo mueve la GPU, sin recalcular la página).
+ * - Suavizado: las capas "persiguen" la posición del scroll con una
+ *   interpolación, así el movimiento se ve fluido también en celulares, donde
+ *   el scroll llega a saltos.
+ * - Menos recorrido en pantallas chicas, donde el mapa va detrás del texto.
+ * - Solo trabaja mientras la franja está en pantalla; fuera de ella además
+ *   pausa las animaciones (clase `is-visible`), para ahorrar batería.
+ * - Con "reducir movimiento" del sistema queda estática.
  */
 function useParallax<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -14,7 +21,7 @@ function useParallax<T extends HTMLElement>() {
   useEffect(() => {
     const section = ref.current;
     if (!section) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const layers = Array.from(
       section.querySelectorAll<HTMLElement>("[data-speed]")
@@ -22,36 +29,62 @@ function useParallax<T extends HTMLElement>() {
 
     let frame = 0;
     let visible = false;
+    let current = 0; // desplazamiento suavizado
+    let target = 0; // desplazamiento real según el scroll
+    let intensity = 1;
 
-    const update = () => {
-      frame = 0;
+    const measure = () => {
       const rect = section.getBoundingClientRect();
       // Distancia del centro de la franja al centro de la pantalla.
-      const offset = rect.top + rect.height / 2 - window.innerHeight / 2;
+      target = rect.top + rect.height / 2 - window.innerHeight / 2;
+    };
+    const apply = () => {
       for (const { el, speed } of layers) {
-        el.style.transform = `translate3d(0, ${(-offset * speed).toFixed(1)}px, 0)`;
+        const y = -current * speed * intensity;
+        el.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0)`;
       }
     };
-    const onScroll = () => {
-      if (visible && !frame) frame = requestAnimationFrame(update);
+    const tick = () => {
+      frame = 0;
+      measure();
+      const delta = target - current;
+      // 0.14 por cuadro: alcanza el scroll en ~1/4 s, suave pero sin retraso molesto.
+      current = Math.abs(delta) < 0.3 ? target : current + delta * 0.14;
+      apply();
+      if (current !== target && visible) frame = requestAnimationFrame(tick);
+    };
+    const request = () => {
+      if (visible && !frame) frame = requestAnimationFrame(tick);
+    };
+    const onResize = () => {
+      const w = window.innerWidth;
+      intensity = w <= 640 ? 0.55 : w <= 900 ? 0.75 : 1;
+      measure();
+      current = target; // al cambiar el tamaño, sin animar el salto
+      apply();
     };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         visible = entry.isIntersecting;
-        if (visible) onScroll();
+        section.classList.toggle("is-visible", visible);
+        request();
       },
-      { rootMargin: "200px 0px" }
+      { rootMargin: "150px 0px" }
     );
     observer.observe(section);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    update();
+    if (reduced) {
+      return () => observer.disconnect();
+    }
+
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", onResize);
+    onResize();
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("scroll", request);
+      window.removeEventListener("resize", onResize);
       cancelAnimationFrame(frame);
     };
   }, []);
@@ -125,7 +158,7 @@ export function ParallaxBand() {
     <section ref={ref} className="parallax-band" aria-labelledby="parallax-title">
       <div className="parallax-bg" data-speed="0.4" aria-hidden="true" />
       {/* Costa Rica de noche (capa propia, se mueve más lento que el texto) */}
-      <div className="parallax-map" data-speed="0.15" aria-hidden="true">
+      <div className="parallax-map" data-speed="0.28" aria-hidden="true">
         <CostaRicaNight />
       </div>
       <div className="parallax-icons" aria-hidden="true">

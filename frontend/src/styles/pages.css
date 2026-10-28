@@ -241,7 +241,8 @@
   isolation: isolate;
   margin-top: var(--space-12);
   padding-block: clamp(5rem, 11vw, 8.5rem);
-  min-height: clamp(520px, 62vw, 760px);
+  /* Siempre más alta que el mapa (mapa ≤ 760 px de ancho → ≤ 725 px de alto). */
+  min-height: clamp(560px, 60vw, 800px);
   display: flex;
   align-items: center;
   background: #040b16;
@@ -251,7 +252,7 @@
    Capa más alta que la franja para que al moverse no se vea el borde. */
 .parallax-bg {
   position: absolute;
-  inset: -40% 0;
+  inset: -60% 0; /* sobra de alto: al desplazarse nunca se ve el borde */
   z-index: -3;
   background:
     radial-gradient(900px 520px at 78% 50%, rgba(66, 215, 231, 0.16), transparent 70%),
@@ -267,20 +268,39 @@
   will-change: transform;
 }
 /* Mapa: a la derecha en computadora, detrás del texto en celular. */
+/* La capa ocupa toda la franja (la mueve el parallax); el mapa se acomoda
+   dentro con flex, alineado al margen derecho del contenido. */
 .parallax-map {
   position: absolute;
+  inset: 0;
   z-index: -2;
-  top: 50%;
-  right: 2%;
-  width: min(58%, 760px);
-  margin-top: calc(min(58vw, 760px) * -0.477);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: max(2%, calc((100% - var(--container-max)) / 2));
+  pointer-events: none;
   will-change: transform;
 }
 .cr-night {
-  display: block;
+  position: relative;
+  width: min(56%, 760px);
+  aspect-ratio: 1000 / 954;
+}
+.cr-layer {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: visible;
+}
+/* Capa estática (mapa y luces con brillo): capa propia de la GPU, se dibuja
+   una vez y solo se desplaza. */
+.cr-static {
+  will-change: transform;
+}
+/* Animaciones pausadas cuando la franja no está en pantalla (ahorra batería). */
+.parallax-band:not(.is-visible) .cr-anim * {
+  animation-play-state: paused;
 }
 .cr-land {
   stroke: rgba(66, 215, 231, 0.75);
@@ -401,9 +421,16 @@
   padding: var(--space-4) var(--space-5);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
-  background: rgba(8, 22, 40, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(8, 22, 40, 0.78);
+}
+/* El desenfoque detrás de las tarjetas es costoso sobre capas en movimiento:
+   solo en computadoras (mouse) y pantallas anchas. */
+@media (hover: hover) and (pointer: fine) and (min-width: 901px) {
+  .parallax-stats li {
+    background: rgba(8, 22, 40, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 .parallax-stats strong {
   color: #fff;
@@ -419,11 +446,13 @@
     min-height: 0;
   }
   .parallax-map {
-    right: 50%;
-    width: min(110%, 640px);
-    margin-right: calc(min(110vw, 640px) * -0.5);
-    margin-top: calc(min(110vw, 640px) * -0.477);
+    justify-content: center;
+    padding-right: 0;
     opacity: 0.45;
+  }
+  .cr-night {
+    width: min(115%, 640px);
+    flex-shrink: 0;
   }
   .parallax-content {
     align-items: center;
@@ -440,6 +469,49 @@
   .parallax-stats li {
     min-width: 0;
     flex: 1 1 40%;
+  }
+  .parallax-content p {
+    font-size: 1rem;
+  }
+}
+/* Tablet vertical: la franja tan alta como el mapa que va detrás. */
+@media (min-width: 641px) and (max-width: 900px) and (orientation: portrait) {
+  .parallax-band {
+    min-height: 660px;
+  }
+}
+/* Celular acostado (poco alto): menos relleno y mapa más chico detrás. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .parallax-band {
+    min-height: 0;
+    padding-block: var(--space-8);
+  }
+  .parallax-map {
+    justify-content: flex-end;
+    padding-right: 4%;
+    opacity: 0.6;
+  }
+  .cr-night {
+    width: min(48%, 420px);
+  }
+  .parallax-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .parallax-content > * {
+    max-width: 52%;
+  }
+  .parallax-stats {
+    justify-content: flex-start;
+  }
+}
+/* Pantallas muy grandes (Full HD+): mapa y franja un poco mayores. */
+@media (min-width: 1800px) {
+  .parallax-band {
+    min-height: 960px;
+  }
+  .cr-night {
+    width: min(50%, 900px);
   }
 }
 
