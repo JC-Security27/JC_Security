@@ -535,3 +535,49 @@
 .skeleton-line.short {
   width: 60%;
 }
+
+/* ----- Botón "volver arriba" (a la izquierda del robot del asistente) ----- */
+.back-to-top {
+  position: fixed;
+  right: 112px;
+  bottom: 22px;
+  z-index: 190;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  background: var(--glass-sheen, none), rgba(10, 24, 42, 0.78);
+  color: var(--accent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 18px color-mix(in srgb, var(--accent) 20%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(14px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--accent);
+  color: #04101f;
+}
+@media (max-width: 520px) {
+  .back-to-top {
+    right: 84px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 380px) {
+  .back-to-top {
+    right: 72px;
+  }
+}
