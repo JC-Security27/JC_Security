@@ -1,10 +1,8 @@
 import {
   createContext,
-  useCallback,
   useContext,
   useEffect,
   useMemo,
-  useState,
   type ReactNode,
 } from "react";
 
@@ -31,69 +29,32 @@ const STORAGE_KEY = "jcs-theme-preference";
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-function getSystemTheme(): ResolvedTheme {
-  if (typeof window === "undefined" || !window.matchMedia) return "light";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
-function readStoredPreference(): ThemePreference {
-  if (typeof window === "undefined") return "system";
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark" || stored === "system") {
-    return stored;
-  }
-  return "system";
-}
+/**
+ * El sitio usa SOLO el tema oscuro (decisión del usuario, 2026-10-28): se
+ * ignora la preferencia del dispositivo y cualquier elección guardada antes.
+ * `index.html` ya trae data-theme="dark" para que no parpadee al cargar.
+ * Se conserva la API del contexto por si se vuelve a habilitar el claro.
+ */
+const FORCED_THEME: ResolvedTheme = "dark";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [preference, setPreferenceState] =
-    useState<ThemePreference>(readStoredPreference);
-  const [systemTheme, setSystemTheme] =
-    useState<ResolvedTheme>(getSystemTheme);
-
-  // Escucha cambios de la preferencia del sistema en tiempo real.
   useEffect(() => {
-    if (!window.matchMedia) return;
-    const mql = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = (e: MediaQueryListEvent) =>
-      setSystemTheme(e.matches ? "dark" : "light");
-    mql.addEventListener("change", handler);
-    return () => mql.removeEventListener("change", handler);
-  }, []);
-
-  const resolved: ResolvedTheme =
-    preference === "system" ? systemTheme : preference;
-
-  // Aplica el tema al <html>. En modo "system" quitamos data-theme para
-  // dejar que el CSS de prefers-color-scheme mande.
-  useEffect(() => {
-    const root = document.documentElement;
-    if (preference === "system") {
-      root.removeAttribute("data-theme");
-    } else {
-      root.setAttribute("data-theme", preference);
+    document.documentElement.setAttribute("data-theme", FORCED_THEME);
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      /* sin almacenamiento disponible: no importa */
     }
-  }, [preference]);
-
-  const setPreference = useCallback((pref: ThemePreference) => {
-    setPreferenceState(pref);
-    window.localStorage.setItem(STORAGE_KEY, pref);
   }, []);
 
-  const toggle = useCallback(() => {
-    setPreferenceState((prev) => {
-      const current = prev === "system" ? getSystemTheme() : prev;
-      const next: ThemePreference = current === "dark" ? "light" : "dark";
-      window.localStorage.setItem(STORAGE_KEY, next);
-      return next;
-    });
-  }, []);
-
-  const value = useMemo(
-    () => ({ preference, resolved, setPreference, toggle }),
-    [preference, resolved, setPreference, toggle]
+  const value = useMemo<ThemeContextValue>(
+    () => ({
+      preference: FORCED_THEME,
+      resolved: FORCED_THEME,
+      setPreference: () => undefined,
+      toggle: () => undefined,
+    }),
+    []
   );
 
   return (

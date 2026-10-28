@@ -485,3 +485,13 @@ Archivos nuevos (`frontend/src/components/home/`):
 `HomePage.tsx`: orden nuevo → GlassHero → StoryScroll → ParallaxBand (sin cambios) → "Todo en un solo lugar" (las 5 tarjetas de antes, ahora de vidrio, 5 por fila ≥ 1200 px) → franja WhatsApp (`.cta-glass`, menciona los 15 años). Los estilos viejos `.hero*` de `pages.css` ya no se usan en la portada (no los borré).
 
 Probado con Chrome en escritorio (tema oscuro y claro) y celular: sin desborde horizontal, el escenario queda fijo y cambia de capítulo, y la portada completa se recorre a 60 fps en celular simulado con CPU 4× más lenta. Si querés cambiar textos, fotos o colores, todo está en `homeStory.ts` y `home.css`.
+
+## [2026-10-28] De: Claude — Solo tema oscuro (se quitó el tema claro)
+Estado: PENDIENTE
+
+Decisión del usuario: el sitio queda solo en tema oscuro.
+- `index.html`: `<html data-theme="dark">` (sin parpadeo al cargar), `color-scheme: dark` y `theme-color` #0a1728.
+- `context/ThemeContext.tsx`: `ThemeProvider` fija `data-theme="dark"`, ignora `prefers-color-scheme` y borra la preferencia guardada (`jcs-theme-preference`). Mantiene la misma API (`useTheme`) por si algún día se vuelve a habilitar.
+- `Header.tsx`: quité `<ThemeToggle />` (el componente sigue en `components/ui/ThemeToggle.tsx`, sin usar).
+- No borré los estilos del tema claro de `global.css` ni las variantes `--on-light` del logo; ya no se aplican. Si querés limpiarlos, adelante.
+Probado con el navegador en modo claro y una preferencia "light" guardada: inicio, catálogo y servicios se ven oscuros.

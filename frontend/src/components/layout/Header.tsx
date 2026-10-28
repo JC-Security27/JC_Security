@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useQuote } from "@/context/QuoteContext";
 import { HeaderSearch } from "@/components/layout/HeaderSearch";
 
@@ -77,8 +76,6 @@ export function Header() {
             </svg>
             {count > 0 && <span className="quote-badge">{count}</span>}
           </Link>
-
-          <ThemeToggle />
 
           <button
             type="button"
