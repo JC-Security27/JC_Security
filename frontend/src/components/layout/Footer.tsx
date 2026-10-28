@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
+import { groupCatalogUrl } from "@/lib/categoryGroups";
 import { siteConfig } from "@/config/site";
 import { generalContactMessage } from "@/lib/whatsapp";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -27,16 +28,16 @@ export function Footer() {
               <Link to="/catalogo">Ver todo</Link>
             </li>
             <li>
-              <Link to="/categoria/camaras">Cámaras</Link>
+              <Link to={groupCatalogUrl("camaras")}>Cámaras</Link>
             </li>
             <li>
-              <Link to="/categoria/redes">Redes</Link>
+              <Link to={groupCatalogUrl("redes")}>Redes</Link>
             </li>
             <li>
-              <Link to="/categoria/herramientas">Herramientas</Link>
+              <Link to={groupCatalogUrl("herramientas")}>Herramientas</Link>
             </li>
             <li>
-              <Link to="/categoria/servicios">Servicios</Link>
+              <Link to="/servicios">Servicios</Link>
             </li>
           </ul>
         </nav>

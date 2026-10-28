@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { groupCategories } from "@/lib/categoryGroups";
 import type { Brand, Category } from "@/types/catalog";
 
 /* ==========================================================================
    Controles de filtro del catálogo (estilo tienda: panel con checkboxes).
    - Búsqueda por texto.
-   - Categorías: selección múltiple (checkbox).
+   - Categorías: agrupadas en familias desplegables (Herramientas, Cámaras…),
+     cada una con casilla para elegir la familia completa.
    - Marcas: selección múltiple (checkbox) con mini-buscador y "ver más".
    - Solo nuevos.
    El layout (sidebar en escritorio / drawer en móvil) lo pone CatalogPage;
@@ -46,6 +48,30 @@ export function CatalogControls({
   const toggleCategory = (slug: string) => {
     const set = new Set(filters.categorySlugs);
     set.has(slug) ? set.delete(slug) : set.add(slug);
+    onChange({ ...filters, categorySlugs: [...set] });
+  };
+
+  // Familias de categorías desplegables. Una familia con algo elegido se abre
+  // sola (salvo que el usuario la cierre); las demás arrancan cerradas.
+  const groups = useMemo(() => groupCategories(categories), [categories]);
+  const [open, setOpen] = useState<Set<string>>(new Set());
+  const [closed, setClosed] = useState<Set<string>>(new Set());
+  const toggleOpen = (id: string, isOpen: boolean) => {
+    const nextOpen = new Set(open);
+    const nextClosed = new Set(closed);
+    if (isOpen) {
+      nextOpen.delete(id);
+      nextClosed.add(id);
+    } else {
+      nextOpen.add(id);
+      nextClosed.delete(id);
+    }
+    setOpen(nextOpen);
+    setClosed(nextClosed);
+  };
+  const toggleGroup = (slugs: string[], allSelected: boolean) => {
+    const set = new Set(filters.categorySlugs);
+    slugs.forEach((s) => (allSelected ? set.delete(s) : set.add(s)));
     onChange({ ...filters, categorySlugs: [...set] });
   };
 
@@ -105,26 +131,61 @@ export function CatalogControls({
         />
       </div>
 
-      {/* Categorías (checkbox múltiple) */}
-      {categories.length > 0 && (
+      {/* Categorías agrupadas en familias desplegables (pedido del usuario) */}
+      {groups.length > 0 && (
         <div className="filter-group">
           <h3 className="filter-group-title">Categorías</h3>
-          <ul className="filter-check-list">
-            {categories.map((cat) => {
-              const checked = filters.categorySlugs.includes(cat.slug);
+          <ul className="filter-check-list filter-accordion">
+            {groups.map((g) => {
+              const selected = g.categories.filter((c) =>
+                filters.categorySlugs.includes(c.slug)
+              ).length;
+              const all = selected === g.categories.length;
+              const isOpen = open.has(g.id) || (selected > 0 && !closed.has(g.id));
+              const panelId = `filtro-grupo-${g.id}`;
               return (
-                <li key={cat.id}>
-                  <label className="filter-check">
+                <li key={g.id} className={`filter-acc ${isOpen ? "is-open" : ""}`}>
+                  <div className="filter-acc-head">
                     <input
                       type="checkbox"
-                      checked={checked}
-                      onChange={() => toggleCategory(cat.slug)}
+                      checked={all}
+                      ref={(el) => {
+                        if (el) el.indeterminate = selected > 0 && !all;
+                      }}
+                      onChange={() => toggleGroup(g.categories.map((c) => c.slug), all)}
+                      aria-label={`Seleccionar todo ${g.name}`}
                     />
-                    <span className="filter-check-label">{cat.name}</span>
-                    {typeof cat.productCount === "number" && (
-                      <span className="filter-check-count">{cat.productCount}</span>
-                    )}
-                  </label>
+                    <button
+                      type="button"
+                      className="filter-acc-toggle"
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      onClick={() => toggleOpen(g.id, isOpen)}
+                    >
+                      <span className="filter-check-label">{g.name}</span>
+                      <span className="filter-check-count">{g.productCount}</span>
+                      <span className="filter-acc-caret" aria-hidden="true">▾</span>
+                    </button>
+                  </div>
+                  {isOpen && (
+                    <ul className="filter-acc-panel" id={panelId}>
+                      {g.categories.map((cat) => (
+                        <li key={cat.id}>
+                          <label className="filter-check">
+                            <input
+                              type="checkbox"
+                              checked={filters.categorySlugs.includes(cat.slug)}
+                              onChange={() => toggleCategory(cat.slug)}
+                            />
+                            <span className="filter-check-label">{cat.name}</span>
+                            {typeof cat.productCount === "number" && (
+                              <span className="filter-check-count">{cat.productCount}</span>
+                            )}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               );
             })}

@@ -1855,6 +1855,61 @@
   font-size: 0.8rem;
   font-variant-numeric: tabular-nums;
 }
+/* Familias de categorías desplegables */
+.filter-acc-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-sm);
+}
+.filter-acc-head:hover {
+  background: var(--surface-2);
+}
+.filter-acc-head input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.filter-acc-toggle {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.filter-acc-caret {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: transform var(--transition);
+}
+.filter-acc.is-open .filter-acc-caret {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+.filter-acc-panel {
+  list-style: none;
+  margin: 0 0 var(--space-1) 0;
+  padding: 0 0 0 calc(17px + var(--space-2));
+  border-left: 2px solid var(--divider);
+  margin-left: calc(var(--space-1) + 7px);
+}
+.filter-acc-panel .filter-check {
+  font-size: 0.86rem;
+  padding-block: 0.3rem;
+}
+
 .filter-more-btn {
   align-self: flex-start;
   background: none;
@@ -1973,6 +2028,12 @@
     flex: 1;
     min-height: 0;
     max-height: none;
+  }
+  /* Las familias de categorías son pocas: toman el alto que necesitan (hasta
+     62 % del panel, con scroll si se abren varias) y Marcas usa el resto. */
+  .catalog-sidebar .filter-group:has(.filter-accordion) {
+    flex: 0 1 auto;
+    max-height: 62%;
   }
   .catalog-sidebar .filter-check {
     padding: 0.3rem var(--space-1);

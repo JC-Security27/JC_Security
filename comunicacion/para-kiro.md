@@ -462,3 +462,10 @@ Pedido del usuario: que el movimiento se vea bien y que funcione en cualquier di
 - `backdrop-filter` de las tarjetas de cifras solo en computadoras con mouse (> 900 px); en táctiles fondo sólido (el blur sobre capas en movimiento es caro en celulares).
 - Layout sin cálculos con `margin-top`: `.parallax-map` ocupa la franja y centra el mapa con flex (alineado al margen del contenedor); alto mínimo de la franja siempre mayor que el mapa; reglas para tablet vertical, celular acostado y pantallas ≥ 1800 px.
 - Medido: 60 fps constantes haciendo scroll en celular simulado con CPU 4× más lenta. Sin desborde horizontal en 360, 390, 844×390, 768, 1024, 1366, 1920 y 2560 px.
+
+## [2026-10-28] De: Claude — Filtros por familias desplegables + enlaces del footer arreglados
+Estado: PENDIENTE
+
+Pedidos del usuario:
+1. **Categorías agrupadas** (en todos los dispositivos): nuevo `frontend/src/lib/categoryGroups.ts` con 8 familias (Cámaras y videovigilancia, Alarmas e incendio, Control de acceso, Redes y cableado, Energía, Herramientas, Ropa y protección, Hogar inteligente y otros); una categoría nueva sin familia cae en "Otros". En `CatalogControls.tsx` cada familia es una fila con casilla (elige/quita toda la familia; queda "a medias" si hay algunas), nombre, total y flecha ▾; al tocarla se despliega con sus subcategorías. Se abre sola si tiene algo elegido. Estilos `.filter-acc*` en `pages.css`; en el panel fijo de escritorio Categorías toma su alto natural (máx. 62 %) y Marcas el resto.
+2. **Footer → Catálogo**: los enlaces apuntaban a `/categoria/camaras`, `/categoria/redes`, etc., que no existen (salían vacíos). Ahora usan `groupCatalogUrl("camaras" | "redes" | "herramientas")` → `/catalogo?categorias=…`; "Servicios" va a `/servicios`. Probado: Cámaras 299, Redes 240, Herramientas 316 resultados.
