@@ -1,0 +1,599 @@
+/* ==========================================================================
+   Portada (pedido del usuario, 2026-10-28): glassmorphism + scrollytelling.
+   Se apoya en los colores del tema (claro/oscuro). La franja del mapa de
+   Costa Rica (.parallax-band) tiene sus propios estilos en pages.css.
+   ========================================================================== */
+
+.home-glass {
+  --glass-bg: color-mix(in srgb, var(--surface) 58%, transparent);
+  --glass-border: color-mix(in srgb, var(--text) 13%, transparent);
+  --glass-shine: color-mix(in srgb, #ffffff 16%, transparent);
+  --glass-blur: 16px;
+}
+@media (hover: none), (pointer: coarse) {
+  /* Táctiles: menos desenfoque (más liviano en celulares). */
+  .home-glass {
+    --glass-blur: 10px;
+  }
+}
+
+.home-glass .glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(4, 12, 24, 0.22), inset 0 1px 0 var(--glass-shine);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+}
+
+/* ----- Aparición al hacer scroll ----- */
+.home-glass .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.home-glass .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   Hero con vidrio
+   ========================================================================== */
+.ghero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-block: clamp(3rem, 7vw, 6rem);
+  background: linear-gradient(180deg, var(--surface), var(--bg));
+  border-bottom: 1px solid var(--divider);
+}
+.ghero-aurora {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.ghero-aurora .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform;
+  animation: ghero-drift 18s ease-in-out infinite alternate;
+}
+.blob-a {
+  width: 480px;
+  height: 480px;
+  top: -140px;
+  right: 6%;
+  background: color-mix(in srgb, var(--brand-cyan) 45%, transparent);
+}
+.blob-b {
+  width: 560px;
+  height: 560px;
+  bottom: -220px;
+  left: -140px;
+  background: color-mix(in srgb, var(--brand-mid) 55%, transparent);
+  animation-duration: 22s;
+}
+.blob-c {
+  width: 340px;
+  height: 340px;
+  top: 32%;
+  right: 34%;
+  background: color-mix(in srgb, #8b7cff 30%, transparent);
+  animation-duration: 26s;
+  animation-direction: alternate-reverse;
+}
+@keyframes ghero-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(60px, 40px, 0) scale(1.12);
+  }
+}
+.ghero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+.ghero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill) !important;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.ghero-badge strong {
+  color: var(--accent);
+}
+.ghero-copy h1 {
+  margin: var(--space-4) 0;
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.ghero-copy > p {
+  color: var(--text-muted);
+  font-size: 1.12rem;
+  max-width: 50ch;
+}
+.ghero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.ghero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-8) 0 0;
+}
+.ghero-trust li {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--space-4);
+  border-left: 2px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.ghero-trust strong {
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+.ghero-trust span {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+.ghero-visual {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 1;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+}
+.ghero-ring {
+  position: absolute;
+  inset: 9%;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%);
+  box-shadow: 0 0 80px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.ghero-ring::after {
+  content: "";
+  position: absolute;
+  inset: -7%;
+  border-radius: 50%;
+  border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent);
+  animation: ghero-spin 40s linear infinite;
+}
+@keyframes ghero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ghero-robot {
+  position: relative;
+  z-index: 1;
+  width: 66%;
+  height: auto;
+  filter: drop-shadow(0 24px 48px rgba(10, 23, 40, 0.4));
+  animation: float 6s ease-in-out infinite;
+}
+.ghero-chip {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  max-width: 190px;
+  padding: 0.45rem 0.85rem 0.45rem 0.45rem;
+  border-radius: 16px !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+  animation: float 7s ease-in-out infinite;
+}
+.ghero-chip img {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 4px;
+  border-radius: 11px;
+  background: #fff;
+}
+.chip-0 {
+  top: 5%;
+  left: -6%;
+}
+.chip-1 {
+  top: 20%;
+  right: -8%;
+  animation-delay: -2s;
+}
+.chip-2 {
+  bottom: 20%;
+  left: -10%;
+  animation-delay: -4s;
+}
+.chip-3 {
+  bottom: 4%;
+  right: -2%;
+  animation-delay: -1s;
+}
+@media (max-width: 860px) {
+  .ghero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ghero-copy > p {
+    margin-inline: auto;
+  }
+  .ghero-actions,
+  .ghero-trust {
+    justify-content: center;
+  }
+  .ghero-trust li {
+    align-items: center;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .ghero-visual {
+    width: min(86%, 380px);
+    order: -1;
+  }
+  .ghero-chip {
+    font-size: 0.72rem;
+    max-width: 150px;
+    padding: 0.35rem 0.6rem 0.35rem 0.35rem;
+  }
+  .ghero-chip img {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+  .chip-0 {
+    left: -4%;
+  }
+  .chip-1 {
+    right: -4%;
+  }
+  .chip-2 {
+    left: -6%;
+  }
+}
+@media (max-width: 520px) {
+  .ghero-badge {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+}
+@media (max-width: 420px) {
+  .ghero-chip span {
+    display: none; /* en pantallas muy angostas solo la foto */
+  }
+  .ghero-chip {
+    padding: 0.35rem;
+  }
+  .ghero-trust {
+    gap: var(--space-4);
+  }
+}
+
+/* ==========================================================================
+   Historia con scroll
+   ========================================================================== */
+.story {
+  position: relative;
+  padding-block: clamp(4rem, 8vw, 7rem) var(--space-6);
+}
+.story-head {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-head .eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.story-head h2 {
+  margin: var(--space-3) 0;
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.story-head p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: var(--space-8);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+.story-step {
+  margin-block: 22vh;
+  padding: var(--space-6);
+  opacity: 0.38;
+  transform: scale(0.97);
+  transform-origin: left center;
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.5s ease;
+}
+.story-step:first-child {
+  margin-top: 12vh;
+}
+.story-step:last-child {
+  margin-bottom: 30vh;
+}
+.story-step.is-active {
+  opacity: 1;
+  transform: none;
+  border-color: color-mix(in srgb, var(--c) 55%, transparent);
+}
+.story-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6ch;
+  color: var(--c);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+.story-num {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.65;
+}
+.story-step h3 {
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.15;
+}
+.story-step > p {
+  color: var(--text-muted);
+  margin: 0;
+}
+.story-points {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.story-points li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.story-points li::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  flex: 0 0 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: #04101f;
+  background: var(--c);
+}
+.story-brands {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin: 0 0 var(--space-4);
+}
+.story-step-media {
+  display: none;
+}
+/* Escenario fijo (escritorio) */
+.story-stage-wrap {
+  position: sticky;
+  top: calc(var(--header-height) + 6vh);
+  height: calc(100vh - var(--header-height) - 12vh);
+  min-height: 460px;
+}
+.story-stage {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 28px !important;
+}
+.story-glow {
+  position: absolute;
+  inset: 15% 20%;
+  border-radius: 50%;
+  background: var(--story-color);
+  opacity: 0.32;
+  filter: blur(80px);
+  transition: background-color 0.7s ease;
+}
+.story-scene {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(26px) scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+.story-scene.is-active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.story-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0.7rem;
+  border-radius: 20px !important;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.story-card:hover {
+  transform: translateY(-6px);
+  text-decoration: none;
+}
+.story-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: 8%;
+  border-radius: 14px;
+  background: #fff;
+}
+.story-card--main {
+  top: 14%;
+  left: 28%;
+  width: 44%;
+  z-index: 2;
+}
+.story-card--a {
+  top: 6%;
+  left: 5%;
+  width: 27%;
+}
+.story-card--b {
+  bottom: 19%;
+  right: 5%;
+  width: 29%;
+  z-index: 3;
+}
+.story-progress {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border: 1px solid var(--glass-border);
+  z-index: 4;
+}
+.story-progress button {
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.8rem;
+  background: none;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.story-progress button.is-active {
+  background: var(--story-color);
+  color: #04101f;
+}
+
+/* Tablet y celular: sin escenario fijo; cada capítulo lleva sus fotos. */
+@media (max-width: 960px) {
+  .story-layout {
+    display: block;
+  }
+  .story-stage-wrap {
+    display: none;
+  }
+  .story-step,
+  .story-step:first-child,
+  .story-step:last-child {
+    margin-block: var(--space-5);
+    opacity: 1;
+    transform: none;
+  }
+  .story-step {
+    border-color: color-mix(in srgb, var(--c) 35%, transparent);
+  }
+  .story-step-media {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+  .story-step-media img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: 8%;
+    border-radius: 12px;
+    background: #fff;
+  }
+}
+
+/* ==========================================================================
+   "Todo en un solo lugar" y franja de WhatsApp
+   ========================================================================== */
+.home-links-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+@media (min-width: 1200px) {
+  .home-links-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.home-links-grid > .reveal {
+  display: flex;
+}
+.home-links-grid .offering-card {
+  flex: 1;
+}
+.home-glass .offering-card.glass:hover {
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  transform: translateY(-4px);
+}
+.cta-glass {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #10305a, #0a1d36 60%, #0c2a40);
+}
+.cta-glass::before {
+  content: "";
+  position: absolute;
+  inset: -40% -10% auto auto;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--brand-cyan) 30%, transparent);
+  filter: blur(90px);
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-glass .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .ghero-aurora .blob,
+  .ghero-ring::after,
+  .ghero-robot,
+  .ghero-chip {
+    animation: none;
+  }
+  .story-scene,
+  .story-step {
+    transition: none;
+  }
+}

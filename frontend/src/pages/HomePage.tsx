@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
-import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
 import { ParallaxBand } from "@/components/home/ParallaxBand";
+import { GlassHero } from "@/components/home/GlassHero";
+import { StoryScroll } from "@/components/home/StoryScroll";
+import { YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
+import { useReveal } from "@/components/home/useReveal";
 
 /* Secciones que ofrece JC Security, mostradas como tarjetas en la portada.
    Cada una lleva a su sección (las mismas del menú superior). */
@@ -103,7 +106,7 @@ const contactOptions: Offering[] = [
 
 function OfferingCard({ offering }: { offering: Offering }) {
   return (
-    <Link to={offering.to} className="card offering-card">
+    <Link to={offering.to} className="card offering-card glass">
       <span className="offering-icon" aria-hidden="true">
         {offering.icon}
       </span>
@@ -119,73 +122,43 @@ function OfferingCard({ offering }: { offering: Offering }) {
 }
 
 export function HomePage() {
+  const ref = useReveal<HTMLDivElement>();
   return (
-    <>
-      {/* ----- Hero ----- */}
-      <section className="hero">
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <span className="eyebrow">{siteConfig.name}</span>
-            <h1>{siteConfig.tagline}</h1>
-            <p>{siteConfig.shortDescription}</p>
-            <div className="hero-actions">
-              <Link to="/catalogo" className="btn btn-primary">
-                Explorar catálogo
-              </Link>
-              <WhatsAppButton message={generalContactMessage()}>
-                Consultar por WhatsApp
-              </WhatsAppButton>
-            </div>
-          </div>
-          <div className="hero-visual" aria-hidden="true">
-            <img src="/robot-saludando.png" alt="" className="hero-robot" />
-          </div>
-        </div>
-      </section>
+    <div ref={ref} className="home-glass">
+      {/* ----- Portada con efecto vidrio ----- */}
+      <GlassHero />
 
-      {/* ----- Lo que ofrecemos ----- */}
-      <section className="section container">
-        <div className="section-head">
-          <span className="eyebrow">JC Security</span>
-          <h2>Lo que ofrecemos</h2>
-          <p>
-            Explora nuestras áreas. Entra a cada una para ver todo lo que
-            tenemos disponible.
-          </p>
-        </div>
+      {/* ----- Historia con scroll: vigila, detecta, controla, conecta, equípate ----- */}
+      <StoryScroll />
 
-        <div className="grid offerings-grid">
-          {offerings.map((o) => (
-            <OfferingCard key={o.to} offering={o} />
-          ))}
-        </div>
-      </section>
-
-      {/* ----- Franja con parallax ----- */}
+      {/* ----- Costa Rica de noche (parallax) ----- */}
       <ParallaxBand />
 
-      {/* ----- Contáctanos ----- */}
-      <section className="section container">
-        <div className="section-head">
-          <h2>Contáctanos</h2>
-          <p>Estamos para ayudarte. Elige cómo prefieres comunicarte.</p>
+      {/* ----- Todo en un solo lugar: secciones y contacto ----- */}
+      <section className="section container home-links">
+        <div className="section-head reveal">
+          <span className="eyebrow">JC Security</span>
+          <h2>Todo en un solo lugar</h2>
+          <p>Explora nuestras secciones o escríbenos directamente.</p>
         </div>
-
-        <div className="grid offerings-grid">
-          {contactOptions.map((o) => (
-            <OfferingCard key={o.to} offering={o} />
+        <div className="grid offerings-grid home-links-grid">
+          {[...offerings, ...contactOptions].map((o, i) => (
+            <div key={o.to} className="reveal" style={{ transitionDelay: `${i * 70}ms` }}>
+              <OfferingCard offering={o} />
+            </div>
           ))}
         </div>
       </section>
 
       {/* ----- Franja WhatsApp ----- */}
-      <section className="cta-band">
-        <div className="container cta-band-inner">
+      <section className="cta-band cta-glass">
+        <div className="container cta-band-inner reveal">
           <div>
             <h2>¿Buscas algo específico?</h2>
             <p>
-              Escríbenos por WhatsApp con la referencia o el nombre del producto
-              y te ayudamos con precio y disponibilidad.
+              Llevamos {YEARS_OF_EXPERIENCE} años asesorando a hogares y
+              negocios. Escríbenos con la referencia o el nombre del producto y
+              te ayudamos con precio y disponibilidad.
             </p>
           </div>
           <WhatsAppButton message={generalContactMessage()}>
@@ -193,6 +166,6 @@ export function HomePage() {
           </WhatsAppButton>
         </div>
       </section>
-    </>
+    </div>
   );
 }

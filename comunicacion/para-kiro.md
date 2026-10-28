@@ -469,3 +469,19 @@ Estado: PENDIENTE
 Pedidos del usuario:
 1. **Categorías agrupadas** (en todos los dispositivos): nuevo `frontend/src/lib/categoryGroups.ts` con 8 familias (Cámaras y videovigilancia, Alarmas e incendio, Control de acceso, Redes y cableado, Energía, Herramientas, Ropa y protección, Hogar inteligente y otros); una categoría nueva sin familia cae en "Otros". En `CatalogControls.tsx` cada familia es una fila con casilla (elige/quita toda la familia; queda "a medias" si hay algunas), nombre, total y flecha ▾; al tocarla se despliega con sus subcategorías. Se abre sola si tiene algo elegido. Estilos `.filter-acc*` en `pages.css`; en el panel fijo de escritorio Categorías toma su alto natural (máx. 62 %) y Marcas el resto.
 2. **Footer → Catálogo**: los enlaces apuntaban a `/categoria/camaras`, `/categoria/redes`, etc., que no existen (salían vacíos). Ahora usan `groupCatalogUrl("camaras" | "redes" | "herramientas")` → `/catalogo?categorias=…`; "Servicios" va a `/servicios`. Probado: Cámaras 299, Redes 240, Herramientas 316 resultados.
+
+## [2026-10-28] De: Claude — Portada rediseñada: glassmorphism + scrollytelling (pedido del usuario)
+Estado: PENDIENTE
+
+El usuario me pidió rediseñar la página principal ya (sabe que es tu parte) y avisarte para que después lo revisemos juntos. Pidió estilo **glassmorphism** (efecto vidrio) + **scrollytelling** (historia con el scroll), solo en la portada por ahora; más adelante quiere llevar el vidrio al resto del sitio. La franja del mapa de Costa Rica (`ParallaxBand`) quedó igual. Dato nuevo del usuario: **JC Security tiene 15 años** ofreciendo estos servicios.
+
+Archivos nuevos (`frontend/src/components/home/`):
+- `homeStory.ts`: contenido de la historia (5 capítulos: Vigila / Detecta / Controla / Conecta / Equípate), cada uno con texto, 3 puntos, marcas, color de acento, enlace a su familia (`groupCatalogUrl`) y 3 productos reales (fotos del bucket `catalogo`). También `YEARS_OF_EXPERIENCE = 15`.
+- `GlassHero.tsx`: hero con luces de fondo animadas (`.blob`), insignia "15 años…", cifras (15 años, +1.600 productos, +30 marcas), el robot con un anillo y 4 tarjetas de vidrio con productos flotando.
+- `StoryScroll.tsx`: en escritorio (> 960 px) capítulos a la izquierda y escenario de vidrio `position: sticky` a la derecha que cambia de productos y color según el capítulo activo (IntersectionObserver con `rootMargin -45%`), con barra de capítulos clicable. En ≤ 960 px no hay escenario: cada capítulo muestra sus 3 fotos.
+- `useReveal.ts`: aparición suave al hacer scroll (`.reveal` → `.is-in`).
+- `src/styles/home.css` (importado en `global.css` después de `pages.css`): todo el estilo de la portada. `.glass` usa variables que se adaptan al tema claro/oscuro; en táctiles el blur baja de 16 a 10 px. Respeta `prefers-reduced-motion`.
+
+`HomePage.tsx`: orden nuevo → GlassHero → StoryScroll → ParallaxBand (sin cambios) → "Todo en un solo lugar" (las 5 tarjetas de antes, ahora de vidrio, 5 por fila ≥ 1200 px) → franja WhatsApp (`.cta-glass`, menciona los 15 años). Los estilos viejos `.hero*` de `pages.css` ya no se usan en la portada (no los borré).
+
+Probado con Chrome en escritorio (tema oscuro y claro) y celular: sin desborde horizontal, el escenario queda fijo y cambia de capítulo, y la portada completa se recorre a 60 fps en celular simulado con CPU 4× más lenta. Si querés cambiar textos, fotos o colores, todo está en `homeStory.ts` y `home.css`.
