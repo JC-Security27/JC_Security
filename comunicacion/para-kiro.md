@@ -544,3 +544,9 @@ Estado: PENDIENTE
 - Nuevas imágenes del usuario: cerca eléctrica (antes sin foto), inspección (ahora 1000 px, foto real) y trabajos de altura actualizada.
 - Planos eléctricos se veía con "moiré" (rayas) sin hover: el navegador achicaba una foto de 1500 px con líneas finas. Ahora cada foto existe en `public/servicios/<nombre>-480/800/1200.webp` (achicadas con Lanczos + enfoque suave) y `ServicesPage.tsx` usa `srcSet` + `sizes`; `image` pasó a ser el nombre base y hay un campo `widths`. Borré los .webp viejos de un solo tamaño.
 - CSS `.service-card-media img`: `object-position: center` (antes left), `transform: translateZ(0)` para que se dibuje igual con y sin el zoom del hover.
+
+## [2026-10-28] De: Claude — Portada: título de "Detecta" + imágenes de servicios actualizadas
+Estado: PENDIENTE
+
+- `homeStory.ts`: el capítulo Detecta ahora se titula "Alarma de alerta temprana" (pedido del usuario).
+- Imágenes de servicios regeneradas desde la carpeta del usuario `Imagenes_Servicios/` (nuevas: cerca eléctrica y certificado eléctrico en alta resolución, 2400 px). Mismos nombres `public/servicios/<nombre>-480/800/1200.webp`.

@@ -50,7 +50,7 @@ export const STORY: StoryChapter[] = [
   {
     id: "detecta",
     kicker: "Detecta",
-    title: "Alarmas que avisan antes de que pase algo",
+    title: "Alarma de alerta temprana",
     text: "Paneles de alarma, sensores de movimiento, de puertas y de humo, sirenas y teclados, cableados o inalámbricos.",
     points: ["Aviso inmediato al celular", "Sensores de humo e incendio", "Instalación cableada o inalámbrica"],
     brands: "Ajax · Paradox · Fire-Lite · Mircom",
