@@ -3,8 +3,15 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
 
 /** Servicios reales confirmados por JC Security. `image` es opcional: sin ella
- *  la tarjeta muestra el fondo de muestra. */
-const services: { id: string; title: string; description: string; image?: string }[] = [
+ *  la tarjeta muestra el fondo de muestra. `imagePosition` elige qué parte de
+ *  la foto se ve cuando se recorta para la tarjeta (CSS object-position). */
+const services: {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  imagePosition?: string;
+}[] = [
   {
     id: "planos-electricos",
     title: "Planos eléctricos",
@@ -32,6 +39,32 @@ const services: { id: string; title: string; description: string; image?: string
     description:
       "Trabajos en altura con el equipo y las medidas de seguridad " +
       "adecuadas.",
+    image: "/servicios/trabajos-altura.webp",
+    imagePosition: "center 30%",
+  },
+  {
+    id: "certificacion-normativa",
+    title: "Certificación según normativa vigente",
+    description:
+      "Certificación de instalaciones eléctricas de acuerdo con la " +
+      "normativa vigente.",
+    image: "/servicios/certificacion.webp",
+    imagePosition: "center bottom",
+  },
+  {
+    id: "mantenimiento-equipos",
+    title: "Mantenimiento de equipos instalados",
+    description:
+      "Mantenimiento de los equipos de seguridad instalados para que " +
+      "sigan funcionando correctamente.",
+  },
+  {
+    id: "inspeccion-electrica",
+    title: "Inspección de instalaciones eléctricas",
+    description:
+      "Revisión de instalaciones eléctricas para detectar fallas y " +
+      "riesgos.",
+    image: "/servicios/inspeccion-electrica.webp",
   },
 ];
 
@@ -48,7 +81,14 @@ export function ServicesPage() {
         {services.map((s) => (
           <div key={s.id} className="card service-card">
             <div className="service-card-media" aria-hidden="true">
-              {s.image && <img src={s.image} alt="" loading="lazy" />}
+              {s.image && (
+                <img
+                  src={s.image}
+                  alt=""
+                  loading="lazy"
+                  style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined}
+                />
+              )}
             </div>
             <div className="service-card-body">
               <span className="chip chip-accent service-card-tag">

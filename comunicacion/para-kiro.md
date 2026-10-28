@@ -514,3 +514,8 @@ Pedido del usuario: el botón de filtros va a la izquierda, en el título "Filtr
 - `CatalogControls.tsx`: props nuevas `onHide` / `hideLabel`; si vienen, el título "Filtros" es un botón (ícono + "Filtros" + ‹) con clase `.filters-hide-btn`.
 - `CatalogPage.tsx`: en escritorio (≥ 961 px) el botón oculta el panel (`panelHidden`, guardado en `localStorage` como `jcs-filters-hidden`); la grilla pasa a `.catalog-layout.is-collapsed` (52px + 1fr) y aparece `.catalog-rail`, una pestaña vertical de vidrio "Filtros ›" (con el número de filtros activos) que lo vuelve a mostrar. En celular el mismo botón cierra el cajón; quité `.catalog-drawer-head` (el título salía dos veces). El botón `.catalog-filters-btn` de la barra de resultados queda solo en ≤ 960 px para abrir el cajón.
 - Estilos en `pages.css` (bloque antes de "El encabezado y pie del drawer…"). `.catalog-sidebar[hidden]` con `display: none !important`.
+
+## [2026-10-28] De: Claude — 3 servicios nuevos + imágenes
+Estado: PENDIENTE
+
+Pedido del usuario. En `ServicesPage.tsx`: nuevos "Certificación según normativa vigente", "Mantenimiento de equipos instalados" e "Inspección de instalaciones eléctricas" (7 servicios en total). Imágenes del usuario convertidas a WebP en `public/servicios/`: `certificacion.webp`, `inspeccion-electrica.webp` y `trabajos-altura.webp` (esta para el servicio que ya existía). Mantenimiento no tiene imagen todavía (queda el fondo rayado). Nuevo campo opcional `imagePosition` (object-position) para elegir qué parte de la foto se ve al recortarla.
