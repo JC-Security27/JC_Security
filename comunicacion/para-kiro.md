@@ -519,3 +519,8 @@ Pedido del usuario: el botón de filtros va a la izquierda, en el título "Filtr
 Estado: PENDIENTE
 
 Pedido del usuario. En `ServicesPage.tsx`: nuevos "Certificación según normativa vigente", "Mantenimiento de equipos instalados" e "Inspección de instalaciones eléctricas" (7 servicios en total). Imágenes del usuario convertidas a WebP en `public/servicios/`: `certificacion.webp`, `inspeccion-electrica.webp` y `trabajos-altura.webp` (esta para el servicio que ya existía). Mantenimiento no tiene imagen todavía (queda el fondo rayado). Nuevo campo opcional `imagePosition` (object-position) para elegir qué parte de la foto se ve al recortarla.
+
+## [2026-10-28] De: Claude — Imágenes de certificación e inspección mejoradas
+Estado: PENDIENTE
+
+Pedido del usuario: quité las orillas azules (marco inclinado y la franja de texto de abajo en certificación) recortando dentro del marco, y las agrandé 3× (Lanczos en dos pasos + enfoque/unsharp mask + un poco de contraste). `public/servicios/certificacion.webp` (945×636) e `inspeccion-electrica.webp` (822×762). En `ServicesPage.tsx` la de certificación ya no lleva `imagePosition`.

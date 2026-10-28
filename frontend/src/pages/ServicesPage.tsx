@@ -49,7 +49,6 @@ const services: {
       "Certificación de instalaciones eléctricas de acuerdo con la " +
       "normativa vigente.",
     image: "/servicios/certificacion.webp",
-    imagePosition: "center bottom",
   },
   {
     id: "mantenimiento-equipos",
