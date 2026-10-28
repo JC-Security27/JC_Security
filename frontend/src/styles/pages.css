@@ -2200,3 +2200,82 @@
   font-size: 1.3rem;
   margin: 0;
 }
+/* ----- Carrusel horizontal (productos relacionados) ----- */
+.carousel {
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: var(--space-2) 2px var(--space-4);
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+.carousel-item {
+  flex: 0 0 clamp(220px, 23%, 290px);
+  scroll-snap-align: start;
+  display: flex;
+}
+.carousel-item > * {
+  flex: 1;
+}
+.carousel-btn {
+  position: absolute;
+  top: 38%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(10, 24, 42, 0.78);
+  color: var(--text);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: opacity var(--transition), border-color var(--transition), color var(--transition);
+}
+.carousel-btn:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+.carousel-btn:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.carousel-btn--prev {
+  left: -14px;
+}
+.carousel-btn--next {
+  right: -14px;
+}
+/* Celular: tarjetas más anchas (se ve una y parte de la siguiente) y sin
+   flechas, se desliza con el dedo. */
+@media (max-width: 640px) {
+  .carousel-item {
+    flex-basis: 72%;
+  }
+  .carousel-btn {
+    display: none;
+  }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+  .carousel-item {
+    flex-basis: 42%;
+  }
+}

@@ -13,7 +13,7 @@ import {
 } from "@/lib/variants";
 import { BackButton } from "@/components/ui/BackButton";
 import { ProductImage } from "@/components/catalog/ProductImage";
-import { ProductGroupCard } from "@/components/catalog/ProductGroupCard";
+import { ProductCarousel } from "@/components/catalog/ProductCarousel";
 import {
   EmptyState,
   ErrorState,
@@ -55,8 +55,8 @@ export function ProductPage() {
   }, [data]);
 
   // Productos relacionados: otros de la misma categoría (sin el actual).
-  // Mostramos hasta 8 (2 filas de 4) para no alargar demasiado la página.
-  const RELATED_LIMIT = 8;
+  // Hasta 12, en una fila horizontal que se desliza (carrusel).
+  const RELATED_LIMIT = 12;
   const related = useMemo(() => {
     if (!data?.product) return [];
     const currentId = data.product.id;
@@ -273,11 +273,8 @@ export function ProductPage() {
               Ver más de esta categoría
             </Link>
           </div>
-          <div className="grid grid-cards catalog-grid">
-            {related.map((g) => (
-              <ProductGroupCard key={g.representative.id} group={g} />
-            ))}
-          </div>
+          {/* Fila horizontal que se desliza a izquierda y derecha. */}
+          <ProductCarousel groups={related} label="Productos relacionados" />
         </section>
       )}
     </section>
