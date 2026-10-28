@@ -138,13 +138,13 @@ select {
 }
 
 /* ----- Pie de página: vidrio sin desenfoque (es grande y se mueve con el scroll) ----- */
-/* Reflejo dorado tenue (pedido del usuario) en lugar del brillo blanco. */
+/* Reflejo amarillo tenue, el mismo amarillo de "Equípate" en la portada (#ffc24a). */
 .site-footer {
   background:
-    radial-gradient(900px 340px at 12% 0%, rgba(240, 196, 90, 0.2), transparent 70%),
-    linear-gradient(155deg, rgba(240, 196, 90, 0.1), rgba(240, 196, 90, 0.015) 45%, rgba(214, 164, 64, 0.06)),
+    radial-gradient(900px 340px at 12% 0%, rgba(255, 194, 74, 0.2), transparent 70%),
+    linear-gradient(155deg, rgba(255, 194, 74, 0.1), rgba(255, 194, 74, 0.015) 45%, rgba(255, 194, 74, 0.05)),
     rgba(10, 24, 42, 0.6);
-  border-top-color: rgba(232, 190, 92, 0.22);
+  border-top-color: rgba(255, 194, 74, 0.25);
 }
 
 /* ----- Encabezados de página (catálogo, servicios…) sobre el fondo de luces ----- */
