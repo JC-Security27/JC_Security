@@ -39,6 +39,27 @@ export function CatalogPage() {
   // Drawer de filtros en móvil (en escritorio el panel va fijo a la izquierda).
   const [filtersOpen, setFiltersOpen] = useState(false);
 
+  // Escritorio: el panel de filtros se puede ocultar con el botón junto al
+  // título "Filtros" (se recuerda en este navegador). En celular el mismo
+  // botón cierra el cajón.
+  const isDesktop = useMediaQuery("(min-width: 961px)");
+  const [panelHidden, setPanelHidden] = useState(() => {
+    try {
+      return localStorage.getItem("jcs-filters-hidden") === "1";
+    } catch {
+      return false;
+    }
+  });
+  const setHidden = (hidden: boolean) => {
+    setPanelHidden(hidden);
+    try {
+      localStorage.setItem("jcs-filters-hidden", hidden ? "1" : "0");
+    } catch {
+      /* sin almacenamiento: solo dura esta visita */
+    }
+  };
+  const collapsed = isDesktop && panelHidden;
+
   // Los filtros viven en la URL (compartible y con botón "atrás").
   const filters: CatalogFilters = {
     search: searchParams.get("q") ?? "",
@@ -194,30 +215,42 @@ export function CatalogPage() {
         </SampleNotice>
       )}
 
-      <div className="catalog-layout">
+      <div className={`catalog-layout ${collapsed ? "is-collapsed" : ""}`}>
         {/* Panel de filtros: sidebar fijo en escritorio, drawer en móvil. */}
         {status === "success" && data && (
           <>
+            {collapsed && (
+              <button
+                type="button"
+                className="catalog-rail"
+                onClick={() => setHidden(false)}
+                aria-label="Mostrar filtros"
+                title="Mostrar filtros"
+              >
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M3 5h18M6 12h12M10 19h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+                </svg>
+                <span className="catalog-rail-label">Filtros</span>
+                {activeFilterCount > 0 && (
+                  <span className="catalog-filters-badge">{activeFilterCount}</span>
+                )}
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
+              </button>
+            )}
             <aside
               className={`catalog-sidebar ${filtersOpen ? "is-open" : ""}`}
               aria-label="Filtros del catálogo"
+              hidden={collapsed}
             >
-              <div className="catalog-drawer-head">
-                <span>Filtros</span>
-                <button
-                  type="button"
-                  className="catalog-drawer-close"
-                  onClick={() => setFiltersOpen(false)}
-                  aria-label="Cerrar filtros"
-                >
-                  ✕
-                </button>
-              </div>
               <CatalogControls
                 categories={data.categories}
                 brands={data.brands}
                 filters={filters}
                 onChange={setFilters}
+                onHide={isDesktop ? () => setHidden(true) : () => setFiltersOpen(false)}
+                hideLabel={isDesktop ? "Ocultar filtros" : "Cerrar filtros"}
               />
               <div className="catalog-drawer-foot">
                 <button

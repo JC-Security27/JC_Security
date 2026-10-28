@@ -37,11 +37,16 @@ export function CatalogControls({
   brands,
   filters,
   onChange,
+  onHide,
+  hideLabel = "Ocultar filtros",
 }: {
   categories: Category[];
   brands: Brand[];
   filters: CatalogFilters;
   onChange: (next: CatalogFilters) => void;
+  /** Si se pasa, el título "Filtros" es un botón que oculta/cierra el panel. */
+  onHide?: () => void;
+  hideLabel?: string;
 }) {
   const [brandQuery, setBrandQuery] = useState("");
 
@@ -97,7 +102,27 @@ export function CatalogControls({
   return (
     <div className="filters-panel">
       <div className="filters-panel-head">
-        <h2 className="filters-title">Filtros</h2>
+        {/* Botón junto al título: oculta el panel (escritorio) o cierra el
+            cajón (celular). */}
+        {onHide ? (
+          <button
+            type="button"
+            className="filters-hide-btn"
+            onClick={onHide}
+            aria-label={hideLabel}
+            title={hideLabel}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M3 5h18M6 12h12M10 19h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+            </svg>
+            <h2 className="filters-title">Filtros</h2>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" className="filters-hide-icon">
+              <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </button>
+        ) : (
+          <h2 className="filters-title">Filtros</h2>
+        )}
         {hasActiveFilters && (
           <button
             type="button"

@@ -506,3 +506,11 @@ Pedido del usuario: llevar el efecto vidrio de la portada al resto de la página
 - Desenfoque real solo en paneles que flotan sobre contenido: header, menú móvil, sugerencias de búsqueda, chat IA, caja de precio y panel de filtros (en escritorio ahora es un panel de vidrio con borde; en celular el cajón es vidrio más opaco).
 - Inputs, `.btn-ghost`, `.chip` y footer translúcidos.
 Probado en inicio, catálogo, detalle, servicios, contacto, cotización, guías, redes, cajón de filtros y sugerencias en celular, y chat. El catálogo se recorre a 60 fps en celular simulado con CPU 4× más lenta.
+
+## [2026-10-28] De: Claude — Botón "Filtros" junto al título del panel: oculta/muestra el panel
+Estado: PENDIENTE
+
+Pedido del usuario: el botón de filtros va a la izquierda, en el título "Filtros" del panel, y sirve para ocultar el panel.
+- `CatalogControls.tsx`: props nuevas `onHide` / `hideLabel`; si vienen, el título "Filtros" es un botón (ícono + "Filtros" + ‹) con clase `.filters-hide-btn`.
+- `CatalogPage.tsx`: en escritorio (≥ 961 px) el botón oculta el panel (`panelHidden`, guardado en `localStorage` como `jcs-filters-hidden`); la grilla pasa a `.catalog-layout.is-collapsed` (52px + 1fr) y aparece `.catalog-rail`, una pestaña vertical de vidrio "Filtros ›" (con el número de filtros activos) que lo vuelve a mostrar. En celular el mismo botón cierra el cajón; quité `.catalog-drawer-head` (el título salía dos veces). El botón `.catalog-filters-btn` de la barra de resultados queda solo en ≤ 960 px para abrir el cajón.
+- Estilos en `pages.css` (bloque antes de "El encabezado y pie del drawer…"). `.catalog-sidebar[hidden]` con `display: none !important`.
