@@ -88,7 +88,7 @@ export function AiChatWidget() {
           </span>
         ) : (
           <img
-            src="/robot-asistente.png"
+            src="/robots/robot-asistente.webp"
             alt=""
             className="ai-fab-robot"
             aria-hidden="true"
@@ -106,7 +106,7 @@ export function AiChatWidget() {
           <header className="ai-header">
             <div className="ai-header-id">
               <img
-                src="/robot-asistente.png"
+                src="/robots/robot-asistente.webp"
                 alt=""
                 className="ai-header-avatar"
                 aria-hidden="true"
