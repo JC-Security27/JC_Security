@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
@@ -35,9 +35,16 @@ export function CatalogPage() {
 
   // En pantallas angostas mostramos solo 4 productos por categoría.
   const isMobile = useMediaQuery("(max-width: 640px)");
+
+  // En computadora se muestran filas COMPLETAS según cuántas columnas caben
+  // (pedido del usuario): al menos 8 productos, redondeado a la fila entera.
+  // Ej.: 3 columnas -> 9, 4 -> 8, 5 -> 10, 6 -> 12. Se recalcula al ocultar
+  // los filtros o cambiar el tamaño de la ventana.
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const [columns, setColumns] = useState(4);
   const previewPerCategory = isMobile
     ? PREVIEW_PER_CATEGORY_MOBILE
-    : PREVIEW_PER_CATEGORY_DESKTOP;
+    : Math.ceil(PREVIEW_PER_CATEGORY_DESKTOP / columns) * columns;
 
   // Drawer de filtros en móvil (en escritorio el panel va fijo a la izquierda).
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -103,6 +110,22 @@ export function CatalogPage() {
     // Mostramos todas las marcas del catálogo fijo aunque aún no tengan productos.
     return { products: productsPage.items, categories, brands: withDemoBrands(brands) };
   }, []);
+
+  // Mide las columnas cuando ya hay productos y cada vez que cambia el ancho.
+  useEffect(() => {
+    const el = resultsRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const measure = () => {
+      const grid = el.querySelector<HTMLElement>(".catalog-grid");
+      if (!grid) return;
+      const n = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length;
+      if (n > 0) setColumns(n);
+    };
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    measure();
+    return () => ro.disconnect();
+  }, [status]);
 
   // Aplica búsqueda + marca + nuevos (la categoría se maneja aparte para poder
   // agrupar cuando no hay una seleccionada).
@@ -269,7 +292,7 @@ export function CatalogPage() {
         )}
 
         {/* Columna de resultados */}
-        <div className="catalog-results">
+        <div className="catalog-results" ref={resultsRef}>
           {status === "success" && data && (
             <div className="catalog-toolbar">
               <button
