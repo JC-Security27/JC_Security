@@ -11,6 +11,9 @@ const services: {
   description: string;
   image?: string;
   imagePosition?: string;
+  /** "contain": la foto se ve completa (para fotos verticales), con la misma
+   *  foto desenfocada de fondo para rellenar los costados. */
+  imageFit?: "contain";
 }[] = [
   {
     id: "planos-electricos",
@@ -40,7 +43,7 @@ const services: {
       "Trabajos en altura con el equipo y las medidas de seguridad " +
       "adecuadas.",
     image: "/servicios/trabajos-altura.webp",
-    imagePosition: "center 30%",
+    imageFit: "contain",
   },
   {
     id: "certificacion-normativa",
@@ -79,7 +82,13 @@ export function ServicesPage() {
       <div className="services-grid">
         {services.map((s) => (
           <div key={s.id} className="card service-card">
-            <div className="service-card-media" aria-hidden="true">
+            <div
+              className={`service-card-media ${s.imageFit === "contain" ? "is-contain" : ""}`}
+              aria-hidden="true"
+            >
+              {s.image && s.imageFit === "contain" && (
+                <img src={s.image} alt="" loading="lazy" className="service-card-media-bg" />
+              )}
               {s.image && (
                 <img
                   src={s.image}
