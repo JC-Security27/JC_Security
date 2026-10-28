@@ -2094,45 +2094,18 @@
 .catalog-sidebar[hidden] {
   display: none !important;
 }
-/* Escritorio: con el panel oculto queda una pestaña angosta para volver a abrirlo. */
+/* Escritorio: con el panel oculto, los productos usan todo el ancho y el botón
+   horizontal "Filtros" (arriba a la izquierda de los resultados) lo vuelve a mostrar. */
 @media (min-width: 961px) {
   .catalog-layout.is-collapsed {
-    grid-template-columns: 52px 1fr;
+    grid-template-columns: 1fr;
   }
   .catalog-toolbar .catalog-filters-btn {
     display: none;
   }
-}
-.catalog-rail {
-  position: sticky;
-  top: calc(var(--header-height) + var(--space-4));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  width: 52px;
-  padding: var(--space-3) 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--glass-sheen, none), var(--surface);
-  box-shadow: var(--shadow-card);
-  color: var(--text);
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-  backdrop-filter: blur(var(--glass-blur, 14px)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--glass-blur, 14px)) saturate(150%);
-  transition: border-color var(--transition), color var(--transition);
-}
-.catalog-rail:hover,
-.catalog-rail:focus-visible {
-  color: var(--accent);
-  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-}
-.catalog-rail-label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  letter-spacing: 0.06em;
+  .catalog-layout.is-collapsed .catalog-toolbar .catalog-filters-btn {
+    display: inline-flex;
+  }
 }
 
 /* El encabezado y pie del drawer solo se ven en móvil. */

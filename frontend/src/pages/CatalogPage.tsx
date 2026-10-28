@@ -219,26 +219,6 @@ export function CatalogPage() {
         {/* Panel de filtros: sidebar fijo en escritorio, drawer en móvil. */}
         {status === "success" && data && (
           <>
-            {collapsed && (
-              <button
-                type="button"
-                className="catalog-rail"
-                onClick={() => setHidden(false)}
-                aria-label="Mostrar filtros"
-                title="Mostrar filtros"
-              >
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                  <path d="M3 5h18M6 12h12M10 19h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-                </svg>
-                <span className="catalog-rail-label">Filtros</span>
-                {activeFilterCount > 0 && (
-                  <span className="catalog-filters-badge">{activeFilterCount}</span>
-                )}
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </button>
-            )}
             <aside
               className={`catalog-sidebar ${filtersOpen ? "is-open" : ""}`}
               aria-label="Filtros del catálogo"
@@ -280,7 +260,9 @@ export function CatalogPage() {
               <button
                 type="button"
                 className="btn btn-outline btn-sm catalog-filters-btn"
-                onClick={() => setFiltersOpen(true)}
+                // Escritorio: vuelve a mostrar el panel oculto. Celular: abre el cajón.
+                onClick={() => (isDesktop ? setHidden(false) : setFiltersOpen(true))}
+                aria-label={isDesktop ? "Mostrar filtros" : "Abrir filtros"}
               >
                 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
                   <path
