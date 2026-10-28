@@ -35,7 +35,7 @@ export const STORY: StoryChapter[] = [
   {
     id: "vigila",
     kicker: "Vigila",
-    title: "Ojos en tu casa y tu negocio, día y noche",
+    title: "Monitoreo continuo 24/7",
     text: "Cámaras IP y analógicas con visión nocturna a color, inteligencia artificial y acceso desde el celular, con grabadores para guardar todo.",
     points: ["Visión nocturna a color", "Detección de personas y vehículos", "Ver en vivo desde el celular"],
     brands: "Dahua · Ajax · IMOU · DLX",
@@ -80,7 +80,7 @@ export const STORY: StoryChapter[] = [
   {
     id: "conecta",
     kicker: "Conecta",
-    title: "Una red estable que no se apaga",
+    title: "Conexión sin interrupciones",
     text: "Switches, routers y puntos de acceso Wi-Fi, gabinetes y cableado, más UPS y reguladores para que todo siga funcionando.",
     points: ["Wi-Fi para interiores y exteriores", "Switches PoE para cámaras", "Respaldo de energía (UPS)"],
     brands: "Reyee · TP-Link · TRENDnet · CDP",
@@ -95,7 +95,7 @@ export const STORY: StoryChapter[] = [
   {
     id: "equipate",
     kicker: "Equípate",
-    title: "Las herramientas para hacerlo bien",
+    title: "El equipo que necesitas",
     text: "Herramientas manuales, eléctricas e inalámbricas, accesorios y equipo de protección para el trabajo de todos los días.",
     points: ["Inalámbricas de 12 V y 20 V", "Manuales y de medición", "Equipo de protección personal"],
     brands: "Tolsen",

@@ -2,6 +2,7 @@ import { SampleNotice } from "@/components/ui/states";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
 import { YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
+import { RobotStage } from "@/components/ui/RobotStage";
 
 /** Servicios reales confirmados por JC Security. `image` es opcional: sin ella
  *  la tarjeta muestra el fondo de muestra. Es el nombre base de las fotos en
@@ -51,8 +52,7 @@ const services: {
       "Trabajos en altura con el equipo y las medidas de seguridad " +
       "adecuadas.",
     image: "trabajos-altura",
-    widths: [480, 800],
-    imageFit: "contain",
+    widths: [480, 800, 1200],
   },
   {
     id: "certificacion-normativa",
@@ -77,7 +77,7 @@ const services: {
       "Revisión de instalaciones eléctricas para detectar fallas y " +
       "riesgos.",
     image: "inspeccion-electrica",
-    widths: [480, 800],
+    widths: [480, 800, 1200],
   },
 ];
 
@@ -100,8 +100,8 @@ export function ServicesPage() {
               <span>de experiencia</span>
             </li>
             <li>
-              <strong>{services.length}</strong>
-              <span>servicios</span>
+              <strong>Hogar y negocio</strong>
+              <span>residencial y comercial</span>
             </li>
             <li>
               <strong>Normativa</strong>
@@ -126,10 +126,15 @@ export function ServicesPage() {
             Solicitar un servicio
           </WhatsAppButton>
         </div>
-        <div className="services-hero-visual" aria-hidden="true">
-          <span className="services-hero-glow" />
-          <img src="/robot-ingeniero.png" alt="" className="services-robot" />
-        </div>
+        <RobotStage
+          robot="servicios"
+          chips={[
+            { label: "Planos eléctricos", img: "/servicios/planos-electricos-480.webp", cover: true },
+            { label: "Cerca eléctrica", img: "/servicios/cerca-electrica-480.webp", cover: true },
+            { label: "Inspección eléctrica", img: "/servicios/inspeccion-electrica-480.webp", cover: true },
+            { label: "Trabajos de altura", img: "/servicios/trabajos-altura-480.webp", cover: true },
+          ]}
+        />
       </div>
 
       <h2 className="services-list-title">Nuestros servicios</h2>

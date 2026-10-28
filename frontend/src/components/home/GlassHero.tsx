@@ -55,7 +55,7 @@ export function GlassHero() {
 
         <div className="ghero-visual" aria-hidden="true">
           <span className="ghero-ring" />
-          <img src="/robot-saludando.png" alt="" className="ghero-robot" />
+          <img src="/robots/robot-home.webp" alt="" className="ghero-robot" />
           {FLOATING.map((p, i) => (
             <span key={p.id} className={`ghero-chip glass chip-${i}`}>
               <img src={p.img} alt="" loading="eager" />

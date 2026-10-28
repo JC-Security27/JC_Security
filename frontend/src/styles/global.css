@@ -8,6 +8,7 @@
 @import "./components.css";
 @import "./pages.css";
 @import "./home.css";
+@import "./robot-stage.css";
 @import "./glass.css";
 
 :root {

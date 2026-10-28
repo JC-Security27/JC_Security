@@ -1,3 +1,4 @@
+import { ICONS, PageHero } from "@/components/ui/RobotStage";
 import { siteConfig } from "@/config/site";
 import { SampleNotice } from "@/components/ui/states";
 import { SocialIcon } from "@/components/ui/SocialIcon";
@@ -5,11 +6,19 @@ import { SocialIcon } from "@/components/ui/SocialIcon";
 export function SocialPage() {
   return (
     <section className="section container">
-      <div className="section-head">
-        <span className="eyebrow">Comunidad</span>
-        <h1>Redes sociales</h1>
+      <PageHero
+        eyebrow="Comunidad"
+        title="Redes sociales"
+        robot="redes"
+        chips={[
+          { label: "Facebook", icon: ICONS.facebook },
+          { label: "Instagram", icon: ICONS.instagram },
+          { label: "TikTok", icon: ICONS.tiktok },
+          { label: "WhatsApp", icon: ICONS.whatsapp },
+        ]}
+      >
         <p>Síguenos para novedades, promociones y consejos de seguridad.</p>
-      </div>
+      </PageHero>
 
       <SampleNotice>
         <strong>Pendiente.</strong> Las cuentas y enlaces oficiales de JC

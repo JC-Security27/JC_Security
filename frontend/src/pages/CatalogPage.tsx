@@ -3,6 +3,9 @@ import { Link, useSearchParams } from "react-router-dom";
 import { getDataClient, getActiveSource } from "@/data/dataClient";
 import { useAsync } from "@/hooks/useAsync";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { PageHero } from "@/components/ui/RobotStage";
+
+const CATALOG_IMG = "https://xehegspjlbpkvhsgcdqj.supabase.co/storage/v1/object/public/catalogo/";
 import {
   CatalogControls,
   SHOW_NEW_FILTER,
@@ -203,14 +206,22 @@ export function CatalogPage() {
 
   return (
     <section className="section container">
-      <div className="section-head">
-        <span className="eyebrow">Catálogo</span>
-        <h1>Productos y servicios</h1>
+      <PageHero
+        eyebrow="Catálogo"
+        title="Productos y servicios"
+        robot="catalogo"
+        chips={[
+          { label: "Cámaras", img: `${CATALOG_IMG}dahua-ipchdw2849tsil-hq.webp` },
+          { label: "Alarmas", img: `${CATALOG_IMG}ajax-ajhub4g-hq.webp` },
+          { label: "Control de acceso", img: `${CATALOG_IMG}zkteco-horustl2-hq.webp` },
+          { label: "Herramientas", img: `${CATALOG_IMG}tolsen-87415-hq2.webp` },
+        ]}
+      >
         <p>
           Explora por categoría, filtra por marca o busca por referencia. Para
           precio y disponibilidad, consulta por WhatsApp.
         </p>
-      </div>
+      </PageHero>
 
       {showSampleNotice && (
         <SampleNotice>

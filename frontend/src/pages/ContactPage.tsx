@@ -1,3 +1,4 @@
+import { ICONS, PageHero } from "@/components/ui/RobotStage";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
@@ -15,14 +16,22 @@ export function ContactPage() {
 
   return (
     <section className="section container">
-      <div className="section-head">
-        <span className="eyebrow">Hablemos</span>
-        <h1>Contacto</h1>
+      <PageHero
+        eyebrow="Hablemos"
+        title="Contacto"
+        robot="contacto"
+        chips={[
+          { label: "WhatsApp", icon: ICONS.whatsapp },
+          { label: "Teléfono", icon: ICONS.phone },
+          { label: "Correo", icon: ICONS.mail },
+          { label: "Ubicación", icon: ICONS.pin },
+        ]}
+      >
         <p>
           La forma más rápida de consultarnos es por WhatsApp. Te respondemos
           con precio, disponibilidad y asesoría.
         </p>
-      </div>
+      </PageHero>
 
       <div className="contact-layout">
         <div className="card contact-main">
