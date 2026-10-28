@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { formatPlus, useCatalogStats } from "@/lib/catalogStats";
 import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
@@ -13,6 +14,8 @@ const FLOATING = [STORY[0].products[1], STORY[1].products[0], STORY[2].products[
  * reales flotando alrededor.
  */
 export function GlassHero() {
+  // Cifras reales del catálogo (mismo conteo que la página Catálogo).
+  const stats = useCatalogStats();
   return (
     <section className="ghero">
       <div className="ghero-aurora" aria-hidden="true">
@@ -43,11 +46,11 @@ export function GlassHero() {
               <span>años de experiencia</span>
             </li>
             <li>
-              <strong>+1.600</strong>
+              <strong>{stats ? formatPlus(stats.products) : "+1.500"}</strong>
               <span>productos</span>
             </li>
             <li>
-              <strong>+30</strong>
+              <strong>{stats ? formatPlus(stats.brands) : "+30"}</strong>
               <span>marcas</span>
             </li>
           </ul>

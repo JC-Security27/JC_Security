@@ -90,7 +90,7 @@ export function CatalogPage() {
     const client = await getDataClient();
     const [productsPage, allCategories, brands] = await Promise.all([
       // pageSize grande: el adapter pagina internamente y trae TODO el catálogo
-      // (son 1.600+ productos; Supabase corta en 1.000 por consulta).
+      // (son más de 1.500 productos; Supabase corta en 1.000 por consulta).
       client.getProducts({ pageSize: 5000 }),
       client.getCategories(),
       client.getBrands(),

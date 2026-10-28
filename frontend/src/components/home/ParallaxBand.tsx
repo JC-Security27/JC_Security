@@ -1,5 +1,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { formatPlus, useCatalogStats } from "@/lib/catalogStats";
 import { CostaRicaNight } from "@/components/home/CostaRicaNight";
 
 /**
@@ -152,6 +153,8 @@ const floating = [
 ];
 
 export function ParallaxBand() {
+  // Cifras reales del catálogo (mismo conteo que la página Catálogo).
+  const stats = useCatalogStats();
   const ref = useParallax<HTMLElement>();
 
   return (
@@ -184,11 +187,11 @@ export function ParallaxBand() {
         </p>
         <ul className="parallax-stats">
           <li>
-            <strong>+1.600</strong>
+            <strong>{stats ? formatPlus(stats.products) : "+1.500"}</strong>
             <span>productos</span>
           </li>
           <li>
-            <strong>+30</strong>
+            <strong>{stats ? formatPlus(stats.brands) : "+30"}</strong>
             <span>marcas</span>
           </li>
           <li>

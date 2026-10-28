@@ -532,3 +532,8 @@ Estado: PENDIENTE
 2. **Filtros**: quité la pestaña vertical `.catalog-rail`. Con el panel oculto en escritorio, la grilla pasa a 1 columna y aparece el botón horizontal `.catalog-filters-btn` en la barra de resultados (lo vuelve a mostrar).
 3. **Productos relacionados**: nuevo `components/catalog/ProductCarousel.tsx` (fila horizontal con scroll-snap, flechas ‹ › que se ocultan en los extremos, deslizable con el dedo; 12 productos). Estilos `.carousel*` en `pages.css`.
 4. **Encabezado**: "Redes" → "Redes sociales"; `--header-height` 78 → 88 px; logo re-exportado a resolución nativa (784×138) y más grande (54 / 48 / 38 / 32 px de alto) con `flex-shrink: 0` (a ~1100 px se aplastaba); menú 1.04rem/600; carrito 46 px; buscador más alto. La búsqueda baja a su propia fila desde ≤ 1180 px (antes 1024) para que no se apriete.
+
+## [2026-10-28] De: Claude — Cifras de la portada calculadas del catálogo
+Estado: PENDIENTE
+
+El usuario notó que la portada decía "+1.600 productos" y el catálogo muestra 1.563 resultados (las medidas de un mismo artículo cuentan una vez). Nuevo `frontend/src/lib/catalogStats.ts`: `loadCatalog()` (caché compartida; la sacó de `HeaderSearch`, que ahora la importa de ahí), `useCatalogStats()` (productos = `groupByVariants(...).length`, marcas con productos) y `formatPlus()` (redondea hacia abajo: 1.563 → "+1.500"). `GlassHero` y `ParallaxBand` lo usan; mientras carga muestran "+1.500" / "+30". Se actualiza solo cuando cambie el catálogo.
