@@ -1,6 +1,7 @@
 import { SampleNotice } from "@/components/ui/states";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
+import { YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
 
 /** Servicios reales confirmados por JC Security. `image` es opcional: sin ella
  *  la tarjeta muestra el fondo de muestra. Es el nombre base de las fotos en
@@ -83,11 +84,55 @@ const services: {
 export function ServicesPage() {
   return (
     <section className="section container">
-      <div className="section-head">
-        <span className="eyebrow">Experiencia</span>
-        <h1>Servicios</h1>
-        <p>Servicios realizados por JC Security.</p>
+      {/* Encabezado con el robot ingeniero (pedido del usuario) */}
+      <div className="services-hero">
+        <div className="services-hero-copy">
+          <span className="eyebrow">Experiencia</span>
+          <h1>Servicios</h1>
+          <p className="services-hero-lead">
+            Desde el plano hasta la instalación y el mantenimiento: llevamos{" "}
+            {YEARS_OF_EXPERIENCE} años realizando trabajos eléctricos y de
+            seguridad para hogares y negocios en Costa Rica.
+          </p>
+          <ul className="services-highlights">
+            <li>
+              <strong>{YEARS_OF_EXPERIENCE} años</strong>
+              <span>de experiencia</span>
+            </li>
+            <li>
+              <strong>{services.length}</strong>
+              <span>servicios</span>
+            </li>
+            <li>
+              <strong>Normativa</strong>
+              <span>vigente</span>
+            </li>
+          </ul>
+          <ol className="services-steps">
+            <li>
+              <strong>Cuéntanos qué necesitas</strong>
+              <span>Escríbenos por WhatsApp con el servicio y el lugar.</span>
+            </li>
+            <li>
+              <strong>Revisamos y cotizamos</strong>
+              <span>Te damos una propuesta según tu instalación.</span>
+            </li>
+            <li>
+              <strong>Realizamos el trabajo</strong>
+              <span>Con el equipo y las medidas de seguridad adecuadas.</span>
+            </li>
+          </ol>
+          <WhatsAppButton message={serviceInquiryMessage("Servicios")}>
+            Solicitar un servicio
+          </WhatsAppButton>
+        </div>
+        <div className="services-hero-visual" aria-hidden="true">
+          <span className="services-hero-glow" />
+          <img src="/robot-ingeniero.png" alt="" className="services-robot" />
+        </div>
       </div>
+
+      <h2 className="services-list-title">Nuestros servicios</h2>
 
       <div className="services-grid">
         {services.map((s) => (

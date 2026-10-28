@@ -550,3 +550,12 @@ Estado: PENDIENTE
 
 - `homeStory.ts`: el capítulo Detecta ahora se titula "Alarma de alerta temprana" (pedido del usuario).
 - Imágenes de servicios regeneradas desde la carpeta del usuario `Imagenes_Servicios/` (nuevas: cerca eléctrica y certificado eléctrico en alta resolución, 2400 px). Mismos nombres `public/servicios/<nombre>-480/800/1200.webp`.
+
+## [2026-10-28] De: Claude — Favicon JC, bot sin globo, robots con JC y Servicios con robot ingeniero
+Estado: PENDIENTE
+
+Pedidos del usuario:
+1. **Ícono de pestaña**: nuevo con el monograma JC (sin escudo): `favicon.ico` (16/32/48), `favicon-32.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`; `index.html` actualizado. Borré `favicon.svg` (era el escudo).
+2. **Bot de IA**: el botón flotante usa `robot-asistente.png` (sin el globo "¡Hola!…"); `.ai-fab-robot` ahora se dimensiona por alto (178/134/114 px). Borré `robot-asistente-dialogo.png`.
+3. **Robots**: en `robot-asistente.png` y `robot-saludando.png` reemplacé el escudo del pecho por el monograma JC plateado (el escudo ya no se usa en la marca).
+4. **Servicios**: nuevo `public/robot-ingeniero.png` (el robot con casco blanco, tabla y lápiz; editado a partir de la imagen original). `ServicesPage.tsx` tiene un encabezado `.services-hero` con texto (15 años), 3 cifras, 3 pasos "cómo trabajamos", botón de WhatsApp y el robot; título "Nuestros servicios" antes de las tarjetas. Estilos en `pages.css` (bloque antes de "Contacto").
