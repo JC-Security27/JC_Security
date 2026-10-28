@@ -60,11 +60,18 @@
     transform: rotate(360deg);
   }
 }
+/* El robot va centrado DENTRO del círculo y el contenedor siempre es
+   cuadrado (antes el robot lo estiraba y el círculo quedaba ovalado). */
 .robot-stage-robot {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  height: 94%;
+  top: 9%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 82%;
   width: auto;
+  max-width: none;
   object-fit: contain;
   filter: drop-shadow(0 24px 48px rgba(10, 23, 40, 0.45));
   animation: float 6s ease-in-out infinite;
@@ -115,23 +122,26 @@
   background: color-mix(in srgb, var(--accent) 22%, rgba(10, 23, 40, 0.9));
   color: var(--accent);
 }
+.robot-chip {
+  max-width: 150px;
+}
 .robot-chip-0 {
-  top: 6%;
-  left: -6%;
+  top: 14%;
+  left: -20%;
 }
 .robot-chip-1 {
-  top: 22%;
-  right: -8%;
+  top: 30%;
+  right: -20%;
   animation-delay: -2s;
 }
 .robot-chip-2 {
-  bottom: 22%;
-  left: -10%;
+  bottom: 30%;
+  left: -20%;
   animation-delay: -4s;
 }
 .robot-chip-3 {
-  bottom: 5%;
-  right: -3%;
+  bottom: 12%;
+  right: -20%;
   animation-delay: -1s;
 }
 
@@ -140,9 +150,10 @@
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
-  .page-hero .robot-stage {
+  .page-hero .robot-stage,
+  .services-hero .robot-stage {
     order: -1;
-    width: min(84%, 360px);
+    width: min(70%, 320px);
   }
   .robot-chip {
     font-size: 0.72rem;
@@ -154,14 +165,13 @@
     width: 36px;
     height: 36px;
   }
-  .robot-chip-0 {
-    left: -4%;
-  }
-  .robot-chip-1 {
-    right: -4%;
-  }
+  .robot-chip-0,
   .robot-chip-2 {
-    left: -6%;
+    left: -10%;
+  }
+  .robot-chip-1,
+  .robot-chip-3 {
+    right: -10%;
   }
 }
 @media (max-width: 420px) {

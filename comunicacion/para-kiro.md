@@ -570,3 +570,8 @@ Pedidos del usuario:
 4. **Volver arriba**: `components/ui/BackToTop.tsx` en `Layout`; aparece al bajar 1,2 pantallas; fijo abajo a la derecha, a la izquierda del robot del asistente (estilos al final de `components.css`).
 5. **Catálogo**: `previewPerCategory` = filas completas según columnas reales (ResizeObserver lee `grid-template-columns` de `.catalog-grid`): mínimo 8 redondeado a la fila (3→9, 4→8, 5→10). Celular sigue en 4.
 6. **Carrusel**: flechas SVG en círculo de vidrio con borde cian (hover relleno cian), y desvanecido fino en los bordes (`.carousel.can-prev/.can-next`).
+
+## [2026-10-28] De: Claude — Robot JC de las secciones: círculo redondo, robot más chico, tarjetas sin taparlo
+Estado: PENDIENTE
+
+En `robot-stage.css`: el robot ahora es `position: absolute` centrado (top 9 %, alto 82 %), así `.robot-stage` queda cuadrado y el anillo redondo (antes el robot lo estiraba y el anillo salía ovalado, 312×560). Tarjetas: dos a cada lado por fuera del robot (`left/right: -20%`, máx. 150 px; −10 % en ≤ 860 px). En celular el escenario mide `min(70%, 320px)`. Medido con un script (píxeles del robot dentro de cada tarjeta): 0 de solapamiento en las 5 secciones, en 1366 y 390 px, sin salirse de la pantalla.
