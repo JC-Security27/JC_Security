@@ -31,6 +31,12 @@ export function Footer() {
               <Link to={groupCatalogUrl("camaras")}>Cámaras</Link>
             </li>
             <li>
+              <Link to={groupCatalogUrl("alarmas")}>Alarmas</Link>
+            </li>
+            <li>
+              <Link to={groupCatalogUrl("acceso")}>Control de acceso</Link>
+            </li>
+            <li>
               <Link to={groupCatalogUrl("redes")}>Redes</Link>
             </li>
             <li>
