@@ -524,3 +524,11 @@ Pedido del usuario. En `ServicesPage.tsx`: nuevos "Certificación según normati
 Estado: PENDIENTE
 
 Pedido del usuario: quité las orillas azules (marco inclinado y la franja de texto de abajo en certificación) recortando dentro del marco, y las agrandé 3× (Lanczos en dos pasos + enfoque/unsharp mask + un poco de contraste). `public/servicios/certificacion.webp` (945×636) e `inspeccion-electrica.webp` (822×762). En `ServicesPage.tsx` la de certificación ya no lleva `imagePosition`.
+
+## [2026-10-28] De: Claude — 4 ajustes del usuario (servicios, filtros, relacionados, encabezado)
+Estado: PENDIENTE
+
+1. **Imágenes de servicios**: certificación e inspección reescaladas 4× con IA (OpenCV dnn_superres + EDSR) desde los originales recortados sin orillas; planos re-exportado a 1500 px; trabajos de altura (vertical) con `imageFit: "contain"` → se ve completa, centrada y con la misma foto desenfocada de fondo (`.service-card-media.is-contain`, `.service-card-media-bg`).
+2. **Filtros**: quité la pestaña vertical `.catalog-rail`. Con el panel oculto en escritorio, la grilla pasa a 1 columna y aparece el botón horizontal `.catalog-filters-btn` en la barra de resultados (lo vuelve a mostrar).
+3. **Productos relacionados**: nuevo `components/catalog/ProductCarousel.tsx` (fila horizontal con scroll-snap, flechas ‹ › que se ocultan en los extremos, deslizable con el dedo; 12 productos). Estilos `.carousel*` en `pages.css`.
+4. **Encabezado**: "Redes" → "Redes sociales"; `--header-height` 78 → 88 px; logo re-exportado a resolución nativa (784×138) y más grande (54 / 48 / 38 / 32 px de alto) con `flex-shrink: 0` (a ~1100 px se aplastaba); menú 1.04rem/600; carrito 46 px; buscador más alto. La búsqueda baja a su propia fila desde ≤ 1180 px (antes 1024) para que no se apriete.

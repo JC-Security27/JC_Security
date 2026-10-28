@@ -12,16 +12,16 @@ export function Logo({ adaptive = false }: { adaptive?: boolean }) {
         src="/logo-jc-security.png"
         alt=""
         className={`logo-img ${adaptive ? "logo-img--on-dark" : ""}`}
-        width={568}
-        height={100}
+        width={784}
+        height={138}
       />
       {adaptive && (
         <img
           src="/logo-jc-security-navy.png"
           alt=""
           className="logo-img logo-img--on-light"
-          width={568}
-          height={100}
+          width={784}
+          height={138}
         />
       )}
     </span>

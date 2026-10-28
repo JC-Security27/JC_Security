@@ -8,7 +8,7 @@ const navItems = [
   { to: "/catalogo", label: "Catálogo" },
   { to: "/servicios", label: "Servicios" },
   { to: "/guias", label: "Guías" },
-  { to: "/redes", label: "Redes" },
+  { to: "/redes", label: "Redes sociales" },
   { to: "/contacto", label: "Contacto" },
 ];
 
