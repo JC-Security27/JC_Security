@@ -3,13 +3,16 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
 
 /** Servicios reales confirmados por JC Security. `image` es opcional: sin ella
- *  la tarjeta muestra el fondo de muestra. `imagePosition` elige qué parte de
- *  la foto se ve cuando se recorta para la tarjeta (CSS object-position). */
+ *  la tarjeta muestra el fondo de muestra. Es el nombre base de las fotos en
+ *  public/servicios/ (<image>-480/800/1200.webp, achicadas con buena calidad
+ *  para que las líneas finas no hagan "moiré"); `widths` lista los tamaños que
+ *  existen. `imagePosition` elige qué parte se ve al recortar (object-position). */
 const services: {
   id: string;
   title: string;
   description: string;
   image?: string;
+  widths?: number[];
   imagePosition?: string;
   /** "contain": la foto se ve completa (para fotos verticales), con la misma
    *  foto desenfocada de fondo para rellenar los costados. */
@@ -20,7 +23,8 @@ const services: {
     title: "Planos eléctricos",
     description:
       "Diseño y elaboración de planos eléctricos para hogares y negocios.",
-    image: "/servicios/planos-electricos.webp",
+    image: "planos-electricos",
+    widths: [480, 800, 1200],
   },
   {
     id: "cerca-electrica",
@@ -28,6 +32,9 @@ const services: {
     description:
       "Instalación de cercas eléctricas perimetrales para proteger tu " +
       "propiedad.",
+    image: "cerca-electrica",
+    widths: [480, 800, 1200],
+    imagePosition: "center 35%",
   },
   {
     id: "camaras-seguridad",
@@ -42,7 +49,8 @@ const services: {
     description:
       "Trabajos en altura con el equipo y las medidas de seguridad " +
       "adecuadas.",
-    image: "/servicios/trabajos-altura.webp",
+    image: "trabajos-altura",
+    widths: [480, 800],
     imageFit: "contain",
   },
   {
@@ -51,7 +59,8 @@ const services: {
     description:
       "Certificación de instalaciones eléctricas de acuerdo con la " +
       "normativa vigente.",
-    image: "/servicios/certificacion.webp",
+    image: "certificacion",
+    widths: [480, 800, 1200],
   },
   {
     id: "mantenimiento-equipos",
@@ -66,7 +75,8 @@ const services: {
     description:
       "Revisión de instalaciones eléctricas para detectar fallas y " +
       "riesgos.",
-    image: "/servicios/inspeccion-electrica.webp",
+    image: "inspeccion-electrica",
+    widths: [480, 800],
   },
 ];
 
@@ -87,13 +97,23 @@ export function ServicesPage() {
               aria-hidden="true"
             >
               {s.image && s.imageFit === "contain" && (
-                <img src={s.image} alt="" loading="lazy" className="service-card-media-bg" />
+                <img
+                  src={`/servicios/${s.image}-480.webp`}
+                  alt=""
+                  loading="lazy"
+                  className="service-card-media-bg"
+                />
               )}
               {s.image && (
                 <img
-                  src={s.image}
+                  src={`/servicios/${s.image}-800.webp`}
+                  srcSet={(s.widths ?? [800])
+                    .map((w) => `/servicios/${s.image}-${w}.webp ${w}w`)
+                    .join(", ")}
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 25vw"
                   alt=""
                   loading="lazy"
+                  decoding="async"
                   style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined}
                 />
               )}

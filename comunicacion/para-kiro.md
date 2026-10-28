@@ -537,3 +537,10 @@ Estado: PENDIENTE
 Estado: PENDIENTE
 
 El usuario prefirió dejar la portada como estaba ("+1.600 productos", "+30 marcas" fijos): revertí el commit de `catalogStats.ts` (ignorá mi mensaje anterior; `HeaderSearch` vuelve a tener su `loadCatalog`). En `CatalogPage.tsx` el contador ahora es el total de productos (cada medida/talla cuenta): `totalResults = inSelectedCategory.length | baseFiltered.length` y se muestra "1.641 productos" (también en el botón "Ver N productos" del cajón). Las tarjetas siguen agrupando medidas.
+
+## [2026-10-28] De: Claude — Servicios: imágenes nuevas y en varios tamaños (srcset)
+Estado: PENDIENTE
+
+- Nuevas imágenes del usuario: cerca eléctrica (antes sin foto), inspección (ahora 1000 px, foto real) y trabajos de altura actualizada.
+- Planos eléctricos se veía con "moiré" (rayas) sin hover: el navegador achicaba una foto de 1500 px con líneas finas. Ahora cada foto existe en `public/servicios/<nombre>-480/800/1200.webp` (achicadas con Lanczos + enfoque suave) y `ServicesPage.tsx` usa `srcSet` + `sizes`; `image` pasó a ser el nombre base y hay un campo `widths`. Borré los .webp viejos de un solo tamaño.
+- CSS `.service-card-media img`: `object-position: center` (antes left), `transform: translateZ(0)` para que se dibuje igual con y sin el zoom del hover.
