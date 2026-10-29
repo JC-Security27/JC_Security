@@ -1,5 +1,5 @@
 import { ICONS, PageHero } from "@/components/ui/RobotStage";
-import { siteConfig } from "@/config/site";
+import { siteConfig, telHref } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
 
@@ -10,7 +10,7 @@ export function ContactPage() {
   const rows = [
     { label: "Teléfono", value: contact.phone },
     { label: "Correo", value: contact.email },
-    { label: "Dirección", value: contact.address },
+    { label: "Alcance", value: contact.scope },
     { label: "Horario", value: contact.hours },
   ];
 
@@ -24,7 +24,7 @@ export function ContactPage() {
           { label: "WhatsApp", icon: ICONS.whatsapp },
           { label: "Teléfono", icon: ICONS.phone },
           { label: "Correo", icon: ICONS.mail },
-          { label: "Ubicación", icon: ICONS.pin },
+          { label: "Todo Costa Rica", icon: ICONS.pin },
         ]}
       >
         <p>
@@ -54,7 +54,9 @@ export function ContactPage() {
               <div key={r.label} className="specs-row">
                 <dt>{r.label}</dt>
                 <dd>
-                  {r.value ? (
+                  {r.value && r.label === "Teléfono" ? (
+                    <a href={telHref(r.value)}>{r.value}</a>
+                  ) : r.value ? (
                     r.value
                   ) : (
                     <span className="muted">Pendiente</span>

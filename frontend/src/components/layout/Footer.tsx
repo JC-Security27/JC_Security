@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
 import { groupCatalogUrl } from "@/lib/categoryGroups";
 import { siteConfig } from "@/config/site";
-import { generalContactMessage } from "@/lib/whatsapp";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { telHref } from "@/config/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -13,12 +12,6 @@ export function Footer() {
         <div className="footer-brand">
           <Logo adaptive />
           <p>{siteConfig.shortDescription}</p>
-          <WhatsAppButton
-            message={generalContactMessage()}
-            className="btn btn-whatsapp btn-sm"
-          >
-            Escríbenos
-          </WhatsAppButton>
         </div>
 
         <nav className="footer-col" aria-label="Catálogo">
@@ -58,9 +51,6 @@ export function Footer() {
               <Link to="/guias">Guías de seguridad</Link>
             </li>
             <li>
-              <Link to="/redes">Redes sociales</Link>
-            </li>
-            <li>
               <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
@@ -70,7 +60,11 @@ export function Footer() {
           <h4>Contacto</h4>
           <ul className="footer-contact">
             <li>
-              {siteConfig.contact.phone || (
+              {siteConfig.contact.phone ? (
+                <a href={telHref(siteConfig.contact.phone)}>
+                  Teléfono: {siteConfig.contact.phone}
+                </a>
+              ) : (
                 <span className="muted">Teléfono: pendiente</span>
               )}
             </li>
@@ -80,9 +74,7 @@ export function Footer() {
               )}
             </li>
             <li>
-              {siteConfig.contact.address || (
-                <span className="muted">Dirección: pendiente</span>
-              )}
+              Alcance: {siteConfig.contact.scope}
             </li>
           </ul>
         </div>

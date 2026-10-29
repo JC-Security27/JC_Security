@@ -3,12 +3,12 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
 import { useQuote } from "@/context/QuoteContext";
 import { HeaderSearch } from "@/components/layout/HeaderSearch";
+import { SocialIcons } from "@/components/layout/SocialIcons";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
   { to: "/servicios", label: "Servicios" },
   { to: "/guias", label: "Guías" },
-  { to: "/redes", label: "Redes sociales" },
   { to: "/contacto", label: "Contacto" },
 ];
 
@@ -52,6 +52,7 @@ export function Header() {
               {item.label}
             </NavLink>
           ))}
+          <SocialIcons className="nav-socials" />
         </nav>
 
         <HeaderSearch className="header-search-desktop" />
@@ -115,6 +116,7 @@ export function Header() {
               {item.label}
             </NavLink>
           ))}
+          <SocialIcons className="mobile-socials" />
         </nav>
       </div>
     </header>

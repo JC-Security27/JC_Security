@@ -42,8 +42,8 @@ const services: {
     id: "camaras-seguridad",
     title: "Instalación de cámaras de seguridad",
     description:
-      "Montaje y configuración de cámaras de seguridad para hogares y " +
-      "negocios.",
+      "Montaje y configuración de cámaras de seguridad para comunidades " +
+      "y negocios.",
   },
   {
     id: "trabajos-altura",
@@ -62,6 +62,20 @@ const services: {
       "normativa vigente.",
     image: "certificacion",
     widths: [480, 800, 1200],
+  },
+  {
+    id: "domotica",
+    title: "Domótica",
+    description:
+      "Automatización del hogar o del negocio: iluminación, enchufes, " +
+      "sensores y control desde el celular.",
+  },
+  {
+    id: "redes",
+    title: "Redes",
+    description:
+      "Instalación y configuración de redes cableadas y Wi-Fi: cableado, " +
+      "switches, routers y puntos de acceso.",
   },
   {
     id: "mantenimiento-equipos",
@@ -122,9 +136,6 @@ export function ServicesPage() {
               <span>Con el equipo y las medidas de seguridad adecuadas.</span>
             </li>
           </ol>
-          <WhatsAppButton message={serviceInquiryMessage("Servicios")}>
-            Solicitar un servicio
-          </WhatsAppButton>
         </div>
         <RobotStage
           robot="servicios"

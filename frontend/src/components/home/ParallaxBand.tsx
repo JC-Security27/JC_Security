@@ -177,7 +177,7 @@ export function ParallaxBand() {
 
       <div className="container parallax-content">
         <span className="eyebrow">Protección integral</span>
-        <h2 id="parallax-title">Seguridad en cada capa</h2>
+        <h2 id="parallax-title">Trabajamos en todo el país</h2>
         <p>
           Cámaras, alarmas, control de acceso, redes y herramientas: todo lo que
           necesitas para proteger tu hogar o tu negocio, en un solo lugar.

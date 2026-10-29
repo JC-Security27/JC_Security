@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { generalContactMessage } from "@/lib/whatsapp";
 import { ParallaxBand } from "@/components/home/ParallaxBand";
 import { GlassHero } from "@/components/home/GlassHero";
 import { StoryScroll } from "@/components/home/StoryScroll";
-import { YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
 import { useReveal } from "@/components/home/useReveal";
 
 /* Secciones que ofrece JC Security, mostradas como tarjetas en la portada.
@@ -89,19 +86,6 @@ const contactOptions: Offering[] = [
       </svg>
     ),
   },
-  {
-    to: "/redes",
-    title: "Redes sociales",
-    description: "Síguenos para novedades, promociones y lanzamientos.",
-    icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-        <circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="17" cy="6" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="17" cy="18" r="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
-        <path d="M8.2 11 15 7M8.2 13 15 17" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
 ];
 
 function OfferingCard({ offering }: { offering: Offering }) {
@@ -150,22 +134,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ----- Franja WhatsApp ----- */}
-      <section className="cta-band cta-glass">
-        <div className="container cta-band-inner reveal">
-          <div>
-            <h2>¿Buscas algo específico?</h2>
-            <p>
-              Llevamos {YEARS_OF_EXPERIENCE} años asesorando a hogares y
-              negocios. Escríbenos con la referencia o el nombre del producto y
-              te ayudamos con precio y disponibilidad.
-            </p>
-          </div>
-          <WhatsAppButton message={generalContactMessage()}>
-            Escribir por WhatsApp
-          </WhatsAppButton>
-        </div>
-      </section>
     </div>
   );
 }

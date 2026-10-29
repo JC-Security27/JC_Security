@@ -6,7 +6,6 @@ import { CatalogPage } from "@/pages/CatalogPage";
 import { CategoryPage } from "@/pages/CategoryPage";
 import { ProductPage } from "@/pages/ProductPage";
 import { QuotePage } from "@/pages/QuotePage";
-import { SocialPage } from "@/pages/SocialPage";
 import { GuidesPage } from "@/pages/GuidesPage";
 import { ServicesPage } from "@/pages/ServicesPage";
 import { ContactPage } from "@/pages/ContactPage";
@@ -22,7 +21,8 @@ export default function App() {
         <Route path="/categoria/:slug" element={<CategoryPage />} />
         <Route path="/producto/:id" element={<ProductPage />} />
         <Route path="/cotizacion" element={<QuotePage />} />
-        <Route path="/redes" element={<SocialPage />} />
+        {/* La sección de redes se quitó: Instagram y Facebook van en el menú */}
+        <Route path="/redes" element={<Navigate to="/contacto" replace />} />
         <Route path="/guias" element={<GuidesPage />} />
         <Route path="/servicios" element={<ServicesPage />} />
         {/* Redirección para no romper enlaces antiguos */}

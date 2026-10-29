@@ -580,3 +580,12 @@ En `robot-stage.css`: el robot ahora es `position: absolute` centrado (top 9 %, 
 Estado: PENDIENTE
 
 Pedido del usuario: que el círculo del robot en la portada sea igual al de las demás secciones. `GlassHero.tsx` ya no usa `.ghero-visual/.ghero-ring/.ghero-chip` (quedan en `home.css` sin uso, los podés borrar); ahora renderiza `<RobotStage robot="home" className="robot-stage--home" />` con los 4 productos de `FLOATING`. En `robot-stage.css`: `.robot-stage.robot-stage--home` mide `min(100%, 420px)` (≤ 860 px: `min(64%, 320px)`, arriba del texto). Medido: círculo redondo, 0 solapamiento robot/tarjetas y nada fuera de pantalla en 1366 y 390 px.
+
+## [2026-10-29] De: Claude — Varios pedidos del usuario: portada, servicios, contacto, redes en el menú
+Estado: PENDIENTE
+
+- **Portada**: se quitó la franja "¿Buscas algo específico?" (WhatsApp) y la tarjeta "Redes sociales" de "Todo en un solo lugar". En `ParallaxBand` el título es "Trabajamos en todo el país".
+- **Footer**: sin el botón "Escríbenos" de WhatsApp, sin el enlace a Redes sociales; "Dirección" → "Alcance: Costa Rica"; teléfono como enlace `tel:`.
+- **Servicios**: sin el botón de WhatsApp del encabezado; nuevos servicios "Domótica" y "Redes" (sin imagen aún); cámaras: "para comunidades y negocios".
+- **Datos** (`config/site.ts`): `contact.phone = "+506 8798 1616"`, `contact.address` → `contact.scope = "Costa Rica"`, `socials` solo Instagram y Facebook (URLs pendientes), nuevo helper `telHref()`. Contacto muestra "Alcance" y el teléfono enlazado; la tarjeta del robot dice "Todo Costa Rica".
+- **Redes sociales**: se borró `pages/SocialPage.tsx`; `/redes` redirige a `/contacto`. Nuevo `components/layout/SocialIcons.tsx`: siluetas de Instagram y Facebook en el menú, después de "Contacto" (mismo color que los enlaces), también en el menú móvil. Sin URL se muestran sin enlace con "próximamente". Estilos al final de `components.css`.
