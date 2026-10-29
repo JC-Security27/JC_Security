@@ -620,3 +620,11 @@ Estado: PENDIENTE
 - `components/layout/SeasonDecor.tsx` (`HeaderGarland`): guirnalda SVG con luces bajo el menú, solo en Navidad; se usa en `Header.tsx`.
 - `styles/seasons.css`: paleta Navidad 60-30-10 (noche polar, verde abeto, rojo/dorado), gorro sobre el logo, nieve sobre las tarjetas del robot, destello en `.btn-primary`. Todo con pointer-events: none y prefers-reduced-motion.
 - Robots de independencia, cancer-mama y halloween en `public/robots/<id>/`.
+
+## [2026-10-29] De: Claude — Halloween: decoraciones y temporada automática
+Estado: PENDIENTE
+
+- `FORCED_SEASON` volvió a `null`: la temporada sale del calendario (hoy = Halloween). Vista previa: `?tema=navidad`, `?tema=normal`, etc.
+- `SeasonDecor.tsx`: `HeaderDrip` (Header), `CornerWebs` (Layout), `StageBats` (RobotStage).
+- `seasons.css`: paleta Clásico Spooky (CTA naranja con texto carbón, `--text-on-brand: #121212`), sombrero de bruja en el logo, resplandor en `.btn-primary`, niebla en `.ghero`/`.page-hero`.
+- Navidad quedó aprobada por el usuario: no cambiarla sin que lo pida.

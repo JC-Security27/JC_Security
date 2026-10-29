@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { AiChatWidget } from "@/components/ai/AiChatWidget";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { CornerWebs } from "./SeasonDecor";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -11,6 +12,7 @@ export function Layout({ children }: { children: ReactNode }) {
         Saltar al contenido
       </a>
       <Header />
+      <CornerWebs />
       <main id="main">{children}</main>
       <Footer />
       <BackToTop />

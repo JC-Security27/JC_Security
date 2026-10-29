@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { robotSrc } from "@/config/seasons";
+import { StageBats } from "@/components/layout/SeasonDecor";
 
 /* ==========================================================================
    Robot JC con su anillo y tarjetas flotantes (pedido del usuario,
@@ -33,6 +34,7 @@ export function RobotStage({
   return (
     <div className={`robot-stage ${className}`} aria-hidden="true">
       <span className="robot-stage-ring" />
+      <StageBats />
       <img
         src={robotSrc(robot)}
         alt=""

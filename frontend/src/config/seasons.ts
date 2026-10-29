@@ -38,7 +38,7 @@ export const SEASONS: Season[] = [
 
 /** Prueba pedida por el usuario: fuerza una temporada en todo el sitio sin
  *  importar la fecha. `null` = automático según el calendario. */
-const FORCED_SEASON: SeasonId | null = "navidad";
+const FORCED_SEASON: SeasonId | null = null;
 
 function costaRicaMonthDay(now: Date): number {
   const cr = new Date(now.getTime() - 6 * 60 * 60 * 1000);

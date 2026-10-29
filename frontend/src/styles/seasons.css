@@ -36,14 +36,18 @@
 }
 
 :root[data-theme][data-season="halloween"] {
-  --season-1: #ff7a1a;
-  --season-2: #7b2fd0;
-  --season-3: #8fe04a;
-  --season-bg-1: #1d0f2e;
-  --season-bg-2: #0d0716;
-  --accent: #ff9a3c;
-  --primary: #e2620f;
-  --primary-hover: #f27a24;
+  /* Clásico Spooky (contrastes en el informe al usuario). El púrpura bruja
+     solo va en bordes y luces, nunca en texto. */
+  --season-1: #ff7518; /* naranja calabaza: CTA, con texto carbón 7:1 */
+  --season-2: #5c1d8f; /* púrpura bruja: bordes y luces */
+  --season-3: #b38cff; /* lila: brillos suaves */
+  --season-bg-1: #1e1e24; /* pizarra oscura */
+  --season-bg-2: #121212; /* carbón profundo */
+  --accent: #ff8f3f; /* detalles y números (7.3:1) */
+  --primary: #ff7518;
+  --primary-hover: #ff8a3a;
+  --text-on-brand: #121212;
+  --text: #f8f9fa; /* blanco fantasma */
 }
 
 :root[data-theme][data-season="navidad"] {
@@ -307,5 +311,201 @@
   :root[data-season="navidad"] .btn-primary:hover::after {
     transition: none;
     transform: translateX(-120%);
+  }
+}
+
+/* ==========================================================================
+   Halloween: decoraciones (guía de diseño del usuario, 2026-10-29), estilo
+   Clásico Spooky. Vectoriales, sin clics y quietas con menos movimiento.
+   ========================================================================== */
+
+:root[data-season="halloween"] body::before {
+  background:
+    radial-gradient(900px 620px at 88% -6%, rgba(255, 117, 24, 0.2), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, rgba(92, 29, 143, 0.5), transparent 70%),
+    radial-gradient(700px 520px at 64% 106%, rgba(92, 29, 143, 0.3), transparent 70%),
+    linear-gradient(180deg, #1e1e24, #121212);
+}
+/* Textos blancos que quedaban sobre el naranja: ahora carbón (7:1). */
+:root[data-season="halloween"] .ai-header strong {
+  color: #121212;
+}
+/* Banda de llamada a la acción: púrpura con texto claro (9.8:1). */
+:root[data-season="halloween"] .cta-band,
+:root[data-season="halloween"] .cta-band:not(.cta-glass) {
+  background: linear-gradient(135deg, #3d1360, #5c1d8f);
+  color: #f8f9fa;
+}
+
+/* Goteo de calabaza bajo el menú (reemplaza la franja de colores). */
+:root[data-season="halloween"] .site-header::after {
+  display: none;
+}
+.season-drip {
+  position: absolute;
+  left: 0;
+  top: calc(100% - 1px);
+  width: 100%;
+  height: 32px;
+  pointer-events: none;
+  overflow: hidden;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+}
+
+/* Telarañas en las esquinas, bajo el encabezado. Fijas y dentro de la
+   pantalla (left/right: 0), así no generan scroll horizontal. */
+.season-webs {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+.season-web {
+  position: absolute;
+  top: 0;
+  width: 130px;
+  height: 130px;
+  color: rgba(248, 249, 250, 0.2);
+}
+.season-web svg {
+  width: 100%;
+  height: 100%;
+}
+.season-web.is-left {
+  left: 0;
+}
+.season-web.is-right {
+  right: 0;
+  transform: scaleX(-1);
+}
+.season-web circle {
+  animation: spider-bob 4s ease-in-out infinite;
+  transform-box: fill-box;
+}
+@keyframes spider-bob {
+  50% { transform: translateY(6px); }
+}
+/* Si el contenido llega al borde izquierdo, la telaraña de ese lado
+   cruzaría los textos: solo se muestra con margen suficiente. */
+@media (max-width: 1500px) {
+  .season-web.is-left {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .season-web {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+/* Sombrero de bruja sobre la "J" del logo. */
+:root[data-season="halloween"] .header-logo {
+  position: relative;
+}
+:root[data-season="halloween"] .header-logo::before {
+  content: "";
+  position: absolute;
+  left: -0.3em;
+  top: -0.85em;
+  width: 2em;
+  height: 1.7em;
+  font-size: 18px;
+  pointer-events: none;
+  transform: rotate(-14deg);
+  background: no-repeat center / contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 54'%3E%3Cpath d='M22 40 L34 4 C36 0 40 2 40 6 L44 40 Z' fill='%237b3fc4'/%3E%3Cellipse cx='32' cy='42' rx='30' ry='7' fill='%235c1d8f'/%3E%3Cpath d='M22 34 L44 34 L45 40 L21 40 Z' fill='%23ff7518'/%3E%3C/svg%3E");
+}
+@media (max-width: 520px) {
+  :root[data-season="halloween"] .header-logo::before {
+    font-size: 13px;
+  }
+}
+
+/* Murciélagos junto al Robot JC: aletean y, al pasar el mouse por el
+   escenario, salen volando un poco. */
+.stage-bats {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.stage-bat {
+  position: absolute;
+  width: 46px;
+  color: #2a1a3d;
+  filter: drop-shadow(0 0 6px rgba(255, 117, 24, 0.55));
+  animation: bat-flap 0.5s ease-in-out infinite alternate;
+  transition: translate 0.9s ease;
+}
+.stage-bat.bat-0 { top: 6%; left: 30%; }
+.stage-bat.bat-1 { top: 14%; right: 24%; width: 34px; animation-delay: 0.2s; }
+.stage-bat.bat-2 { top: 2%; right: 40%; width: 26px; animation-delay: 0.35s; }
+.robot-stage:hover .stage-bat.bat-0 { translate: -40px -26px; }
+.robot-stage:hover .stage-bat.bat-1 { translate: 36px -30px; }
+.robot-stage:hover .stage-bat.bat-2 { translate: 10px -40px; }
+@keyframes bat-flap {
+  to { transform: scaleY(0.55); }
+}
+
+/* Resplandor espectral en los botones principales. */
+:root[data-season="halloween"] .btn-primary {
+  transition: background-color var(--transition), box-shadow 0.4s ease, transform var(--transition);
+}
+:root[data-season="halloween"] .btn-primary:hover {
+  box-shadow: 0 0 0 1px rgba(255, 143, 63, 0.6), 0 0 18px rgba(255, 117, 24, 0.55), 0 0 42px rgba(179, 140, 255, 0.35);
+  animation: creepy-glow 1.8s ease-in-out infinite alternate;
+}
+@keyframes creepy-glow {
+  to {
+    box-shadow: 0 0 0 1px rgba(255, 143, 63, 0.8), 0 0 26px rgba(255, 117, 24, 0.7), 0 0 60px rgba(179, 140, 255, 0.5);
+  }
+}
+
+/* Niebla lenta en los encabezados (portada y secciones). */
+:root[data-season="halloween"] .page-hero {
+  position: relative;
+}
+:root[data-season="halloween"] .ghero::after,
+:root[data-season="halloween"] .page-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 60% at 20% 80%, rgba(200, 190, 230, 0.12), transparent 70%),
+    radial-gradient(35% 50% at 60% 90%, rgba(200, 190, 230, 0.1), transparent 70%),
+    radial-gradient(45% 55% at 95% 85%, rgba(200, 190, 230, 0.1), transparent 70%);
+  background-size: 200% 100%;
+  animation: fog-drift 40s linear infinite alternate;
+  /* Bordes difuminados: la niebla no deja un recuadro visible */
+  -webkit-mask-image: radial-gradient(closest-side, #000 35%, transparent);
+  mask-image: radial-gradient(closest-side, #000 35%, transparent);
+}
+@keyframes fog-drift {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-web circle,
+  .stage-bat,
+  :root[data-season="halloween"] .btn-primary:hover,
+  :root[data-season="halloween"] .ghero::after,
+  :root[data-season="halloween"] .page-hero::after {
+    animation: none;
+  }
+  .stage-bat {
+    transition: none;
+  }
+  .robot-stage:hover .stage-bat {
+    translate: none;
   }
 }
