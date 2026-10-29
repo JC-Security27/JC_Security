@@ -657,3 +657,8 @@ Estado: PENDIENTE
 
 - `SeasonDecor.tsx`: `CornerFireworks` (estallidos y estrellas en las esquinas) y `NewYearCountdown` (reloj a las 12:00 + cuenta regresiva a medianoche en hora de CR; sin años escritos, el año sale de la fecha). Ambos en Header.
 - `seasons.css`: paleta Gala (obsidiana #0D0D11, grafito #1A1A22, oro #D4AF37 con texto oscuro, plata #E2E8F0), confeti dorado/plateado al 10-20 %, línea dorada bajo el menú, resplandor dorado en botones y tarjetas. Sin morado (pedido del usuario).
+
+## [2026-10-29] De: Claude — Servicios: 3 fotos nuevas
+Estado: PENDIENTE
+
+Fotos del usuario en `public/servicios/` (480/800/1200): `automatizacion` (Automatización inteligente), `redes` (Instalación de redes inteligente), `mantenimiento` (Mantenimiento y soporte técnico, `imagePosition: center 30%`). Mes Patrio quedó aprobado por el usuario.

@@ -69,6 +69,8 @@ const services: {
     description:
       "Automatización del hogar o del negocio: iluminación, enchufes, " +
       "sensores, portón eléctrico, cámaras y alarmas desde tu celular.",
+    image: "automatizacion",
+    widths: [480, 800, 1200],
   },
   {
     id: "redes",
@@ -76,6 +78,8 @@ const services: {
     description:
       "Instalación y configuración de redes cableadas y Wi-Fi: cableado, " +
       "switches, routers y puntos de acceso.",
+    image: "redes",
+    widths: [480, 800, 1200],
   },
   {
     id: "mantenimiento-equipos",
@@ -83,6 +87,9 @@ const services: {
     description:
       "Revisiones, diagnóstico de fallas, reparaciones y mantenimiento " +
       "preventivo o correctivo de equipos de seguridad y tecnología.",
+    image: "mantenimiento",
+    widths: [480, 800, 1200],
+    imagePosition: "center 30%",
   },
   {
     id: "reparaciones-mejoras",
