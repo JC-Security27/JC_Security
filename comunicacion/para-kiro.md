@@ -613,3 +613,10 @@ Pedido del usuario: el sitio cambia solo según la celebración.
 - `frontend/src/styles/seasons.css`: acento y luces de fondo por temporada.
 - Robots por temporada en `public/robots/<id>/robot-<seccion>.webp`; `RobotStage` usa `robotSrc()`.
 - PRUEBA: `FORCED_SEASON = "navidad"` deja Navidad activa ahora; volver a `null` cuando el usuario lo apruebe.
+
+## [2026-10-29] De: Claude — Navidad: decoraciones
+Estado: PENDIENTE
+
+- `components/layout/SeasonDecor.tsx` (`HeaderGarland`): guirnalda SVG con luces bajo el menú, solo en Navidad; se usa en `Header.tsx`.
+- `styles/seasons.css`: paleta Navidad 60-30-10 (noche polar, verde abeto, rojo/dorado), gorro sobre el logo, nieve sobre las tarjetas del robot, destello en `.btn-primary`. Todo con pointer-events: none y prefers-reduced-motion.
+- Robots de independencia, cancer-mama y halloween en `public/robots/<id>/`.

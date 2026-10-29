@@ -47,14 +47,16 @@
 }
 
 :root[data-theme][data-season="navidad"] {
-  --season-1: #e0303c; /* rojo */
-  --season-2: #1f9a55; /* verde */
-  --season-3: #ffcf5a; /* dorado */
-  --season-bg-1: #0d2a1d;
-  --season-bg-2: #08140f;
-  --accent: #ffcf5a;
+  /* Modo oscuro polar, regla 60-30-10 (contrastes en el informe al usuario):
+     60 % neutros de noche polar, 30 % verde abeto, 10 % rojo y dorado. */
+  --season-1: #c8202d; /* rojo navideño: solo botones (texto blanco 5.7:1) */
+  --season-2: #1f7a4f; /* verde abeto: luces y estructura */
+  --season-3: #f2c14e; /* dorado: detalles (11:1 sobre el fondo) */
+  --season-bg-1: #121d2c;
+  --season-bg-2: #0b1320;
+  --accent: #f2c14e;
   --primary: #c8202d;
-  --primary-hover: #df3340;
+  --primary-hover: #b81d2a;
 }
 
 :root[data-theme][data-season="ano-nuevo"] {
@@ -186,5 +188,124 @@
 @media (prefers-reduced-motion: reduce) {
   :root[data-season] body::after {
     animation: none;
+  }
+}
+
+/* ==========================================================================
+   Navidad: decoraciones (guía de diseño del usuario, 2026-10-29). Todas son
+   vectoriales (SVG o CSS), no reciben clics y se quedan quietas si el
+   sistema pide menos movimiento.
+   ========================================================================== */
+
+/* El fondo pesa más en neutros: el verde y el rojo solo como luces tenues. */
+:root[data-season="navidad"] body::before {
+  background:
+    radial-gradient(900px 620px at 88% -6%, rgba(31, 122, 79, 0.3), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, rgba(19, 64, 47, 0.55), transparent 70%),
+    radial-gradient(700px 520px at 64% 106%, rgba(200, 32, 45, 0.14), transparent 70%),
+    linear-gradient(180deg, #121d2c, #0b1320);
+}
+:root[data-season="navidad"] .blob-a {
+  background: color-mix(in srgb, #1f7a4f 50%, transparent);
+}
+:root[data-season="navidad"] .blob-b {
+  background: color-mix(in srgb, #13402f 70%, transparent);
+}
+:root[data-season="navidad"] .blob-c {
+  background: color-mix(in srgb, #c8202d 22%, transparent);
+}
+
+/* Guirnalda con luces bajo el menú (reemplaza la franja de colores). */
+:root[data-season="navidad"] .site-header::after {
+  display: none;
+}
+.season-garland {
+  position: absolute;
+  left: 0;
+  top: calc(100% - 3px);
+  width: 100%;
+  height: 26px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.garland-bulb {
+  animation: garland-twinkle 2.8s ease-in-out infinite;
+}
+.garland-bulb.b2 { animation-delay: 0.7s; }
+.garland-bulb.b3 { animation-delay: 1.4s; }
+.garland-bulb.b4 { animation-delay: 2.1s; }
+@keyframes garland-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* Gorro navideño sobre la "J" del logo del encabezado. */
+:root[data-season="navidad"] .header-logo {
+  position: relative;
+}
+:root[data-season="navidad"] .header-logo::before {
+  content: "";
+  position: absolute;
+  left: -0.42em;
+  top: -0.62em;
+  width: 1.9em;
+  height: 1.5em;
+  font-size: 18px;
+  pointer-events: none;
+  transform: rotate(-16deg);
+  background: no-repeat center / contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 50'%3E%3Cpath d='M8 40 C14 18 30 4 48 8 C56 10 60 20 58 30 L50 26 C48 18 40 16 34 20 C26 26 22 34 20 40 Z' fill='%23c8202d'/%3E%3Crect x='3' y='36' width='34' height='11' rx='5.5' fill='%23f5f8fa'/%3E%3Ccircle cx='56' cy='32' r='6' fill='%23f5f8fa'/%3E%3C/svg%3E");
+}
+@media (max-width: 520px) {
+  :root[data-season="navidad"] .header-logo::before {
+    font-size: 13px;
+  }
+}
+
+/* Nieve acumulada sobre las tarjetas del Robot JC. */
+:root[data-season="navidad"] .robot-chip::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: -4px;
+  height: 14px;
+  pointer-events: none;
+  /* Capa de nieve: borde de arriba redondeado y gotas que caen por el frente */
+  background:
+    linear-gradient(#f5f8fa, #e4edf5) top / 100% 6px no-repeat,
+    radial-gradient(circle at 50% 0, #f5f8fa 4px, transparent 4.5px) 8% 5px / 14px 9px no-repeat,
+    radial-gradient(circle at 50% 0, #f5f8fa 6px, transparent 6.5px) 34% 5px / 18px 10px no-repeat,
+    radial-gradient(circle at 50% 0, #f5f8fa 3.5px, transparent 4px) 62% 5px / 12px 8px no-repeat,
+    radial-gradient(circle at 50% 0, #f5f8fa 5px, transparent 5.5px) 90% 5px / 16px 9px no-repeat;
+  border-radius: 6px 6px 0 0;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+}
+
+/* Destello al pasar sobre los botones principales. */
+:root[data-season="navidad"] .btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+:root[data-season="navidad"] .btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 236, 170, 0.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+:root[data-season="navidad"] .btn-primary:hover::after {
+  transition: transform 0.7s ease;
+  transform: translateX(120%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garland-bulb {
+    animation: none;
+  }
+  :root[data-season="navidad"] .btn-primary:hover::after {
+    transition: none;
+    transform: translateX(-120%);
   }
 }

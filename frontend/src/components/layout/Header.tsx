@@ -4,6 +4,7 @@ import { Logo } from "@/components/ui/Logo";
 import { useQuote } from "@/context/QuoteContext";
 import { HeaderSearch } from "@/components/layout/HeaderSearch";
 import { SocialIcons } from "@/components/layout/SocialIcons";
+import { HeaderGarland } from "@/components/layout/SeasonDecor";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
@@ -92,6 +93,8 @@ export function Header() {
           </button>
         </div>
       </div>
+
+      <HeaderGarland />
 
       {/* Búsqueda en móvil: segunda fila del encabezado, siempre visible */}
       <div className="container header-search-row">
