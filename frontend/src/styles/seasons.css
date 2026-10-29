@@ -1,59 +1,190 @@
 /* ==========================================================================
-   Colores de temporada (pedido del usuario, 2026-10-29). La temporada activa
-   la pone config/seasons.ts en <html data-season="...">. Cada tema cambia el
-   color de acento (botones, brillos, anillo del Robot JC) y las luces del
-   fondo de vidrio. Se importa después de global.css para ganarle.
+   Temas de temporada (pedido del usuario, 2026-10-29). La temporada activa
+   la pone config/seasons.ts en <html data-season="...">. Cada tema define
+   su paleta y con ella cambia todo el sitio: fondo, luces, botones, acentos,
+   franja del encabezado, pie de página y el anillo del Robot JC.
+   Se importa después de global.css para ganarle.
+
+   Paleta de cada tema:
+   --season-1/2/3  colores de la celebración (luces, franja, blobs)
+   --season-bg-1/2 degradado del fondo
+   --accent        detalles (subrayados, números, anillo, insignias)
+   --primary       botones principales
    ========================================================================== */
 
-:root[data-season="independencia"] {
+/* ----- Paletas ----- */
+:root[data-theme][data-season="independencia"] {
+  --season-1: #d62839; /* rojo bandera */
+  --season-2: #1e4fd8; /* azul bandera */
+  --season-3: #ffffff;
+  --season-bg-1: #0b1838;
+  --season-bg-2: #060d22;
   --accent: #ff5a6a;
-  --accent-strong: #ff5a6a;
-  --focus-ring: #ff5a6a;
-  --season-light-1: rgba(214, 40, 57, 0.26);
-  --season-light-2: rgba(30, 64, 175, 0.55);
-  --season-light-3: rgba(255, 255, 255, 0.12);
+  --primary: #1e4fd8;
+  --primary-hover: #2b5ff0;
 }
 
-:root[data-season="cancer-mama"] {
-  --accent: #ff7eb6;
-  --accent-strong: #ff7eb6;
-  --focus-ring: #ff7eb6;
-  --season-light-1: rgba(255, 126, 182, 0.26);
-  --season-light-2: rgba(120, 50, 110, 0.45);
-  --season-light-3: rgba(255, 170, 210, 0.18);
+:root[data-theme][data-season="cancer-mama"] {
+  --season-1: #ff5fa2;
+  --season-2: #b0306e;
+  --season-3: #ffc1dc;
+  --season-bg-1: #2a0d22;
+  --season-bg-2: #160815;
+  --accent: #ff8cc0;
+  --primary: #d63a82;
+  --primary-hover: #e8559a;
 }
 
-:root[data-season="halloween"] {
+:root[data-theme][data-season="halloween"] {
+  --season-1: #ff7a1a;
+  --season-2: #7b2fd0;
+  --season-3: #8fe04a;
+  --season-bg-1: #1d0f2e;
+  --season-bg-2: #0d0716;
   --accent: #ff9a3c;
-  --accent-strong: #ff9a3c;
-  --focus-ring: #ff9a3c;
-  --season-light-1: rgba(255, 140, 40, 0.24);
-  --season-light-2: rgba(88, 40, 140, 0.5);
-  --season-light-3: rgba(140, 220, 90, 0.12);
+  --primary: #e2620f;
+  --primary-hover: #f27a24;
 }
 
-:root[data-season="navidad"] {
+:root[data-theme][data-season="navidad"] {
+  --season-1: #e0303c; /* rojo */
+  --season-2: #1f9a55; /* verde */
+  --season-3: #ffcf5a; /* dorado */
+  --season-bg-1: #0d2a1d;
+  --season-bg-2: #08140f;
   --accent: #ffcf5a;
-  --accent-strong: #ffcf5a;
-  --focus-ring: #ffcf5a;
-  --season-light-1: rgba(220, 40, 50, 0.3);
-  --season-light-2: rgba(20, 120, 70, 0.45);
-  --season-light-3: rgba(255, 207, 90, 0.16);
+  --primary: #c8202d;
+  --primary-hover: #df3340;
 }
 
-:root[data-season="ano-nuevo"] {
+:root[data-theme][data-season="ano-nuevo"] {
+  --season-1: #ffd166;
+  --season-2: #6d4bd8;
+  --season-3: #f5f0ff;
+  --season-bg-1: #151032;
+  --season-bg-2: #0a0819;
   --accent: #ffd166;
-  --accent-strong: #ffd166;
-  --focus-ring: #ffd166;
-  --season-light-1: rgba(255, 209, 102, 0.26);
-  --season-light-2: rgba(90, 60, 170, 0.45);
-  --season-light-3: rgba(255, 255, 255, 0.12);
+  --primary: #6d4bd8;
+  --primary-hover: #8263ea;
 }
 
+/* ----- Cómo se aplica la paleta (igual para todas) ----- */
+:root[data-theme][data-season] {
+  --accent-strong: var(--accent);
+  --focus-ring: var(--accent);
+  --brand-cyan: var(--accent);
+  --brand-mid: var(--season-2);
+  --bg: var(--season-bg-2);
+  --surface: color-mix(in srgb, var(--season-bg-1) 55%, transparent);
+  --surface-2: color-mix(in srgb, var(--season-1) 8%, transparent);
+  --bg-elevated: color-mix(in srgb, var(--season-bg-1) 88%, transparent);
+  --border: color-mix(in srgb, var(--season-3) 22%, transparent);
+  --divider: color-mix(in srgb, var(--season-3) 12%, transparent);
+  --header-bg: color-mix(in srgb, var(--season-bg-2) 70%, transparent);
+  --header-border: color-mix(in srgb, var(--season-3) 18%, transparent);
+  --glass-sheen: linear-gradient(155deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02) 42%, color-mix(in srgb, var(--season-1) 8%, transparent));
+}
+
+/* Fondo de luces del sitio con los colores de la celebración */
 :root[data-season] body::before {
   background:
-    radial-gradient(900px 620px at 88% -6%, var(--season-light-1), transparent 70%),
-    radial-gradient(820px 680px at -10% 40%, var(--season-light-2), transparent 70%),
-    radial-gradient(760px 560px at 64% 106%, var(--season-light-3), transparent 70%),
-    linear-gradient(180deg, #0a1728, #07111f);
+    radial-gradient(900px 620px at 88% -6%, color-mix(in srgb, var(--season-1) 34%, transparent), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, color-mix(in srgb, var(--season-2) 42%, transparent), transparent 70%),
+    radial-gradient(760px 560px at 64% 106%, color-mix(in srgb, var(--season-3) 18%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--season-bg-1), var(--season-bg-2));
+}
+
+/* Portada: auroras del encabezado */
+:root[data-season] .blob-a {
+  background: color-mix(in srgb, var(--season-1) 50%, transparent);
+}
+:root[data-season] .blob-b {
+  background: color-mix(in srgb, var(--season-2) 55%, transparent);
+}
+:root[data-season] .blob-c {
+  background: color-mix(in srgb, var(--season-3) 30%, transparent);
+}
+
+/* Franja de colores de la celebración bajo el encabezado */
+:root[data-season] .site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 4px;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--season-1) 0 28px,
+    var(--season-3) 28px 56px,
+    var(--season-2) 56px 84px
+  );
+}
+:root[data-season="independencia"] .site-header::after {
+  /* Bandera: azul, blanco, rojo, blanco, azul */
+  height: 6px;
+  background: linear-gradient(
+    180deg,
+    var(--season-2) 0 16.6%,
+    #fff 16.6% 33.3%,
+    var(--season-1) 33.3% 66.6%,
+    #fff 66.6% 83.3%,
+    var(--season-2) 83.3%
+  );
+}
+
+/* Pie de página */
+:root[data-season] .site-footer {
+  background:
+    radial-gradient(900px 340px at 12% 0%, color-mix(in srgb, var(--season-1) 24%, transparent), transparent 70%),
+    radial-gradient(700px 300px at 92% 100%, color-mix(in srgb, var(--season-2) 26%, transparent), transparent 70%),
+    color-mix(in srgb, var(--season-bg-2) 70%, transparent);
+  border-top-color: color-mix(in srgb, var(--season-3) 30%, transparent);
+}
+
+/* Bandas con el azul de marca */
+:root[data-season] .cta-band:not(.cta-glass) {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--season-2) 50%, transparent), color-mix(in srgb, var(--season-1) 30%, transparent));
+}
+
+/* ----- Detalles que caen: nieve (Navidad) y confeti (Año Nuevo) ----- */
+:root[data-season="navidad"] body::after,
+:root[data-season="ano-nuevo"] body::after {
+  content: "";
+  position: fixed;
+  inset: -960px 0 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: 240px 240px, 320px 320px, 480px 480px, 192px 192px, 960px 960px, 160px 320px;
+  animation: season-fall 28s linear infinite;
+  will-change: transform;
+}
+:root[data-season="navidad"] body::after {
+  background-image:
+    radial-gradient(2px 2px at 30px 40px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(3px 3px at 190px 230px, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(2.5px 2.5px at 300px 90px, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 120px 150px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(3.5px 3.5px at 610px 470px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 70px 260px, rgba(255, 255, 255, 0.4), transparent);
+}
+:root[data-season="ano-nuevo"] body::after {
+  background-image:
+    radial-gradient(3px 3px at 30px 40px, rgba(255, 209, 102, 0.85), transparent),
+    radial-gradient(3px 3px at 190px 230px, rgba(167, 139, 250, 0.75), transparent),
+    radial-gradient(2.5px 2.5px at 300px 90px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 120px 150px, rgba(255, 209, 102, 0.7), transparent),
+    radial-gradient(3.5px 3.5px at 610px 470px, rgba(255, 120, 160, 0.6), transparent),
+    radial-gradient(2px 2px at 70px 260px, rgba(167, 139, 250, 0.6), transparent);
+}
+@keyframes season-fall {
+  to {
+    transform: translateY(960px); /* múltiplo de los mosaicos: sin saltos */
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root[data-season] body::after {
+    animation: none;
+  }
 }
