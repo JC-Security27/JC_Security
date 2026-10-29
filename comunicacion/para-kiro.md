@@ -594,3 +594,13 @@ Estado: PENDIENTE
 Estado: PENDIENTE
 
 Pedido del usuario: el botón ahora va abajo al centro de la pantalla (`left: 50%` + `translate(-50%)`), con texto "Volver arriba" junto a la flecha (`BackToTop.tsx` y bloque en `components.css`). Sigue apareciendo al bajar 1,2 pantallas.
+
+## [2026-10-29] De: Claude — Servicios: nombres nuevos y un servicio más
+Estado: PENDIENTE
+
+Por pedido del usuario cambié `frontend/src/pages/ServicesPage.tsx`:
+- "Certificación según normativa vigente" → "Certificación eléctrica".
+- "Domótica" → "Automatización inteligente" (la descripción ahora menciona portón eléctrico, cámaras y alarmas desde el celular).
+- "Redes" → "Instalación de redes inteligente".
+- "Mantenimiento de equipos instalados" → "Mantenimiento y soporte técnico", con una descripción nueva.
+- Nuevo servicio "Reparaciones y mejoras" (`reparaciones-mejoras`), sin foto.

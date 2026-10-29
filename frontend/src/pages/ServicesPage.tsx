@@ -56,7 +56,7 @@ const services: {
   },
   {
     id: "certificacion-normativa",
-    title: "Certificación según normativa vigente",
+    title: "Certificación eléctrica",
     description:
       "Certificación de instalaciones eléctricas de acuerdo con la " +
       "normativa vigente.",
@@ -65,24 +65,31 @@ const services: {
   },
   {
     id: "domotica",
-    title: "Domótica",
+    title: "Automatización inteligente",
     description:
       "Automatización del hogar o del negocio: iluminación, enchufes, " +
-      "sensores y control desde el celular.",
+      "sensores, portón eléctrico, cámaras y alarmas desde tu celular.",
   },
   {
     id: "redes",
-    title: "Redes",
+    title: "Instalación de redes inteligente",
     description:
       "Instalación y configuración de redes cableadas y Wi-Fi: cableado, " +
       "switches, routers y puntos de acceso.",
   },
   {
     id: "mantenimiento-equipos",
-    title: "Mantenimiento de equipos instalados",
+    title: "Mantenimiento y soporte técnico",
     description:
-      "Mantenimiento de los equipos de seguridad instalados para que " +
-      "sigan funcionando correctamente.",
+      "Revisiones, diagnóstico de fallas, reparaciones y mantenimiento " +
+      "preventivo o correctivo de equipos de seguridad y tecnología.",
+  },
+  {
+    id: "reparaciones-mejoras",
+    title: "Reparaciones y mejoras",
+    description:
+      "Arreglos menores, limpieza, pintura de techos y otras labores de " +
+      "conservación de viviendas, comercios y propiedades.",
   },
   {
     id: "inspeccion-electrica",
