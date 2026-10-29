@@ -119,20 +119,50 @@ export function HeaderBunting() {
   );
 }
 
-/** Farol patrio junto al logo: brilla suave y la llama titila al pasar el
- *  mouse por el logo. */
-export function LogoLantern() {
+/** Rueda de carreta típica pintada (estilo Sarchí) asomando en las
+ *  esquinas de arriba, como las telarañas de Halloween. */
+export function CornerCartWheels() {
   if (activeSeason?.id !== "independencia") return null;
-  return (
-    <svg className="logo-lantern" viewBox="0 0 24 40" aria-hidden="true" focusable="false">
-      <path d="M12 0 v5" stroke="#c7d1d8" strokeWidth="1.4" />
-      <path d="M6 5 h12 l-2 4 h-8 Z" fill="#0047ab" />
-      <rect x="5" y="9" width="14" height="22" rx="2" fill="#f8f9fa" />
-      <rect x="5" y="15" width="14" height="10" fill="#ce1126" />
-      <rect x="5" y="12" width="14" height="3" fill="#0047ab" />
-      <rect x="5" y="25" width="14" height="3" fill="#0047ab" />
-      <ellipse className="lantern-flame" cx="12" cy="20" rx="2.6" ry="4" fill="#ffd166" />
-      <path d="M6 31 h12 l-2 4 h-8 Z" fill="#0047ab" />
+  const deg = (n: number, total: number) => (360 / total) * n;
+  const wheel = (
+    <svg viewBox="-100 -100 200 200" aria-hidden="true" focusable="false">
+      {/* Aro rojo con borde oscuro y puntos blancos */}
+      <circle r="97" fill="#ce1126" stroke="#6e0a14" strokeWidth="3" />
+      {Array.from({ length: 36 }, (_, i) => (
+        <circle key={`d${i}`} r="2.4" cy="-90" fill="#f8f9fa" transform={`rotate(${deg(i, 36)})`} />
+      ))}
+      {/* Banda amarilla con dientes azules */}
+      <circle r="84" fill="#f5b700" />
+      {Array.from({ length: 28 }, (_, i) => (
+        <path key={`z${i}`} d="M-9 -84 L0 -71 L9 -84 Z" fill="#0047ab" transform={`rotate(${deg(i, 28)})`} />
+      ))}
+      {/* Fondo azul profundo con pétalos alternados */}
+      <circle r="70" fill="#0a2540" stroke="#f8f9fa" strokeWidth="1.5" />
+      {Array.from({ length: 16 }, (_, i) => (
+        <g key={`p${i}`} transform={`rotate(${deg(i, 16)})`}>
+          <path
+            d="M0 -24 C-12 -36 -10 -56 0 -66 C10 -56 12 -36 0 -24 Z"
+            fill={i % 2 ? "#f8f9fa" : "#ce1126"}
+            stroke="#f5b700"
+            strokeWidth="1.2"
+          />
+          <path d="M0 -32 C-4 -40 -4 -50 0 -56 C4 -50 4 -40 0 -32 Z" fill={i % 2 ? "#0047ab" : "#f5b700"} />
+        </g>
+      ))}
+      {/* Centro: anillo amarillo, estrella roja y maza azul */}
+      <circle r="25" fill="#f5b700" stroke="#6e0a14" strokeWidth="1.5" />
+      <path
+        d="M0 -21 L5 -8 L18 -11 L9 -1 L18 11 L5 8 L0 21 L-5 8 L-18 11 L-9 -1 L-18 -11 L-5 -8 Z"
+        fill="#ce1126"
+      />
+      <circle r="8" fill="#0047ab" stroke="#f8f9fa" strokeWidth="2" />
+      <circle r="3" fill="#f8f9fa" />
     </svg>
+  );
+  return (
+    <div className="season-wheels" aria-hidden="true">
+      <span className="season-wheel is-left">{wheel}</span>
+      <span className="season-wheel is-right">{wheel}</span>
+    </div>
   );
 }

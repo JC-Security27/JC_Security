@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Logo } from "@/components/ui/Logo";
-import { LogoLantern } from "@/components/layout/SeasonDecor";
 import { groupCatalogUrl } from "@/lib/categoryGroups";
 import { siteConfig } from "@/config/site";
 import { telHref } from "@/config/site";
@@ -11,10 +10,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <span className="footer-logo-row">
-            <Logo adaptive />
-            <LogoLantern />
-          </span>
+          <Logo adaptive />
           <p>{siteConfig.shortDescription}</p>
         </div>
 

@@ -4,7 +4,7 @@ import { Logo } from "@/components/ui/Logo";
 import { useQuote } from "@/context/QuoteContext";
 import { HeaderSearch } from "@/components/layout/HeaderSearch";
 import { SocialIcons } from "@/components/layout/SocialIcons";
-import { HeaderBunting, HeaderDrip, HeaderGarland, LogoLantern } from "@/components/layout/SeasonDecor";
+import { CornerCartWheels, CornerWebs, HeaderBunting, HeaderDrip, HeaderGarland } from "@/components/layout/SeasonDecor";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
@@ -36,7 +36,6 @@ export function Header() {
       <div className="container header-inner">
         <Link to="/" className="header-logo" aria-label="Inicio — JC Security">
           <Logo />
-          <LogoLantern />
         </Link>
 
         <nav
@@ -98,6 +97,8 @@ export function Header() {
       <HeaderGarland />
       <HeaderDrip />
       <HeaderBunting />
+      <CornerWebs />
+      <CornerCartWheels />
 
       {/* Búsqueda en móvil: segunda fila del encabezado, siempre visible */}
       <div className="container header-search-row">

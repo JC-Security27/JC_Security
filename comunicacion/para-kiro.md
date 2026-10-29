@@ -635,3 +635,10 @@ Estado: PENDIENTE
 - `SeasonDecor.tsx`: `HeaderBunting` (banderines, en Header) y `LogoLantern` (farol junto al logo en Header y Footer; en Footer el logo va dentro de `.footer-logo-row`).
 - `seasons.css`: paleta Tricolor moderno sobre base oscura (rojo solo en botones, azul en luces), cinta 1:1:2:1:1, motivo de carreta en las tarjetas del robot, llama que titila al pasar el mouse por el logo.
 - Halloween quedó aprobado por el usuario.
+
+## [2026-10-29] De: Claude — Mes Patrio: ruedas de carreta (sin farol ni medallón)
+Estado: PENDIENTE
+
+- El usuario no aprobó el farol junto al logo ni el medallón en las tarjetas: eliminados (`LogoLantern` borrado; el Footer volvió a como estaba).
+- Nuevo `CornerCartWheels`: rueda de carreta pintada estilo Sarchí en las esquinas, como las telarañas de Halloween.
+- `CornerWebs` y `CornerCartWheels` ahora van dentro del Header (absolutas, `top: 100%`), así siguen el alto real del encabezado en celular.
