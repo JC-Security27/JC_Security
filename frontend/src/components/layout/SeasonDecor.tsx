@@ -89,3 +89,50 @@ export function StageBats() {
     </span>
   );
 }
+
+/* ----- Mes Patrio / Independencia (pedido del usuario, 2026-10-29) ----- */
+
+/** Banderines azul, blanco y rojo colgados bajo la cinta tricolor. */
+export function HeaderBunting() {
+  if (activeSeason?.id !== "independencia") return null;
+  const colors = ["#0047ab", "#f8f9fa", "#ce1126", "#f8f9fa"];
+  return (
+    <svg className="season-bunting" aria-hidden="true" focusable="false">
+      {Array.from({ length: 40 }, (_, i) => (
+        <g key={i} transform={`translate(${i * 120} 0)`}>
+          <path d="M0 2 Q60 12 120 2" fill="none" stroke="rgba(248,249,250,0.55)" strokeWidth="1.2" />
+          {[0, 1, 2, 3].map((j) => {
+            const x = 6 + j * 28;
+            const y = 2 + 10 * (1 - ((x + 11 - 60) / 60) ** 2) * 0.9;
+            return (
+              <path
+                key={j}
+                className={`bunting-flag f${j}`}
+                d={`M${x} ${y} L${x + 22} ${y} L${x + 11} ${y + 20} Z`}
+                fill={colors[j]}
+              />
+            );
+          })}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/** Farol patrio junto al logo: brilla suave y la llama titila al pasar el
+ *  mouse por el logo. */
+export function LogoLantern() {
+  if (activeSeason?.id !== "independencia") return null;
+  return (
+    <svg className="logo-lantern" viewBox="0 0 24 40" aria-hidden="true" focusable="false">
+      <path d="M12 0 v5" stroke="#c7d1d8" strokeWidth="1.4" />
+      <path d="M6 5 h12 l-2 4 h-8 Z" fill="#0047ab" />
+      <rect x="5" y="9" width="14" height="22" rx="2" fill="#f8f9fa" />
+      <rect x="5" y="15" width="14" height="10" fill="#ce1126" />
+      <rect x="5" y="12" width="14" height="3" fill="#0047ab" />
+      <rect x="5" y="25" width="14" height="3" fill="#0047ab" />
+      <ellipse className="lantern-flame" cx="12" cy="20" rx="2.6" ry="4" fill="#ffd166" />
+      <path d="M6 31 h12 l-2 4 h-8 Z" fill="#0047ab" />
+    </svg>
+  );
+}

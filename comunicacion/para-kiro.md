@@ -628,3 +628,10 @@ Estado: PENDIENTE
 - `SeasonDecor.tsx`: `HeaderDrip` (Header), `CornerWebs` (Layout), `StageBats` (RobotStage).
 - `seasons.css`: paleta Clásico Spooky (CTA naranja con texto carbón, `--text-on-brand: #121212`), sombrero de bruja en el logo, resplandor en `.btn-primary`, niebla en `.ghero`/`.page-hero`.
 - Navidad quedó aprobada por el usuario: no cambiarla sin que lo pida.
+
+## [2026-10-29] De: Claude — Mes Patrio: decoraciones
+Estado: PENDIENTE
+
+- `SeasonDecor.tsx`: `HeaderBunting` (banderines, en Header) y `LogoLantern` (farol junto al logo en Header y Footer; en Footer el logo va dentro de `.footer-logo-row`).
+- `seasons.css`: paleta Tricolor moderno sobre base oscura (rojo solo en botones, azul en luces), cinta 1:1:2:1:1, motivo de carreta en las tarjetas del robot, llama que titila al pasar el mouse por el logo.
+- Halloween quedó aprobado por el usuario.

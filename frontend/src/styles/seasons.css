@@ -14,14 +14,18 @@
 
 /* ----- Paletas ----- */
 :root[data-theme][data-season="independencia"] {
-  --season-1: #d62839; /* rojo bandera */
-  --season-2: #1e4fd8; /* azul bandera */
-  --season-3: #ffffff;
-  --season-bg-1: #0b1838;
-  --season-bg-2: #060d22;
-  --accent: #ff5a6a;
-  --primary: #1e4fd8;
-  --primary-hover: #2b5ff0;
+  /* Tricolor moderno sobre base oscura neutra (el sitio es solo oscuro).
+     El azul y el rojo nunca se tocan con texto: el azul va en luces y
+     estructura, el rojo solo en botones con texto blanco (5.6:1). */
+  --season-1: #ce1126; /* rojo patrio: botones */
+  --season-2: #0047ab; /* azul bandera: luces, cinta, estructura */
+  --season-3: #f8f9fa; /* blanco */
+  --season-bg-1: #1d2027;
+  --season-bg-2: #14161b;
+  --accent: #8fb4ff; /* azul claro para detalles (7.7:1) */
+  --primary: #ce1126;
+  --primary-hover: #b80f22;
+  --text-on-brand: #ffffff;
 }
 
 :root[data-theme][data-season="cancer-mama"] {
@@ -128,7 +132,7 @@
   );
 }
 :root[data-season="independencia"] .site-header::after {
-  /* Bandera: azul, blanco, rojo, blanco, azul */
+  /* Cinta tricolor 1:1:2:1:1: azul, blanco, rojo, blanco, azul */
   height: 6px;
   background: linear-gradient(
     180deg,
@@ -507,5 +511,128 @@
   }
   .robot-stage:hover .stage-bat {
     translate: none;
+  }
+}
+
+/* ==========================================================================
+   Mes Patrio (Independencia): decoraciones (guía de diseño del usuario,
+   2026-10-29), estilo Tricolor moderno. Vectoriales, sin clics y quietas
+   con menos movimiento.
+   ========================================================================== */
+
+:root[data-season="independencia"] body::before {
+  background:
+    radial-gradient(900px 620px at 88% -6%, rgba(0, 71, 171, 0.32), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, rgba(0, 43, 127, 0.45), transparent 70%),
+    radial-gradient(700px 520px at 64% 106%, rgba(248, 249, 250, 0.06), transparent 70%),
+    linear-gradient(180deg, #1d2027, #14161b);
+}
+/* El rojo solo en los botones: las auroras de la portada van en azul y blanco. */
+:root[data-season="independencia"] .blob-a {
+  background: color-mix(in srgb, #0047ab 55%, transparent);
+}
+:root[data-season="independencia"] .blob-b {
+  background: color-mix(in srgb, #002b7f 60%, transparent);
+}
+:root[data-season="independencia"] .blob-c {
+  background: color-mix(in srgb, #f8f9fa 10%, transparent);
+}
+:root[data-season="independencia"] .btn-primary {
+  font-weight: 700;
+}
+/* Banda de contacto: azul con texto blanco (8.4:1), sin rojo encima. */
+:root[data-season="independencia"] .cta-band,
+:root[data-season="independencia"] .cta-band:not(.cta-glass) {
+  background: linear-gradient(135deg, #002b7f, #0047ab);
+  color: #ffffff;
+}
+:root[data-season="independencia"] .site-footer {
+  background:
+    radial-gradient(900px 340px at 12% 0%, rgba(0, 71, 171, 0.28), transparent 70%),
+    rgba(20, 22, 27, 0.7);
+  border-top-color: rgba(248, 249, 250, 0.2);
+}
+
+/* Banderines bajo la cinta tricolor (la cinta es .site-header::after). */
+.season-bunting {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  width: 100%;
+  height: 28px;
+  pointer-events: none;
+  overflow: hidden;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.35));
+}
+.bunting-flag {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: bunting-sway 3.2s ease-in-out infinite alternate;
+}
+.bunting-flag.f1 { animation-delay: 0.4s; }
+.bunting-flag.f2 { animation-delay: 0.8s; }
+.bunting-flag.f3 { animation-delay: 1.2s; }
+@keyframes bunting-sway {
+  from { transform: rotate(-4deg); }
+  to { transform: rotate(4deg); }
+}
+
+/* Farol patrio junto al logo (encabezado y pie de página). */
+.header-logo:has(.logo-lantern),
+.footer-logo-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-lantern {
+  width: 20px;
+  height: 34px;
+  flex-shrink: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(255, 209, 102, 0.45));
+}
+.lantern-flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.header-logo:hover .lantern-flame,
+.footer-brand:hover .lantern-flame {
+  animation: flame-flicker 0.9s ease-in-out infinite alternate;
+}
+@keyframes flame-flicker {
+  0% { transform: scale(1, 1); opacity: 1; }
+  40% { transform: scale(0.9, 1.12); opacity: 0.85; }
+  100% { transform: scale(1.05, 0.92); opacity: 1; }
+}
+@media (max-width: 520px) {
+  .logo-lantern {
+    width: 15px;
+    height: 26px;
+  }
+  .header-logo:has(.logo-lantern) {
+    gap: 6px;
+  }
+}
+
+/* Motivo de carreta típica (abanico de colores) en la esquina de las
+   tarjetas del Robot JC. */
+:root[data-season="independencia"] .robot-chip::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  background: no-repeat center / contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg transform='translate(20 20)'%3E%3Cpath d='M0 0 L0 -19 A19 19 0 0 1 13.4 -13.4 Z' fill='%23ce1126'/%3E%3Cpath d='M0 0 L13.4 -13.4 A19 19 0 0 1 19 0 Z' fill='%23f5b700'/%3E%3Cpath d='M0 0 L19 0 A19 19 0 0 1 13.4 13.4 Z' fill='%230047ab'/%3E%3Cpath d='M0 0 L13.4 13.4 A19 19 0 0 1 0 19 Z' fill='%23ce1126'/%3E%3Cpath d='M0 0 L0 19 A19 19 0 0 1 -13.4 13.4 Z' fill='%23f5b700'/%3E%3Cpath d='M0 0 L-13.4 13.4 A19 19 0 0 1 -19 0 Z' fill='%230047ab'/%3E%3Cpath d='M0 0 L-19 0 A19 19 0 0 1 -13.4 -13.4 Z' fill='%23ce1126'/%3E%3Cpath d='M0 0 L-13.4 -13.4 A19 19 0 0 1 0 -19 Z' fill='%23f5b700'/%3E%3Ccircle r='19' fill='none' stroke='%23f8f9fa' stroke-width='2'/%3E%3Ccircle r='6' fill='%23f8f9fa'/%3E%3Ccircle r='3' fill='%230047ab'/%3E%3C/g%3E%3C/svg%3E");
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bunting-flag,
+  .header-logo:hover .lantern-flame,
+  .footer-brand:hover .lantern-flame {
+    animation: none;
   }
 }
