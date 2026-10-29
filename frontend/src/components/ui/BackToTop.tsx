@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 /**
- * Botón "volver arriba" (pedido del usuario): aparece abajo a la derecha,
- * junto al robot del asistente, cuando la página ya se bajó un buen tramo.
+ * Botón "volver arriba" (pedido del usuario): aparece abajo en el centro de
+ * la pantalla cuando la página ya se bajó un buen tramo.
  */
 export function BackToTop() {
   const [show, setShow] = useState(false);
@@ -40,9 +40,10 @@ export function BackToTop() {
       title="Volver arriba"
       tabIndex={show ? 0 : -1}
     >
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
         <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
+      <span>Volver arriba</span>
     </button>
   );
 }

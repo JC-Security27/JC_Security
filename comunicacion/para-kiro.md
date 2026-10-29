@@ -589,3 +589,8 @@ Estado: PENDIENTE
 - **Servicios**: sin el botón de WhatsApp del encabezado; nuevos servicios "Domótica" y "Redes" (sin imagen aún); cámaras: "para comunidades y negocios".
 - **Datos** (`config/site.ts`): `contact.phone = "+506 8798 1616"`, `contact.address` → `contact.scope = "Costa Rica"`, `socials` solo Instagram y Facebook (URLs pendientes), nuevo helper `telHref()`. Contacto muestra "Alcance" y el teléfono enlazado; la tarjeta del robot dice "Todo Costa Rica".
 - **Redes sociales**: se borró `pages/SocialPage.tsx`; `/redes` redirige a `/contacto`. Nuevo `components/layout/SocialIcons.tsx`: siluetas de Instagram y Facebook en el menú, después de "Contacto" (mismo color que los enlaces), también en el menú móvil. Sin URL se muestran sin enlace con "próximamente". Estilos al final de `components.css`.
+
+## [2026-10-29] De: Claude — "Volver arriba" centrado
+Estado: PENDIENTE
+
+Pedido del usuario: el botón ahora va abajo al centro de la pantalla (`left: 50%` + `translate(-50%)`), con texto "Volver arriba" junto a la flecha (`BackToTop.tsx` y bloque en `components.css`). Sigue apareciendo al bajar 1,2 pantallas.
