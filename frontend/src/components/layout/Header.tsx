@@ -4,7 +4,15 @@ import { Logo } from "@/components/ui/Logo";
 import { useQuote } from "@/context/QuoteContext";
 import { HeaderSearch } from "@/components/layout/HeaderSearch";
 import { SocialIcons } from "@/components/layout/SocialIcons";
-import { CornerCartWheels, CornerWebs, HeaderBunting, HeaderDrip, HeaderGarland } from "@/components/layout/SeasonDecor";
+import {
+  CornerCartWheels,
+  CornerFireworks,
+  CornerWebs,
+  HeaderBunting,
+  HeaderDrip,
+  HeaderGarland,
+  NewYearCountdown,
+} from "@/components/layout/SeasonDecor";
 
 const navItems = [
   { to: "/catalogo", label: "Catálogo" },
@@ -99,6 +107,8 @@ export function Header() {
       <HeaderBunting />
       <CornerWebs />
       <CornerCartWheels />
+      <CornerFireworks />
+      <NewYearCountdown />
 
       {/* Búsqueda en móvil: segunda fila del encabezado, siempre visible */}
       <div className="container header-search-row">

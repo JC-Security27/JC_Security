@@ -651,3 +651,9 @@ Estado: PENDIENTE
 - Botón "Buscar" con texto oscuro en todas las temporadas (se leía mal sobre el acento).
 - Fotos nuevas de servicios: cerca eléctrica, planos eléctricos, trabajos de altura.
 - Robots de todas las temporadas actualizados, incluidos los de Año Nuevo (`public/robots/ano-nuevo/`).
+
+## [2026-10-29] De: Claude — Año Nuevo: gala dorado, blanco y negro
+Estado: PENDIENTE
+
+- `SeasonDecor.tsx`: `CornerFireworks` (estallidos y estrellas en las esquinas) y `NewYearCountdown` (reloj a las 12:00 + cuenta regresiva a medianoche en hora de CR; sin años escritos, el año sale de la fecha). Ambos en Header.
+- `seasons.css`: paleta Gala (obsidiana #0D0D11, grafito #1A1A22, oro #D4AF37 con texto oscuro, plata #E2E8F0), confeti dorado/plateado al 10-20 %, línea dorada bajo el menú, resplandor dorado en botones y tarjetas. Sin morado (pedido del usuario).

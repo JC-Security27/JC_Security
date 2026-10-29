@@ -74,15 +74,27 @@ html:root[data-theme][data-season="independencia"] {
   --primary-hover: #b81d2a;
 }
 
-:root[data-theme][data-season="ano-nuevo"] {
-  --season-1: #ffd166;
-  --season-2: #6d4bd8;
-  --season-3: #f5f0ff;
-  --season-bg-1: #151032;
-  --season-bg-2: #0a0819;
-  --accent: #ffd166;
-  --primary: #6d4bd8;
-  --primary-hover: #8263ea;
+html:root[data-theme][data-season="ano-nuevo"] {
+  /* Gala de medianoche en dorado, blanco y negro (pedido del usuario: sin
+     morado). Contrastes en el informe al usuario. */
+  --season-1: #d4af37; /* oro champán: botones y detalles */
+  --season-2: #2a2a33; /* gris grafito: luces de fondo */
+  --season-3: #e2e8f0; /* plata estelar: brillos */
+  --season-bg-1: #1a1a22; /* grafito nocturno: tarjetas */
+  --season-bg-2: #0d0d11; /* negro obsidiana: fondo */
+  --accent: #d4af37; /* 9.2:1 sobre el fondo */
+  --primary: #d4af37;
+  --primary-hover: #e2c158;
+  --text-on-brand: #0d0d11; /* texto de botones dorados: 9.2:1 */
+  --text: #f8f9fa; /* blanco perla: 18.4:1 */
+  --text-muted: #a8adb8; /* 7.7:1 sobre grafito */
+  --surface: rgba(26, 26, 34, 0.72);
+  --surface-2: rgba(226, 232, 240, 0.05);
+  --border: rgba(226, 232, 240, 0.14);
+  --divider: rgba(226, 232, 240, 0.08);
+  --bg-elevated: rgba(26, 26, 34, 0.94);
+  --header-bg: rgba(13, 13, 17, 0.82);
+  --header-border: rgba(212, 175, 55, 0.25);
 }
 
 /* ----- Cómo se aplica la paleta (igual para todas) ----- */
@@ -187,13 +199,14 @@ html:root[data-theme][data-season="independencia"] {
     radial-gradient(2px 2px at 70px 260px, rgba(255, 255, 255, 0.4), transparent);
 }
 :root[data-season="ano-nuevo"] body::after {
+  /* Confeti dorado, plateado y blanco con opacidad baja (10 % a 20 %) */
   background-image:
-    radial-gradient(3px 3px at 30px 40px, rgba(255, 209, 102, 0.85), transparent),
-    radial-gradient(3px 3px at 190px 230px, rgba(167, 139, 250, 0.75), transparent),
-    radial-gradient(2.5px 2.5px at 300px 90px, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(2px 2px at 120px 150px, rgba(255, 209, 102, 0.7), transparent),
-    radial-gradient(3.5px 3.5px at 610px 470px, rgba(255, 120, 160, 0.6), transparent),
-    radial-gradient(2px 2px at 70px 260px, rgba(167, 139, 250, 0.6), transparent);
+    radial-gradient(3px 3px at 30px 40px, rgba(212, 175, 55, 0.2), transparent),
+    radial-gradient(3px 1.5px at 190px 230px, rgba(226, 232, 240, 0.18), transparent),
+    radial-gradient(2.5px 2.5px at 300px 90px, rgba(248, 249, 250, 0.15), transparent),
+    radial-gradient(2px 3px at 120px 150px, rgba(212, 175, 55, 0.18), transparent),
+    radial-gradient(3.5px 2px at 610px 470px, rgba(212, 175, 55, 0.14), transparent),
+    radial-gradient(2px 2px at 70px 260px, rgba(226, 232, 240, 0.12), transparent);
 }
 @keyframes season-fall {
   to {
@@ -640,4 +653,196 @@ html:root[data-theme][data-season="independencia"] {
 }
 :root[data-season="independencia"] .header-search-btn {
   color: #002b7f;
+}
+
+/* ==========================================================================
+   Año Nuevo: decoraciones (guía de diseño del usuario, 2026-10-29). Gala en
+   dorado, blanco y negro. Vectoriales, sin clics, sin años escritos y
+   quietas con menos movimiento.
+   ========================================================================== */
+
+:root[data-season="ano-nuevo"] body::before {
+  background:
+    radial-gradient(900px 620px at 88% -6%, rgba(212, 175, 55, 0.16), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, rgba(58, 58, 70, 0.55), transparent 70%),
+    radial-gradient(700px 520px at 64% 106%, rgba(226, 232, 240, 0.06), transparent 70%),
+    linear-gradient(180deg, #1a1a22, #0d0d11);
+}
+:root[data-season="ano-nuevo"] .blob-a {
+  background: color-mix(in srgb, #d4af37 26%, transparent);
+}
+:root[data-season="ano-nuevo"] .blob-b {
+  background: color-mix(in srgb, #3a3a46 70%, transparent);
+}
+:root[data-season="ano-nuevo"] .blob-c {
+  background: color-mix(in srgb, #e2e8f0 10%, transparent);
+}
+:root[data-season="ano-nuevo"] .btn-primary {
+  font-weight: 700;
+}
+/* Línea dorada bajo el menú (reemplaza la franja de colores). */
+:root[data-season="ano-nuevo"] .site-header::after {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37 15%, #f8f9fa 50%, #d4af37 85%, transparent);
+}
+:root[data-season="ano-nuevo"] .cta-band,
+:root[data-season="ano-nuevo"] .cta-band:not(.cta-glass) {
+  background: linear-gradient(135deg, #1a1a22, #2a2a33);
+  border-block: 1px solid rgba(212, 175, 55, 0.35);
+  color: #f8f9fa;
+}
+:root[data-season="ano-nuevo"] .site-footer {
+  background:
+    radial-gradient(900px 340px at 12% 0%, rgba(212, 175, 55, 0.14), transparent 70%),
+    rgba(13, 13, 17, 0.85);
+  border-top-color: rgba(212, 175, 55, 0.35);
+}
+
+/* Fuegos artificiales en las esquinas, colgando bajo el encabezado. */
+.season-fireworks {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 170px;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.season-fw {
+  position: absolute;
+  top: 6px;
+  width: 220px;
+  height: 160px;
+  opacity: 0.85;
+}
+.season-fw svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.season-fw.is-left {
+  left: 0;
+}
+.season-fw.is-right {
+  right: 0;
+  transform: scaleX(-1);
+}
+.fw-burst {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fw-pop 3.6s ease-out infinite;
+}
+.fw-burst.b2 { animation-delay: 1.2s; }
+.fw-burst.b3 { animation-delay: 2.4s; }
+@keyframes fw-pop {
+  0% { transform: scale(0.35); opacity: 0; }
+  18% { opacity: 1; }
+  60% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.08); opacity: 0; }
+}
+.fw-star {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fw-twinkle 2.4s ease-in-out infinite;
+}
+.fw-star.s2 { animation-delay: 0.8s; }
+.fw-star.s3 { animation-delay: 1.6s; }
+@keyframes fw-twinkle {
+  50% { opacity: 0.35; }
+}
+@media (max-width: 1500px) {
+  .season-fw.is-left {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .season-fw {
+    width: 130px;
+    height: 95px;
+  }
+}
+
+/* Reloj a las 12:00 con la cuenta regresiva, centrado bajo el encabezado. */
+.ny-countdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 32px);
+  padding: 6px 16px 6px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  background: rgba(13, 13, 17, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.18);
+}
+.ny-countdown strong {
+  color: #d4af37;
+  font-variant-numeric: tabular-nums;
+  margin-left: 4px;
+}
+.ny-clock {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.ny-label-short {
+  display: none;
+}
+/* En celular: barra delgada pegada al encabezado, con texto corto. */
+@media (max-width: 720px) {
+  .ny-countdown {
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: none;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    font-size: 0.78rem;
+  }
+  .ny-label-long {
+    display: none;
+  }
+  .ny-label-short {
+    display: inline;
+  }
+  .ny-clock {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Resplandor dorado al pasar sobre botones y tarjetas de producto. */
+:root[data-season="ano-nuevo"] .btn-primary,
+:root[data-season="ano-nuevo"] .product-card,
+:root[data-season="ano-nuevo"] .service-card {
+  transition: box-shadow 0.35s ease, transform var(--transition), border-color 0.35s ease, background-color var(--transition);
+}
+:root[data-season="ano-nuevo"] .btn-primary:hover {
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.7), 0 0 22px rgba(212, 175, 55, 0.45);
+}
+:root[data-season="ano-nuevo"] .product-card:hover,
+:root[data-season="ano-nuevo"] .service-card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45), 0 0 24px rgba(212, 175, 55, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fw-burst,
+  .fw-star {
+    animation: none;
+  }
 }
