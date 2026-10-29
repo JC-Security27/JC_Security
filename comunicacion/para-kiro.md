@@ -642,3 +642,12 @@ Estado: PENDIENTE
 - El usuario no aprobó el farol junto al logo ni el medallón en las tarjetas: eliminados (`LogoLantern` borrado; el Footer volvió a como estaba).
 - Nuevo `CornerCartWheels`: rueda de carreta pintada estilo Sarchí en las esquinas, como las telarañas de Halloween.
 - `CornerWebs` y `CornerCartWheels` ahora van dentro del Header (absolutas, `top: 100%`), así siguen el alto real del encabezado en celular.
+
+## [2026-10-29] De: Claude — Logos de temporada, Mes Patrio con bandera, fotos y robots
+Estado: PENDIENTE
+
+- Logos de temporada del usuario en `public/logos/logo-<id>.webp`; `Logo.tsx` usa `seasonLogoSrc()`. Se quitaron los gorros/sombreros provisionales en CSS. Alto por temporada con `--season-logo-scale` en `seasons.css`.
+- Mes Patrio: fondo en franjas de la bandera (azul, blanco, rojo, blanco, azul), encabezado y pie azul bandera, botones blancos con texto azul.
+- Botón "Buscar" con texto oscuro en todas las temporadas (se leía mal sobre el acento).
+- Fotos nuevas de servicios: cerca eléctrica, planos eléctricos, trabajos de altura.
+- Robots de todas las temporadas actualizados, incluidos los de Año Nuevo (`public/robots/ano-nuevo/`).

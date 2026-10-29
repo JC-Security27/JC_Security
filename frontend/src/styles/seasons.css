@@ -13,19 +13,26 @@
    ========================================================================== */
 
 /* ----- Paletas ----- */
-:root[data-theme][data-season="independencia"] {
-  /* Tricolor moderno sobre base oscura neutra (el sitio es solo oscuro).
-     El azul y el rojo nunca se tocan con texto: el azul va en luces y
-     estructura, el rojo solo en botones con texto blanco (5.6:1). */
-  --season-1: #ce1126; /* rojo patrio: botones */
-  --season-2: #0047ab; /* azul bandera: luces, cinta, estructura */
-  --season-3: #f8f9fa; /* blanco */
-  --season-bg-1: #1d2027;
-  --season-bg-2: #14161b;
-  --accent: #8fb4ff; /* azul claro para detalles (7.7:1) */
-  --primary: #ce1126;
-  --primary-hover: #b80f22;
-  --text-on-brand: #ffffff;
+html:root[data-theme][data-season="independencia"] {
+  /* Colores de la bandera en su orden (pedido del usuario): el fondo va en
+     franjas azul, blanco, rojo, blanco, azul (1:1:2:1:1). Tonos elegidos
+     para que el texto blanco siempre se lea (contrastes en el informe). */
+  --season-1: #ce1126; /* rojo bandera */
+  --season-2: #002b7f; /* azul bandera */
+  --season-3: #ffffff; /* blanco */
+  --season-bg-1: #002b7f;
+  --season-bg-2: #002b7f;
+  --flag-blue: #0b3a9e; /* franjas azules: texto blanco 9.9:1 */
+  --flag-white: #56637f; /* franjas "blancas": texto blanco 6:1 */
+  --flag-red: #a3182c; /* franja roja: texto blanco 7.7:1 */
+  --accent: #ffffff;
+  --primary: #ffffff; /* botones blancos con texto azul bandera (12.7:1) */
+  --primary-hover: #e3eaff;
+  --text-on-brand: #002b7f;
+  --text-muted: #e6ebf3;
+  --surface: rgba(0, 32, 96, 0.55);
+  --bg-elevated: rgba(0, 36, 104, 0.92);
+  --header-bg: rgba(0, 43, 127, 0.94);
 }
 
 :root[data-theme][data-season="cancer-mama"] {
@@ -247,29 +254,6 @@
   50% { opacity: 0.35; }
 }
 
-/* Gorro navideño sobre la "J" del logo del encabezado. */
-:root[data-season="navidad"] .header-logo {
-  position: relative;
-}
-:root[data-season="navidad"] .header-logo::before {
-  content: "";
-  position: absolute;
-  left: -0.42em;
-  top: -0.62em;
-  width: 1.9em;
-  height: 1.5em;
-  font-size: 18px;
-  pointer-events: none;
-  transform: rotate(-16deg);
-  background: no-repeat center / contain
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 50'%3E%3Cpath d='M8 40 C14 18 30 4 48 8 C56 10 60 20 58 30 L50 26 C48 18 40 16 34 20 C26 26 22 34 20 40 Z' fill='%23c8202d'/%3E%3Crect x='3' y='36' width='34' height='11' rx='5.5' fill='%23f5f8fa'/%3E%3Ccircle cx='56' cy='32' r='6' fill='%23f5f8fa'/%3E%3C/svg%3E");
-}
-@media (max-width: 520px) {
-  :root[data-season="navidad"] .header-logo::before {
-    font-size: 13px;
-  }
-}
-
 /* Nieve acumulada sobre las tarjetas del Robot JC. */
 :root[data-season="navidad"] .robot-chip::before {
   content: "";
@@ -407,29 +391,6 @@
   }
 }
 
-/* Sombrero de bruja sobre la "J" del logo. */
-:root[data-season="halloween"] .header-logo {
-  position: relative;
-}
-:root[data-season="halloween"] .header-logo::before {
-  content: "";
-  position: absolute;
-  left: -0.3em;
-  top: -0.85em;
-  width: 2em;
-  height: 1.7em;
-  font-size: 18px;
-  pointer-events: none;
-  transform: rotate(-14deg);
-  background: no-repeat center / contain
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 54'%3E%3Cpath d='M22 40 L34 4 C36 0 40 2 40 6 L44 40 Z' fill='%237b3fc4'/%3E%3Cellipse cx='32' cy='42' rx='30' ry='7' fill='%235c1d8f'/%3E%3Cpath d='M22 34 L44 34 L45 40 L21 40 Z' fill='%23ff7518'/%3E%3C/svg%3E");
-}
-@media (max-width: 520px) {
-  :root[data-season="halloween"] .header-logo::before {
-    font-size: 13px;
-  }
-}
-
 /* Murciélagos junto al Robot JC: aletean y, al pasar el mouse por el
    escenario, salen volando un poco. */
 .stage-bats {
@@ -522,36 +483,33 @@
    ========================================================================== */
 
 :root[data-season="independencia"] body::before {
-  background:
-    radial-gradient(900px 620px at 88% -6%, rgba(0, 71, 171, 0.32), transparent 70%),
-    radial-gradient(820px 680px at -10% 40%, rgba(0, 43, 127, 0.45), transparent 70%),
-    radial-gradient(700px 520px at 64% 106%, rgba(248, 249, 250, 0.06), transparent 70%),
-    linear-gradient(180deg, #1d2027, #14161b);
+  background: linear-gradient(
+    180deg,
+    var(--flag-blue) 0 14%,
+    var(--flag-white) 19% 31%,
+    var(--flag-red) 36% 64%,
+    var(--flag-white) 69% 81%,
+    var(--flag-blue) 86% 100%
+  );
 }
-/* El rojo solo en los botones: las auroras de la portada van en azul y blanco. */
-:root[data-season="independencia"] .blob-a {
-  background: color-mix(in srgb, #0047ab 55%, transparent);
+/* El encabezado de la portada deja ver la bandera del fondo. */
+:root[data-season="independencia"] .ghero {
+  background: transparent;
 }
-:root[data-season="independencia"] .blob-b {
-  background: color-mix(in srgb, #002b7f 60%, transparent);
-}
-:root[data-season="independencia"] .blob-c {
-  background: color-mix(in srgb, #f8f9fa 10%, transparent);
+:root[data-season="independencia"] .ghero-aurora {
+  display: none;
 }
 :root[data-season="independencia"] .btn-primary {
   font-weight: 700;
 }
-/* Banda de contacto: azul con texto blanco (8.4:1), sin rojo encima. */
 :root[data-season="independencia"] .cta-band,
 :root[data-season="independencia"] .cta-band:not(.cta-glass) {
-  background: linear-gradient(135deg, #002b7f, #0047ab);
+  background: #002b7f;
   color: #ffffff;
 }
 :root[data-season="independencia"] .site-footer {
-  background:
-    radial-gradient(900px 340px at 12% 0%, rgba(0, 71, 171, 0.28), transparent 70%),
-    rgba(20, 22, 27, 0.7);
-  border-top-color: rgba(248, 249, 250, 0.2);
+  background: #002b7f;
+  border-top-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Banderines bajo la cinta tricolor (la cinta es .site-header::after). */
@@ -640,4 +598,46 @@
   .season-wheel svg {
     animation: none;
   }
+}
+
+/* ==========================================================================
+   Logos de temporada (del usuario). Cada uno trae adornos arriba o al lado,
+   así que el alto se ajusta para que "SECURITY" quede del tamaño de siempre
+   sin pasarse del encabezado.
+   ========================================================================== */
+.logo-img--season {
+  height: calc(54px * var(--season-logo-scale, 1));
+  max-height: 80px;
+}
+@media (max-width: 1180px) {
+  .logo-img--season {
+    height: calc(48px * var(--season-logo-scale, 1));
+    max-height: 72px;
+  }
+}
+@media (max-width: 520px) {
+  .logo-img--season {
+    height: calc(38px * var(--season-logo-scale, 1));
+    max-height: 56px;
+  }
+}
+@media (max-width: 360px) {
+  .logo-img--season {
+    height: calc(32px * var(--season-logo-scale, 1));
+    max-height: 48px;
+  }
+}
+:root[data-season="halloween"] { --season-logo-scale: 1.35; }
+:root[data-season="navidad"] { --season-logo-scale: 1.45; }
+:root[data-season="independencia"] { --season-logo-scale: 1.2; }
+:root[data-season="ano-nuevo"] { --season-logo-scale: 1.5; }
+:root[data-season="cancer-mama"] { --season-logo-scale: 1.5; }
+
+/* Botón "Buscar" del encabezado: va sobre el color de acento de cada
+   temporada (claro), así que lleva texto oscuro para leerse bien. */
+:root[data-season] .header-search-btn {
+  color: #121212;
+}
+:root[data-season="independencia"] .header-search-btn {
+  color: #002b7f;
 }

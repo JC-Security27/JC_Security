@@ -33,7 +33,7 @@ export const SEASONS: Season[] = [
   { id: "cancer-mama", label: "Prevención del cáncer de mama", start: [10, 1], end: [10, 20], robots: true },
   { id: "halloween", label: "Halloween", start: [10, 21], end: [10, 31], robots: true },
   { id: "navidad", label: "Navidad", start: [11, 15], end: [12, 25], robots: true },
-  { id: "ano-nuevo", label: "Año Nuevo", start: [12, 28], end: [1, 2], robots: false },
+  { id: "ano-nuevo", label: "Año Nuevo", start: [12, 28], end: [1, 2], robots: true },
 ];
 
 /** Prueba pedida por el usuario: fuerza una temporada en todo el sitio sin
@@ -76,4 +76,10 @@ export function robotSrc(robot: string): string {
   return activeSeason?.robots && seasonal.includes(robot)
     ? `/robots/${activeSeason.id}/robot-${robot}.webp`
     : `/robots/robot-${robot}.webp`;
+}
+
+/** Logo de JC Security de la temporada (public/logos/logo-<id>.webp, del
+ *  usuario), o null para usar el normal. Todas las temporadas tienen logo. */
+export function seasonLogoSrc(): string | null {
+  return activeSeason ? `/logos/logo-${activeSeason.id}.webp` : null;
 }
