@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Colores de temporada (pedido del usuario, 2026-10-29). La temporada activa
+   la pone config/seasons.ts en <html data-season="...">. Cada tema cambia el
+   color de acento (botones, brillos, anillo del Robot JC) y las luces del
+   fondo de vidrio. Se importa después de global.css para ganarle.
+   ========================================================================== */
+
+:root[data-season="independencia"] {
+  --accent: #ff5a6a;
+  --accent-strong: #ff5a6a;
+  --focus-ring: #ff5a6a;
+  --season-light-1: rgba(214, 40, 57, 0.26);
+  --season-light-2: rgba(30, 64, 175, 0.55);
+  --season-light-3: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-season="cancer-mama"] {
+  --accent: #ff7eb6;
+  --accent-strong: #ff7eb6;
+  --focus-ring: #ff7eb6;
+  --season-light-1: rgba(255, 126, 182, 0.26);
+  --season-light-2: rgba(120, 50, 110, 0.45);
+  --season-light-3: rgba(255, 170, 210, 0.18);
+}
+
+:root[data-season="halloween"] {
+  --accent: #ff9a3c;
+  --accent-strong: #ff9a3c;
+  --focus-ring: #ff9a3c;
+  --season-light-1: rgba(255, 140, 40, 0.24);
+  --season-light-2: rgba(88, 40, 140, 0.5);
+  --season-light-3: rgba(140, 220, 90, 0.12);
+}
+
+:root[data-season="navidad"] {
+  --accent: #ffcf5a;
+  --accent-strong: #ffcf5a;
+  --focus-ring: #ffcf5a;
+  --season-light-1: rgba(220, 40, 50, 0.3);
+  --season-light-2: rgba(20, 120, 70, 0.45);
+  --season-light-3: rgba(255, 207, 90, 0.16);
+}
+
+:root[data-season="ano-nuevo"] {
+  --accent: #ffd166;
+  --accent-strong: #ffd166;
+  --focus-ring: #ffd166;
+  --season-light-1: rgba(255, 209, 102, 0.26);
+  --season-light-2: rgba(90, 60, 170, 0.45);
+  --season-light-3: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-season] body::before {
+  background:
+    radial-gradient(900px 620px at 88% -6%, var(--season-light-1), transparent 70%),
+    radial-gradient(820px 680px at -10% 40%, var(--season-light-2), transparent 70%),
+    radial-gradient(760px 560px at 64% 106%, var(--season-light-3), transparent 70%),
+    linear-gradient(180deg, #0a1728, #07111f);
+}

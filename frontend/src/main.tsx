@@ -4,7 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { ThemeProvider } from "./context/ThemeContext";
 import { QuoteProvider } from "./context/QuoteContext";
+import "./config/seasons";
 import "./styles/global.css";
+import "./styles/seasons.css";
 
 // Si se publicó una versión nueva mientras la página estaba abierta, los
 // archivos viejos ya no existen: se recarga una vez para tomar la nueva.

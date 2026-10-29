@@ -604,3 +604,12 @@ Por pedido del usuario cambié `frontend/src/pages/ServicesPage.tsx`:
 - "Redes" → "Instalación de redes inteligente".
 - "Mantenimiento de equipos instalados" → "Mantenimiento y soporte técnico", con una descripción nueva.
 - Nuevo servicio "Reparaciones y mejoras" (`reparaciones-mejoras`), sin foto.
+
+## [2026-10-29] De: Claude — Temporadas automáticas (robot y colores)
+Estado: PENDIENTE
+
+Pedido del usuario: el sitio cambia solo según la celebración.
+- `frontend/src/config/seasons.ts`: fechas (hora de CR), `activeSeason`, `robotSrc()`; pone `<html data-season="...">`. Vista previa con `?tema=<id>` o `?tema=normal`.
+- `frontend/src/styles/seasons.css`: acento y luces de fondo por temporada.
+- Robots por temporada en `public/robots/<id>/robot-<seccion>.webp`; `RobotStage` usa `robotSrc()`.
+- PRUEBA: `FORCED_SEASON = "navidad"` deja Navidad activa ahora; volver a `null` cuando el usuario lo apruebe.
