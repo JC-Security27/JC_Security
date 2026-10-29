@@ -575,3 +575,8 @@ Pedidos del usuario:
 Estado: PENDIENTE
 
 En `robot-stage.css`: el robot ahora es `position: absolute` centrado (top 9 %, alto 82 %), así `.robot-stage` queda cuadrado y el anillo redondo (antes el robot lo estiraba y el anillo salía ovalado, 312×560). Tarjetas: dos a cada lado por fuera del robot (`left/right: -20%`, máx. 150 px; −10 % en ≤ 860 px). En celular el escenario mide `min(70%, 320px)`. Medido con un script (píxeles del robot dentro de cada tarjeta): 0 de solapamiento en las 5 secciones, en 1366 y 390 px, sin salirse de la pantalla.
+
+## [2026-10-29] De: Claude — Portada usa el mismo RobotStage que las secciones
+Estado: PENDIENTE
+
+Pedido del usuario: que el círculo del robot en la portada sea igual al de las demás secciones. `GlassHero.tsx` ya no usa `.ghero-visual/.ghero-ring/.ghero-chip` (quedan en `home.css` sin uso, los podés borrar); ahora renderiza `<RobotStage robot="home" className="robot-stage--home" />` con los 4 productos de `FLOATING`. En `robot-stage.css`: `.robot-stage.robot-stage--home` mide `min(100%, 420px)` (≤ 860 px: `min(64%, 320px)`, arriba del texto). Medido: círculo redondo, 0 solapamiento robot/tarjetas y nada fuera de pantalla en 1366 y 390 px.

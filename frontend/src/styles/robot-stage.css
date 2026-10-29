@@ -10,6 +10,16 @@
   align-items: center;
   margin-bottom: var(--space-6);
 }
+/* Portada: el mismo escenario, un poco más grande. */
+.robot-stage.robot-stage--home {
+  width: min(100%, 420px);
+}
+@media (max-width: 860px) {
+  .robot-stage.robot-stage--home {
+    order: -1;
+    width: min(64%, 320px);
+  }
+}
 /* En las páginas internas el robot es un poco más chico que en la portada. */
 .page-hero .robot-stage,
 .services-hero .robot-stage {

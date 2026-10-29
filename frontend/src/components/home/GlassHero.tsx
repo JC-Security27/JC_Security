@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generalContactMessage } from "@/lib/whatsapp";
 import { STORY, YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
+import { RobotStage } from "@/components/ui/RobotStage";
 
 /* Productos que flotan alrededor del robot (uno por capítulo de la historia). */
 const FLOATING = [STORY[0].products[1], STORY[1].products[0], STORY[2].products[0], STORY[4].products[0]];
@@ -53,16 +54,12 @@ export function GlassHero() {
           </ul>
         </div>
 
-        <div className="ghero-visual" aria-hidden="true">
-          <span className="ghero-ring" />
-          <img src="/robots/robot-home.webp" alt="" className="ghero-robot" />
-          {FLOATING.map((p, i) => (
-            <span key={p.id} className={`ghero-chip glass chip-${i}`}>
-              <img src={p.img} alt="" loading="eager" />
-              <span>{p.name}</span>
-            </span>
-          ))}
-        </div>
+        {/* Mismo círculo y tarjetas que las demás secciones (RobotStage). */}
+        <RobotStage
+          robot="home"
+          className="robot-stage--home"
+          chips={FLOATING.map((p) => ({ label: p.name, img: p.img }))}
+        />
       </div>
     </section>
   );
