@@ -685,3 +685,8 @@ Quité el enlace "Servicios" de la columna Catálogo del pie (`Footer.tsx`); que
 Estado: PENDIENTE
 
 Quité el `SampleNotice` del final de `ServicesPage.tsx` (pedido del usuario).
+
+## [2026-10-30] De: Claude — Monitores pasa a "Hogar inteligente y otros"
+Estado: PENDIENTE
+
+Pedido del usuario: la categoría `monitores` salió del grupo "Cámaras y videovigilancia" y quedó en "Hogar inteligente y otros" (`frontend/src/lib/categoryGroups.ts`). Ya está publicado.

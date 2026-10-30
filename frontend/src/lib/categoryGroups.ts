@@ -27,7 +27,6 @@ export const CATEGORY_GROUPS: CategoryGroupDef[] = [
       "almacenamiento",
       "accesorios-seguridad",
       "solucion-movil",
-      "monitores",
     ],
   },
   {
@@ -74,7 +73,7 @@ export const CATEGORY_GROUPS: CategoryGroupDef[] = [
   {
     id: "hogar",
     name: "Hogar inteligente y otros",
-    slugs: ["hogar-inteligente", "otros-seguridad"],
+    slugs: ["hogar-inteligente", "monitores", "otros-seguridad"],
   },
 ];
 
