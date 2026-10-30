@@ -670,3 +670,8 @@ Estado: PENDIENTE
 - `Logo` tiene la prop `original`: el pie de página siempre usa el logo original (pedido del usuario).
 - Logos de temporada reemplazados por las versiones nuevas del usuario.
 - Servicios: fotos de Cámaras (`camaras`) y Reparaciones y mejoras (`reparaciones`). Ya todos los servicios tienen foto.
+
+## [2026-10-30] De: Claude — Filtros en celular: marcas con scroll
+Estado: PENDIENTE
+
+En el panel de filtros de celular (≤960 px), la lista de marcas (`.filter-check-list:not(.filter-accordion)`) tiene alto máximo y scroll propio, con borde y desvanecido abajo, como en PC (pedido del usuario). Las categorías siguen sin límite. Cambio en `styles/pages.css`.

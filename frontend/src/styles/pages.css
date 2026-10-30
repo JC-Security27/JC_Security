@@ -2299,9 +2299,26 @@
     border-top: 1px solid var(--divider);
     background: var(--bg-elevated);
   }
-  /* En el drawer, la lista de marcas puede usar más alto. */
-  .filter-check-list {
+  /* En celular, la lista de marcas tiene su propio scroll como en PC
+     (pedido del usuario): no estira el panel y se ve que hay más abajo.
+     Las categorías (acordeón) siguen sin límite. */
+  .filter-check-list.filter-accordion {
     max-height: none;
+  }
+  .filter-check-list:not(.filter-accordion) {
+    max-height: min(300px, 42vh);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    /* Espacio extra abajo: la última marca sale del desvanecido */
+    padding: var(--space-1) var(--space-2) 2.25rem;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-sm);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    /* Desvanecido abajo: indica que la lista sigue */
+    -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent);
+    mask-image: linear-gradient(180deg, #000 85%, transparent);
   }
 }
 
