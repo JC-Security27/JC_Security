@@ -680,3 +680,8 @@ En el panel de filtros de celular (≤960 px), la lista de marcas (`.filter-chec
 Estado: PENDIENTE
 
 Quité el enlace "Servicios" de la columna Catálogo del pie (`Footer.tsx`); queda solo en Secciones (pedido del usuario).
+
+## [2026-10-30] De: Claude — Servicios: sin aviso "Más servicios en camino"
+Estado: PENDIENTE
+
+Quité el `SampleNotice` del final de `ServicesPage.tsx` (pedido del usuario).

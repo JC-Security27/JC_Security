@@ -1,4 +1,3 @@
-import { SampleNotice } from "@/components/ui/states";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { serviceInquiryMessage } from "@/lib/whatsapp";
 import { YEARS_OF_EXPERIENCE } from "@/components/home/homeStory";
@@ -215,12 +214,6 @@ export function ServicesPage() {
           </div>
         ))}
       </div>
-
-      <SampleNotice>
-        <strong>Más servicios en camino.</strong> Iremos agregando fotos y
-        descripciones de otros servicios cuando JC Security proporcione el
-        contenido. No se inventa contenido.
-      </SampleNotice>
     </section>
   );
 }
