@@ -44,6 +44,9 @@ const services: {
     description:
       "Montaje y configuración de cámaras de seguridad para comunidades " +
       "y negocios.",
+    image: "camaras",
+    widths: [480, 800, 1200],
+    imagePosition: "center 30%",
   },
   {
     id: "trabajos-altura",
@@ -97,6 +100,9 @@ const services: {
     description:
       "Arreglos menores, limpieza, pintura de techos y otras labores de " +
       "conservación de viviendas, comercios y propiedades.",
+    image: "reparaciones",
+    widths: [480, 800, 1200],
+    imagePosition: "center 55%",
   },
   {
     id: "inspeccion-electrica",

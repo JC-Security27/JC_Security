@@ -644,7 +644,7 @@ html:root[data-theme][data-season="ano-nuevo"] {
 :root[data-season="navidad"] { --season-logo-scale: 1.45; }
 :root[data-season="independencia"] { --season-logo-scale: 1.2; }
 :root[data-season="ano-nuevo"] { --season-logo-scale: 1.5; }
-:root[data-season="cancer-mama"] { --season-logo-scale: 1.5; }
+:root[data-season="cancer-mama"] { --season-logo-scale: 1; }
 
 /* Botón "Buscar" del encabezado: va sobre el color de acento de cada
    temporada (claro), así que lleva texto oscuro para leerse bien. */

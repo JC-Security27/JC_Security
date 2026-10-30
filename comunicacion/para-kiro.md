@@ -662,3 +662,11 @@ Estado: PENDIENTE
 Estado: PENDIENTE
 
 Fotos del usuario en `public/servicios/` (480/800/1200): `automatizacion` (Automatización inteligente), `redes` (Instalación de redes inteligente), `mantenimiento` (Mantenimiento y soporte técnico, `imagePosition: center 30%`). Mes Patrio quedó aprobado por el usuario.
+
+## [2026-10-30] De: Claude — Encabezado fijo, logo del pie, fotos y logos nuevos
+Estado: PENDIENTE
+
+- `.site-header` ahora es `position: fixed` (antes sticky, que en celular se perdía al bajar y al abrir el menú). `Header.tsx` mide la barra (sin el menú abierto) en `--header-offset` y un `.header-spacer` ocupa su lugar. `.mobile-nav` tiene `max-height` y scroll propio.
+- `Logo` tiene la prop `original`: el pie de página siempre usa el logo original (pedido del usuario).
+- Logos de temporada reemplazados por las versiones nuevas del usuario.
+- Servicios: fotos de Cámaras (`camaras`) y Reparaciones y mejoras (`reparaciones`). Ya todos los servicios tienen foto.

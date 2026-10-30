@@ -6,9 +6,17 @@ import { seasonLogoSrc } from "@/config/seasons";
    - Encabezado: siempre blanco (el header es azul marino en ambos temas).
    - `adaptive` (pie de página): blanco en tema oscuro y azul marino en tema
      claro, porque ahí el fondo cambia con el tema. */
-export function Logo({ adaptive = false }: { adaptive?: boolean }) {
+export function Logo({
+  adaptive = false,
+  original = false,
+}: {
+  adaptive?: boolean;
+  /** true: siempre el logo original, aunque haya temporada (pie de página,
+   *  pedido del usuario 2026-10-29). */
+  original?: boolean;
+}) {
   // En temporada se usa el logo de la celebración (el sitio es solo oscuro).
-  const seasonal = seasonLogoSrc();
+  const seasonal = original ? null : seasonLogoSrc();
   if (seasonal) {
     return (
       <span className="logo" role="img" aria-label={siteConfig.name}>

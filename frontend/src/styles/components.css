@@ -54,8 +54,12 @@
 
 /* ----- Header ----- */
 .site-header {
-  position: sticky;
+  /* Fijo (no sticky): siempre visible al bajar, también en celular, y el
+     menú móvil se abre donde está el usuario. Ver .header-spacer. */
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: var(--header-bg);
   backdrop-filter: saturate(160%) blur(12px);
@@ -206,8 +210,23 @@
 }
 
 /* Menú móvil */
+/* Ocupa el lugar del encabezado fijo. --header-offset lo mide Header.tsx;
+   antes de medir se usa un alto aproximado. */
+.header-spacer {
+  height: var(--header-offset, var(--header-height));
+}
+@media (max-width: 1180px) {
+  .header-spacer {
+    height: var(--header-offset, 150px);
+  }
+}
+
 .mobile-nav {
   display: none;
+  /* Si el menú es más alto que la pantalla, se desplaza por dentro. */
+  max-height: calc(100dvh - var(--header-offset, 150px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-bottom: 1px solid var(--divider);
   background: var(--bg-elevated);
 }
