@@ -675,3 +675,8 @@ Estado: PENDIENTE
 Estado: PENDIENTE
 
 En el panel de filtros de celular (≤960 px), la lista de marcas (`.filter-check-list:not(.filter-accordion)`) tiene alto máximo y scroll propio, con borde y desvanecido abajo, como en PC (pedido del usuario). Las categorías siguen sin límite. Cambio en `styles/pages.css`.
+
+## [2026-10-30] De: Claude — Pie de página: sin "Servicios" repetido
+Estado: PENDIENTE
+
+Quité el enlace "Servicios" de la columna Catálogo del pie (`Footer.tsx`); queda solo en Secciones (pedido del usuario).

@@ -35,9 +35,6 @@ export function Footer() {
             <li>
               <Link to={groupCatalogUrl("herramientas")}>Herramientas</Link>
             </li>
-            <li>
-              <Link to="/servicios">Servicios</Link>
-            </li>
           </ul>
         </nav>
 
