@@ -846,3 +846,32 @@ html:root[data-theme][data-season="ano-nuevo"] {
     animation: none;
   }
 }
+
+/* ----- Franja del mapa de Costa Rica (inicio): toma el color de cada
+   temporada (pedido del usuario, 2026-10-30). Sin temporada se queda el azul
+   noche original. Las luces de las ciudades siguen doradas en todas. ----- */
+:root[data-season] .parallax-band {
+  --cr-band-bg: var(--season-bg-2);
+  --cr-sky: linear-gradient(180deg, var(--season-bg-2) 0%, var(--season-bg-1) 55%, var(--season-bg-2) 100%);
+  --cr-glow: color-mix(in srgb, var(--accent) 14%, transparent);
+  --cr-glow-2: color-mix(in srgb, var(--season-2) 35%, transparent);
+  --cr-land-a: color-mix(in srgb, var(--season-2) 38%, var(--season-bg-1));
+  --cr-land-b: color-mix(in srgb, var(--season-2) 16%, var(--season-bg-2));
+  --cr-stroke: color-mix(in srgb, var(--accent) 78%, transparent);
+  --cr-route: color-mix(in srgb, var(--accent) 45%, transparent);
+  --cr-sea: color-mix(in srgb, var(--text-muted) 55%, transparent);
+  --cr-stat-bg: color-mix(in srgb, var(--season-bg-1) 82%, transparent);
+  --cr-stat-bg-glass: color-mix(in srgb, var(--season-bg-1) 58%, transparent);
+  --cr-text: var(--text-muted);
+  --cr-muted: var(--text-muted);
+}
+/* Mes Patrio: azul bandera de fondo y el país en un azul más claro. */
+:root[data-season="independencia"] .parallax-band {
+  --cr-band-bg: #002b7f;
+  --cr-sky: linear-gradient(180deg, #002b7f 0%, #0b3a9e 55%, #002b7f 100%);
+  --cr-glow-2: rgba(206, 17, 38, 0.22);
+  --cr-land-a: #1a4fbf;
+  --cr-land-b: #0b3a9e;
+  --cr-stat-bg: rgba(0, 32, 96, 0.82);
+  --cr-stat-bg-glass: rgba(0, 32, 96, 0.58);
+}

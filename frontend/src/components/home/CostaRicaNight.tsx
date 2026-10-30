@@ -36,8 +36,8 @@ const StaticLayer = memo(function StaticLayer() {
     <svg className="cr-layer cr-static" viewBox={CR_VIEWBOX} focusable="false">
       <defs>
         <radialGradient id="cr-land" cx="50%" cy="45%" r="65%">
-          <stop offset="0" stopColor="#123a52" stopOpacity="0.95" />
-          <stop offset="1" stopColor="#0a2236" stopOpacity="0.9" />
+          <stop offset="0" className="cr-land-a" stopColor="#123a52" stopOpacity="0.95" />
+          <stop offset="1" className="cr-land-b" stopColor="#0a2236" stopOpacity="0.9" />
         </radialGradient>
         <radialGradient id="cr-glow-warm">
           <stop offset="0" stopColor="#fff3c4" />

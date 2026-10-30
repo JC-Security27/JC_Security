@@ -245,7 +245,7 @@
   min-height: clamp(560px, 60vw, 800px);
   display: flex;
   align-items: center;
-  background: #040b16;
+  background: var(--cr-band-bg, #040b16);
   color: #eaf1f7;
 }
 /* Cielo nocturno: degradado profundo, auroras suaves y estrellas tenues.
@@ -255,8 +255,8 @@
   inset: -60% 0; /* sobra de alto: al desplazarse nunca se ve el borde */
   z-index: -3;
   background:
-    radial-gradient(900px 520px at 78% 50%, rgba(66, 215, 231, 0.16), transparent 70%),
-    radial-gradient(700px 420px at 12% 30%, rgba(45, 91, 154, 0.35), transparent 70%),
+    radial-gradient(900px 520px at 78% 50%, var(--cr-glow, rgba(66, 215, 231, 0.16)), transparent 70%),
+    radial-gradient(700px 420px at 12% 30%, var(--cr-glow-2, rgba(45, 91, 154, 0.35)), transparent 70%),
     radial-gradient(600px 300px at 60% 95%, rgba(255, 170, 70, 0.08), transparent 70%),
     radial-gradient(1.2px 1.2px at 12% 18%, rgba(255, 255, 255, 0.7), transparent),
     radial-gradient(1px 1px at 32% 62%, rgba(255, 255, 255, 0.5), transparent),
@@ -264,7 +264,7 @@
     radial-gradient(1px 1px at 22% 82%, rgba(255, 255, 255, 0.45), transparent),
     radial-gradient(1.2px 1.2px at 92% 22%, rgba(255, 255, 255, 0.55), transparent),
     radial-gradient(1px 1px at 66% 8%, rgba(255, 255, 255, 0.5), transparent),
-    linear-gradient(180deg, #050d1c 0%, #071a2e 55%, #04101f 100%);
+    var(--cr-sky, linear-gradient(180deg, #050d1c 0%, #071a2e 55%, #04101f 100%));
   will-change: transform;
 }
 /* Mapa: a la derecha en computadora, detrás del texto en celular. */
@@ -302,14 +302,20 @@
 .parallax-band:not(.is-visible) .cr-anim * {
   animation-play-state: paused;
 }
+.cr-land-a {
+  stop-color: var(--cr-land-a, #123a52);
+}
+.cr-land-b {
+  stop-color: var(--cr-land-b, #0a2236);
+}
 .cr-land {
-  stroke: rgba(66, 215, 231, 0.75);
+  stroke: var(--cr-stroke, rgba(66, 215, 231, 0.75));
   stroke-width: 2.2;
   stroke-linejoin: round;
 }
 .cr-routes path {
   fill: none;
-  stroke: rgba(66, 215, 231, 0.45);
+  stroke: var(--cr-route, rgba(66, 215, 231, 0.45));
   stroke-width: 1.6;
   stroke-dasharray: 6 10;
   animation: cr-flow 3.5s linear infinite;
@@ -329,7 +335,7 @@
   animation-delay: 1.5s;
 }
 .cr-sea {
-  fill: rgba(159, 179, 199, 0.45);
+  fill: var(--cr-sea, rgba(159, 179, 199, 0.45));
   font-size: 26px;
   font-style: italic;
   letter-spacing: 0.18em;
@@ -402,7 +408,7 @@
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 .parallax-content p {
-  color: #c3d1df;
+  color: var(--cr-text, #c3d1df);
   font-size: 1.05rem;
   margin: 0;
 }
@@ -421,13 +427,13 @@
   padding: var(--space-4) var(--space-5);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
-  background: rgba(8, 22, 40, 0.78);
+  background: var(--cr-stat-bg, rgba(8, 22, 40, 0.78));
 }
 /* El desenfoque detrás de las tarjetas es costoso sobre capas en movimiento:
    solo en computadoras (mouse) y pantallas anchas. */
 @media (hover: hover) and (pointer: fine) and (min-width: 901px) {
   .parallax-stats li {
-    background: rgba(8, 22, 40, 0.55);
+    background: var(--cr-stat-bg-glass, rgba(8, 22, 40, 0.55));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
@@ -437,7 +443,7 @@
   font-size: 1.6rem;
 }
 .parallax-stats span {
-  color: #9fb3c7;
+  color: var(--cr-muted, #9fb3c7);
   font-size: 0.9rem;
 }
 /* Tablet y celular: el mapa queda centrado detrás del texto, más tenue. */

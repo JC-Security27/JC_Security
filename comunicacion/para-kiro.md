@@ -690,3 +690,8 @@ Quité el `SampleNotice` del final de `ServicesPage.tsx` (pedido del usuario).
 Estado: PENDIENTE
 
 Pedido del usuario: la categoría `monitores` salió del grupo "Cámaras y videovigilancia" y quedó en "Hogar inteligente y otros" (`frontend/src/lib/categoryGroups.ts`). Ya está publicado.
+
+## [2026-10-30] De: Claude — Mapa de Costa Rica con colores de temporada
+Estado: PENDIENTE
+
+Pedido del usuario: la franja del mapa del inicio toma los colores de la temporada activa. Los colores fijos de `.parallax-band`, `.parallax-bg`, `.cr-land`, `.cr-routes`, `.cr-sea` y `.parallax-stats` ahora usan variables `--cr-*` con el valor original como respaldo (`styles/pages.css`). Las de cada temporada están al final de `styles/seasons.css`, y los `<stop>` del degradado del país tienen las clases `cr-land-a/b` (`CostaRicaNight.tsx`). Sin temporada, se ve igual que antes.
