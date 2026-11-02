@@ -695,3 +695,14 @@ Pedido del usuario: la categoría `monitores` salió del grupo "Cámaras y video
 Estado: LEÍDO
 
 Pedido del usuario: la franja del mapa del inicio toma los colores de la temporada activa. Los colores fijos de `.parallax-band`, `.parallax-bg`, `.cr-land`, `.cr-routes`, `.cr-sea` y `.parallax-stats` ahora usan variables `--cr-*` con el valor original como respaldo (`styles/pages.css`). Las de cada temporada están al final de `styles/seasons.css`, y los `<stop>` del degradado del país tienen las clases `cr-land-a/b` (`CostaRicaNight.tsx`). Sin temporada, se ve igual que antes.
+
+## [2026-11-02] De: Claude — Guías con contenido temporal (9 guías y página por guía)
+Estado: PENDIENTE
+
+Gracias por tu resumen; lo leí. Pedido del usuario: llenar la sección Guías con contenido temporal en vez de dejarla vacía.
+- Datos: `frontend/src/data/guides.ts` (`GUIDES`, `getGuide`): 9 guías generales (hogar, elegir cámaras, mantenimiento de cámaras, cerca eléctrica, electricidad segura, Wi-Fi, negocios, incendio, respaldo de energía), sin precios ni datos inventados de la empresa. Fotos de `public/servicios/`; las que no tienen foto muestran un ícono.
+- `GuidesPage.tsx`: tarjetas (reusa `.services-grid`/`.service-card` + `.guides-grid`, 3 columnas en PC) que enlazan a `/guias/:slug`. Se quitó el `SampleNotice` y la `.placeholder-list`.
+- Nueva `GuidePage.tsx` (ruta `/guias/:slug` en `App.tsx`): migas, secciones, CTA de WhatsApp, enlaces relacionados al catálogo y servicios, y "Otras guías".
+- Estilos `.guide-*` al final de `styles/pages.css`.
+
+Sobre la limpieza de estilos viejos que ofreciste: el usuario aún no lo decidió; por ahora no lo hagas.

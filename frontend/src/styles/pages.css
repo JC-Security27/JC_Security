@@ -2446,3 +2446,138 @@
     flex-basis: 42%;
   }
 }
+
+/* ----- Guías de seguridad (tarjetas y página de cada guía) ----- */
+.guide-card {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+.guide-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.guide-card:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+.guide-card-more {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+/* Guías sin foto: ícono grande sobre el color del tema. */
+.guide-icon {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--accent);
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%),
+    var(--bg-elevated);
+}
+.guide-icon svg {
+  width: 30%;
+  max-width: 96px;
+  height: auto;
+  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent) 45%, transparent));
+}
+@media (min-width: 1025px) {
+  .guides-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.guide-article {
+  max-width: 760px;
+  margin: 0 auto var(--space-8);
+}
+.guide-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.guide-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  line-height: 1.15;
+}
+.guide-lead {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.guide-meta {
+  font-size: 0.85rem;
+}
+.guide-cover {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: var(--space-6);
+}
+/* Guías sin foto: franja más baja, solo con el ícono. */
+.guide-cover:has(.guide-icon) {
+  aspect-ratio: 3 / 1;
+}
+.guide-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.guide-section {
+  margin-bottom: var(--space-6);
+}
+.guide-section h2 {
+  font-size: 1.35rem;
+  margin: 0 0 var(--space-3);
+}
+.guide-section p {
+  margin: 0 0 var(--space-3);
+  line-height: 1.65;
+}
+.guide-section ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-2);
+  line-height: 1.55;
+}
+.guide-section li::marker {
+  color: var(--accent);
+}
+.guide-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  margin: var(--space-8) 0 var(--space-6);
+}
+.guide-cta h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.2rem;
+}
+.guide-cta p {
+  margin: 0;
+  max-width: 440px;
+}
+.guide-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.guide-related-link {
+  text-decoration: none;
+}
+.guide-related-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
