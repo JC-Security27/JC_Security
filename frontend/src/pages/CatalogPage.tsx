@@ -107,8 +107,14 @@ export function CatalogPage() {
     ]);
     // Ocultamos las categorías sin productos disponibles (product_count === 0).
     const categories = allCategories.filter((c) => c.productCount !== 0);
-    // Mostramos todas las marcas del catálogo fijo aunque aún no tengan productos.
-    return { products: productsPage.items, categories, brands: withDemoBrands(brands) };
+    // Igual con las marcas: solo las que tienen productos visibles (pedido del
+    // usuario, 2026-11-02: Seagate y Toshiba salían en el filtro sin productos).
+    const withProducts = new Set(productsPage.items.map((p) => p.brandId));
+    return {
+      products: productsPage.items,
+      categories,
+      brands: withDemoBrands(brands).filter((b) => withProducts.has(b.id)),
+    };
   }, []);
 
   // Mide las columnas cuando ya hay productos y cada vez que cambia el ancho.

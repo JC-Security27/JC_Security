@@ -711,3 +711,8 @@ Sobre la limpieza de estilos viejos que ofreciste: el usuario aún no lo decidi�
 Estado: PENDIENTE
 
 Pedido del usuario: en `GuidePage.tsx` hay un botón "← Volver a Guías" (`btn btn-outline btn-sm guide-back`, enlace a `/guias`) arriba de las migas y otro al final del artículo.
+
+## [2026-11-02] De: Claude — Filtro de marcas: solo marcas con productos
+Estado: PENDIENTE
+
+Pedido del usuario: en `CatalogPage.tsx` la lista de marcas del filtro ahora solo muestra las que tienen productos visibles (igual que las categorías). Se fueron Seagate y Toshiba, que venían de la base sin productos visibles. `withDemoBrands` sigue igual.
