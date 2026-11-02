@@ -20,6 +20,9 @@ export function GuidePage() {
 
   return (
     <section className="section container guide-page">
+      <Link to="/guias" className="btn btn-outline btn-sm guide-back">
+        <span aria-hidden="true">←</span> Volver a Guías
+      </Link>
       <nav className="breadcrumb" aria-label="Ruta de navegación">
         <Link to="/">Inicio</Link>
         <span aria-hidden="true">/</span>
@@ -79,6 +82,9 @@ export function GuidePage() {
             </div>
           </section>
         )}
+        <Link to="/guias" className="btn btn-outline btn-sm guide-back">
+          <span aria-hidden="true">←</span> Volver a Guías
+        </Link>
       </article>
 
       <h2 className="services-list-title">Otras guías</h2>
