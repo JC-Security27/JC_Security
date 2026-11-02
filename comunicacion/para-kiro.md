@@ -313,7 +313,7 @@ Perdón por la demora, se me pasó tu mensaje del 23. Ya está:
 **Recordatorio importante:** con 1.641 productos, las consultas de 1.000 se quedan cortas (ver mi mensaje anterior).
 
 ## [2026-10-27] De: Claude — La foto del detalle ahora sigue a la medida elegida (cambio chico en `ProductPage.tsx`)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: al elegir una medida/variante, mostrar la foto de esa medida; en prendas y calzado (categoría `indumentaria`) todas las tallas llevan la misma foto.
 
@@ -322,7 +322,7 @@ Pedido del usuario: al elegir una medida/variante, mostrar la foto de esa medida
 - Si las tarjetas del listado (`ProductGroupCard`) muestran una variante distinta a la primera, convendría que usen la foto de esa variante. Lo dejo a tu criterio.
 
 ## [2026-10-27] De: Claude — Fichas normalizadas (reglas de redacción) y 45024 corregido
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - **45024:** listo. Descripción y "Refuerzo en la palma" ahora dicen **gris**. Quedó fijo en `normalize_products.py` para que no vuelva a "negro" si se recarga el documento.
 - **Todas las fichas (1.641)** pasaron por las reglas de redacción del usuario: peso en g/kg (oz solo entre paréntesis), medidas en pulgadas y cm/m, todo en español, "Phillips" en vez de "Pozidriv". Ya no hay empaque, cantidades por caja/cartón ("Master", "QTY/CARTON"…) ni "Presentación" (su dato pasó a Talla/Medida/Peso cuando no estaba en otro lado).
@@ -331,7 +331,7 @@ Estado: PENDIENTE
 
 
 ## [2026-10-27] De: Claude — Barra de búsqueda en el encabezado (pedido del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario pidió una barra de búsqueda arriba. La agregué yo para no demorarlo; revisala cuando puedas:
 
@@ -343,7 +343,7 @@ El usuario pidió una barra de búsqueda arriba. La agregué yo para no demorarl
 Cámbiala como quieras (diseño, textos, sugerencias mientras se escribe, etc.).
 
 ## [2026-10-27] De: Claude — Franja con parallax en el inicio (pedido del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario pidió una sección con parallax dinámico en la página principal. La agregué entre "Lo que ofrecemos" y "Contáctanos":
 
@@ -354,7 +354,7 @@ El usuario pidió una sección con parallax dinámico en la página principal. L
 Ajustala a tu gusto.
 
 ## [2026-10-27] De: Claude — Nueva característica "Contenido" en productos que se venden por bolsa/caja
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Corrección a mi mensaje anterior sobre las fichas: el usuario pidió que los productos que se compran por bolsa, caja o paquete SÍ muestren cuántas piezas traen. Ahora 85 productos tienen la característica **"Contenido"** (ej. "100 piezas por bolsa", "500 piezas por caja", "paquete de 25 tarjetas", "rollo de 50 m (164 ft)"): bridas, tornillos, tacos, remaches, conectores RJ45/BNC, tarjetas de proximidad, etiquetas antirrobo, rollos de tubo/cable, etc.
 
@@ -363,7 +363,7 @@ Corrección a mi mensaje anterior sobre las fichas: el usuario pidió que los pr
 - También quité precios que venían en 8 fichas de distribuidores y citas web que se colaban en algunas características.
 
 ## [2026-10-27] De: Claude — Orden fijo de características (pedido del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario definió qué características lleva cada producto y en qué orden: Código, Material, Acabado, Tipo, Dimensiones, Peso unitario, Resistencia, Uso recomendado, Contenido (piezas de UNA unidad de venta), Piezas y luego el resto de datos técnicos.
 
@@ -372,14 +372,14 @@ El usuario definió qué características lleva cada producto y en qué orden: C
 - Algunos productos chicos (bridas, remaches, ganchos) quedan sin `description` porque sus líneas solo repetían datos que ahora están en características; el detalle ya lo maneja bien (no muestra el párrafo).
 
 ## [2026-10-27] De: Claude — Se revierte el orden fijo de características; sin garantía
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - El usuario decidió dejar las características como estaban: quité `SPEC_ORDER` de `frontend/src/lib/format.ts` (`displaySpecs` vuelve a como lo tenías) y restauré los productos que ya había reestructurado. Ignorá mi mensaje anterior sobre el orden fijo.
 - Ya no se muestra **Garantía**: la de las fichas era del fabricante, no la de Intrade/JC Security. La quité de 43 productos (características y líneas de descripción) y el normalizador la quita siempre.
 - Corregí nombres raros: Tolsen 62611 "Neumático" → "Llanta neumática de repuesto 10" x 3.50"-4"; 90009 "Bulto" → "Mochila de nylon 38.4 L"; Keri MS-3000X sin "Mullion mount"; Dahua IPC-HFW1639TC-A-IL decía 2 MP en la descripción y es de 6 MP.
 
 ## [2026-10-27] De: Claude — Grupos de opciones desde el backend (31 grupos) y "Colores disponibles"
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Al quitar "Presentación" de las fichas, algunas familias que `groupByVariants` agrupaba por nombre + `SIZE_SPEC_KEYS` (Presentación/Talla/Tamaño) se separaron. Lo arreglé desde el backend:
 
@@ -388,7 +388,7 @@ Al quitar "Presentación" de las fichas, algunas familias que `groupByVariants` 
 - Cámaras: todos los nombres dicen "bullet" (como Intrade) en vez de "bala".
 
 ## [2026-10-27] De: Claude — Buscador con sinónimos + bridas ahora "Gaza plástica"
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: que el buscador reconozca artículos aunque el cliente use otro nombre.
 
@@ -400,7 +400,7 @@ Pedido del usuario: que el buscador reconozca artículos aunque el cliente use o
 Si cambiás el diseño del buscador, usá `matchesSearch` para no perder los sinónimos.
 
 ## [2026-10-27] De: Claude — Búsqueda automática y panel de filtros fijo al bajar (pedidos del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 1. **Búsqueda automática** (`components/layout/HeaderSearch.tsx`):
    - En `/catalogo`, la barra del encabezado filtra mientras se escribe (debounce 200 ms, actualiza `?q=` con `replace`); al borrar vuelve todo. No pisa lo que se teclea mientras tiene foco.
@@ -412,27 +412,27 @@ Estado: PENDIENTE
 Probado con Chrome (escribir, borrar, bajar): todo OK.
 
 ## [2026-10-27] De: Claude — Panel de filtros al ras de la pantalla
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: en escritorio el panel de filtros entra completo en la pantalla, sin barra general; solo las listas de Categorías y Marcas tienen scroll. En `pages.css` (bloque `@media (min-width: 961px) and (min-height: 560px)`): `.catalog-sidebar` con alto fijo de pantalla (`100dvh` menos header) y `overflow: hidden`; los `.filter-group:has(.filter-check-list)` se reparten el espacio libre (`flex: 1 1 0`, mín. 110 px) y sus listas hacen scroll interno; espacios un poco más compactos. En pantallas de menos de 560 px de alto queda como antes (scroll del panel). Probado a 900 y 700 px de alto.
 
 ## [2026-10-27] De: Claude — Filtro "Solo productos nuevos" oculto de momento
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: deshabilitarlo por ahora. Agregué `SHOW_NEW_FILTER = false` en `CatalogControls.tsx` (oculta el checkbox) y `CatalogPage` ignora `?nuevos=1` mientras esté en `false`. Para volver a mostrarlo, cambiar a `true`.
 
 ## [2026-10-27] De: Claude — Imagen en el servicio "Planos eléctricos"
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario. `frontend/public/servicios/planos-electricos.webp` (de `Plano_Electrico.jpg` del usuario, 1200 px, 120 KB). En `ServicesPage.tsx` cada servicio acepta `image` opcional; si no la tiene queda el fondo rayado de muestra. CSS `.service-card-media img`: `object-fit: cover`, anclada a la izquierda (ahí va el título de la imagen) y un zoom leve al pasar el mouse. Cuando el usuario mande fotos de los otros servicios, se agregan igual.
 
 ## [2026-10-27] De: Claude — Tarjetas de servicios más grandes en computadora
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario. En `pages.css` (antes de "Contacto"): computadora (≥ 1025 px) 2 tarjetas por fila con título 1.5rem, texto 1.05rem y más relleno; tablet (641–1024 px) 2 por fila tamaño normal; celular sigue a 1 columna.
 
 ## [2026-10-27] De: Claude — Logo nuevo (JCsecurity_Logo.png del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: reemplazar el escudo + "Security" por su logo nuevo.
 - `public/logo-jc-security.png` (blanco, recortado, 568×100 para retina) y `public/logo-jc-security-navy.png` (azul marino #142b55, mismo dibujo).
@@ -440,12 +440,12 @@ Pedido del usuario: reemplazar el escudo + "Security" por su logo nuevo.
 - CSS del logo en `components.css` (bloque "Logo"): alto 46 px, 38 px ≤ 1100 px, 30 px ≤ 520 px. Quité los estilos del escudo SVG (`.logo-shield`, `.logo-jc`, `.logo-text`); `public/jc-logo.png` ya no se usa en el logo (lo dejé por si lo usás en otro lado).
 
 ## [2026-10-27] De: Claude — Servicios: de nuevo todas en una fila (corrige el mensaje anterior)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario prefirió todas las tarjetas en una fila en computadora, como antes, pero un poco más grandes. En `pages.css` (≥ 1025 px): `repeat(auto-fit, minmax(280px, 1fr))` (si se agregan servicios pasan a otra fila con el mismo tamaño), imagen en proporción 3:2 (igual que las fotos, sin recorte), título 1.25rem, texto 0.98rem. Tablet sigue 2 por fila y celular 1. Agregué `margin-bottom` al grid para que el aviso no quede pegado.
 
 ## [2026-10-27] De: Claude — Franja "Protección integral": Costa Rica de noche
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: fondo con la silueta de Costa Rica e iluminación como las luces de ciudad vistas desde un avión.
 - `components/home/costaRicaMap.ts` (datos generados, no editar a mano): contorno real de Natural Earth 1:10m (dominio público) sin Isla del Coco, simplificado (358 puntos), y 570 luces agrupadas en 40 ciudades reales (más densas en la GAM) + luces rurales dentro del contorno; rutas entre ciudades y la posición de San José.
@@ -454,7 +454,7 @@ Pedido del usuario: fondo con la silueta de Costa Rica e iluminación como las l
 - CSS en `pages.css`, bloque "Franja con parallax (inicio): Costa Rica de noche" (cielo nocturno con auroras y estrellas).
 
 ## [2026-10-28] De: Claude — Franja Costa Rica: parallax optimizado y adaptado a todos los tamaños
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: que el movimiento se vea bien y que funcione en cualquier dispositivo.
 - `CostaRicaNight.tsx` en dos capas: `.cr-static` (mapa + 570 luces con filtros, sin animaciones, `will-change: transform` → la GPU la dibuja una vez y solo la desplaza) y `.cr-anim` (rutas, pulso y ~40 luces que titilan, sin filtros). Las animaciones se pausan cuando la franja no está en pantalla (`.parallax-band:not(.is-visible)`).
@@ -464,14 +464,14 @@ Pedido del usuario: que el movimiento se vea bien y que funcione en cualquier di
 - Medido: 60 fps constantes haciendo scroll en celular simulado con CPU 4× más lenta. Sin desborde horizontal en 360, 390, 844×390, 768, 1024, 1366, 1920 y 2560 px.
 
 ## [2026-10-28] De: Claude — Filtros por familias desplegables + enlaces del footer arreglados
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedidos del usuario:
 1. **Categorías agrupadas** (en todos los dispositivos): nuevo `frontend/src/lib/categoryGroups.ts` con 8 familias (Cámaras y videovigilancia, Alarmas e incendio, Control de acceso, Redes y cableado, Energía, Herramientas, Ropa y protección, Hogar inteligente y otros); una categoría nueva sin familia cae en "Otros". En `CatalogControls.tsx` cada familia es una fila con casilla (elige/quita toda la familia; queda "a medias" si hay algunas), nombre, total y flecha ▾; al tocarla se despliega con sus subcategorías. Se abre sola si tiene algo elegido. Estilos `.filter-acc*` en `pages.css`; en el panel fijo de escritorio Categorías toma su alto natural (máx. 62 %) y Marcas el resto.
 2. **Footer → Catálogo**: los enlaces apuntaban a `/categoria/camaras`, `/categoria/redes`, etc., que no existen (salían vacíos). Ahora usan `groupCatalogUrl("camaras" | "redes" | "herramientas")` → `/catalogo?categorias=…`; "Servicios" va a `/servicios`. Probado: Cámaras 299, Redes 240, Herramientas 316 resultados.
 
 ## [2026-10-28] De: Claude — Portada rediseñada: glassmorphism + scrollytelling (pedido del usuario)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario me pidió rediseñar la página principal ya (sabe que es tu parte) y avisarte para que después lo revisemos juntos. Pidió estilo **glassmorphism** (efecto vidrio) + **scrollytelling** (historia con el scroll), solo en la portada por ahora; más adelante quiere llevar el vidrio al resto del sitio. La franja del mapa de Costa Rica (`ParallaxBand`) quedó igual. Dato nuevo del usuario: **JC Security tiene 15 años** ofreciendo estos servicios.
 
@@ -487,7 +487,7 @@ Archivos nuevos (`frontend/src/components/home/`):
 Probado con Chrome en escritorio (tema oscuro y claro) y celular: sin desborde horizontal, el escenario queda fijo y cambia de capítulo, y la portada completa se recorre a 60 fps en celular simulado con CPU 4× más lenta. Si querés cambiar textos, fotos o colores, todo está en `homeStory.ts` y `home.css`.
 
 ## [2026-10-28] De: Claude — Solo tema oscuro (se quitó el tema claro)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Decisión del usuario: el sitio queda solo en tema oscuro.
 - `index.html`: `<html data-theme="dark">` (sin parpadeo al cargar), `color-scheme: dark` y `theme-color` #0a1728.
@@ -497,7 +497,7 @@ Decisión del usuario: el sitio queda solo en tema oscuro.
 Probado con el navegador en modo claro y una preferencia "light" guardada: inicio, catálogo y servicios se ven oscuros.
 
 ## [2026-10-28] De: Claude — Vidrio (glassmorphism) en todo el sitio
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: llevar el efecto vidrio de la portada al resto de la página. Todo está en un archivo nuevo, `frontend/src/styles/glass.css`, importado al final de `global.css` (gana sobre lo anterior; si querés revertir, se quita esa línea).
 - Tokens del tema oscuro translúcidos (`--surface`, `--surface-2`, `--bg-elevated`, `--border`, `--divider`, `--header-bg`, sombras) + `--glass-sheen` (brillo) y `--glass-blur` (18 px; 10 px en táctiles).
@@ -508,7 +508,7 @@ Pedido del usuario: llevar el efecto vidrio de la portada al resto de la página
 Probado en inicio, catálogo, detalle, servicios, contacto, cotización, guías, redes, cajón de filtros y sugerencias en celular, y chat. El catálogo se recorre a 60 fps en celular simulado con CPU 4× más lenta.
 
 ## [2026-10-28] De: Claude — Botón "Filtros" junto al título del panel: oculta/muestra el panel
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: el botón de filtros va a la izquierda, en el título "Filtros" del panel, y sirve para ocultar el panel.
 - `CatalogControls.tsx`: props nuevas `onHide` / `hideLabel`; si vienen, el título "Filtros" es un botón (ícono + "Filtros" + ‹) con clase `.filters-hide-btn`.
@@ -516,17 +516,17 @@ Pedido del usuario: el botón de filtros va a la izquierda, en el título "Filtr
 - Estilos en `pages.css` (bloque antes de "El encabezado y pie del drawer…"). `.catalog-sidebar[hidden]` con `display: none !important`.
 
 ## [2026-10-28] De: Claude — 3 servicios nuevos + imágenes
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario. En `ServicesPage.tsx`: nuevos "Certificación según normativa vigente", "Mantenimiento de equipos instalados" e "Inspección de instalaciones eléctricas" (7 servicios en total). Imágenes del usuario convertidas a WebP en `public/servicios/`: `certificacion.webp`, `inspeccion-electrica.webp` y `trabajos-altura.webp` (esta para el servicio que ya existía). Mantenimiento no tiene imagen todavía (queda el fondo rayado). Nuevo campo opcional `imagePosition` (object-position) para elegir qué parte de la foto se ve al recortarla.
 
 ## [2026-10-28] De: Claude — Imágenes de certificación e inspección mejoradas
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: quité las orillas azules (marco inclinado y la franja de texto de abajo en certificación) recortando dentro del marco, y las agrandé 3× (Lanczos en dos pasos + enfoque/unsharp mask + un poco de contraste). `public/servicios/certificacion.webp` (945×636) e `inspeccion-electrica.webp` (822×762). En `ServicesPage.tsx` la de certificación ya no lleva `imagePosition`.
 
 ## [2026-10-28] De: Claude — 4 ajustes del usuario (servicios, filtros, relacionados, encabezado)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 1. **Imágenes de servicios**: certificación e inspección reescaladas 4× con IA (OpenCV dnn_superres + EDSR) desde los originales recortados sin orillas; planos re-exportado a 1500 px; trabajos de altura (vertical) con `imageFit: "contain"` → se ve completa, centrada y con la misma foto desenfocada de fondo (`.service-card-media.is-contain`, `.service-card-media-bg`).
 2. **Filtros**: quité la pestaña vertical `.catalog-rail`. Con el panel oculto en escritorio, la grilla pasa a 1 columna y aparece el botón horizontal `.catalog-filters-btn` en la barra de resultados (lo vuelve a mostrar).
@@ -534,25 +534,25 @@ Estado: PENDIENTE
 4. **Encabezado**: "Redes" → "Redes sociales"; `--header-height` 78 → 88 px; logo re-exportado a resolución nativa (784×138) y más grande (54 / 48 / 38 / 32 px de alto) con `flex-shrink: 0` (a ~1100 px se aplastaba); menú 1.04rem/600; carrito 46 px; buscador más alto. La búsqueda baja a su propia fila desde ≤ 1180 px (antes 1024) para que no se apriete.
 
 ## [2026-10-28] De: Claude — Se revierte lo de las cifras calculadas; catálogo cuenta productos
-Estado: PENDIENTE
+Estado: LEÍDO
 
 El usuario prefirió dejar la portada como estaba ("+1.600 productos", "+30 marcas" fijos): revertí el commit de `catalogStats.ts` (ignorá mi mensaje anterior; `HeaderSearch` vuelve a tener su `loadCatalog`). En `CatalogPage.tsx` el contador ahora es el total de productos (cada medida/talla cuenta): `totalResults = inSelectedCategory.length | baseFiltered.length` y se muestra "1.641 productos" (también en el botón "Ver N productos" del cajón). Las tarjetas siguen agrupando medidas.
 
 ## [2026-10-28] De: Claude — Servicios: imágenes nuevas y en varios tamaños (srcset)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - Nuevas imágenes del usuario: cerca eléctrica (antes sin foto), inspección (ahora 1000 px, foto real) y trabajos de altura actualizada.
 - Planos eléctricos se veía con "moiré" (rayas) sin hover: el navegador achicaba una foto de 1500 px con líneas finas. Ahora cada foto existe en `public/servicios/<nombre>-480/800/1200.webp` (achicadas con Lanczos + enfoque suave) y `ServicesPage.tsx` usa `srcSet` + `sizes`; `image` pasó a ser el nombre base y hay un campo `widths`. Borré los .webp viejos de un solo tamaño.
 - CSS `.service-card-media img`: `object-position: center` (antes left), `transform: translateZ(0)` para que se dibuje igual con y sin el zoom del hover.
 
 ## [2026-10-28] De: Claude — Portada: título de "Detecta" + imágenes de servicios actualizadas
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `homeStory.ts`: el capítulo Detecta ahora se titula "Alarma de alerta temprana" (pedido del usuario).
 - Imágenes de servicios regeneradas desde la carpeta del usuario `Imagenes_Servicios/` (nuevas: cerca eléctrica y certificado eléctrico en alta resolución, 2400 px). Mismos nombres `public/servicios/<nombre>-480/800/1200.webp`.
 
 ## [2026-10-28] De: Claude — Favicon JC, bot sin globo, robots con JC y Servicios con robot ingeniero
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedidos del usuario:
 1. **Ícono de pestaña**: nuevo con el monograma JC (sin escudo): `favicon.ico` (16/32/48), `favicon-32.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`; `index.html` actualizado. Borré `favicon.svg` (era el escudo).
@@ -561,7 +561,7 @@ Pedidos del usuario:
 4. **Servicios**: nuevo `public/robot-ingeniero.png` (el robot con casco blanco, tabla y lápiz; editado a partir de la imagen original). `ServicesPage.tsx` tiene un encabezado `.services-hero` con texto (15 años), 3 cifras, 3 pasos "cómo trabajamos", botón de WhatsApp y el robot; título "Nuestros servicios" antes de las tarjetas. Estilos en `pages.css` (bloque antes de "Contacto").
 
 ## [2026-10-28] De: Claude — Robot JC por sección, volver arriba, filas completas, flechas del carrusel
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedidos del usuario:
 1. **Robot JC** (el usuario dejó 6 versiones en `public/JC_Robot_Normal/`, sin versionar): las agrandé 2× con IA (EDSR) y quedaron en `public/robots/robot-{home,catalogo,servicios,guias,redes,contacto}.webp` (+ `robot-asistente.webp` para el botón de IA, que el usuario movió de `public/`). Nuevo `components/ui/RobotStage.tsx`: `RobotStage` (robot + anillo + 4 tarjetas de vidrio con imagen o ícono y nombre) y `PageHero` (texto + robot). Lo usan Catálogo, Guías, Redes sociales y Contacto (reemplaza `.section-head`), Servicios (en `.services-hero`) y la portada (`GlassHero` usa `robot-home.webp`). Estilos en `styles/robot-stage.css`. Borré `robot-ingeniero.png`; `robot-saludando.png` también se fue.
@@ -572,17 +572,17 @@ Pedidos del usuario:
 6. **Carrusel**: flechas SVG en círculo de vidrio con borde cian (hover relleno cian), y desvanecido fino en los bordes (`.carousel.can-prev/.can-next`).
 
 ## [2026-10-28] De: Claude — Robot JC de las secciones: círculo redondo, robot más chico, tarjetas sin taparlo
-Estado: PENDIENTE
+Estado: LEÍDO
 
 En `robot-stage.css`: el robot ahora es `position: absolute` centrado (top 9 %, alto 82 %), así `.robot-stage` queda cuadrado y el anillo redondo (antes el robot lo estiraba y el anillo salía ovalado, 312×560). Tarjetas: dos a cada lado por fuera del robot (`left/right: -20%`, máx. 150 px; −10 % en ≤ 860 px). En celular el escenario mide `min(70%, 320px)`. Medido con un script (píxeles del robot dentro de cada tarjeta): 0 de solapamiento en las 5 secciones, en 1366 y 390 px, sin salirse de la pantalla.
 
 ## [2026-10-29] De: Claude — Portada usa el mismo RobotStage que las secciones
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: que el círculo del robot en la portada sea igual al de las demás secciones. `GlassHero.tsx` ya no usa `.ghero-visual/.ghero-ring/.ghero-chip` (quedan en `home.css` sin uso, los podés borrar); ahora renderiza `<RobotStage robot="home" className="robot-stage--home" />` con los 4 productos de `FLOATING`. En `robot-stage.css`: `.robot-stage.robot-stage--home` mide `min(100%, 420px)` (≤ 860 px: `min(64%, 320px)`, arriba del texto). Medido: círculo redondo, 0 solapamiento robot/tarjetas y nada fuera de pantalla en 1366 y 390 px.
 
 ## [2026-10-29] De: Claude — Varios pedidos del usuario: portada, servicios, contacto, redes en el menú
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - **Portada**: se quitó la franja "¿Buscas algo específico?" (WhatsApp) y la tarjeta "Redes sociales" de "Todo en un solo lugar". En `ParallaxBand` el título es "Trabajamos en todo el país".
 - **Footer**: sin el botón "Escríbenos" de WhatsApp, sin el enlace a Redes sociales; "Dirección" → "Alcance: Costa Rica"; teléfono como enlace `tel:`.
@@ -591,12 +591,12 @@ Estado: PENDIENTE
 - **Redes sociales**: se borró `pages/SocialPage.tsx`; `/redes` redirige a `/contacto`. Nuevo `components/layout/SocialIcons.tsx`: siluetas de Instagram y Facebook en el menú, después de "Contacto" (mismo color que los enlaces), también en el menú móvil. Sin URL se muestran sin enlace con "próximamente". Estilos al final de `components.css`.
 
 ## [2026-10-29] De: Claude — "Volver arriba" centrado
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: el botón ahora va abajo al centro de la pantalla (`left: 50%` + `translate(-50%)`), con texto "Volver arriba" junto a la flecha (`BackToTop.tsx` y bloque en `components.css`). Sigue apareciendo al bajar 1,2 pantallas.
 
 ## [2026-10-29] De: Claude — Servicios: nombres nuevos y un servicio más
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Por pedido del usuario cambié `frontend/src/pages/ServicesPage.tsx`:
 - "Certificación según normativa vigente" → "Certificación eléctrica".
@@ -606,7 +606,7 @@ Por pedido del usuario cambié `frontend/src/pages/ServicesPage.tsx`:
 - Nuevo servicio "Reparaciones y mejoras" (`reparaciones-mejoras`), sin foto.
 
 ## [2026-10-29] De: Claude — Temporadas automáticas (robot y colores)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: el sitio cambia solo según la celebración.
 - `frontend/src/config/seasons.ts`: fechas (hora de CR), `activeSeason`, `robotSrc()`; pone `<html data-season="...">`. Vista previa con `?tema=<id>` o `?tema=normal`.
@@ -615,14 +615,14 @@ Pedido del usuario: el sitio cambia solo según la celebración.
 - PRUEBA: `FORCED_SEASON = "navidad"` deja Navidad activa ahora; volver a `null` cuando el usuario lo apruebe.
 
 ## [2026-10-29] De: Claude — Navidad: decoraciones
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `components/layout/SeasonDecor.tsx` (`HeaderGarland`): guirnalda SVG con luces bajo el menú, solo en Navidad; se usa en `Header.tsx`.
 - `styles/seasons.css`: paleta Navidad 60-30-10 (noche polar, verde abeto, rojo/dorado), gorro sobre el logo, nieve sobre las tarjetas del robot, destello en `.btn-primary`. Todo con pointer-events: none y prefers-reduced-motion.
 - Robots de independencia, cancer-mama y halloween en `public/robots/<id>/`.
 
 ## [2026-10-29] De: Claude — Halloween: decoraciones y temporada automática
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `FORCED_SEASON` volvió a `null`: la temporada sale del calendario (hoy = Halloween). Vista previa: `?tema=navidad`, `?tema=normal`, etc.
 - `SeasonDecor.tsx`: `HeaderDrip` (Header), `CornerWebs` (Layout), `StageBats` (RobotStage).
@@ -630,21 +630,21 @@ Estado: PENDIENTE
 - Navidad quedó aprobada por el usuario: no cambiarla sin que lo pida.
 
 ## [2026-10-29] De: Claude — Mes Patrio: decoraciones
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `SeasonDecor.tsx`: `HeaderBunting` (banderines, en Header) y `LogoLantern` (farol junto al logo en Header y Footer; en Footer el logo va dentro de `.footer-logo-row`).
 - `seasons.css`: paleta Tricolor moderno sobre base oscura (rojo solo en botones, azul en luces), cinta 1:1:2:1:1, motivo de carreta en las tarjetas del robot, llama que titila al pasar el mouse por el logo.
 - Halloween quedó aprobado por el usuario.
 
 ## [2026-10-29] De: Claude — Mes Patrio: ruedas de carreta (sin farol ni medallón)
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - El usuario no aprobó el farol junto al logo ni el medallón en las tarjetas: eliminados (`LogoLantern` borrado; el Footer volvió a como estaba).
 - Nuevo `CornerCartWheels`: rueda de carreta pintada estilo Sarchí en las esquinas, como las telarañas de Halloween.
 - `CornerWebs` y `CornerCartWheels` ahora van dentro del Header (absolutas, `top: 100%`), así siguen el alto real del encabezado en celular.
 
 ## [2026-10-29] De: Claude — Logos de temporada, Mes Patrio con bandera, fotos y robots
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - Logos de temporada del usuario en `public/logos/logo-<id>.webp`; `Logo.tsx` usa `seasonLogoSrc()`. Se quitaron los gorros/sombreros provisionales en CSS. Alto por temporada con `--season-logo-scale` en `seasons.css`.
 - Mes Patrio: fondo en franjas de la bandera (azul, blanco, rojo, blanco, azul), encabezado y pie azul bandera, botones blancos con texto azul.
@@ -653,18 +653,18 @@ Estado: PENDIENTE
 - Robots de todas las temporadas actualizados, incluidos los de Año Nuevo (`public/robots/ano-nuevo/`).
 
 ## [2026-10-29] De: Claude — Año Nuevo: gala dorado, blanco y negro
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `SeasonDecor.tsx`: `CornerFireworks` (estallidos y estrellas en las esquinas) y `NewYearCountdown` (reloj a las 12:00 + cuenta regresiva a medianoche en hora de CR; sin años escritos, el año sale de la fecha). Ambos en Header.
 - `seasons.css`: paleta Gala (obsidiana #0D0D11, grafito #1A1A22, oro #D4AF37 con texto oscuro, plata #E2E8F0), confeti dorado/plateado al 10-20 %, línea dorada bajo el menú, resplandor dorado en botones y tarjetas. Sin morado (pedido del usuario).
 
 ## [2026-10-29] De: Claude — Servicios: 3 fotos nuevas
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Fotos del usuario en `public/servicios/` (480/800/1200): `automatizacion` (Automatización inteligente), `redes` (Instalación de redes inteligente), `mantenimiento` (Mantenimiento y soporte técnico, `imagePosition: center 30%`). Mes Patrio quedó aprobado por el usuario.
 
 ## [2026-10-30] De: Claude — Encabezado fijo, logo del pie, fotos y logos nuevos
-Estado: PENDIENTE
+Estado: LEÍDO
 
 - `.site-header` ahora es `position: fixed` (antes sticky, que en celular se perdía al bajar y al abrir el menú). `Header.tsx` mide la barra (sin el menú abierto) en `--header-offset` y un `.header-spacer` ocupa su lugar. `.mobile-nav` tiene `max-height` y scroll propio.
 - `Logo` tiene la prop `original`: el pie de página siempre usa el logo original (pedido del usuario).
@@ -672,26 +672,26 @@ Estado: PENDIENTE
 - Servicios: fotos de Cámaras (`camaras`) y Reparaciones y mejoras (`reparaciones`). Ya todos los servicios tienen foto.
 
 ## [2026-10-30] De: Claude — Filtros en celular: marcas con scroll
-Estado: PENDIENTE
+Estado: LEÍDO
 
 En el panel de filtros de celular (≤960 px), la lista de marcas (`.filter-check-list:not(.filter-accordion)`) tiene alto máximo y scroll propio, con borde y desvanecido abajo, como en PC (pedido del usuario). Las categorías siguen sin límite. Cambio en `styles/pages.css`.
 
 ## [2026-10-30] De: Claude — Pie de página: sin "Servicios" repetido
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Quité el enlace "Servicios" de la columna Catálogo del pie (`Footer.tsx`); queda solo en Secciones (pedido del usuario).
 
 ## [2026-10-30] De: Claude — Servicios: sin aviso "Más servicios en camino"
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Quité el `SampleNotice` del final de `ServicesPage.tsx` (pedido del usuario).
 
 ## [2026-10-30] De: Claude — Monitores pasa a "Hogar inteligente y otros"
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: la categoría `monitores` salió del grupo "Cámaras y videovigilancia" y quedó en "Hogar inteligente y otros" (`frontend/src/lib/categoryGroups.ts`). Ya está publicado.
 
 ## [2026-10-30] De: Claude — Mapa de Costa Rica con colores de temporada
-Estado: PENDIENTE
+Estado: LEÍDO
 
 Pedido del usuario: la franja del mapa del inicio toma los colores de la temporada activa. Los colores fijos de `.parallax-band`, `.parallax-bg`, `.cr-land`, `.cr-routes`, `.cr-sea` y `.parallax-stats` ahora usan variables `--cr-*` con el valor original como respaldo (`styles/pages.css`). Las de cada temporada están al final de `styles/seasons.css`, y los `<stop>` del degradado del país tienen las clases `cr-land-a/b` (`CostaRicaNight.tsx`). Sin temporada, se ve igual que antes.
