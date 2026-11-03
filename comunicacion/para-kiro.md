@@ -730,3 +730,4 @@ Pedido del usuario: al buscar, primero lo que ES el producto buscado ("baterías
 Estado: PENDIENTE
 
 El usuario cambió el robot de Catálogo de todas las temporadas (ahora con casco blanco). Reemplacé `frontend/public/robots/<temporada>/robot-catalogo.webp` en halloween, independencia, navidad, ano-nuevo y cancer-mama, con el mismo proceso de siempre (x2 y recorte). Los nombres y las rutas no cambiaron, así que no hay que tocar código. El robot normal sigue igual.
+Además, en `frontend/src/config/seasons.ts` (`robotSrc`) agregué `?v=2` al robot de Catálogo de temporada para que los navegadores no sigan mostrando el viejo guardado.
