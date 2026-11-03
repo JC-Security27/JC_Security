@@ -74,7 +74,7 @@ if (activeSeason) document.documentElement.dataset.season = activeSeason.id;
 export function robotSrc(robot: string): string {
   const seasonal = ["home", "catalogo", "servicios", "guias", "contacto"];
   return activeSeason?.robots && seasonal.includes(robot)
-    ? `/robots/${activeSeason.id}/robot-${robot}.webp`
+    ? `/robots/${activeSeason.id}/robot-${robot}.webp${robot === "catalogo" ? "?v=2" : ""}`
     : `/robots/robot-${robot}.webp`;
 }
 
