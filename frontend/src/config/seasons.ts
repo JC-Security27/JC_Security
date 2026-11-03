@@ -73,9 +73,11 @@ if (activeSeason) document.documentElement.dataset.season = activeSeason.id;
 /** Ruta del Robot JC de una sección, con la versión de temporada si existe. */
 export function robotSrc(robot: string): string {
   const seasonal = ["home", "catalogo", "servicios", "guias", "contacto"];
+  // ?v=2: el robot de Catálogo cambió (2026-11-03); obliga a bajar el nuevo.
+  const v = robot === "catalogo" ? "?v=2" : "";
   return activeSeason?.robots && seasonal.includes(robot)
-    ? `/robots/${activeSeason.id}/robot-${robot}.webp${robot === "catalogo" ? "?v=2" : ""}`
-    : `/robots/robot-${robot}.webp`;
+    ? `/robots/${activeSeason.id}/robot-${robot}.webp${v}`
+    : `/robots/robot-${robot}.webp${v}`;
 }
 
 /** Logo de JC Security de la temporada (public/logos/logo-<id>.webp, del
