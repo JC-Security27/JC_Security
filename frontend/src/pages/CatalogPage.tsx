@@ -19,7 +19,7 @@ import {
   ErrorState,
   SampleNotice,
 } from "@/components/ui/states";
-import { matchesSearch } from "@/lib/search";
+import { matchesSearch, searchScore, sortBySearch } from "@/lib/search";
 import { groupByVariants } from "@/lib/variants";
 import { withDemoBrands } from "@/config/brandLogos";
 import type { Brand, Category, Product } from "@/types/catalog";
@@ -147,7 +147,8 @@ export function CatalogPage() {
 
   const baseFiltered = useMemo(() => {
     if (!data) return [];
-    return data.products.filter(matchesCommon);
+    // Con búsqueda, lo más relevante primero (ver searchScore).
+    return sortBySearch(data.products.filter(matchesCommon), filters.search);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, filters.search, filters.brandIds.join(","), filters.onlyNew]);
 
@@ -175,11 +176,27 @@ export function CatalogPage() {
       byCat.get(p.categorySlug)!.push(p);
     }
     // Respeta el orden de las categorías (position) devuelto por el backend.
-    return data.categories
+    const groups = data.categories
       .map((cat) => ({ cat, items: byCat.get(cat.slug) ?? [] }))
       .filter((g) => g.items.length > 0);
+    // Con búsqueda, primero la categoría de los resultados más relevantes:
+    // "baterías" muestra arriba las baterías. Empate: la que tiene más
+    // resultados con ese puntaje ("sensor" -> Alarmas antes que Herramientas).
+    if (!filters.search.trim()) return groups;
+    const rank = new Map(
+      groups.map(({ cat, items }) => {
+        const scores = items.map((p) => searchScore(p, filters.search));
+        const best = Math.max(...scores);
+        return [cat.slug, { best, count: scores.filter((x) => x === best).length }];
+      })
+    );
+    return groups.sort((a, b) => {
+      const ra = rank.get(a.cat.slug)!;
+      const rb = rank.get(b.cat.slug)!;
+      return rb.best - ra.best || rb.count - ra.count;
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, baseFiltered, hasCategoryFilter]);
+  }, [data, baseFiltered, hasCategoryFilter, filters.search]);
 
   // Total de productos (cada medida o talla cuenta, pedido del usuario: el
   // catálogo completo muestra 1.641). Las tarjetas igual agrupan las medidas.

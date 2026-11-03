@@ -14,7 +14,7 @@ import {
   ErrorState,
   SampleNotice,
 } from "@/components/ui/states";
-import { matchesSearch } from "@/lib/search";
+import { matchesSearch, sortBySearch } from "@/lib/search";
 import { BackButton } from "@/components/ui/BackButton";
 import type { Brand, Category, Product } from "@/types/catalog";
 
@@ -47,7 +47,7 @@ export function CategoryPage() {
 
   const filtered = useMemo(() => {
     if (!data) return [];
-    return data.products.filter((p) => {
+    const list = data.products.filter((p) => {
       // Con sinónimos: "brida" encuentra las gazas, "bala" las cámaras bullet…
       const matchesQuery = matchesSearch(p, filters.search);
       const matchesBrand =
@@ -56,6 +56,7 @@ export function CategoryPage() {
       const matchesNew = !filters.onlyNew || Boolean(p.isNew);
       return matchesQuery && matchesBrand && matchesNew;
     });
+    return sortBySearch(list, filters.search);
   }, [data, filters]);
 
   return (

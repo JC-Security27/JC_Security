@@ -221,7 +221,9 @@ def main(dry_run):
     have_brands = {b["id"] for b in http("GET", f"{base}/rest/v1/brands?select=id", sb)}
     catalog["brands"] = [b for b in brands if b["id"] not in have_brands]
     (OUT / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
-    (HERE / "docs_index.json").write_text(json.dumps(sorted(set(doc_ids)), indent=0), encoding="utf-8")
+    # Repetidos entre marcas (duplicates.json): fuera del índice, así sync_intrade.py los oculta.
+    dups = {k for k in json.loads((HERE / "duplicates.json").read_text(encoding="utf-8")) if not k.startswith("_")}
+    (HERE / "docs_index.json").write_text(json.dumps(sorted(set(doc_ids) - dups), indent=0), encoding="utf-8")
     (HERE / "docs_hidden.json").write_text(json.dumps(sorted(set(hide_ids)), indent=0), encoding="utf-8")
     print("Listo: backend/catalog/marcas/docs/output/catalog.json")
 

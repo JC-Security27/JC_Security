@@ -1,0 +1,4 @@
+{
+  "_nota": "Productos repetidos entre marcas (pedido del usuario, 2026-11-03): la clave se oculta siempre y queda publicado el valor. Lo leen publish_docs.py y sync_intrade.py.",
+  "hagroy-27a": "dlx-27a"
+}

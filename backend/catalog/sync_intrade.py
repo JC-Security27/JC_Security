@@ -150,6 +150,10 @@ def main(dry_run):
     docs_file = HERE / "marcas" / "docs_index.json"
     doc_ids = set(json.loads(docs_file.read_text(encoding="utf-8"))) if docs_file.exists() else set()
     doc_brands = {p["brand_id"] for p in products if p["id"] in doc_ids}
+    # Repetidos entre marcas (mismo artículo en dos documentos): se publica solo uno.
+    dup_file = HERE / "marcas" / "duplicates.json"
+    duplicates = {k for k in json.loads(dup_file.read_text(encoding="utf-8")) if not k.startswith("_")} if dup_file.exists() else set()
+    doc_ids -= duplicates
     changes, by_brand = {True: [], False: []}, {}
     for p in products:
         # Opción b (decisión del usuario, 2026-10-26): lo del documento se muestra mientras Intrade

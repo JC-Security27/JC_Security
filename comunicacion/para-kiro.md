@@ -716,3 +716,12 @@ Pedido del usuario: en `GuidePage.tsx` hay un botón "← Volver a Guías" (`btn
 Estado: PENDIENTE
 
 Pedido del usuario: en `CatalogPage.tsx` la lista de marcas del filtro ahora solo muestra las que tienen productos visibles (igual que las categorías). Se fueron Seagate y Toshiba, que venían de la base sin productos visibles. `withDemoBrands` sigue igual.
+
+## [2026-11-03] De: Claude — Búsqueda ordenada por relevancia + batería repetida
+Estado: PENDIENTE
+
+Pedido del usuario: al buscar, primero lo que ES el producto buscado ("baterías" → baterías, no cámaras "con batería").
+- `lib/search.ts`: nuevas `searchScore(p, q)` y `sortBySearch(list, q)`. Puntaje por término: código exacto/al inicio > primera palabra del nombre > segunda palabra > más adelante; bono si la categoría (slug) contiene el término. `matchesSearch` no cambió (los mismos resultados, solo cambia el orden).
+- `CatalogPage.tsx`: `baseFiltered` ordenado por relevancia; con búsqueda, las secciones por categoría se ordenan por mejor puntaje (empate: más resultados con ese puntaje).
+- `CategoryPage.tsx` y `HeaderSearch.tsx`: resultados/sugerencias ordenados con `sortBySearch`.
+- Backend: `hagroy-27a` (misma pila Energizer A27 que `dlx-27a`) quedó oculta; lista de repetidos en `backend/catalog/marcas/duplicates.json`.

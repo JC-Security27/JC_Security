@@ -161,3 +161,62 @@ export function matchesSearch(p: Product, query: string): boolean {
     )
   );
 }
+
+/* ==========================================================================
+   Relevancia (pedido del usuario, 2026-11-03): al buscar "baterías" primero
+   van los productos que SON baterías, no las cámaras que solo mencionan la
+   batería en el nombre. Cada término suma según dónde aparece:
+   - en la referencia/código (exacto o al inicio): lo más fuerte;
+   - como primera palabra del nombre ("BATERÍA ALCALINA…"): es el artículo;
+   - como segunda palabra ("CÁMARA SOLAR…"): parte del tipo;
+   - más adelante en el nombre ("CÁMARA… CON BATERÍA"): solo lo menciona;
+   - en el nombre de la categoría ("baterias-y-pilas"): bono aparte.
+   ========================================================================== */
+
+/** Lugar de la palabra (sin contar artículos) donde empieza `a` en `text`, o -1. */
+function wordIndex(text: string, a: string): number {
+  const i = ` ${text} `.indexOf(` ${a}`);
+  if (i < 0) return -1;
+  return text
+    .slice(0, i)
+    .split(" ")
+    .filter((w) => w && !STOPWORDS.has(w)).length;
+}
+
+/** Puntaje de relevancia de un producto para la búsqueda (0 = no coincide). */
+export function searchScore(p: Product, query: string): number {
+  const reqs = parseQuery(query);
+  if (reqs.length === 0) return 0;
+  const name = norm(p.name);
+  const ref = compact(norm(p.reference));
+  const cat = (p.categorySlug ?? "").replace(/-/g, " ");
+  const brand = norm(p.brandName ?? "");
+  let total = 0;
+  for (const alts of reqs) {
+    let best = 0;
+    let catBonus = 0;
+    for (const a of alts) {
+      const ca = compact(a);
+      if (ca && ref === ca) best = Math.max(best, 30);
+      else if (/\d/.test(a) && ca.length >= 3 && ref.startsWith(ca)) best = Math.max(best, 20);
+      const w = wordIndex(name, a);
+      if (w === 0) best = Math.max(best, 12);
+      else if (w === 1) best = Math.max(best, 7);
+      else if (w > 1) best = Math.max(best, 2);
+      if (wordIndex(brand, a) >= 0) best = Math.max(best, 5);
+      if (/\d/.test(a) && ca.length >= 3 && compact(name).includes(ca)) best = Math.max(best, 4);
+      if (wordIndex(cat, a) >= 0) catBonus = 6;
+    }
+    total += best + catBonus;
+  }
+  return total;
+}
+
+/** Productos ordenados por relevancia (los empates conservan su orden). */
+export function sortBySearch<T extends Product>(products: T[], query: string): T[] {
+  if (parseQuery(query).length === 0) return products;
+  return products
+    .map((p, i) => ({ p, i, s: searchScore(p, query) }))
+    .sort((x, y) => y.s - x.s || x.i - y.i)
+    .map((x) => x.p);
+}

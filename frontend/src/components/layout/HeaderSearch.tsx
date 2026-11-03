@@ -9,7 +9,7 @@ import {
 } from "react";
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { getDataClient } from "@/data/dataClient";
-import { matchesSearch } from "@/lib/search";
+import { matchesSearch, sortBySearch } from "@/lib/search";
 import { groupByVariants, getVariantShortLabel } from "@/lib/variants";
 import { toDisplayName } from "@/lib/format";
 import type { Product } from "@/types/catalog";
@@ -112,7 +112,9 @@ export function HeaderSearch({ className = "" }: { className?: string }) {
   const { suggestions, total } = useMemo(() => {
     const q = debounced.trim();
     if (!q || !products) return { suggestions: [], total: 0 };
-    const groups = groupByVariants(products.filter((p) => matchesSearch(p, q)));
+    const groups = groupByVariants(
+      sortBySearch(products.filter((p) => matchesSearch(p, q)), q)
+    );
     return { suggestions: groups.slice(0, MAX_SUGGESTIONS), total: groups.length };
   }, [debounced, products]);
 
