@@ -133,12 +133,12 @@ export function ServicesPage() {
               <span>de experiencia</span>
             </li>
             <li>
-              <strong>Hogar y negocio</strong>
-              <span>residencial y comercial</span>
+              <strong>Soluciones</strong>
+              <span>integrales</span>
             </li>
             <li>
-              <strong>Normativa</strong>
-              <span>vigente</span>
+              <strong>Seguridad</strong>
+              <span>para tu tranquilidad</span>
             </li>
           </ul>
           <ol className="services-steps">
