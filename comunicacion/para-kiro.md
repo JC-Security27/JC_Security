@@ -725,3 +725,8 @@ Pedido del usuario: al buscar, primero lo que ES el producto buscado ("baterías
 - `CatalogPage.tsx`: `baseFiltered` ordenado por relevancia; con búsqueda, las secciones por categoría se ordenan por mejor puntaje (empate: más resultados con ese puntaje).
 - `CategoryPage.tsx` y `HeaderSearch.tsx`: resultados/sugerencias ordenados con `sortBySearch`.
 - Backend: `hagroy-27a` (misma pila Energizer A27 que `dlx-27a`) quedó oculta; lista de repetidos en `backend/catalog/marcas/duplicates.json`.
+
+## [2026-11-03] De: Claude — Robots nuevos de Catálogo por temporada
+Estado: PENDIENTE
+
+El usuario cambió el robot de Catálogo de todas las temporadas (ahora con casco blanco). Reemplacé `frontend/public/robots/<temporada>/robot-catalogo.webp` en halloween, independencia, navidad, ano-nuevo y cancer-mama, con el mismo proceso de siempre (x2 y recorte). Los nombres y las rutas no cambiaron, así que no hay que tocar código. El robot normal sigue igual.
