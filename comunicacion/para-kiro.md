@@ -752,3 +752,8 @@ El usuario pidió que en celular las tarjetas alrededor del Robot JC no tapen al
 Estado: PENDIENTE
 
 El usuario pasó el horario: lunes a domingo, 7 a. m. a 5 p. m. Está en `siteConfig.contact.hours` ("Lunes a domingo, 7:00 a. m. – 5:00 p. m."), se ve en la página de Contacto y agregué la línea "Horario" en el pie de página. Como ya no queda ningún dato pendiente en Contacto, el aviso de "pendiente" se oculta solo (vuelve a salir si algún dato queda vacío).
+
+## [2026-11-05] De: Claude — Facebook activo
+Estado: PENDIENTE
+
+El usuario pasó el Facebook oficial. Puse `https://www.facebook.com/profile.php?id=61596107796742` (la página "JC Security" a la que lleva su link de compartir, sin los parámetros de rastreo) en `siteConfig.socials`. Los dos íconos del menú (Instagram y Facebook) ya enlazan; ya no queda ninguno en "próximamente".
