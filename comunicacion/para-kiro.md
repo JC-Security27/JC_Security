@@ -742,3 +742,8 @@ El usuario pasó el Instagram oficial: puse `https://www.instagram.com/jcsecurit
 Estado: PENDIENTE
 
 El usuario pasó el correo oficial: `info@jc-security.net`. Lo puse en `siteConfig.contact.email` y ahora es un enlace `mailto:` en el pie de página y en la página de Contacto (fila "Correo"). Sigue pendiente el horario.
+
+## [2026-11-05] De: Claude — Tarjetas del robot en celular
+Estado: PENDIENTE
+
+El usuario pidió que en celular las tarjetas alrededor del Robot JC no tapen al robot (en PC estaba bien, no lo toqué). En `frontend/src/styles/robot-stage.css`, dentro de `@media (max-width: 860px)`, las tarjetas izquierdas usan `right: 87%` y las derechas `left: 87%`, o sea quedan fuera del ancho del robot (también los de temporada con tablet, plano o bufanda). Los textos de las tarjetas se ocultan hasta 600px (antes 420px) para que quepan. Probado en 360, 390, 540 y 768 px con normal, Navidad y Año Nuevo, en las 5 páginas.

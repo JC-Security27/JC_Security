@@ -175,16 +175,21 @@
     width: 36px;
     height: 36px;
   }
+  /* Celular y tablet (pedido del usuario, 2026-11-05): las tarjetas van
+     FUERA del ancho del robot (el robot ocupa ~15 %–85 % del escenario,
+     también los de temporada con bufanda o tablet), así no lo tapan. */
   .robot-chip-0,
   .robot-chip-2 {
-    left: -10%;
+    left: auto;
+    right: 87%;
   }
   .robot-chip-1,
   .robot-chip-3 {
-    right: -10%;
+    right: auto;
+    left: 87%;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .robot-chip-label {
     display: none; /* en pantallas muy angostas solo la imagen */
   }
