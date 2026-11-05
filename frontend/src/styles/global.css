@@ -407,6 +407,12 @@ ul {
 .btn-whatsapp:hover {
   background: #1ebe5a;
 }
+/* Ícono de WhatsApp más grande y notorio, sin salirse del botón. */
+.wa-icon {
+  width: 1.6em;
+  height: 1.6em;
+  flex-shrink: 0;
+}
 
 .btn-ghost {
   background: var(--surface-2);
