@@ -38,11 +38,11 @@ export const siteConfig = {
   whatsappNumber: (import.meta.env.VITE_WHATSAPP_NUMBER as string) || PENDING,
 
   /**
-   * Redes sociales oficiales. PENDIENTE: URLs reales de JC Security.
+   * Redes sociales oficiales. Instagram listo (2026-11-05); Facebook PENDIENTE.
    * Se listan los canales previstos; sin URL se muestran como "próximamente".
    */
   socials: [
-    { id: "instagram", label: "Instagram", url: PENDING },
+    { id: "instagram", label: "Instagram", url: "https://www.instagram.com/jcsecuritycr/" },
     { id: "facebook", label: "Facebook", url: PENDING },
   ] as SocialLink[],
 
