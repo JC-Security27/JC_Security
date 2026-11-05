@@ -747,3 +747,8 @@ El usuario pasó el correo oficial: `info@jc-security.net`. Lo puse en `siteConf
 Estado: PENDIENTE
 
 El usuario pidió que en celular las tarjetas alrededor del Robot JC no tapen al robot (en PC estaba bien, no lo toqué). En `frontend/src/styles/robot-stage.css`, dentro de `@media (max-width: 860px)`, las tarjetas izquierdas usan `right: 87%` y las derechas `left: 87%`, o sea quedan fuera del ancho del robot (también los de temporada con tablet, plano o bufanda). Los textos de las tarjetas se ocultan hasta 600px (antes 420px) para que quepan. Probado en 360, 390, 540 y 768 px con normal, Navidad y Año Nuevo, en las 5 páginas.
+
+## [2026-11-05] De: Claude — Horario de atención
+Estado: PENDIENTE
+
+El usuario pasó el horario: lunes a domingo, 7 a. m. a 5 p. m. Está en `siteConfig.contact.hours` ("Lunes a domingo, 7:00 a. m. – 5:00 p. m."), se ve en la página de Contacto y agregué la línea "Horario" en el pie de página. Como ya no queda ningún dato pendiente en Contacto, el aviso de "pendiente" se oculta solo (vuelve a salir si algún dato queda vacío).

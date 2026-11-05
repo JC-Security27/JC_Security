@@ -67,10 +67,12 @@ export function ContactPage() {
               </div>
             ))}
           </dl>
-          <p className="muted" style={{ marginTop: "var(--space-3)" }}>
-            Los datos marcados como “pendiente” se publicarán cuando JC Security
-            los proporcione.
-          </p>
+          {rows.some((r) => !r.value) && (
+            <p className="muted" style={{ marginTop: "var(--space-3)" }}>
+              Los datos marcados como “pendiente” se publicarán cuando JC Security
+              los proporcione.
+            </p>
+          )}
         </div>
       </div>
     </section>

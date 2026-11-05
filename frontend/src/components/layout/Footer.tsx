@@ -74,6 +74,9 @@ export function Footer() {
                 <span className="muted">Correo: pendiente</span>
               )}
             </li>
+            {siteConfig.contact.hours && (
+              <li>Horario: {siteConfig.contact.hours}</li>
+            )}
             <li>
               Alcance: {siteConfig.contact.scope}
             </li>

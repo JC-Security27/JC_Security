@@ -21,7 +21,7 @@ export interface ContactInfo {
   email: string;
   /** Zona donde trabaja JC Security (se muestra como "Alcance"). */
   scope: string;
-  hours: string; // PENDIENTE
+  hours: string;
 }
 
 export const siteConfig = {
@@ -51,7 +51,7 @@ export const siteConfig = {
     phone: "+506 8798 1616",
     email: "info@jc-security.net",
     scope: "Costa Rica",
-    hours: PENDING,
+    hours: "Lunes a domingo, 7:00 a. m. – 5:00 p. m.",
   } as ContactInfo,
 } as const;
 
