@@ -66,7 +66,11 @@ export function Footer() {
               )}
             </li>
             <li>
-              {siteConfig.contact.email || (
+              {siteConfig.contact.email ? (
+                <a href={`mailto:${siteConfig.contact.email}`}>
+                  Correo: {siteConfig.contact.email}
+                </a>
+              ) : (
                 <span className="muted">Correo: pendiente</span>
               )}
             </li>

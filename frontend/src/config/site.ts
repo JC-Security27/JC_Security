@@ -18,7 +18,7 @@ export interface SocialLink {
 
 export interface ContactInfo {
   phone: string; // PENDIENTE
-  email: string; // PENDIENTE
+  email: string;
   /** Zona donde trabaja JC Security (se muestra como "Alcance"). */
   scope: string;
   hours: string; // PENDIENTE
@@ -49,7 +49,7 @@ export const siteConfig = {
   /** Datos de contacto. PENDIENTE: los proporciona JC Security. */
   contact: {
     phone: "+506 8798 1616",
-    email: PENDING,
+    email: "info@jc-security.net",
     scope: "Costa Rica",
     hours: PENDING,
   } as ContactInfo,

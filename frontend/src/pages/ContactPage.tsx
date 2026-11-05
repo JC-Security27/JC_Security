@@ -56,6 +56,8 @@ export function ContactPage() {
                 <dd>
                   {r.value && r.label === "Teléfono" ? (
                     <a href={telHref(r.value)}>{r.value}</a>
+                  ) : r.value && r.label === "Correo" ? (
+                    <a href={`mailto:${r.value}`}>{r.value}</a>
                   ) : r.value ? (
                     r.value
                   ) : (

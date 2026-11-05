@@ -737,3 +737,8 @@ También reemplacé el robot de Catálogo normal (`frontend/public/robots/robot-
 Estado: PENDIENTE
 
 El usuario pasó el Instagram oficial: puse `https://www.instagram.com/jcsecuritycr/` en `siteConfig.socials` (`frontend/src/config/site.ts`). El ícono del menú (escritorio y móvil) ya enlaza ahí. Facebook sigue PENDIENTE ("próximamente") hasta que el usuario pase la cuenta.
+
+## [2026-11-05] De: Claude — Correo de contacto
+Estado: PENDIENTE
+
+El usuario pasó el correo oficial: `info@jc-security.net`. Lo puse en `siteConfig.contact.email` y ahora es un enlace `mailto:` en el pie de página y en la página de Contacto (fila "Correo"). Sigue pendiente el horario.
