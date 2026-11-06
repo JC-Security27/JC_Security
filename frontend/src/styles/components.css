@@ -258,6 +258,29 @@
   }
 }
 
+/* Fondo oscuro tocable bajo el menú móvil: al tocarlo se cierra el menú.
+   Va debajo del encabezado (z-index 100) y arranca justo bajo la barra. */
+.mobile-nav-backdrop {
+  display: none;
+}
+@media (max-width: 860px) {
+  .mobile-nav-backdrop {
+    display: block;
+    position: fixed;
+    top: var(--header-offset, 150px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(4, 12, 24, 0.55);
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 /* ----- Búsqueda del encabezado ----- */
 .header-search {
   position: relative;

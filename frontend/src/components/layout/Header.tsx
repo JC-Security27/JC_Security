@@ -59,10 +59,55 @@ export function Header() {
     };
   }, [open]);
 
+  // Con el menú abierto: Esc lo cierra, y si la pantalla pasa a tamaño de
+  // computadora (por ejemplo al girar la tablet) también, para que no quede
+  // el scroll bloqueado sin menú a la vista.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const mq = window.matchMedia("(min-width: 861px)");
+    const onWide = () => {
+      if (mq.matches) setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onWide);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onWide);
+    };
+  }, [open]);
+
+  // Tocar la barra del encabezado fuera del menú y de la X (logo, búsqueda,
+  // carrito…) también cierra el menú. La X sigue abriendo y cerrando.
+  const closeOnOutsideTap = (e: React.PointerEvent<HTMLElement>) => {
+    if (!open) return;
+    const target = e.target as HTMLElement;
+    if (target.closest("#mobile-nav") || target.closest(".burger")) return;
+    setOpen(false);
+  };
+
   return (
     <>
       <div className="header-spacer" aria-hidden="true" />
-      <header className="site-header" ref={headerRef}>
+      {/* Fondo tocable: tocar cualquier parte de la página cierra el menú
+          móvil sin activar lo que haya debajo. Va fuera del <header> porque
+          éste tiene backdrop-filter y limitaría un elemento fijo a su caja. */}
+      {open && (
+        <button
+          type="button"
+          className="mobile-nav-backdrop"
+          aria-label="Cerrar menú"
+          tabIndex={-1}
+          onClick={() => setOpen(false)}
+        />
+      )}
+      <header
+        className="site-header"
+        ref={headerRef}
+        onPointerDown={closeOnOutsideTap}
+      >
         <div className="container header-inner">
           <Link
             to="/"
