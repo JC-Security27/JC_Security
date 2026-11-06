@@ -338,6 +338,7 @@ export const GUIDES: Guide[] = [
       "Qué vigilar, cómo controlar quién entra y cómo mantener todo " +
       "funcionando aun sin electricidad.",
     minutes: 4,
+    image: "seguridad-negocios",
     icon: "building",
     sections: [
       {
@@ -387,6 +388,7 @@ export const GUIDES: Guide[] = [
       "Dónde colocar los detectores, cómo probarlos y qué tener listo " +
       "para una emergencia.",
     minutes: 3,
+    image: "incendio",
     icon: "flame",
     sections: [
       {
@@ -426,6 +428,7 @@ export const GUIDES: Guide[] = [
       "Un apagón deja sin cámaras ni alarma justo cuando más se " +
       "necesitan. Así eliges una UPS.",
     minutes: 3,
+    image: "respaldo-energia",
     icon: "battery",
     sections: [
       {
