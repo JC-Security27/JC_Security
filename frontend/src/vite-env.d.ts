@@ -5,7 +5,6 @@ interface ImportMetaEnv {
   readonly VITE_SUPABASE_URL?: string;
   readonly VITE_SUPABASE_ANON_KEY?: string;
   readonly VITE_API_BASE_URL?: string;
-  readonly VITE_AI_CHAT_ENABLED?: string;
   readonly VITE_WHATSAPP_NUMBER?: string;
 }
 

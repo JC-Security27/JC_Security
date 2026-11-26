@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { AiChatWidget } from "@/components/ai/AiChatWidget";
 import { BackToTop } from "@/components/ui/BackToTop";
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -14,7 +13,6 @@ export function Layout({ children }: { children: ReactNode }) {
       <main id="main">{children}</main>
       <Footer />
       <BackToTop />
-      <AiChatWidget />
     </>
   );
 }

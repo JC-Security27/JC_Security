@@ -53,7 +53,6 @@ body::before {
 .site-header,
 .mobile-nav,
 .search-suggest,
-.ai-panel,
 .price-box {
   backdrop-filter: blur(var(--glass-blur)) saturate(150%);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
@@ -85,9 +84,6 @@ body::before {
 .search-suggest,
 .mobile-nav {
   background: rgba(10, 24, 42, 0.72);
-}
-.ai-panel {
-  background: var(--glass-sheen), rgba(10, 24, 42, 0.78);
 }
 
 /* Panel de filtros del catálogo: en escritorio, un panel de vidrio fijo. */

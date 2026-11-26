@@ -327,10 +327,6 @@ html:root[data-theme][data-season="ano-nuevo"] {
     radial-gradient(700px 520px at 64% 106%, rgba(92, 29, 143, 0.3), transparent 70%),
     linear-gradient(180deg, #1e1e24, #121212);
 }
-/* Textos blancos que quedaban sobre el naranja: ahora carbón (7:1). */
-:root[data-season="halloween"] .ai-header strong {
-  color: #121212;
-}
 /* Banda de llamada a la acción: púrpura con texto claro (9.8:1). */
 :root[data-season="halloween"] .cta-band,
 :root[data-season="halloween"] .cta-band:not(.cta-glass) {

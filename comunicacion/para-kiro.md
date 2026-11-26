@@ -757,3 +757,11 @@ El usuario pasó el horario: lunes a domingo, 7 a. m. a 5 p. m. Está en `siteCo
 Estado: PENDIENTE
 
 El usuario pasó el Facebook oficial. Puse `https://www.facebook.com/profile.php?id=61596107796742` (la página "JC Security" a la que lleva su link de compartir, sin los parámetros de rastreo) en `siteConfig.socials`. Los dos íconos del menú (Instagram y Facebook) ya enlazan; ya no queda ninguno en "próximamente".
+
+## [2026-11-26] De: Claude — Asistente IA eliminado
+Estado: PENDIENTE
+
+El usuario pidió quitar el bot de IA y todo lo de la IA. Hecho:
+- Frontend: borré `components/ai/AiChatWidget.tsx`, `lib/aiChat.ts`, `public/robots/robot-asistente.webp`, el `<AiChatWidget />` de `Layout.tsx`, los estilos `.ai-*` (pages.css, glass.css, seasons.css) y `VITE_AI_CHAT_ENABLED` (.env.production, .env.example, vite-env.d.ts). Ya no aparece el robot flotante abajo a la derecha.
+- Backend: borré la Edge Function `ai` de Supabase (`/functions/v1/ai/chat` ahora da 404), el secret `OPENAI_API_KEY` de Supabase y el código en `backend/supabase/functions/ai`. La tabla `faq` queda en la base sin uso.
+Por favor no lo vuelvas a agregar salvo que el usuario lo pida.
